@@ -1,0 +1,41 @@
+---
+title: "Keyboard"
+order: 75
+---
+
+## Keyboard shown on textarea focus
+
+<LvglExampleBrief>Hide the keyboard unless one of two textareas is focused.</LvglExampleBrief>
+
+Two textareas are placed at the top-left and top-right, one with placeholder
+text `Hello`. A shared callback watches `LV_EVENT_FOCUSED` and
+`LV_EVENT_DEFOCUSED`: on focus it retargets the keyboard with
+`lv_keyboard_set_textarea` and clears `LV_OBJ_FLAG_HIDDEN`, and on defocus it
+clears the target and hides the keyboard again.
+
+<LvglExample name="lv_example_keyboard_1" path="widgets/keyboard/lv_example_keyboard_1" />
+
+## AZERTY layout as USER_1 mode
+
+<LvglExampleBrief>Register a custom AZERTY button map on the keyboard.</LvglExampleBrief>
+
+A `kb_map` and matching `lv_buttonmatrix_ctrl_t` control array describe an
+AZERTY layout with `LV_SYMBOL_BACKSPACE`, `LV_SYMBOL_NEW_LINE`,
+`LV_SYMBOL_CLOSE`, and `LV_SYMBOL_OK`. `lv_keyboard_set_map` installs the
+layout under `LV_KEYBOARD_MODE_USER_1` and `lv_keyboard_set_mode` activates
+it. A focused textarea above the keyboard receives the typed characters.
+
+<LvglExample name="lv_example_keyboard_2" path="widgets/keyboard/lv_example_keyboard_2" />
+
+## Per-button colors via draw task hook
+
+<LvglExampleBrief>Recolor each keyboard key and swap the OK symbol for a star image.</LvglExampleBrief>
+
+A centered `lv_keyboard` has `LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS` set and a
+`LV_EVENT_DRAW_TASK_ADDED` callback attached. For every `LV_PART_ITEMS` draw
+task the handler picks a palette entry from `base_dsc->id1`, darkens it while
+the button is in `LV_STATE_PRESSED`, and lightens the label text. When the
+task is drawing `LV_SYMBOL_OK` the label is hidden and `img_star` is drawn in
+its place.
+
+<LvglExample name="lv_example_keyboard_3" path="widgets/keyboard/lv_example_keyboard_3" />

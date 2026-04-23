@@ -1,0 +1,84 @@
+---
+title: lv_menu_private.h
+description: API reference for lv_menu_private.h
+api:
+  structs: [_lv_menu_load_page_event_data_t, _lv_menu_history_t, _lv_menu_t, _lv_menu_page_t]
+---
+
+<RelatedHeaders name="lv_menu.h" isPrivate={true} />
+
+<ApiSummary structs={4} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_menu_load_page_event_data_t">
+
+### _lv_menu_load_page_event_data_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `menu` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `page` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_menu_history_t">
+
+### _lv_menu_history_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `page` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_menu_t">
+
+### _lv_menu_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `storage` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | a pointer to obj that is the parent of all pages not displayed |
+| `main` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `main_page` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `main_header` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `main_header_back_btn` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | a pointer to obj that on click triggers back btn event handler, can be same as 'main_header' |
+| `main_header_title` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `sidebar` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `sidebar_page` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `sidebar_header` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `sidebar_header_back_btn` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | a pointer to obj that on click triggers back btn event handler, can be same as 'sidebar_header' |
+| `sidebar_header_title` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `selected_tab` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `history_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `cur_depth` | <ApiLink name="uint8_t" /> |  |
+| `prev_depth` | <ApiLink name="uint8_t" /> |  |
+| `sidebar_generated` | <ApiLink name="uint8_t" /> |  |
+| `mode_header` | <ApiLink name="lv_menu_mode_header_t" /> |  |
+| `mode_root_back_btn` | <ApiLink name="lv_menu_mode_root_back_button_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_menu_page_t">
+
+### _lv_menu_page_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `title` | `char *` |  |
+| `static_title` | <ApiLink name="bool" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lv_menu.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

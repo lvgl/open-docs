@@ -1,0 +1,777 @@
+---
+title: lv_symbol_def.h
+description: API reference for lv_symbol_def.h
+api:
+  enums: [_lv_str_symbol_id_t]
+  macros: [LV_SYMBOL_BULLET, LV_SYMBOL_AUDIO, LV_SYMBOL_VIDEO, LV_SYMBOL_LIST, LV_SYMBOL_OK, LV_SYMBOL_CLOSE, LV_SYMBOL_POWER, LV_SYMBOL_SETTINGS, LV_SYMBOL_HOME, LV_SYMBOL_DOWNLOAD, LV_SYMBOL_DRIVE, LV_SYMBOL_REFRESH, LV_SYMBOL_MUTE, LV_SYMBOL_VOLUME_MID, LV_SYMBOL_VOLUME_MAX, LV_SYMBOL_IMAGE, LV_SYMBOL_TINT, LV_SYMBOL_PREV, LV_SYMBOL_PLAY, LV_SYMBOL_PAUSE, LV_SYMBOL_STOP, LV_SYMBOL_NEXT, LV_SYMBOL_EJECT, LV_SYMBOL_LEFT, LV_SYMBOL_RIGHT, LV_SYMBOL_PLUS, LV_SYMBOL_MINUS, LV_SYMBOL_EYE_OPEN, LV_SYMBOL_EYE_CLOSE, LV_SYMBOL_WARNING, LV_SYMBOL_SHUFFLE, LV_SYMBOL_UP, LV_SYMBOL_DOWN, LV_SYMBOL_LOOP, LV_SYMBOL_DIRECTORY, LV_SYMBOL_UPLOAD, LV_SYMBOL_CALL, LV_SYMBOL_CUT, LV_SYMBOL_COPY, LV_SYMBOL_SAVE, LV_SYMBOL_BARS, LV_SYMBOL_ENVELOPE, LV_SYMBOL_CHARGE, LV_SYMBOL_PASTE, LV_SYMBOL_BELL, LV_SYMBOL_KEYBOARD, LV_SYMBOL_GPS, LV_SYMBOL_FILE, LV_SYMBOL_WIFI, LV_SYMBOL_BATTERY_FULL, LV_SYMBOL_BATTERY_3, LV_SYMBOL_BATTERY_2, LV_SYMBOL_BATTERY_1, LV_SYMBOL_BATTERY_EMPTY, LV_SYMBOL_USB, LV_SYMBOL_BLUETOOTH, LV_SYMBOL_TRASH, LV_SYMBOL_EDIT, LV_SYMBOL_BACKSPACE, LV_SYMBOL_SD_CARD, LV_SYMBOL_NEW_LINE, LV_SYMBOL_DUMMY]
+---
+
+<ApiSummary enums={1} macros={62} />
+
+## Enums
+
+<ApiMember kind="enum" name="_lv_str_symbol_id_t" file="font/lv_symbol_def.h" line={288} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L288">
+
+### _lv_str_symbol_id_t
+
+| Name |
+|------|
+| `LV_STR_SYMBOL_BULLET` |
+| `LV_STR_SYMBOL_AUDIO` |
+| `LV_STR_SYMBOL_VIDEO` |
+| `LV_STR_SYMBOL_LIST` |
+| `LV_STR_SYMBOL_OK` |
+| `LV_STR_SYMBOL_CLOSE` |
+| `LV_STR_SYMBOL_POWER` |
+| `LV_STR_SYMBOL_SETTINGS` |
+| `LV_STR_SYMBOL_HOME` |
+| `LV_STR_SYMBOL_DOWNLOAD` |
+| `LV_STR_SYMBOL_DRIVE` |
+| `LV_STR_SYMBOL_REFRESH` |
+| `LV_STR_SYMBOL_MUTE` |
+| `LV_STR_SYMBOL_VOLUME_MID` |
+| `LV_STR_SYMBOL_VOLUME_MAX` |
+| `LV_STR_SYMBOL_IMAGE` |
+| `LV_STR_SYMBOL_TINT` |
+| `LV_STR_SYMBOL_PREV` |
+| `LV_STR_SYMBOL_PLAY` |
+| `LV_STR_SYMBOL_PAUSE` |
+| `LV_STR_SYMBOL_STOP` |
+| `LV_STR_SYMBOL_NEXT` |
+| `LV_STR_SYMBOL_EJECT` |
+| `LV_STR_SYMBOL_LEFT` |
+| `LV_STR_SYMBOL_RIGHT` |
+| `LV_STR_SYMBOL_PLUS` |
+| `LV_STR_SYMBOL_MINUS` |
+| `LV_STR_SYMBOL_EYE_OPEN` |
+| `LV_STR_SYMBOL_EYE_CLOSE` |
+| `LV_STR_SYMBOL_WARNING` |
+| `LV_STR_SYMBOL_SHUFFLE` |
+| `LV_STR_SYMBOL_UP` |
+| `LV_STR_SYMBOL_DOWN` |
+| `LV_STR_SYMBOL_LOOP` |
+| `LV_STR_SYMBOL_DIRECTORY` |
+| `LV_STR_SYMBOL_UPLOAD` |
+| `LV_STR_SYMBOL_CALL` |
+| `LV_STR_SYMBOL_CUT` |
+| `LV_STR_SYMBOL_COPY` |
+| `LV_STR_SYMBOL_SAVE` |
+| `LV_STR_SYMBOL_BARS` |
+| `LV_STR_SYMBOL_ENVELOPE` |
+| `LV_STR_SYMBOL_CHARGE` |
+| `LV_STR_SYMBOL_PASTE` |
+| `LV_STR_SYMBOL_BELL` |
+| `LV_STR_SYMBOL_KEYBOARD` |
+| `LV_STR_SYMBOL_GPS` |
+| `LV_STR_SYMBOL_FILE` |
+| `LV_STR_SYMBOL_WIFI` |
+| `LV_STR_SYMBOL_BATTERY_FULL` |
+| `LV_STR_SYMBOL_BATTERY_3` |
+| `LV_STR_SYMBOL_BATTERY_2` |
+| `LV_STR_SYMBOL_BATTERY_1` |
+| `LV_STR_SYMBOL_BATTERY_EMPTY` |
+| `LV_STR_SYMBOL_USB` |
+| `LV_STR_SYMBOL_BLUETOOTH` |
+| `LV_STR_SYMBOL_TRASH` |
+| `LV_STR_SYMBOL_EDIT` |
+| `LV_STR_SYMBOL_BACKSPACE` |
+| `LV_STR_SYMBOL_SD_CARD` |
+| `LV_STR_SYMBOL_NEW_LINE` |
+| `LV_STR_SYMBOL_DUMMY` |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_SYMBOL_BULLET" file="font/lv_symbol_def.h" line={19} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L19">
+
+### LV_SYMBOL_BULLET
+
+```c
+#define LV_SYMBOL_BULLET "\xE2\x80\xA2" /*20042, 0x2022*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_AUDIO" file="font/lv_symbol_def.h" line={40} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L40">
+
+### LV_SYMBOL_AUDIO
+
+```c
+#define LV_SYMBOL_AUDIO "\xEF\x80\x81" /*61441, 0xF001*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_VIDEO" file="font/lv_symbol_def.h" line={44} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L44">
+
+### LV_SYMBOL_VIDEO
+
+```c
+#define LV_SYMBOL_VIDEO "\xEF\x80\x88" /*61448, 0xF008*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_LIST" file="font/lv_symbol_def.h" line={48} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L48">
+
+### LV_SYMBOL_LIST
+
+```c
+#define LV_SYMBOL_LIST "\xEF\x80\x8B" /*61451, 0xF00B*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_OK" file="font/lv_symbol_def.h" line={52} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L52">
+
+### LV_SYMBOL_OK
+
+```c
+#define LV_SYMBOL_OK "\xEF\x80\x8C" /*61452, 0xF00C*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_CLOSE" file="font/lv_symbol_def.h" line={56} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L56">
+
+### LV_SYMBOL_CLOSE
+
+```c
+#define LV_SYMBOL_CLOSE "\xEF\x80\x8D" /*61453, 0xF00D*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_POWER" file="font/lv_symbol_def.h" line={60} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L60">
+
+### LV_SYMBOL_POWER
+
+```c
+#define LV_SYMBOL_POWER "\xEF\x80\x91" /*61457, 0xF011*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_SETTINGS" file="font/lv_symbol_def.h" line={64} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L64">
+
+### LV_SYMBOL_SETTINGS
+
+```c
+#define LV_SYMBOL_SETTINGS "\xEF\x80\x93" /*61459, 0xF013*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_HOME" file="font/lv_symbol_def.h" line={68} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L68">
+
+### LV_SYMBOL_HOME
+
+```c
+#define LV_SYMBOL_HOME "\xEF\x80\x95" /*61461, 0xF015*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_DOWNLOAD" file="font/lv_symbol_def.h" line={72} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L72">
+
+### LV_SYMBOL_DOWNLOAD
+
+```c
+#define LV_SYMBOL_DOWNLOAD "\xEF\x80\x99" /*61465, 0xF019*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_DRIVE" file="font/lv_symbol_def.h" line={76} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L76">
+
+### LV_SYMBOL_DRIVE
+
+```c
+#define LV_SYMBOL_DRIVE "\xEF\x80\x9C" /*61468, 0xF01C*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_REFRESH" file="font/lv_symbol_def.h" line={80} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L80">
+
+### LV_SYMBOL_REFRESH
+
+```c
+#define LV_SYMBOL_REFRESH "\xEF\x80\xA1" /*61473, 0xF021*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_MUTE" file="font/lv_symbol_def.h" line={84} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L84">
+
+### LV_SYMBOL_MUTE
+
+```c
+#define LV_SYMBOL_MUTE "\xEF\x80\xA6" /*61478, 0xF026*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_VOLUME_MID" file="font/lv_symbol_def.h" line={88} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L88">
+
+### LV_SYMBOL_VOLUME_MID
+
+```c
+#define LV_SYMBOL_VOLUME_MID "\xEF\x80\xA7" /*61479, 0xF027*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_VOLUME_MAX" file="font/lv_symbol_def.h" line={92} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L92">
+
+### LV_SYMBOL_VOLUME_MAX
+
+```c
+#define LV_SYMBOL_VOLUME_MAX "\xEF\x80\xA8" /*61480, 0xF028*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_IMAGE" file="font/lv_symbol_def.h" line={96} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L96">
+
+### LV_SYMBOL_IMAGE
+
+```c
+#define LV_SYMBOL_IMAGE "\xEF\x80\xBE" /*61502, 0xF03E*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_TINT" file="font/lv_symbol_def.h" line={100} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L100">
+
+### LV_SYMBOL_TINT
+
+```c
+#define LV_SYMBOL_TINT "\xEF\x81\x83" /*61507, 0xF043*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_PREV" file="font/lv_symbol_def.h" line={104} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L104">
+
+### LV_SYMBOL_PREV
+
+```c
+#define LV_SYMBOL_PREV "\xEF\x81\x88" /*61512, 0xF048*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_PLAY" file="font/lv_symbol_def.h" line={108} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L108">
+
+### LV_SYMBOL_PLAY
+
+```c
+#define LV_SYMBOL_PLAY "\xEF\x81\x8B" /*61515, 0xF04B*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_PAUSE" file="font/lv_symbol_def.h" line={112} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L112">
+
+### LV_SYMBOL_PAUSE
+
+```c
+#define LV_SYMBOL_PAUSE "\xEF\x81\x8C" /*61516, 0xF04C*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_STOP" file="font/lv_symbol_def.h" line={116} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L116">
+
+### LV_SYMBOL_STOP
+
+```c
+#define LV_SYMBOL_STOP "\xEF\x81\x8D" /*61517, 0xF04D*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_NEXT" file="font/lv_symbol_def.h" line={120} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L120">
+
+### LV_SYMBOL_NEXT
+
+```c
+#define LV_SYMBOL_NEXT "\xEF\x81\x91" /*61521, 0xF051*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_EJECT" file="font/lv_symbol_def.h" line={124} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L124">
+
+### LV_SYMBOL_EJECT
+
+```c
+#define LV_SYMBOL_EJECT "\xEF\x81\x92" /*61522, 0xF052*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_LEFT" file="font/lv_symbol_def.h" line={128} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L128">
+
+### LV_SYMBOL_LEFT
+
+```c
+#define LV_SYMBOL_LEFT "\xEF\x81\x93" /*61523, 0xF053*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_RIGHT" file="font/lv_symbol_def.h" line={132} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L132">
+
+### LV_SYMBOL_RIGHT
+
+```c
+#define LV_SYMBOL_RIGHT "\xEF\x81\x94" /*61524, 0xF054*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_PLUS" file="font/lv_symbol_def.h" line={136} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L136">
+
+### LV_SYMBOL_PLUS
+
+```c
+#define LV_SYMBOL_PLUS "\xEF\x81\xA7" /*61543, 0xF067*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_MINUS" file="font/lv_symbol_def.h" line={140} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L140">
+
+### LV_SYMBOL_MINUS
+
+```c
+#define LV_SYMBOL_MINUS "\xEF\x81\xA8" /*61544, 0xF068*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_EYE_OPEN" file="font/lv_symbol_def.h" line={144} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L144">
+
+### LV_SYMBOL_EYE_OPEN
+
+```c
+#define LV_SYMBOL_EYE_OPEN "\xEF\x81\xAE" /*61550, 0xF06E*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_EYE_CLOSE" file="font/lv_symbol_def.h" line={148} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L148">
+
+### LV_SYMBOL_EYE_CLOSE
+
+```c
+#define LV_SYMBOL_EYE_CLOSE "\xEF\x81\xB0" /*61552, 0xF070*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_WARNING" file="font/lv_symbol_def.h" line={152} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L152">
+
+### LV_SYMBOL_WARNING
+
+```c
+#define LV_SYMBOL_WARNING "\xEF\x81\xB1" /*61553, 0xF071*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_SHUFFLE" file="font/lv_symbol_def.h" line={156} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L156">
+
+### LV_SYMBOL_SHUFFLE
+
+```c
+#define LV_SYMBOL_SHUFFLE "\xEF\x81\xB4" /*61556, 0xF074*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_UP" file="font/lv_symbol_def.h" line={160} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L160">
+
+### LV_SYMBOL_UP
+
+```c
+#define LV_SYMBOL_UP "\xEF\x81\xB7" /*61559, 0xF077*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_DOWN" file="font/lv_symbol_def.h" line={164} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L164">
+
+### LV_SYMBOL_DOWN
+
+```c
+#define LV_SYMBOL_DOWN "\xEF\x81\xB8" /*61560, 0xF078*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_LOOP" file="font/lv_symbol_def.h" line={168} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L168">
+
+### LV_SYMBOL_LOOP
+
+```c
+#define LV_SYMBOL_LOOP "\xEF\x81\xB9" /*61561, 0xF079*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_DIRECTORY" file="font/lv_symbol_def.h" line={172} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L172">
+
+### LV_SYMBOL_DIRECTORY
+
+```c
+#define LV_SYMBOL_DIRECTORY "\xEF\x81\xBB" /*61563, 0xF07B*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_UPLOAD" file="font/lv_symbol_def.h" line={176} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L176">
+
+### LV_SYMBOL_UPLOAD
+
+```c
+#define LV_SYMBOL_UPLOAD "\xEF\x82\x93" /*61587, 0xF093*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_CALL" file="font/lv_symbol_def.h" line={180} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L180">
+
+### LV_SYMBOL_CALL
+
+```c
+#define LV_SYMBOL_CALL "\xEF\x82\x95" /*61589, 0xF095*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_CUT" file="font/lv_symbol_def.h" line={184} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L184">
+
+### LV_SYMBOL_CUT
+
+```c
+#define LV_SYMBOL_CUT "\xEF\x83\x84" /*61636, 0xF0C4*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_COPY" file="font/lv_symbol_def.h" line={188} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L188">
+
+### LV_SYMBOL_COPY
+
+```c
+#define LV_SYMBOL_COPY "\xEF\x83\x85" /*61637, 0xF0C5*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_SAVE" file="font/lv_symbol_def.h" line={192} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L192">
+
+### LV_SYMBOL_SAVE
+
+```c
+#define LV_SYMBOL_SAVE "\xEF\x83\x87" /*61639, 0xF0C7*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_BARS" file="font/lv_symbol_def.h" line={196} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L196">
+
+### LV_SYMBOL_BARS
+
+```c
+#define LV_SYMBOL_BARS "\xEF\x83\x89" /*61641, 0xF0C9*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_ENVELOPE" file="font/lv_symbol_def.h" line={200} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L200">
+
+### LV_SYMBOL_ENVELOPE
+
+```c
+#define LV_SYMBOL_ENVELOPE "\xEF\x83\xA0" /*61664, 0xF0E0*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_CHARGE" file="font/lv_symbol_def.h" line={204} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L204">
+
+### LV_SYMBOL_CHARGE
+
+```c
+#define LV_SYMBOL_CHARGE "\xEF\x83\xA7" /*61671, 0xF0E7*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_PASTE" file="font/lv_symbol_def.h" line={208} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L208">
+
+### LV_SYMBOL_PASTE
+
+```c
+#define LV_SYMBOL_PASTE "\xEF\x83\xAA" /*61674, 0xF0EA*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_BELL" file="font/lv_symbol_def.h" line={212} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L212">
+
+### LV_SYMBOL_BELL
+
+```c
+#define LV_SYMBOL_BELL "\xEF\x83\xB3" /*61683, 0xF0F3*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_KEYBOARD" file="font/lv_symbol_def.h" line={216} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L216">
+
+### LV_SYMBOL_KEYBOARD
+
+```c
+#define LV_SYMBOL_KEYBOARD "\xEF\x84\x9C" /*61724, 0xF11C*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_GPS" file="font/lv_symbol_def.h" line={220} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L220">
+
+### LV_SYMBOL_GPS
+
+```c
+#define LV_SYMBOL_GPS "\xEF\x84\xA4" /*61732, 0xF124*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_FILE" file="font/lv_symbol_def.h" line={224} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L224">
+
+### LV_SYMBOL_FILE
+
+```c
+#define LV_SYMBOL_FILE "\xEF\x85\x9B" /*61787, 0xF158*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_WIFI" file="font/lv_symbol_def.h" line={228} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L228">
+
+### LV_SYMBOL_WIFI
+
+```c
+#define LV_SYMBOL_WIFI "\xEF\x87\xAB" /*61931, 0xF1EB*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_BATTERY_FULL" file="font/lv_symbol_def.h" line={232} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L232">
+
+### LV_SYMBOL_BATTERY_FULL
+
+```c
+#define LV_SYMBOL_BATTERY_FULL "\xEF\x89\x80" /*62016, 0xF240*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_BATTERY_3" file="font/lv_symbol_def.h" line={236} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L236">
+
+### LV_SYMBOL_BATTERY_3
+
+```c
+#define LV_SYMBOL_BATTERY_3 "\xEF\x89\x81" /*62017, 0xF241*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_BATTERY_2" file="font/lv_symbol_def.h" line={240} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L240">
+
+### LV_SYMBOL_BATTERY_2
+
+```c
+#define LV_SYMBOL_BATTERY_2 "\xEF\x89\x82" /*62018, 0xF242*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_BATTERY_1" file="font/lv_symbol_def.h" line={244} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L244">
+
+### LV_SYMBOL_BATTERY_1
+
+```c
+#define LV_SYMBOL_BATTERY_1 "\xEF\x89\x83" /*62019, 0xF243*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_BATTERY_EMPTY" file="font/lv_symbol_def.h" line={248} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L248">
+
+### LV_SYMBOL_BATTERY_EMPTY
+
+```c
+#define LV_SYMBOL_BATTERY_EMPTY "\xEF\x89\x84" /*62020, 0xF244*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_USB" file="font/lv_symbol_def.h" line={252} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L252">
+
+### LV_SYMBOL_USB
+
+```c
+#define LV_SYMBOL_USB "\xEF\x8a\x87" /*62087, 0xF287*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_BLUETOOTH" file="font/lv_symbol_def.h" line={256} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L256">
+
+### LV_SYMBOL_BLUETOOTH
+
+```c
+#define LV_SYMBOL_BLUETOOTH "\xEF\x8a\x93" /*62099, 0xF293*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_TRASH" file="font/lv_symbol_def.h" line={260} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L260">
+
+### LV_SYMBOL_TRASH
+
+```c
+#define LV_SYMBOL_TRASH "\xEF\x8B\xAD" /*62189, 0xF2ED*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_EDIT" file="font/lv_symbol_def.h" line={264} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L264">
+
+### LV_SYMBOL_EDIT
+
+```c
+#define LV_SYMBOL_EDIT "\xEF\x8C\x84" /*62212, 0xF304*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_BACKSPACE" file="font/lv_symbol_def.h" line={268} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L268">
+
+### LV_SYMBOL_BACKSPACE
+
+```c
+#define LV_SYMBOL_BACKSPACE "\xEF\x95\x9A" /*62810, 0xF55A*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_SD_CARD" file="font/lv_symbol_def.h" line={272} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L272">
+
+### LV_SYMBOL_SD_CARD
+
+```c
+#define LV_SYMBOL_SD_CARD "\xEF\x9F\x82" /*63426, 0xF7C2*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_NEW_LINE" file="font/lv_symbol_def.h" line={276} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L276">
+
+### LV_SYMBOL_NEW_LINE
+
+```c
+#define LV_SYMBOL_NEW_LINE "\xEF\xA2\xA2" /*63650, 0xF8A2*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SYMBOL_DUMMY" file="font/lv_symbol_def.h" line={281} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/font/lv_symbol_def.h#L281">
+
+### LV_SYMBOL_DUMMY
+
+```c
+#define LV_SYMBOL_DUMMY "\xEF\xA3\xBF"
+```
+
+Invalid symbol at (U+F8FF). If written before a string then `lv_img` will show it as a label
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h"]}
+  includedBy={["lv_font.h", "lv_label.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

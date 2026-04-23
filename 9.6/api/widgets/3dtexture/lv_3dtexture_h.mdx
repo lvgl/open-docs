@@ -1,0 +1,104 @@
+---
+title: lv_3dtexture.h
+description: API reference for lv_3dtexture.h
+api:
+  functions: [lv_3dtexture_create, lv_3dtexture_set_src, lv_3dtexture_set_flip]
+  variables: [lv_3dtexture_class]
+---
+
+<RelatedHeaders name="lv_3dtexture_private.h" isPrivate={false} />
+
+<ApiSummary functions={3} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Other (1)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_3dtexture_set_src" file="widgets/3dtexture/lv_3dtexture.h" line={50} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/3dtexture/lv_3dtexture.h#L50">
+
+### lv_3dtexture_set_src
+
+Set the source texture of the widget. The object size should be manually set to match.
+
+```c
+void lv_3dtexture_set_src(lv_obj_t *obj, lv_3dtexture_id_t id)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the 3dtexture widget |
+| `id` | <ApiLink name="lv_3dtexture_id_t" /> | the texture handle from the 3D graphics backend. I.e., an `unsigned int` texture for OpenGL. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_3dtexture_set_flip" file="widgets/3dtexture/lv_3dtexture.h" line={58} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/3dtexture/lv_3dtexture.h#L58">
+
+### lv_3dtexture_set_flip
+
+Set the flipping behavior of the widget.
+
+```c
+void lv_3dtexture_set_flip(lv_obj_t *obj, bool h_flip, bool v_flip)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the 3dtexture widget |
+| `h_flip` | <ApiLink name="bool" /> | true to flip horizontally. |
+| `v_flip` | <ApiLink name="bool" /> | true to flip vertically. |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="lv_3dtexture_create" file="widgets/3dtexture/lv_3dtexture.h" line={41} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/3dtexture/lv_3dtexture.h#L41">
+
+### lv_3dtexture_create
+
+Create a 3dtexture object
+
+```c
+lv_obj_t * lv_3dtexture_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new 3dtexture |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created 3dtexture
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Variables
+
+<ApiMember kind="variable" name="lv_3dtexture_class" file="widgets/3dtexture/lv_3dtexture.h" line={30} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/3dtexture/lv_3dtexture.h#L30">
+
+### lv_3dtexture_class
+
+```c
+const lv_obj_class_t lv_3dtexture_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_obj.h"]}
+  includedBy={["lv_3dtexture_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

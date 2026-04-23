@@ -1,0 +1,35 @@
+---
+title: lv_keyboard_private.h
+description: API reference for lv_keyboard_private.h
+api:
+  structs: [_lv_keyboard_t]
+---
+
+<RelatedHeaders name="lv_keyboard.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_keyboard_t">
+
+### _lv_keyboard_t
+
+Data of keyboard
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `btnm` | <ApiLink name="lv_buttonmatrix_t" /> |  |
+| `ta` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to the assigned text area |
+| `mode` | <ApiLink name="lv_keyboard_mode_t" /> | Key map type |
+| `popovers` | <ApiLink name="uint8_t" /> | Show button titles in popovers on press |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_buttonmatrix_private.h", "lv_keyboard.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_buttonmatrix.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_private.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

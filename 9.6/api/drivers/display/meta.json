@@ -1,0 +1,19 @@
+{
+  "title": "Display",
+  "pages": [
+    "drm",
+    "fb",
+    "ft81x",
+    "ili9341",
+    "lcd",
+    "lovyan_gfx",
+    "nv3007",
+    "nxp_elcdif",
+    "renesas_glcdc",
+    "st_ltdc",
+    "st7735",
+    "st7789",
+    "st7796",
+    "tft_espi"
+  ]
+}

@@ -1,0 +1,217 @@
+---
+title: LGFX
+description: API reference for class LGFX
+api:
+  functions: [LGFX, init, initDMA, waitDMA, fillScreen, setRotation, pushImage, pushImageDMA, startWrite, getStartCount, endWrite, setBrightness, writePixel, getTouch]
+---
+
+If using LovyanGFX create <ApiLink name="LGFX" /> class that inherits from lgfx::LGFX_Device [https://github.com/lovyan03/LovyanGFX/blob/master/examples/HowToUse/2_user_setting/2_user_setting.ino](https://github.com/lovyan03/LovyanGFX/blob/master/examples/HowToUse/2_user_setting/2_user_setting.ino) If using other display drivers that is not LovyanGFX Create an <ApiLink name="LGFX" /> wrapper class that implements the functions used in lv_lovyan_gfx.cpp
+
+## Public Functions
+
+<ApiMember kind="function" name="LGFX">
+
+### LGFX
+
+```c
+LGFX::LGFX(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="init">
+
+### init
+
+```c
+bool LGFX::init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="initDMA">
+
+### initDMA
+
+```c
+void LGFX::initDMA(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="waitDMA">
+
+### waitDMA
+
+```c
+void LGFX::waitDMA(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="fillScreen">
+
+### fillScreen
+
+```c
+void LGFX::fillScreen(uint16_t color)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `color` | <ApiLink name="uint16_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="setRotation">
+
+### setRotation
+
+```c
+void LGFX::setRotation(uint8_t rotation)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `rotation` | <ApiLink name="uint8_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="pushImage">
+
+### pushImage
+
+```c
+void LGFX::pushImage(int32_t x, int32_t y, int32_t w, int32_t h, uint16_t *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `x` | <ApiLink name="int32_t" /> |
+| `y` | <ApiLink name="int32_t" /> |
+| `w` | <ApiLink name="int32_t" /> |
+| `h` | <ApiLink name="int32_t" /> |
+| `data` | <ApiLink name="uint16_t" display="uint16_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="pushImageDMA">
+
+### pushImageDMA
+
+```c
+void LGFX::pushImageDMA(int32_t x, int32_t y, int32_t w, int32_t h, uint16_t *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `x` | <ApiLink name="int32_t" /> |
+| `y` | <ApiLink name="int32_t" /> |
+| `w` | <ApiLink name="int32_t" /> |
+| `h` | <ApiLink name="int32_t" /> |
+| `data` | <ApiLink name="uint16_t" display="uint16_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="startWrite">
+
+### startWrite
+
+```c
+void LGFX::startWrite(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="getStartCount">
+
+### getStartCount
+
+```c
+uint32_t LGFX::getStartCount(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="endWrite">
+
+### endWrite
+
+```c
+void LGFX::endWrite(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="setBrightness">
+
+### setBrightness
+
+```c
+void LGFX::setBrightness(uint8_t brightness)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `brightness` | <ApiLink name="uint8_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="writePixel">
+
+### writePixel
+
+```c
+void LGFX::writePixel(int32_t x, int32_t y, const uint16_t color)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `x` | <ApiLink name="int32_t" /> |
+| `y` | <ApiLink name="int32_t" /> |
+| `color` | <ApiLink name="uint16_t" display="const uint16_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="getTouch">
+
+### getTouch
+
+```c
+bool LGFX::getTouch(uint16_t *x, uint16_t *y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `x` | <ApiLink name="uint16_t" display="uint16_t *" /> |
+| `y` | <ApiLink name="uint16_t" display="uint16_t *" /> |
+
+
+</ApiMember>

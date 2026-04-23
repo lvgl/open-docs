@@ -1,0 +1,41 @@
+---
+title: lv_rlottie_private.h
+description: API reference for lv_rlottie_private.h
+api:
+  structs: [_lv_rlottie_t]
+---
+
+<RelatedHeaders name="lv_rlottie.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_rlottie_t">
+
+### _lv_rlottie_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `img_ext` | <ApiLink name="lv_image_t" /> |  |
+| `animation` | `struct Lottie_Animation_S *` |  |
+| `task` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> |  |
+| `imgdsc` | <ApiLink name="lv_image_dsc_t" /> |  |
+| `total_frames` | <ApiLink name="size_t" /> |  |
+| `current_frame` | <ApiLink name="size_t" /> |  |
+| `framerate` | <ApiLink name="size_t" /> |  |
+| `allocated_buf` | <ApiLink name="uint32_t" display="uint32_t *" /> |  |
+| `allocated_buffer_size` | <ApiLink name="size_t" /> |  |
+| `scanline_width` | <ApiLink name="size_t" /> |  |
+| `play_ctrl` | <ApiLink name="lv_rlottie_ctrl_t" /> |  |
+| `dest_frame` | <ApiLink name="size_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_rlottie.h", "lv_image_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_private.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

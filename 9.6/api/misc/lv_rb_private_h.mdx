@@ -1,0 +1,48 @@
+---
+title: lv_rb_private.h
+description: API reference for lv_rb_private.h
+api:
+  structs: [_lv_rb_node_t, _lv_rb_t]
+---
+
+<RelatedHeaders name="lv_rb.h" isPrivate={true} />
+
+<ApiSummary structs={2} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_rb_node_t">
+
+### _lv_rb_node_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `parent` | <ApiLink name="_lv_rb_node_t" display="struct _lv_rb_node_t *" /> |  |
+| `left` | <ApiLink name="_lv_rb_node_t" display="struct _lv_rb_node_t *" /> |  |
+| `right` | <ApiLink name="_lv_rb_node_t" display="struct _lv_rb_node_t *" /> |  |
+| `color` | <ApiLink name="lv_rb_color_t" /> |  |
+| `data` | `void *` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_rb_t">
+
+### _lv_rb_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `root` | <ApiLink name="lv_rb_node_t" display="lv_rb_node_t *" /> |  |
+| `compare` | <ApiLink name="lv_rb_compare_t" /> |  |
+| `size` | <ApiLink name="size_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_rb.h"]}
+  includedBy={["lv_opengl_shader_internal.h"]}
+  transitiveIncludes={["lv_assert.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_log.h", "lv_mem.h", "lv_string.h", "lv_types.h"]}
+/>

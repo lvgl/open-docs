@@ -1,0 +1,21 @@
+---
+title: "Image Button"
+order: 70
+---
+
+A button whose background is composed from left, center, and right image slices, letting it stretch to any width without distortion.
+
+## Image button with press transition
+
+<LvglExampleBrief>Three-part image button that widens and darkens while pressed.</LvglExampleBrief>
+
+An `lv_imagebutton` uses `imagebutton_left`, `imagebutton_mid`, and
+`imagebutton_right` for the `LV_IMAGEBUTTON_STATE_RELEASED` source
+so the middle piece stretches across a fixed width of 100. A style
+transition on `LV_STYLE_TRANSFORM_WIDTH` and
+`LV_STYLE_IMAGE_RECOLOR_OPA` runs `lv_anim_path_linear` over 200 ms
+when `LV_STATE_PRESSED` is entered, widening the button by 20 px
+and darkening it with a black recolor at `LV_OPA_30`. A centered
+label reads `Button`.
+
+<LvglExample name="lv_example_imagebutton_1" path="widgets/imagebutton/lv_example_imagebutton_1" />

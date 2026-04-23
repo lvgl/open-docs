@@ -1,0 +1,109 @@
+---
+title: lv_gridnav.h
+description: API reference for lv_gridnav.h
+api:
+  functions: [lv_gridnav_add, lv_gridnav_remove, lv_gridnav_set_focused]
+  enums: [lv_gridnav_ctrl_t]
+---
+
+<ApiSummary functions={3} enums={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Other (2)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_gridnav_set_focused" file="indev/lv_gridnav.h" line={84} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/indev/lv_gridnav.h#L84">
+
+### lv_gridnav_set_focused
+
+Manually focus an object on gridnav container
+
+```c
+void lv_gridnav_set_focused(lv_obj_t *cont, lv_obj_t *to_focus, lv_anim_enable_t anim_en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `cont` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gridnav container |
+| `to_focus` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object to focus |
+| `anim_en` | <ApiLink name="lv_anim_enable_t" /> | LV_ANIM_ON/OFF |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_gridnav_add" file="indev/lv_gridnav.h" line={70} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/indev/lv_gridnav.h#L70">
+
+### lv_gridnav_add
+
+Add grid navigation feature to an object. It expects the children to be arranged into a grid-like layout. Although it's not required to have pixel perfect alignment. This feature makes possible to use keys to navigate among the children and focus them. The keys other than arrows and press/release related events are forwarded to the focused child.
+
+```c
+void lv_gridnav_add(lv_obj_t *obj, lv_gridnav_ctrl_t ctrl)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object on which navigation should be applied. |
+| `ctrl` | <ApiLink name="lv_gridnav_ctrl_t" /> | control flags from `lv_gridnav_ctrl_t`. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gridnav_remove" file="indev/lv_gridnav.h" line={76} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/indev/lv_gridnav.h#L76">
+
+### lv_gridnav_remove
+
+Remove the grid navigation support from an object
+
+```c
+void lv_gridnav_remove(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_gridnav_ctrl_t" file="indev/lv_gridnav.h" line={27} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/indev/lv_gridnav.h#L27">
+
+### lv_gridnav_ctrl_t
+
+| Name | Value | Description |
+|------|------|------|
+| `LV_GRIDNAV_CTRL_NONE` | `0x0` |  |
+| `LV_GRIDNAV_CTRL_ROLLOVER` | `0x1` | If there is no next/previous object in a direction, the focus goes to the object in the next/previous row (on left/right keys) or first/last row (on up/down keys) |
+| `LV_GRIDNAV_CTRL_SCROLL_FIRST` | `0x2` | If an arrow is pressed and the focused object can be scrolled in that direction then it will be scrolled instead of going to the next/previous object. If there is no more room for scrolling the next/previous object will be focused normally |
+| `LV_GRIDNAV_CTRL_HORIZONTAL_MOVE_ONLY` | `0x4` | Only use left/right keys for grid navigation. Up/down key events will be sent to the focused object. |
+| `LV_GRIDNAV_CTRL_VERTICAL_MOVE_ONLY` | `0x8` | Only use up/down keys for grid navigation. Left/right key events will be sent to the focused object. |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_gridnav_ctrl_t" count={1}>
+
+- `lv_gridnav_add` — param `ctrl`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

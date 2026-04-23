@@ -1,0 +1,866 @@
+---
+title: lv_textarea.h
+description: API reference for lv_textarea.h
+api:
+  functions: [lv_textarea_create, lv_textarea_add_char, lv_textarea_add_text, lv_textarea_delete_char, lv_textarea_delete_char_forward, lv_textarea_set_text, lv_textarea_set_placeholder_text, lv_textarea_set_cursor_pos, lv_textarea_set_cursor_click_pos, lv_textarea_set_password_mode, lv_textarea_set_password_bullet, lv_textarea_set_one_line, lv_textarea_set_accepted_chars, lv_textarea_set_accepted_chars_static, lv_textarea_set_max_length, lv_textarea_set_insert_replace, lv_textarea_set_text_selection, lv_textarea_set_password_show_time, lv_textarea_set_align, lv_textarea_get_text, lv_textarea_get_placeholder_text, lv_textarea_get_label, lv_textarea_get_cursor_pos, lv_textarea_get_cursor_click_pos, lv_textarea_get_password_mode, lv_textarea_get_password_bullet, lv_textarea_get_one_line, lv_textarea_get_accepted_chars, lv_textarea_get_max_length, lv_textarea_text_is_selected, lv_textarea_get_text_selection, lv_textarea_get_password_show_time, lv_textarea_get_current_char, lv_textarea_clear_selection, lv_textarea_cursor_right, lv_textarea_cursor_left, lv_textarea_cursor_down, lv_textarea_cursor_up]
+  enums: [_lv_property_textarea_id_t]
+  macros: [LV_TEXTAREA_CURSOR_LAST, LV_PART_TEXTAREA_PLACEHOLDER]
+  variables: [lv_textarea_class]
+---
+
+<RelatedHeaders name="lv_textarea_private.h" isPrivate={false} />
+
+<ApiSummary functions={38} enums={1} macros={2} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (14)","Getters (13)","Other (11)"]}>
+<ApiTab value="Setters (14)">
+
+<ApiMember kind="function" name="lv_textarea_set_text" file="widgets/textarea/lv_textarea.h" line={111} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L111">
+
+### lv_textarea_set_text
+
+Set the text of a text area
+
+```c
+void lv_textarea_set_text(lv_obj_t *obj, const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `txt` | `const char *` | pointer to the text |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_placeholder_text" file="widgets/textarea/lv_textarea.h" line={118} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L118">
+
+### lv_textarea_set_placeholder_text
+
+Set the placeholder text of a text area
+
+```c
+void lv_textarea_set_placeholder_text(lv_obj_t *obj, const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `txt` | `const char *` | pointer to the text |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_cursor_pos" file="widgets/textarea/lv_textarea.h" line={127} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L127">
+
+### lv_textarea_set_cursor_pos
+
+Set the cursor position
+
+```c
+void lv_textarea_set_cursor_pos(lv_obj_t *obj, int32_t pos)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `pos` | <ApiLink name="int32_t" /> | the new cursor position in character index \< 0 : index from the end of the text LV_TEXTAREA_CURSOR_LAST: go after the last character |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_cursor_click_pos" file="widgets/textarea/lv_textarea.h" line={134} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L134">
+
+### lv_textarea_set_cursor_click_pos
+
+Enable/Disable the positioning of the cursor by clicking the text on the text area.
+
+```c
+void lv_textarea_set_cursor_click_pos(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `en` | <ApiLink name="bool" /> | true: enable click positions; false: disable |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_password_mode" file="widgets/textarea/lv_textarea.h" line={141} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L141">
+
+### lv_textarea_set_password_mode
+
+Enable/Disable password mode
+
+```c
+void lv_textarea_set_password_mode(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `en` | <ApiLink name="bool" /> | true: enable, false: disable |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_password_bullet" file="widgets/textarea/lv_textarea.h" line={148} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L148">
+
+### lv_textarea_set_password_bullet
+
+Set the replacement characters to show in password mode
+
+```c
+void lv_textarea_set_password_bullet(lv_obj_t *obj, const char *bullet)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `bullet` | `const char *` | pointer to the replacement text |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_one_line" file="widgets/textarea/lv_textarea.h" line={155} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L155">
+
+### lv_textarea_set_one_line
+
+Configure the text area to one line or back to normal
+
+```c
+void lv_textarea_set_one_line(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `en` | <ApiLink name="bool" /> | true: one line, false: normal |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_accepted_chars" file="widgets/textarea/lv_textarea.h" line={162} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L162">
+
+### lv_textarea_set_accepted_chars
+
+Set a list of characters. Only these characters will be accepted by the text area
+
+```c
+void lv_textarea_set_accepted_chars(lv_obj_t *obj, const char *list)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `list` | `const char *` | list of characters. A copy is saved. Example: "+-.,0123456789" |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_accepted_chars_static" file="widgets/textarea/lv_textarea.h" line={169} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L169">
+
+### lv_textarea_set_accepted_chars_static
+
+Set a list of characters. Only these characters will be accepted by the text area
+
+```c
+void lv_textarea_set_accepted_chars_static(lv_obj_t *obj, const char *list)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `list` | `const char *` | list of characters. Only the pointer is saved. Example: "+-.,0123456789" |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_max_length" file="widgets/textarea/lv_textarea.h" line={176} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L176">
+
+### lv_textarea_set_max_length
+
+Set max length of a Text Area.
+
+```c
+void lv_textarea_set_max_length(lv_obj_t *obj, uint32_t num)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `num` | <ApiLink name="uint32_t" /> | the maximal number of characters can be added (`lv_textarea_set_text` ignores it) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_insert_replace" file="widgets/textarea/lv_textarea.h" line={185} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L185">
+
+### lv_textarea_set_insert_replace
+
+In `LV_EVENT_INSERT` the text which planned to be inserted can be replaced by another text. It can be used to add automatic formatting to the text area.
+
+```c
+void lv_textarea_set_insert_replace(lv_obj_t *obj, const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `txt` | `const char *` | pointer to a new string to insert. If `""` no text will be added. The variable must be live after the `event_cb` exists. (Should be `global` or `static`) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_text_selection" file="widgets/textarea/lv_textarea.h" line={192} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L192">
+
+### lv_textarea_set_text_selection
+
+Enable/disable selection mode.
+
+```c
+void lv_textarea_set_text_selection(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `en` | <ApiLink name="bool" /> | true or false to enable/disable selection mode |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_password_show_time" file="widgets/textarea/lv_textarea.h" line={199} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L199">
+
+### lv_textarea_set_password_show_time
+
+Set how long show the password before changing it to '*'
+
+```c
+void lv_textarea_set_password_show_time(lv_obj_t *obj, uint32_t time)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `time` | <ApiLink name="uint32_t" /> | show time in milliseconds. 0: hide immediately. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_set_align" file="widgets/textarea/lv_textarea.h" line={209} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L209">
+
+### lv_textarea_set_align
+
+> **Deprecated:** Use the normal text_align style property instead Set the label's alignment. It sets where the label is aligned (in one line mode it can be smaller than the text area) and how the lines of the area align in case of multiline text area
+
+```c
+void lv_textarea_set_align(lv_obj_t *obj, lv_text_align_t align)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `align` | <ApiLink name="lv_text_align_t" /> | the align mode from <ApiLink name="lv_text_align_t" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (13)">
+
+<ApiMember kind="function" name="lv_textarea_get_text" file="widgets/textarea/lv_textarea.h" line={220} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L220">
+
+### lv_textarea_get_text
+
+Get the text of a text area. In password mode it gives the real text (not '*'s).
+
+```c
+const char * lv_textarea_get_text(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** `const char *` — pointer to the text
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_placeholder_text" file="widgets/textarea/lv_textarea.h" line={227} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L227">
+
+### lv_textarea_get_placeholder_text
+
+Get the placeholder text of a text area
+
+```c
+const char * lv_textarea_get_placeholder_text(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** `const char *` — pointer to the text
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_label" file="widgets/textarea/lv_textarea.h" line={234} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L234">
+
+### lv_textarea_get_label
+
+Get the label of a text area
+
+```c
+lv_obj_t * lv_textarea_get_label(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the label object
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_cursor_pos" file="widgets/textarea/lv_textarea.h" line={241} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L241">
+
+### lv_textarea_get_cursor_pos
+
+Get the current cursor position in character index
+
+```c
+uint32_t lv_textarea_get_cursor_pos(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** <ApiLink name="uint32_t" /> — the cursor position
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_cursor_click_pos" file="widgets/textarea/lv_textarea.h" line={248} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L248">
+
+### lv_textarea_get_cursor_click_pos
+
+Get whether the cursor click positioning is enabled or not.
+
+```c
+bool lv_textarea_get_cursor_click_pos(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** <ApiLink name="bool" /> — true: enable click positions; false: disable
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_password_mode" file="widgets/textarea/lv_textarea.h" line={255} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L255">
+
+### lv_textarea_get_password_mode
+
+Get the password mode attribute
+
+```c
+bool lv_textarea_get_password_mode(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** <ApiLink name="bool" /> — true: password mode is enabled, false: disabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_password_bullet" file="widgets/textarea/lv_textarea.h" line={262} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L262">
+
+### lv_textarea_get_password_bullet
+
+Get the replacement characters to show in password mode
+
+```c
+const char * lv_textarea_get_password_bullet(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** `const char *` — pointer to the replacement text
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_one_line" file="widgets/textarea/lv_textarea.h" line={269} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L269">
+
+### lv_textarea_get_one_line
+
+Get the one line configuration attribute
+
+```c
+bool lv_textarea_get_one_line(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** <ApiLink name="bool" /> — true: one line configuration is enabled, false: disabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_accepted_chars" file="widgets/textarea/lv_textarea.h" line={276} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L276">
+
+### lv_textarea_get_accepted_chars
+
+Get a list of accepted characters.
+
+```c
+const char * lv_textarea_get_accepted_chars(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** `const char *` — list of accented characters.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_max_length" file="widgets/textarea/lv_textarea.h" line={283} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L283">
+
+### lv_textarea_get_max_length
+
+Get max length of a Text Area.
+
+```c
+uint32_t lv_textarea_get_max_length(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** <ApiLink name="uint32_t" /> — the maximal number of characters to be add
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_text_selection" file="widgets/textarea/lv_textarea.h" line={297} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L297">
+
+### lv_textarea_get_text_selection
+
+Find whether selection mode is enabled.
+
+```c
+bool lv_textarea_get_text_selection(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** <ApiLink name="bool" /> — true: selection mode is enabled, false: disabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_password_show_time" file="widgets/textarea/lv_textarea.h" line={304} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L304">
+
+### lv_textarea_get_password_show_time
+
+Set how long show the password before changing it to '*'
+
+```c
+uint32_t lv_textarea_get_password_show_time(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** <ApiLink name="uint32_t" /> — show time in milliseconds. 0: hide immediately.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_get_current_char" file="widgets/textarea/lv_textarea.h" line={311} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L311">
+
+### lv_textarea_get_current_char
+
+Get a the character from the current cursor position
+
+```c
+uint32_t lv_textarea_get_current_char(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** <ApiLink name="uint32_t" /> — a the character or 0
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (11)">
+
+<ApiMember kind="function" name="lv_textarea_create" file="widgets/textarea/lv_textarea.h" line={69} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L69">
+
+### lv_textarea_create
+
+Create a text area object
+
+```c
+lv_obj_t * lv_textarea_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new text area |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created text area
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_add_char" file="widgets/textarea/lv_textarea.h" line={81} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L81">
+
+### lv_textarea_add_char
+
+Insert a character to the current cursor position. To add a wide char, e.g. 'Á' use ‘lv_text_encoded_conv_wc('Á’)‘
+
+```c
+void lv_textarea_add_char(lv_obj_t *obj, uint32_t c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `c` | <ApiLink name="uint32_t" /> | a character (e.g. 'a’) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_add_text" file="widgets/textarea/lv_textarea.h" line={88} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L88">
+
+### lv_textarea_add_text
+
+Insert a text to the current cursor position
+
+```c
+void lv_textarea_add_text(lv_obj_t *obj, const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+| `txt` | `const char *` | a '\0' terminated string to insert |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_delete_char" file="widgets/textarea/lv_textarea.h" line={94} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L94">
+
+### lv_textarea_delete_char
+
+Delete a the left character from the current cursor position
+
+```c
+void lv_textarea_delete_char(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_delete_char_forward" file="widgets/textarea/lv_textarea.h" line={100} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L100">
+
+### lv_textarea_delete_char_forward
+
+Delete the right character from the current cursor position
+
+```c
+void lv_textarea_delete_char_forward(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_text_is_selected" file="widgets/textarea/lv_textarea.h" line={290} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L290">
+
+### lv_textarea_text_is_selected
+
+Find whether text is selected or not.
+
+```c
+bool lv_textarea_text_is_selected(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a text area object |
+
+**Returns:** <ApiLink name="bool" /> — whether text is selected or not
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_clear_selection" file="widgets/textarea/lv_textarea.h" line={321} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L321">
+
+### lv_textarea_clear_selection
+
+Clear the selection on the text area.
+
+```c
+void lv_textarea_clear_selection(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_cursor_right" file="widgets/textarea/lv_textarea.h" line={327} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L327">
+
+### lv_textarea_cursor_right
+
+Move the cursor one character right
+
+```c
+void lv_textarea_cursor_right(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_cursor_left" file="widgets/textarea/lv_textarea.h" line={333} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L333">
+
+### lv_textarea_cursor_left
+
+Move the cursor one character left
+
+```c
+void lv_textarea_cursor_left(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_cursor_down" file="widgets/textarea/lv_textarea.h" line={339} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L339">
+
+### lv_textarea_cursor_down
+
+Move the cursor one line down
+
+```c
+void lv_textarea_cursor_down(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_textarea_cursor_up" file="widgets/textarea/lv_textarea.h" line={345} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L345">
+
+### lv_textarea_cursor_up
+
+Move the cursor one line up
+
+```c
+void lv_textarea_cursor_up(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a text area object |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="_lv_property_textarea_id_t" file="widgets/textarea/lv_textarea.h" line={39} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L39">
+
+### _lv_property_textarea_id_t
+
+| Name | Value |
+|------|------|
+| `LV_PROPERTY_TEXTAREA_TEXT` | `(LV_PROPERTY_TEXTAREA_START + ((int) 0 )) \| ((  7   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_PLACEHOLDER_TEXT` | `(LV_PROPERTY_TEXTAREA_START + ((int) 1 )) \| ((  7   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_CURSOR_POS` | `(LV_PROPERTY_TEXTAREA_START + ((int) 2 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_CURSOR_CLICK_POS` | `(LV_PROPERTY_TEXTAREA_START + ((int) 3 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_PASSWORD_MODE` | `(LV_PROPERTY_TEXTAREA_START + ((int) 4 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_PASSWORD_BULLET` | `(LV_PROPERTY_TEXTAREA_START + ((int) 5 )) \| ((  7   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_ONE_LINE` | `(LV_PROPERTY_TEXTAREA_START + ((int) 6 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_ACCEPTED_CHARS` | `(LV_PROPERTY_TEXTAREA_START + ((int) 7 )) \| ((  7   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_MAX_LENGTH` | `(LV_PROPERTY_TEXTAREA_START + ((int) 8 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_TEXT_SELECTION` | `(LV_PROPERTY_TEXTAREA_START + ((int) 9 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_PASSWORD_SHOW_TIME` | `(LV_PROPERTY_TEXTAREA_START + ((int) 10 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_LABEL` | `(LV_PROPERTY_TEXTAREA_START + ((int) 11 )) \| ((  8   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_TEXT_IS_SELECTED` | `(LV_PROPERTY_TEXTAREA_START + ((int) 12 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_CURRENT_CHAR` | `(LV_PROPERTY_TEXTAREA_START + ((int) 13 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_TEXTAREA_END` |  |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_TEXTAREA_CURSOR_LAST" file="widgets/textarea/lv_textarea.h" line={28} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L28">
+
+### LV_TEXTAREA_CURSOR_LAST
+
+```c
+#define LV_TEXTAREA_CURSOR_LAST (0x7FFF) /*Put the cursor after the last character*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PART_TEXTAREA_PLACEHOLDER" file="widgets/textarea/lv_textarea.h" line={31} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L31">
+
+### LV_PART_TEXTAREA_PLACEHOLDER
+
+```c
+#define LV_PART_TEXTAREA_PLACEHOLDER LV_PART_CUSTOM_FIRST
+```
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_textarea_class" file="widgets/textarea/lv_textarea.h" line={58} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/textarea/lv_textarea.h#L58">
+
+### lv_textarea_class
+
+```c
+const lv_obj_class_t lv_textarea_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_label.h"]}
+  includedBy={["lv_spinbox.h", "lv_textarea_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

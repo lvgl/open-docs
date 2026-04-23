@@ -1,0 +1,219 @@
+---
+title: lv_tick.h
+description: API reference for lv_tick.h
+api:
+  functions: [lv_tick_inc, lv_tick_get, lv_tick_elaps, lv_tick_diff, lv_delay_ms, lv_delay_set_cb, lv_tick_set_cb, lv_tick_get_cb]
+  typedefs: [lv_tick_get_cb_t, lv_delay_cb_t]
+---
+
+Provide access to the system tick with 1 millisecond resolution
+
+<RelatedHeaders name="lv_tick_private.h" isPrivate={false} />
+
+<ApiSummary functions={8} typedefs={2} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Getters (2)","Other (4)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_delay_set_cb" file="tick/lv_tick.h" line={78} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/tick/lv_tick.h#L78">
+
+### lv_delay_set_cb
+
+Set a callback for a blocking delay
+
+```c
+void lv_delay_set_cb(lv_delay_cb_t cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `cb` | <ApiLink name="lv_delay_cb_t" /> | pointer to a callback |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_tick_set_cb" file="tick/lv_tick.h" line={84} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/tick/lv_tick.h#L84">
+
+### lv_tick_set_cb
+
+Set the custom callback for 'lv_tick_get'
+
+```c
+void lv_tick_set_cb(lv_tick_get_cb_t cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `cb` | <ApiLink name="lv_tick_get_cb_t" /> | call this callback on 'lv_tick_get' |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (2)">
+
+<ApiMember kind="function" name="lv_tick_get" file="tick/lv_tick.h" line={49} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/tick/lv_tick.h#L49">
+
+### lv_tick_get
+
+Get the elapsed milliseconds since start up
+
+```c
+uint32_t lv_tick_get(void)
+```
+
+**Returns:** <ApiLink name="uint32_t" /> — the elapsed milliseconds
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_tick_get_cb" file="tick/lv_tick.h" line={90} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/tick/lv_tick.h#L90">
+
+### lv_tick_get_cb
+
+Get the custom callback for 'lv_tick_get'
+
+```c
+lv_tick_get_cb_t lv_tick_get_cb(void)
+```
+
+**Returns:** <ApiLink name="lv_tick_get_cb_t" /> — call this callback on 'lv_tick_get'
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (4)">
+
+<ApiMember kind="function" name="lv_tick_inc" file="tick/lv_tick.h" line={43} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/tick/lv_tick.h#L43">
+
+### lv_tick_inc
+
+You have to call this function periodically. It is typically safe to call from an interrupt handler or a different thread.
+
+```c
+void lv_tick_inc(uint32_t tick_period)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `tick_period` | <ApiLink name="uint32_t" /> | the call period of this function in milliseconds |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_tick_elaps" file="tick/lv_tick.h" line={56} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/tick/lv_tick.h#L56">
+
+### lv_tick_elaps
+
+Get the elapsed milliseconds since a previous time stamp
+
+```c
+uint32_t lv_tick_elaps(uint32_t prev_tick)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `prev_tick` | <ApiLink name="uint32_t" /> | a previous time stamp (return value of <ApiLink name="lv_tick_get" display="lv_tick_get()" /> ) |
+
+**Returns:** <ApiLink name="uint32_t" /> — the elapsed milliseconds since 'prev_tick'
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_tick_diff" file="tick/lv_tick.h" line={64} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/tick/lv_tick.h#L64">
+
+### lv_tick_diff
+
+Get the elapsed milliseconds between two time stamps
+
+```c
+uint32_t lv_tick_diff(uint32_t tick, uint32_t prev_tick)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `tick` | <ApiLink name="uint32_t" /> | a time stamp |
+| `prev_tick` | <ApiLink name="uint32_t" /> | a time stamp before `tick` |
+
+**Returns:** <ApiLink name="uint32_t" /> — the elapsed milliseconds between `prev_tick` and `tick`
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_delay_ms" file="tick/lv_tick.h" line={72} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/tick/lv_tick.h#L72">
+
+### lv_delay_ms
+
+Delay for the given milliseconds. By default it's a blocking delay, but with <ApiLink name="lv_delay_set_cb" display="lv_delay_set_cb()" /> a custom delay function can be set too
+
+```c
+void lv_delay_ms(uint32_t ms)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ms` | <ApiLink name="uint32_t" /> | the number of milliseconds to delay |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_tick_get_cb_t" file="tick/lv_tick.h" line={30} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/tick/lv_tick.h#L30">
+
+### lv_tick_get_cb_t
+
+```c
+typedef uint32_t(* lv_tick_get_cb_t) (void)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_tick_get_cb_t" count={1}>
+
+- `lv_tick_set_cb` — param `cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_delay_cb_t" file="tick/lv_tick.h" line={32} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/tick/lv_tick.h#L32">
+
+### lv_delay_cb_t
+
+```c
+typedef void(* lv_delay_cb_t) (uint32_t ms)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_delay_cb_t" count={1}>
+
+- `lv_delay_set_cb` — param `cb`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includedBy={["lv_global.h", "lv_timer.h", "lv_tick_private.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

@@ -1,0 +1,22 @@
+{
+  "title": "3rd-Party Libraries",
+  "pages": [
+    "lodepng",
+    "gstreamer",
+    "svg",
+    "gltf",
+    "bmp",
+    "freetype",
+    "qrcode",
+    "libjpeg_turbo",
+    "libpng",
+    "tjpgd",
+    "rlottie",
+    "ffmpeg",
+    "tiny_ttf",
+    "libwebp",
+    "gif",
+    "barcode"
+  ],
+  "description": "Integrations with image, font, video, and graphics libraries."
+}

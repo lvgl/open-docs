@@ -1,0 +1,7 @@
+{
+  "title": "Barcode",
+  "pages": [
+    "lv_barcode_h",
+    "lv_barcode_private_h"
+  ]
+}

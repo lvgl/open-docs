@@ -1,0 +1,22 @@
+---
+title: "Arc Label"
+order: 20
+---
+
+A label that renders text along a curved path, configured via `lv_arclabel_set_angle_start` and related APIs.
+
+## Curved text along circular paths
+
+<LvglExampleBrief>Four arclabels wrap recoloured text and slogans around concentric radii.</LvglExampleBrief>
+
+A black screen hosts four `lv_arclabel` objects. An inner 200 by
+200 arclabel curves a recoloured string counter-clockwise at 80%
+radius with trailing vertical alignment, and an outer arclabel
+paints the same string clockwise at 100% radius with leading
+alignment. Two 300 by 200 slogans (`STAY HUNGRY`, `STAY FOOLISH`)
+sit at a fixed 150 px radius with a 30 px offset, amber colour,
+and counter-clockwise direction. When available,
+`lv_font_montserrat_18` is applied to the inner pair and
+`lv_font_montserrat_24` to the slogans.
+
+<LvglExample name="lv_example_arclabel_1" path="widgets/arclabel/lv_example_arclabel_1" />

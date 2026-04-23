@@ -1,0 +1,93 @@
+---
+title: lv_draw_eve_target.h
+description: API reference for lv_draw_eve_target.h
+api:
+  enums: [lv_draw_eve_operation_t]
+  structs: [lv_draw_eve_parameters_t]
+  typedefs: [lv_draw_eve_operation_cb_t]
+---
+
+<ApiSummary enums={1} structs={1} typedefs={1} />
+
+## Enums
+
+<ApiMember kind="enum" name="lv_draw_eve_operation_t" file="draw/eve/lv_draw_eve_target.h" line={45} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/eve/lv_draw_eve_target.h#L45">
+
+### lv_draw_eve_operation_t
+
+| Name | Description |
+|------|------|
+| `LV_DRAW_EVE_OPERATION_POWERDOWN_SET` | set the "PD_N" pin low |
+| `LV_DRAW_EVE_OPERATION_POWERDOWN_CLEAR` | set the "PD_N" pin high |
+| `LV_DRAW_EVE_OPERATION_CS_ASSERT` | set the "CS_N" pin low |
+| `LV_DRAW_EVE_OPERATION_CS_DEASSERT` | set the "CS_N" pin high |
+| `LV_DRAW_EVE_OPERATION_SPI_SEND` | send `length` bytes of `data` over SPI |
+| `LV_DRAW_EVE_OPERATION_SPI_RECEIVE` | receive `length` bytes into `data` from SPI |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_eve_parameters_t">
+
+### lv_draw_eve_parameters_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `hor_res` | <ApiLink name="uint16_t" /> | active display width |
+| `ver_res` | <ApiLink name="uint16_t" /> | active display height |
+| `hcycle` | <ApiLink name="uint16_t" /> | total number of clocks per line, incl front/back porch |
+| `hoffset` | <ApiLink name="uint16_t" /> | start of active line |
+| `hsync0` | <ApiLink name="uint16_t" /> | start of horizontal sync pulse |
+| `hsync1` | <ApiLink name="uint16_t" /> | end of horizontal sync pulse |
+| `vcycle` | <ApiLink name="uint16_t" /> | total number of lines per screen, including pre/post |
+| `voffset` | <ApiLink name="uint16_t" /> | start of active screen |
+| `vsync0` | <ApiLink name="uint16_t" /> | start of vertical sync pulse |
+| `vsync1` | <ApiLink name="uint16_t" /> | end of vertical sync pulse |
+| `swizzle` | <ApiLink name="uint8_t" /> | FT8xx output to LCD - pin order |
+| `pclkpol` | <ApiLink name="uint8_t" /> | LCD data is clocked in on this PCLK edge |
+| `cspread` | <ApiLink name="uint8_t" /> | helps with noise, when set to 1 fewer signals are changed simultaneously, reset-default: 1 |
+| `pclk` | <ApiLink name="uint8_t" /> | 60MHz / pclk = pclk frequency |
+| `has_crystal` | <ApiLink name="bool" /> | has an external clock crystal |
+| `has_gt911` | <ApiLink name="bool" /> | has a touch controller |
+| `backlight_pwm` | <ApiLink name="uint8_t" /> | backlight PWM duty cycle 0 = off, 128 = max |
+| `backlight_freq` | <ApiLink name="uint16_t" /> | backlight PWM frequency. try 4000 if unsure |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_eve_parameters_t" count={2}>
+
+- `lv_draw_eve_set_display_data` — param `params`
+- `lv_draw_eve_display_create` — param `params`
+
+</TypeUsedBy>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_draw_eve_operation_cb_t" file="draw/eve/lv_draw_eve_target.h" line={54} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/eve/lv_draw_eve_target.h#L54">
+
+### lv_draw_eve_operation_cb_t
+
+```c
+typedef void(* lv_draw_eve_operation_cb_t) (lv_display_t *disp, lv_draw_eve_operation_t operation, void *data, uint32_t length)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_eve_operation_cb_t" count={2}>
+
+- `lv_draw_eve_set_display_data` — param `op_cb`
+- `lv_draw_eve_display_create` — param `op_cb`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h", "stdbool.h", "stdint.h"]}
+  includedBy={["lv_draw_eve.h", "lv_draw_eve_private.h", "lv_draw_eve_display.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

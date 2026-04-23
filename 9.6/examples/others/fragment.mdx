@@ -1,0 +1,32 @@
+---
+title: "Fragment Manager"
+order: 50
+---
+
+Android-style fragment lifecycle and back-stack navigation via `lv_fragment_manager_t`.
+
+## Single fragment inside a container
+
+<LvglExampleBrief>Attach an `lv_fragment_manager_t` to a full-screen container and replace in one fragment.</LvglExampleBrief>
+
+A full-screen `lv_obj_create` acts as the root container. An `lv_fragment_manager_t`
+is created and wired to the root's `LV_EVENT_DELETE` so
+`lv_fragment_manager_delete` runs before the children go away. The custom class
+`sample_cls` stores a name string; `lv_fragment_manager_replace` swaps it in and
+its `create_obj_cb` builds a label that prints `"Hello, Fragment!"`.
+
+<LvglExample name="lv_example_fragment_1" path="others/fragment/lv_example_fragment_1" />
+
+## Push and pop fragment stack
+
+<LvglExampleBrief>Build a navigation stack where Push and Pop buttons drive `lv_fragment_manager_push`/`pop`.</LvglExampleBrief>
+
+A grid layout splits the screen into a content cell and two buttons labelled
+"Push" and "Pop". Each stacked fragment tracks its depth and a click counter,
+and its `create_obj_cb` builds a column with a depth label, a counter label,
+and a `+1` button that updates the counter. "Push" calls
+`lv_fragment_manager_push` with the current stack size as the starting depth;
+"Pop" calls `lv_fragment_manager_pop`. The root's `LV_EVENT_DELETE` tears the
+manager down.
+
+<LvglExample name="lv_example_fragment_2" path="others/fragment/lv_example_fragment_2" />

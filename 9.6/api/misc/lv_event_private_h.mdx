@@ -1,0 +1,130 @@
+---
+title: lv_event_private.h
+description: API reference for lv_event_private.h
+api:
+  functions: [lv_event_push, lv_event_pop, lv_event_push_and_send, lv_event_mark_deleted]
+  structs: [_lv_event_dsc_t, _lv_event_t]
+---
+
+<RelatedHeaders name="lv_event.h" isPrivate={true} />
+
+<ApiSummary functions={4} structs={2} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_event_push" file="misc/lv_event_private.h" line={62} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_event_private.h#L62">
+
+### lv_event_push
+
+```c
+void lv_event_push(lv_event_t *e)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `e` | <ApiLink name="lv_event_t" display="lv_event_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_event_pop" file="misc/lv_event_private.h" line={64} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_event_private.h#L64">
+
+### lv_event_pop
+
+```c
+void lv_event_pop(lv_event_t *e)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `e` | <ApiLink name="lv_event_t" display="lv_event_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_event_push_and_send" file="misc/lv_event_private.h" line={67} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_event_private.h#L67">
+
+### lv_event_push_and_send
+
+```c
+lv_result_t lv_event_push_and_send(lv_event_list_t *event_list, lv_event_code_t code, void *original_target, void *param)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `event_list` | <ApiLink name="lv_event_list_t" display="lv_event_list_t *" /> |
+| `code` | <ApiLink name="lv_event_code_t" /> |
+| `original_target` | `void *` |
+| `param` | `void *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_event_mark_deleted" file="misc/lv_event_private.h" line={75} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_event_private.h#L75">
+
+### lv_event_mark_deleted
+
+Nested events can be called and one of them might belong to an object that is being deleted. Mark this object's `event_temp_data` deleted to know that its `lv_obj_send_event` should return `LV_RESULT_INVALID`
+
+```c
+void lv_event_mark_deleted(void *target)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `target` | `void *` | pointer to an event target which was deleted |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_event_dsc_t">
+
+### _lv_event_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `ext_data` | <ApiLink name="lv_ext_data_t" /> |  |
+| `cb` | <ApiLink name="lv_event_cb_t" /> |  |
+| `user_data` | `void *` |  |
+| `filter` | <ApiLink name="uint32_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_event_t">
+
+### _lv_event_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `current_target` | `void *` |  |
+| `original_target` | `void *` |  |
+| `code` | <ApiLink name="lv_event_code_t" /> |  |
+| `user_data` | `void *` |  |
+| `param` | `void *` |  |
+| `prev` | <ApiLink name="lv_event_t" display="lv_event_t *" /> |  |
+| `deleted` | <ApiLink name="uint8_t" /> |  |
+| `stop_processing` | <ApiLink name="uint8_t" /> |  |
+| `stop_bubbling` | <ApiLink name="uint8_t" /> |  |
+| `stop_trickling` | <ApiLink name="uint8_t" /> |  |
+| `ext_data` | <ApiLink name="lv_ext_data_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_ext_data.h", "lv_event.h"]}
+  transitiveIncludes={["lv_array.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_types.h"]}
+/>

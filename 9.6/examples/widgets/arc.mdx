@@ -1,0 +1,45 @@
+---
+title: "Arc"
+order: 15
+---
+
+## Arc with rotating percentage label
+
+<LvglExampleBrief>Report the arc value on a label that orbits with the knob.</LvglExampleBrief>
+
+A 150 by 150 arc sweeps 270 degrees starting at rotation 135 and
+begins at value 10. An `LV_EVENT_VALUE_CHANGED` callback writes the
+current value into a label as `<v>%` and calls
+`lv_arc_rotate_obj_to_angle` with a 25 px radius so the label
+follows the knob. The initial label is primed with
+`lv_obj_send_event`.
+
+<LvglExample name="lv_example_arc_1" path="widgets/arc/lv_example_arc_1" />
+
+## Arc loader animation
+
+<LvglExampleBrief>Centered 360 degree arc fills from 0 to 100 in a one-second loop.</LvglExampleBrief>
+
+A centered arc has its background angles set to a full 360 degrees
+starting at rotation 270, with the knob style removed and
+`LV_OBJ_FLAG_CLICKABLE` cleared so it cannot be dragged. An
+`lv_anim_t` drives `lv_arc_set_value` from 0 to 100 across 1000 ms
+with a 500 ms repeat delay and `LV_ANIM_REPEAT_INFINITE`.
+
+<LvglExample name="lv_example_arc_2" path="widgets/arc/lv_example_arc_2" />
+
+## Clickable pie chart with exploding slices
+
+<LvglExampleBrief>Five coloured arc slices pop outward when clicked and snap back.</LvglExampleBrief>
+
+A flex-row container holds a 150 by 150 slice canvas built from five
+overlapping arcs (12%, 18%, 26%, 24%, 20%) created with
+`LV_ARC_MODE_NORMAL`, each taking a share of the full circle via
+`lv_arc_set_bg_start_angle` and `lv_arc_set_bg_end_angle`. Each
+slice carries its own percentage label positioned along its midpoint
+and enables `LV_OBJ_FLAG_ADV_HITTEST` so clicks register on the
+wedge shape. An `LV_EVENT_CLICKED` callback animates the slice 20 px
+outward along the slice midpoint over 200 ms, reversing it on a
+second click and pulling any previously exploded slice back in.
+
+<LvglExample name="lv_example_arc_3" path="widgets/arc/lv_example_arc_3" />

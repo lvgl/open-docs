@@ -1,0 +1,7 @@
+{
+  "title": "Button",
+  "pages": [
+    "lv_button_h",
+    "lv_button_private_h"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Osal",
+  "pages": [
+    "lv_freertos_h",
+    "lv_linux_h",
+    "lv_mqx_h",
+    "lv_os_h",
+    "lv_os_private_h",
+    "lv_pthread_h"
+  ]
+}

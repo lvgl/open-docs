@@ -1,0 +1,308 @@
+---
+title: lv_log.h
+description: API reference for lv_log.h
+api:
+  functions: [lv_log_register_print_cb, lv_log, lv_log_add]
+  typedefs: [lv_log_level_t, lv_log_print_g_cb_t]
+  macros: [LV_LOG_LEVEL_TRACE, LV_LOG_LEVEL_INFO, LV_LOG_LEVEL_WARN, LV_LOG_LEVEL_ERROR, LV_LOG_LEVEL_USER, LV_LOG_LEVEL_NONE, LV_LOG_LEVEL_NUM, LV_LOG_FILE, LV_LOG_LINE, LV_LOG_TRACE, LV_LOG_INFO, LV_LOG_WARN, LV_LOG_ERROR, LV_LOG_USER, LV_LOG]
+---
+
+<ApiSummary functions={3} typedefs={2} macros={15} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_log_register_print_cb" file="misc/lv_log.h" line={72} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L72">
+
+### lv_log_register_print_cb
+
+Register custom print/write function to call when a log is added. It can format its "File path", "Line number" and "Description" as required and send the formatted log message to a console or serial port.
+
+```c
+void lv_log_register_print_cb(lv_log_print_g_cb_t print_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `print_cb` | <ApiLink name="lv_log_print_g_cb_t" /> | a function pointer to print a log |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_log" file="misc/lv_log.h" line={80} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L80">
+
+### lv_log
+
+Print a log message via `printf` if enabled with `LV_LOG_PRINTF` in `lv_conf.h` and/or a print callback if registered with `lv_log_register_print_cb`
+
+```c
+void lv_log(const char *format,...)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `format` | `const char *` | printf-like format string |
+| `...` | |  |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_log_add" file="misc/lv_log.h" line={91} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L91">
+
+### lv_log_add
+
+Add a log
+
+```c
+void lv_log_add(lv_log_level_t level, const char *file, int line, const char *func, const char *format,...)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `level` | <ApiLink name="lv_log_level_t" /> | the level of log. (From `lv_log_level_t` enum) |
+| `file` | `const char *` | name of the file when the log added |
+| `line` | `int` | line number in the source code where the log added |
+| `func` | `const char *` | name of the function when the log added |
+| `format` | `const char *` | printf-like format string |
+| `...` | |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_log_level_t" file="misc/lv_log.h" line={41} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L41">
+
+### lv_log_level_t
+
+```c
+typedef int8_t lv_log_level_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_log_level_t" count={1}>
+
+- `lv_log_add` — param `level`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_log_print_g_cb_t" file="misc/lv_log.h" line={60} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L60">
+
+### lv_log_print_g_cb_t
+
+```c
+typedef void(* lv_log_print_g_cb_t) (lv_log_level_t level, const char *buf)
+```
+
+Log print function. Receives a string buffer to print".
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_log_print_g_cb_t" count={1}>
+
+- `lv_log_register_print_cb` — param `print_cb`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_LOG_LEVEL_TRACE" file="misc/lv_log.h" line={26} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L26">
+
+### LV_LOG_LEVEL_TRACE
+
+```c
+#define LV_LOG_LEVEL_TRACE 0
+```
+
+Log detailed information.
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_LEVEL_INFO" file="misc/lv_log.h" line={27} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L27">
+
+### LV_LOG_LEVEL_INFO
+
+```c
+#define LV_LOG_LEVEL_INFO 1
+```
+
+Log important events.
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_LEVEL_WARN" file="misc/lv_log.h" line={28} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L28">
+
+### LV_LOG_LEVEL_WARN
+
+```c
+#define LV_LOG_LEVEL_WARN 2
+```
+
+Log if something unwanted happened but didn't caused problem.
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_LEVEL_ERROR" file="misc/lv_log.h" line={29} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L29">
+
+### LV_LOG_LEVEL_ERROR
+
+```c
+#define LV_LOG_LEVEL_ERROR 3
+```
+
+Log only critical issues, when system may fail.
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_LEVEL_USER" file="misc/lv_log.h" line={30} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L30">
+
+### LV_LOG_LEVEL_USER
+
+```c
+#define LV_LOG_LEVEL_USER 4
+```
+
+Log only custom log messages added by the user.
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_LEVEL_NONE" file="misc/lv_log.h" line={31} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L31">
+
+### LV_LOG_LEVEL_NONE
+
+```c
+#define LV_LOG_LEVEL_NONE 5
+```
+
+Do not log anything.
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_LEVEL_NUM" file="misc/lv_log.h" line={32} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L32">
+
+### LV_LOG_LEVEL_NUM
+
+```c
+#define LV_LOG_LEVEL_NUM 5
+```
+
+Number of log levels
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_FILE" file="misc/lv_log.h" line={46} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L46">
+
+### LV_LOG_FILE
+
+```c
+#define LV_LOG_FILE __FILE__
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_LINE" file="misc/lv_log.h" line={47} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L47">
+
+### LV_LOG_LINE
+
+```c
+#define LV_LOG_LINE __LINE__
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_TRACE" file="misc/lv_log.h" line={101} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L101">
+
+### LV_LOG_TRACE
+
+```c
+#define LV_LOG_TRACE(...) \
+    do {}while(0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_INFO" file="misc/lv_log.h" line={109} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L109">
+
+### LV_LOG_INFO
+
+```c
+#define LV_LOG_INFO(...) \
+    do {}while(0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_WARN" file="misc/lv_log.h" line={115} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L115">
+
+### LV_LOG_WARN
+
+```c
+#define LV_LOG_WARN(...) \
+    lv_log_add(LV_LOG_LEVEL_WARN, LV_LOG_FILE, LV_LOG_LINE, __func__, __VA_ARGS__)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_ERROR" file="misc/lv_log.h" line={123} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L123">
+
+### LV_LOG_ERROR
+
+```c
+#define LV_LOG_ERROR(...) \
+    lv_log_add(LV_LOG_LEVEL_ERROR, LV_LOG_FILE, LV_LOG_LINE, __func__, __VA_ARGS__)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG_USER" file="misc/lv_log.h" line={131} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L131">
+
+### LV_LOG_USER
+
+```c
+#define LV_LOG_USER(...) \
+    lv_log_add(LV_LOG_LEVEL_USER, LV_LOG_FILE, LV_LOG_LINE, __func__, __VA_ARGS__)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LOG" file="misc/lv_log.h" line={139} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_log.h#L139">
+
+### LV_LOG
+
+```c
+#define LV_LOG(...) \
+    lv_log(__VA_ARGS__)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includedBy={["lv_global.h", "lv_draw_ppa_private.h", "lv_pxp_cfg.h", "lv_assert.h", "lv_check_arg.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

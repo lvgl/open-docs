@@ -1,0 +1,10 @@
+{
+  "title": "Gltf",
+  "pages": [
+    "fastgltf",
+    "gltf_data",
+    "gltf_environment",
+    "gltf_view",
+    "math"
+  ]
+}

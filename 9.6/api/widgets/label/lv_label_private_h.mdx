@@ -1,0 +1,46 @@
+---
+title: lv_label_private.h
+description: API reference for lv_label_private.h
+api:
+  structs: [_lv_label_t]
+---
+
+<RelatedHeaders name="lv_label.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_label_t">
+
+### _lv_label_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `text` | `char *` |  |
+| `translation_tag` | `char *` |  |
+| `dot` | `char[3+1]` | Bytes that have been replaced with dots |
+| `dot_begin` | <ApiLink name="uint32_t" /> | Offset where bytes have been replaced with dots |
+| `hint` | <ApiLink name="lv_draw_label_hint_t" /> |  |
+| `sel_start` | <ApiLink name="uint32_t" /> |  |
+| `sel_end` | <ApiLink name="uint32_t" /> |  |
+| `size_cache` | <ApiLink name="lv_point_t" /> | Text size cache |
+| `offset` | <ApiLink name="lv_point_t" /> | Text draw position offset |
+| `long_mode` | <ApiLink name="lv_label_long_mode_t" /> | Determine what to do with the long texts |
+| `static_txt` | <ApiLink name="uint8_t" /> | Flag to indicate the text is static |
+| `recolor` | <ApiLink name="uint8_t" /> | Enable in-line letter re-coloring |
+| `expand` | <ApiLink name="uint8_t" /> | Ignore real width (used by the library with LV_LABEL_LONG_MODE_SCROLL) |
+| `invalid_size_cache` | <ApiLink name="uint8_t" /> | 1: Recalculate size and update cache |
+| `need_refr_text` | <ApiLink name="uint8_t" /> | 1: Refresh text after layout update completion |
+| `text_size` | <ApiLink name="lv_point_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw_label_private.h", "lv_obj_private.h", "lv_label.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

@@ -1,0 +1,46 @@
+---
+title: "Roller"
+order: 115
+---
+
+Scrollable cylindrical selector for picking one option from a fixed list, configured via `lv_roller_set_options`.
+
+## Infinite month roller
+
+<LvglExampleBrief>Pick a month from a wrap-around roller and log the selection.</LvglExampleBrief>
+
+A centered `lv_roller` is populated with the twelve English month names in
+`LV_ROLLER_MODE_INFINITE`, so scrolling past December wraps back to January.
+Four rows are visible at once via `lv_roller_set_visible_row_count`. An
+`LV_EVENT_ALL` handler prints the current selection string on
+`LV_EVENT_VALUE_CHANGED`.
+
+<LvglExample name="lv_example_roller_1" path="widgets/roller/lv_example_roller_1" />
+
+## Rollers sharing a selected-row style
+
+<LvglExampleBrief>One `LV_PART_SELECTED` style is reused across three number rollers of different widths.</LvglExampleBrief>
+
+A shared style for `LV_PART_SELECTED` swaps in `lv_font_montserrat_22` with a
+pink fill and red border. Three `LV_ROLLER_MODE_NORMAL` rollers list numbers
+`1..10`: a 100 px left-aligned roller with a green vertical gradient
+background and two visible rows, a default-width center roller with three
+visible rows, and an 80 px right-aligned roller with four visible rows. Each
+roller starts on a different selection (2, 5, 8) with `LV_ANIM_OFF` and logs
+on `LV_EVENT_VALUE_CHANGED`.
+
+<LvglExample name="lv_example_roller_2" path="widgets/roller/lv_example_roller_2" />
+
+## Roller with top and bottom fade
+
+<LvglExampleBrief>Fade the roller edges to black using a generated bitmap mask.</LvglExampleBrief>
+
+The active screen is tinted `LV_PALETTE_BLUE_GREY` and a month roller in
+`LV_ROLLER_MODE_NORMAL` takes a style that paints it black with white text
+and no border. A 130x150 `LV_COLOR_FORMAT_L8` draw buffer is filled on a
+canvas with two `LV_GRAD_DIR_VER` rectangles (black-to-white on top,
+white-to-black on bottom), leaving the middle opaque. The resulting buffer is
+attached through `lv_obj_set_style_bitmap_mask_src` so the first and last
+rows fade out.
+
+<LvglExample name="lv_example_roller_3" path="widgets/roller/lv_example_roller_3" />

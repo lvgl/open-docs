@@ -1,0 +1,69 @@
+---
+title: "Image"
+order: 65
+---
+
+## Image from C array and symbol text
+
+<LvglExampleBrief>Show a compiled-in cogwheel bitmap next to a text label rendered from a symbol font.</LvglExampleBrief>
+
+Two `lv_image` widgets are placed on the active screen. The first
+calls `lv_image_set_src` with the `img_cogwheel_argb` descriptor
+declared through `LV_IMAGE_DECLARE` and is centered. The second
+points at the string `LV_SYMBOL_OK "Accept"` and is aligned below
+the first with `LV_ALIGN_OUT_BOTTOM_MID` and a 20 px offset.
+
+<LvglExample name="lv_example_image_1" path="widgets/image/lv_example_image_1" />
+
+## Image recolor with RGB sliders
+
+<LvglExampleBrief>Four sliders drive the recolor tint and intensity of a cogwheel image.</LvglExampleBrief>
+
+Red, green, blue, and intensity sliders (range 0 to 255) sit along
+the left half of the screen while the `img_cogwheel_argb` image sits
+on the right. A shared `LV_EVENT_VALUE_CHANGED` callback reads each
+slider and applies `lv_obj_set_style_image_recolor` and
+`lv_obj_set_style_image_recolor_opa` so the image retints live as
+the sliders move.
+
+<LvglExample name="lv_example_image_2" path="widgets/image/lv_example_image_2" />
+
+## Rotate and zoom around a pivot
+
+<LvglExampleBrief>Spin and scale a cogwheel image continuously around its top-left corner.</LvglExampleBrief>
+
+`lv_image_set_pivot` moves the transform origin to (0, 0) so the
+image rotates around its top-left corner. One `lv_anim_t` drives
+`lv_image_set_rotation` from 0 to 3600 over 5000 ms and repeats
+forever with `LV_ANIM_REPEAT_INFINITE`. A second animation drives
+`lv_image_set_scale` from 128 to 256 with a 3000 ms reverse phase
+so the image pulses while spinning.
+
+<LvglExample name="lv_example_image_3" path="widgets/image/lv_example_image_3" />
+
+## Image styling and vertical offset
+
+<LvglExampleBrief>Scroll the pixels of a recolored, yellow-backed strip image vertically.</LvglExampleBrief>
+
+An `lv_style_t` with a yellow background and a black recolor at
+`LV_OPA_COVER` is applied to an image that uses the
+`img_skew_strip` source and is clipped to 150x100. An infinite
+`lv_anim_t` drives `lv_image_set_offset_y` from 0 to 100 over
+3000 ms with a 500 ms reverse phase, so the visible pixels scroll
+up and back down inside the fixed frame.
+
+<LvglExample name="lv_example_image_4" path="widgets/image/lv_example_image_4" />
+
+## SVG image with transform style
+
+<LvglExampleBrief>Display an SVG source scaled and rotated via both widget and style APIs.</LvglExampleBrief>
+
+An `lv_image` loaded from the `img_svg_img` descriptor is sized to
+100% width and 50% height and given a 5 px outline. Rotation is set
+to 450 (45 degrees) and scale to 128 twice, once through
+`lv_obj_set_style_transform_rotation` and
+`lv_obj_set_style_transform_scale` and once through
+`lv_image_set_rotation` and `lv_image_set_scale`, then the image is
+centered.
+
+<LvglExample name="lv_example_image_5" path="widgets/image/lv_example_image_5" />

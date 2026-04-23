@@ -1,0 +1,23 @@
+{
+  "title": "Libs",
+  "pages": [
+    "barcode",
+    "bin_decoder",
+    "bmp",
+    "ffmpeg",
+    "freetype",
+    "fsdrv",
+    "gltf",
+    "gstreamer",
+    "libjpeg_turbo",
+    "libpng",
+    "libwebp",
+    "lodepng",
+    "qrcode",
+    "rle",
+    "rlottie",
+    "svg",
+    "tiny_ttf",
+    "tjpgd"
+  ]
+}

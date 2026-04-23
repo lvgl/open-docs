@@ -1,0 +1,30 @@
+---
+title: lv_ext_data.h
+description: API reference for lv_ext_data.h
+api:
+  structs: [lv_ext_data_t]
+---
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="lv_ext_data_t">
+
+### lv_ext_data_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `data` | `void *` |  |
+| `free_cb` | `void(*)(void *data)` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h"]}
+  includedBy={["lv_group_private.h", "lv_obj_private.h", "lv_observer.h", "lv_display_private.h", "lv_indev_private.h", "lv_anim.h", "lv_event_private.h", "lv_timer_private.h", "lv_theme_private.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

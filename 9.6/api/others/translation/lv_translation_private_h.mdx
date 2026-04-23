@@ -1,0 +1,47 @@
+---
+title: lv_translation_private.h
+description: API reference for lv_translation_private.h
+api:
+  structs: [_lv_translation_tag_dsc_t, _lv_translation_pack_t]
+---
+
+<RelatedHeaders name="lv_translation.h" isPrivate={true} />
+
+<ApiSummary structs={2} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_translation_tag_dsc_t">
+
+### _lv_translation_tag_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `tag` | `const char *` |  |
+| `translations` | `const char **` | Translations for each language |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_translation_pack_t">
+
+### _lv_translation_pack_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `languages` | `const char **` |  |
+| `language_cnt` | <ApiLink name="uint32_t" /> |  |
+| `is_static` | <ApiLink name="uint32_t" /> |  |
+| `tag_p` | `const char **` |  |
+| `translation_p` | `const char **` |  |
+| `translation_array` | <ApiLink name="lv_array_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "stdint.h", "lv_array.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h", "lv_types.h"]}
+/>

@@ -1,0 +1,107 @@
+---
+title: "Observer"
+order: 55
+---
+
+Bind widgets to shared state with `lv_observer_t`, so value changes propagate to subscribers automatically.
+
+## Slider and label bound to an int subject
+
+<LvglExampleBrief>Move a slider and watch a label 30 px below it reformat live as the shared subject updates.</LvglExampleBrief>
+
+`temperature_subject` is initialised with `lv_subject_init_int` to 28. A
+centered slider binds to it with `lv_slider_bind_value`, and a label 30 px
+below binds with `lv_label_bind_text` using a degree-Celsius format. Moving
+the slider pushes the new value through the subject, which rewrites the
+label text.
+
+<LvglExample name="lv_example_observer_1" path="others/observer/lv_example_observer_1" />
+
+## PIN login via state bindings
+
+<LvglExampleBrief>Decouple a login UI from an engine subject using `lv_obj_bind_state_if_*`.</LvglExampleBrief>
+
+Two int subjects are initialised: `engine_subject` for the engine state and
+`auth_state_subject` for `LOGGED_OUT`, `LOGGED_IN`, and `AUTH_FAILED`. A
+password textarea fires `LV_EVENT_READY` to set the auth subject, a log-out
+button resets it, and an observer on `auth_state_subject` writes status text
+into an info label. `lv_obj_bind_state_if_eq` and
+`lv_obj_bind_state_if_not_eq` toggle `LV_STATE_DISABLED` on the textarea, log
+out button, and a start-engine button, which itself uses `lv_obj_bind_checked`
+to drive `engine_subject`.
+
+<LvglExample name="lv_example_observer_2" path="others/observer/lv_example_observer_2" />
+
+## Time setting with a group subject
+
+<LvglExampleBrief>Aggregate hour, minute, format, and AM/PM subjects into one `lv_subject_init_group`.</LvglExampleBrief>
+
+Four int subjects hold hour, minute, 12/24 format, and AM/PM. They are gathered
+into `time_subject` via `lv_subject_init_group` so a single observer can
+re-render the time label whenever any element changes. A "Set" button creates
+a bottom container with two rollers and two dropdowns bound through
+`lv_roller_bind_value` and `lv_dropdown_bind_value`; the AM/PM dropdown uses
+`lv_obj_bind_state_if_eq` to disable itself in `TIME_FORMAT_24`. A second
+observer on the format subject swaps the hour roller options between the 12
+and 24 lists.
+
+<LvglExample name="lv_example_observer_3" path="others/observer/lv_example_observer_3" />
+
+## Tabbed content driven by a subject
+
+<LvglExampleBrief>One int subject selects which set of bound widgets appears in the content area.</LvglExampleBrief>
+
+`current_tab_subject` is watched by three observers. One rebuilds the content
+area on change, creating four sliders, three dropdowns, or two rollers bound
+to their respective subject arrays. Children are faded and slid in and out
+with `lv_anim_t` using `lv_anim_path_ease_in_out` at 300 ms. Another observer
+toggles `LV_STATE_CHECKED` on the footer buttons, and a third animates an
+indicator bar under the active button using `lv_obj_get_x_aligned` as the
+start value.
+
+<LvglExample name="lv_example_observer_4" path="others/observer/lv_example_observer_4" />
+
+## Firmware update state machine
+
+<LvglExampleBrief>Drive a window through its update states using two int subjects.</LvglExampleBrief>
+
+`fw_update_status_subject` holds an `lv_fw_update_state_t` value and
+`fw_download_percent_subject` tracks progress. A start button opens an
+`lv_win` whose observer renders the appropriate content: a spinner for
+connecting, an arc plus percentage label bound with `lv_arc_bind_value`
+and `lv_label_bind_text` for downloading, and a restart button for ready.
+A separate app-side observer spawns `lv_timer_t` instances that simulate
+the 2-second connect and a 50 ms per-step download. The window's close
+button pushes `FW_UPDATE_STATE_CANCEL`, which the observer uses to delete
+the window.
+
+<LvglExample name="lv_example_observer_5" path="others/observer/lv_example_observer_5" />
+
+## Theme styles with `lv_subject_add_observer_with_target`
+
+<LvglExampleBrief>Recolour two style sets when a theme subject flips between light and dark.</LvglExampleBrief>
+
+`theme_subject` starts at `THEME_MODE_DARK`. A panel with ten child buttons is
+built with encapsulated factory helpers; each helper registers its own
+`lv_panel_styles_t` or `lv_button_styles_t` through
+`lv_subject_add_observer_with_target` so the observer gets the style bundle as
+its target. The observers rewrite background, shadow, text, and gradient
+colours per mode and call `lv_obj_report_style_change`. Any button click
+toggles the subject.
+
+<LvglExample name="lv_example_observer_6" path="others/observer/lv_example_observer_6" />
+
+## Light and dark themes via `lv_obj_bind_style`
+
+<LvglExampleBrief>Apply a second style only when a theme subject equals the selected value.</LvglExampleBrief>
+
+Two subjects are created: `subject_room_temperature` for a value shown on a
+slider and label, and `subject_theme` with values 0 (light) and 1 (dark).
+Light styles are applied unconditionally; dark overrides are attached with
+`lv_obj_bind_style` tied to `subject_theme == 1` on the screen, a container,
+the slider main, indicator, and knob parts, and a dropdown. The dropdown's
+options are `"Light\nDark"` and bound with `lv_dropdown_bind_value`.
+`lv_slider_bind_value` ties the slider to the temperature subject with range
+20 to 40.
+
+<LvglExample name="lv_example_observer_7" path="others/observer/lv_example_observer_7" />

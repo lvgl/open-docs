@@ -1,0 +1,711 @@
+---
+title: lv_draw_sw_blend_neon_to_rgb565.h
+description: API reference for lv_draw_sw_blend_neon_to_rgb565.h
+api:
+  functions: [lv_draw_sw_blend_neon_color_to_rgb565, lv_draw_sw_blend_neon_color_to_rgb565_with_opa, lv_draw_sw_blend_neon_color_to_rgb565_with_mask, lv_draw_sw_blend_neon_color_to_rgb565_with_opa_mask, lv_draw_sw_blend_neon_l8_to_rgb565, lv_draw_sw_blend_neon_al88_to_rgb565, lv_draw_sw_blend_neon_al88_to_rgb565_with_opa, lv_draw_sw_blend_neon_al88_to_rgb565_with_mask, lv_draw_sw_blend_neon_al88_to_rgb565_with_opa_mask, lv_draw_sw_blend_neon_rgb565_to_rgb565, lv_draw_sw_blend_neon_rgb565_to_rgb565_with_opa, lv_draw_sw_blend_neon_rgb565_to_rgb565_with_mask, lv_draw_sw_blend_neon_rgb565_to_rgb565_with_opa_mask, lv_draw_sw_blend_neon_rgb888_to_rgb565, lv_draw_sw_blend_neon_rgb888_to_rgb565_with_opa, lv_draw_sw_blend_neon_rgb888_to_rgb565_with_mask, lv_draw_sw_blend_neon_rgb888_to_rgb565_with_opa_mask, lv_draw_sw_blend_neon_argb888_to_rgb565, lv_draw_sw_blend_neon_argb888_premultiplied_to_rgb565, lv_draw_sw_blend_neon_argb888_to_rgb565_with_opa, lv_draw_sw_blend_neon_argb888_to_rgb565_with_mask, lv_draw_sw_blend_neon_argb888_to_rgb565_with_opa_mask]
+  macros: [LV_DRAW_SW_COLOR_BLEND_TO_RGB565, LV_DRAW_SW_COLOR_BLEND_TO_RGB565_WITH_OPA, LV_DRAW_SW_COLOR_BLEND_TO_RGB565_WITH_MASK, LV_DRAW_SW_COLOR_BLEND_TO_RGB565_MIX_MASK_OPA, LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565, LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_WITH_OPA, LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_WITH_MASK, LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA, LV_DRAW_SW_AL88_BLEND_NORMAL_TO_RGB565, LV_DRAW_SW_AL88_BLEND_NORMAL_TO_RGB565_WITH_OPA, LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565, LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_WITH_OPA, LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_WITH_MASK, LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA, LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565, LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_WITH_OPA, LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_WITH_MASK, LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA, LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565, LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_WITH_OPA, LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_WITH_MASK, LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA, LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565, LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_WITH_OPA, LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_WITH_MASK, LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA]
+---
+
+<ApiSummary functions={22} macros={26} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_color_to_rgb565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={155} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L155">
+
+### lv_draw_sw_blend_neon_color_to_rgb565
+
+```c
+lv_result_t lv_draw_sw_blend_neon_color_to_rgb565(lv_draw_sw_blend_fill_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_fill_dsc_t" display="lv_draw_sw_blend_fill_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_color_to_rgb565_with_opa" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={156} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L156">
+
+### lv_draw_sw_blend_neon_color_to_rgb565_with_opa
+
+```c
+lv_result_t lv_draw_sw_blend_neon_color_to_rgb565_with_opa(lv_draw_sw_blend_fill_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_fill_dsc_t" display="lv_draw_sw_blend_fill_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_color_to_rgb565_with_mask" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={157} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L157">
+
+### lv_draw_sw_blend_neon_color_to_rgb565_with_mask
+
+```c
+lv_result_t lv_draw_sw_blend_neon_color_to_rgb565_with_mask(lv_draw_sw_blend_fill_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_fill_dsc_t" display="lv_draw_sw_blend_fill_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_color_to_rgb565_with_opa_mask" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={158} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L158">
+
+### lv_draw_sw_blend_neon_color_to_rgb565_with_opa_mask
+
+```c
+lv_result_t lv_draw_sw_blend_neon_color_to_rgb565_with_opa_mask(lv_draw_sw_blend_fill_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_fill_dsc_t" display="lv_draw_sw_blend_fill_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_l8_to_rgb565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={159} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L159">
+
+### lv_draw_sw_blend_neon_l8_to_rgb565
+
+```c
+lv_result_t lv_draw_sw_blend_neon_l8_to_rgb565(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_al88_to_rgb565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={160} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L160">
+
+### lv_draw_sw_blend_neon_al88_to_rgb565
+
+```c
+lv_result_t lv_draw_sw_blend_neon_al88_to_rgb565(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_al88_to_rgb565_with_opa" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={161} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L161">
+
+### lv_draw_sw_blend_neon_al88_to_rgb565_with_opa
+
+```c
+lv_result_t lv_draw_sw_blend_neon_al88_to_rgb565_with_opa(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_al88_to_rgb565_with_mask" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={162} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L162">
+
+### lv_draw_sw_blend_neon_al88_to_rgb565_with_mask
+
+```c
+lv_result_t lv_draw_sw_blend_neon_al88_to_rgb565_with_mask(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_al88_to_rgb565_with_opa_mask" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={163} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L163">
+
+### lv_draw_sw_blend_neon_al88_to_rgb565_with_opa_mask
+
+```c
+lv_result_t lv_draw_sw_blend_neon_al88_to_rgb565_with_opa_mask(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_rgb565_to_rgb565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={165} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L165">
+
+### lv_draw_sw_blend_neon_rgb565_to_rgb565
+
+```c
+lv_result_t lv_draw_sw_blend_neon_rgb565_to_rgb565(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_rgb565_to_rgb565_with_opa" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={166} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L166">
+
+### lv_draw_sw_blend_neon_rgb565_to_rgb565_with_opa
+
+```c
+lv_result_t lv_draw_sw_blend_neon_rgb565_to_rgb565_with_opa(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_rgb565_to_rgb565_with_mask" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={167} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L167">
+
+### lv_draw_sw_blend_neon_rgb565_to_rgb565_with_mask
+
+```c
+lv_result_t lv_draw_sw_blend_neon_rgb565_to_rgb565_with_mask(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_rgb565_to_rgb565_with_opa_mask" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={168} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L168">
+
+### lv_draw_sw_blend_neon_rgb565_to_rgb565_with_opa_mask
+
+```c
+lv_result_t lv_draw_sw_blend_neon_rgb565_to_rgb565_with_opa_mask(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_rgb888_to_rgb565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={169} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L169">
+
+### lv_draw_sw_blend_neon_rgb888_to_rgb565
+
+```c
+lv_result_t lv_draw_sw_blend_neon_rgb888_to_rgb565(lv_draw_sw_blend_image_dsc_t *dsc, uint8_t src_px_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+| `src_px_size` | <ApiLink name="uint8_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_rgb888_to_rgb565_with_opa" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={170} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L170">
+
+### lv_draw_sw_blend_neon_rgb888_to_rgb565_with_opa
+
+```c
+lv_result_t lv_draw_sw_blend_neon_rgb888_to_rgb565_with_opa(lv_draw_sw_blend_image_dsc_t *dsc, uint8_t src_px_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+| `src_px_size` | <ApiLink name="uint8_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_rgb888_to_rgb565_with_mask" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={171} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L171">
+
+### lv_draw_sw_blend_neon_rgb888_to_rgb565_with_mask
+
+```c
+lv_result_t lv_draw_sw_blend_neon_rgb888_to_rgb565_with_mask(lv_draw_sw_blend_image_dsc_t *dsc, uint8_t src_px_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+| `src_px_size` | <ApiLink name="uint8_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_rgb888_to_rgb565_with_opa_mask" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={172} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L172">
+
+### lv_draw_sw_blend_neon_rgb888_to_rgb565_with_opa_mask
+
+```c
+lv_result_t lv_draw_sw_blend_neon_rgb888_to_rgb565_with_opa_mask(lv_draw_sw_blend_image_dsc_t *dsc, uint8_t src_px_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+| `src_px_size` | <ApiLink name="uint8_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_argb888_to_rgb565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={174} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L174">
+
+### lv_draw_sw_blend_neon_argb888_to_rgb565
+
+```c
+lv_result_t lv_draw_sw_blend_neon_argb888_to_rgb565(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_argb888_premultiplied_to_rgb565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={175} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L175">
+
+### lv_draw_sw_blend_neon_argb888_premultiplied_to_rgb565
+
+```c
+lv_result_t lv_draw_sw_blend_neon_argb888_premultiplied_to_rgb565(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_argb888_to_rgb565_with_opa" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={176} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L176">
+
+### lv_draw_sw_blend_neon_argb888_to_rgb565_with_opa
+
+```c
+lv_result_t lv_draw_sw_blend_neon_argb888_to_rgb565_with_opa(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_argb888_to_rgb565_with_mask" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={177} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L177">
+
+### lv_draw_sw_blend_neon_argb888_to_rgb565_with_mask
+
+```c
+lv_result_t lv_draw_sw_blend_neon_argb888_to_rgb565_with_mask(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_neon_argb888_to_rgb565_with_opa_mask" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={178} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L178">
+
+### lv_draw_sw_blend_neon_argb888_to_rgb565_with_opa_mask
+
+```c
+lv_result_t lv_draw_sw_blend_neon_argb888_to_rgb565_with_opa_mask(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_DRAW_SW_COLOR_BLEND_TO_RGB565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={27} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L27">
+
+### LV_DRAW_SW_COLOR_BLEND_TO_RGB565
+
+```c
+#define LV_DRAW_SW_COLOR_BLEND_TO_RGB565(dsc) \
+    lv_draw_sw_blend_neon_color_to_rgb565(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_COLOR_BLEND_TO_RGB565_WITH_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={32} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L32">
+
+### LV_DRAW_SW_COLOR_BLEND_TO_RGB565_WITH_OPA
+
+```c
+#define LV_DRAW_SW_COLOR_BLEND_TO_RGB565_WITH_OPA(dsc) \
+    lv_draw_sw_blend_neon_color_to_rgb565_with_opa(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_COLOR_BLEND_TO_RGB565_WITH_MASK" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={36} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L36">
+
+### LV_DRAW_SW_COLOR_BLEND_TO_RGB565_WITH_MASK
+
+```c
+#define LV_DRAW_SW_COLOR_BLEND_TO_RGB565_WITH_MASK(dsc) \
+    lv_draw_sw_blend_neon_color_to_rgb565_with_mask(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_COLOR_BLEND_TO_RGB565_MIX_MASK_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={41} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L41">
+
+### LV_DRAW_SW_COLOR_BLEND_TO_RGB565_MIX_MASK_OPA
+
+```c
+#define LV_DRAW_SW_COLOR_BLEND_TO_RGB565_MIX_MASK_OPA(dsc) \
+    lv_draw_sw_blend_neon_color_to_rgb565_with_opa_mask(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={45} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L45">
+
+### LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565
+
+```c
+#define LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565(dsc) \
+    lv_draw_sw_blend_neon_l8_to_rgb565(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_WITH_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={49} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L49">
+
+### LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_WITH_OPA
+
+```c
+#define LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_WITH_OPA(...) \
+    LV_RESULT_INVALID
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_WITH_MASK" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={53} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L53">
+
+### LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_WITH_MASK
+
+```c
+#define LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_WITH_MASK(...) \
+    LV_RESULT_INVALID
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={57} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L57">
+
+### LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA
+
+```c
+#define LV_DRAW_SW_L8_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA(...) \
+    LV_RESULT_INVALID
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_AL88_BLEND_NORMAL_TO_RGB565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={61} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L61">
+
+### LV_DRAW_SW_AL88_BLEND_NORMAL_TO_RGB565
+
+```c
+#define LV_DRAW_SW_AL88_BLEND_NORMAL_TO_RGB565(dsc) \
+    lv_draw_sw_blend_neon_al88_to_rgb565(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_AL88_BLEND_NORMAL_TO_RGB565_WITH_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={65} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L65">
+
+### LV_DRAW_SW_AL88_BLEND_NORMAL_TO_RGB565_WITH_OPA
+
+```c
+#define LV_DRAW_SW_AL88_BLEND_NORMAL_TO_RGB565_WITH_OPA(dsc) \
+    lv_draw_sw_blend_neon_al88_to_rgb565_with_opa(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={80} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L80">
+
+### LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565
+
+```c
+#define LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565(dsc) \
+    lv_draw_sw_blend_neon_rgb565_to_rgb565(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_WITH_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={84} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L84">
+
+### LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_WITH_OPA
+
+```c
+#define LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_WITH_OPA(dsc) \
+    lv_draw_sw_blend_neon_rgb565_to_rgb565_with_opa(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_WITH_MASK" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={88} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L88">
+
+### LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_WITH_MASK
+
+```c
+#define LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_WITH_MASK(dsc) \
+    lv_draw_sw_blend_neon_rgb565_to_rgb565_with_mask(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={92} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L92">
+
+### LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA
+
+```c
+#define LV_DRAW_SW_RGB565_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA(dsc) \
+    lv_draw_sw_blend_neon_rgb565_to_rgb565_with_opa_mask(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={96} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L96">
+
+### LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565
+
+```c
+#define LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565(dsc, src_px_size) \
+    lv_draw_sw_blend_neon_rgb888_to_rgb565(dsc, src_px_size)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_WITH_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={100} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L100">
+
+### LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_WITH_OPA
+
+```c
+#define LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_WITH_OPA(dsc, src_px_size) \
+    lv_draw_sw_blend_neon_rgb888_to_rgb565_with_opa(dsc, src_px_size)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_WITH_MASK" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={104} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L104">
+
+### LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_WITH_MASK
+
+```c
+#define LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_WITH_MASK(dsc, src_px_size) \
+    lv_draw_sw_blend_neon_rgb888_to_rgb565_with_mask(dsc, src_px_size)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={108} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L108">
+
+### LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA
+
+```c
+#define LV_DRAW_SW_RGB888_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA(dsc, src_px_size) \
+    lv_draw_sw_blend_neon_rgb888_to_rgb565_with_opa_mask(dsc, src_px_size)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={112} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L112">
+
+### LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565
+
+```c
+#define LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565(dsc) \
+    lv_draw_sw_blend_neon_argb888_to_rgb565(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_WITH_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={116} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L116">
+
+### LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_WITH_OPA
+
+```c
+#define LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_WITH_OPA(dsc) \
+    lv_draw_sw_blend_neon_argb888_to_rgb565_with_opa(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_WITH_MASK" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={120} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L120">
+
+### LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_WITH_MASK
+
+```c
+#define LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_WITH_MASK(dsc) \
+    lv_draw_sw_blend_neon_argb888_to_rgb565_with_mask(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={124} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L124">
+
+### LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA
+
+```c
+#define LV_DRAW_SW_ARGB8888_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA(dsc) \
+    lv_draw_sw_blend_neon_argb888_to_rgb565_with_opa_mask(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={128} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L128">
+
+### LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565
+
+```c
+#define LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565(dsc) \
+    lv_draw_sw_blend_neon_argb888_premultiplied_to_rgb565(dsc)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_WITH_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={136} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L136">
+
+### LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_WITH_OPA
+
+```c
+#define LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_WITH_OPA(...) \
+    LV_RESULT_INVALID
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_WITH_MASK" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={140} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L140">
+
+### LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_WITH_MASK
+
+```c
+#define LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_WITH_MASK(...) \
+    LV_RESULT_INVALID
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA" file="draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h" line={144} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565.h#L144">
+
+### LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA
+
+```c
+#define LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB565_MIX_MASK_OPA(...) \
+    LV_RESULT_INVALID
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includedBy={["lv_blend_neon.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

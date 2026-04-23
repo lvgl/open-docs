@@ -1,0 +1,306 @@
+---
+title: lv_test_indev.h
+description: API reference for lv_test_indev.h
+api:
+  functions: [lv_test_indev_create_all, lv_test_indev_delete_all, lv_test_indev_get_indev, lv_test_mouse_move_to, lv_test_mouse_move_to_obj, lv_test_mouse_move_by, lv_test_mouse_press, lv_test_mouse_release, lv_test_mouse_click_at, lv_test_key_press, lv_test_key_release, lv_test_key_hit, lv_test_encoder_add_diff, lv_test_encoder_turn, lv_test_encoder_press, lv_test_encoder_release, lv_test_encoder_click]
+---
+
+<ApiSummary functions={17} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (16)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_test_indev_get_indev" file="debugging/test/lv_test_indev.h" line={50} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L50">
+
+### lv_test_indev_get_indev
+
+Get one of the indev created in `lv_test_indev_create_all`
+
+```c
+lv_indev_t * lv_test_indev_get_indev(lv_indev_type_t type)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `type` | <ApiLink name="lv_indev_type_t" /> | type of the indev to get |
+
+**Returns:** <ApiLink name="lv_indev_t" display="lv_indev_t *" /> — the indev
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (16)">
+
+<ApiMember kind="function" name="lv_test_indev_create_all" file="debugging/test/lv_test_indev.h" line={38} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L38">
+
+### lv_test_indev_create_all
+
+Create a mouse (pointer), keypad, and encoder indevs. They can be controlled via function calls during the test
+
+```c
+void lv_test_indev_create_all(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_indev_delete_all" file="debugging/test/lv_test_indev.h" line={43} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L43">
+
+### lv_test_indev_delete_all
+
+Delete all test input devices
+
+```c
+void lv_test_indev_delete_all(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_mouse_move_to" file="debugging/test/lv_test_indev.h" line={58} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L58">
+
+### lv_test_mouse_move_to
+
+Move the mouse to the given coordinates. This function doesn't wait, but just changes the state and returns immediately.
+
+```c
+void lv_test_mouse_move_to(int32_t x, int32_t y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `x` | <ApiLink name="int32_t" /> | the target absolute X coordinate |
+| `y` | <ApiLink name="int32_t" /> | the target absolute Y coordinate |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_mouse_move_to_obj" file="debugging/test/lv_test_indev.h" line={65} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L65">
+
+### lv_test_mouse_move_to_obj
+
+Move the mouse to the center of a widget This function doesn't wait, but just changes the state and returns immediately.
+
+```c
+void lv_test_mouse_move_to_obj(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an widget |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_mouse_move_by" file="debugging/test/lv_test_indev.h" line={73} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L73">
+
+### lv_test_mouse_move_by
+
+Move the mouse cursor. Keep the pressed or released state This function doesn't wait, but just changes the state and returns immediately.
+
+```c
+void lv_test_mouse_move_by(int32_t x, int32_t y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `x` | <ApiLink name="int32_t" /> | the difference in X to move |
+| `y` | <ApiLink name="int32_t" /> | the difference in Y to move |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_mouse_press" file="debugging/test/lv_test_indev.h" line={79} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L79">
+
+### lv_test_mouse_press
+
+Make the mouse button pressed. This function doesn't wait, but just changes the state and returns immediately.
+
+```c
+void lv_test_mouse_press(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_mouse_release" file="debugging/test/lv_test_indev.h" line={85} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L85">
+
+### lv_test_mouse_release
+
+Make the mouse button released. This function doesn't wait, but just changes the state and returns immediately.
+
+```c
+void lv_test_mouse_release(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_mouse_click_at" file="debugging/test/lv_test_indev.h" line={95} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L95">
+
+### lv_test_mouse_click_at
+
+Emulate a click on a given point. First set the released state, wait a little, press, wait, and release again. The wait time is 50ms. Internally `lv_timer_handler` is called, meaning all the events will be fired inside this function.
+
+```c
+void lv_test_mouse_click_at(int32_t x, int32_t y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `x` | <ApiLink name="int32_t" /> | the target absolute X coordinate |
+| `y` | <ApiLink name="int32_t" /> | the target absolute Y coordinate |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_key_press" file="debugging/test/lv_test_indev.h" line={102} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L102">
+
+### lv_test_key_press
+
+Emulate a key press. This function doesn't wait, but just changes the state and returns immediately.
+
+```c
+void lv_test_key_press(uint32_t k)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `k` | <ApiLink name="uint32_t" /> | the key to press |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_key_release" file="debugging/test/lv_test_indev.h" line={109} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L109">
+
+### lv_test_key_release
+
+Release the previously press key. This function doesn't wait, but just changes the state and returns immediately.
+
+```c
+void lv_test_key_release(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_key_hit" file="debugging/test/lv_test_indev.h" line={118} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L118">
+
+### lv_test_key_hit
+
+Emulate a key hit. First set the released state, wait a little, press, wait, and release again. The wait time is 50ms. Internally `lv_timer_handler` is called, meaning all the events will be fired inside this function.
+
+```c
+void lv_test_key_hit(uint32_t k)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `k` | <ApiLink name="uint32_t" /> | the key to hit |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_encoder_add_diff" file="debugging/test/lv_test_indev.h" line={127} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L127">
+
+### lv_test_encoder_add_diff
+
+Emulate encoder rotation, use positive parameter to rotate to the right and negative to rotate to the left. This function doesn't wait, but just changes the state and returns immediately.
+
+```c
+void lv_test_encoder_add_diff(int32_t d)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `d` | <ApiLink name="int32_t" /> | number of encoder ticks to emulate |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_encoder_turn" file="debugging/test/lv_test_indev.h" line={135} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L135">
+
+### lv_test_encoder_turn
+
+Emulate an encoder turn a wait 50ms. Use positive parameter to rotate to the right and negative to rotate to the left. Internally `lv_timer_handler` is called, meaning all the events will be fired inside this function.
+
+```c
+void lv_test_encoder_turn(int32_t d)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `d` | <ApiLink name="int32_t" /> | number of encoder ticks to emulate |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_encoder_press" file="debugging/test/lv_test_indev.h" line={141} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L141">
+
+### lv_test_encoder_press
+
+Emulate an encoder press. This function doesn't wait, but just changes the state and returns immediately.
+
+```c
+void lv_test_encoder_press(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_encoder_release" file="debugging/test/lv_test_indev.h" line={147} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L147">
+
+### lv_test_encoder_release
+
+Emulate an encoder release. This function doesn't wait, but just changes the state and returns immediately.
+
+```c
+void lv_test_encoder_release(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_encoder_click" file="debugging/test/lv_test_indev.h" line={155} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/test/lv_test_indev.h#L155">
+
+### lv_test_encoder_click
+
+Emulate am encoder click. First set the released state, wait a little, press, wait, and release again. The wait time is 50ms. Internally `lv_timer_handler` is called, meaning all the events will be fired inside this function.
+
+```c
+void lv_test_encoder_click(void)
+```
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h", "lv_indev.h"]}
+  includedBy={["lv_test.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_conf_kconfig.h", "lv_event.h", "lv_group.h", "lv_ll.h", "lv_math.h", "lv_tick.h", "lv_timer.h"]}
+/>

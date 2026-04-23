@@ -1,0 +1,150 @@
+---
+title: lv_win.h
+description: API reference for lv_win.h
+api:
+  functions: [lv_win_create, lv_win_add_title, lv_win_add_button, lv_win_get_header, lv_win_get_content]
+  variables: [lv_win_class]
+---
+
+<RelatedHeaders name="lv_win_private.h" isPrivate={false} />
+
+<ApiSummary functions={5} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (2)","Other (3)"]}>
+<ApiTab value="Getters (2)">
+
+<ApiMember kind="function" name="lv_win_get_header" file="widgets/win/lv_win.h" line={58} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/win/lv_win.h#L58">
+
+### lv_win_get_header
+
+Get the header of the window
+
+```c
+lv_obj_t * lv_win_get_header(lv_obj_t *win)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `win` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a window widget |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — the header of the window
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_win_get_content" file="widgets/win/lv_win.h" line={65} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/win/lv_win.h#L65">
+
+### lv_win_get_content
+
+Get the content of the window
+
+```c
+lv_obj_t * lv_win_get_content(lv_obj_t *win)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `win` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a window widget |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — the content of the window
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_win_create" file="widgets/win/lv_win.h" line={34} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/win/lv_win.h#L34">
+
+### lv_win_create
+
+Create a window widget
+
+```c
+lv_obj_t * lv_win_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a parent widget |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — the created window
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_win_add_title" file="widgets/win/lv_win.h" line={42} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/win/lv_win.h#L42">
+
+### lv_win_add_title
+
+Add a title to the window
+
+```c
+lv_obj_t * lv_win_add_title(lv_obj_t *win, const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `win` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `txt` | `const char *` | the text of the title |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — the widget where the content of the title can be created
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_win_add_button" file="widgets/win/lv_win.h" line={51} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/win/lv_win.h#L51">
+
+### lv_win_add_button
+
+Add a button to the window
+
+```c
+lv_obj_t * lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `win` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `icon` | `const void *` | an icon to be displayed on the button |
+| `btn_w` | <ApiLink name="int32_t" /> | width of the button |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — the widget where the content of the button can be created
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Variables
+
+<ApiMember kind="variable" name="lv_win_class" file="widgets/win/lv_win.h" line={23} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/win/lv_win.h#L23">
+
+### lv_win_class
+
+```c
+const lv_obj_class_t lv_win_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_obj.h"]}
+  includedBy={["lv_win_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

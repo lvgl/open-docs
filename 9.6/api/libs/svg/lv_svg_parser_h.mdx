@@ -1,0 +1,161 @@
+---
+title: lv_svg_parser.h
+description: API reference for lv_svg_parser.h
+api:
+  functions: [_lv_svg_parser_init, _lv_svg_parser_deinit, _lv_svg_parser_token, _lv_svg_parser_is_finish, _lv_svg_dump_tree]
+  enums: [_lv_svg_parser_state_t]
+  structs: [_lv_svg_parser_t]
+---
+
+<ApiSummary functions={5} enums={1} structs={1} />
+
+## Functions
+
+<ApiMember kind="function" name="_lv_svg_parser_init" file="libs/svg/lv_svg_parser.h" line={48} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/svg/lv_svg_parser.h#L48">
+
+### _lv_svg_parser_init
+
+Initialize the SVG parser.
+
+```c
+void _lv_svg_parser_init(_lv_svg_parser_t *parser)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parser` | <ApiLink name="_lv_svg_parser_t" display="_lv_svg_parser_t *" /> | pointer to a parser object |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="_lv_svg_parser_deinit" file="libs/svg/lv_svg_parser.h" line={54} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/svg/lv_svg_parser.h#L54">
+
+### _lv_svg_parser_deinit
+
+Deinitialize the SVG parser.
+
+```c
+void _lv_svg_parser_deinit(_lv_svg_parser_t *parser)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parser` | <ApiLink name="_lv_svg_parser_t" display="_lv_svg_parser_t *" /> | pointer to a parser object |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="_lv_svg_parser_token" file="libs/svg/lv_svg_parser.h" line={62} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/svg/lv_svg_parser.h#L62">
+
+### _lv_svg_parser_token
+
+Parse an SVG document.
+
+```c
+bool _lv_svg_parser_token(_lv_svg_parser_t *parser, const _lv_svg_token_t *token)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parser` | <ApiLink name="_lv_svg_parser_t" display="_lv_svg_parser_t *" /> | pointer to a parser object |
+| `token` | <ApiLink name="_lv_svg_token_t" display="const _lv_svg_token_t *" /> | pointer to a token object |
+
+**Returns:** <ApiLink name="bool" /> — true: the parsing is finished, false: the parsing is not finished yet.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="_lv_svg_parser_is_finish" file="libs/svg/lv_svg_parser.h" line={69} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/svg/lv_svg_parser.h#L69">
+
+### _lv_svg_parser_is_finish
+
+Check if the parsing is finished.
+
+```c
+bool _lv_svg_parser_is_finish(_lv_svg_parser_t *parser)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parser` | <ApiLink name="_lv_svg_parser_t" display="_lv_svg_parser_t *" /> | pointer to a parser object |
+
+**Returns:** <ApiLink name="bool" /> — true: the parsing is finished, false: the parsing is not finished yet.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="_lv_svg_dump_tree" file="libs/svg/lv_svg_parser.h" line={76} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/svg/lv_svg_parser.h#L76">
+
+### _lv_svg_dump_tree
+
+Dump the SVG tree.
+
+```c
+void _lv_svg_dump_tree(lv_svg_node_t *root, int depth)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `root` | <ApiLink name="lv_svg_node_t" display="lv_svg_node_t *" /> | pointer to the root of the SVG tree |
+| `depth` | `int` | the depth of the current node in the tree |
+
+
+</ApiMember>
+
+## Enums
+
+<ApiMember kind="enum" name="_lv_svg_parser_state_t" file="libs/svg/lv_svg_parser.h" line={26} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/svg/lv_svg_parser.h#L26">
+
+### _lv_svg_parser_state_t
+
+| Name | Value |
+|------|------|
+| `LV_SVG_PARSER_PROCESS` | `0` |
+| `LV_SVG_PARSER_IGNORE` |  |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_svg_parser_t">
+
+### _lv_svg_parser_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `state` | <ApiLink name="uint16_t" /> |  |
+| `ignore_name` | `char *` |  |
+| `ignore_len` | <ApiLink name="uint32_t" /> |  |
+| `dpi` | <ApiLink name="int32_t" /> |  |
+| `doc_root` | <ApiLink name="lv_svg_node_t" display="lv_svg_node_t *" /> |  |
+| `cur_node` | <ApiLink name="lv_svg_node_t" display="lv_svg_node_t *" /> |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="_lv_svg_parser_t" count={4}>
+
+- `_lv_svg_parser_init` — param `parser`
+- `_lv_svg_parser_deinit` — param `parser`
+- `_lv_svg_parser_token` — param `parser`
+- `_lv_svg_parser_is_finish` — param `parser`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_svg.h", "lv_svg_token.h"]}
+  transitiveIncludes={["lv_array.h", "lv_conf_kconfig.h", "lv_tree.h", "lv_types.h"]}
+/>

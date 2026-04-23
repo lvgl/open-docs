@@ -1,0 +1,296 @@
+---
+title: lv_tree.h
+description: API reference for lv_tree.h
+api:
+  functions: [lv_tree_node_create, lv_tree_node_delete, lv_tree_walk]
+  enums: [_lv_tree_walk_mode_t]
+  structs: [_lv_tree_class_t, _lv_tree_node_t]
+  typedefs: [lv_tree_class_t, lv_tree_node_t, lv_tree_constructor_cb_t, lv_tree_destructor_cb_t, lv_tree_walk_mode_t, lv_tree_traverse_cb_t, lv_tree_before_cb_t, lv_tree_after_cb_t]
+  macros: [LV_TREE_NODE]
+  variables: [lv_tree_node_class]
+---
+
+Tree. The tree nodes are dynamically allocated by the 'lv_mem' module.
+
+<ApiSummary functions={3} enums={1} structs={2} typedefs={8} macros={1} variables={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_tree_node_create" file="misc/lv_tree.h" line={76} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L76">
+
+### lv_tree_node_create
+
+Create a tree node.
+
+```c
+lv_tree_node_t * lv_tree_node_create(const lv_tree_class_t *class_p, lv_tree_node_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `class_p` | <ApiLink name="lv_tree_class_t" display="const lv_tree_class_t *" /> | pointer to a class of the node |
+| `parent` | <ApiLink name="lv_tree_node_t" display="lv_tree_node_t *" /> | pointer to the parent node (or NULL if it's the root node) |
+
+**Returns:** <ApiLink name="lv_tree_node_t" display="lv_tree_node_t *" /> — pointer to the new node
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_tree_node_delete" file="misc/lv_tree.h" line={82} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L82">
+
+### lv_tree_node_delete
+
+Delete a tree node and all its children recursively.
+
+```c
+void lv_tree_node_delete(lv_tree_node_t *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_tree_node_t" display="lv_tree_node_t *" /> | pointer to the node to delete |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_tree_walk" file="misc/lv_tree.h" line={94} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L94">
+
+### lv_tree_walk
+
+Walk the tree recursively and call a callback function on each node.
+
+```c
+bool lv_tree_walk(const lv_tree_node_t *node, lv_tree_walk_mode_t mode, lv_tree_traverse_cb_t cb, lv_tree_before_cb_t bcb, lv_tree_after_cb_t acb, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_tree_node_t" display="const lv_tree_node_t *" /> | pointer to the root node of the tree |
+| `mode` | <ApiLink name="lv_tree_walk_mode_t" /> | LV_TREE_WALK_PRE_ORDER or LV_TREE_WALK_POST_ORDER |
+| `cb` | <ApiLink name="lv_tree_traverse_cb_t" /> | callback function to call on each node |
+| `bcb` | <ApiLink name="lv_tree_before_cb_t" /> | callback function to call before visiting a node |
+| `acb` | <ApiLink name="lv_tree_after_cb_t" /> | callback function to call after visiting a node |
+| `user_data` | `void *` | user data to pass to the callback functions |
+
+**Returns:** <ApiLink name="bool" /> — true: traversal is finished; false: traversal broken
+
+
+</ApiMember>
+
+## Enums
+
+<ApiMember kind="enum" name="_lv_tree_walk_mode_t" file="misc/lv_tree.h" line={54} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L54">
+
+### _lv_tree_walk_mode_t
+
+| Name | Value |
+|------|------|
+| `LV_TREE_WALK_PRE_ORDER` | `0` |
+| `LV_TREE_WALK_POST_ORDER` |  |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_tree_class_t">
+
+### _lv_tree_class_t
+
+Describe the common methods of every object. Similar to a C++ class.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base_class` | <ApiLink name="lv_tree_class_t" display="const lv_tree_class_t *" /> |  |
+| `instance_size` | <ApiLink name="uint32_t" /> |  |
+| `constructor_cb` | <ApiLink name="lv_tree_constructor_cb_t" /> |  |
+| `destructor_cb` | <ApiLink name="lv_tree_destructor_cb_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_tree_node_t">
+
+### _lv_tree_node_t
+
+Description of a tree node
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `parent` | <ApiLink name="lv_tree_node_t" display="lv_tree_node_t *" /> |  |
+| `children` | <ApiLink name="lv_tree_node_t" display="lv_tree_node_t **" /> |  |
+| `child_cnt` | <ApiLink name="uint32_t" /> |  |
+| `child_cap` | <ApiLink name="uint32_t" /> |  |
+| `class_p` | <ApiLink name="lv_tree_class_t" display="const lv_tree_class_t *" /> |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_tree_class_t" file="misc/lv_tree.h" line={28} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L28">
+
+### lv_tree_class_t
+
+```c
+typedef struct _lv_tree_class_t lv_tree_class_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_tree_class_t" count={1}>
+
+- `lv_tree_node_create` — param `class_p`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_tree_node_t" file="misc/lv_tree.h" line={29} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L29">
+
+### lv_tree_node_t
+
+```c
+typedef struct _lv_tree_node_t lv_tree_node_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_tree_node_t" count={3}>
+
+- `lv_tree_node_create` — param `parent`
+- `lv_tree_node_delete` — param `node`
+- `lv_tree_walk` — param `node`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_tree_constructor_cb_t" file="misc/lv_tree.h" line={31} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L31">
+
+### lv_tree_constructor_cb_t
+
+```c
+typedef void(* lv_tree_constructor_cb_t) (const lv_tree_class_t *class_p, lv_tree_node_t *node)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_tree_destructor_cb_t" file="misc/lv_tree.h" line={32} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L32">
+
+### lv_tree_destructor_cb_t
+
+```c
+typedef void(* lv_tree_destructor_cb_t) (const lv_tree_class_t *class_p, lv_tree_node_t *node)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_tree_walk_mode_t" file="misc/lv_tree.h" line={58} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L58">
+
+### lv_tree_walk_mode_t
+
+```c
+typedef uint8_t lv_tree_walk_mode_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_tree_walk_mode_t" count={1}>
+
+- `lv_tree_walk` — param `mode`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_tree_traverse_cb_t" file="misc/lv_tree.h" line={60} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L60">
+
+### lv_tree_traverse_cb_t
+
+```c
+typedef bool(* lv_tree_traverse_cb_t) (const lv_tree_node_t *node, void *user_data)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_tree_traverse_cb_t" count={1}>
+
+- `lv_tree_walk` — param `cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_tree_before_cb_t" file="misc/lv_tree.h" line={61} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L61">
+
+### lv_tree_before_cb_t
+
+```c
+typedef bool(* lv_tree_before_cb_t) (const lv_tree_node_t *node, void *user_data)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_tree_before_cb_t" count={1}>
+
+- `lv_tree_walk` — param `bcb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_tree_after_cb_t" file="misc/lv_tree.h" line={62} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L62">
+
+### lv_tree_after_cb_t
+
+```c
+typedef void(* lv_tree_after_cb_t) (const lv_tree_node_t *node, void *user_data)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_tree_after_cb_t" count={1}>
+
+- `lv_tree_walk` — param `acb`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_TREE_NODE" file="misc/lv_tree.h" line={22} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L22">
+
+### LV_TREE_NODE
+
+```c
+#define LV_TREE_NODE(n) \
+    ((lv_tree_node_t*)(n))
+```
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_tree_node_class" file="misc/lv_tree.h" line={68} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_tree.h#L68">
+
+### lv_tree_node_class
+
+```c
+const lv_tree_class_t lv_tree_node_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h"]}
+  includedBy={["lv_svg.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h"]}
+/>

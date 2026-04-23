@@ -1,0 +1,43 @@
+---
+title: "Base Widget"
+order: 5
+---
+
+The `lv_obj_t` base class that every other widget inherits from, usable directly as a container or styling surface.
+
+## Base objects with and without shadow
+
+<LvglExampleBrief>Two base objects showing default styling next to a custom blue shadow.</LvglExampleBrief>
+
+Two `lv_obj` base objects are placed on the active screen. The
+first, sized 100 by 50, uses the default theme. The second keeps
+the default size and picks up a shared `lv_style_t` with a blue
+10 px shadow spread by 5 px. Both are offset from center so the
+shadow difference is visible side by side.
+
+<LvglExample name="lv_example_obj_1" path="widgets/obj/lv_example_obj_1" />
+
+## Draggable base object
+
+<LvglExampleBrief>Move a `Drag me` object under the pointer using `LV_EVENT_PRESSING`.</LvglExampleBrief>
+
+A 150 by 100 base object carries a centered `Drag me` label. An
+`LV_EVENT_PRESSING` callback reads the active input device's motion
+vector with `lv_indev_get_vect`, adds it to the object's current
+aligned position, and calls `lv_obj_set_pos` so the object follows
+the pointer as long as it is held down.
+
+<LvglExample name="lv_example_obj_2" path="widgets/obj/lv_example_obj_2" />
+
+## Animated matrix transform on a base object
+
+<LvglExampleBrief>Continuously scale and rotate a centered object using `lv_obj_set_transform`.</LvglExampleBrief>
+
+A centered base object is paired with a 20 ms `lv_timer` that
+builds an identity `lv_matrix_t`, scales its x axis, rotates it by
+360 times the scale factor, and applies the result with
+`lv_obj_set_transform`. The scale factor grows from 0.1 to 2.0 in
+0.01 steps; once it exceeds 2.0 the object is reset with
+`lv_obj_reset_transform` and the loop restarts.
+
+<LvglExample name="lv_example_obj_3" path="widgets/obj/lv_example_obj_3" />

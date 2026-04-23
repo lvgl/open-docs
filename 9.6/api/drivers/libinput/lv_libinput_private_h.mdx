@@ -1,0 +1,56 @@
+---
+title: lv_libinput_private.h
+description: API reference for lv_libinput_private.h
+api:
+  structs: [_lv_libinput_event_t, _lv_libinput_t]
+---
+
+<RelatedHeaders name="lv_libinput.h" isPrivate={true} />
+
+<ApiSummary structs={2} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_libinput_event_t">
+
+### _lv_libinput_event_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `pressed` | <ApiLink name="lv_indev_state_t" /> |  |
+| `key_val` | `int` |  |
+| `point` | <ApiLink name="lv_point_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_libinput_t">
+
+### _lv_libinput_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `fd` | `int` |  |
+| `fds` | `struct pollfd[1]` |  |
+| `points` | `lv_libinput_event_t[32]` |  |
+| `slots` | `lv_libinput_event_t[2]` |  |
+| `pointer_position` | <ApiLink name="lv_point_t" /> |  |
+| `pointer_button_down` | <ApiLink name="bool" /> |  |
+| `start` | `int` |  |
+| `end` | `int` |  |
+| `last_event` | <ApiLink name="lv_libinput_event_t" /> |  |
+| `deinit` | <ApiLink name="bool" /> |  |
+| `event_lock` | `pthread_mutex_t` |  |
+| `worker_thread` | `pthread_t` |  |
+| `libinput_context` | `struct libinput *` |  |
+| `libinput_device` | `struct libinput_device *` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_libinput.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_event.h", "lv_group.h", "lv_indev.h", "lv_ll.h", "lv_math.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

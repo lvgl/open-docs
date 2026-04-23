@@ -1,0 +1,20 @@
+---
+title: "Tileview"
+order: 165
+---
+
+Grid of full-size tiles that the user pages between by swiping, with each tile added via `lv_tileview_add_tile`.
+
+## L-shaped tile view with scroll chaining
+
+<LvglExampleBrief>Three tiles in an L layout where a ten-item list chains its scroll to the tile view.</LvglExampleBrief>
+
+`lv_tileview_add_tile` places a label tile at (0, 0) allowing
+`LV_DIR_BOTTOM`, a button tile at (0, 1) allowing `LV_DIR_TOP` and
+`LV_DIR_RIGHT`, and a list tile at (1, 1) allowing `LV_DIR_LEFT`.
+The button tile holds a centered `lv_button` labeled
+`Scroll up or right`; the list tile holds a full-size `lv_list`
+with ten buttons `One` through `Ten` whose scroll chains back into
+the tile view when the list reaches its edge.
+
+<LvglExample name="lv_example_tileview_1" path="widgets/tileview/lv_example_tileview_1" />

@@ -1,0 +1,18 @@
+---
+title: "Image Font"
+order: 35
+---
+
+Render images as glyphs inside labels, useful for emoji and icon sets.
+
+## Image glyphs inside label text
+
+<LvglExampleBrief>Replace private-use code points with PNG images rendered by `lv_imgfont`.</LvglExampleBrief>
+
+`lv_imgfont_create` builds an 80 px image font whose path callback returns an
+embedded `emoji_F617` image for `U+F617` and a file path for `U+F600` (prefixed
+with `"A:"` unless `LV_USE_FFMPEG` is enabled). The font's `fallback` is set to
+`LV_FONT_DEFAULT` so ASCII characters fall through. A centered label renders
+`"12\uF600\uF617AB"`, mixing the two emoji images with normal text.
+
+<LvglExample name="lv_example_imgfont_1" path="others/imgfont/lv_example_imgfont_1" />

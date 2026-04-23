@@ -1,0 +1,55 @@
+---
+title: "Slider"
+order: 125
+---
+
+## Slider with live value label
+
+<LvglExampleBrief>Center a slider and update a percentage label beneath it on value changes.</LvglExampleBrief>
+
+A default `lv_slider_create` slider is centered on the active screen with a
+2000 ms `LV_STYLE_ANIM_DURATION` for smooth programmatic moves. A label
+starting at `0%` is placed with `LV_ALIGN_OUT_BOTTOM_MID` below the slider,
+and an `LV_EVENT_VALUE_CHANGED` callback rewrites the label with the
+current `lv_slider_get_value` and realigns it under the slider.
+
+<LvglExample name="lv_example_slider_1" path="widgets/slider/lv_example_slider_1" />
+
+## Fully styled slider parts
+
+<LvglExampleBrief>Restyle every part of a slider with a cyan palette and pressed-state darkening.</LvglExampleBrief>
+
+The theme styles are removed from a centered slider and four local styles
+are attached. The `LV_PART_MAIN` track is grey with negative vertical
+padding so the indicator overflows, the `LV_PART_INDICATOR` uses
+`LV_PALETTE_CYAN`, and the `LV_PART_KNOB` adds a darker border plus 6 px
+padding. A shared pressed-state style darkens both the indicator and knob,
+and a 300 ms linear transition on `LV_STYLE_BG_COLOR` cross-fades the
+color change.
+
+<LvglExample name="lv_example_slider_2" path="widgets/slider/lv_example_slider_2" />
+
+## Range slider with pressed value tooltip
+
+<LvglExampleBrief>Draw the current low-high pair above a range slider only while it is pressed.</LvglExampleBrief>
+
+The slider is set to `LV_SLIDER_MODE_RANGE` over 0 to 100 with a start
+value of 20 and an end value of 70. `LV_EVENT_REFR_EXT_DRAW_SIZE` reserves
+50 px above the widget so the tooltip has room, and `LV_EVENT_DRAW_MAIN_END`
+draws a `<left> - <right>` label centered above the indicator when
+`LV_STATE_PRESSED` is active. Releasing the slider removes the tooltip on
+the next redraw.
+
+<LvglExample name="lv_example_slider_3" path="widgets/slider/lv_example_slider_3" />
+
+## Reversed slider direction
+
+<LvglExampleBrief>Center a slider whose range runs from 100 down to 0 with a live label.</LvglExampleBrief>
+
+`lv_slider_set_range(slider, 100, 0)` reverses the fill direction so the
+indicator grows from the right and the reported value drops as the knob
+moves right. A label below the slider starts at `0%` and is rewritten from
+`lv_slider_get_value` in the `LV_EVENT_VALUE_CHANGED` callback, then
+realigned with `LV_ALIGN_OUT_BOTTOM_MID`.
+
+<LvglExample name="lv_example_slider_4" path="widgets/slider/lv_example_slider_4" />

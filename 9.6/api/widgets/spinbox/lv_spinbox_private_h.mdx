@@ -1,0 +1,40 @@
+---
+title: lv_spinbox_private.h
+description: API reference for lv_spinbox_private.h
+api:
+  structs: [_lv_spinbox_t]
+---
+
+<RelatedHeaders name="lv_spinbox.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_spinbox_t">
+
+### _lv_spinbox_t
+
+Data of spinbox
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `ta` | <ApiLink name="lv_textarea_t" /> | Ext. of ancestor |
+| `value` | <ApiLink name="int32_t" /> |  |
+| `range_max` | <ApiLink name="int32_t" /> |  |
+| `range_min` | <ApiLink name="int32_t" /> |  |
+| `step` | <ApiLink name="int32_t" /> |  |
+| `digit_count` | <ApiLink name="uint32_t" /> |  |
+| `dec_point_pos` | <ApiLink name="uint32_t" /> | if 0, there is no separator and the number is an integer |
+| `rollover` | <ApiLink name="uint32_t" /> | Set to true for rollover functionality |
+| `digit_step_dir` | <ApiLink name="uint32_t" /> | the direction the digit will step on encoder button press when editing |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_textarea_private.h", "lv_spinbox.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_label.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_private.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_textarea.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

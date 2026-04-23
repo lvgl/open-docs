@@ -1,0 +1,72 @@
+---
+title: "Gradients"
+description: "Linear, radial, and conic gradient fills."
+order: 30
+---
+
+LVGL supports linear, radial, and conic gradients as background fills. Each type accepts color stops and geometric parameters (direction, center, radius) and can be applied through the style system wherever a background color is valid. The examples here show each gradient flavor on typical widgets.
+
+## Horizontal gradient with draggable stops
+
+<LvglExampleBrief>Drag two bullets to move the stop fractions of a red-to-green horizontal gradient.</LvglExampleBrief>
+
+A centered 80% by 80% object carries a two-stop horizontal gradient
+(red at 20%, transparent green at 80%) built with `lv_grad_init_stops`
+and `lv_grad_horizontal_init` and applied through
+`lv_style_set_bg_grad`. Two small buttons sitting on top act as handles;
+their `LV_EVENT_PRESSING` callbacks read the pointer with
+`lv_indev_get_point`, reposition the handle, and write the resulting
+x fraction into `dsc->stops[0].frac` or `dsc->stops[1].frac` before
+invalidating the parent.
+
+<LvglExample name="lv_example_grad_1" path="grad/lv_example_grad_1" />
+
+## Linear gradient with draggable endpoints
+
+<LvglExampleBrief>Drag two bullets to reposition the start and end points of a skewable linear gradient.</LvglExampleBrief>
+
+A centered 80% by 80% object carries a two-stop linear gradient
+(red at the start, transparent green at the end) built with
+`lv_grad_init_stops` and `lv_grad_linear_init` from (100, 100) to
+(200, 150) using `LV_GRAD_EXTEND_PAD`. Two small buttons mark the
+endpoints; their `LV_EVENT_PRESSING` callbacks read the pointer with
+`lv_indev_get_point`, reposition the handle, and write
+`dsc->params.linear.start` or `dsc->params.linear.end` before
+invalidating the parent. When `LV_USE_DRAW_SW_COMPLEX_GRADIENTS` is
+disabled, the example instead shows a single label noting the
+dependency.
+
+<LvglExample name="lv_example_grad_2" path="grad/lv_example_grad_2" />
+
+## Radial gradient with draggable centers
+
+<LvglExampleBrief>Drag two bullets to move the focal point and the end circle of a radial gradient.</LvglExampleBrief>
+
+A centered 80% by 80% object carries a two-stop radial gradient built
+with `lv_grad_init_stops`, `lv_grad_radial_init` (end circle centered at
+100, 100 with edge at 200, 100), and `lv_grad_radial_set_focal` at
+(50, 50). Two small buttons mark the focal point and the end circle
+center; their `LV_EVENT_PRESSING` callbacks read the pointer and write
+`dsc->params.radial.focal` (with `focal_extent` offset by 10) or
+`dsc->params.radial.end` (with `end_extent` offset by 100) before
+invalidating the parent. When `LV_USE_DRAW_SW_COMPLEX_GRADIENTS` is
+disabled, the example instead shows a single label noting the
+dependency.
+
+<LvglExample name="lv_example_grad_3" path="grad/lv_example_grad_3" />
+
+## Conical gradient with draggable angles
+
+<LvglExampleBrief>Drag two bullets to set the start and end angles of a conical gradient.</LvglExampleBrief>
+
+A centered 80% by 80% object carries a two-stop conical gradient built
+with `lv_grad_init_stops` and `lv_grad_conical_init` centered at 50% by
+50% sweeping from 0 to 180 degrees with `LV_GRAD_EXTEND_PAD`. Two small
+buttons act as angle handles; their `LV_EVENT_PRESSING` callbacks read
+the pointer, reposition the handle, and recompute
+`dsc->params.conical.start_angle` or `dsc->params.conical.end_angle`
+with `lv_atan2` relative to the parent center before invalidating it.
+When `LV_USE_DRAW_SW_COMPLEX_GRADIENTS` is disabled, the example
+instead shows a single label noting the dependency.
+
+<LvglExample name="lv_example_grad_4" path="grad/lv_example_grad_4" />

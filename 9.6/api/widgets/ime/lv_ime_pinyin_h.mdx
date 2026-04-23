@@ -1,0 +1,253 @@
+---
+title: lv_ime_pinyin.h
+description: API reference for lv_ime_pinyin.h
+api:
+  functions: [lv_ime_pinyin_create, lv_ime_pinyin_set_keyboard, lv_ime_pinyin_set_dict, lv_ime_pinyin_set_mode, lv_ime_pinyin_get_kb, lv_ime_pinyin_get_cand_panel, lv_ime_pinyin_get_dict]
+  enums: [lv_ime_pinyin_mode_t]
+  structs: [lv_pinyin_dict_t, ime_pinyin_k9_py_str_t]
+  macros: [LV_IME_PINYIN_K9_MAX_INPUT]
+  variables: [lv_ime_pinyin_class]
+---
+
+<RelatedHeaders name="lv_ime_pinyin_private.h" isPrivate={false} />
+
+<ApiSummary functions={7} enums={1} structs={2} macros={1} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (3)","Getters (3)","Other (1)"]}>
+<ApiTab value="Setters (3)">
+
+<ApiMember kind="function" name="lv_ime_pinyin_set_keyboard" file="widgets/ime/lv_ime_pinyin.h" line={66} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/ime/lv_ime_pinyin.h#L66">
+
+### lv_ime_pinyin_set_keyboard
+
+Set the keyboard of Pinyin input method.
+
+```c
+void lv_ime_pinyin_set_keyboard(lv_obj_t *obj, lv_obj_t *kb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Pinyin input method object |
+| `kb` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Pinyin input method keyboard |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ime_pinyin_set_dict" file="widgets/ime/lv_ime_pinyin.h" line={73} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/ime/lv_ime_pinyin.h#L73">
+
+### lv_ime_pinyin_set_dict
+
+Set the dictionary of Pinyin input method.
+
+```c
+void lv_ime_pinyin_set_dict(lv_obj_t *obj, lv_pinyin_dict_t *dict)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Pinyin input method object |
+| `dict` | <ApiLink name="lv_pinyin_dict_t" display="lv_pinyin_dict_t *" /> | pointer to a Pinyin input method dictionary |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ime_pinyin_set_mode" file="widgets/ime/lv_ime_pinyin.h" line={80} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/ime/lv_ime_pinyin.h#L80">
+
+### lv_ime_pinyin_set_mode
+
+Set mode, 26-key input(k26) or 9-key input(k9).
+
+```c
+void lv_ime_pinyin_set_mode(lv_obj_t *obj, lv_ime_pinyin_mode_t mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Pinyin input method object |
+| `mode` | <ApiLink name="lv_ime_pinyin_mode_t" /> | the mode from 'lv_ime_pinyin_mode_t' |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (3)">
+
+<ApiMember kind="function" name="lv_ime_pinyin_get_kb" file="widgets/ime/lv_ime_pinyin.h" line={91} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/ime/lv_ime_pinyin.h#L91">
+
+### lv_ime_pinyin_get_kb
+
+Set the dictionary of Pinyin input method.
+
+```c
+lv_obj_t * lv_ime_pinyin_get_kb(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Pinyin IME object |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the Pinyin IME keyboard
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ime_pinyin_get_cand_panel" file="widgets/ime/lv_ime_pinyin.h" line={98} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/ime/lv_ime_pinyin.h#L98">
+
+### lv_ime_pinyin_get_cand_panel
+
+Set the dictionary of Pinyin input method.
+
+```c
+lv_obj_t * lv_ime_pinyin_get_cand_panel(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Pinyin input method object |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the Pinyin input method candidate panel
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ime_pinyin_get_dict" file="widgets/ime/lv_ime_pinyin.h" line={105} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/ime/lv_ime_pinyin.h#L105">
+
+### lv_ime_pinyin_get_dict
+
+Set the dictionary of Pinyin input method.
+
+```c
+const lv_pinyin_dict_t * lv_ime_pinyin_get_dict(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Pinyin input method object |
+
+**Returns:** <ApiLink name="lv_pinyin_dict_t" display="const lv_pinyin_dict_t *" /> — pointer to the Pinyin input method dictionary
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="lv_ime_pinyin_create" file="widgets/ime/lv_ime_pinyin.h" line={55} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/ime/lv_ime_pinyin.h#L55">
+
+### lv_ime_pinyin_create
+
+```c
+lv_obj_t * lv_ime_pinyin_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_ime_pinyin_mode_t" file="widgets/ime/lv_ime_pinyin.h" line={29} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/ime/lv_ime_pinyin.h#L29">
+
+### lv_ime_pinyin_mode_t
+
+| Name |
+|------|
+| `LV_IME_PINYIN_MODE_K26` |
+| `LV_IME_PINYIN_MODE_K9` |
+| `LV_IME_PINYIN_MODE_K9_NUMBER` |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_ime_pinyin_mode_t" count={1}>
+
+- `lv_ime_pinyin_set_mode` — param `mode`
+
+</TypeUsedBy>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_pinyin_dict_t">
+
+### lv_pinyin_dict_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `py` | `const char *const` |  |
+| `py_mb` | `const char *const` |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_pinyin_dict_t" count={1}>
+
+- `lv_ime_pinyin_set_dict` — param `dict`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="ime_pinyin_k9_py_str_t">
+
+### ime_pinyin_k9_py_str_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `py_str` | `char[7]` |  |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_IME_PINYIN_K9_MAX_INPUT" file="widgets/ime/lv_ime_pinyin.h" line={23} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/ime/lv_ime_pinyin.h#L23">
+
+### LV_IME_PINYIN_K9_MAX_INPUT
+
+```c
+#define LV_IME_PINYIN_K9_MAX_INPUT 7
+```
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_ime_pinyin_class" file="widgets/ime/lv_ime_pinyin.h" line={50} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/ime/lv_ime_pinyin.h#L50">
+
+### lv_ime_pinyin_class
+
+```c
+const lv_obj_class_t lv_ime_pinyin_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_obj.h"]}
+  includedBy={["lv_ime_pinyin_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

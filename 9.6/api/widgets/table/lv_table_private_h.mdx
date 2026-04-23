@@ -1,0 +1,54 @@
+---
+title: lv_table_private.h
+description: API reference for lv_table_private.h
+api:
+  structs: [_lv_table_cell_t, _lv_table_t]
+---
+
+<RelatedHeaders name="lv_table.h" isPrivate={true} />
+
+<ApiSummary structs={2} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_table_cell_t">
+
+### _lv_table_cell_t
+
+Cell data
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `ctrl` | <ApiLink name="lv_table_cell_ctrl_t" /> |  |
+| `user_data` | `void *` | Custom user data |
+| `txt` | `char[1]` | Variable length array |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_table_t">
+
+### _lv_table_t
+
+Table data
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `col_cnt` | <ApiLink name="uint32_t" /> |  |
+| `row_cnt` | <ApiLink name="uint32_t" /> |  |
+| `cell_data` | <ApiLink name="lv_table_cell_t" display="lv_table_cell_t **" /> |  |
+| `row_h` | <ApiLink name="int32_t" display="int32_t *" /> |  |
+| `col_w` | <ApiLink name="int32_t" display="int32_t *" /> |  |
+| `col_act` | <ApiLink name="uint32_t" /> |  |
+| `row_act` | <ApiLink name="uint32_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_table.h", "lv_obj_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_label.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

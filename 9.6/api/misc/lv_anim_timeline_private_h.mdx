@@ -1,0 +1,37 @@
+---
+title: lv_anim_timeline_private.h
+description: API reference for lv_anim_timeline_private.h
+api:
+  structs: [_lv_anim_timeline_t]
+---
+
+<RelatedHeaders name="lv_anim_timeline.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_anim_timeline_t">
+
+### _lv_anim_timeline_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `anim_dsc` | <ApiLink name="_lv_anim_timeline_dsc_t" display="struct _lv_anim_timeline_dsc_t *" /> | Dynamically allocated anim dsc array |
+| `anim_dsc_cnt` | <ApiLink name="uint32_t" /> | The length of anim dsc array |
+| `act_time` | <ApiLink name="uint32_t" /> | Current time of the animation |
+| `reverse` | <ApiLink name="bool" /> | Reverse playback |
+| `delay` | <ApiLink name="uint32_t" /> | Delay before starting the animation from any ends |
+| `repeat_count` | <ApiLink name="uint32_t" /> | Repeat count |
+| `repeat_delay` | <ApiLink name="uint32_t" /> | Wait before repeat |
+| `user_data` | `void *` | For any custom data |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_anim_timeline.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_ext_data.h", "lv_ll.h", "lv_math.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

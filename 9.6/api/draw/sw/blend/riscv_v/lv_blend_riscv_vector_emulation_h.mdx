@@ -1,0 +1,26 @@
+---
+title: lv_blend_riscv_vector_emulation.h
+description: API reference for lv_blend_riscv_vector_emulation.h
+---
+
+Software emulation of RISC-V Vector Extension (RVV 1.0) intrinsics
+
+This header provides pure C implementations of RVV intrinsics to enable testing and verification on non-RVV platforms. The implementations follow the RVV specification as documented in: [https://dzaima.github.io/intrinsics-viewer/](https://dzaima.github.io/intrinsics-viewer/)
+
+Usage:
+1. On systems without RVV support, include this header BEFORE \<riscv_vector.h>
+2. Or define RISCV_VECTOR_EMULATION before including actual \<riscv_vector.h>
+3. All __riscv_* functions will be emulated in software
+
+Limitations:
+- No performance optimization (this is software emulation)
+- Vector length (vl) is tracked but all operations work on single elements in a loop
+- Predication and masking are simplified but functionally correct
+- LMUL \< 1 (fractional multipliers) are not supported
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

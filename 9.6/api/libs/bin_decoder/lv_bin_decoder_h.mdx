@@ -1,0 +1,123 @@
+---
+title: lv_bin_decoder.h
+description: API reference for lv_bin_decoder.h
+api:
+  functions: [lv_bin_decoder_init, lv_bin_decoder_info, lv_bin_decoder_get_area, lv_bin_decoder_open, lv_bin_decoder_close]
+---
+
+<ApiSummary functions={5} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (4)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_bin_decoder_get_area" file="libs/bin_decoder/lv_bin_decoder.h" line={44} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/bin_decoder/lv_bin_decoder.h#L44">
+
+### lv_bin_decoder_get_area
+
+```c
+lv_result_t lv_bin_decoder_get_area(lv_image_decoder_t *decoder, lv_image_decoder_dsc_t *dsc, const lv_area_t *full_area, lv_area_t *decoded_area)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `decoder` | <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> |
+| `dsc` | <ApiLink name="lv_image_decoder_dsc_t" display="lv_image_decoder_dsc_t *" /> |
+| `full_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+| `decoded_area` | <ApiLink name="lv_area_t" display="lv_area_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (4)">
+
+<ApiMember kind="function" name="lv_bin_decoder_init" file="libs/bin_decoder/lv_bin_decoder.h" line={33} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/bin_decoder/lv_bin_decoder.h#L33">
+
+### lv_bin_decoder_init
+
+Initialize the binary image decoder module
+
+```c
+void lv_bin_decoder_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_bin_decoder_info" file="libs/bin_decoder/lv_bin_decoder.h" line={42} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/bin_decoder/lv_bin_decoder.h#L42">
+
+### lv_bin_decoder_info
+
+Get info about a lvgl binary image
+
+```c
+lv_result_t lv_bin_decoder_info(lv_image_decoder_t *decoder, lv_image_decoder_dsc_t *dsc, lv_image_header_t *header)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `decoder` | <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> | the decoder where this function belongs |
+| `dsc` | <ApiLink name="lv_image_decoder_dsc_t" display="lv_image_decoder_dsc_t *" /> | image descriptor containing the source and type of the image and other info. |
+| `header` | <ApiLink name="lv_image_header_t" display="lv_image_header_t *" /> | store the image data here |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: the info is successfully stored in `header`; LV_RESULT_INVALID: unknown format or other error.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_bin_decoder_open" file="libs/bin_decoder/lv_bin_decoder.h" line={53} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/bin_decoder/lv_bin_decoder.h#L53">
+
+### lv_bin_decoder_open
+
+Open a lvgl binary image
+
+```c
+lv_result_t lv_bin_decoder_open(lv_image_decoder_t *decoder, lv_image_decoder_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `decoder` | <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> | the decoder where this function belongs |
+| `dsc` | <ApiLink name="lv_image_decoder_dsc_t" display="lv_image_decoder_dsc_t *" /> | pointer to decoder descriptor. `src`, `style` are already initialized in it. |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: the info is successfully stored in `header`; LV_RESULT_INVALID: unknown format or other error.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_bin_decoder_close" file="libs/bin_decoder/lv_bin_decoder.h" line={60} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/bin_decoder/lv_bin_decoder.h#L60">
+
+### lv_bin_decoder_close
+
+Close the pending decoding. Free resources etc.
+
+```c
+void lv_bin_decoder_close(lv_image_decoder_t *decoder, lv_image_decoder_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `decoder` | <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> | pointer to the decoder the function associated with |
+| `dsc` | <ApiLink name="lv_image_decoder_dsc_t" display="lv_image_decoder_dsc_t *" /> | pointer to decoder descriptor |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_image_decoder.h"]}
+  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_fs.h", "lv_image_dsc.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_types.h"]}
+/>

@@ -1,0 +1,158 @@
+---
+title: lv_vg_lite_grad.h
+description: API reference for lv_vg_lite_grad.h
+api:
+  functions: [lv_vg_lite_grad_ctx_create, lv_vg_lite_grad_ctx_delete, lv_vg_lite_grad_ctx_get_pending, lv_vg_lite_grad_ctx_get_cache, lv_vg_lite_draw_grad, lv_vg_lite_draw_grad_helper]
+---
+
+<ApiSummary functions={6} />
+
+## Functions
+
+<ApiTabs items={["Getters (2)","Other (4)"]}>
+<ApiTab value="Getters (2)">
+
+<ApiMember kind="function" name="lv_vg_lite_grad_ctx_get_pending" file="draw/vg_lite/lv_vg_lite_grad.h" line={52} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_grad.h#L52">
+
+### lv_vg_lite_grad_ctx_get_pending
+
+Get the pending list of gradient items.
+
+```c
+struct _lv_vg_lite_pending_t * lv_vg_lite_grad_ctx_get_pending(struct _lv_vg_lite_grad_ctx_t *ctx)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ctx` | `struct _lv_vg_lite_grad_ctx_t *` | the gradient context |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_grad_ctx_get_cache" file="draw/vg_lite/lv_vg_lite_grad.h" line={58} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_grad.h#L58">
+
+### lv_vg_lite_grad_ctx_get_cache
+
+Get the cache of gradient items.
+
+```c
+struct _lv_cache_t * lv_vg_lite_grad_ctx_get_cache(struct _lv_vg_lite_grad_ctx_t *ctx)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ctx` | `struct _lv_vg_lite_grad_ctx_t *` | the gradient context |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (4)">
+
+<ApiMember kind="function" name="lv_vg_lite_grad_ctx_create" file="draw/vg_lite/lv_vg_lite_grad.h" line={40} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_grad.h#L40">
+
+### lv_vg_lite_grad_ctx_create
+
+Create a gradient context.
+
+```c
+struct _lv_vg_lite_grad_ctx_t * lv_vg_lite_grad_ctx_create(uint32_t cache_cnt, struct _lv_draw_vg_lite_unit_t *unit)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `cache_cnt` | <ApiLink name="uint32_t" /> | number of cache entries |
+| `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> | the draw unit |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_grad_ctx_delete" file="draw/vg_lite/lv_vg_lite_grad.h" line={46} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_grad.h#L46">
+
+### lv_vg_lite_grad_ctx_delete
+
+Delete a gradient context.
+
+```c
+void lv_vg_lite_grad_ctx_delete(struct _lv_vg_lite_grad_ctx_t *ctx)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ctx` | `struct _lv_vg_lite_grad_ctx_t *` | the gradient context to delete |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_draw_grad" file="draw/vg_lite/lv_vg_lite_grad.h" line={72} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_grad.h#L72">
+
+### lv_vg_lite_draw_grad
+
+Draw a gradient.
+
+```c
+bool lv_vg_lite_draw_grad(struct _lv_vg_lite_grad_ctx_t *ctx, vg_lite_buffer_t *buffer, vg_lite_path_t *path, const lv_vector_gradient_t *grad, const vg_lite_matrix_t *grad_matrix, const vg_lite_matrix_t *matrix, vg_lite_fill_t fill, vg_lite_blend_t blend)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ctx` | `struct _lv_vg_lite_grad_ctx_t *` | the gradient context |
+| `buffer` | `vg_lite_buffer_t *` | the target buffer |
+| `path` | `vg_lite_path_t *` | the path to draw the gradient on |
+| `grad` | <ApiLink name="lv_vector_gradient_t" display="const lv_vector_gradient_t *" /> | the gradient descriptor |
+| `grad_matrix` | `const vg_lite_matrix_t *` | the gradient matrix |
+| `matrix` | `const vg_lite_matrix_t *` | the matrix to apply to the gradient |
+| `fill` | `vg_lite_fill_t` | the fill rule |
+| `blend` | `vg_lite_blend_t` | the blend mode |
+
+**Returns:** <ApiLink name="bool" /> — true: success, false: failed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_draw_grad_helper" file="draw/vg_lite/lv_vg_lite_grad.h" line={94} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_grad.h#L94">
+
+### lv_vg_lite_draw_grad_helper
+
+Draw a gradient helper.
+
+```c
+bool lv_vg_lite_draw_grad_helper(struct _lv_vg_lite_grad_ctx_t *ctx, vg_lite_buffer_t *buffer, vg_lite_path_t *path, const lv_area_t *area, const lv_grad_dsc_t *grad_dsc, const vg_lite_matrix_t *matrix, vg_lite_fill_t fill, vg_lite_blend_t blend)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ctx` | `struct _lv_vg_lite_grad_ctx_t *` | the gradient context |
+| `buffer` | `vg_lite_buffer_t *` | the target buffer |
+| `path` | `vg_lite_path_t *` | the path to draw the gradient on |
+| `area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area to draw the gradient on |
+| `grad_dsc` | <ApiLink name="lv_grad_dsc_t" display="const lv_grad_dsc_t *" /> | the gradient descriptor |
+| `matrix` | `const vg_lite_matrix_t *` | the matrix to apply to the gradient |
+| `fill` | `vg_lite_fill_t` | the fill rule |
+| `blend` | `vg_lite_blend_t` | the blend mode |
+
+**Returns:** <ApiLink name="bool" /> — true: success, false: failed
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_vg_lite_utils.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_grad.h", "lv_grid.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>
