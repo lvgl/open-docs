@@ -1,0 +1,2121 @@
+---
+title: lv_api_map_v8.h
+description: API reference for lv_api_map_v8.h
+api:
+  functions: [lv_task_handler, lv_obj_move_foreground, lv_obj_move_background]
+  typedefs: [lv_coord_t, lv_res_t, lv_img_dsc_t, lv_disp_t, lv_disp_rotation_t, lv_disp_render_t, lv_anim_ready_cb_t, lv_scr_load_anim_t, lv_btnmatrix_ctrl_t]
+  macros: [LV_DISP_ROTATION_0, LV_DISP_ROTATION_90, LV_DISP_ROTATION_180, LV_DISP_ROTATION_270, LV_DISP_RENDER_MODE_PARTIAL, LV_DISP_RENDER_MODE_DIRECT, LV_DISP_RENDER_MODE_FULL, LV_BTNMATRIX_BTN_NONE, LV_BTNMATRIX_CTRL_HIDDEN, LV_BTNMATRIX_CTRL_NO_REPEAT, LV_BTNMATRIX_CTRL_DISABLED, LV_BTNMATRIX_CTRL_CHECKABLE, LV_BTNMATRIX_CTRL_CHECKED, LV_BTNMATRIX_CTRL_CLICK_TRIG, LV_BTNMATRIX_CTRL_POPOVER, LV_BTNMATRIX_CTRL_CUSTOM_1, LV_BTNMATRIX_CTRL_CUSTOM_2, LV_IMGBTN_STATE_RELEASED, LV_IMGBTN_STATE_PRESSED, LV_IMGBTN_STATE_DISABLED, LV_IMGBTN_STATE_CHECKED_RELEASED, LV_IMGBTN_STATE_CHECKED_PRESSED, LV_IMGBTN_STATE_CHECKED_DISABLED, LV_RES_OK, LV_RES_INV, LV_INDEV_STATE_PR, LV_INDEV_STATE_REL, lv_obj_del, lv_obj_del_async, lv_obj_clear_flag, lv_obj_clear_state, lv_indev_set_disp, lv_indev_get_act, lv_scr_act, lv_disp_remove, lv_disp_set_default, lv_disp_get_default, lv_disp_get_next, lv_disp_set_rotation, lv_disp_get_hor_res, lv_disp_get_ver_res, lv_disp_get_physical_hor_res, lv_disp_get_physical_ver_res, lv_disp_get_offset_x, lv_disp_get_offset_y, lv_disp_get_rotation, lv_disp_get_dpi, lv_disp_get_antialiasing, lv_disp_flush_ready, lv_disp_flush_is_last, lv_disp_get_scr_act, lv_disp_get_scr_prev, lv_disp_load_scr, lv_scr_load, lv_scr_load_anim, lv_disp_get_layer_top, lv_disp_get_layer_sys, lv_disp_send_event, lv_disp_set_theme, lv_disp_get_theme, lv_disp_get_inactive_time, lv_disp_trig_activity, lv_disp_enable_invalidation, lv_disp_is_invalidation_enabled, lv_disp_refr_timer, lv_disp_get_refr_timer, lv_timer_del, lv_anim_del, lv_anim_del_all, lv_anim_set_ready_cb, lv_group_del, lv_txt_get_size, lv_txt_get_width, lv_img_create, lv_img_set_src, lv_img_set_offset_x, lv_img_set_offset_y, lv_img_set_angle, lv_img_set_pivot, lv_img_set_zoom, lv_img_set_antialias, lv_img_get_src, lv_img_get_offset_x, lv_img_get_offset_y, lv_img_get_angle, lv_img_get_pivot, lv_img_get_zoom, lv_img_get_antialias, lv_imgbtn_create, lv_imgbtn_set_src, lv_imgbtn_set_state, lv_imgbtn_get_src_left, lv_imgbtn_get_src_middle, lv_imgbtn_get_src_right, lv_list_set_btn_text, lv_list_get_btn_text, lv_list_add_btn, lv_btn_create, lv_btnmatrix_create, lv_btnmatrix_set_map, lv_btnmatrix_set_ctrl_map, lv_btnmatrix_set_selected_btn, lv_btnmatrix_set_btn_ctrl, lv_btnmatrix_clear_btn_ctrl, lv_btnmatrix_set_btn_ctrl_all, lv_btnmatrix_clear_btn_ctrl_all, lv_btnmatrix_set_btn_width, lv_btnmatrix_set_one_checked, lv_btnmatrix_get_map, lv_btnmatrix_get_selected_btn, lv_btnmatrix_get_btn_text, lv_btnmatrix_has_button_ctrl, lv_btnmatrix_get_one_checked, lv_tabview_get_tab_btns, lv_tabview_get_tab_act, lv_tabview_set_act, lv_tileview_get_tile_act, lv_obj_set_tile_id, lv_obj_set_tile, lv_roller_set_visible_row_cnt, lv_roller_get_option_cnt, lv_table_set_col_cnt, lv_table_set_row_cnt, lv_table_get_col_cnt, lv_table_get_row_cnt, lv_table_set_col_width, lv_table_get_col_width, lv_dropdown_get_option_cnt, lv_obj_get_child_cnt, lv_obj_get_disp, lv_obj_delete_anim_ready_cb, LV_STYLE_ANIM_TIME, LV_STYLE_IMG_OPA, LV_STYLE_IMG_RECOLOR, LV_STYLE_IMG_RECOLOR_OPA, LV_STYLE_SHADOW_OFS_X, LV_STYLE_SHADOW_OFS_Y, LV_STYLE_TRANSFORM_ANGLE, lv_obj_get_style_anim_time, lv_obj_get_style_img_opa, lv_obj_get_style_img_recolor, lv_obj_get_style_img_recolor_filtered, lv_obj_get_style_img_recolor_opa, lv_obj_get_style_shadow_ofs_x, lv_obj_get_style_shadow_ofs_y, lv_obj_get_style_transform_angle, lv_obj_get_style_bg_img_src, lv_obj_get_style_bg_img_recolor, lv_obj_get_style_bg_img_recolor_opa, lv_obj_set_style_anim_time, lv_obj_set_style_img_opa, lv_obj_set_style_img_recolor, lv_obj_set_style_img_recolor_opa, lv_obj_set_style_shadow_ofs_x, lv_obj_set_style_shadow_ofs_y, lv_obj_set_style_transform_zoom, lv_obj_set_style_transform_angle, lv_obj_set_style_bg_img_src, lv_obj_set_style_bg_img_recolor, lv_obj_set_style_bg_img_recolor_opa, lv_style_set_anim_time, lv_style_set_img_opa, lv_style_set_img_recolor, lv_style_set_img_recolor_opa, lv_style_set_shadow_ofs_x, lv_style_set_shadow_ofs_y, lv_style_set_transform_angle, lv_style_set_transform_zoom, lv_style_set_bg_img_src, lv_style_set_bg_img_recolor, lv_style_set_bg_img_recolor_opa, lv_keyboard_get_selected_btn, lv_keyboard_get_btn_text, LV_ZOOM_NONE, lv_image_decoder_built_in_open, lv_image_decoder_built_in_close, LV_IMG_DECLARE]
+---
+
+<ApiSummary functions={3} typedefs={9} macros={177} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_task_handler" file="lv_api_map_v8.h" line={75} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L75">
+
+### lv_task_handler
+
+```c
+static uint32_t lv_task_handler(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_move_foreground" file="lv_api_map_v8.h" line={86} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L86">
+
+### lv_obj_move_foreground
+
+Move the object to the foreground. It will look like if it was created as the last child of its parent. It also means it can cover any of the siblings.
+
+```c
+static void lv_obj_move_foreground(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_move_background" file="lv_api_map_v8.h" line={103} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L103">
+
+### lv_obj_move_background
+
+Move the object to the background. It will look like if it was created as the first child of its parent. It also means any of the siblings can cover the object.
+
+```c
+static void lv_obj_move_background(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_coord_t" file="lv_api_map_v8.h" line={49} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L49">
+
+### lv_coord_t
+
+```c
+typedef int32_t lv_coord_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_res_t" file="lv_api_map_v8.h" line={50} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L50">
+
+### lv_res_t
+
+```c
+typedef lv_result_t lv_res_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_img_dsc_t" file="lv_api_map_v8.h" line={51} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L51">
+
+### lv_img_dsc_t
+
+```c
+typedef lv_image_dsc_t lv_img_dsc_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_disp_t" file="lv_api_map_v8.h" line={52} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L52">
+
+### lv_disp_t
+
+```c
+typedef lv_display_t lv_disp_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_disp_rotation_t" file="lv_api_map_v8.h" line={53} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L53">
+
+### lv_disp_rotation_t
+
+```c
+typedef lv_display_rotation_t lv_disp_rotation_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_disp_render_t" file="lv_api_map_v8.h" line={54} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L54">
+
+### lv_disp_render_t
+
+```c
+typedef lv_display_render_mode_t lv_disp_render_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_anim_ready_cb_t" file="lv_api_map_v8.h" line={55} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L55">
+
+### lv_anim_ready_cb_t
+
+```c
+typedef lv_anim_completed_cb_t lv_anim_ready_cb_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_scr_load_anim_t" file="lv_api_map_v8.h" line={56} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L56">
+
+### lv_scr_load_anim_t
+
+```c
+typedef lv_screen_load_anim_t lv_scr_load_anim_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_btnmatrix_ctrl_t" file="lv_api_map_v8.h" line={59} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L59">
+
+### lv_btnmatrix_ctrl_t
+
+```c
+typedef lv_buttonmatrix_ctrl_t lv_btnmatrix_ctrl_t
+```
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_DISP_ROTATION_0" file="lv_api_map_v8.h" line={23} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L23">
+
+### LV_DISP_ROTATION_0
+
+```c
+#define LV_DISP_ROTATION_0 LV_DISPLAY_ROTATION_0
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DISP_ROTATION_90" file="lv_api_map_v8.h" line={24} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L24">
+
+### LV_DISP_ROTATION_90
+
+```c
+#define LV_DISP_ROTATION_90 LV_DISPLAY_ROTATION_90
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DISP_ROTATION_180" file="lv_api_map_v8.h" line={25} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L25">
+
+### LV_DISP_ROTATION_180
+
+```c
+#define LV_DISP_ROTATION_180 LV_DISPLAY_ROTATION_180
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DISP_ROTATION_270" file="lv_api_map_v8.h" line={26} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L26">
+
+### LV_DISP_ROTATION_270
+
+```c
+#define LV_DISP_ROTATION_270 LV_DISPLAY_ROTATION_270
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DISP_RENDER_MODE_PARTIAL" file="lv_api_map_v8.h" line={28} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L28">
+
+### LV_DISP_RENDER_MODE_PARTIAL
+
+```c
+#define LV_DISP_RENDER_MODE_PARTIAL LV_DISPLAY_RENDER_MODE_PARTIAL
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DISP_RENDER_MODE_DIRECT" file="lv_api_map_v8.h" line={29} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L29">
+
+### LV_DISP_RENDER_MODE_DIRECT
+
+```c
+#define LV_DISP_RENDER_MODE_DIRECT LV_DISPLAY_RENDER_MODE_DIRECT
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DISP_RENDER_MODE_FULL" file="lv_api_map_v8.h" line={30} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L30">
+
+### LV_DISP_RENDER_MODE_FULL
+
+```c
+#define LV_DISP_RENDER_MODE_FULL LV_DISPLAY_RENDER_MODE_FULL
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BTNMATRIX_BTN_NONE" file="lv_api_map_v8.h" line={33} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L33">
+
+### LV_BTNMATRIX_BTN_NONE
+
+```c
+#define LV_BTNMATRIX_BTN_NONE LV_BUTTONMATRIX_BUTTON_NONE
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BTNMATRIX_CTRL_HIDDEN" file="lv_api_map_v8.h" line={35} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L35">
+
+### LV_BTNMATRIX_CTRL_HIDDEN
+
+```c
+#define LV_BTNMATRIX_CTRL_HIDDEN LV_BUTTONMATRIX_CTRL_HIDDEN
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BTNMATRIX_CTRL_NO_REPEAT" file="lv_api_map_v8.h" line={36} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L36">
+
+### LV_BTNMATRIX_CTRL_NO_REPEAT
+
+```c
+#define LV_BTNMATRIX_CTRL_NO_REPEAT LV_BUTTONMATRIX_CTRL_NO_REPEAT
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BTNMATRIX_CTRL_DISABLED" file="lv_api_map_v8.h" line={37} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L37">
+
+### LV_BTNMATRIX_CTRL_DISABLED
+
+```c
+#define LV_BTNMATRIX_CTRL_DISABLED LV_BUTTONMATRIX_CTRL_DISABLED
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BTNMATRIX_CTRL_CHECKABLE" file="lv_api_map_v8.h" line={38} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L38">
+
+### LV_BTNMATRIX_CTRL_CHECKABLE
+
+```c
+#define LV_BTNMATRIX_CTRL_CHECKABLE LV_BUTTONMATRIX_CTRL_CHECKABLE
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BTNMATRIX_CTRL_CHECKED" file="lv_api_map_v8.h" line={39} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L39">
+
+### LV_BTNMATRIX_CTRL_CHECKED
+
+```c
+#define LV_BTNMATRIX_CTRL_CHECKED LV_BUTTONMATRIX_CTRL_CHECKED
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BTNMATRIX_CTRL_CLICK_TRIG" file="lv_api_map_v8.h" line={40} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L40">
+
+### LV_BTNMATRIX_CTRL_CLICK_TRIG
+
+```c
+#define LV_BTNMATRIX_CTRL_CLICK_TRIG LV_BUTTONMATRIX_CTRL_CLICK_TRIG
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BTNMATRIX_CTRL_POPOVER" file="lv_api_map_v8.h" line={41} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L41">
+
+### LV_BTNMATRIX_CTRL_POPOVER
+
+```c
+#define LV_BTNMATRIX_CTRL_POPOVER LV_BUTTONMATRIX_CTRL_POPOVER
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BTNMATRIX_CTRL_CUSTOM_1" file="lv_api_map_v8.h" line={42} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L42">
+
+### LV_BTNMATRIX_CTRL_CUSTOM_1
+
+```c
+#define LV_BTNMATRIX_CTRL_CUSTOM_1 LV_BUTTONMATRIX_CTRL_CUSTOM_1
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BTNMATRIX_CTRL_CUSTOM_2" file="lv_api_map_v8.h" line={43} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L43">
+
+### LV_BTNMATRIX_CTRL_CUSTOM_2
+
+```c
+#define LV_BTNMATRIX_CTRL_CUSTOM_2 LV_BUTTONMATRIX_CTRL_CUSTOM_2
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_IMGBTN_STATE_RELEASED" file="lv_api_map_v8.h" line={63} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L63">
+
+### LV_IMGBTN_STATE_RELEASED
+
+```c
+#define LV_IMGBTN_STATE_RELEASED LV_IMAGEBUTTON_STATE_RELEASED
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_IMGBTN_STATE_PRESSED" file="lv_api_map_v8.h" line={64} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L64">
+
+### LV_IMGBTN_STATE_PRESSED
+
+```c
+#define LV_IMGBTN_STATE_PRESSED LV_IMAGEBUTTON_STATE_PRESSED
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_IMGBTN_STATE_DISABLED" file="lv_api_map_v8.h" line={65} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L65">
+
+### LV_IMGBTN_STATE_DISABLED
+
+```c
+#define LV_IMGBTN_STATE_DISABLED LV_IMAGEBUTTON_STATE_DISABLED
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_IMGBTN_STATE_CHECKED_RELEASED" file="lv_api_map_v8.h" line={66} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L66">
+
+### LV_IMGBTN_STATE_CHECKED_RELEASED
+
+```c
+#define LV_IMGBTN_STATE_CHECKED_RELEASED LV_IMAGEBUTTON_STATE_CHECKED_RELEASED
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_IMGBTN_STATE_CHECKED_PRESSED" file="lv_api_map_v8.h" line={67} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L67">
+
+### LV_IMGBTN_STATE_CHECKED_PRESSED
+
+```c
+#define LV_IMGBTN_STATE_CHECKED_PRESSED LV_IMAGEBUTTON_STATE_CHECKED_PRESSED
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_IMGBTN_STATE_CHECKED_DISABLED" file="lv_api_map_v8.h" line={68} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L68">
+
+### LV_IMGBTN_STATE_CHECKED_DISABLED
+
+```c
+#define LV_IMGBTN_STATE_CHECKED_DISABLED LV_IMAGEBUTTON_STATE_CHECKED_DISABLED
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_RES_OK" file="lv_api_map_v8.h" line={111} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L111">
+
+### LV_RES_OK
+
+```c
+#define LV_RES_OK LV_RESULT_OK
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_RES_INV" file="lv_api_map_v8.h" line={112} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L112">
+
+### LV_RES_INV
+
+```c
+#define LV_RES_INV LV_RESULT_INVALID
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_INDEV_STATE_PR" file="lv_api_map_v8.h" line={114} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L114">
+
+### LV_INDEV_STATE_PR
+
+```c
+#define LV_INDEV_STATE_PR LV_INDEV_STATE_PRESSED
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_INDEV_STATE_REL" file="lv_api_map_v8.h" line={115} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L115">
+
+### LV_INDEV_STATE_REL
+
+```c
+#define LV_INDEV_STATE_REL LV_INDEV_STATE_RELEASED
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_del" file="lv_api_map_v8.h" line={117} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L117">
+
+### lv_obj_del
+
+```c
+#define lv_obj_del lv_obj_delete
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_del_async" file="lv_api_map_v8.h" line={118} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L118">
+
+### lv_obj_del_async
+
+```c
+#define lv_obj_del_async lv_obj_delete_async
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_clear_flag" file="lv_api_map_v8.h" line={119} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L119">
+
+### lv_obj_clear_flag
+
+```c
+#define lv_obj_clear_flag lv_obj_remove_flag
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_clear_state" file="lv_api_map_v8.h" line={120} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L120">
+
+### lv_obj_clear_state
+
+```c
+#define lv_obj_clear_state lv_obj_remove_state
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_indev_set_disp" file="lv_api_map_v8.h" line={122} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L122">
+
+### lv_indev_set_disp
+
+```c
+#define lv_indev_set_disp lv_indev_set_display
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_indev_get_act" file="lv_api_map_v8.h" line={123} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L123">
+
+### lv_indev_get_act
+
+```c
+#define lv_indev_get_act lv_indev_active
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_scr_act" file="lv_api_map_v8.h" line={124} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L124">
+
+### lv_scr_act
+
+```c
+#define lv_scr_act lv_screen_active
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_remove" file="lv_api_map_v8.h" line={125} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L125">
+
+### lv_disp_remove
+
+```c
+#define lv_disp_remove lv_display_delete
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_set_default" file="lv_api_map_v8.h" line={126} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L126">
+
+### lv_disp_set_default
+
+```c
+#define lv_disp_set_default lv_display_set_default
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_default" file="lv_api_map_v8.h" line={127} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L127">
+
+### lv_disp_get_default
+
+```c
+#define lv_disp_get_default lv_display_get_default
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_next" file="lv_api_map_v8.h" line={128} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L128">
+
+### lv_disp_get_next
+
+```c
+#define lv_disp_get_next lv_display_get_next
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_set_rotation" file="lv_api_map_v8.h" line={129} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L129">
+
+### lv_disp_set_rotation
+
+```c
+#define lv_disp_set_rotation lv_display_set_rotation
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_hor_res" file="lv_api_map_v8.h" line={130} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L130">
+
+### lv_disp_get_hor_res
+
+```c
+#define lv_disp_get_hor_res lv_display_get_horizontal_resolution
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_ver_res" file="lv_api_map_v8.h" line={131} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L131">
+
+### lv_disp_get_ver_res
+
+```c
+#define lv_disp_get_ver_res lv_display_get_vertical_resolution
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_physical_hor_res" file="lv_api_map_v8.h" line={132} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L132">
+
+### lv_disp_get_physical_hor_res
+
+```c
+#define lv_disp_get_physical_hor_res lv_display_get_physical_horizontal_resolution
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_physical_ver_res" file="lv_api_map_v8.h" line={133} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L133">
+
+### lv_disp_get_physical_ver_res
+
+```c
+#define lv_disp_get_physical_ver_res lv_display_get_physical_vertical_resolution
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_offset_x" file="lv_api_map_v8.h" line={134} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L134">
+
+### lv_disp_get_offset_x
+
+```c
+#define lv_disp_get_offset_x lv_display_get_offset_x
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_offset_y" file="lv_api_map_v8.h" line={135} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L135">
+
+### lv_disp_get_offset_y
+
+```c
+#define lv_disp_get_offset_y lv_display_get_offset_y
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_rotation" file="lv_api_map_v8.h" line={136} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L136">
+
+### lv_disp_get_rotation
+
+```c
+#define lv_disp_get_rotation lv_display_get_rotation
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_dpi" file="lv_api_map_v8.h" line={137} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L137">
+
+### lv_disp_get_dpi
+
+```c
+#define lv_disp_get_dpi lv_display_get_dpi
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_antialiasing" file="lv_api_map_v8.h" line={138} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L138">
+
+### lv_disp_get_antialiasing
+
+```c
+#define lv_disp_get_antialiasing lv_display_get_antialiasing
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_flush_ready" file="lv_api_map_v8.h" line={139} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L139">
+
+### lv_disp_flush_ready
+
+```c
+#define lv_disp_flush_ready lv_display_flush_ready
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_flush_is_last" file="lv_api_map_v8.h" line={140} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L140">
+
+### lv_disp_flush_is_last
+
+```c
+#define lv_disp_flush_is_last lv_display_flush_is_last
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_scr_act" file="lv_api_map_v8.h" line={141} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L141">
+
+### lv_disp_get_scr_act
+
+```c
+#define lv_disp_get_scr_act lv_display_get_screen_active
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_scr_prev" file="lv_api_map_v8.h" line={142} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L142">
+
+### lv_disp_get_scr_prev
+
+```c
+#define lv_disp_get_scr_prev lv_display_get_screen_prev
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_load_scr" file="lv_api_map_v8.h" line={143} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L143">
+
+### lv_disp_load_scr
+
+```c
+#define lv_disp_load_scr lv_screen_load
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_scr_load" file="lv_api_map_v8.h" line={144} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L144">
+
+### lv_scr_load
+
+```c
+#define lv_scr_load lv_screen_load
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_scr_load_anim" file="lv_api_map_v8.h" line={145} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L145">
+
+### lv_scr_load_anim
+
+```c
+#define lv_scr_load_anim lv_screen_load_anim
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_layer_top" file="lv_api_map_v8.h" line={146} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L146">
+
+### lv_disp_get_layer_top
+
+```c
+#define lv_disp_get_layer_top lv_display_get_layer_top
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_layer_sys" file="lv_api_map_v8.h" line={147} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L147">
+
+### lv_disp_get_layer_sys
+
+```c
+#define lv_disp_get_layer_sys lv_display_get_layer_sys
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_send_event" file="lv_api_map_v8.h" line={148} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L148">
+
+### lv_disp_send_event
+
+```c
+#define lv_disp_send_event lv_display_send_event
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_set_theme" file="lv_api_map_v8.h" line={149} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L149">
+
+### lv_disp_set_theme
+
+```c
+#define lv_disp_set_theme lv_display_set_theme
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_theme" file="lv_api_map_v8.h" line={150} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L150">
+
+### lv_disp_get_theme
+
+```c
+#define lv_disp_get_theme lv_display_get_theme
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_inactive_time" file="lv_api_map_v8.h" line={151} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L151">
+
+### lv_disp_get_inactive_time
+
+```c
+#define lv_disp_get_inactive_time lv_display_get_inactive_time
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_trig_activity" file="lv_api_map_v8.h" line={152} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L152">
+
+### lv_disp_trig_activity
+
+```c
+#define lv_disp_trig_activity lv_display_trigger_activity
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_enable_invalidation" file="lv_api_map_v8.h" line={153} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L153">
+
+### lv_disp_enable_invalidation
+
+```c
+#define lv_disp_enable_invalidation lv_display_enable_invalidation
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_is_invalidation_enabled" file="lv_api_map_v8.h" line={154} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L154">
+
+### lv_disp_is_invalidation_enabled
+
+```c
+#define lv_disp_is_invalidation_enabled lv_display_is_invalidation_enabled
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_refr_timer" file="lv_api_map_v8.h" line={155} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L155">
+
+### lv_disp_refr_timer
+
+```c
+#define lv_disp_refr_timer lv_display_refr_timer
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_disp_get_refr_timer" file="lv_api_map_v8.h" line={156} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L156">
+
+### lv_disp_get_refr_timer
+
+```c
+#define lv_disp_get_refr_timer lv_display_get_refr_timer
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_timer_del" file="lv_api_map_v8.h" line={158} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L158">
+
+### lv_timer_del
+
+```c
+#define lv_timer_del lv_timer_delete
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_anim_del" file="lv_api_map_v8.h" line={160} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L160">
+
+### lv_anim_del
+
+```c
+#define lv_anim_del lv_anim_delete
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_anim_del_all" file="lv_api_map_v8.h" line={161} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L161">
+
+### lv_anim_del_all
+
+```c
+#define lv_anim_del_all lv_anim_delete_all
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_anim_set_ready_cb" file="lv_api_map_v8.h" line={162} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L162">
+
+### lv_anim_set_ready_cb
+
+```c
+#define lv_anim_set_ready_cb lv_anim_set_completed_cb
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_group_del" file="lv_api_map_v8.h" line={164} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L164">
+
+### lv_group_del
+
+```c
+#define lv_group_del lv_group_delete
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_txt_get_size" file="lv_api_map_v8.h" line={167} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L167">
+
+### lv_txt_get_size
+
+```c
+#define lv_txt_get_size lv_text_get_size
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_txt_get_width" file="lv_api_map_v8.h" line={168} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L168">
+
+### lv_txt_get_width
+
+```c
+#define lv_txt_get_width lv_text_get_width
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_create" file="lv_api_map_v8.h" line={172} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L172">
+
+### lv_img_create
+
+```c
+#define lv_img_create lv_image_create
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_set_src" file="lv_api_map_v8.h" line={173} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L173">
+
+### lv_img_set_src
+
+```c
+#define lv_img_set_src lv_image_set_src
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_set_offset_x" file="lv_api_map_v8.h" line={174} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L174">
+
+### lv_img_set_offset_x
+
+```c
+#define lv_img_set_offset_x lv_image_set_offset_x
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_set_offset_y" file="lv_api_map_v8.h" line={175} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L175">
+
+### lv_img_set_offset_y
+
+```c
+#define lv_img_set_offset_y lv_image_set_offset_y
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_set_angle" file="lv_api_map_v8.h" line={176} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L176">
+
+### lv_img_set_angle
+
+```c
+#define lv_img_set_angle lv_image_set_rotation
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_set_pivot" file="lv_api_map_v8.h" line={177} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L177">
+
+### lv_img_set_pivot
+
+```c
+#define lv_img_set_pivot lv_image_set_pivot
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_set_zoom" file="lv_api_map_v8.h" line={178} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L178">
+
+### lv_img_set_zoom
+
+```c
+#define lv_img_set_zoom lv_image_set_scale
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_set_antialias" file="lv_api_map_v8.h" line={179} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L179">
+
+### lv_img_set_antialias
+
+```c
+#define lv_img_set_antialias lv_image_set_antialias
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_get_src" file="lv_api_map_v8.h" line={180} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L180">
+
+### lv_img_get_src
+
+```c
+#define lv_img_get_src lv_image_get_src
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_get_offset_x" file="lv_api_map_v8.h" line={181} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L181">
+
+### lv_img_get_offset_x
+
+```c
+#define lv_img_get_offset_x lv_image_get_offset_x
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_get_offset_y" file="lv_api_map_v8.h" line={182} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L182">
+
+### lv_img_get_offset_y
+
+```c
+#define lv_img_get_offset_y lv_image_get_offset_y
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_get_angle" file="lv_api_map_v8.h" line={183} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L183">
+
+### lv_img_get_angle
+
+```c
+#define lv_img_get_angle lv_image_get_rotation
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_get_pivot" file="lv_api_map_v8.h" line={184} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L184">
+
+### lv_img_get_pivot
+
+```c
+#define lv_img_get_pivot lv_image_get_pivot
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_get_zoom" file="lv_api_map_v8.h" line={185} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L185">
+
+### lv_img_get_zoom
+
+```c
+#define lv_img_get_zoom lv_image_get_scale
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_img_get_antialias" file="lv_api_map_v8.h" line={186} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L186">
+
+### lv_img_get_antialias
+
+```c
+#define lv_img_get_antialias lv_image_get_antialias
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_imgbtn_create" file="lv_api_map_v8.h" line={190} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L190">
+
+### lv_imgbtn_create
+
+```c
+#define lv_imgbtn_create lv_imagebutton_create
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_imgbtn_set_src" file="lv_api_map_v8.h" line={191} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L191">
+
+### lv_imgbtn_set_src
+
+```c
+#define lv_imgbtn_set_src lv_imagebutton_set_src
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_imgbtn_set_state" file="lv_api_map_v8.h" line={192} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L192">
+
+### lv_imgbtn_set_state
+
+```c
+#define lv_imgbtn_set_state lv_imagebutton_set_state
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_imgbtn_get_src_left" file="lv_api_map_v8.h" line={193} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L193">
+
+### lv_imgbtn_get_src_left
+
+```c
+#define lv_imgbtn_get_src_left lv_imagebutton_get_src_left
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_imgbtn_get_src_middle" file="lv_api_map_v8.h" line={194} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L194">
+
+### lv_imgbtn_get_src_middle
+
+```c
+#define lv_imgbtn_get_src_middle lv_imagebutton_get_src_middle
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_imgbtn_get_src_right" file="lv_api_map_v8.h" line={195} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L195">
+
+### lv_imgbtn_get_src_right
+
+```c
+#define lv_imgbtn_get_src_right lv_imagebutton_get_src_right
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_list_set_btn_text" file="lv_api_map_v8.h" line={199} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L199">
+
+### lv_list_set_btn_text
+
+```c
+#define lv_list_set_btn_text lv_list_set_button_text
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_list_get_btn_text" file="lv_api_map_v8.h" line={200} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L200">
+
+### lv_list_get_btn_text
+
+```c
+#define lv_list_get_btn_text lv_list_get_button_text
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_list_add_btn" file="lv_api_map_v8.h" line={201} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L201">
+
+### lv_list_add_btn
+
+```c
+#define lv_list_add_btn lv_list_add_button
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btn_create" file="lv_api_map_v8.h" line={205} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L205">
+
+### lv_btn_create
+
+```c
+#define lv_btn_create lv_button_create
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_create" file="lv_api_map_v8.h" line={209} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L209">
+
+### lv_btnmatrix_create
+
+```c
+#define lv_btnmatrix_create lv_buttonmatrix_create
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_set_map" file="lv_api_map_v8.h" line={210} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L210">
+
+### lv_btnmatrix_set_map
+
+```c
+#define lv_btnmatrix_set_map lv_buttonmatrix_set_map
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_set_ctrl_map" file="lv_api_map_v8.h" line={211} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L211">
+
+### lv_btnmatrix_set_ctrl_map
+
+```c
+#define lv_btnmatrix_set_ctrl_map lv_buttonmatrix_set_ctrl_map
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_set_selected_btn" file="lv_api_map_v8.h" line={212} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L212">
+
+### lv_btnmatrix_set_selected_btn
+
+```c
+#define lv_btnmatrix_set_selected_btn lv_buttonmatrix_set_selected_button
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_set_btn_ctrl" file="lv_api_map_v8.h" line={213} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L213">
+
+### lv_btnmatrix_set_btn_ctrl
+
+```c
+#define lv_btnmatrix_set_btn_ctrl lv_buttonmatrix_set_button_ctrl
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_clear_btn_ctrl" file="lv_api_map_v8.h" line={214} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L214">
+
+### lv_btnmatrix_clear_btn_ctrl
+
+```c
+#define lv_btnmatrix_clear_btn_ctrl lv_buttonmatrix_clear_button_ctrl
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_set_btn_ctrl_all" file="lv_api_map_v8.h" line={215} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L215">
+
+### lv_btnmatrix_set_btn_ctrl_all
+
+```c
+#define lv_btnmatrix_set_btn_ctrl_all lv_buttonmatrix_set_button_ctrl_all
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_clear_btn_ctrl_all" file="lv_api_map_v8.h" line={216} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L216">
+
+### lv_btnmatrix_clear_btn_ctrl_all
+
+```c
+#define lv_btnmatrix_clear_btn_ctrl_all lv_buttonmatrix_clear_button_ctrl_all
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_set_btn_width" file="lv_api_map_v8.h" line={217} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L217">
+
+### lv_btnmatrix_set_btn_width
+
+```c
+#define lv_btnmatrix_set_btn_width lv_buttonmatrix_set_button_width
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_set_one_checked" file="lv_api_map_v8.h" line={218} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L218">
+
+### lv_btnmatrix_set_one_checked
+
+```c
+#define lv_btnmatrix_set_one_checked lv_buttonmatrix_set_one_checked
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_get_map" file="lv_api_map_v8.h" line={219} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L219">
+
+### lv_btnmatrix_get_map
+
+```c
+#define lv_btnmatrix_get_map lv_buttonmatrix_get_map
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_get_selected_btn" file="lv_api_map_v8.h" line={220} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L220">
+
+### lv_btnmatrix_get_selected_btn
+
+```c
+#define lv_btnmatrix_get_selected_btn lv_buttonmatrix_get_selected_button
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_get_btn_text" file="lv_api_map_v8.h" line={221} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L221">
+
+### lv_btnmatrix_get_btn_text
+
+```c
+#define lv_btnmatrix_get_btn_text lv_buttonmatrix_get_button_text
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_has_button_ctrl" file="lv_api_map_v8.h" line={222} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L222">
+
+### lv_btnmatrix_has_button_ctrl
+
+```c
+#define lv_btnmatrix_has_button_ctrl lv_buttonmatrix_has_button_ctrl
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_btnmatrix_get_one_checked" file="lv_api_map_v8.h" line={223} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L223">
+
+### lv_btnmatrix_get_one_checked
+
+```c
+#define lv_btnmatrix_get_one_checked lv_buttonmatrix_get_one_checked
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_tabview_get_tab_btns" file="lv_api_map_v8.h" line={227} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L227">
+
+### lv_tabview_get_tab_btns
+
+```c
+#define lv_tabview_get_tab_btns lv_tabview_get_tab_bar
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_tabview_get_tab_act" file="lv_api_map_v8.h" line={228} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L228">
+
+### lv_tabview_get_tab_act
+
+```c
+#define lv_tabview_get_tab_act lv_tabview_get_tab_active
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_tabview_set_act" file="lv_api_map_v8.h" line={229} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L229">
+
+### lv_tabview_set_act
+
+```c
+#define lv_tabview_set_act lv_tabview_set_active
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_tileview_get_tile_act" file="lv_api_map_v8.h" line={233} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L233">
+
+### lv_tileview_get_tile_act
+
+```c
+#define lv_tileview_get_tile_act lv_tileview_get_tile_active
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_tile_id" file="lv_api_map_v8.h" line={234} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L234">
+
+### lv_obj_set_tile_id
+
+```c
+#define lv_obj_set_tile_id lv_tileview_set_tile_by_index
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_tile" file="lv_api_map_v8.h" line={235} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L235">
+
+### lv_obj_set_tile
+
+```c
+#define lv_obj_set_tile lv_tileview_set_tile
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_roller_set_visible_row_cnt" file="lv_api_map_v8.h" line={239} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L239">
+
+### lv_roller_set_visible_row_cnt
+
+```c
+#define lv_roller_set_visible_row_cnt lv_roller_set_visible_row_count
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_roller_get_option_cnt" file="lv_api_map_v8.h" line={240} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L240">
+
+### lv_roller_get_option_cnt
+
+```c
+#define lv_roller_get_option_cnt lv_roller_get_option_count
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_table_set_col_cnt" file="lv_api_map_v8.h" line={244} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L244">
+
+### lv_table_set_col_cnt
+
+```c
+#define lv_table_set_col_cnt lv_table_set_column_count
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_table_set_row_cnt" file="lv_api_map_v8.h" line={245} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L245">
+
+### lv_table_set_row_cnt
+
+```c
+#define lv_table_set_row_cnt lv_table_set_row_count
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_table_get_col_cnt" file="lv_api_map_v8.h" line={246} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L246">
+
+### lv_table_get_col_cnt
+
+```c
+#define lv_table_get_col_cnt lv_table_get_column_count
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_table_get_row_cnt" file="lv_api_map_v8.h" line={247} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L247">
+
+### lv_table_get_row_cnt
+
+```c
+#define lv_table_get_row_cnt lv_table_get_row_count
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_table_set_col_width" file="lv_api_map_v8.h" line={248} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L248">
+
+### lv_table_set_col_width
+
+```c
+#define lv_table_set_col_width lv_table_set_column_width
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_table_get_col_width" file="lv_api_map_v8.h" line={249} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L249">
+
+### lv_table_get_col_width
+
+```c
+#define lv_table_get_col_width lv_table_get_column_width
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_dropdown_get_option_cnt" file="lv_api_map_v8.h" line={253} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L253">
+
+### lv_dropdown_get_option_cnt
+
+```c
+#define lv_dropdown_get_option_cnt lv_dropdown_get_option_count
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_child_cnt" file="lv_api_map_v8.h" line={256} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L256">
+
+### lv_obj_get_child_cnt
+
+```c
+#define lv_obj_get_child_cnt lv_obj_get_child_count
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_disp" file="lv_api_map_v8.h" line={257} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L257">
+
+### lv_obj_get_disp
+
+```c
+#define lv_obj_get_disp lv_obj_get_display
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_delete_anim_ready_cb" file="lv_api_map_v8.h" line={258} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L258">
+
+### lv_obj_delete_anim_ready_cb
+
+```c
+#define lv_obj_delete_anim_ready_cb lv_obj_delete_anim_completed_cb
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_STYLE_ANIM_TIME" file="lv_api_map_v8.h" line={260} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L260">
+
+### LV_STYLE_ANIM_TIME
+
+```c
+#define LV_STYLE_ANIM_TIME LV_STYLE_ANIM_DURATION
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_STYLE_IMG_OPA" file="lv_api_map_v8.h" line={261} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L261">
+
+### LV_STYLE_IMG_OPA
+
+```c
+#define LV_STYLE_IMG_OPA LV_STYLE_IMAGE_OPA
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_STYLE_IMG_RECOLOR" file="lv_api_map_v8.h" line={262} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L262">
+
+### LV_STYLE_IMG_RECOLOR
+
+```c
+#define LV_STYLE_IMG_RECOLOR LV_STYLE_IMAGE_RECOLOR
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_STYLE_IMG_RECOLOR_OPA" file="lv_api_map_v8.h" line={263} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L263">
+
+### LV_STYLE_IMG_RECOLOR_OPA
+
+```c
+#define LV_STYLE_IMG_RECOLOR_OPA LV_STYLE_IMAGE_RECOLOR_OPA
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_STYLE_SHADOW_OFS_X" file="lv_api_map_v8.h" line={264} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L264">
+
+### LV_STYLE_SHADOW_OFS_X
+
+```c
+#define LV_STYLE_SHADOW_OFS_X LV_STYLE_SHADOW_OFFSET_X
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_STYLE_SHADOW_OFS_Y" file="lv_api_map_v8.h" line={265} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L265">
+
+### LV_STYLE_SHADOW_OFS_Y
+
+```c
+#define LV_STYLE_SHADOW_OFS_Y LV_STYLE_SHADOW_OFFSET_Y
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_STYLE_TRANSFORM_ANGLE" file="lv_api_map_v8.h" line={266} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L266">
+
+### LV_STYLE_TRANSFORM_ANGLE
+
+```c
+#define LV_STYLE_TRANSFORM_ANGLE LV_STYLE_TRANSFORM_ROTATION
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_style_anim_time" file="lv_api_map_v8.h" line={268} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L268">
+
+### lv_obj_get_style_anim_time
+
+```c
+#define lv_obj_get_style_anim_time lv_obj_get_style_anim_duration
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_style_img_opa" file="lv_api_map_v8.h" line={269} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L269">
+
+### lv_obj_get_style_img_opa
+
+```c
+#define lv_obj_get_style_img_opa lv_obj_get_style_image_opa
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_style_img_recolor" file="lv_api_map_v8.h" line={270} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L270">
+
+### lv_obj_get_style_img_recolor
+
+```c
+#define lv_obj_get_style_img_recolor lv_obj_get_style_image_recolor
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_style_img_recolor_filtered" file="lv_api_map_v8.h" line={271} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L271">
+
+### lv_obj_get_style_img_recolor_filtered
+
+```c
+#define lv_obj_get_style_img_recolor_filtered lv_obj_get_style_image_recolor_filtered
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_style_img_recolor_opa" file="lv_api_map_v8.h" line={272} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L272">
+
+### lv_obj_get_style_img_recolor_opa
+
+```c
+#define lv_obj_get_style_img_recolor_opa lv_obj_get_style_image_recolor_opa
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_style_shadow_ofs_x" file="lv_api_map_v8.h" line={273} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L273">
+
+### lv_obj_get_style_shadow_ofs_x
+
+```c
+#define lv_obj_get_style_shadow_ofs_x lv_obj_get_style_shadow_offset_x
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_style_shadow_ofs_y" file="lv_api_map_v8.h" line={274} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L274">
+
+### lv_obj_get_style_shadow_ofs_y
+
+```c
+#define lv_obj_get_style_shadow_ofs_y lv_obj_get_style_shadow_offset_y
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_style_transform_angle" file="lv_api_map_v8.h" line={275} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L275">
+
+### lv_obj_get_style_transform_angle
+
+```c
+#define lv_obj_get_style_transform_angle lv_obj_get_style_transform_rotation
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_style_bg_img_src" file="lv_api_map_v8.h" line={276} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L276">
+
+### lv_obj_get_style_bg_img_src
+
+```c
+#define lv_obj_get_style_bg_img_src lv_obj_get_style_bg_image_src
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_style_bg_img_recolor" file="lv_api_map_v8.h" line={277} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L277">
+
+### lv_obj_get_style_bg_img_recolor
+
+```c
+#define lv_obj_get_style_bg_img_recolor lv_obj_get_style_bg_image_recolor
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_get_style_bg_img_recolor_opa" file="lv_api_map_v8.h" line={278} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L278">
+
+### lv_obj_get_style_bg_img_recolor_opa
+
+```c
+#define lv_obj_get_style_bg_img_recolor_opa lv_obj_get_style_bg_image_recolor_opa
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_style_anim_time" file="lv_api_map_v8.h" line={280} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L280">
+
+### lv_obj_set_style_anim_time
+
+```c
+#define lv_obj_set_style_anim_time lv_obj_set_style_anim_duration
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_style_img_opa" file="lv_api_map_v8.h" line={281} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L281">
+
+### lv_obj_set_style_img_opa
+
+```c
+#define lv_obj_set_style_img_opa lv_obj_set_style_image_opa
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_style_img_recolor" file="lv_api_map_v8.h" line={282} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L282">
+
+### lv_obj_set_style_img_recolor
+
+```c
+#define lv_obj_set_style_img_recolor lv_obj_set_style_image_recolor
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_style_img_recolor_opa" file="lv_api_map_v8.h" line={283} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L283">
+
+### lv_obj_set_style_img_recolor_opa
+
+```c
+#define lv_obj_set_style_img_recolor_opa lv_obj_set_style_image_recolor_opa
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_style_shadow_ofs_x" file="lv_api_map_v8.h" line={284} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L284">
+
+### lv_obj_set_style_shadow_ofs_x
+
+```c
+#define lv_obj_set_style_shadow_ofs_x lv_obj_set_style_shadow_offset_x
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_style_shadow_ofs_y" file="lv_api_map_v8.h" line={285} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L285">
+
+### lv_obj_set_style_shadow_ofs_y
+
+```c
+#define lv_obj_set_style_shadow_ofs_y lv_obj_set_style_shadow_offset_y
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_style_transform_zoom" file="lv_api_map_v8.h" line={286} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L286">
+
+### lv_obj_set_style_transform_zoom
+
+```c
+#define lv_obj_set_style_transform_zoom lv_obj_set_style_transform_scale
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_style_transform_angle" file="lv_api_map_v8.h" line={287} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L287">
+
+### lv_obj_set_style_transform_angle
+
+```c
+#define lv_obj_set_style_transform_angle lv_obj_set_style_transform_rotation
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_style_bg_img_src" file="lv_api_map_v8.h" line={288} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L288">
+
+### lv_obj_set_style_bg_img_src
+
+```c
+#define lv_obj_set_style_bg_img_src lv_obj_set_style_bg_image_src
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_style_bg_img_recolor" file="lv_api_map_v8.h" line={289} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L289">
+
+### lv_obj_set_style_bg_img_recolor
+
+```c
+#define lv_obj_set_style_bg_img_recolor lv_obj_set_style_bg_image_recolor
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_obj_set_style_bg_img_recolor_opa" file="lv_api_map_v8.h" line={290} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L290">
+
+### lv_obj_set_style_bg_img_recolor_opa
+
+```c
+#define lv_obj_set_style_bg_img_recolor_opa lv_obj_set_style_bg_image_recolor_opa
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_style_set_anim_time" file="lv_api_map_v8.h" line={292} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L292">
+
+### lv_style_set_anim_time
+
+```c
+#define lv_style_set_anim_time lv_style_set_anim_duration
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_style_set_img_opa" file="lv_api_map_v8.h" line={293} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L293">
+
+### lv_style_set_img_opa
+
+```c
+#define lv_style_set_img_opa lv_style_set_image_opa
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_style_set_img_recolor" file="lv_api_map_v8.h" line={294} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L294">
+
+### lv_style_set_img_recolor
+
+```c
+#define lv_style_set_img_recolor lv_style_set_image_recolor
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_style_set_img_recolor_opa" file="lv_api_map_v8.h" line={295} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L295">
+
+### lv_style_set_img_recolor_opa
+
+```c
+#define lv_style_set_img_recolor_opa lv_style_set_image_recolor_opa
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_style_set_shadow_ofs_x" file="lv_api_map_v8.h" line={296} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L296">
+
+### lv_style_set_shadow_ofs_x
+
+```c
+#define lv_style_set_shadow_ofs_x lv_style_set_shadow_offset_x
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_style_set_shadow_ofs_y" file="lv_api_map_v8.h" line={297} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L297">
+
+### lv_style_set_shadow_ofs_y
+
+```c
+#define lv_style_set_shadow_ofs_y lv_style_set_shadow_offset_y
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_style_set_transform_angle" file="lv_api_map_v8.h" line={298} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L298">
+
+### lv_style_set_transform_angle
+
+```c
+#define lv_style_set_transform_angle lv_style_set_transform_rotation
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_style_set_transform_zoom" file="lv_api_map_v8.h" line={299} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L299">
+
+### lv_style_set_transform_zoom
+
+```c
+#define lv_style_set_transform_zoom lv_style_set_transform_scale
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_style_set_bg_img_src" file="lv_api_map_v8.h" line={300} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L300">
+
+### lv_style_set_bg_img_src
+
+```c
+#define lv_style_set_bg_img_src lv_style_set_bg_image_src
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_style_set_bg_img_recolor" file="lv_api_map_v8.h" line={301} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L301">
+
+### lv_style_set_bg_img_recolor
+
+```c
+#define lv_style_set_bg_img_recolor lv_style_set_bg_image_recolor
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_style_set_bg_img_recolor_opa" file="lv_api_map_v8.h" line={302} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L302">
+
+### lv_style_set_bg_img_recolor_opa
+
+```c
+#define lv_style_set_bg_img_recolor_opa lv_style_set_bg_image_recolor_opa
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_keyboard_get_selected_btn" file="lv_api_map_v8.h" line={305} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L305">
+
+### lv_keyboard_get_selected_btn
+
+```c
+#define lv_keyboard_get_selected_btn lv_keyboard_get_selected_button
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_keyboard_get_btn_text" file="lv_api_map_v8.h" line={306} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L306">
+
+### lv_keyboard_get_btn_text
+
+```c
+#define lv_keyboard_get_btn_text lv_keyboard_get_button_text
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ZOOM_NONE" file="lv_api_map_v8.h" line={309} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L309">
+
+### LV_ZOOM_NONE
+
+```c
+#define LV_ZOOM_NONE LV_SCALE_NONE
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_image_decoder_built_in_open" file="lv_api_map_v8.h" line={311} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L311">
+
+### lv_image_decoder_built_in_open
+
+```c
+#define lv_image_decoder_built_in_open lv_bin_decoder_open
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_image_decoder_built_in_close" file="lv_api_map_v8.h" line={312} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L312">
+
+### lv_image_decoder_built_in_close
+
+```c
+#define lv_image_decoder_built_in_close lv_bin_decoder_close
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_IMG_DECLARE" file="lv_api_map_v8.h" line={318} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v8.h#L318">
+
+### LV_IMG_DECLARE
+
+```c
+#define LV_IMG_DECLARE(var_name) \
+    extern const lv_image_dsc_t var_name;
+```
+
+Use this macro to declare an image in a C file
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h"]}
+/>

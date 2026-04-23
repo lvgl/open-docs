@@ -1,0 +1,475 @@
+---
+title: lv_table.h
+description: API reference for lv_table.h
+api:
+  functions: [lv_table_create, lv_table_set_cell_value, lv_table_set_cell_value_fmt, lv_table_set_row_count, lv_table_set_column_count, lv_table_set_column_width, lv_table_set_cell_ctrl, lv_table_clear_cell_ctrl, lv_table_set_cell_user_data, lv_table_set_selected_cell, lv_table_get_cell_value, lv_table_get_row_count, lv_table_get_column_count, lv_table_get_column_width, lv_table_has_cell_ctrl, lv_table_get_selected_cell, lv_table_get_cell_user_data]
+  enums: [lv_table_cell_ctrl_t, _lv_property_table_id_t]
+  macros: [LV_TABLE_CELL_NONE]
+  variables: [lv_table_class]
+---
+
+<RelatedHeaders name="lv_table_private.h" isPrivate={false} />
+
+<ApiSummary functions={17} enums={2} macros={1} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (8)","Getters (6)","Other (3)"]}>
+<ApiTab value="Setters (8)">
+
+<ApiMember kind="function" name="lv_table_set_cell_value" file="widgets/table/lv_table.h" line={80} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L80">
+
+### lv_table_set_cell_value
+
+Set the value of a cell.
+
+```c
+void lv_table_set_cell_value(lv_obj_t *obj, uint32_t row, uint32_t col, const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Table object |
+| `row` | <ApiLink name="uint32_t" /> | id of the row [0 .. row_cnt -1] |
+| `col` | <ApiLink name="uint32_t" /> | id of the column [0 .. col_cnt -1] |
+| `txt` | `const char *` | text to display in the cell. It will be copied and saved so this variable is not required after this function call. |
+
+<Callout type="info">
+New roes/columns are added automatically if required
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_set_cell_value_fmt" file="widgets/table/lv_table.h" line={90} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L90">
+
+### lv_table_set_cell_value_fmt
+
+Set the value of a cell. Memory will be allocated to store the text by the table.
+
+```c
+void lv_table_set_cell_value_fmt(lv_obj_t *obj, uint32_t row, uint32_t col, const char *fmt,...)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Table object |
+| `row` | <ApiLink name="uint32_t" /> | id of the row [0 .. row_cnt -1] |
+| `col` | <ApiLink name="uint32_t" /> | id of the column [0 .. col_cnt -1] |
+| `fmt` | `const char *` | `printf`-like format |
+| `...` | |  |
+
+<Callout type="info">
+New roes/columns are added automatically if required
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_set_row_count" file="widgets/table/lv_table.h" line={98} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L98">
+
+### lv_table_set_row_count
+
+Set the number of rows
+
+```c
+void lv_table_set_row_count(lv_obj_t *obj, uint32_t row_cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | table pointer to a Table object |
+| `row_cnt` | <ApiLink name="uint32_t" /> | number of rows |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_set_column_count" file="widgets/table/lv_table.h" line={105} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L105">
+
+### lv_table_set_column_count
+
+Set the number of columns
+
+```c
+void lv_table_set_column_count(lv_obj_t *obj, uint32_t col_cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | table pointer to a Table object |
+| `col_cnt` | <ApiLink name="uint32_t" /> | number of columns. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_set_column_width" file="widgets/table/lv_table.h" line={113} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L113">
+
+### lv_table_set_column_width
+
+Set the width of a column
+
+```c
+void lv_table_set_column_width(lv_obj_t *obj, uint32_t col_id, int32_t w)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | table pointer to a Table object |
+| `col_id` | <ApiLink name="uint32_t" /> | id of the column [0 .. LV_TABLE_COL_MAX -1] |
+| `w` | <ApiLink name="int32_t" /> | width of the column |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_set_cell_ctrl" file="widgets/table/lv_table.h" line={122} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L122">
+
+### lv_table_set_cell_ctrl
+
+Add control bits to the cell.
+
+```c
+void lv_table_set_cell_ctrl(lv_obj_t *obj, uint32_t row, uint32_t col, lv_table_cell_ctrl_t ctrl)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Table object |
+| `row` | <ApiLink name="uint32_t" /> | id of the row [0 .. row_cnt -1] |
+| `col` | <ApiLink name="uint32_t" /> | id of the column [0 .. col_cnt -1] |
+| `ctrl` | <ApiLink name="lv_table_cell_ctrl_t" /> | OR-ed values from <ApiLink name="lv_table_cell_ctrl_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_set_cell_user_data" file="widgets/table/lv_table.h" line={143} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L143">
+
+### lv_table_set_cell_user_data
+
+Add custom user data to the cell.
+
+```c
+void lv_table_set_cell_user_data(lv_obj_t *obj, uint16_t row, uint16_t col, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Table object |
+| `row` | <ApiLink name="uint16_t" /> | id of the row [0 .. row_cnt -1] |
+| `col` | <ApiLink name="uint16_t" /> | id of the column [0 .. col_cnt -1] |
+| `user_data` | `void *` | pointer to the new user_data. Should be allocated by `lv_malloc`, and it will be freed automatically when the table is deleted or when the cell is dropped due to lower row or column count. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_set_selected_cell" file="widgets/table/lv_table.h" line={151} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L151">
+
+### lv_table_set_selected_cell
+
+Set the selected cell
+
+```c
+void lv_table_set_selected_cell(lv_obj_t *obj, uint16_t row, uint16_t col)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a table object |
+| `row` | <ApiLink name="uint16_t" /> | id of the cell row to select |
+| `col` | <ApiLink name="uint16_t" /> | id of the cell column to select |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (6)">
+
+<ApiMember kind="function" name="lv_table_get_cell_value" file="widgets/table/lv_table.h" line={164} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L164">
+
+### lv_table_get_cell_value
+
+Get the value of a cell.
+
+```c
+const char * lv_table_get_cell_value(lv_obj_t *obj, uint32_t row, uint32_t col)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Table object |
+| `row` | <ApiLink name="uint32_t" /> | id of the row [0 .. row_cnt -1] |
+| `col` | <ApiLink name="uint32_t" /> | id of the column [0 .. col_cnt -1] |
+
+**Returns:** `const char *` — text in the cell
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_get_row_count" file="widgets/table/lv_table.h" line={171} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L171">
+
+### lv_table_get_row_count
+
+Get the number of rows.
+
+```c
+uint32_t lv_table_get_row_count(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | table pointer to a Table object |
+
+**Returns:** <ApiLink name="uint32_t" /> — number of rows.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_get_column_count" file="widgets/table/lv_table.h" line={178} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L178">
+
+### lv_table_get_column_count
+
+Get the number of columns.
+
+```c
+uint32_t lv_table_get_column_count(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | table pointer to a Table object |
+
+**Returns:** <ApiLink name="uint32_t" /> — number of columns.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_get_column_width" file="widgets/table/lv_table.h" line={186} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L186">
+
+### lv_table_get_column_width
+
+Get the width of a column
+
+```c
+int32_t lv_table_get_column_width(lv_obj_t *obj, uint32_t col)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | table pointer to a Table object |
+| `col` | <ApiLink name="uint32_t" /> | id of the column [0 .. LV_TABLE_COL_MAX -1] |
+
+**Returns:** <ApiLink name="int32_t" /> — width of the column
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_get_selected_cell" file="widgets/table/lv_table.h" line={204} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L204">
+
+### lv_table_get_selected_cell
+
+Get the selected cell (pressed and or focused)
+
+```c
+void lv_table_get_selected_cell(lv_obj_t *obj, uint32_t *row, uint32_t *col)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a table object |
+| `row` | <ApiLink name="uint32_t" display="uint32_t *" /> | pointer to variable to store the selected row (LV_TABLE_CELL_NONE: if no cell selected) |
+| `col` | <ApiLink name="uint32_t" display="uint32_t *" /> | pointer to variable to store the selected column (LV_TABLE_CELL_NONE: if no cell selected) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_get_cell_user_data" file="widgets/table/lv_table.h" line={212} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L212">
+
+### lv_table_get_cell_user_data
+
+Get custom user data to the cell.
+
+```c
+void * lv_table_get_cell_user_data(lv_obj_t *obj, uint16_t row, uint16_t col)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Table object |
+| `row` | <ApiLink name="uint16_t" /> | id of the row [0 .. row_cnt -1] |
+| `col` | <ApiLink name="uint16_t" /> | id of the column [0 .. col_cnt -1] |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_table_create" file="widgets/table/lv_table.h" line={66} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L66">
+
+### lv_table_create
+
+Create a table object
+
+```c
+lv_obj_t * lv_table_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new table |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created table
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_clear_cell_ctrl" file="widgets/table/lv_table.h" line={131} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L131">
+
+### lv_table_clear_cell_ctrl
+
+Clear control bits of the cell.
+
+```c
+void lv_table_clear_cell_ctrl(lv_obj_t *obj, uint32_t row, uint32_t col, lv_table_cell_ctrl_t ctrl)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Table object |
+| `row` | <ApiLink name="uint32_t" /> | id of the row [0 .. row_cnt -1] |
+| `col` | <ApiLink name="uint32_t" /> | id of the column [0 .. col_cnt -1] |
+| `ctrl` | <ApiLink name="lv_table_cell_ctrl_t" /> | OR-ed values from <ApiLink name="lv_table_cell_ctrl_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_table_has_cell_ctrl" file="widgets/table/lv_table.h" line={196} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L196">
+
+### lv_table_has_cell_ctrl
+
+Get whether a cell has the control bits
+
+```c
+bool lv_table_has_cell_ctrl(lv_obj_t *obj, uint32_t row, uint32_t col, lv_table_cell_ctrl_t ctrl)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Table object |
+| `row` | <ApiLink name="uint32_t" /> | id of the row [0 .. row_cnt -1] |
+| `col` | <ApiLink name="uint32_t" /> | id of the column [0 .. col_cnt -1] |
+| `ctrl` | <ApiLink name="lv_table_cell_ctrl_t" /> | OR-ed values from <ApiLink name="lv_table_cell_ctrl_t" /> |
+
+**Returns:** <ApiLink name="bool" /> — true: all control bits are set; false: not all control bits are set
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_table_cell_ctrl_t" file="widgets/table/lv_table.h" line={37} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L37">
+
+### lv_table_cell_ctrl_t
+
+| Name | Value |
+|------|------|
+| `LV_TABLE_CELL_CTRL_NONE` | `0 << 0` |
+| `LV_TABLE_CELL_CTRL_MERGE_RIGHT` | `1 << 0` |
+| `LV_TABLE_CELL_CTRL_TEXT_CROP` | `1 << 1` |
+| `LV_TABLE_CELL_CTRL_CUSTOM_1` | `1 << 4` |
+| `LV_TABLE_CELL_CTRL_CUSTOM_2` | `1 << 5` |
+| `LV_TABLE_CELL_CTRL_CUSTOM_3` | `1 << 6` |
+| `LV_TABLE_CELL_CTRL_CUSTOM_4` | `1 << 7` |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_table_cell_ctrl_t" count={3}>
+
+- `lv_table_set_cell_ctrl` — param `ctrl`
+- `lv_table_clear_cell_ctrl` — param `ctrl`
+- `lv_table_has_cell_ctrl` — param `ctrl`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="_lv_property_table_id_t" file="widgets/table/lv_table.h" line={50} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L50">
+
+### _lv_property_table_id_t
+
+| Name | Value |
+|------|------|
+| `LV_PROPERTY_TABLE_ROW_COUNT` | `(LV_PROPERTY_TABLE_START + ((int) 0 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_TABLE_COLUMN_COUNT` | `(LV_PROPERTY_TABLE_START + ((int) 1 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_TABLE_END` |  |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_TABLE_CELL_NONE" file="widgets/table/lv_table.h" line={30} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L30">
+
+### LV_TABLE_CELL_NONE
+
+```c
+#define LV_TABLE_CELL_NONE 0XFFFF
+```
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_table_class" file="widgets/table/lv_table.h" line={47} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/table/lv_table.h#L47">
+
+### lv_table_class
+
+```c
+const lv_obj_class_t lv_table_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_label.h", "lv_obj_property.h"]}
+  includedBy={["lv_table_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

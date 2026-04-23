@@ -1,0 +1,86 @@
+---
+title: lv_vg_lite_bitmap_font_cache.h
+description: API reference for lv_vg_lite_bitmap_font_cache.h
+api:
+  functions: [lv_vg_lite_bitmap_font_cache_init, lv_vg_lite_bitmap_font_cache_deinit, lv_vg_lite_bitmap_font_cache_get]
+---
+
+<ApiSummary functions={3} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (2)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_vg_lite_bitmap_font_cache_get" file="draw/vg_lite/lv_vg_lite_bitmap_font_cache.h" line={56} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/vg_lite/lv_vg_lite_bitmap_font_cache.h#L56">
+
+### lv_vg_lite_bitmap_font_cache_get
+
+Get the bitmap font cache entry for a given font and letter.
+
+```c
+lv_draw_buf_t * lv_vg_lite_bitmap_font_cache_get(struct _lv_draw_vg_lite_unit_t *unit, const lv_font_glyph_dsc_t *g_dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> | pointer to the VG-Lite draw unit |
+| `g_dsc` | <ApiLink name="lv_font_glyph_dsc_t" display="const lv_font_glyph_dsc_t *" /> | pointer to the glyph descriptor |
+
+**Returns:** <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> — pointer to the draw buffer containing the cached bitmap font glyph, or NULL if the glyph ID is 0 or if cache creation fails
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_vg_lite_bitmap_font_cache_init" file="draw/vg_lite/lv_vg_lite_bitmap_font_cache.h" line={42} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/vg_lite/lv_vg_lite_bitmap_font_cache.h#L42">
+
+### lv_vg_lite_bitmap_font_cache_init
+
+Initialize the bitmap font cache for VG-Lite draw unit.
+
+```c
+void lv_vg_lite_bitmap_font_cache_init(struct _lv_draw_vg_lite_unit_t *unit, uint32_t cache_cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> | pointer to the VG-Lite draw unit |
+| `cache_cnt` | <ApiLink name="uint32_t" /> | number of cache entries to allocate |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_bitmap_font_cache_deinit" file="draw/vg_lite/lv_vg_lite_bitmap_font_cache.h" line={48} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/vg_lite/lv_vg_lite_bitmap_font_cache.h#L48">
+
+### lv_vg_lite_bitmap_font_cache_deinit
+
+Deinitialize the bitmap font cache for VG-Lite draw unit.
+
+```c
+void lv_vg_lite_bitmap_font_cache_deinit(struct _lv_draw_vg_lite_unit_t *unit)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> | pointer to the VG-Lite draw unit |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_font.h"]}
+  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_image_dsc.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_symbol_def.h", "lv_types.h"]}
+/>

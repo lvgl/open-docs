@@ -1,0 +1,406 @@
+---
+title: lv_draw_rect.h
+description: API reference for lv_draw_rect.h
+api:
+  functions: [lv_draw_rect_dsc_init, lv_draw_fill_dsc_init, lv_draw_task_get_fill_dsc, lv_draw_fill, lv_draw_border_dsc_init, lv_draw_task_get_border_dsc, lv_draw_border, lv_draw_box_shadow_dsc_init, lv_draw_task_get_box_shadow_dsc, lv_draw_box_shadow, lv_draw_rect]
+  structs: [lv_draw_rect_dsc_t, lv_draw_fill_dsc_t, lv_draw_border_dsc_t, lv_draw_box_shadow_dsc_t]
+  macros: [LV_RADIUS_CIRCLE]
+---
+
+<RelatedHeaders name="lv_draw_rect_private.h" isPrivate={false} />
+
+<ApiSummary functions={11} structs={4} macros={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (3)","Other (8)"]}>
+<ApiTab value="Getters (3)">
+
+<ApiMember kind="function" name="lv_draw_task_get_fill_dsc" file="draw/lv_draw_rect.h" line={170} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L170">
+
+### lv_draw_task_get_fill_dsc
+
+Try to get a fill draw descriptor from a draw task.
+
+```c
+lv_draw_fill_dsc_t * lv_draw_task_get_fill_dsc(lv_draw_task_t *task)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `task` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
+
+**Returns:** <ApiLink name="lv_draw_fill_dsc_t" display="lv_draw_fill_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_FILL
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_task_get_border_dsc" file="draw/lv_draw_rect.h" line={191} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L191">
+
+### lv_draw_task_get_border_dsc
+
+Try to get a border draw descriptor from a draw task.
+
+```c
+lv_draw_border_dsc_t * lv_draw_task_get_border_dsc(lv_draw_task_t *task)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `task` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
+
+**Returns:** <ApiLink name="lv_draw_border_dsc_t" display="lv_draw_border_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_BORDER
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_task_get_box_shadow_dsc" file="draw/lv_draw_rect.h" line={212} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L212">
+
+### lv_draw_task_get_box_shadow_dsc
+
+Try to get a box shadow draw descriptor from a draw task.
+
+```c
+lv_draw_box_shadow_dsc_t * lv_draw_task_get_box_shadow_dsc(lv_draw_task_t *task)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `task` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
+
+**Returns:** <ApiLink name="lv_draw_box_shadow_dsc_t" display="lv_draw_box_shadow_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_BOX_SHADOW
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (8)">
+
+<ApiMember kind="function" name="lv_draw_rect_dsc_init" file="draw/lv_draw_rect.h" line={157} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L157">
+
+### lv_draw_rect_dsc_init
+
+Initialize a rectangle draw descriptor.
+
+```c
+void lv_draw_rect_dsc_init(lv_draw_rect_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_rect_dsc_t" display="lv_draw_rect_dsc_t *" /> | pointer to a draw descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_fill_dsc_init" file="draw/lv_draw_rect.h" line={163} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L163">
+
+### lv_draw_fill_dsc_init
+
+Initialize a fill draw descriptor.
+
+```c
+void lv_draw_fill_dsc_init(lv_draw_fill_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_fill_dsc_t" display="lv_draw_fill_dsc_t *" /> | pointer to a draw descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_fill" file="draw/lv_draw_rect.h" line={178} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L178">
+
+### lv_draw_fill
+
+Fill an area
+
+```c
+void lv_draw_fill(lv_layer_t *layer, const lv_draw_fill_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_fill_dsc_t" display="const lv_draw_fill_dsc_t *" /> | pointer to an initialized draw descriptor variable |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the rectangle |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_border_dsc_init" file="draw/lv_draw_rect.h" line={184} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L184">
+
+### lv_draw_border_dsc_init
+
+Initialize a border draw descriptor.
+
+```c
+void lv_draw_border_dsc_init(lv_draw_border_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_border_dsc_t" display="lv_draw_border_dsc_t *" /> | pointer to a draw descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_border" file="draw/lv_draw_rect.h" line={199} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L199">
+
+### lv_draw_border
+
+Draw a border
+
+```c
+void lv_draw_border(lv_layer_t *layer, const lv_draw_border_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_border_dsc_t" display="const lv_draw_border_dsc_t *" /> | pointer to an initialized draw descriptor variable |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the rectangle |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_box_shadow_dsc_init" file="draw/lv_draw_rect.h" line={205} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L205">
+
+### lv_draw_box_shadow_dsc_init
+
+Initialize a box shadow draw descriptor.
+
+```c
+void lv_draw_box_shadow_dsc_init(lv_draw_box_shadow_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_box_shadow_dsc_t" display="lv_draw_box_shadow_dsc_t *" /> | pointer to a draw descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_box_shadow" file="draw/lv_draw_rect.h" line={220} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L220">
+
+### lv_draw_box_shadow
+
+Draw a box shadow
+
+```c
+void lv_draw_box_shadow(lv_layer_t *layer, const lv_draw_box_shadow_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_box_shadow_dsc_t" display="const lv_draw_box_shadow_dsc_t *" /> | pointer to an initialized draw descriptor variable |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the rectangle |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_rect" file="draw/lv_draw_rect.h" line={229} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L229">
+
+### lv_draw_rect
+
+The rectangle is a wrapper for fill, border, bg. image and box shadow. Internally fill, border, image and box shadow draw tasks will be created.
+
+```c
+void lv_draw_rect(lv_layer_t *layer, const lv_draw_rect_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_rect_dsc_t" display="const lv_draw_rect_dsc_t *" /> | pointer to an initialized draw descriptor variable |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the rectangle |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_rect_dsc_t">
+
+### lv_draw_rect_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `radius` | <ApiLink name="int32_t" /> |  |
+| `bg_image_src` | `const void *` |  |
+| `bg_image_symbol_font` | `const void *` |  |
+| `bg_image_recolor` | <ApiLink name="lv_color_t" /> |  |
+| `bg_image_opa` | <ApiLink name="lv_opa_t" /> |  |
+| `bg_image_recolor_opa` | <ApiLink name="lv_opa_t" /> |  |
+| `bg_image_tiled` | <ApiLink name="uint8_t" /> |  |
+| `bg_opa` | <ApiLink name="lv_opa_t" /> |  |
+| `border_opa` | <ApiLink name="lv_opa_t" /> |  |
+| `outline_opa` | <ApiLink name="lv_opa_t" /> |  |
+| `shadow_opa` | <ApiLink name="lv_opa_t" /> |  |
+| `bg_color` | <ApiLink name="lv_color_t" /> | First element of a gradient is a color, so it maps well here |
+| `bg_grad` | <ApiLink name="lv_grad_dsc_t" /> |  |
+| `bg_image_colorkey` | <ApiLink name="lv_image_colorkey_t" display="const lv_image_colorkey_t *" /> |  |
+| `border_color` | <ApiLink name="lv_color_t" /> |  |
+| `border_width` | <ApiLink name="int32_t" /> |  |
+| `border_side` | <ApiLink name="lv_border_side_t" /> |  |
+| `border_post` | <ApiLink name="uint8_t" /> |  |
+| `outline_color` | <ApiLink name="lv_color_t" /> |  |
+| `outline_width` | <ApiLink name="int32_t" /> |  |
+| `outline_pad` | <ApiLink name="int32_t" /> |  |
+| `shadow_color` | <ApiLink name="lv_color_t" /> |  |
+| `shadow_width` | <ApiLink name="int32_t" /> |  |
+| `shadow_offset_x` | <ApiLink name="int32_t" /> |  |
+| `shadow_offset_y` | <ApiLink name="int32_t" /> |  |
+| `shadow_spread` | <ApiLink name="int32_t" /> |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_rect_dsc_t" count={3}>
+
+- `lv_obj_init_draw_rect_dsc` — param `draw_dsc`
+- `lv_draw_rect_dsc_init` — param `dsc`
+- `lv_draw_rect` — param `dsc`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_draw_fill_dsc_t">
+
+### lv_draw_fill_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `radius` | <ApiLink name="int32_t" /> | Radius, LV_RADIUS_CIRCLE for max. radius |
+| `opa` | <ApiLink name="lv_opa_t" /> | Opacity in 0...255 range. LV_OPA_TRANSP, LV_OPA_10, LV_OPA_20, .. LV_OPA_COVER can be used as well |
+| `color` | <ApiLink name="lv_color_t" /> | The color of the rectangle. If the gradient is set (grad.dir!=LV_GRAD_DIR_NONE) it's ignored. |
+| `grad` | <ApiLink name="lv_grad_dsc_t" /> | Describe a gradient. If `grad.dir` is not `LV_GRAD_DIR_NONE` `color` will be ignored |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_fill_dsc_t" count={10}>
+
+- `lv_draw_ppa_fill` — param `dsc`
+- `lv_draw_eve_fill` — param `dsc`
+- `lv_draw_fill_dsc_init` — param `dsc`
+- `lv_draw_fill` — param `dsc`
+- `lv_draw_nanovg_fill` — param `dsc`
+- `lv_draw_nema_gfx_fill` — param `dsc`
+- `lv_draw_dave2d_fill` — param `dsc`
+- `lv_draw_sdl_fill` — param `dsc`
+- `lv_draw_sw_fill` — param `dsc`
+- `lv_draw_vg_lite_fill` — param `dsc`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_draw_border_dsc_t">
+
+### lv_draw_border_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `radius` | <ApiLink name="int32_t" /> | Radius, LV_RADIUS_CIRCLE for max. radius |
+| `color` | <ApiLink name="lv_color_t" /> | The color of the border. |
+| `width` | <ApiLink name="int32_t" /> | The width of the border in pixels |
+| `opa` | <ApiLink name="lv_opa_t" /> | Opacity in 0...255 range. LV_OPA_TRANSP, LV_OPA_10, LV_OPA_20, .. LV_OPA_COVER can be used as well |
+| `side` | <ApiLink name="lv_border_side_t" /> | LV_BORDER_SIDE_NONE/LEFT/RIGHT/TOP/BOTTOM/FULL. LV_BORDER_SIDE_INTERNAL is an information for upper layers and shouldn't be used here. |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_border_dsc_t" count={9}>
+
+- `lv_draw_eve_border` — param `dsc`
+- `lv_draw_border_dsc_init` — param `dsc`
+- `lv_draw_border` — param `dsc`
+- `lv_draw_nanovg_border` — param `dsc`
+- `lv_draw_nema_gfx_border` — param `dsc`
+- `lv_draw_dave2d_border` — param `dsc`
+- `lv_draw_sdl_border` — param `dsc`
+- `lv_draw_sw_border` — param `dsc`
+- `lv_draw_vg_lite_border` — param `dsc`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_draw_box_shadow_dsc_t">
+
+### lv_draw_box_shadow_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `radius` | <ApiLink name="int32_t" /> | Radius, LV_RADIUS_CIRCLE for max. radius |
+| `color` | <ApiLink name="lv_color_t" /> | Color of shadow |
+| `width` | <ApiLink name="int32_t" /> | Width of the shadow. (radius of the blur) |
+| `spread` | <ApiLink name="int32_t" /> | Make the rectangle larger with this value in all directions. Can be negative too. |
+| `ofs_x` | <ApiLink name="int32_t" /> | Offset the rectangle horizontally. |
+| `ofs_y` | <ApiLink name="int32_t" /> | Offset the rectangle vertically. |
+| `opa` | <ApiLink name="lv_opa_t" /> | Opacity in 0...255 range. LV_OPA_TRANSP, LV_OPA_10, LV_OPA_20, .. LV_OPA_COVER can be used as well |
+| `bg_cover` | <ApiLink name="uint8_t" /> | Set `bg_cover` to 1 if the background will cover the shadow. It's a hint to the renderer about it might skip some masking. |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_box_shadow_dsc_t" count={7}>
+
+- `lv_draw_box_shadow_dsc_init` — param `dsc`
+- `lv_draw_box_shadow` — param `dsc`
+- `lv_draw_nanovg_box_shadow` — param `dsc`
+- `lv_draw_dave2d_box_shadow` — param `dsc`
+- `lv_draw_sdl_box_shadow` — param `dsc`
+- `lv_draw_sw_box_shadow` — param `dsc`
+- `lv_draw_vg_lite_box_shadow` — param `dsc`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_RADIUS_CIRCLE" file="draw/lv_draw_rect.h" line={24} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_rect.h#L24">
+
+### LV_RADIUS_CIRCLE
+
+```c
+#define LV_RADIUS_CIRCLE 0x7FFF
+```
+
+A very big radius to always draw as circle
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw.h", "lv_color.h", "lv_area.h", "lv_style.h"]}
+  includedBy={["lv_obj_draw.h", "lv_draw_label.h", "lv_draw_rect_private.h", "lv_draw_triangle.h", "lv_draw_nanovg_private.h", "lv_draw_dave2d.h", "lv_draw_sdl.h", "lv_draw_vg_lite.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

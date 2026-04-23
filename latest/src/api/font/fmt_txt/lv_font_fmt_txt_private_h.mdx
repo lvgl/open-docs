@@ -1,0 +1,52 @@
+---
+title: lv_font_fmt_txt_private.h
+description: API reference for lv_font_fmt_txt_private.h
+api:
+  enums: [lv_font_fmt_rle_state_t]
+  structs: [lv_font_fmt_rle_t]
+---
+
+<RelatedHeaders name="lv_font_fmt_txt.h" isPrivate={true} />
+
+<ApiSummary enums={1} structs={1} />
+
+## Enums
+
+<ApiMember kind="enum" name="lv_font_fmt_rle_state_t" file="font/fmt_txt/lv_font_fmt_txt_private.h" line={28} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/font/fmt_txt/lv_font_fmt_txt_private.h#L28">
+
+### lv_font_fmt_rle_state_t
+
+| Name | Value |
+|------|------|
+| `RLE_STATE_SINGLE` | `0` |
+| `RLE_STATE_REPEATED` |  |
+| `RLE_STATE_COUNTER` |  |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_font_fmt_rle_t">
+
+### lv_font_fmt_rle_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `rdp` | <ApiLink name="uint32_t" /> |  |
+| `in` | <ApiLink name="uint8_t" display="const uint8_t *" /> |  |
+| `bpp` | <ApiLink name="uint8_t" /> |  |
+| `prev_v` | <ApiLink name="uint8_t" /> |  |
+| `count` | <ApiLink name="uint8_t" /> |  |
+| `state` | <ApiLink name="lv_font_fmt_rle_state_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_font_fmt_txt.h"]}
+  includedBy={["lv_global.h"]}
+  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_font.h", "lv_image_dsc.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_symbol_def.h", "lv_types.h"]}
+/>

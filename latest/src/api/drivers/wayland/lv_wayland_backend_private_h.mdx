@@ -1,0 +1,247 @@
+---
+title: lv_wayland_backend_private.h
+description: API reference for lv_wayland_backend_private.h
+api:
+  functions: [lv_wayland_get_backend_display_data, lv_wayland_set_backend_display_data, lv_wayland_get_window_surface]
+  structs: [lv_wayland_backend_ops_t]
+  typedefs: [lv_wayland_backend_init_t, lv_wayland_backend_deinit_t, lv_wayland_backend_init_display_t, lv_wayland_backend_resize_display_t, lv_wayland_backend_destroy_display_t, lv_wayland_backend_global_handler_t]
+  variables: [wl_backend_ops]
+---
+
+<ApiSummary functions={3} structs={1} typedefs={6} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Getters (2)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_wayland_set_backend_display_data" file="drivers/wayland/lv_wayland_backend_private.h" line={185} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/wayland/lv_wayland_backend_private.h#L185">
+
+### lv_wayland_set_backend_display_data
+
+Set the backend-specific display data.
+
+The backend display data is set automatically to the return type of the init_display/resize_display, this function should only be used in special cases where it needs to be overridden temporarily
+
+```c
+void lv_wayland_set_backend_display_data(lv_display_t *display, void *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| **[in]** `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Pointer to the LVGL display object |
+| **[in]** `data` | `void *` | Pointer to backend-specific display data |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (2)">
+
+<ApiMember kind="function" name="lv_wayland_get_backend_display_data" file="drivers/wayland/lv_wayland_backend_private.h" line={174} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/wayland/lv_wayland_backend_private.h#L174">
+
+### lv_wayland_get_backend_display_data
+
+Get the backend-specific display data.
+
+Retrieves the per-display data pointer that was returned by the backend's init_display/resize_display functions. This allows the backend to access its own display-specific state and resources.
+
+```c
+void * lv_wayland_get_backend_display_data(lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| **[in]** `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Pointer to the LVGL display object |
+
+**Returns:** `void *` — Pointer to backend-specific display data
+
+<Callout type="info">
+This returns the value that was returned by lv_wayland_backend_init_display_t or lv_wayland_backend_resize_display_t
+</Callout>
+
+**See also:** <ApiLink name="lv_wayland_backend_init_display_t" />
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_wayland_get_window_surface" file="drivers/wayland/lv_wayland_backend_private.h" line={201} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/wayland/lv_wayland_backend_private.h#L201">
+
+### lv_wayland_get_window_surface
+
+Get the Wayland surface for rendering.
+
+Retrieves the wl_surface object associated with the display window. This is the surface that the backend must use for all rendering operations (attaching buffers, committing frames, etc.).
+
+```c
+struct wl_surface * lv_wayland_get_window_surface(lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| **[in]** `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Pointer to the LVGL display object |
+
+**Returns:** `struct wl_surface *` — Pointer to the Wayland surface for rendering, or NULL if not available
+
+<Callout type="info">
+This surface is managed by the Wayland driver and must not be destroyed by the backend
+</Callout>
+
+<Callout type="info">
+All rendering output should be attached to this surface
+</Callout>
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_wayland_backend_ops_t">
+
+### lv_wayland_backend_ops_t
+
+Wayland backend operations structure.
+
+This structure defines the complete set of operations that a Wayland backend must implement. All function pointers must be non-NULL.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `init` | <ApiLink name="lv_wayland_backend_init_t" /> | Initialize backend context |
+| `global_handler` | <ApiLink name="lv_wayland_backend_global_handler_t" /> | Handle Wayland global objects |
+| `init_display` | <ApiLink name="lv_wayland_backend_init_display_t" /> | Initialize a new display |
+| `resize_display` | <ApiLink name="lv_wayland_backend_resize_display_t" /> | Resize or reconfigure display |
+| `deinit_display` | <ApiLink name="lv_wayland_backend_destroy_display_t" /> | Destroy a display |
+| `deinit` | <ApiLink name="lv_wayland_backend_deinit_t" /> | Deinitialize backend context |
+
+<Callout type="info">
+**Lifecycle Order::** 1. init() - Initialize backend context
+2. global_handler() - Called for each Wayland global (may be called multiple times)
+3. init_display() - Create display (may be called multiple times for multiple displays)
+4. resize_display() - Resize display (called as needed)
+5. deinit_display() - Destroy display (called once per display)
+6. deinit() - Clean up backend context
+</Callout>
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_wayland_backend_init_t" file="drivers/wayland/lv_wayland_backend_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/wayland/lv_wayland_backend_private.h#L44">
+
+### lv_wayland_backend_init_t
+
+```c
+lv_wayland_backend_init_t
+```
+
+Initialize the backend context.
+
+This function is called once when the Wayland driver is initialized to create the global backend context. The returned pointer will be passed as backend_ctx to all other backend operations.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_wayland_backend_deinit_t" file="drivers/wayland/lv_wayland_backend_private.h" line={59} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/wayland/lv_wayland_backend_private.h#L59">
+
+### lv_wayland_backend_deinit_t
+
+```c
+lv_wayland_backend_deinit_t
+```
+
+Deinitialize the backend context.
+
+This function is called when the Wayland driver is deinitialized. It must clean up all resources allocated in the init function and free the backend context.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_wayland_backend_init_display_t" file="drivers/wayland/lv_wayland_backend_private.h" line={79} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/wayland/lv_wayland_backend_private.h#L79">
+
+### lv_wayland_backend_init_display_t
+
+```c
+lv_wayland_backend_init_display_t
+```
+
+Initialize a new display.
+
+This function is called when creating a new LVGL display on Wayland. It should allocate and initialize per-display resources needed for rendering.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_wayland_backend_resize_display_t" file="drivers/wayland/lv_wayland_backend_private.h" line={98} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/wayland/lv_wayland_backend_private.h#L98">
+
+### lv_wayland_backend_resize_display_t
+
+```c
+lv_wayland_backend_resize_display_t
+```
+
+Resize or reconfigure a display.
+
+This function is called when a display needs to be resized or when its rotation is modified. The backend should update its rendering resources accordingly.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_wayland_backend_destroy_display_t" file="drivers/wayland/lv_wayland_backend_private.h" line={113} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/wayland/lv_wayland_backend_private.h#L113">
+
+### lv_wayland_backend_destroy_display_t
+
+```c
+lv_wayland_backend_destroy_display_t
+```
+
+Destroy a display.
+
+This function is called when an LVGL display is being destroyed. It must clean up all per-display resources and free the display data that was allocated in init_display.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_wayland_backend_global_handler_t" file="drivers/wayland/lv_wayland_backend_private.h" line={132} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/wayland/lv_wayland_backend_private.h#L132">
+
+### lv_wayland_backend_global_handler_t
+
+```c
+lv_wayland_backend_global_handler_t
+```
+
+Handle Wayland global objects.
+
+This function is called for every global object advertised by the Wayland compositor. The backend can use this to bind to Wayland protocols it requires (e.g., wl_shm, EGL extensions, DMA-BUF protocols, etc.).
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="wl_backend_ops" file="drivers/wayland/lv_wayland_backend_private.h" line={159} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/wayland/lv_wayland_backend_private.h#L159">
+
+### wl_backend_ops
+
+```c
+const lv_wayland_backend_ops_t wl_backend_ops
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_wayland.h", "wayland-client.h"]}
+  includedBy={["lv_wayland_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_indev_gesture.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h", "lv_wayland_keyboard.h", "lv_wayland_pointer.h", "lv_wayland_pointer_axis.h", "lv_wayland_touch.h", "lv_wayland_window.h"]}
+/>

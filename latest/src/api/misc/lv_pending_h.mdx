@@ -1,0 +1,186 @@
+---
+title: lv_pending.h
+description: API reference for lv_pending.h
+api:
+  functions: [lv_pending_create, lv_pending_destroy, lv_pending_set_free_cb, lv_pending_add, lv_pending_remove_all, lv_pending_swap]
+  typedefs: [lv_pending_t, lv_pending_free_cb_t]
+---
+
+<ApiSummary functions={6} typedefs={2} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Other (5)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_pending_set_free_cb" file="misc/lv_pending.h" line={55} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_pending.h#L55">
+
+### lv_pending_set_free_cb
+
+Set a free callback for the pending list
+
+```c
+void lv_pending_set_free_cb(lv_pending_t *pending, lv_pending_free_cb_t free_cb, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pending` | <ApiLink name="lv_pending_t" display="lv_pending_t *" /> | pointer to the pending list |
+| `free_cb` | <ApiLink name="lv_pending_free_cb_t" /> | the free callback |
+| `user_data` | `void *` | user data to pass to the free callback |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (5)">
+
+<ApiMember kind="function" name="lv_pending_create" file="misc/lv_pending.h" line={41} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_pending.h#L41">
+
+### lv_pending_create
+
+Create a pending list
+
+```c
+lv_pending_t * lv_pending_create(size_t obj_size, uint32_t capacity_default)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj_size` | <ApiLink name="size_t" /> | the size of the objects in the list |
+| `capacity_default` | <ApiLink name="uint32_t" /> | the default capacity of the list |
+
+**Returns:** <ApiLink name="lv_pending_t" display="lv_pending_t *" /> — a pointer to the pending list
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_pending_destroy" file="misc/lv_pending.h" line={47} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_pending.h#L47">
+
+### lv_pending_destroy
+
+Destroy a pending list
+
+```c
+void lv_pending_destroy(lv_pending_t *pending)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pending` | <ApiLink name="lv_pending_t" display="lv_pending_t *" /> | pointer to the pending list |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_pending_add" file="misc/lv_pending.h" line={63} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_pending.h#L63">
+
+### lv_pending_add
+
+Add an object to the pending list
+
+```c
+void lv_pending_add(lv_pending_t *pending, void *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pending` | <ApiLink name="lv_pending_t" display="lv_pending_t *" /> | pointer to the pending list |
+| `obj` | `void *` | pointer to the object to add |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_pending_remove_all" file="misc/lv_pending.h" line={69} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_pending.h#L69">
+
+### lv_pending_remove_all
+
+Remove all objects from both pending lists
+
+```c
+void lv_pending_remove_all(lv_pending_t *pending)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pending` | <ApiLink name="lv_pending_t" display="lv_pending_t *" /> | pointer to the pending list |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_pending_swap" file="misc/lv_pending.h" line={75} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_pending.h#L75">
+
+### lv_pending_swap
+
+Remove all old object references and swap new object references
+
+```c
+void lv_pending_swap(lv_pending_t *pending)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pending` | <ApiLink name="lv_pending_t" display="lv_pending_t *" /> | pointer to the pending list |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_pending_t" file="misc/lv_pending.h" line={27} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_pending.h#L27">
+
+### lv_pending_t
+
+```c
+typedef struct _lv_pending_t lv_pending_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_pending_t" count={5}>
+
+- `lv_pending_destroy` — param `pending`
+- `lv_pending_set_free_cb` — param `pending`
+- `lv_pending_add` — param `pending`
+- `lv_pending_remove_all` — param `pending`
+- `lv_pending_swap` — param `pending`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_pending_free_cb_t" file="misc/lv_pending.h" line={29} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_pending.h#L29">
+
+### lv_pending_free_cb_t
+
+```c
+typedef void(* lv_pending_free_cb_t) (void *obj, void *user_data)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_pending_free_cb_t" count={1}>
+
+- `lv_pending_set_free_cb` — param `free_cb`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h"]}
+/>

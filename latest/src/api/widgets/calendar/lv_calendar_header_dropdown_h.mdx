@@ -1,0 +1,81 @@
+---
+title: lv_calendar_header_dropdown.h
+description: API reference for lv_calendar_header_dropdown.h
+api:
+  functions: [lv_calendar_add_header_dropdown, lv_calendar_header_dropdown_set_year_list]
+  variables: [lv_calendar_header_dropdown_class]
+---
+
+<ApiSummary functions={2} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Other (1)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_calendar_header_dropdown_set_year_list" file="widgets/calendar/lv_calendar_header_dropdown.h" line={50} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/calendar/lv_calendar_header_dropdown.h#L50">
+
+### lv_calendar_header_dropdown_set_year_list
+
+Sets a custom calendar year list
+
+```c
+void lv_calendar_header_dropdown_set_year_list(lv_obj_t *parent, const char *years_list)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object |
+| `years_list` | `const char *` | pointer to an const char array with the years list, see lv_dropdown set_options for more information. E.g. `const char * years = "2023\n2022\n2021\n2020\n2019" Only the pointer will be saved so this variable can't be local which will be destroyed later. |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="lv_calendar_add_header_dropdown" file="widgets/calendar/lv_calendar_header_dropdown.h" line={41} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/calendar/lv_calendar_header_dropdown.h#L41">
+
+### lv_calendar_add_header_dropdown
+
+Create a calendar header with drop-drowns to select the year and month
+
+```c
+lv_obj_t * lv_calendar_add_header_dropdown(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object. |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — the created header
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Variables
+
+<ApiMember kind="variable" name="lv_calendar_header_dropdown_class" file="widgets/calendar/lv_calendar_header_dropdown.h" line={30} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/calendar/lv_calendar_header_dropdown.h#L30">
+
+### lv_calendar_header_dropdown_class
+
+```c
+const lv_obj_class_t lv_calendar_header_dropdown_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj.h"]}
+  includedBy={["lv_calendar.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

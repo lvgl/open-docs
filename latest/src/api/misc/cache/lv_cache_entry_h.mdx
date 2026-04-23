@@ -1,0 +1,238 @@
+---
+title: lv_cache_entry.h
+description: API reference for lv_cache_entry.h
+api:
+  functions: [lv_cache_entry_get_size, lv_cache_entry_get_ref, lv_cache_entry_get_node_size, lv_cache_entry_is_invalid, lv_cache_entry_get_data, lv_cache_entry_get_cache, lv_cache_entry_get_entry, lv_cache_entry_alloc, lv_cache_entry_init, lv_cache_entry_delete]
+---
+
+<RelatedHeaders name="lv_cache_entry_private.h" isPrivate={false} />
+
+<ApiSummary functions={10} />
+
+## Functions
+
+<ApiTabs items={["Getters (6)","Other (4)"]}>
+<ApiTab value="Getters (6)">
+
+<ApiMember kind="function" name="lv_cache_entry_get_size" file="misc/cache/lv_cache_entry.h" line={35} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/cache/lv_cache_entry.h#L35">
+
+### lv_cache_entry_get_size
+
+Get the size of a cache entry.
+
+```c
+uint32_t lv_cache_entry_get_size(const uint32_t node_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node_size` | <ApiLink name="uint32_t" display="const uint32_t" /> | The size of the node in the cache. |
+
+**Returns:** <ApiLink name="uint32_t" /> — The size of the cache entry.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_cache_entry_get_ref" file="misc/cache/lv_cache_entry.h" line={42} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/cache/lv_cache_entry.h#L42">
+
+### lv_cache_entry_get_ref
+
+Get the reference count of a cache entry.
+
+```c
+int32_t lv_cache_entry_get_ref(lv_cache_entry_t *entry)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `entry` | <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> | The cache entry to get the reference count of. |
+
+**Returns:** <ApiLink name="int32_t" /> — The reference count of the cache entry.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_cache_entry_get_node_size" file="misc/cache/lv_cache_entry.h" line={49} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/cache/lv_cache_entry.h#L49">
+
+### lv_cache_entry_get_node_size
+
+Get the node size of a cache entry. Which is the same size with <ApiLink name="lv_cache_entry_get_size" display="lv_cache_entry_get_size()" />'s node_size parameter.
+
+```c
+uint32_t lv_cache_entry_get_node_size(lv_cache_entry_t *entry)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `entry` | <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> | The cache entry to get the node size of. |
+
+**Returns:** <ApiLink name="uint32_t" /> — The node size of the cache entry.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_cache_entry_get_data" file="misc/cache/lv_cache_entry.h" line={63} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/cache/lv_cache_entry.h#L63">
+
+### lv_cache_entry_get_data
+
+Get the data of a cache entry.
+
+```c
+void * lv_cache_entry_get_data(lv_cache_entry_t *entry)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `entry` | <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> | The cache entry to get the data of. |
+
+**Returns:** `void *` — The pointer to the data of the cache entry.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_cache_entry_get_cache" file="misc/cache/lv_cache_entry.h" line={70} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/cache/lv_cache_entry.h#L70">
+
+### lv_cache_entry_get_cache
+
+Get the cache instance of a cache entry.
+
+```c
+const lv_cache_t * lv_cache_entry_get_cache(const lv_cache_entry_t *entry)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `entry` | <ApiLink name="lv_cache_entry_t" display="const lv_cache_entry_t *" /> | The cache entry to get the cache instance of. |
+
+**Returns:** <ApiLink name="lv_cache_t" display="const lv_cache_t *" /> — The pointer to the cache instance of the cache entry.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_cache_entry_get_entry" file="misc/cache/lv_cache_entry.h" line={78} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/cache/lv_cache_entry.h#L78">
+
+### lv_cache_entry_get_entry
+
+Get the cache entry of a data. The data should be allocated by the cache instance.
+
+```c
+lv_cache_entry_t * lv_cache_entry_get_entry(void *data, const uint32_t node_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | `void *` | The data to get the cache entry of. |
+| `node_size` | <ApiLink name="uint32_t" display="const uint32_t" /> | The size of the node in the cache. |
+
+**Returns:** <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> — The pointer to the cache entry of the data.
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (4)">
+
+<ApiMember kind="function" name="lv_cache_entry_is_invalid" file="misc/cache/lv_cache_entry.h" line={56} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/cache/lv_cache_entry.h#L56">
+
+### lv_cache_entry_is_invalid
+
+Check if a cache entry is invalid.
+
+```c
+bool lv_cache_entry_is_invalid(lv_cache_entry_t *entry)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `entry` | <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> | The cache entry to check. |
+
+**Returns:** <ApiLink name="bool" /> — True: the cache entry is invalid. False: the cache entry is valid.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_cache_entry_alloc" file="misc/cache/lv_cache_entry.h" line={86} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/cache/lv_cache_entry.h#L86">
+
+### lv_cache_entry_alloc
+
+Allocate a cache entry.
+
+```c
+lv_cache_entry_t * lv_cache_entry_alloc(const uint32_t node_size, const lv_cache_t *cache)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node_size` | <ApiLink name="uint32_t" display="const uint32_t" /> | The size of the node in the cache. |
+| `cache` | <ApiLink name="lv_cache_t" display="const lv_cache_t *" /> | The cache instance to allocate the cache entry from. |
+
+**Returns:** <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> — The pointer to the allocated cache entry.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_cache_entry_init" file="misc/cache/lv_cache_entry.h" line={94} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/cache/lv_cache_entry.h#L94">
+
+### lv_cache_entry_init
+
+Initialize a cache entry.
+
+```c
+void lv_cache_entry_init(lv_cache_entry_t *entry, const lv_cache_t *cache, const uint32_t node_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `entry` | <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> | The cache entry to initialize. |
+| `cache` | <ApiLink name="lv_cache_t" display="const lv_cache_t *" /> | The cache instance to allocate the cache entry from. |
+| `node_size` | <ApiLink name="uint32_t" display="const uint32_t" /> | The size of the node in the cache. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_cache_entry_delete" file="misc/cache/lv_cache_entry.h" line={100} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/cache/lv_cache_entry.h#L100">
+
+### lv_cache_entry_delete
+
+Deallocate a cache entry. And the data of the cache entry will be freed.
+
+```c
+void lv_cache_entry_delete(lv_cache_entry_t *entry)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `entry` | <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> | The cache entry to deallocate. |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h"]}
+  includedBy={["lv_cache.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h"]}
+/>

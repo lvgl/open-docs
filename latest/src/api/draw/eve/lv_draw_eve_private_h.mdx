@@ -1,0 +1,317 @@
+---
+title: lv_draw_eve_private.h
+description: API reference for lv_draw_eve_private.h
+api:
+  functions: [lv_draw_eve_image, lv_draw_eve_image_src_check, lv_draw_eve_image_upload_image, lv_draw_eve_fill, lv_draw_eve_border, lv_draw_eve_line, lv_draw_eve_label, lv_draw_eve_label_font_check, lv_draw_eve_label_upload_glyph, lv_draw_eve_arc, lv_draw_eve_triangle]
+  structs: [lv_draw_eve_ramg_hash_table_cell_t, lv_draw_eve_ramg_t, _lv_draw_eve_unit_t]
+  macros: [LV_DRAW_EVE_WRITE_BUFFER_SIZE_INTERNAL, DEGREES, F16, lv_draw_eve_unit_g]
+---
+
+<RelatedHeaders name="lv_draw_eve.h" isPrivate={true} />
+
+<ApiSummary functions={11} structs={3} macros={4} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_eve_image" file="draw/eve/lv_draw_eve_private.h" line={80} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L80">
+
+### lv_draw_eve_image
+
+```c
+void lv_draw_eve_image(lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_image_src_check" file="draw/eve/lv_draw_eve_private.h" line={82} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L82">
+
+### lv_draw_eve_image_src_check
+
+```c
+bool lv_draw_eve_image_src_check(const void *src)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `src` | `const void *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_image_upload_image" file="draw/eve/lv_draw_eve_private.h" line={83} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L83">
+
+### lv_draw_eve_image_upload_image
+
+```c
+uint32_t lv_draw_eve_image_upload_image(bool burst_is_active, const lv_image_dsc_t *img_dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `burst_is_active` | <ApiLink name="bool" /> |
+| `img_dsc` | <ApiLink name="lv_image_dsc_t" display="const lv_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_fill" file="draw/eve/lv_draw_eve_private.h" line={85} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L85">
+
+### lv_draw_eve_fill
+
+```c
+void lv_draw_eve_fill(lv_draw_task_t *t, const lv_draw_fill_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_fill_dsc_t" display="const lv_draw_fill_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_border" file="draw/eve/lv_draw_eve_private.h" line={87} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L87">
+
+### lv_draw_eve_border
+
+```c
+void lv_draw_eve_border(lv_draw_task_t *t, const lv_draw_border_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_border_dsc_t" display="const lv_draw_border_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_line" file="draw/eve/lv_draw_eve_private.h" line={90} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L90">
+
+### lv_draw_eve_line
+
+```c
+void lv_draw_eve_line(lv_draw_task_t *t, const lv_draw_line_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_line_dsc_t" display="const lv_draw_line_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_label" file="draw/eve/lv_draw_eve_private.h" line={92} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L92">
+
+### lv_draw_eve_label
+
+```c
+void lv_draw_eve_label(lv_draw_task_t *t, const lv_draw_label_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_label_dsc_t" display="const lv_draw_label_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_label_font_check" file="draw/eve/lv_draw_eve_private.h" line={94} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L94">
+
+### lv_draw_eve_label_font_check
+
+```c
+bool lv_draw_eve_label_font_check(const lv_font_t *font)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_label_upload_glyph" file="draw/eve/lv_draw_eve_private.h" line={95} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L95">
+
+### lv_draw_eve_label_upload_glyph
+
+```c
+uint32_t lv_draw_eve_label_upload_glyph(bool burst_is_active, const lv_font_fmt_txt_dsc_t *font_dsc, uint32_t gid_index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `burst_is_active` | <ApiLink name="bool" /> |
+| `font_dsc` | <ApiLink name="lv_font_fmt_txt_dsc_t" display="const lv_font_fmt_txt_dsc_t *" /> |
+| `gid_index` | <ApiLink name="uint32_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_arc" file="draw/eve/lv_draw_eve_private.h" line={98} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L98">
+
+### lv_draw_eve_arc
+
+```c
+void lv_draw_eve_arc(lv_draw_task_t *t, const lv_draw_arc_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_arc_dsc_t" display="const lv_draw_arc_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_triangle" file="draw/eve/lv_draw_eve_private.h" line={100} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L100">
+
+### lv_draw_eve_triangle
+
+```c
+void lv_draw_eve_triangle(lv_draw_task_t *t, const lv_draw_triangle_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_triangle_dsc_t" display="const lv_draw_triangle_dsc_t *" /> |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_eve_ramg_hash_table_cell_t">
+
+### lv_draw_eve_ramg_hash_table_cell_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `key` | <ApiLink name="uintptr_t" /> |  |
+| `addr` | <ApiLink name="uint32_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_draw_eve_ramg_t">
+
+### lv_draw_eve_ramg_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `ramg_addr_end` | <ApiLink name="uint32_t" /> |  |
+| `hash_table_cell_count` | <ApiLink name="uint32_t" /> |  |
+| `hash_table_cells_occupied` | <ApiLink name="uint32_t" /> |  |
+| `hash_table` | <ApiLink name="lv_draw_eve_ramg_hash_table_cell_t" display="lv_draw_eve_ramg_hash_table_cell_t *" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_draw_eve_unit_t">
+
+### _lv_draw_eve_unit_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base_unit` | <ApiLink name="lv_draw_unit_t" /> |  |
+| `task_act` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |  |
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |  |
+| `ramg` | <ApiLink name="lv_draw_eve_ramg_t" /> |  |
+| `params` | <ApiLink name="lv_draw_eve_parameters_t" /> |  |
+| `op_cb` | <ApiLink name="lv_draw_eve_operation_cb_t" /> |  |
+| `lv_eve_write_buf_len` | <ApiLink name="uint32_t" /> |  |
+| `lv_eve_write_buf` | `uint8_t[2048]` |  |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_DRAW_EVE_WRITE_BUFFER_SIZE_INTERNAL" file="draw/eve/lv_draw_eve_private.h" line={40} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L40">
+
+### LV_DRAW_EVE_WRITE_BUFFER_SIZE_INTERNAL
+
+```c
+#define LV_DRAW_EVE_WRITE_BUFFER_SIZE_INTERNAL LV_DRAW_EVE_WRITE_BUFFER_SIZE
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="DEGREES" file="draw/eve/lv_draw_eve_private.h" line={106} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L106">
+
+### DEGREES
+
+```c
+#define DEGREES(n) \
+    ((65536UL * (n)) / 3600)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="F16" file="draw/eve/lv_draw_eve_private.h" line={107} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L107">
+
+### F16
+
+```c
+#define F16(x) \
+    ((int32_t)((x) * 65536L))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_draw_eve_unit_g" file="draw/eve/lv_draw_eve_private.h" line={109} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/eve/lv_draw_eve_private.h#L109">
+
+### lv_draw_eve_unit_g
+
+```c
+#define lv_draw_eve_unit_g (LV_GLOBAL_DEFAULT()->draw_eve_unit)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw_eve.h", "lv_draw_eve_target.h", "lv_draw_eve_ram_g.h", "lv_draw_private.h", "lv_types.h", "lv_global.h", "lv_draw_triangle.h", "lv_draw_line.h", "lv_draw_label.h", "lv_font_fmt_txt.h", "lv_draw_arc.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_anim_private.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_instance.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_private.h", "lv_cache_sc_da.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_buf_private.h", "lv_draw_image.h", "lv_draw_mask.h", "lv_draw_rect.h", "lv_draw_sw.h", "lv_draw_sw_blend.h", "lv_draw_sw_mask.h", "lv_draw_sw_mask_private.h", "lv_draw_sw_private.h", "lv_draw_sw_utils.h", "lv_draw_vector.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_font_fmt_txt_private.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_cache.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_image_header_cache.h", "lv_indev.h", "lv_indev_gesture.h", "lv_layout.h", "lv_layout_private.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_os.h", "lv_os_private.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_pthread.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_sysmon.h", "lv_sysmon_private.h", "lv_test_private.h", "lv_text.h", "lv_tick.h", "lv_tick_private.h", "lv_timer.h", "lv_timer_private.h", "lv_tlsf.h", "lv_tlsf_private.h"]}
+/>

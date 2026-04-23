@@ -1,0 +1,198 @@
+---
+title: lv_uefi_indev.h
+description: API reference for lv_uefi_indev.h
+api:
+  functions: [lv_uefi_simple_pointer_indev_create, lv_uefi_simple_pointer_indev_add_handle, lv_uefi_simple_pointer_indev_add_all, lv_uefi_absolute_pointer_indev_create, lv_uefi_absolute_pointer_indev_add_handle, lv_uefi_absolute_pointer_indev_add_all, lv_uefi_simple_text_input_indev_create, lv_uefi_simple_text_input_indev_add_handle, lv_uefi_simple_text_input_indev_add_all]
+---
+
+<ApiSummary functions={9} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_uefi_simple_pointer_indev_create" file="drivers/uefi/lv_uefi_indev.h" line={41} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/uefi/lv_uefi_indev.h#L41">
+
+### lv_uefi_simple_pointer_indev_create
+
+Create an indev object.
+
+```c
+lv_indev_t * lv_uefi_simple_pointer_indev_create(lv_point_t *display_res)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `display_res` | <ApiLink name="lv_point_t" display="lv_point_t *" /> | The resolution of the display in pixels, needed to scale the input. If NULL the resolution of the current default display will be used. |
+
+**Returns:** <ApiLink name="lv_indev_t" display="lv_indev_t *" /> — The created LVGL indev object.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_uefi_simple_pointer_indev_add_handle" file="drivers/uefi/lv_uefi_indev.h" line={49} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/uefi/lv_uefi_indev.h#L49">
+
+### lv_uefi_simple_pointer_indev_add_handle
+
+Add an EFI_SIMPLE_POINTER_PROTOCOL interface to the indev.
+
+```c
+bool lv_uefi_simple_pointer_indev_add_handle(lv_indev_t *indev, EFI_HANDLE handle)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | Indev that was created with lv_uefi_simple_pointer_indev_create. |
+| `handle` | `EFI_HANDLE` | The handle on which an instance of the EFI_SIMPLE_POINTER_PROTOCOL protocol is installed. |
+
+**Returns:** <ApiLink name="bool" /> — True if the interface was added.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_uefi_simple_pointer_indev_add_all" file="drivers/uefi/lv_uefi_indev.h" line={55} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/uefi/lv_uefi_indev.h#L55">
+
+### lv_uefi_simple_pointer_indev_add_all
+
+Add all available EFI_SIMPLE_POINTER_PROTOCOL interfaces to the indev.
+
+```c
+void lv_uefi_simple_pointer_indev_add_all(lv_indev_t *indev)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | Indev that was created with lv_uefi_simple_pointer_indev_create. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_uefi_absolute_pointer_indev_create" file="drivers/uefi/lv_uefi_indev.h" line={62} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/uefi/lv_uefi_indev.h#L62">
+
+### lv_uefi_absolute_pointer_indev_create
+
+Create a LVGL indev object.
+
+```c
+lv_indev_t * lv_uefi_absolute_pointer_indev_create(lv_point_t *display_res)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `display_res` | <ApiLink name="lv_point_t" display="lv_point_t *" /> | The resolution of the display in pixels, needed to scale the input. |
+
+**Returns:** <ApiLink name="lv_indev_t" display="lv_indev_t *" /> — The created LVGL indev object.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_uefi_absolute_pointer_indev_add_handle" file="drivers/uefi/lv_uefi_indev.h" line={70} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/uefi/lv_uefi_indev.h#L70">
+
+### lv_uefi_absolute_pointer_indev_add_handle
+
+Add an EFI_ABSOLUTE_POINTER_PROTOCOL interface to the indev.
+
+```c
+bool lv_uefi_absolute_pointer_indev_add_handle(lv_indev_t *indev, EFI_HANDLE handle)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | Indev that was created with lv_uefi_absolute_pointer_indev_create. |
+| `handle` | `EFI_HANDLE` | The handle on which an instance of the EFI_ABSOLUTE_POINTER_PROTOCOL protocol is installed. |
+
+**Returns:** <ApiLink name="bool" /> — True if the interface was added.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_uefi_absolute_pointer_indev_add_all" file="drivers/uefi/lv_uefi_indev.h" line={76} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/uefi/lv_uefi_indev.h#L76">
+
+### lv_uefi_absolute_pointer_indev_add_all
+
+Add all available EFI_ABSOLUTE_POINTER_PROTOCOL interfaces to the indev.
+
+```c
+void lv_uefi_absolute_pointer_indev_add_all(lv_indev_t *indev)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | Indev that was created with lv_uefi_absolute_pointer_indev_create. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_uefi_simple_text_input_indev_create" file="drivers/uefi/lv_uefi_indev.h" line={82} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/uefi/lv_uefi_indev.h#L82">
+
+### lv_uefi_simple_text_input_indev_create
+
+Create an indev object.
+
+```c
+lv_indev_t * lv_uefi_simple_text_input_indev_create(void)
+```
+
+**Returns:** <ApiLink name="lv_indev_t" display="lv_indev_t *" /> — The created LVGL indev object.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_uefi_simple_text_input_indev_add_handle" file="drivers/uefi/lv_uefi_indev.h" line={90} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/uefi/lv_uefi_indev.h#L90">
+
+### lv_uefi_simple_text_input_indev_add_handle
+
+Add an EFI_SIMPLE_TEXT_INPUT_EX_PROTOCOL interface to the indev.
+
+```c
+bool lv_uefi_simple_text_input_indev_add_handle(lv_indev_t *indev, EFI_HANDLE handle)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | Indev that was created with lv_uefi_simple_text_input_indev_create. |
+| `handle` | `EFI_HANDLE` | The handle on which an instance of the EFI_SIMPLE_TEXT_INPUT_EX_PROTOCOL protocol is installed. |
+
+**Returns:** <ApiLink name="bool" /> — True if the interface was added.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_uefi_simple_text_input_indev_add_all" file="drivers/uefi/lv_uefi_indev.h" line={96} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/uefi/lv_uefi_indev.h#L96">
+
+### lv_uefi_simple_text_input_indev_add_all
+
+Add all available EFI_SIMPLE_TEXT_INPUT_EX_PROTOCOL interfaces to the indev.
+
+```c
+void lv_uefi_simple_text_input_indev_add_all(lv_indev_t *indev)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | Indev that was created with lv_uefi_simple_text_input_indev_create. |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_indev.h", "lv_uefi.h"]}
+  includedBy={["lv_drivers.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_event.h", "lv_group.h", "lv_ll.h", "lv_math.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

@@ -1,0 +1,241 @@
+---
+title: lv_lru.h
+description: API reference for lv_lru.h
+api:
+  functions: [lv_lru_create, lv_lru_delete, lv_lru_set, lv_lru_get, lv_lru_remove, lv_lru_remove_lru_item]
+  enums: [lv_lru_res_t]
+  structs: [_lv_lru_t]
+  typedefs: [lv_lru_free_cb_t, lv_lru_item_t, lv_lru_t]
+---
+
+<ApiSummary functions={6} enums={1} structs={1} typedefs={3} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Getters (1)","Other (4)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_lru_set" file="misc/lv_lru.h" line={64} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_lru.h#L64">
+
+### lv_lru_set
+
+```c
+lv_lru_res_t lv_lru_set(lv_lru_t *cache, const void *key, size_t key_length, void *value, size_t value_length)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cache` | <ApiLink name="lv_lru_t" display="lv_lru_t *" /> |
+| `key` | `const void *` |
+| `key_length` | <ApiLink name="size_t" /> |
+| `value` | `void *` |
+| `value_length` | <ApiLink name="size_t" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_lru_get" file="misc/lv_lru.h" line={66} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_lru.h#L66">
+
+### lv_lru_get
+
+```c
+lv_lru_res_t lv_lru_get(lv_lru_t *cache, const void *key, size_t key_size, void **value)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cache` | <ApiLink name="lv_lru_t" display="lv_lru_t *" /> |
+| `key` | `const void *` |
+| `key_size` | <ApiLink name="size_t" /> |
+| `value` | `void **` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (4)">
+
+<ApiMember kind="function" name="lv_lru_create" file="misc/lv_lru.h" line={59} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_lru.h#L59">
+
+### lv_lru_create
+
+```c
+lv_lru_t * lv_lru_create(size_t cache_size, size_t average_length, lv_lru_free_cb_t value_free, lv_lru_free_cb_t key_free)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cache_size` | <ApiLink name="size_t" /> |
+| `average_length` | <ApiLink name="size_t" /> |
+| `value_free` | <ApiLink name="lv_lru_free_cb_t" /> |
+| `key_free` | <ApiLink name="lv_lru_free_cb_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_lru_delete" file="misc/lv_lru.h" line={62} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_lru.h#L62">
+
+### lv_lru_delete
+
+```c
+void lv_lru_delete(lv_lru_t *cache)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cache` | <ApiLink name="lv_lru_t" display="lv_lru_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_lru_remove" file="misc/lv_lru.h" line={68} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_lru.h#L68">
+
+### lv_lru_remove
+
+```c
+lv_lru_res_t lv_lru_remove(lv_lru_t *cache, const void *key, size_t key_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cache` | <ApiLink name="lv_lru_t" display="lv_lru_t *" /> |
+| `key` | `const void *` |
+| `key_size` | <ApiLink name="size_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_lru_remove_lru_item" file="misc/lv_lru.h" line={75} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_lru.h#L75">
+
+### lv_lru_remove_lru_item
+
+remove the least recently used item
+
+> **Todo:** we can optimise this by finding the n lru items, where n = required_space / average_length
+
+```c
+void lv_lru_remove_lru_item(lv_lru_t *cache)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cache` | <ApiLink name="lv_lru_t" display="lv_lru_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_lru_res_t" file="misc/lv_lru.h" line={29} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_lru.h#L29">
+
+### lv_lru_res_t
+
+| Name | Value |
+|------|------|
+| `LV_LRU_OK` | `0` |
+| `LV_LRU_MISSING_CACHE` |  |
+| `LV_LRU_MISSING_KEY` |  |
+| `LV_LRU_MISSING_VALUE` |  |
+| `LV_LRU_LOCK_ERROR` |  |
+| `LV_LRU_VALUE_TOO_LARGE` |  |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_lru_t">
+
+### _lv_lru_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `items` | <ApiLink name="lv_lru_item_t" display="lv_lru_item_t **" /> |  |
+| `access_count` | <ApiLink name="uint64_t" /> |  |
+| `free_memory` | <ApiLink name="size_t" /> |  |
+| `total_memory` | <ApiLink name="size_t" /> |  |
+| `average_item_length` | <ApiLink name="size_t" /> |  |
+| `hash_table_size` | <ApiLink name="size_t" /> |  |
+| `seed` | <ApiLink name="uint32_t" /> |  |
+| `value_free` | <ApiLink name="lv_lru_free_cb_t" /> |  |
+| `key_free` | <ApiLink name="lv_lru_free_cb_t" /> |  |
+| `free_items` | <ApiLink name="lv_lru_item_t" display="lv_lru_item_t *" /> |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_lru_free_cb_t" file="misc/lv_lru.h" line={38} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_lru.h#L38">
+
+### lv_lru_free_cb_t
+
+```c
+typedef void(* lv_lru_free_cb_t) (void *v)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_lru_free_cb_t" count={2}>
+
+- `lv_lru_create` — param `value_free`
+- `lv_lru_create` — param `key_free`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_lru_item_t" file="misc/lv_lru.h" line={40} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_lru.h#L40">
+
+### lv_lru_item_t
+
+```c
+typedef struct _lv_lru_item_t lv_lru_item_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_lru_t" file="misc/lv_lru.h" line={53} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_lru.h#L53">
+
+### lv_lru_t
+
+```c
+typedef struct _lv_lru_t lv_lru_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_lru_t" count={5}>
+
+- `lv_lru_delete` — param `cache`
+- `lv_lru_set` — param `cache`
+- `lv_lru_get` — param `cache`
+- `lv_lru_remove` — param `cache`
+- `lv_lru_remove_lru_item` — param `cache`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

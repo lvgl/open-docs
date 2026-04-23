@@ -1,0 +1,164 @@
+---
+title: lv_g2d_buf_map.h
+description: API reference for lv_g2d_buf_map.h
+api:
+  functions: [g2d_create_buf_map, g2d_free_buf_map, g2d_insert_buf_map, g2d_search_buf_map, g2d_free_item, g2d_print_table]
+  structs: [lv_map_item, lv_buf_map]
+  typedefs: [lv_map_item_t, lv_buf_map_t]
+---
+
+<ApiSummary functions={6} structs={2} typedefs={2} />
+
+## Functions
+
+<ApiMember kind="function" name="g2d_create_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={60} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/nxp/g2d/lv_g2d_buf_map.h#L60">
+
+### g2d_create_buf_map
+
+```c
+void g2d_create_buf_map(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="g2d_free_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={62} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/nxp/g2d/lv_g2d_buf_map.h#L62">
+
+### g2d_free_buf_map
+
+```c
+void g2d_free_buf_map(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="g2d_insert_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={64} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/nxp/g2d/lv_g2d_buf_map.h#L64">
+
+### g2d_insert_buf_map
+
+```c
+void g2d_insert_buf_map(void *key, struct g2d_buf *value)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `key` | `void *` |
+| `value` | `struct g2d_buf *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="g2d_search_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={66} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/nxp/g2d/lv_g2d_buf_map.h#L66">
+
+### g2d_search_buf_map
+
+```c
+struct g2d_buf * g2d_search_buf_map(void *key)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `key` | `void *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="g2d_free_item" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={68} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/nxp/g2d/lv_g2d_buf_map.h#L68">
+
+### g2d_free_item
+
+```c
+void g2d_free_item(void *key)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `key` | `void *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="g2d_print_table" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={70} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/nxp/g2d/lv_g2d_buf_map.h#L70">
+
+### g2d_print_table
+
+```c
+void g2d_print_table(void)
+```
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_map_item">
+
+### lv_map_item
+
+Copyright 2024 NXP
+
+SPDX-License-Identifier: MIT
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `key` | `void *` |  |
+| `value` | `struct g2d_buf *` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_buf_map">
+
+### lv_buf_map
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `items` | <ApiLink name="lv_map_item_t" display="lv_map_item_t **" /> |  |
+| `overflow_list` | <ApiLink name="lv_array_t" display="lv_array_t **" /> |  |
+| `size` | `int` |  |
+| `count` | `int` |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_map_item_t" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={45} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/nxp/g2d/lv_g2d_buf_map.h#L45">
+
+### lv_map_item_t
+
+```c
+typedef struct lv_map_item lv_map_item_t
+```
+
+Copyright 2024 NXP
+
+SPDX-License-Identifier: MIT
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_buf_map_t" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={54} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/nxp/g2d/lv_g2d_buf_map.h#L54">
+
+### lv_buf_map_t
+
+```c
+typedef struct lv_buf_map lv_buf_map_t
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_array.h", "string.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h", "lv_types.h"]}
+/>

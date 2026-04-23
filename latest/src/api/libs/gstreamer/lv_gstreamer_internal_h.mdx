@@ -1,0 +1,83 @@
+---
+title: lv_gstreamer_internal.h
+description: API reference for lv_gstreamer_internal.h
+api:
+  structs: [_lv_gstreamer_t, frame_data_t]
+  typedefs: [lv_gstreamer_t]
+  variables: [lv_gstreamer_class]
+---
+
+<ApiSummary structs={2} typedefs={1} variables={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_gstreamer_t">
+
+### _lv_gstreamer_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `image` | <ApiLink name="lv_image_t" /> |  |
+| `frame` | <ApiLink name="lv_image_dsc_t" /> |  |
+| `video_info` | `GstVideoInfo` |  |
+| `last_map_info` | `GstMapInfo` |  |
+| `last_buffer` | `GstBuffer *` |  |
+| `last_sample` | `GstSample *` |  |
+| `pipeline` | `GstElement *` |  |
+| `audio_convert` | `GstElement *` |  |
+| `video_convert` | `GstElement *` |  |
+| `audio_volume` | `GstElement *` |  |
+| `gstreamer_timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> |  |
+| `frame_queue` | `GAsyncQueue *` |  |
+| `is_video_info_valid` | <ApiLink name="bool" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="frame_data_t">
+
+### frame_data_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `frame_data` | <ApiLink name="uint8_t" display="uint8_t *" /> |  |
+| `width` | <ApiLink name="uint32_t" /> |  |
+| `height` | <ApiLink name="uint32_t" /> |  |
+| `stride` | <ApiLink name="uint32_t" /> |  |
+| `data_size` | <ApiLink name="size_t" /> |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_gstreamer_t" file="libs/gstreamer/lv_gstreamer_internal.h" line={60} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/libs/gstreamer/lv_gstreamer_internal.h#L60">
+
+### lv_gstreamer_t
+
+```c
+typedef struct _lv_gstreamer_t lv_gstreamer_t
+```
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_gstreamer_class" file="libs/gstreamer/lv_gstreamer_internal.h" line={62} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/libs/gstreamer/lv_gstreamer_internal.h#L62">
+
+### lv_gstreamer_class
+
+```c
+const lv_obj_class_t lv_gstreamer_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "gst.h", "video.h", "lv_image_private.h", "lv_gstreamer.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_private.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

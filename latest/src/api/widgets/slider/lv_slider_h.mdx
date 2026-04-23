@@ -1,0 +1,459 @@
+---
+title: lv_slider.h
+description: API reference for lv_slider.h
+api:
+  functions: [lv_slider_create, lv_slider_set_value, lv_slider_set_start_value, lv_slider_set_range, lv_slider_set_min_value, lv_slider_set_max_value, lv_slider_set_mode, lv_slider_set_orientation, lv_slider_get_value, lv_slider_get_left_value, lv_slider_get_min_value, lv_slider_get_max_value, lv_slider_is_dragged, lv_slider_get_mode, lv_slider_get_orientation, lv_slider_is_symmetrical, lv_slider_bind_value]
+  enums: [lv_slider_mode_t, lv_slider_orientation_t, _lv_property_slider_id_t]
+  variables: [lv_slider_class]
+---
+
+<RelatedHeaders name="lv_slider_private.h" isPrivate={false} />
+
+<ApiSummary functions={17} enums={3} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (7)","Getters (6)","Other (4)"]}>
+<ApiTab value="Setters (7)">
+
+<ApiMember kind="function" name="lv_slider_set_value" file="widgets/slider/lv_slider.h" line={80} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L80">
+
+### lv_slider_set_value
+
+Set a new value on the slider
+
+```c
+void lv_slider_set_value(lv_obj_t *obj, int32_t value, lv_anim_enable_t anim)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a slider object |
+| `value` | <ApiLink name="int32_t" /> | the new value |
+| `anim` | <ApiLink name="lv_anim_enable_t" /> | LV_ANIM_ON: set the value with an animation; LV_ANIM_OFF: change the value immediately |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_set_start_value" file="widgets/slider/lv_slider.h" line={88} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L88">
+
+### lv_slider_set_start_value
+
+Set a new value for the left knob of a slider
+
+```c
+void lv_slider_set_start_value(lv_obj_t *obj, int32_t value, lv_anim_enable_t anim)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a slider object |
+| `value` | <ApiLink name="int32_t" /> | new value |
+| `anim` | <ApiLink name="lv_anim_enable_t" /> | LV_ANIM_ON: set the value with an animation; LV_ANIM_OFF: change the value immediately |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_set_range" file="widgets/slider/lv_slider.h" line={96} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L96">
+
+### lv_slider_set_range
+
+Set the minimum and the maximum values of a bar
+
+```c
+void lv_slider_set_range(lv_obj_t *obj, int32_t min, int32_t max)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the slider object |
+| `min` | <ApiLink name="int32_t" /> | minimum value |
+| `max` | <ApiLink name="int32_t" /> | maximum value |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_set_min_value" file="widgets/slider/lv_slider.h" line={103} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L103">
+
+### lv_slider_set_min_value
+
+Set the minimum values of a bar
+
+```c
+void lv_slider_set_min_value(lv_obj_t *obj, int32_t min)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the slider object |
+| `min` | <ApiLink name="int32_t" /> | minimum value |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_set_max_value" file="widgets/slider/lv_slider.h" line={110} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L110">
+
+### lv_slider_set_max_value
+
+Set the maximum values of a bar
+
+```c
+void lv_slider_set_max_value(lv_obj_t *obj, int32_t max)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the slider object |
+| `max` | <ApiLink name="int32_t" /> | maximum value |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_set_mode" file="widgets/slider/lv_slider.h" line={117} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L117">
+
+### lv_slider_set_mode
+
+Set the mode of slider.
+
+```c
+void lv_slider_set_mode(lv_obj_t *obj, lv_slider_mode_t mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a slider object |
+| `mode` | <ApiLink name="lv_slider_mode_t" /> | the mode of the slider. See `lv_slider_mode_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_set_orientation" file="widgets/slider/lv_slider.h" line={124} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L124">
+
+### lv_slider_set_orientation
+
+Set the orientation of slider.
+
+```c
+void lv_slider_set_orientation(lv_obj_t *obj, lv_slider_orientation_t orientation)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a slider object |
+| `orientation` | <ApiLink name="lv_slider_orientation_t" /> | slider orientation from `lv_slider_orientation_t` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (6)">
+
+<ApiMember kind="function" name="lv_slider_get_value" file="widgets/slider/lv_slider.h" line={135} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L135">
+
+### lv_slider_get_value
+
+Get the value of the main knob of a slider
+
+```c
+int32_t lv_slider_get_value(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a slider object |
+
+**Returns:** <ApiLink name="int32_t" /> — the value of the main knob of the slider
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_get_left_value" file="widgets/slider/lv_slider.h" line={142} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L142">
+
+### lv_slider_get_left_value
+
+Get the value of the left knob of a slider
+
+```c
+int32_t lv_slider_get_left_value(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a slider object |
+
+**Returns:** <ApiLink name="int32_t" /> — the value of the left knob of the slider
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_get_min_value" file="widgets/slider/lv_slider.h" line={149} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L149">
+
+### lv_slider_get_min_value
+
+Get the minimum value of a slider
+
+```c
+int32_t lv_slider_get_min_value(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a slider object |
+
+**Returns:** <ApiLink name="int32_t" /> — the minimum value of the slider
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_get_max_value" file="widgets/slider/lv_slider.h" line={156} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L156">
+
+### lv_slider_get_max_value
+
+Get the maximum value of a slider
+
+```c
+int32_t lv_slider_get_max_value(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a slider object |
+
+**Returns:** <ApiLink name="int32_t" /> — the maximum value of the slider
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_get_mode" file="widgets/slider/lv_slider.h" line={170} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L170">
+
+### lv_slider_get_mode
+
+Get the mode of the slider.
+
+```c
+lv_slider_mode_t lv_slider_get_mode(lv_obj_t *slider)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `slider` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a slider object |
+
+**Returns:** <ApiLink name="lv_slider_mode_t" /> — see `lv_slider_mode_t`
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_get_orientation" file="widgets/slider/lv_slider.h" line={177} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L177">
+
+### lv_slider_get_orientation
+
+Get the orientation of slider.
+
+```c
+lv_slider_orientation_t lv_slider_get_orientation(lv_obj_t *slider)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `slider` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+
+**Returns:** <ApiLink name="lv_slider_orientation_t" /> — slider orientation from `lv_slider_orientation_t`
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (4)">
+
+<ApiMember kind="function" name="lv_slider_create" file="widgets/slider/lv_slider.h" line={68} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L68">
+
+### lv_slider_create
+
+Create a slider object
+
+```c
+lv_obj_t * lv_slider_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new slider. |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created slider
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_is_dragged" file="widgets/slider/lv_slider.h" line={163} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L163">
+
+### lv_slider_is_dragged
+
+Give the slider is being dragged or not
+
+```c
+bool lv_slider_is_dragged(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a slider object |
+
+**Returns:** <ApiLink name="bool" /> — true: drag in progress false: not dragged
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_is_symmetrical" file="widgets/slider/lv_slider.h" line={184} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L184">
+
+### lv_slider_is_symmetrical
+
+Give the slider is in symmetrical mode or not
+
+```c
+bool lv_slider_is_symmetrical(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to slider object |
+
+**Returns:** <ApiLink name="bool" /> — true: in symmetrical mode false : not in
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_slider_bind_value" file="widgets/slider/lv_slider.h" line={194} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L194">
+
+### lv_slider_bind_value
+
+Bind an integer or float Subject to a Slider's value.
+
+```c
+lv_observer_t * lv_slider_bind_value(lv_obj_t *obj, lv_subject_t *subject)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Slider |
+| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
+
+**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_slider_mode_t" file="widgets/slider/lv_slider.h" line={32} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L32">
+
+### lv_slider_mode_t
+
+| Name | Value |
+|------|------|
+| `LV_SLIDER_MODE_NORMAL` | `LV_BAR_MODE_NORMAL` |
+| `LV_SLIDER_MODE_SYMMETRICAL` | `LV_BAR_MODE_SYMMETRICAL` |
+| `LV_SLIDER_MODE_RANGE` | `LV_BAR_MODE_RANGE` |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_slider_mode_t" count={1}>
+
+- `lv_slider_set_mode` — param `mode`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="lv_slider_orientation_t" file="widgets/slider/lv_slider.h" line={38} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L38">
+
+### lv_slider_orientation_t
+
+| Name | Value |
+|------|------|
+| `LV_SLIDER_ORIENTATION_AUTO` | `LV_BAR_ORIENTATION_AUTO` |
+| `LV_SLIDER_ORIENTATION_HORIZONTAL` | `LV_BAR_ORIENTATION_HORIZONTAL` |
+| `LV_SLIDER_ORIENTATION_VERTICAL` | `LV_BAR_ORIENTATION_VERTICAL` |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_slider_orientation_t" count={1}>
+
+- `lv_slider_set_orientation` — param `orientation`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="_lv_property_slider_id_t" file="widgets/slider/lv_slider.h" line={47} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L47">
+
+### _lv_property_slider_id_t
+
+| Name | Value |
+|------|------|
+| `LV_PROPERTY_SLIDER_VALUE` | `(LV_PROPERTY_SLIDER_START + ((int) 0 )) \| (( 1  ) <<  28 ) \| ((  11   ) <<  24 )` |
+| `LV_PROPERTY_SLIDER_LEFT_VALUE` | `(LV_PROPERTY_SLIDER_START + ((int) 1 )) \| (( 1  ) <<  28 ) \| ((  11   ) <<  24 )` |
+| `LV_PROPERTY_SLIDER_RANGE` | `(LV_PROPERTY_SLIDER_START + ((int) 2 )) \| (( 1  ) <<  28 ) \| ((  1   ) <<  24 )` |
+| `LV_PROPERTY_SLIDER_MIN_VALUE` | `(LV_PROPERTY_SLIDER_START + ((int) 4 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_SLIDER_MAX_VALUE` | `(LV_PROPERTY_SLIDER_START + ((int) 5 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_SLIDER_MODE` | `(LV_PROPERTY_SLIDER_START + ((int) 6 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_SLIDER_IS_DRAGGED` | `(LV_PROPERTY_SLIDER_START + ((int) 7 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_SLIDER_IS_SYMMETRICAL` | `(LV_PROPERTY_SLIDER_START + ((int) 8 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_SLIDER_END` |  |
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_slider_class" file="widgets/slider/lv_slider.h" line={44} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/slider/lv_slider.h#L44">
+
+### lv_slider_class
+
+```c
+const lv_obj_class_t lv_slider_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_bar.h"]}
+  includedBy={["lv_slider_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_label.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

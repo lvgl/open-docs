@@ -1,0 +1,715 @@
+---
+title: lv_arclabel.h
+description: API reference for lv_arclabel.h
+api:
+  functions: [lv_arclabel_create, lv_arclabel_set_text, lv_arclabel_set_text_fmt, lv_arclabel_set_text_static, lv_arclabel_set_angle_start, lv_arclabel_set_angle_size, lv_arclabel_set_offset, lv_arclabel_set_dir, lv_arclabel_set_recolor, lv_arclabel_set_radius, lv_arclabel_set_center_offset_x, lv_arclabel_set_center_offset_y, lv_arclabel_set_text_vertical_align, lv_arclabel_set_text_horizontal_align, lv_arclabel_set_overflow, lv_arclabel_set_end_overlap, lv_arclabel_get_angle_start, lv_arclabel_get_angle_size, lv_arclabel_get_dir, lv_arclabel_get_recolor, lv_arclabel_get_radius, lv_arclabel_get_center_offset_x, lv_arclabel_get_center_offset_y, lv_arclabel_get_text_vertical_align, lv_arclabel_get_text_horizontal_align, lv_arclabel_get_overflow, lv_arclabel_get_end_overlap, lv_arclabel_get_text_angle]
+  enums: [lv_arclabel_dir_t, lv_arclabel_text_align_t, lv_arclabel_overflow_t]
+  macros: [LV_ARCLABEL_DOT_NUM, LV_ARCLABEL_DEFAULT_TEXT]
+  variables: [lv_arclabel_class]
+---
+
+<RelatedHeaders name="lv_arclabel_private.h" isPrivate={false} />
+
+<ApiSummary functions={28} enums={3} macros={2} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (15)","Getters (12)","Other (1)"]}>
+<ApiTab value="Setters (15)">
+
+<ApiMember kind="function" name="lv_arclabel_set_text" file="widgets/arclabel/lv_arclabel.h" line={82} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L82">
+
+### lv_arclabel_set_text
+
+Set the text of the arc label.
+
+This function sets the text displayed by an arc label object.
+
+```c
+void lv_arclabel_set_text(lv_obj_t *obj, const char *text)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to the arc label object. |
+| `text` | `const char *` | Pointer to a null-terminated string containing the new text for the label. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_text_fmt" file="widgets/arclabel/lv_arclabel.h" line={94} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L94">
+
+### lv_arclabel_set_text_fmt
+
+Set the formatted text of an arc label object.
+
+This function sets the text of an arc label object with support for variable arguments formatting, similar to `printf`.
+
+```c
+void lv_arclabel_set_text_fmt(lv_obj_t *obj, const char *fmt,...)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | The arc label object to set the text for. |
+| `fmt` | `const char *` | A format string that specifies how subsequent arguments are converted to text. |
+| `...` | |  |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_text_static" file="widgets/arclabel/lv_arclabel.h" line={103} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L103">
+
+### lv_arclabel_set_text_static
+
+Sets a new static text for the arc label or refreshes it with the current text. The 'text' must remain valid in memory; the arc label does not manage its lifecycle.
+
+```c
+void lv_arclabel_set_text_static(lv_obj_t *obj, const char *text)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to the arc label object. |
+| `text` | `const char *` | Pointer to the new text. If NULL, the label is refreshed with its current text. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_angle_start" file="widgets/arclabel/lv_arclabel.h" line={110} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L110">
+
+### lv_arclabel_set_angle_start
+
+Set the start angle of an arc. 0 deg: right, 90 bottom, etc.
+
+```c
+void lv_arclabel_set_angle_start(lv_obj_t *obj, lv_value_precise_t start)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+| `start` | <ApiLink name="lv_value_precise_t" /> | the start angle. (if `LV_USE_FLOAT` is enabled it can be fractional too.) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_angle_size" file="widgets/arclabel/lv_arclabel.h" line={117} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L117">
+
+### lv_arclabel_set_angle_size
+
+Set the end angle of an arc. 0 deg: right, 90 bottom, etc.
+
+```c
+void lv_arclabel_set_angle_size(lv_obj_t *obj, lv_value_precise_t size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+| `size` | <ApiLink name="lv_value_precise_t" /> | the angle size (if `LV_USE_FLOAT` is enabled it can be fractional too.) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_offset" file="widgets/arclabel/lv_arclabel.h" line={124} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L124">
+
+### lv_arclabel_set_offset
+
+Set the rotation for the whole arc
+
+```c
+void lv_arclabel_set_offset(lv_obj_t *obj, int32_t offset)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+| `offset` | <ApiLink name="int32_t" /> | rotation angle |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_dir" file="widgets/arclabel/lv_arclabel.h" line={131} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L131">
+
+### lv_arclabel_set_dir
+
+Set the type of arc.
+
+```c
+void lv_arclabel_set_dir(lv_obj_t *obj, lv_arclabel_dir_t dir)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to and arc label object |
+| `dir` | <ApiLink name="lv_arclabel_dir_t" /> | arc label's direction |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_recolor" file="widgets/arclabel/lv_arclabel.h" line={139} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L139">
+
+### lv_arclabel_set_recolor
+
+Enable the recoloring by in-line commands
+
+```c
+void lv_arclabel_set_recolor(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+| `en` | <ApiLink name="bool" /> | true: enable recoloring, false: disable Example: "This is a #ff0000 red# word" |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_radius" file="widgets/arclabel/lv_arclabel.h" line={147} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L147">
+
+### lv_arclabel_set_radius
+
+Set the radius for an arc label object.
+
+```c
+void lv_arclabel_set_radius(lv_obj_t *obj, uint32_t radius)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the arc label object. |
+| `radius` | <ApiLink name="uint32_t" /> | The radius value to set for the label's curvature, in pixels. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_center_offset_x" file="widgets/arclabel/lv_arclabel.h" line={154} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L154">
+
+### lv_arclabel_set_center_offset_x
+
+Set the center offset x for an arc label object.
+
+```c
+void lv_arclabel_set_center_offset_x(lv_obj_t *obj, uint32_t x)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+| `x` | <ApiLink name="uint32_t" /> | the x offset |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_center_offset_y" file="widgets/arclabel/lv_arclabel.h" line={161} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L161">
+
+### lv_arclabel_set_center_offset_y
+
+Set the center offset y for an arc label object.
+
+```c
+void lv_arclabel_set_center_offset_y(lv_obj_t *obj, uint32_t y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+| `y` | <ApiLink name="uint32_t" /> | the y offset |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_text_vertical_align" file="widgets/arclabel/lv_arclabel.h" line={168} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L168">
+
+### lv_arclabel_set_text_vertical_align
+
+Set the text vertical alignment for an arc label object.
+
+```c
+void lv_arclabel_set_text_vertical_align(lv_obj_t *obj, lv_arclabel_text_align_t align)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+| `align` | <ApiLink name="lv_arclabel_text_align_t" /> | the vertical alignment |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_text_horizontal_align" file="widgets/arclabel/lv_arclabel.h" line={175} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L175">
+
+### lv_arclabel_set_text_horizontal_align
+
+Set the text horizontal alignment for an arc label object.
+
+```c
+void lv_arclabel_set_text_horizontal_align(lv_obj_t *obj, lv_arclabel_text_align_t align)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+| `align` | <ApiLink name="lv_arclabel_text_align_t" /> | the horizontal alignment |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_overflow" file="widgets/arclabel/lv_arclabel.h" line={182} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L182">
+
+### lv_arclabel_set_overflow
+
+Set the overflow behavior for an arc label object.
+
+```c
+void lv_arclabel_set_overflow(lv_obj_t *obj, lv_arclabel_overflow_t overflow)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+| `overflow` | <ApiLink name="lv_arclabel_overflow_t" /> | the overflow mode (visible, ellipsis, clip) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_set_end_overlap" file="widgets/arclabel/lv_arclabel.h" line={190} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L190">
+
+### lv_arclabel_set_end_overlap
+
+Set the end overlap behavior for an arc label object. This controls how text is handled when it would overlap at the end of a 360-degree arc.
+
+```c
+void lv_arclabel_set_end_overlap(lv_obj_t *obj, bool overlap)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+| `overlap` | <ApiLink name="bool" /> | set the arc label's end overlap behavior |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (12)">
+
+<ApiMember kind="function" name="lv_arclabel_get_angle_start" file="widgets/arclabel/lv_arclabel.h" line={201} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L201">
+
+### lv_arclabel_get_angle_start
+
+Get the start angle of an arc label.
+
+```c
+lv_value_precise_t lv_arclabel_get_angle_start(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+
+**Returns:** <ApiLink name="lv_value_precise_t" /> — the start angle [0..360] (if `LV_USE_FLOAT` is enabled it can be fractional too.)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_get_angle_size" file="widgets/arclabel/lv_arclabel.h" line={208} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L208">
+
+### lv_arclabel_get_angle_size
+
+Get the angle size of an arc label.
+
+```c
+lv_value_precise_t lv_arclabel_get_angle_size(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+
+**Returns:** <ApiLink name="lv_value_precise_t" /> — the end angle [0..360] (if `LV_USE_FLOAT` is enabled it can be fractional too.)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_get_dir" file="widgets/arclabel/lv_arclabel.h" line={215} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L215">
+
+### lv_arclabel_get_dir
+
+Get whether the arc label is type or not.
+
+```c
+lv_arclabel_dir_t lv_arclabel_get_dir(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to an arc label object |
+
+**Returns:** <ApiLink name="lv_arclabel_dir_t" /> — arc label's direction
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_get_recolor" file="widgets/arclabel/lv_arclabel.h" line={225} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L225">
+
+### lv_arclabel_get_recolor
+
+Enable the recoloring by in-line commands
+
+```c
+bool lv_arclabel_get_recolor(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+
+**Returns:** <ApiLink name="bool" /> — true: enable recoloring, false: disable
+
+**See also:** <ApiLink name="lv_arclabel_set_recolor" />
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_get_radius" file="widgets/arclabel/lv_arclabel.h" line={232} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L232">
+
+### lv_arclabel_get_radius
+
+Get the text of the arc label.
+
+```c
+uint32_t lv_arclabel_get_radius(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+
+**Returns:** <ApiLink name="uint32_t" /> — the radius of the arc label
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_get_center_offset_x" file="widgets/arclabel/lv_arclabel.h" line={239} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L239">
+
+### lv_arclabel_get_center_offset_x
+
+Get the center offset x for an arc label object.
+
+```c
+uint32_t lv_arclabel_get_center_offset_x(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+
+**Returns:** <ApiLink name="uint32_t" /> — the x offset
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_get_center_offset_y" file="widgets/arclabel/lv_arclabel.h" line={246} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L246">
+
+### lv_arclabel_get_center_offset_y
+
+Get the center offset y for an arc label object.
+
+```c
+uint32_t lv_arclabel_get_center_offset_y(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+
+**Returns:** <ApiLink name="uint32_t" /> — the y offset
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_get_text_vertical_align" file="widgets/arclabel/lv_arclabel.h" line={253} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L253">
+
+### lv_arclabel_get_text_vertical_align
+
+Get the text vertical alignment for an arc label object.
+
+```c
+lv_arclabel_text_align_t lv_arclabel_get_text_vertical_align(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+
+**Returns:** <ApiLink name="lv_arclabel_text_align_t" /> — the vertical alignment
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_get_text_horizontal_align" file="widgets/arclabel/lv_arclabel.h" line={260} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L260">
+
+### lv_arclabel_get_text_horizontal_align
+
+Get the text horizontal alignment for an arc label object.
+
+```c
+lv_arclabel_text_align_t lv_arclabel_get_text_horizontal_align(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+
+**Returns:** <ApiLink name="lv_arclabel_text_align_t" /> — the horizontal alignment
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_get_overflow" file="widgets/arclabel/lv_arclabel.h" line={267} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L267">
+
+### lv_arclabel_get_overflow
+
+Get the overflow behavior for an arc label object.
+
+```c
+lv_arclabel_overflow_t lv_arclabel_get_overflow(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+
+**Returns:** <ApiLink name="lv_arclabel_overflow_t" /> — the overflow mode
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_get_end_overlap" file="widgets/arclabel/lv_arclabel.h" line={274} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L274">
+
+### lv_arclabel_get_end_overlap
+
+Get the end overlap behavior for an arc label object.
+
+```c
+bool lv_arclabel_get_end_overlap(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+
+**Returns:** <ApiLink name="bool" /> — the end overlap mode
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_arclabel_get_text_angle" file="widgets/arclabel/lv_arclabel.h" line={285} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L285">
+
+### lv_arclabel_get_text_angle
+
+Get the text angle for an arc label object.
+
+```c
+lv_value_precise_t lv_arclabel_get_text_angle(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an arc label object |
+
+**Returns:** <ApiLink name="lv_value_precise_t" /> — the text angle (if `LV_USE_FLOAT` is enabled it can be fractional too.)
+
+<Callout type="info">
+The text angle is calculated at runtime. You can get the updated value after the arclabel's size has been updated. Returns the real rendered text angle in degrees except in `LV_ARCLABEL_OVERFLOW_VISIBLE` mode.
+</Callout>
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="lv_arclabel_create" file="widgets/arclabel/lv_arclabel.h" line={64} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L64">
+
+### lv_arclabel_create
+
+Create an arc label object
+
+```c
+lv_obj_t * lv_arclabel_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new arc label |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created arc label
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_arclabel_dir_t" file="widgets/arclabel/lv_arclabel.h" line={35} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L35">
+
+### lv_arclabel_dir_t
+
+| Name | Value |
+|------|------|
+| `LV_ARCLABEL_DIR_CLOCKWISE` | `0` |
+| `LV_ARCLABEL_DIR_COUNTER_CLOCKWISE` | `1` |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_arclabel_dir_t" count={1}>
+
+- `lv_arclabel_set_dir` — param `dir`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="lv_arclabel_text_align_t" file="widgets/arclabel/lv_arclabel.h" line={40} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L40">
+
+### lv_arclabel_text_align_t
+
+| Name | Value |
+|------|------|
+| `LV_ARCLABEL_TEXT_ALIGN_DEFAULT` | `0` |
+| `LV_ARCLABEL_TEXT_ALIGN_LEADING` | `1` |
+| `LV_ARCLABEL_TEXT_ALIGN_CENTER` | `2` |
+| `LV_ARCLABEL_TEXT_ALIGN_TRAILING` | `3` |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_arclabel_text_align_t" count={2}>
+
+- `lv_arclabel_set_text_vertical_align` — param `align`
+- `lv_arclabel_set_text_horizontal_align` — param `align`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="lv_arclabel_overflow_t" file="widgets/arclabel/lv_arclabel.h" line={47} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L47">
+
+### lv_arclabel_overflow_t
+
+| Name | Description |
+|------|------|
+| `LV_ARCLABEL_OVERFLOW_VISIBLE` | Show full text, may overflow object area |
+| `LV_ARCLABEL_OVERFLOW_ELLIPSIS` | Show ellipsis (...) when text overflows |
+| `LV_ARCLABEL_OVERFLOW_CLIP` | Clip text at arc boundary |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_arclabel_overflow_t" count={1}>
+
+- `lv_arclabel_set_overflow` — param `overflow`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_ARCLABEL_DOT_NUM" file="widgets/arclabel/lv_arclabel.h" line={24} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L24">
+
+### LV_ARCLABEL_DOT_NUM
+
+```c
+#define LV_ARCLABEL_DOT_NUM 3
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ARCLABEL_DEFAULT_TEXT" file="widgets/arclabel/lv_arclabel.h" line={26} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L26">
+
+### LV_ARCLABEL_DEFAULT_TEXT
+
+```c
+#define LV_ARCLABEL_DEFAULT_TEXT "Arced Text"
+```
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_arclabel_class" file="widgets/arclabel/lv_arclabel.h" line={53} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/arclabel/lv_arclabel.h#L53">
+
+### lv_arclabel_class
+
+```c
+const lv_obj_class_t lv_arclabel_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h"]}
+  includedBy={["lv_arclabel_private.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

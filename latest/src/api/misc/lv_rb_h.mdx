@@ -1,0 +1,278 @@
+---
+title: lv_rb.h
+description: API reference for lv_rb.h
+api:
+  functions: [lv_rb_init, lv_rb_insert, lv_rb_find, lv_rb_remove_node, lv_rb_remove, lv_rb_drop_node, lv_rb_drop, lv_rb_minimum, lv_rb_maximum, lv_rb_minimum_from, lv_rb_maximum_from, lv_rb_destroy]
+  enums: [lv_rb_color_t]
+  typedefs: [lv_rb_compare_res_t, lv_rb_compare_t]
+---
+
+<RelatedHeaders name="lv_rb_private.h" isPrivate={false} />
+
+<ApiSummary functions={12} enums={1} typedefs={2} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_rb_init" file="misc/lv_rb.h" line={41} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L41">
+
+### lv_rb_init
+
+```c
+bool lv_rb_init(lv_rb_t *tree, lv_rb_compare_t compare, size_t node_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `tree` | <ApiLink name="lv_rb_t" display="lv_rb_t *" /> |
+| `compare` | <ApiLink name="lv_rb_compare_t" /> |
+| `node_size` | <ApiLink name="size_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rb_insert" file="misc/lv_rb.h" line={42} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L42">
+
+### lv_rb_insert
+
+```c
+lv_rb_node_t * lv_rb_insert(lv_rb_t *tree, void *key)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `tree` | <ApiLink name="lv_rb_t" display="lv_rb_t *" /> |
+| `key` | `void *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rb_find" file="misc/lv_rb.h" line={43} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L43">
+
+### lv_rb_find
+
+```c
+lv_rb_node_t * lv_rb_find(lv_rb_t *tree, const void *key)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `tree` | <ApiLink name="lv_rb_t" display="lv_rb_t *" /> |
+| `key` | `const void *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rb_remove_node" file="misc/lv_rb.h" line={44} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L44">
+
+### lv_rb_remove_node
+
+```c
+void * lv_rb_remove_node(lv_rb_t *tree, lv_rb_node_t *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `tree` | <ApiLink name="lv_rb_t" display="lv_rb_t *" /> |
+| `node` | <ApiLink name="lv_rb_node_t" display="lv_rb_node_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rb_remove" file="misc/lv_rb.h" line={45} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L45">
+
+### lv_rb_remove
+
+```c
+void * lv_rb_remove(lv_rb_t *tree, const void *key)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `tree` | <ApiLink name="lv_rb_t" display="lv_rb_t *" /> |
+| `key` | `const void *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rb_drop_node" file="misc/lv_rb.h" line={46} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L46">
+
+### lv_rb_drop_node
+
+```c
+bool lv_rb_drop_node(lv_rb_t *tree, lv_rb_node_t *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `tree` | <ApiLink name="lv_rb_t" display="lv_rb_t *" /> |
+| `node` | <ApiLink name="lv_rb_node_t" display="lv_rb_node_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rb_drop" file="misc/lv_rb.h" line={47} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L47">
+
+### lv_rb_drop
+
+```c
+bool lv_rb_drop(lv_rb_t *tree, const void *key)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `tree` | <ApiLink name="lv_rb_t" display="lv_rb_t *" /> |
+| `key` | `const void *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rb_minimum" file="misc/lv_rb.h" line={48} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L48">
+
+### lv_rb_minimum
+
+```c
+lv_rb_node_t * lv_rb_minimum(lv_rb_t *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `node` | <ApiLink name="lv_rb_t" display="lv_rb_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rb_maximum" file="misc/lv_rb.h" line={49} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L49">
+
+### lv_rb_maximum
+
+```c
+lv_rb_node_t * lv_rb_maximum(lv_rb_t *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `node` | <ApiLink name="lv_rb_t" display="lv_rb_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rb_minimum_from" file="misc/lv_rb.h" line={50} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L50">
+
+### lv_rb_minimum_from
+
+```c
+lv_rb_node_t * lv_rb_minimum_from(lv_rb_node_t *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `node` | <ApiLink name="lv_rb_node_t" display="lv_rb_node_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rb_maximum_from" file="misc/lv_rb.h" line={51} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L51">
+
+### lv_rb_maximum_from
+
+```c
+lv_rb_node_t * lv_rb_maximum_from(lv_rb_node_t *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `node` | <ApiLink name="lv_rb_node_t" display="lv_rb_node_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rb_destroy" file="misc/lv_rb.h" line={52} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L52">
+
+### lv_rb_destroy
+
+```c
+void lv_rb_destroy(lv_rb_t *tree)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `tree` | <ApiLink name="lv_rb_t" display="lv_rb_t *" /> |
+
+
+</ApiMember>
+
+## Enums
+
+<ApiMember kind="enum" name="lv_rb_color_t" file="misc/lv_rb.h" line={28} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L28">
+
+### lv_rb_color_t
+
+| Name |
+|------|
+| `LV_RB_COLOR_RED` |
+| `LV_RB_COLOR_BLACK` |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_rb_compare_res_t" file="misc/lv_rb.h" line={33} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L33">
+
+### lv_rb_compare_res_t
+
+```c
+typedef int32_t lv_rb_compare_res_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_rb_compare_t" file="misc/lv_rb.h" line={35} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_rb.h#L35">
+
+### lv_rb_compare_t
+
+```c
+typedef lv_rb_compare_res_t(* lv_rb_compare_t) (const void *a, const void *b)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_rb_compare_t" count={1}>
+
+- `lv_rb_init` — param `compare`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h", "lv_assert.h"]}
+  includedBy={["lv_rb_private.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h", "lv_log.h", "lv_mem.h", "lv_string.h"]}
+/>

@@ -1,0 +1,800 @@
+---
+title: lv_fs.h
+description: API reference for lv_fs.h
+api:
+  functions: [lv_fs_drv_init, lv_fs_drv_register, lv_fs_get_drv, lv_fs_remove_drive, lv_fs_is_ready, lv_fs_open, lv_fs_make_path_from_buffer, lv_fs_get_buffer_from_path, lv_fs_close, lv_fs_read, lv_fs_write, lv_fs_seek, lv_fs_tell, lv_fs_get_size, lv_fs_path_get_size, lv_fs_load_to_buf, lv_fs_load_with_alloc, lv_fs_dir_open, lv_fs_dir_read, lv_fs_dir_close, lv_fs_get_letters, lv_fs_get_ext, lv_fs_up, lv_fs_get_last, lv_fs_path_join]
+  enums: [lv_fs_res_t, lv_fs_mode_t, lv_fs_whence_t]
+  structs: [_lv_fs_drv_t, lv_fs_file_t, lv_fs_dir_t, lv_fs_path_ex_t]
+  typedefs: [lv_fs_drv_t]
+  macros: [LV_FS_MAX_FN_LENGTH, LV_FS_MAX_PATH_LENGTH, LV_FS_CACHE_FROM_BUFFER]
+---
+
+<RelatedHeaders name="lv_fs_private.h" isPrivate={false} />
+
+<ApiSummary functions={25} enums={3} structs={4} typedefs={1} macros={3} />
+
+## Functions
+
+<ApiTabs items={["Getters (7)","Other (18)"]}>
+<ApiTab value="Getters (7)">
+
+<ApiMember kind="function" name="lv_fs_get_drv" file="misc/lv_fs.h" line={135} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L135">
+
+### lv_fs_get_drv
+
+Give a pointer to a driver from its letter
+
+```c
+lv_fs_drv_t * lv_fs_get_drv(char letter)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `letter` | `char` | the driver-identifier letter |
+
+**Returns:** <ApiLink name="lv_fs_drv_t" display="lv_fs_drv_t *" /> — pointer to a driver or NULL if not found
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_get_buffer_from_path" file="misc/lv_fs.h" line={188} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L188">
+
+### lv_fs_get_buffer_from_path
+
+Get the buffer address and size from a path object
+
+```c
+lv_result_t lv_fs_get_buffer_from_path(lv_fs_path_ex_t *path, void **buffer, uint32_t *size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `path` | <ApiLink name="lv_fs_path_ex_t" display="lv_fs_path_ex_t *" /> | pointer to an initialized `lv_fs_path_ex` data |
+| `buffer` | `void **` | pointer to a `void *` variable to store the address |
+| `size` | <ApiLink name="uint32_t" display="uint32_t *" /> | pointer to an `uint32_t` data to store the size |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: buffer and size are set; LV_RESULT_INVALID: an error happened.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_get_size" file="misc/lv_fs.h" line={241} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L241">
+
+### lv_fs_get_size
+
+Get the size in bytes of an open file. The file read/write position will not be affected.
+
+```c
+lv_fs_res_t lv_fs_get_size(lv_fs_file_t *file_p, uint32_t *size_res)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `file_p` | <ApiLink name="lv_fs_file_t" display="lv_fs_file_t *" /> | pointer to a <ApiLink name="lv_fs_file_t" /> variable |
+| `size_res` | <ApiLink name="uint32_t" display="uint32_t *" /> | pointer to store the file size |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK or any error from `lv_fs_res_t`
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_path_get_size" file="misc/lv_fs.h" line={249} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L249">
+
+### lv_fs_path_get_size
+
+Get the size in bytes of a file at the given path.
+
+```c
+lv_fs_res_t lv_fs_path_get_size(const char *path, uint32_t *size_res)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `path` | `const char *` | the path of the file |
+| `size_res` | <ApiLink name="uint32_t" display="uint32_t *" /> | pointer to store the file size |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK or any error from `lv_fs_res_t`
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_get_letters" file="misc/lv_fs.h" line={300} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L300">
+
+### lv_fs_get_letters
+
+Fill a buffer with the letters of existing drivers
+
+```c
+char * lv_fs_get_letters(char *buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `buf` | `char *` | buffer to store the letters ('\0' added after the last letter) |
+
+**Returns:** `char *` — the buffer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_get_ext" file="misc/lv_fs.h" line={307} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L307">
+
+### lv_fs_get_ext
+
+Return with the extension of the filename
+
+```c
+const char * lv_fs_get_ext(const char *fn)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `fn` | `const char *` | string with a filename |
+
+**Returns:** `const char *` — pointer to the beginning extension or empty string if no extension
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_get_last" file="misc/lv_fs.h" line={321} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L321">
+
+### lv_fs_get_last
+
+Get the last element of a path (e.g. U:/folder/file -> file)
+
+```c
+const char * lv_fs_get_last(const char *path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `path` | `const char *` | pointer to a file name |
+
+**Returns:** `const char *` — pointer to the beginning of the last element in the path
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (18)">
+
+<ApiMember kind="function" name="lv_fs_drv_init" file="misc/lv_fs.h" line={120} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L120">
+
+### lv_fs_drv_init
+
+Initialize a file system driver with default values. It is used to ensure all fields have known values and not memory junk. After it you can set the fields.
+
+```c
+void lv_fs_drv_init(lv_fs_drv_t *drv)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `drv` | <ApiLink name="lv_fs_drv_t" display="lv_fs_drv_t *" /> | pointer to driver variable to initialize |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_drv_register" file="misc/lv_fs.h" line={128} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L128">
+
+### lv_fs_drv_register
+
+Add a new drive
+
+```c
+void lv_fs_drv_register(lv_fs_drv_t *drv)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `drv` | <ApiLink name="lv_fs_drv_t" display="lv_fs_drv_t *" /> | pointer to an lv_fs_drv_t structure which is inited with the corresponding function pointers. Only pointer is saved, so the driver should be static or dynamically allocated. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_remove_drive" file="misc/lv_fs.h" line={141} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L141">
+
+### lv_fs_remove_drive
+
+Remove a drive and call its remove function if available
+
+```c
+void lv_fs_remove_drive(char letter)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `letter` | `char` | letter identifier of the drive to remove |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_is_ready" file="misc/lv_fs.h" line={149} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L149">
+
+### lv_fs_is_ready
+
+Test if a drive is ready or not. If the `ready` function was not initialized `true` will be returned.
+
+```c
+bool lv_fs_is_ready(char letter)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `letter` | `char` | letter of the drive |
+
+**Returns:** <ApiLink name="bool" /> — true: drive is ready; false: drive is not ready
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_open" file="misc/lv_fs.h" line={158} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L158">
+
+### lv_fs_open
+
+Open a file
+
+```c
+lv_fs_res_t lv_fs_open(lv_fs_file_t *file_p, const char *path, lv_fs_mode_t mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `file_p` | <ApiLink name="lv_fs_file_t" display="lv_fs_file_t *" /> | pointer to a <ApiLink name="lv_fs_file_t" /> variable |
+| `path` | `const char *` | path to the file beginning with the driver letter (e.g. S:/folder/file.txt) |
+| `mode` | <ApiLink name="lv_fs_mode_t" /> | read: FS_MODE_RD, write: FS_MODE_WR, both: FS_MODE_RD \| FS_MODE_WR |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK or any error from lv_fs_res_t enum
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_make_path_from_buffer" file="misc/lv_fs.h" line={178} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L178">
+
+### lv_fs_make_path_from_buffer
+
+Create a special object from buffer/ memory address which looks like a file and can be passed as path to `lv_fs_open` and other functions accepting a path.
+
+For example 
+```c
+//Create a PNG file from t a buffer and use it
+lv_fs_path_ex_t p;
+lv_fs_make_path_from_buffer(&p, 'A', my_buf, my_buf_size, "png");
+lv_image_set_src(image1, &p);
+```
+
+```c
+void lv_fs_make_path_from_buffer(lv_fs_path_ex_t *path, char letter, const void *buf, uint32_t size, const char *ext)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `path` | <ApiLink name="lv_fs_path_ex_t" display="lv_fs_path_ex_t *" /> | path to a lv_fs_path_ex object |
+| `letter` | `char` | the identifier letter of the driver. E.g. `LV_FS_MEMFS_LETTER` |
+| `buf` | `const void *` | address of the memory buffer |
+| `size` | <ApiLink name="uint32_t" /> | size of the memory buffer in bytes |
+| `ext` | `const char *` | the extension, e.g. "png", if NULL no extension will be added. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_close" file="misc/lv_fs.h" line={195} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L195">
+
+### lv_fs_close
+
+Close an already opened file
+
+```c
+lv_fs_res_t lv_fs_close(lv_fs_file_t *file_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `file_p` | <ApiLink name="lv_fs_file_t" display="lv_fs_file_t *" /> | pointer to a <ApiLink name="lv_fs_file_t" /> variable |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK or any error from lv_fs_res_t enum
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_read" file="misc/lv_fs.h" line={205} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L205">
+
+### lv_fs_read
+
+Read from a file
+
+```c
+lv_fs_res_t lv_fs_read(lv_fs_file_t *file_p, void *buf, uint32_t btr, uint32_t *br)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `file_p` | <ApiLink name="lv_fs_file_t" display="lv_fs_file_t *" /> | pointer to a <ApiLink name="lv_fs_file_t" /> variable |
+| `buf` | `void *` | pointer to a buffer where the read bytes are stored |
+| `btr` | <ApiLink name="uint32_t" /> | Bytes To Read |
+| `br` | <ApiLink name="uint32_t" display="uint32_t *" /> | the number of real read bytes (Bytes Read). NULL if unused. |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK or any error from lv_fs_res_t enum
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_write" file="misc/lv_fs.h" line={215} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L215">
+
+### lv_fs_write
+
+Write into a file
+
+```c
+lv_fs_res_t lv_fs_write(lv_fs_file_t *file_p, const void *buf, uint32_t btw, uint32_t *bw)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `file_p` | <ApiLink name="lv_fs_file_t" display="lv_fs_file_t *" /> | pointer to a <ApiLink name="lv_fs_file_t" /> variable |
+| `buf` | `const void *` | pointer to a buffer with the bytes to write |
+| `btw` | <ApiLink name="uint32_t" /> | Bytes To Write |
+| `bw` | <ApiLink name="uint32_t" display="uint32_t *" /> | the number of real written bytes (Bytes Written). NULL if unused. |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK or any error from lv_fs_res_t enum
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_seek" file="misc/lv_fs.h" line={224} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L224">
+
+### lv_fs_seek
+
+Set the position of the 'cursor' (read write pointer) in a file
+
+```c
+lv_fs_res_t lv_fs_seek(lv_fs_file_t *file_p, uint32_t pos, lv_fs_whence_t whence)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `file_p` | <ApiLink name="lv_fs_file_t" display="lv_fs_file_t *" /> | pointer to a <ApiLink name="lv_fs_file_t" /> variable |
+| `pos` | <ApiLink name="uint32_t" /> | the new position expressed in bytes index (0: start of file) |
+| `whence` | <ApiLink name="lv_fs_whence_t" /> | tells from where to set position. See lv_fs_whence_t |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK or any error from lv_fs_res_t enum
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_tell" file="misc/lv_fs.h" line={232} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L232">
+
+### lv_fs_tell
+
+Give the position of the read write pointer
+
+```c
+lv_fs_res_t lv_fs_tell(lv_fs_file_t *file_p, uint32_t *pos)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `file_p` | <ApiLink name="lv_fs_file_t" display="lv_fs_file_t *" /> | pointer to a <ApiLink name="lv_fs_file_t" /> variable |
+| `pos` | <ApiLink name="uint32_t" display="uint32_t *" /> | pointer to store the position of the read write pointer |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK or any error from 'fs_res_t'
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_load_to_buf" file="misc/lv_fs.h" line={260} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L260">
+
+### lv_fs_load_to_buf
+
+Read the contents of a file at the given path into a buffer.
+
+```c
+lv_fs_res_t lv_fs_load_to_buf(void *buf, uint32_t buf_size, const char *path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `buf` | `void *` | a buffer to read the contents of the file into |
+| `buf_size` | <ApiLink name="uint32_t" /> | the size of the buffer and the amount to read from the file |
+| `path` | `const char *` | the path of the file |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK on success, LV_FS_RES_UNKNOWN if fewer than `buf_size` bytes could be read from the file, or any error from `lv_fs_res_t`
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_load_with_alloc" file="misc/lv_fs.h" line={268} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L268">
+
+### lv_fs_load_with_alloc
+
+Load a file into a memory buffer.
+
+```c
+void * lv_fs_load_with_alloc(const char *path, uint32_t *size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `path` | `const char *` |  |
+| `size` | <ApiLink name="uint32_t" display="uint32_t *" /> | pointer to store the size of the loaded file |
+
+**Returns:** `void *` — a pointer to the loaded file buffer, or NULL if an error occurred
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_dir_open" file="misc/lv_fs.h" line={276} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L276">
+
+### lv_fs_dir_open
+
+Initialize a 'fs_dir_t' variable for directory reading
+
+```c
+lv_fs_res_t lv_fs_dir_open(lv_fs_dir_t *rddir_p, const char *path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `rddir_p` | <ApiLink name="lv_fs_dir_t" display="lv_fs_dir_t *" /> | pointer to a '<ApiLink name="lv_fs_dir_t" />' variable |
+| `path` | `const char *` | path to a directory |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK or any error from lv_fs_res_t enum
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_dir_read" file="misc/lv_fs.h" line={286} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L286">
+
+### lv_fs_dir_read
+
+Read the next filename form a directory. The name of the directories will begin with '/'
+
+```c
+lv_fs_res_t lv_fs_dir_read(lv_fs_dir_t *rddir_p, char *fn, uint32_t fn_len)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `rddir_p` | <ApiLink name="lv_fs_dir_t" display="lv_fs_dir_t *" /> | pointer to an initialized 'fs_dir_t' variable |
+| `fn` | `char *` | pointer to a buffer to store the filename |
+| `fn_len` | <ApiLink name="uint32_t" /> | length of the buffer to store the filename |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK or any error from lv_fs_res_t enum
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_dir_close" file="misc/lv_fs.h" line={293} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L293">
+
+### lv_fs_dir_close
+
+Close the directory reading
+
+```c
+lv_fs_res_t lv_fs_dir_close(lv_fs_dir_t *rddir_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `rddir_p` | <ApiLink name="lv_fs_dir_t" display="lv_fs_dir_t *" /> | pointer to an initialized 'fs_dir_t' variable |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK or any error from lv_fs_res_t enum
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_up" file="misc/lv_fs.h" line={314} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L314">
+
+### lv_fs_up
+
+Step up one level
+
+```c
+char * lv_fs_up(char *path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `path` | `char *` | pointer to a file name |
+
+**Returns:** `char *` — the truncated file name
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_path_join" file="misc/lv_fs.h" line={334} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L334">
+
+### lv_fs_path_join
+
+Concatenate two path components and automatically add/remove a separator as needed. buf, buf_sz, and the return value are analogous to lv_snprintf
+
+```c
+int lv_fs_path_join(char *buf, size_t buf_sz, const char *base, const char *end)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `buf` | `char *` | the buffer to place the result in |
+| `buf_sz` | <ApiLink name="size_t" /> | the size of buf. At most buf_sz - 1 characters will be written to buf, and a null terminator |
+| `base` | `const char *` | the first path component |
+| `end` | `const char *` | the second path component |
+
+**Returns:** `int` — the number of characters (not including the null terminator) that would be written to buf, even if buf_sz-1 was smaller
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_fs_res_t" file="misc/lv_fs.h" line={34} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L34">
+
+### lv_fs_res_t
+
+Errors in the file system module.
+
+| Name | Value |
+|------|------|
+| `LV_FS_RES_OK` | `0` |
+| `LV_FS_RES_HW_ERR` |  |
+| `LV_FS_RES_FS_ERR` |  |
+| `LV_FS_RES_NOT_EX` |  |
+| `LV_FS_RES_FULL` |  |
+| `LV_FS_RES_LOCKED` |  |
+| `LV_FS_RES_DENIED` |  |
+| `LV_FS_RES_BUSY` |  |
+| `LV_FS_RES_TOUT` |  |
+| `LV_FS_RES_NOT_IMP` |  |
+| `LV_FS_RES_OUT_OF_MEM` |  |
+| `LV_FS_RES_INV_PARAM` |  |
+| `LV_FS_RES_DRIVE_LETTER_ALREADY_USED` |  |
+| `LV_FS_RES_UNKNOWN` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="enum" name="lv_fs_mode_t" file="misc/lv_fs.h" line={54} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L54">
+
+### lv_fs_mode_t
+
+File open mode.
+
+| Name | Value |
+|------|------|
+| `LV_FS_MODE_WR` | `0x01` |
+| `LV_FS_MODE_RD` | `0x02` |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_fs_mode_t" count={1}>
+
+- `lv_fs_open` — param `mode`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="lv_fs_whence_t" file="misc/lv_fs.h" line={62} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L62">
+
+### lv_fs_whence_t
+
+Seek modes.
+
+| Name | Value | Description |
+|------|------|------|
+| `LV_FS_SEEK_SET` | `0x00` | Set the position from absolutely (from the start of file) |
+| `LV_FS_SEEK_CUR` | `0x01` | Set the position from the current position |
+| `LV_FS_SEEK_END` | `0x02` | Set the position from the end of the file |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_fs_whence_t" count={1}>
+
+- `lv_fs_seek` — param `whence`
+
+</TypeUsedBy>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_fs_drv_t">
+
+### _lv_fs_drv_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `letter` | `char` |  |
+| `cache_size` | <ApiLink name="uint32_t" /> |  |
+| `ready_cb` | `bool(*)(lv_fs_drv_t *drv)` |  |
+| `remove_cb` | `void(*)(lv_fs_drv_t *drv)` |  |
+| `open_cb` | `void *(*)(lv_fs_drv_t *drv, const char *path, lv_fs_mode_t mode)` |  |
+| `close_cb` | `lv_fs_res_t(*)(lv_fs_drv_t *drv, void *file_p)` |  |
+| `read_cb` | `lv_fs_res_t(*)(lv_fs_drv_t *drv, void *file_p, void *buf, uint32_t btr, uint32_t *br)` |  |
+| `write_cb` | `lv_fs_res_t(*)(lv_fs_drv_t *drv, void *file_p, const void *buf, uint32_t btw, uint32_t *bw)` |  |
+| `seek_cb` | `lv_fs_res_t(*)(lv_fs_drv_t *drv, void *file_p, uint32_t pos, lv_fs_whence_t whence)` |  |
+| `tell_cb` | `lv_fs_res_t(*)(lv_fs_drv_t *drv, void *file_p, uint32_t *pos_p)` |  |
+| `dir_open_cb` | `void *(*)(lv_fs_drv_t *drv, const char *path)` |  |
+| `dir_read_cb` | `lv_fs_res_t(*)(lv_fs_drv_t *drv, void *rddir_p, char *fn, uint32_t fn_len)` |  |
+| `dir_close_cb` | `lv_fs_res_t(*)(lv_fs_drv_t *drv, void *rddir_p)` |  |
+| `user_data` | `void *` | Custom file user data |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_fs_file_t">
+
+### lv_fs_file_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `file_d` | `void *` |  |
+| `drv` | <ApiLink name="lv_fs_drv_t" display="lv_fs_drv_t *" /> |  |
+| `cache` | <ApiLink name="lv_fs_file_cache_t" display="lv_fs_file_cache_t *" /> |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_fs_file_t" count={7}>
+
+- `lv_fs_open` — param `file_p`
+- `lv_fs_close` — param `file_p`
+- `lv_fs_read` — param `file_p`
+- `lv_fs_write` — param `file_p`
+- `lv_fs_seek` — param `file_p`
+- `lv_fs_tell` — param `file_p`
+- `lv_fs_get_size` — param `file_p`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_fs_dir_t">
+
+### lv_fs_dir_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `dir_d` | `void *` |  |
+| `drv` | <ApiLink name="lv_fs_drv_t" display="lv_fs_drv_t *" /> |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_fs_dir_t" count={3}>
+
+- `lv_fs_dir_open` — param `rddir_p`
+- `lv_fs_dir_read` — param `rddir_p`
+- `lv_fs_dir_close` — param `rddir_p`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_fs_path_ex_t">
+
+### lv_fs_path_ex_t
+
+Extended path object to specify buffer for memory-mapped files
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `path` | `char[64]` | Store the driver letter address and size |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_fs_path_ex_t" count={2}>
+
+- `lv_fs_make_path_from_buffer` — param `path`
+- `lv_fs_get_buffer_from_path` — param `path`
+
+</TypeUsedBy>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_fs_drv_t" file="misc/lv_fs.h" line={69} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L69">
+
+### lv_fs_drv_t
+
+```c
+typedef struct _lv_fs_drv_t lv_fs_drv_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_fs_drv_t" count={2}>
+
+- `lv_fs_drv_init` — param `drv`
+- `lv_fs_drv_register` — param `drv`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_FS_MAX_FN_LENGTH" file="misc/lv_fs.h" line={22} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L22">
+
+### LV_FS_MAX_FN_LENGTH
+
+```c
+#define LV_FS_MAX_FN_LENGTH 64
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_FS_MAX_PATH_LENGTH" file="misc/lv_fs.h" line={23} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L23">
+
+### LV_FS_MAX_PATH_LENGTH
+
+```c
+#define LV_FS_MAX_PATH_LENGTH 256
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_FS_CACHE_FROM_BUFFER" file="misc/lv_fs.h" line={25} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_fs.h#L25">
+
+### LV_FS_CACHE_FROM_BUFFER
+
+```c
+#define LV_FS_CACHE_FROM_BUFFER UINT32_MAX
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includedBy={["lv_image_decoder.h", "lv_fs_private.h", "lv_image.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

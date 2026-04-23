@@ -1,0 +1,115 @@
+---
+title: lv_draw_image_private.h
+description: API reference for lv_draw_image_private.h
+api:
+  functions: [lv_draw_image_normal_helper, lv_draw_image_tiled_helper, lv_image_buf_get_transformed_area]
+  structs: [_lv_draw_image_sup_t]
+---
+
+<RelatedHeaders name="lv_draw_image.h" isPrivate={true} />
+
+<ApiSummary functions={3} structs={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (2)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_image_buf_get_transformed_area" file="draw/lv_draw_image_private.h" line={78} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_image_private.h#L78">
+
+### lv_image_buf_get_transformed_area
+
+Get the area of a rectangle if its rotated and scaled
+
+```c
+void lv_image_buf_get_transformed_area(lv_area_t *res, int32_t w, int32_t h, int32_t angle, uint16_t scale_x, uint16_t scale_y, const lv_point_t *pivot)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `res` | <ApiLink name="lv_area_t" display="lv_area_t *" /> | store the coordinates here |
+| `w` | <ApiLink name="int32_t" /> | width of the rectangle to transform |
+| `h` | <ApiLink name="int32_t" /> | height of the rectangle to transform |
+| `angle` | <ApiLink name="int32_t" /> | angle of rotation |
+| `scale_x` | <ApiLink name="uint16_t" /> | zoom in x direction, (256 no zoom) |
+| `scale_y` | <ApiLink name="uint16_t" /> | zoom in y direction, (256 no zoom) |
+| `pivot` | <ApiLink name="lv_point_t" display="const lv_point_t *" /> | x,y pivot coordinates of rotation |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_draw_image_normal_helper" file="draw/lv_draw_image_private.h" line={51} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_image_private.h#L51">
+
+### lv_draw_image_normal_helper
+
+Can be used by draw units to handle the decoding and prepare everything for the actual image rendering
+
+```c
+void lv_draw_image_normal_helper(lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *coords, lv_draw_image_core_cb draw_core_cb, const lv_image_decoder_args_t *decoder_args)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a draw task |
+| `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> | the draw descriptor of the image |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the absolute coordinates of the image |
+| `draw_core_cb` | <ApiLink name="lv_draw_image_core_cb" /> | a callback to perform the actual rendering |
+| `decoder_args` | <ApiLink name="lv_image_decoder_args_t" display="const lv_image_decoder_args_t *" /> | the args passed to image decoders, or NULL for defaults |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_image_tiled_helper" file="draw/lv_draw_image_private.h" line={64} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_image_private.h#L64">
+
+### lv_draw_image_tiled_helper
+
+Can be used by draw units for TILED images to handle the decoding and prepare everything for the actual image rendering
+
+```c
+void lv_draw_image_tiled_helper(lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *coords, lv_draw_image_core_cb draw_core_cb, const lv_image_decoder_args_t *decoder_args)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a draw task |
+| `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> | the draw descriptor of the image |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the absolute coordinates of the image |
+| `draw_core_cb` | <ApiLink name="lv_draw_image_core_cb" /> | a callback to perform the actual rendering |
+| `decoder_args` | <ApiLink name="lv_image_decoder_args_t" display="const lv_image_decoder_args_t *" /> | the args passed to image decoders, or NULL for defaults |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="_lv_draw_image_sup_t">
+
+### _lv_draw_image_sup_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `alpha_color` | <ApiLink name="lv_color_t" /> |  |
+| `palette` | <ApiLink name="lv_color32_t" display="const lv_color32_t *" /> |  |
+| `palette_size` | <ApiLink name="uint32_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw_image.h"]}
+  includedBy={["lv_nanovg_image_cache.h", "lv_draw_nema_gfx.h", "lv_draw_sw_arm2d.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw.h", "lv_draw_buf.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>
