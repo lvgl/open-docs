@@ -1,0 +1,108 @@
+---
+title: lv_nanovg_image_cache.h
+description: API reference for lv_nanovg_image_cache.h
+api:
+  functions: [lv_nanovg_image_cache_init, lv_nanovg_image_cache_deinit, lv_nanovg_image_cache_get_handle, lv_nanovg_image_cache_drop]
+---
+
+<ApiSummary functions={4} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (3)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_nanovg_image_cache_get_handle" file="draw/nanovg/lv_nanovg_image_cache.h" line={58} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nanovg/lv_nanovg_image_cache.h#L58">
+
+### lv_nanovg_image_cache_get_handle
+
+Get the image handle from the cache, create a new one if not found.
+
+```c
+int lv_nanovg_image_cache_get_handle(struct _lv_draw_nanovg_unit_t *u, const void *src, lv_color32_t color, int image_flags, lv_image_header_t *header)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `u` | <ApiLink name="_lv_draw_nanovg_unit_t" display="struct _lv_draw_nanovg_unit_t *" /> | pointer to the nanovg unit |
+| `src` | `const void *` | the source image data |
+| `color` | <ApiLink name="lv_color32_t" /> | the color to apply |
+| `image_flags` | `int` | the image flags |
+| `header` | <ApiLink name="lv_image_header_t" display="lv_image_header_t *" /> | the image header to fill (can be NULL) |
+
+**Returns:** `int` — the image handle, or -1 on failure
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_nanovg_image_cache_init" file="draw/nanovg/lv_nanovg_image_cache.h" line={41} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nanovg/lv_nanovg_image_cache.h#L41">
+
+### lv_nanovg_image_cache_init
+
+Initialize the image cache.
+
+```c
+void lv_nanovg_image_cache_init(struct _lv_draw_nanovg_unit_t *u)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `u` | <ApiLink name="_lv_draw_nanovg_unit_t" display="struct _lv_draw_nanovg_unit_t *" /> | pointer to the nanovg unit |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_nanovg_image_cache_deinit" file="draw/nanovg/lv_nanovg_image_cache.h" line={47} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nanovg/lv_nanovg_image_cache.h#L47">
+
+### lv_nanovg_image_cache_deinit
+
+Deinitialize the image cache.
+
+```c
+void lv_nanovg_image_cache_deinit(struct _lv_draw_nanovg_unit_t *u)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `u` | <ApiLink name="_lv_draw_nanovg_unit_t" display="struct _lv_draw_nanovg_unit_t *" /> | pointer to the nanovg unit |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_nanovg_image_cache_drop" file="draw/nanovg/lv_nanovg_image_cache.h" line={69} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nanovg/lv_nanovg_image_cache.h#L69">
+
+### lv_nanovg_image_cache_drop
+
+Drop the image from the cache.
+
+```c
+void lv_nanovg_image_cache_drop(struct _lv_draw_nanovg_unit_t *u, const void *src)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `u` | <ApiLink name="_lv_draw_nanovg_unit_t" display="struct _lv_draw_nanovg_unit_t *" /> | pointer to the nanovg unit |
+| `src` | `const void *` | the source image data |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_draw_image_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_draw.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

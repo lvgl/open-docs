@@ -1,0 +1,373 @@
+---
+title: lv_freetype.h
+description: API reference for lv_freetype.h
+api:
+  functions: [lv_freetype_init, lv_freetype_uninit, lv_freetype_init_font_info, lv_freetype_font_create_with_info, lv_freetype_font_create, lv_freetype_font_delete, lv_freetype_outline_add_event, lv_freetype_outline_get_scale, lv_freetype_is_outline_font]
+  enums: [lv_freetype_font_style_t, lv_freetype_font_render_mode_t, lv_freetype_outline_type_t]
+  typedefs: [LV_FT_FONT_STYLE, lv_freetype_outline_t, lv_freetype_font_src_t]
+  macros: [LV_FREETYPE_F26DOT6_TO_INT, LV_FREETYPE_F26DOT6_TO_FLOAT, FT_FONT_STYLE_NORMAL, FT_FONT_STYLE_ITALIC, FT_FONT_STYLE_BOLD]
+  variables: [lv_freetype_font_class]
+---
+
+<RelatedHeaders name="lv_freetype_private.h" isPrivate={false} />
+
+<ApiSummary functions={9} enums={3} typedefs={3} macros={5} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (8)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_freetype_outline_get_scale" file="libs/freetype/lv_freetype.h" line={128} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L128">
+
+### lv_freetype_outline_get_scale
+
+Get the scale of a FreeType font.
+
+```c
+uint32_t lv_freetype_outline_get_scale(const lv_font_t *font)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> | The FreeType font to get the scale of. |
+
+**Returns:** <ApiLink name="uint32_t" /> — The scale of the FreeType font.
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (8)">
+
+<ApiMember kind="function" name="lv_freetype_init" file="libs/freetype/lv_freetype.h" line={76} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L76">
+
+### lv_freetype_init
+
+Initialize the freetype library.
+
+```c
+lv_result_t lv_freetype_init(uint32_t max_glyph_cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `max_glyph_cnt` | <ApiLink name="uint32_t" /> |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK on success, otherwise LV_RESULT_INVALID.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_uninit" file="libs/freetype/lv_freetype.h" line={81} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L81">
+
+### lv_freetype_uninit
+
+Uninitialize the freetype library
+
+```c
+void lv_freetype_uninit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_init_font_info" file="libs/freetype/lv_freetype.h" line={87} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L87">
+
+### lv_freetype_init_font_info
+
+Initialize a font info structure.
+
+```c
+void lv_freetype_init_font_info(lv_font_info_t *font_info)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `font_info` | <ApiLink name="lv_font_info_t" display="lv_font_info_t *" /> | font info structure to be initialized. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_font_create_with_info" file="libs/freetype/lv_freetype.h" line={94} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L94">
+
+### lv_freetype_font_create_with_info
+
+Create a freetype font with a font info structure.
+
+```c
+lv_font_t * lv_freetype_font_create_with_info(const lv_font_info_t *font_info)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `font_info` | <ApiLink name="lv_font_info_t" display="const lv_font_info_t *" /> | font info structure. |
+
+**Returns:** <ApiLink name="lv_font_t" display="lv_font_t *" /> — Created font, or NULL on failure.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_font_create" file="libs/freetype/lv_freetype.h" line={104} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L104">
+
+### lv_freetype_font_create
+
+Create a freetype font.
+
+```c
+lv_font_t * lv_freetype_font_create(const char *pathname, lv_freetype_font_render_mode_t render_mode, uint32_t size, lv_freetype_font_style_t style)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pathname` | `const char *` | font file path. |
+| `render_mode` | <ApiLink name="lv_freetype_font_render_mode_t" /> | font render mode(see @lv_freetype_font_render_mode_t for details). |
+| `size` | <ApiLink name="uint32_t" /> | font size. |
+| `style` | <ApiLink name="lv_freetype_font_style_t" /> | font style(see lv_freetype_font_style_t for details). |
+
+**Returns:** <ApiLink name="lv_font_t" display="lv_font_t *" /> — Created font, or NULL on failure.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_font_delete" file="libs/freetype/lv_freetype.h" line={111} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L111">
+
+### lv_freetype_font_delete
+
+Delete a freetype font.
+
+```c
+void lv_freetype_font_delete(lv_font_t *font)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `font` | <ApiLink name="lv_font_t" display="lv_font_t *" /> | freetype font to be deleted. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_outline_add_event" file="libs/freetype/lv_freetype.h" line={120} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L120">
+
+### lv_freetype_outline_add_event
+
+Register a callback function to generate outlines for FreeType fonts.
+
+```c
+void lv_freetype_outline_add_event(lv_event_cb_t event_cb, lv_event_code_t filter, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `event_cb` | <ApiLink name="lv_event_cb_t" /> |  |
+| `filter` | <ApiLink name="lv_event_code_t" /> |  |
+| `user_data` | `void *` | User data to be passed to the callback function. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_is_outline_font" file="libs/freetype/lv_freetype.h" line={136} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L136">
+
+### lv_freetype_is_outline_font
+
+Check if the font is an outline font.
+
+```c
+bool lv_freetype_is_outline_font(const lv_font_t *font)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> | The FreeType font. |
+
+**Returns:** <ApiLink name="bool" /> — Is outline font on success, otherwise false.
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_freetype_font_style_t" file="libs/freetype/lv_freetype.h" line={40} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L40">
+
+### lv_freetype_font_style_t
+
+| Name | Value |
+|------|------|
+| `LV_FREETYPE_FONT_STYLE_NORMAL` | `0` |
+| `LV_FREETYPE_FONT_STYLE_ITALIC` | `1 << 0` |
+| `LV_FREETYPE_FONT_STYLE_BOLD` | `1 << 1` |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_freetype_font_style_t" count={1}>
+
+- `lv_freetype_font_create` — param `style`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="lv_freetype_font_render_mode_t" file="libs/freetype/lv_freetype.h" line={48} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L48">
+
+### lv_freetype_font_render_mode_t
+
+| Name | Value |
+|------|------|
+| `LV_FREETYPE_FONT_RENDER_MODE_BITMAP` | `0` |
+| `LV_FREETYPE_FONT_RENDER_MODE_OUTLINE` | `1` |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_freetype_font_render_mode_t" count={1}>
+
+- `lv_freetype_font_create` — param `render_mode`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="lv_freetype_outline_type_t" file="libs/freetype/lv_freetype.h" line={55} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L55">
+
+### lv_freetype_outline_type_t
+
+| Name |
+|------|
+| `LV_FREETYPE_OUTLINE_END` |
+| `LV_FREETYPE_OUTLINE_MOVE_TO` |
+| `LV_FREETYPE_OUTLINE_LINE_TO` |
+| `LV_FREETYPE_OUTLINE_CUBIC_TO` |
+| `LV_FREETYPE_OUTLINE_CONIC_TO` |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="LV_FT_FONT_STYLE" file="libs/freetype/lv_freetype.h" line={46} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L46">
+
+### LV_FT_FONT_STYLE
+
+```c
+typedef lv_freetype_font_style_t LV_FT_FONT_STYLE
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_freetype_outline_t" file="libs/freetype/lv_freetype.h" line={53} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L53">
+
+### lv_freetype_outline_t
+
+```c
+typedef void* lv_freetype_outline_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_freetype_font_src_t" file="libs/freetype/lv_freetype.h" line={64} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L64">
+
+### lv_freetype_font_src_t
+
+```c
+typedef const char lv_freetype_font_src_t
+```
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_FREETYPE_F26DOT6_TO_INT" file="libs/freetype/lv_freetype.h" line={29} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L29">
+
+### LV_FREETYPE_F26DOT6_TO_INT
+
+```c
+#define LV_FREETYPE_F26DOT6_TO_INT(x) \
+    ((x) >> 6)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_FREETYPE_F26DOT6_TO_FLOAT" file="libs/freetype/lv_freetype.h" line={30} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L30">
+
+### LV_FREETYPE_F26DOT6_TO_FLOAT
+
+```c
+#define LV_FREETYPE_F26DOT6_TO_FLOAT(x) \
+    ((float)(x) / 64)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="FT_FONT_STYLE_NORMAL" file="libs/freetype/lv_freetype.h" line={32} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L32">
+
+### FT_FONT_STYLE_NORMAL
+
+```c
+#define FT_FONT_STYLE_NORMAL LV_FREETYPE_FONT_STYLE_NORMAL
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="FT_FONT_STYLE_ITALIC" file="libs/freetype/lv_freetype.h" line={33} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L33">
+
+### FT_FONT_STYLE_ITALIC
+
+```c
+#define FT_FONT_STYLE_ITALIC LV_FREETYPE_FONT_STYLE_ITALIC
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="FT_FONT_STYLE_BOLD" file="libs/freetype/lv_freetype.h" line={34} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L34">
+
+### FT_FONT_STYLE_BOLD
+
+```c
+#define FT_FONT_STYLE_BOLD LV_FREETYPE_FONT_STYLE_BOLD
+```
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_freetype_font_class" file="libs/freetype/lv_freetype.h" line={66} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/freetype/lv_freetype.h#L66">
+
+### lv_freetype_font_class
+
+```c
+const lv_font_class_t lv_freetype_font_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h", "lv_event.h", "lv_color.h", "stdbool.h"]}
+  includedBy={["lv_freetype_private.h"]}
+  transitiveIncludes={["lv_array.h", "lv_assert.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h"]}
+/>

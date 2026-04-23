@@ -1,0 +1,524 @@
+---
+title: lv_timer.h
+description: API reference for lv_timer.h
+api:
+  functions: [lv_timer_handler, lv_timer_handler_run_in_period, lv_timer_periodic_handler, lv_timer_handler_set_resume_cb, lv_timer_create_basic, lv_timer_create, lv_timer_delete, lv_timer_pause, lv_timer_resume, lv_timer_set_cb, lv_timer_set_period, lv_timer_ready, lv_timer_set_repeat_count, lv_timer_set_auto_delete, lv_timer_set_user_data, lv_timer_reset, lv_timer_enable, lv_timer_get_idle, lv_timer_get_time_until_next, lv_timer_get_next, lv_timer_get_user_data, lv_timer_get_paused, lv_timer_set_external_data]
+  typedefs: [lv_timer_cb_t, lv_timer_handler_resume_cb_t]
+  macros: [LV_NO_TIMER_READY]
+---
+
+<RelatedHeaders name="lv_timer_private.h" isPrivate={false} />
+
+<ApiSummary functions={23} typedefs={2} macros={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (7)","Getters (5)","Other (11)"]}>
+<ApiTab value="Setters (7)">
+
+<ApiMember kind="function" name="lv_timer_handler_set_resume_cb" file="misc/lv_timer.h" line={73} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L73">
+
+### lv_timer_handler_set_resume_cb
+
+Set the resume callback to the timer handler
+
+```c
+void lv_timer_handler_set_resume_cb(lv_timer_handler_resume_cb_t cb, void *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `cb` | <ApiLink name="lv_timer_handler_resume_cb_t" /> | the function to call when timer handler is resumed |
+| `data` | `void *` | pointer to a resume data |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_set_cb" file="misc/lv_timer.h" line={117} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L117">
+
+### lv_timer_set_cb
+
+Set the callback to the timer (the function to call periodically)
+
+```c
+void lv_timer_set_cb(lv_timer_t *timer, lv_timer_cb_t timer_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to a timer |
+| `timer_cb` | <ApiLink name="lv_timer_cb_t" /> | the function to call periodically |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_set_period" file="misc/lv_timer.h" line={124} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L124">
+
+### lv_timer_set_period
+
+Set new period for a lv_timer
+
+```c
+void lv_timer_set_period(lv_timer_t *timer, uint32_t period)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to a lv_timer |
+| `period` | <ApiLink name="uint32_t" /> | the new period |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_set_repeat_count" file="misc/lv_timer.h" line={137} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L137">
+
+### lv_timer_set_repeat_count
+
+Set the number of times a timer will repeat.
+
+```c
+void lv_timer_set_repeat_count(lv_timer_t *timer, int32_t repeat_count)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to a lv_timer. |
+| `repeat_count` | <ApiLink name="int32_t" /> | -1 : infinity; 0 : stop ; n>0: residual times |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_set_auto_delete" file="misc/lv_timer.h" line={144} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L144">
+
+### lv_timer_set_auto_delete
+
+Set whether a lv_timer will be deleted automatically when it is called `repeat_count` times.
+
+```c
+void lv_timer_set_auto_delete(lv_timer_t *timer, bool auto_delete)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to a lv_timer. |
+| `auto_delete` | <ApiLink name="bool" /> | true: auto delete; false: timer will be paused when it is called `repeat_count` times. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_set_user_data" file="misc/lv_timer.h" line={151} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L151">
+
+### lv_timer_set_user_data
+
+Set custom parameter to the lv_timer.
+
+```c
+void lv_timer_set_user_data(lv_timer_t *timer, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to a lv_timer. |
+| `user_data` | `void *` | custom parameter |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_set_external_data" file="misc/lv_timer.h" line={212} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L212">
+
+### lv_timer_set_external_data
+
+Attaches external user data and destructor callback to a timer object.
+
+Associates custom user data with an LVGL timer and specifies a destructor function that will be automatically invoked when the timer is deleted to properly clean up the associated resources.
+
+```c
+void lv_timer_set_external_data(lv_timer_t *timer, void *data, void(*free_cb)(void *data))
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | Pointer to the timer object |
+| `data` | `void *` | User-defined data pointer to associate with the timer |
+| `free_cb` | `void(*)(void *data)` |  |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (5)">
+
+<ApiMember kind="function" name="lv_timer_get_idle" file="misc/lv_timer.h" line={170} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L170">
+
+### lv_timer_get_idle
+
+Get idle percentage
+
+```c
+uint32_t lv_timer_get_idle(void)
+```
+
+**Returns:** <ApiLink name="uint32_t" /> — the lv_timer idle in percentage
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_get_time_until_next" file="misc/lv_timer.h" line={176} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L176">
+
+### lv_timer_get_time_until_next
+
+Get the time remaining until the next timer will run
+
+```c
+uint32_t lv_timer_get_time_until_next(void)
+```
+
+**Returns:** <ApiLink name="uint32_t" /> — the time remaining in ms
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_get_next" file="misc/lv_timer.h" line={183} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L183">
+
+### lv_timer_get_next
+
+Iterate through the timers
+
+```c
+lv_timer_t * lv_timer_get_next(lv_timer_t *timer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | NULL to start iteration or the previous return value to get the next timer |
+
+**Returns:** <ApiLink name="lv_timer_t" display="lv_timer_t *" /> — the next timer or NULL if there is no more timer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_get_user_data" file="misc/lv_timer.h" line={190} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L190">
+
+### lv_timer_get_user_data
+
+Get the user_data passed when the timer was created
+
+```c
+void * lv_timer_get_user_data(lv_timer_t *timer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to the lv_timer |
+
+**Returns:** `void *` — pointer to the user_data
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_get_paused" file="misc/lv_timer.h" line={197} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L197">
+
+### lv_timer_get_paused
+
+Get the pause state of a timer
+
+```c
+bool lv_timer_get_paused(lv_timer_t *timer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to a lv_timer |
+
+**Returns:** <ApiLink name="bool" /> — true: timer is paused; false: timer is running
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (11)">
+
+<ApiMember kind="function" name="lv_timer_handler" file="misc/lv_timer.h" line={51} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L51">
+
+### lv_timer_handler
+
+Call it periodically to handle lv_timers.
+
+```c
+uint32_t lv_timer_handler(void)
+```
+
+**Returns:** <ApiLink name="uint32_t" /> — time till it needs to be run next (in ms)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_handler_run_in_period" file="misc/lv_timer.h" line={60} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L60">
+
+### lv_timer_handler_run_in_period
+
+Call it in the super-loop of main() or threads. It will run <ApiLink name="lv_timer_handler" display="lv_timer_handler()" /> with a given period in ms. You can use it with sleep or delay in OS environment. This function is used to simplify the porting.
+
+```c
+uint32_t lv_timer_handler_run_in_period(uint32_t period)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `period` | <ApiLink name="uint32_t" /> | the period for running <ApiLink name="lv_timer_handler" display="lv_timer_handler()" /> |
+
+**Returns:** <ApiLink name="uint32_t" /> — the time after which it must be called again
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_periodic_handler" file="misc/lv_timer.h" line={66} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L66">
+
+### lv_timer_periodic_handler
+
+Call it in the super-loop of main() or threads. It will automatically call <ApiLink name="lv_timer_handler" display="lv_timer_handler()" /> at the right time. This function is used to simplify the porting.
+
+```c
+void lv_timer_periodic_handler(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_create_basic" file="misc/lv_timer.h" line={80} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L80">
+
+### lv_timer_create_basic
+
+Create an "empty" timer. It needs to be initialized with at least `lv_timer_set_cb` and `lv_timer_set_period`
+
+```c
+lv_timer_t * lv_timer_create_basic(void)
+```
+
+**Returns:** <ApiLink name="lv_timer_t" display="lv_timer_t *" /> — pointer to the created timer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_create" file="misc/lv_timer.h" line={91} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L91">
+
+### lv_timer_create
+
+Create a new lv_timer
+
+```c
+lv_timer_t * lv_timer_create(lv_timer_cb_t timer_xcb, uint32_t period, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer_xcb` | <ApiLink name="lv_timer_cb_t" /> | a callback to call periodically. (the 'x' in the argument name indicates that it's not a fully generic function because it not follows the `func_name(object, callback, ...)` convention) |
+| `period` | <ApiLink name="uint32_t" /> | call period in ms unit |
+| `user_data` | `void *` | custom parameter |
+
+**Returns:** <ApiLink name="lv_timer_t" display="lv_timer_t *" /> — pointer to the new timer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_delete" file="misc/lv_timer.h" line={97} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L97">
+
+### lv_timer_delete
+
+Delete a lv_timer
+
+```c
+void lv_timer_delete(lv_timer_t *timer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to an lv_timer |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_pause" file="misc/lv_timer.h" line={104} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L104">
+
+### lv_timer_pause
+
+Pause a timer. It is typically safe to call from an interrupt handler or a different thread.
+
+```c
+void lv_timer_pause(lv_timer_t *timer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to an lv_timer |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_resume" file="misc/lv_timer.h" line={110} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L110">
+
+### lv_timer_resume
+
+Resume a timer.
+
+```c
+void lv_timer_resume(lv_timer_t *timer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to an lv_timer |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_ready" file="misc/lv_timer.h" line={130} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L130">
+
+### lv_timer_ready
+
+Make a lv_timer ready. It will not wait its period.
+
+```c
+void lv_timer_ready(lv_timer_t *timer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to a lv_timer. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_reset" file="misc/lv_timer.h" line={158} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L158">
+
+### lv_timer_reset
+
+Reset a lv_timer. It will be called the previously set period milliseconds later.
+
+```c
+void lv_timer_reset(lv_timer_t *timer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to a lv_timer. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_enable" file="misc/lv_timer.h" line={164} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L164">
+
+### lv_timer_enable
+
+Enable or disable the whole lv_timer handling
+
+```c
+void lv_timer_enable(bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `en` | <ApiLink name="bool" /> | true: lv_timer handling is running, false: lv_timer handling is suspended |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_timer_cb_t" file="misc/lv_timer.h" line={36} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L36">
+
+### lv_timer_cb_t
+
+```c
+typedef void(* lv_timer_cb_t) (lv_timer_t *)
+```
+
+Timers execute this type of functions.
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_timer_cb_t" count={2}>
+
+- `lv_timer_create` — param `timer_xcb`
+- `lv_timer_set_cb` — param `timer_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_timer_handler_resume_cb_t" file="misc/lv_timer.h" line={41} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L41">
+
+### lv_timer_handler_resume_cb_t
+
+```c
+typedef void(* lv_timer_handler_resume_cb_t) (void *data)
+```
+
+Timer handler resume this type of function.
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_timer_handler_resume_cb_t" count={1}>
+
+- `lv_timer_handler_set_resume_cb` — param `cb`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_NO_TIMER_READY" file="misc/lv_timer.h" line={27} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/misc/lv_timer.h#L27">
+
+### LV_NO_TIMER_READY
+
+```c
+#define LV_NO_TIMER_READY 0xFFFFFFFF
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_tick.h", "lv_types.h", "lv_ll.h"]}
+  includedBy={["lv_global.h", "lv_sysmon.h", "lv_display.h", "lv_indev.h", "lv_anim.h", "lv_timer_private.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

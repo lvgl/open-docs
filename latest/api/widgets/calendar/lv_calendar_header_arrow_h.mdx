@@ -1,0 +1,53 @@
+---
+title: lv_calendar_header_arrow.h
+description: API reference for lv_calendar_header_arrow.h
+api:
+  functions: [lv_calendar_add_header_arrow]
+  variables: [lv_calendar_header_arrow_class]
+---
+
+<ApiSummary functions={1} variables={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_calendar_add_header_arrow" file="widgets/calendar/lv_calendar_header_arrow.h" line={37} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar_header_arrow.h#L37">
+
+### lv_calendar_add_header_arrow
+
+Create a calendar header with drop-drowns to select the year and month
+
+```c
+lv_obj_t * lv_calendar_add_header_arrow(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object. |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — the created header
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_calendar_header_arrow_class" file="widgets/calendar/lv_calendar_header_arrow.h" line={26} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar_header_arrow.h#L26">
+
+### lv_calendar_header_arrow_class
+
+```c
+const lv_obj_class_t lv_calendar_header_arrow_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj.h"]}
+  includedBy={["lv_calendar.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

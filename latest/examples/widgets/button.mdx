@@ -1,0 +1,43 @@
+---
+title: "Button"
+order: 30
+---
+
+## Button basics
+
+<LvglExampleBrief>A momentary button and a checkable toggle button sharing one event handler.</LvglExampleBrief>
+
+Two buttons are created on the active screen. Both register `event_handler`,
+which logs `Clicked` on `LV_EVENT_CLICKED` and `Toggled` on
+`LV_EVENT_VALUE_CHANGED`. The first button has `LV_OBJ_FLAG_PRESS_LOCK`
+removed; the second has `LV_OBJ_FLAG_CHECKABLE` set so it stays checked
+when pressed and emits `LV_EVENT_VALUE_CHANGED` on toggle.
+
+<LvglExample name="lv_example_button_1" path="widgets/button/lv_example_button_1" />
+
+## Style a button from scratch
+
+<LvglExampleBrief>Build a custom blue button with a vertical gradient and a pressed-state outline animation.</LvglExampleBrief>
+
+The theme styles are removed from a centered button and two local `lv_style_t`
+values are applied instead: one for the default state with a
+`LV_PALETTE_BLUE` vertical gradient, grey border, drop shadow, and white
+text; another for `LV_STATE_PRESSED` that darkens the gradient, nudges the
+button down by 5 px, and runs a 300 ms linear transition on
+`LV_STYLE_OUTLINE_WIDTH` and `LV_STYLE_OUTLINE_OPA` to fade a 30 px outline
+out while pressed.
+
+<LvglExample name="lv_example_button_2" path="widgets/button/lv_example_button_2" />
+
+## Gum-like press transition
+
+<LvglExampleBrief>Squash and stretch a button on press using style transitions.</LvglExampleBrief>
+
+A centered button labelled `Gum` is given two styles. The pressed style
+widens the button by 10 px, shrinks the height by 10 px, and bumps
+`LV_STYLE_TEXT_LETTER_SPACE` to 10 px with a 250 ms
+`lv_anim_path_ease_in_out` transition. The default style uses the same
+property list with `lv_anim_path_overshoot` and a 100 ms delay so the press
+animation stays visible on a quick tap before it rubber-bands back.
+
+<LvglExample name="lv_example_button_3" path="widgets/button/lv_example_button_3" />

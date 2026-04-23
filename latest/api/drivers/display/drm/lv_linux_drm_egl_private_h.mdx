@@ -1,0 +1,44 @@
+---
+title: lv_linux_drm_egl_private.h
+description: API reference for lv_linux_drm_egl_private.h
+api:
+  structs: [lv_drm_ctx_t]
+---
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="lv_drm_ctx_t">
+
+### lv_drm_ctx_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `texture` | <ApiLink name="lv_opengles_texture_t" /> |  |
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |  |
+| `egl_ctx` | <ApiLink name="lv_opengles_egl_t" display="lv_opengles_egl_t *" /> |  |
+| `egl_interface` | <ApiLink name="lv_egl_interface_t" /> |  |
+| `drm_resources` | `drmModeRes *` |  |
+| `drm_connector` | `drmModeConnector *` |  |
+| `drm_encoder` | `drmModeEncoder *` |  |
+| `drm_crtc` | `drmModeCrtc *` |  |
+| `drm_mode` | `drmModeModeInfo *` |  |
+| `gbm_dev` | `struct gbm_device *` |  |
+| `gbm_surface` | `struct gbm_surface *` |  |
+| `gbm_bo_pending` | `struct gbm_bo *` |  |
+| `gbm_bo_flipped` | `struct gbm_bo *` |  |
+| `gbm_bo_presented` | `struct gbm_bo *` |  |
+| `mode_select_cb` | <ApiLink name="lv_linux_drm_select_mode_cb_t" /> |  |
+| `fd` | `int` |  |
+| `crtc_isset` | <ApiLink name="bool" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "xf86drmMode.h", "lv_opengles_texture_private.h", "lv_opengles_egl.h", "lv_opengles_egl_private.h", "lv_linux_drm.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_event.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_opengles_private.h", "lv_opengles_texture.h", "lv_palette.h", "lv_string.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

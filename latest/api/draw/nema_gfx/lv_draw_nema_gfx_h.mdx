@@ -1,0 +1,263 @@
+---
+title: lv_draw_nema_gfx.h
+description: API reference for lv_draw_nema_gfx.h
+api:
+  functions: [lv_draw_nema_gfx_init, lv_draw_nema_gfx_deinit, lv_draw_nema_gfx_fill, lv_draw_nema_gfx_triangle, lv_draw_nema_gfx_img, lv_draw_nema_gfx_label, lv_draw_nema_gfx_label_init, lv_draw_nema_gfx_layer, lv_draw_nema_gfx_line, lv_draw_nema_gfx_border, lv_draw_nema_gfx_arc, lv_draw_nema_gfx_vector]
+  structs: [lv_draw_nema_gfx_unit_t]
+---
+
+MIT License
+
+---
+
+ 
+## Copyright (c) 2008-24 Think Silicon Single Member PC 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice (including the next paragraph) shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+<ApiSummary functions={12} structs={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_init" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={87} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L87">
+
+### lv_draw_nema_gfx_init
+
+```c
+void lv_draw_nema_gfx_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_deinit" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={89} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L89">
+
+### lv_draw_nema_gfx_deinit
+
+```c
+void lv_draw_nema_gfx_deinit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_fill" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={91} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L91">
+
+### lv_draw_nema_gfx_fill
+
+```c
+void lv_draw_nema_gfx_fill(lv_draw_task_t *t, const lv_draw_fill_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_fill_dsc_t" display="const lv_draw_fill_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_triangle" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={94} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L94">
+
+### lv_draw_nema_gfx_triangle
+
+```c
+void lv_draw_nema_gfx_triangle(lv_draw_task_t *t, const lv_draw_triangle_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_triangle_dsc_t" display="const lv_draw_triangle_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_img" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={96} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L96">
+
+### lv_draw_nema_gfx_img
+
+```c
+void lv_draw_nema_gfx_img(lv_draw_task_t *t, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_label" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={99} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L99">
+
+### lv_draw_nema_gfx_label
+
+```c
+void lv_draw_nema_gfx_label(lv_draw_task_t *t, const lv_draw_label_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_label_dsc_t" display="const lv_draw_label_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_label_init" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={102} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L102">
+
+### lv_draw_nema_gfx_label_init
+
+```c
+void lv_draw_nema_gfx_label_init(lv_draw_unit_t *draw_unit)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_layer" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={104} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L104">
+
+### lv_draw_nema_gfx_layer
+
+```c
+void lv_draw_nema_gfx_layer(lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_line" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={107} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L107">
+
+### lv_draw_nema_gfx_line
+
+```c
+void lv_draw_nema_gfx_line(lv_draw_task_t *t, const lv_draw_line_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_line_dsc_t" display="const lv_draw_line_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_border" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={109} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L109">
+
+### lv_draw_nema_gfx_border
+
+```c
+void lv_draw_nema_gfx_border(lv_draw_task_t *t, const lv_draw_border_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_border_dsc_t" display="const lv_draw_border_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_arc" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={112} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L112">
+
+### lv_draw_nema_gfx_arc
+
+```c
+void lv_draw_nema_gfx_arc(lv_draw_task_t *t, const lv_draw_arc_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_arc_dsc_t" display="const lv_draw_arc_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_nema_gfx_vector" file="draw/nema_gfx/lv_draw_nema_gfx.h" line={116} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nema_gfx/lv_draw_nema_gfx.h#L116">
+
+### lv_draw_nema_gfx_vector
+
+```c
+void lv_draw_nema_gfx_vector(lv_draw_task_t *t, const lv_draw_vector_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_vector_dsc_t" display="const lv_draw_vector_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_nema_gfx_unit_t">
+
+### lv_draw_nema_gfx_unit_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base_unit` | <ApiLink name="lv_draw_unit_t" /> |  |
+| `task_act` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |  |
+| `sync` | `lv_thread_sync_t` |  |
+| `thread` | `lv_thread_t` |  |
+| `inited` | <ApiLink name="bool" display="volatile bool" /> |  |
+| `exit_status` | <ApiLink name="bool" display="volatile bool" /> |  |
+| `idx` | <ApiLink name="uint32_t" /> |  |
+| `cl` | `nema_cmdlist_t` |  |
+| `paint` | `void *` | \< NemaVG handle object (void pointer) \< NemaVG paint handle (pointer to paint object) |
+| `gradient` | `void *` | \< NemaVG handle object (void pointer) \< NemaVG gradient handle (pointer to gradient object) |
+| `path` | `void *` | \< NemaVG handle object (void pointer) \< NemaVG path handle (pointer to path object) |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_draw_nema_gfx_utils.h", "lv_draw_private.h", "lv_draw_buf_private.h", "lv_draw_image_private.h", "lv_image_decoder_private.h", "lv_draw_label_private.h", "lv_draw_mask.h", "lv_draw_rect_private.h", "lv_draw_triangle_private.h", "lv_draw_vector_private.h", "lv_draw_line.h", "lv_draw_arc.h", "lv_area_private.h"]}
+  includedBy={["lv_nema_gfx_path.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_instance.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_private.h", "lv_cache_sc_da.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_rect.h", "lv_draw_sw.h", "lv_draw_sw_blend.h", "lv_draw_sw_mask.h", "lv_draw_sw_utils.h", "lv_draw_triangle.h", "lv_draw_vector.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_cache.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_image_header_cache.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_os.h", "lv_os_private.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_pthread.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

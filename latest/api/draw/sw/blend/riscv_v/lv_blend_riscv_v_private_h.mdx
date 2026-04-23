@@ -1,0 +1,21 @@
+---
+title: lv_blend_riscv_v_private.h
+description: API reference for lv_blend_riscv_v_private.h
+---
+
+Common macros and utilities for RISC-V Vector Extension (RVV 1.0) blend operations
+
+This header provides reusable RVV macros for:
+- Segmented load/store operations (RGB888/XRGB8888/RGB565)
+- Alpha blending with scalar or vector alpha
+- Color format conversions (RGB565 \<-> RGB888)
+- Effective alpha calculations (alpha, mask, opa combinations)
+
+<RelatedHeaders name="lv_blend_riscv_v.h" isPrivate={true} />
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

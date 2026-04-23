@@ -1,0 +1,49 @@
+---
+title: "Message Box"
+order: 110
+---
+
+Modal dialog created with `lv_msgbox_create` that displays a title, text, and action buttons.
+
+## Modal message box with footer buttons
+
+<LvglExampleBrief>A modal "Hello" dialog with Apply and Cancel footer buttons and a close icon.</LvglExampleBrief>
+
+`lv_msgbox_create(NULL)` opens a modal message box on the top
+layer. `lv_msgbox_add_title` sets the title to `Hello`,
+`lv_msgbox_add_text` writes the body, and
+`lv_msgbox_add_close_button` installs the header close icon. Two
+`lv_msgbox_add_footer_button` calls add `Apply` and `Cancel`, each
+wired to a shared `LV_EVENT_CLICKED` handler that logs which label
+was tapped.
+
+<LvglExample name="lv_example_msgbox_1" path="widgets/msgbox/lv_example_msgbox_1" />
+
+## Settings dialog with minimize button
+
+<LvglExampleBrief>A 300x200 non-modal settings panel with Brightness and Speed sliders.</LvglExampleBrief>
+
+A non-modal `lv_msgbox` on the active screen gets a header with
+title `Setting`, a close icon, and a minus header button whose
+`LV_EVENT_CLICKED` handler hides the panel with
+`LV_OBJ_FLAG_HIDDEN`. `lv_msgbox_get_content` is flipped to
+`LV_FLEX_FLOW_COLUMN` and holds two column containers that pair a
+label with a full-width `lv_slider`, preset to Brightness 50 and
+Speed 80. The footer adds flex-growing `Apply` and `Cancel`
+buttons tinted indigo.
+
+<LvglExample name="lv_example_msgbox_2" path="widgets/msgbox/lv_example_msgbox_2" />
+
+## Blurred message box over background
+
+<LvglExampleBrief>Toggle a blur radius between the screen backdrop and the message box itself.</LvglExampleBrief>
+
+A long Lorem ipsum `lv_label` fills 60% width behind a translucent
+`lv_msgbox` placed on `lv_layer_top()` with a black header and
+body at `LV_OPA_40` and `blur_backdrop` enabled. A `lv_dropdown`
+offering `Blur screen` and `Blur msgbox` is anchored at (5, 5); its
+`LV_EVENT_VALUE_CHANGED` callback sets a blur radius of 24 on
+either `lv_layer_top()` or the message box. A synthetic event is
+sent to initialize the state.
+
+<LvglExample name="lv_example_msgbox_3" path="widgets/msgbox/lv_example_msgbox_3" />

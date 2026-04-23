@@ -1,0 +1,199 @@
+---
+title: lv_draw_ppa_private.h
+description: API reference for lv_draw_ppa_private.h
+api:
+  functions: [ppa_src_cf_supported, ppa_dest_cf_supported, lv_color_format_to_ppa_fill, lv_color_format_to_ppa_blend, lv_color_format_to_ppa_srm]
+  structs: [lv_draw_ppa_unit]
+  typedefs: [lv_draw_ppa_unit_t]
+  macros: [LV_PPA_NONBLOCKING_OPS, PPA_ALIGN_UP, PPA_PTR_ALIGN_UP, PPA_ALIGN_DOWN, PPA_PTR_ALIGN_DOWN]
+---
+
+<RelatedHeaders name="lv_draw_ppa.h" isPrivate={true} />
+
+<ApiSummary functions={5} structs={1} typedefs={1} macros={5} />
+
+## Functions
+
+<ApiMember kind="function" name="ppa_src_cf_supported" file="draw/espressif/ppa/lv_draw_ppa_private.h" line={87} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/espressif/ppa/lv_draw_ppa_private.h#L87">
+
+### ppa_src_cf_supported
+
+```c
+static bool ppa_src_cf_supported(lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cf` | <ApiLink name="lv_color_format_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="ppa_dest_cf_supported" file="draw/espressif/ppa/lv_draw_ppa_private.h" line={104} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/espressif/ppa/lv_draw_ppa_private.h#L104">
+
+### ppa_dest_cf_supported
+
+```c
+static bool ppa_dest_cf_supported(lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cf` | <ApiLink name="lv_color_format_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_format_to_ppa_fill" file="draw/espressif/ppa/lv_draw_ppa_private.h" line={121} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/espressif/ppa/lv_draw_ppa_private.h#L121">
+
+### lv_color_format_to_ppa_fill
+
+```c
+static ppa_fill_color_mode_t lv_color_format_to_ppa_fill(lv_color_format_t lv_fmt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `lv_fmt` | <ApiLink name="lv_color_format_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_format_to_ppa_blend" file="draw/espressif/ppa/lv_draw_ppa_private.h" line={135} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/espressif/ppa/lv_draw_ppa_private.h#L135">
+
+### lv_color_format_to_ppa_blend
+
+```c
+static ppa_blend_color_mode_t lv_color_format_to_ppa_blend(lv_color_format_t lv_fmt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `lv_fmt` | <ApiLink name="lv_color_format_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_format_to_ppa_srm" file="draw/espressif/ppa/lv_draw_ppa_private.h" line={149} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/espressif/ppa/lv_draw_ppa_private.h#L149">
+
+### lv_color_format_to_ppa_srm
+
+```c
+static ppa_srm_color_mode_t lv_color_format_to_ppa_srm(lv_color_format_t lv_fmt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `lv_fmt` | <ApiLink name="lv_color_format_t" /> |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_ppa_unit">
+
+### lv_draw_ppa_unit
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base_unit` | <ApiLink name="lv_draw_unit_t" /> |  |
+| `task_act` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |  |
+| `srm_client` | `ppa_client_handle_t` |  |
+| `fill_client` | `ppa_client_handle_t` |  |
+| `blend_client` | `ppa_client_handle_t` |  |
+| `buf` | <ApiLink name="uint8_t" display="uint8_t *" /> |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_draw_ppa_unit_t" file="draw/espressif/ppa/lv_draw_ppa_private.h" line={69} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/espressif/ppa/lv_draw_ppa_private.h#L69">
+
+### lv_draw_ppa_unit_t
+
+```c
+typedef struct lv_draw_ppa_unit lv_draw_ppa_unit_t
+```
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_PPA_NONBLOCKING_OPS" file="draw/espressif/ppa/lv_draw_ppa_private.h" line={24} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/espressif/ppa/lv_draw_ppa_private.h#L24">
+
+### LV_PPA_NONBLOCKING_OPS
+
+```c
+#define LV_PPA_NONBLOCKING_OPS 0
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PPA_ALIGN_UP" file="draw/espressif/ppa/lv_draw_ppa_private.h" line={163} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/espressif/ppa/lv_draw_ppa_private.h#L163">
+
+### PPA_ALIGN_UP
+
+```c
+#define PPA_ALIGN_UP(x, align) \
+    ((((x) + (align) - 1) / (align)) * (align))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PPA_PTR_ALIGN_UP" file="draw/espressif/ppa/lv_draw_ppa_private.h" line={164} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/espressif/ppa/lv_draw_ppa_private.h#L164">
+
+### PPA_PTR_ALIGN_UP
+
+```c
+#define PPA_PTR_ALIGN_UP(p, align) \
+    ((void*)(((uintptr_t)(p) + (uintptr_t)((align) - 1)) & ~(uintptr_t)((align) - 1)))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PPA_ALIGN_DOWN" file="draw/espressif/ppa/lv_draw_ppa_private.h" line={167} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/espressif/ppa/lv_draw_ppa_private.h#L167">
+
+### PPA_ALIGN_DOWN
+
+```c
+#define PPA_ALIGN_DOWN(x, align) \
+    ((((x) - (align) - 1) / (align)) * (align))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PPA_PTR_ALIGN_DOWN" file="draw/espressif/ppa/lv_draw_ppa_private.h" line={168} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/espressif/ppa/lv_draw_ppa_private.h#L168">
+
+### PPA_PTR_ALIGN_DOWN
+
+```c
+#define PPA_PTR_ALIGN_DOWN(p, align) \
+    ((void*)(((uintptr_t)(p) - (uintptr_t)((align) - 1)) & ~(uintptr_t)((align) - 1)))
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "stddef.h", "stdbool.h", "stdint.h", "lv_color.h", "lv_log.h", "lv_draw_private.h", "lv_display_private.h", "lv_area_private.h", "sdkconfig.h", "ppa.h", "esp_heap_caps.h", "esp_err.h", "color_hal.h", "esp_cache.h", "esp_log.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_instance.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_private.h", "lv_cache_sc_da.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_cache.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_image_header_cache.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_os.h", "lv_os_private.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_pthread.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_sysmon.h", "lv_sysmon_private.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

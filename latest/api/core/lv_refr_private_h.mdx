@@ -1,0 +1,152 @@
+---
+title: lv_refr_private.h
+description: API reference for lv_refr_private.h
+api:
+  functions: [lv_refr_init, lv_refr_deinit, lv_inv_area, lv_refr_get_disp_refreshing, lv_refr_set_disp_refreshing, lv_refr_get_top_obj, lv_obj_refr]
+---
+
+<RelatedHeaders name="lv_refr.h" isPrivate={true} />
+
+<ApiSummary functions={7} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Getters (2)","Other (4)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_refr_set_disp_refreshing" file="core/lv_refr_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_refr_private.h#L60">
+
+### lv_refr_set_disp_refreshing
+
+Set the display which is being refreshed
+
+```c
+void lv_refr_set_disp_refreshing(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | the display being refreshed |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (2)">
+
+<ApiMember kind="function" name="lv_refr_get_disp_refreshing" file="core/lv_refr_private.h" line={54} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_refr_private.h#L54">
+
+### lv_refr_get_disp_refreshing
+
+Get the display which is being refreshed
+
+```c
+lv_display_t * lv_refr_get_disp_refreshing(void)
+```
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — the display being refreshed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_refr_get_top_obj" file="core/lv_refr_private.h" line={68} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_refr_private.h#L68">
+
+### lv_refr_get_top_obj
+
+Search the most top object which fully covers an area
+
+```c
+lv_obj_t * lv_refr_get_top_obj(const lv_area_t *area_p, lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `area_p` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | pointer to an area |
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the first object to start the searching (typically a screen) |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (4)">
+
+<ApiMember kind="function" name="lv_refr_init" file="core/lv_refr_private.h" line={34} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_refr_private.h#L34">
+
+### lv_refr_init
+
+Initialize the screen refresh subsystem
+
+```c
+void lv_refr_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_refr_deinit" file="core/lv_refr_private.h" line={39} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_refr_private.h#L39">
+
+### lv_refr_deinit
+
+Deinitialize the screen refresh subsystem
+
+```c
+void lv_refr_deinit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_inv_area" file="core/lv_refr_private.h" line={48} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_refr_private.h#L48">
+
+### lv_inv_area
+
+Invalidate an area on display to redraw it
+
+```c
+lv_result_t lv_inv_area(lv_display_t *disp, const lv_area_t *area_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display where the area should be invalidated (NULL can be used if there is only one display) |
+| `area_p` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | pointer to area which should be invalidated (NULL: delete the invalidated areas) |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: the area is invalidated; LV_RESULT_INVALID: the area wasn't invalidated.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_refr" file="core/lv_refr_private.h" line={75} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_refr_private.h#L75">
+
+### lv_obj_refr
+
+Render an object to a layer
+
+```c
+void lv_obj_refr(lv_layer_t *layer, lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | target drawing layer |
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | object to render |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_refr.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

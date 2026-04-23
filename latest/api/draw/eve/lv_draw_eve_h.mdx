@@ -1,0 +1,58 @@
+---
+title: lv_draw_eve.h
+description: API reference for lv_draw_eve.h
+api:
+  functions: [lv_draw_eve_init, lv_draw_eve_set_display_data]
+---
+
+<RelatedHeaders name="lv_draw_eve_private.h" isPrivate={false} />
+
+<ApiSummary functions={2} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Other (1)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_draw_eve_set_display_data" file="draw/eve/lv_draw_eve.h" line={43} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/eve/lv_draw_eve.h#L43">
+
+### lv_draw_eve_set_display_data
+
+```c
+void lv_draw_eve_set_display_data(lv_display_t *disp, const lv_draw_eve_parameters_t *params, lv_draw_eve_operation_cb_t op_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `params` | <ApiLink name="lv_draw_eve_parameters_t" display="const lv_draw_eve_parameters_t *" /> |
+| `op_cb` | <ApiLink name="lv_draw_eve_operation_cb_t" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="lv_draw_eve_init" file="draw/eve/lv_draw_eve.h" line={41} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/eve/lv_draw_eve.h#L41">
+
+### lv_draw_eve_init
+
+```c
+void lv_draw_eve_init(void)
+```
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_draw_eve_target.h"]}
+  includedBy={["lv_draw_eve_private.h", "lv_draw_eve_ram_g.h", "lv_eve.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h", "lv_types.h"]}
+/>

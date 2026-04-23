@@ -1,0 +1,34 @@
+---
+title: "Table"
+order: 150
+---
+
+## Styled table with header and zebra rows
+
+<LvglExampleBrief>Two-column fruits-and-prices table with custom header, right-aligned first column, and alternating rows.</LvglExampleBrief>
+
+A `lv_table` is filled with fruit names in column 0 and dollar prices
+in column 1. The table height is capped at 200 px so the body
+scrolls. With `LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS` set, an
+`LV_EVENT_DRAW_TASK_ADDED` callback tints the header row blue and
+center-aligns its text, right-aligns the first column's labels, and
+adds a grey wash on every other body row by editing the
+`lv_draw_fill_dsc_t` and `lv_draw_label_dsc_t` of each
+`LV_PART_ITEMS` task.
+
+<LvglExample name="lv_example_table_1" path="widgets/table/lv_example_table_1" />
+
+## 200-row list with custom switch cell
+
+<LvglExampleBrief>Scrollable 200-item table that draws a toggle switch per row and reports build cost.</LvglExampleBrief>
+
+`lv_mem_monitor` and `lv_tick_get` bracket the creation of a one-column,
+200-row table to measure memory and time usage. Each row is filled
+with `lv_table_set_cell_value_fmt`. An `LV_EVENT_DRAW_TASK_ADDED`
+handler intercepts each `LV_PART_ITEMS` fill task and paints a pill
+track and knob whose position and color reflect the row's
+`LV_TABLE_CELL_CTRL_CUSTOM_1` flag. An `LV_EVENT_VALUE_CHANGED`
+handler toggles that flag on the selected row. A bottom label reports
+the row count along with elapsed time and bytes used.
+
+<LvglExample name="lv_example_table_2" path="widgets/table/lv_example_table_2" />

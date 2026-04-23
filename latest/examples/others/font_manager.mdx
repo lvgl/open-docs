@@ -1,0 +1,47 @@
+---
+title: "Font Manager"
+order: 10
+---
+
+Load fonts at runtime and configure fallback chains, including image-based fonts.
+
+## Font manager with a FreeType source
+
+<LvglExampleBrief>Register a TTF path with the font manager and render a label with it.</LvglExampleBrief>
+
+`lv_font_manager_create(8)` builds a manager with an 8-slot recycling cache.
+`lv_font_manager_add_src_static` maps the name `"Lato-Regular"` to
+`Lato-Regular.ttf` through `lv_freetype_font_class`. `lv_font_manager_create_font`
+then resolves that name at size 24 with `LV_FREETYPE_FONT_RENDER_MODE_BITMAP`,
+`LV_FREETYPE_FONT_STYLE_NORMAL`, and `LV_FONT_KERNING_NONE`. The returned font
+is applied as the text font of a centered label reading "Hello Font Manager!".
+
+<LvglExample name="lv_example_font_manager_1" path="others/font_manager/lv_example_font_manager_1" />
+
+## Font fallback across multiple sources
+
+<LvglExampleBrief>Combine a TinyTTF, a FreeType emoji font, and built-in Montserrat into one fallback chain.</LvglExampleBrief>
+
+Up to three sources are registered with `lv_font_manager_add_src_static`:
+Montserrat 14 and 32 through `lv_builtin_font_class`, `NotoColorEmoji-32.subset.ttf`
+through `lv_freetype_font_class`, and `Ubuntu-Medium.ttf` through
+`lv_tiny_ttf_font_class`. `lv_font_manager_create_font` asks for the comma-joined
+chain `"Ubuntu-Medium,NotoColorEmoji,Montserrat"` at size 32, producing a font
+that falls through each source. A centered label uses it to render ASCII text,
+an emoji, and `LV_SYMBOL_OK`.
+
+<LvglExample name="lv_example_font_manager_2" path="others/font_manager/lv_example_font_manager_2" />
+
+## Custom image font class
+
+<LvglExampleBrief>Register a user-defined imgfont class that only matches a size range.</LvglExampleBrief>
+
+The file defines an `lv_font_class_t` whose `create_cb` returns a font from
+`lv_imgfont_create` only when the requested size falls between
+`match_size_min` and `match_size_max` (70 to 80). That class is registered as
+`"Emoji"` alongside a FreeType `"Lato-Regular"` source.
+`lv_font_manager_create_font` builds the chain `"Lato-Regular,Emoji"` at size 75,
+and a centered label renders `"Quiet\uF617~"` with the emoji glyph coming from
+the image source.
+
+<LvglExample name="lv_example_font_manager_3" path="others/font_manager/lv_example_font_manager_3" />

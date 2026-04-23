@@ -1,0 +1,16 @@
+---
+title: "Tiny JPEG Decompressor (TJpgDec)"
+order: 50
+---
+
+Small-footprint JPEG decoder suited for memory-constrained targets. Enable with `LV_USE_TJPGD` in `lv_conf.h`.
+
+## Decode JPEG with TJpgDec
+
+<LvglExampleBrief>Load a JPEG file through the TJpgDec decoder and center it on the screen.</LvglExampleBrief>
+
+An image widget is created on the active screen with its source set to
+`A:test_img_lvgl_logo.jpg`, so the TJpgDec image decoder reads the file
+through the filesystem driver registered under drive letter `A`.
+
+<LvglExample name="lv_example_tjpgd_1" path="libs/tjpgd/lv_example_tjpgd_1" />

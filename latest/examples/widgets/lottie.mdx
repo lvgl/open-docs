@@ -1,0 +1,32 @@
+---
+title: "Lottie"
+order: 100
+---
+
+## Lottie animation from memory
+
+<LvglExampleBrief>Play a Lottie JSON animation embedded as a C byte array.</LvglExampleBrief>
+
+An `lv_lottie` widget on the active screen receives the approve
+animation through `lv_lottie_set_src_data`, pointing at the
+`lv_example_lottie_approve` byte array and its size. A 64x64
+ARGB8888 premultiplied buffer is attached with
+`lv_lottie_set_buffer` when the draw buffer alignment allows, or an
+`LV_DRAW_BUF_DEFINE_STATIC` draw buffer via `lv_lottie_set_draw_buf`
+otherwise, then the widget is centered.
+
+<LvglExample name="lv_example_lottie_1" path="widgets/lottie/lv_example_lottie_1" />
+
+## Lottie animation from file path
+
+<LvglExampleBrief>Play a Lottie JSON animation loaded through the filesystem driver.</LvglExampleBrief>
+
+An `lv_lottie` widget is created on the active screen and receives
+its source through `lv_lottie_set_src_file`, pointing at
+`lvgl/examples/widgets/lottie/lv_example_lottie_approve.json`, so a
+filesystem driver for the working directory must be registered. A
+64x64 ARGB8888 premultiplied buffer is attached via
+`lv_lottie_set_buffer` or `lv_lottie_set_draw_buf` depending on the
+draw buffer alignment, then the widget is centered.
+
+<LvglExample name="lv_example_lottie_2" path="widgets/lottie/lv_example_lottie_2" />

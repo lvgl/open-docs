@@ -1,0 +1,97 @@
+---
+title: lv_gltf_environment_private.h
+description: API reference for lv_gltf_environment_private.h
+api:
+  structs: [_lv_gltf_ibl_sampler, lv_gltf_ibl_texture_t, lv_gltf_ibl_image_t, _lv_gltf_environment]
+---
+
+<RelatedHeaders name="lv_gltf_environment.h" isPrivate={true} />
+
+<ApiSummary structs={4} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_gltf_ibl_sampler">
+
+### _lv_gltf_ibl_sampler
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `cube_map_resolution` | <ApiLink name="uint32_t" /> |  |
+| `lod_bias` | `float` |  |
+| `lowest_mip_level` | <ApiLink name="uint32_t" /> |  |
+| `input_texture_id` | <ApiLink name="uint32_t" /> |  |
+| `cube_map_texture_id` | <ApiLink name="uint32_t" /> |  |
+| `framebuffer` | <ApiLink name="uint32_t" /> |  |
+| `mipmap_count` | <ApiLink name="uint32_t" /> |  |
+| `lambertian_texture_id` | <ApiLink name="uint32_t" /> |  |
+| `lambertian_sample_count` | <ApiLink name="uint32_t" /> |  |
+| `ggx_sample_count` | <ApiLink name="uint32_t" /> |  |
+| `ggx_texture_id` | <ApiLink name="uint32_t" /> |  |
+| `sheen_texture_id` | <ApiLink name="uint32_t" /> |  |
+| `sheen_sample_count` | <ApiLink name="uint32_t" /> |  |
+| `ggxlut_texture_id` | <ApiLink name="uint32_t" /> |  |
+| `lut_sample_count` | <ApiLink name="uint32_t" /> |  |
+| `lut_resolution` | <ApiLink name="uint32_t" /> |  |
+| `charlielut_texture_id` | <ApiLink name="uint32_t" /> |  |
+| `scale_value` | `float` |  |
+| `mipmap_levels` | <ApiLink name="uint32_t" /> |  |
+| `shader_manager` | <ApiLink name="lv_opengl_shader_manager_t" /> |  |
+| `fullscreen_vertex_buffer` | <ApiLink name="uint32_t" /> |  |
+| `fullscreen_tex_coord_buffer` | <ApiLink name="uint32_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_gltf_ibl_texture_t">
+
+### lv_gltf_ibl_texture_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `data` | <ApiLink name="uint8_t" display="uint8_t *" /> |  |
+| `internal_format` | <ApiLink name="uint32_t" /> |  |
+| `format` | <ApiLink name="uint32_t" /> |  |
+| `type` | <ApiLink name="uint32_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_gltf_ibl_image_t">
+
+### lv_gltf_ibl_image_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `data` | `float *` |  |
+| `data_len` | <ApiLink name="size_t" /> |  |
+| `width` | <ApiLink name="uint32_t" /> |  |
+| `height` | <ApiLink name="uint32_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_gltf_environment">
+
+### _lv_gltf_environment
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `diffuse` | <ApiLink name="uint32_t" /> |  |
+| `specular` | <ApiLink name="uint32_t" /> |  |
+| `sheen` | <ApiLink name="uint32_t" /> |  |
+| `ggxLut` | <ApiLink name="uint32_t" /> |  |
+| `charlie_lut` | <ApiLink name="uint32_t" /> |  |
+| `mip_count` | <ApiLink name="uint32_t" /> |  |
+| `ibl_intensity_scale` | `float` |  |
+| `angle` | `float` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_gltf_environment.h", "lv_types.h", "lv_opengl_shader_internal.h"]}
+  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_opengles_debug.h", "lv_opengles_private.h", "lv_palette.h", "lv_rb.h", "lv_rb_private.h", "lv_string.h"]}
+/>

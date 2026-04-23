@@ -1,0 +1,660 @@
+---
+title: lv_vg_lite_path.h
+description: API reference for lv_vg_lite_path.h
+api:
+  functions: [lv_vg_lite_path_init, lv_vg_lite_path_deinit, lv_vg_lite_path_create, lv_vg_lite_path_destroy, lv_vg_lite_path_get, lv_vg_lite_path_drop, lv_vg_lite_path_reset, lv_vg_lite_path_set_bounding_box_area, lv_vg_lite_path_set_bounding_box, lv_vg_lite_path_get_bounding_box, lv_vg_lite_path_update_bounding_box, lv_vg_lite_path_set_transform, lv_vg_lite_path_set_quality, lv_vg_lite_path_get_path, lv_vg_lite_path_reserve_space, lv_vg_lite_path_move_to, lv_vg_lite_path_line_to, lv_vg_lite_path_quad_to, lv_vg_lite_path_cubic_to, lv_vg_lite_path_close, lv_vg_lite_path_end, lv_vg_lite_path_append_rect, lv_vg_lite_path_append_circle, lv_vg_lite_path_append_arc_right_angle, lv_vg_lite_path_append_arc, lv_vg_lite_path_append_path, lv_vg_lite_vlc_op_arg_len, lv_vg_lite_path_format_len, lv_vg_lite_path_for_each_data]
+  typedefs: [lv_vg_lite_path_t, lv_vg_lite_path_iter_cb_t]
+  macros: [LV_VG_LITE_PATH_SET_OP_CODE, LV_VG_LITE_PATH_GET_OP_CODE]
+---
+
+<ApiSummary functions={29} typedefs={2} macros={2} />
+
+## Functions
+
+<ApiTabs items={["Setters (4)","Getters (3)","Other (22)"]}>
+<ApiTab value="Setters (4)">
+
+<ApiMember kind="function" name="lv_vg_lite_path_set_bounding_box_area" file="draw/vg_lite/lv_vg_lite_path.h" line={55} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L55">
+
+### lv_vg_lite_path_set_bounding_box_area
+
+```c
+void lv_vg_lite_path_set_bounding_box_area(lv_vg_lite_path_t *path, const lv_area_t *area)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_set_bounding_box" file="draw/vg_lite/lv_vg_lite_path.h" line={57} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L57">
+
+### lv_vg_lite_path_set_bounding_box
+
+```c
+void lv_vg_lite_path_set_bounding_box(lv_vg_lite_path_t *path, float min_x, float min_y, float max_x, float max_y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `min_x` | `float` |
+| `min_y` | `float` |
+| `max_x` | `float` |
+| `max_y` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_set_transform" file="draw/vg_lite/lv_vg_lite_path.h" line={67} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L67">
+
+### lv_vg_lite_path_set_transform
+
+```c
+void lv_vg_lite_path_set_transform(lv_vg_lite_path_t *path, const vg_lite_matrix_t *matrix)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `matrix` | `const vg_lite_matrix_t *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_set_quality" file="draw/vg_lite/lv_vg_lite_path.h" line={69} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L69">
+
+### lv_vg_lite_path_set_quality
+
+```c
+void lv_vg_lite_path_set_quality(lv_vg_lite_path_t *path, vg_lite_quality_t quality)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `quality` | `vg_lite_quality_t` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (3)">
+
+<ApiMember kind="function" name="lv_vg_lite_path_get" file="draw/vg_lite/lv_vg_lite_path.h" line={49} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L49">
+
+### lv_vg_lite_path_get
+
+```c
+lv_vg_lite_path_t * lv_vg_lite_path_get(struct _lv_draw_vg_lite_unit_t *unit, vg_lite_format_t data_format)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> |
+| `data_format` | `vg_lite_format_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_get_bounding_box" file="draw/vg_lite/lv_vg_lite_path.h" line={61} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L61">
+
+### lv_vg_lite_path_get_bounding_box
+
+```c
+void lv_vg_lite_path_get_bounding_box(lv_vg_lite_path_t *path, float *min_x, float *min_y, float *max_x, float *max_y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `min_x` | `float *` |
+| `min_y` | `float *` |
+| `max_x` | `float *` |
+| `max_y` | `float *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_get_path" file="draw/vg_lite/lv_vg_lite_path.h" line={71} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L71">
+
+### lv_vg_lite_path_get_path
+
+```c
+vg_lite_path_t * lv_vg_lite_path_get_path(lv_vg_lite_path_t *path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (22)">
+
+<ApiMember kind="function" name="lv_vg_lite_path_init" file="draw/vg_lite/lv_vg_lite_path.h" line={41} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L41">
+
+### lv_vg_lite_path_init
+
+```c
+void lv_vg_lite_path_init(struct _lv_draw_vg_lite_unit_t *unit)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_deinit" file="draw/vg_lite/lv_vg_lite_path.h" line={43} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L43">
+
+### lv_vg_lite_path_deinit
+
+```c
+void lv_vg_lite_path_deinit(struct _lv_draw_vg_lite_unit_t *unit)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_create" file="draw/vg_lite/lv_vg_lite_path.h" line={45} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L45">
+
+### lv_vg_lite_path_create
+
+```c
+lv_vg_lite_path_t * lv_vg_lite_path_create(vg_lite_format_t data_format)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data_format` | `vg_lite_format_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_destroy" file="draw/vg_lite/lv_vg_lite_path.h" line={47} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L47">
+
+### lv_vg_lite_path_destroy
+
+```c
+void lv_vg_lite_path_destroy(lv_vg_lite_path_t *path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_drop" file="draw/vg_lite/lv_vg_lite_path.h" line={51} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L51">
+
+### lv_vg_lite_path_drop
+
+```c
+void lv_vg_lite_path_drop(struct _lv_draw_vg_lite_unit_t *unit, lv_vg_lite_path_t *path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> |
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_reset" file="draw/vg_lite/lv_vg_lite_path.h" line={53} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L53">
+
+### lv_vg_lite_path_reset
+
+```c
+void lv_vg_lite_path_reset(lv_vg_lite_path_t *path, vg_lite_format_t data_format)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `data_format` | `vg_lite_format_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_update_bounding_box" file="draw/vg_lite/lv_vg_lite_path.h" line={65} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L65">
+
+### lv_vg_lite_path_update_bounding_box
+
+```c
+bool lv_vg_lite_path_update_bounding_box(lv_vg_lite_path_t *path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_reserve_space" file="draw/vg_lite/lv_vg_lite_path.h" line={73} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L73">
+
+### lv_vg_lite_path_reserve_space
+
+```c
+void lv_vg_lite_path_reserve_space(lv_vg_lite_path_t *path, size_t len)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `len` | <ApiLink name="size_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_move_to" file="draw/vg_lite/lv_vg_lite_path.h" line={75} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L75">
+
+### lv_vg_lite_path_move_to
+
+```c
+void lv_vg_lite_path_move_to(lv_vg_lite_path_t *path, float x, float y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `x` | `float` |
+| `y` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_line_to" file="draw/vg_lite/lv_vg_lite_path.h" line={78} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L78">
+
+### lv_vg_lite_path_line_to
+
+```c
+void lv_vg_lite_path_line_to(lv_vg_lite_path_t *path, float x, float y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `x` | `float` |
+| `y` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_quad_to" file="draw/vg_lite/lv_vg_lite_path.h" line={81} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L81">
+
+### lv_vg_lite_path_quad_to
+
+```c
+void lv_vg_lite_path_quad_to(lv_vg_lite_path_t *path, float cx, float cy, float x, float y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `cx` | `float` |
+| `cy` | `float` |
+| `x` | `float` |
+| `y` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_cubic_to" file="draw/vg_lite/lv_vg_lite_path.h" line={85} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L85">
+
+### lv_vg_lite_path_cubic_to
+
+```c
+void lv_vg_lite_path_cubic_to(lv_vg_lite_path_t *path, float cx1, float cy1, float cx2, float cy2, float x, float y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `cx1` | `float` |
+| `cy1` | `float` |
+| `cx2` | `float` |
+| `cy2` | `float` |
+| `x` | `float` |
+| `y` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_close" file="draw/vg_lite/lv_vg_lite_path.h" line={90} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L90">
+
+### lv_vg_lite_path_close
+
+```c
+void lv_vg_lite_path_close(lv_vg_lite_path_t *path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_end" file="draw/vg_lite/lv_vg_lite_path.h" line={92} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L92">
+
+### lv_vg_lite_path_end
+
+```c
+void lv_vg_lite_path_end(lv_vg_lite_path_t *path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_append_rect" file="draw/vg_lite/lv_vg_lite_path.h" line={94} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L94">
+
+### lv_vg_lite_path_append_rect
+
+```c
+void lv_vg_lite_path_append_rect(lv_vg_lite_path_t *path, float x, float y, float w, float h, float r)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `x` | `float` |
+| `y` | `float` |
+| `w` | `float` |
+| `h` | `float` |
+| `r` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_append_circle" file="draw/vg_lite/lv_vg_lite_path.h" line={99} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L99">
+
+### lv_vg_lite_path_append_circle
+
+```c
+void lv_vg_lite_path_append_circle(lv_vg_lite_path_t *path, float cx, float cy, float rx, float ry)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `cx` | `float` |
+| `cy` | `float` |
+| `rx` | `float` |
+| `ry` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_append_arc_right_angle" file="draw/vg_lite/lv_vg_lite_path.h" line={103} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L103">
+
+### lv_vg_lite_path_append_arc_right_angle
+
+```c
+void lv_vg_lite_path_append_arc_right_angle(lv_vg_lite_path_t *path, float start_x, float start_y, float center_x, float center_y, float end_x, float end_y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `start_x` | `float` |
+| `start_y` | `float` |
+| `center_x` | `float` |
+| `center_y` | `float` |
+| `end_x` | `float` |
+| `end_y` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_append_arc" file="draw/vg_lite/lv_vg_lite_path.h" line={108} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L108">
+
+### lv_vg_lite_path_append_arc
+
+```c
+void lv_vg_lite_path_append_arc(lv_vg_lite_path_t *path, float cx, float cy, float radius, float start_angle, float sweep, bool pie)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `cx` | `float` |
+| `cy` | `float` |
+| `radius` | `float` |
+| `start_angle` | `float` |
+| `sweep` | `float` |
+| `pie` | <ApiLink name="bool" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_append_path" file="draw/vg_lite/lv_vg_lite_path.h" line={115} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L115">
+
+### lv_vg_lite_path_append_path
+
+```c
+void lv_vg_lite_path_append_path(lv_vg_lite_path_t *dest, const lv_vg_lite_path_t *src)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dest` | <ApiLink name="lv_vg_lite_path_t" display="lv_vg_lite_path_t *" /> |
+| `src` | <ApiLink name="lv_vg_lite_path_t" display="const lv_vg_lite_path_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_vlc_op_arg_len" file="draw/vg_lite/lv_vg_lite_path.h" line={117} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L117">
+
+### lv_vg_lite_vlc_op_arg_len
+
+```c
+uint8_t lv_vg_lite_vlc_op_arg_len(uint8_t vlc_op)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `vlc_op` | <ApiLink name="uint8_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_format_len" file="draw/vg_lite/lv_vg_lite_path.h" line={119} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L119">
+
+### lv_vg_lite_path_format_len
+
+```c
+uint8_t lv_vg_lite_path_format_len(vg_lite_format_t format)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `format` | `vg_lite_format_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_path_for_each_data" file="draw/vg_lite/lv_vg_lite_path.h" line={121} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L121">
+
+### lv_vg_lite_path_for_each_data
+
+```c
+void lv_vg_lite_path_for_each_data(const vg_lite_path_t *path, lv_vg_lite_path_iter_cb_t cb, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `path` | `const vg_lite_path_t *` |
+| `cb` | <ApiLink name="lv_vg_lite_path_iter_cb_t" /> |
+| `user_data` | `void *` |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_vg_lite_path_t" file="draw/vg_lite/lv_vg_lite_path.h" line={32} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L32">
+
+### lv_vg_lite_path_t
+
+```c
+typedef struct _lv_vg_lite_path_t lv_vg_lite_path_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_vg_lite_path_t" count={23}>
+
+- `lv_vg_lite_path_destroy` — param `path`
+- `lv_vg_lite_path_drop` — param `path`
+- `lv_vg_lite_path_reset` — param `path`
+- `lv_vg_lite_path_set_bounding_box_area` — param `path`
+- `lv_vg_lite_path_set_bounding_box` — param `path`
+- `lv_vg_lite_path_get_bounding_box` — param `path`
+- `lv_vg_lite_path_update_bounding_box` — param `path`
+- `lv_vg_lite_path_set_transform` — param `path`
+- `lv_vg_lite_path_set_quality` — param `path`
+- `lv_vg_lite_path_get_path` — param `path`
+- `lv_vg_lite_path_reserve_space` — param `path`
+- `lv_vg_lite_path_move_to` — param `path`
+- `lv_vg_lite_path_line_to` — param `path`
+- `lv_vg_lite_path_quad_to` — param `path`
+- `lv_vg_lite_path_cubic_to` — param `path`
+- `lv_vg_lite_path_close` — param `path`
+- `lv_vg_lite_path_end` — param `path`
+- `lv_vg_lite_path_append_rect` — param `path`
+- `lv_vg_lite_path_append_circle` — param `path`
+- `lv_vg_lite_path_append_arc_right_angle` — param `path`
+- `lv_vg_lite_path_append_arc` — param `path`
+- `lv_vg_lite_path_append_path` — param `dest`
+- `lv_vg_lite_path_append_path` — param `src`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_vg_lite_path_iter_cb_t" file="draw/vg_lite/lv_vg_lite_path.h" line={35} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L35">
+
+### lv_vg_lite_path_iter_cb_t
+
+```c
+typedef void(* lv_vg_lite_path_iter_cb_t) (void *user_data, uint8_t op_code, const float *data, uint32_t len)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_vg_lite_path_iter_cb_t" count={1}>
+
+- `lv_vg_lite_path_for_each_data` — param `cb`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_VG_LITE_PATH_SET_OP_CODE" file="draw/vg_lite/lv_vg_lite_path.h" line={25} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L25">
+
+### LV_VG_LITE_PATH_SET_OP_CODE
+
+```c
+#define LV_VG_LITE_PATH_SET_OP_CODE(PTR, TYPE, OP_CODE) \
+    (*((TYPE*)PTR) = (OP_CODE))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_VG_LITE_PATH_GET_OP_CODE" file="draw/vg_lite/lv_vg_lite_path.h" line={26} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/vg_lite/lv_vg_lite_path.h#L26">
+
+### LV_VG_LITE_PATH_GET_OP_CODE
+
+```c
+#define LV_VG_LITE_PATH_GET_OP_CODE(PTR) \
+    (*((uint8_t*)PTR))
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_vg_lite_utils.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_grad.h", "lv_grid.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

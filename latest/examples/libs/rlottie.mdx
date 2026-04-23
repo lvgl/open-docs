@@ -1,0 +1,28 @@
+---
+title: "rlottie"
+order: 55
+---
+
+Plays Lottie vector animations inside LVGL widgets. Enable with `LV_USE_RLOTTIE` in `lv_conf.h`.
+
+## Rlottie animation from array
+
+<LvglExampleBrief>Play a Lottie animation decoded from a JSON byte array in flash.</LvglExampleBrief>
+
+`lv_rlottie_create_from_raw` builds a 100x100 Lottie widget from the
+externally declared `lv_example_rlottie_approve` JSON data, and the
+widget is centered on the active screen.
+
+<LvglExample name="lv_example_rlottie_1" path="libs/rlottie/lv_example_rlottie_1" />
+
+## Rlottie animation from file
+
+<LvglExampleBrief>Play a Lottie JSON file loaded directly through the rlottie stdio path.</LvglExampleBrief>
+
+`lv_rlottie_create_from_file` opens
+`lvgl/examples/libs/rlottie/lv_example_rlottie_approve.json` as a 100x100
+widget centered on the active screen. The path has no LVGL drive letter
+because rlottie reads the file through its own STDIO API rather than
+through the LVGL filesystem.
+
+<LvglExample name="lv_example_rlottie_2" path="libs/rlottie/lv_example_rlottie_2" />

@@ -1,0 +1,11 @@
+{
+  "title": "Indev",
+  "pages": [
+    "lv_gridnav_h",
+    "lv_indev_gesture_h",
+    "lv_indev_gesture_private_h",
+    "lv_indev_h",
+    "lv_indev_private_h",
+    "lv_indev_scroll_h"
+  ]
+}

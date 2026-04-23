@@ -1,0 +1,142 @@
+---
+title: lv_checkbox.h
+description: API reference for lv_checkbox.h
+api:
+  functions: [lv_checkbox_create, lv_checkbox_set_text, lv_checkbox_set_text_static, lv_checkbox_get_text]
+  enums: [_lv_property_checkbox_id_t]
+  variables: [lv_checkbox_class]
+---
+
+<RelatedHeaders name="lv_checkbox_private.h" isPrivate={false} />
+
+<ApiSummary functions={4} enums={1} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Getters (1)","Other (1)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_checkbox_set_text" file="widgets/checkbox/lv_checkbox.h" line={55} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/checkbox/lv_checkbox.h#L55">
+
+### lv_checkbox_set_text
+
+Set the text of a check box. `txt` will be copied and may be deallocated after this function returns.
+
+```c
+void lv_checkbox_set_text(lv_obj_t *obj, const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a check box |
+| `txt` | `const char *` | the text of the check box. NULL to refresh with the current text. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_checkbox_set_text_static" file="widgets/checkbox/lv_checkbox.h" line={63} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/checkbox/lv_checkbox.h#L63">
+
+### lv_checkbox_set_text_static
+
+Set the text of a check box. `txt` must not be deallocated during the life of this checkbox.
+
+```c
+void lv_checkbox_set_text_static(lv_obj_t *obj, const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a check box |
+| `txt` | `const char *` | the text of the check box. |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_checkbox_get_text" file="widgets/checkbox/lv_checkbox.h" line={74} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/checkbox/lv_checkbox.h#L74">
+
+### lv_checkbox_get_text
+
+Get the text of a check box
+
+```c
+const char * lv_checkbox_get_text(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to check box object |
+
+**Returns:** `const char *` — pointer to the text of the check box
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="lv_checkbox_create" file="widgets/checkbox/lv_checkbox.h" line={43} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/checkbox/lv_checkbox.h#L43">
+
+### lv_checkbox_create
+
+Create a check box object
+
+```c
+lv_obj_t * lv_checkbox_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new button |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created check box
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="_lv_property_checkbox_id_t" file="widgets/checkbox/lv_checkbox.h" line={28} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/checkbox/lv_checkbox.h#L28">
+
+### _lv_property_checkbox_id_t
+
+| Name | Value |
+|------|------|
+| `LV_PROPERTY_CHECKBOX_TEXT` | `(LV_PROPERTY_CHECKBOX_START + ((int) 0 )) \| ((  7   ) <<  28 )` |
+| `LV_PROPERTY_CHECKBOX_END` |  |
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_checkbox_class" file="widgets/checkbox/lv_checkbox.h" line={25} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/checkbox/lv_checkbox.h#L25">
+
+### lv_checkbox_class
+
+```c
+const lv_obj_class_t lv_checkbox_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_obj.h"]}
+  includedBy={["lv_checkbox_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

@@ -1,0 +1,177 @@
+---
+title: "Scale"
+order: 120
+---
+
+Linear or circular axis with tick marks and labels, used as a standalone ruler or as a base for gauges.
+
+## Horizontal scale with labels
+
+<LvglExampleBrief>Place a bottom-labelled horizontal scale across 80% of the screen.</LvglExampleBrief>
+
+A scale is created with `LV_SCALE_MODE_HORIZONTAL_BOTTOM`, sized to
+80% width and 100 px height, and centered. It has 31 ticks with every
+fifth promoted to a major tick, minor ticks 5 px long and major ticks
+10 px long, and a value range from 10 to 40.
+
+<LvglExample name="lv_example_scale_1" path="widgets/scale/lv_example_scale_1" />
+
+## Vertical scale with red upper band
+
+<LvglExampleBrief>Celsius-labelled right-side vertical scale turning red above 75.</LvglExampleBrief>
+
+A 60 by 200 scale uses `LV_SCALE_MODE_VERTICAL_RIGHT` with 21 ticks
+(major every fifth) over the range 0 to 100 and a custom label array
+(`0 °C` through `100 °C`). Blue styles are applied to
+`LV_PART_MAIN`, `LV_PART_INDICATOR`, and `LV_PART_ITEMS`, and a red
+section covering 75 to 100 overrides those styles via
+`lv_scale_add_section`. A translucent blue-grey background rounds out
+the widget with padding and corner radius.
+
+<LvglExample name="lv_example_scale_2" path="widgets/scale/lv_example_scale_2" />
+
+## Round scales with animated needles
+
+<LvglExampleBrief>Two round inner scales driven by looping line and image needles.</LvglExampleBrief>
+
+Two 150 by 150 scales use `LV_SCALE_MODE_ROUND_INNER` with a 270
+degree range rotated to 135 degrees, 31 ticks, and the range 10 to
+40. The left scale attaches an `lv_line` needle driven by
+`lv_scale_set_line_needle_value`; the right one attaches an
+`lv_image` needle (`img_hand`) driven by
+`lv_scale_set_image_needle_value`. Both needles animate between 10
+and 40 on an infinite 1000 ms forward and 1000 ms reverse loop.
+
+<LvglExample name="lv_example_scale_3" path="widgets/scale/lv_example_scale_3" />
+
+## Round outer scale with red upper band
+
+<LvglExampleBrief>Celsius-labelled round outer scale turning red above 75.</LvglExampleBrief>
+
+A 150 by 150 scale uses `LV_SCALE_MODE_ROUND_OUTER` with 21 ticks
+(major every fifth), the range 0 to 100, and a custom label array
+(`0 °C` through `100 °C`). Blue styles are applied to
+`LV_PART_MAIN` (as an arc), `LV_PART_INDICATOR`, and `LV_PART_ITEMS`;
+a section from 75 to 100 overrides those with red arc and tick
+styles via `lv_scale_add_section`.
+
+<LvglExample name="lv_example_scale_4" path="widgets/scale/lv_example_scale_4" />
+
+## Custom labels and hex-coloured styles
+
+<LvglExampleBrief>Default-mode scale with two named ticks and a magenta/red/blue palette.</LvglExampleBrief>
+
+A scale sized to half the display resolution carries 10 total ticks
+(major every fifth) across the range 25 to 35, with two custom
+labels `One` and `Two`. Styles set via `lv_color_hex` colour the main
+line blue, the minor ticks red, and the major tick labels magenta
+with green tick lines. A section from 25 to 30 overrides the
+indicator and items styles with spaced red text and blue minor
+ticks.
+
+<LvglExample name="lv_example_scale_5" path="widgets/scale/lv_example_scale_5" />
+
+## Analog clock face with two hands
+
+<LvglExampleBrief>Round inner scale that advances minute and hour hands on a timer.</LvglExampleBrief>
+
+A 150 by 150 scale uses `LV_SCALE_MODE_ROUND_INNER` with a 360
+degree range rotated to 270 degrees, 61 ticks (major every fifth),
+and hour labels `12` through `11`. Two `lv_line` hands are added:
+the white minute hand stores its points in a caller-owned buffer via
+`lv_line_set_points_mutable`, while the red hour hand lets the scale
+allocate points internally. A 250 ms `lv_timer` advances the clock
+by one minute per tick, re-positioning both hands with
+`lv_scale_set_line_needle_value`.
+
+<LvglExample name="lv_example_scale_6" path="widgets/scale/lv_example_scale_6" />
+
+## Rainbow major-tick labels via draw task
+
+<LvglExampleBrief>Recolour and reformat scale labels during `LV_EVENT_DRAW_TASK_ADDED`.</LvglExampleBrief>
+
+A horizontal-bottom scale (80% width, 100 px tall, 31 ticks, range
+10 to 40) enables `LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS` and subscribes
+to `LV_EVENT_DRAW_TASK_ADDED`. The callback inspects each draw
+task targeting `LV_PART_INDICATOR`, rewrites the label text to a
+one-decimal value formatted from `id2`, picks one of seven palette
+colours by tick index, and expands the draw area to fit the new
+text width.
+
+<LvglExample name="lv_example_scale_7" path="widgets/scale/lv_example_scale_7" />
+
+## Round scale with rotated upright labels
+
+<LvglExampleBrief>Round inner scale whose labels follow ticks while staying upright.</LvglExampleBrief>
+
+A 150 by 150 scale uses `LV_SCALE_MODE_ROUND_INNER` with a 270
+degree range rotated to 135 degrees, 31 ticks over the range 10 to
+40. The indicator part applies
+`LV_SCALE_LABEL_ROTATE_MATCH_TICKS | LV_SCALE_LABEL_ROTATE_KEEP_UPRIGHT`,
+a 10 px horizontal translate, a 15 px tick length, and a 10 px
+radial offset. Minor ticks get a 10 px length, a 5 px radial offset,
+and 50% line opacity. A static `lv_line` needle is anchored at
+value 33.
+
+<LvglExample name="lv_example_scale_8" path="widgets/scale/lv_example_scale_8" />
+
+## Tilted major ticks on horizontal scale
+
+<LvglExampleBrief>Horizontal scale whose major ticks rotate 45 degrees with a translate offset.</LvglExampleBrief>
+
+A 200 by 100 horizontal-bottom scale carries 31 ticks (major every
+fifth) over the range 10 to 40. The indicator part receives a
+transform rotation of 450 (45.0 degrees), a 30 px tick length, and a
+5 px x-translate, leaning each major tick and its label away from
+vertical. Minor ticks keep a 5 px length and straight orientation.
+
+<LvglExample name="lv_example_scale_9" path="widgets/scale/lv_example_scale_9" />
+
+## Heart-rate zone gauge with animated needle
+
+<LvglExampleBrief>Round inner scale coloured by five heart-rate zones with a bpm readout.</LvglExampleBrief>
+
+A 200 by 200 scale uses `LV_SCALE_MODE_ROUND_INNER` over the range
+98 to 195 bpm with a 280 degree sweep rotated to 130 degrees and
+15 ticks (major every third). Five sections colour the arc grey,
+blue, green, orange, and red for zones 1 through 5, and a black
+`lv_line` needle is placed with `lv_scale_set_line_needle_value`. A
+centred circular overlay holds a flex-column container with a
+Montserrat 40 bpm value and a Montserrat 18 `bpm` label. An 80 ms
+`lv_timer` sweeps the displayed heart rate between 98 and 195,
+updating the needle, the value, and the zone-matching text colour.
+
+<LvglExample name="lv_example_scale_10" path="widgets/scale/lv_example_scale_10" />
+
+## 24-hour day and night dial
+
+<LvglExampleBrief>Round outer scale split into coloured day and night arcs with sunrise and sunset text.</LvglExampleBrief>
+
+A 210 by 210 dark grey container hosts a 150 by 150
+`LV_SCALE_MODE_ROUND_OUTER` scale over the range 0 to 24 with a
+full 360 degree sweep rotated to 105 degrees and 25 hourly ticks in
+`lv_font_montserrat_12`. Labels `01` through `24` rotate to follow
+the ticks while staying upright, and an `LV_EVENT_DRAW_TASK_ADDED`
+callback whitens the `06`, `12`, `18`, and `24` labels while
+greying the rest. Two sections colour the arc blue for 17 to 5
+(night) and dark yellow for 5 to 17 (day). Inside the container,
+a top `TODAY` heading sits above `SUNRISE 6:43` on the left and
+`SUNSET 17:37` on the right, using `lv_font_montserrat_14` through `_20`.
+
+<LvglExample name="lv_example_scale_11" path="widgets/scale/lv_example_scale_11" />
+
+## Rotating compass with cardinal labels
+
+<LvglExampleBrief>Round scale rotates under a fixed arrow as its heading sweeps 0 to 360.</LvglExampleBrief>
+
+A 200 by 200 scale uses `LV_SCALE_MODE_ROUND_INNER` over 0 to 360
+with a 360 degree sweep, 61 ticks, and custom labels alternating
+`N`, `30`, `60`, `E`, and so on. A red `LV_SYMBOL_UP` label pins
+the forward bearing at the top, and a centre label formats the
+heading as `<deg>` plus the cardinal string from
+`heading_to_cardinal`. An `LV_EVENT_DRAW_TASK_ADDED` callback paints
+the `N` label and its tick red. An infinite 5000 ms forward and
+reverse animation drives `lv_scale_set_rotation`, turning the dial
+beneath the arrow.
+
+<LvglExample name="lv_example_scale_12" path="widgets/scale/lv_example_scale_12" />

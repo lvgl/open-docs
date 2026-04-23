@@ -1,0 +1,73 @@
+---
+title: lv_gltf_view_shader.h
+description: API reference for lv_gltf_view_shader.h
+api:
+  functions: [lv_gltf_view_shader_get_vertex, lv_gltf_view_shader_get_fragment, lv_gltf_view_shader_get_src, lv_gltf_view_shader_get_env]
+---
+
+<ApiSummary functions={4} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_gltf_view_shader_get_vertex" file="libs/gltf/gltf_view/assets/lv_gltf_view_shader.h" line={24} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/gltf/gltf_view/assets/lv_gltf_view_shader.h#L24">
+
+### lv_gltf_view_shader_get_vertex
+
+```c
+char * lv_gltf_view_shader_get_vertex(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_view_shader_get_fragment" file="libs/gltf/gltf_view/assets/lv_gltf_view_shader.h" line={25} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/gltf/gltf_view/assets/lv_gltf_view_shader.h#L25">
+
+### lv_gltf_view_shader_get_fragment
+
+```c
+char * lv_gltf_view_shader_get_fragment(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_view_shader_get_src" file="libs/gltf/gltf_view/assets/lv_gltf_view_shader.h" line={26} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/gltf/gltf_view/assets/lv_gltf_view_shader.h#L26">
+
+### lv_gltf_view_shader_get_src
+
+```c
+void lv_gltf_view_shader_get_src(lv_opengl_shader_portions_t *shaders)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `shaders` | <ApiLink name="lv_opengl_shader_portions_t" display="lv_opengl_shader_portions_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_view_shader_get_env" file="libs/gltf/gltf_view/assets/lv_gltf_view_shader.h" line={27} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/libs/gltf/gltf_view/assets/lv_gltf_view_shader.h#L27">
+
+### lv_gltf_view_shader_get_env
+
+```c
+void lv_gltf_view_shader_get_env(lv_opengl_shader_portions_t *shaders)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `shaders` | <ApiLink name="lv_opengl_shader_portions_t" display="lv_opengl_shader_portions_t *" /> |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_opengl_shader_internal.h"]}
+  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_opengles_debug.h", "lv_opengles_private.h", "lv_palette.h", "lv_rb.h", "lv_rb_private.h", "lv_string.h", "lv_types.h"]}
+/>

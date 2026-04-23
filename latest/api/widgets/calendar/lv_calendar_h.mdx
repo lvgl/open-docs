@@ -1,0 +1,404 @@
+---
+title: lv_calendar.h
+description: API reference for lv_calendar.h
+api:
+  functions: [lv_calendar_create, lv_calendar_set_today_date, lv_calendar_set_today_year, lv_calendar_set_today_month, lv_calendar_set_today_day, lv_calendar_set_month_shown, lv_calendar_set_shown_year, lv_calendar_set_shown_month, lv_calendar_set_highlighted_dates, lv_calendar_set_day_names, lv_calendar_get_btnmatrix, lv_calendar_get_today_date, lv_calendar_get_showed_date, lv_calendar_get_highlighted_dates, lv_calendar_get_highlighted_dates_num, lv_calendar_get_pressed_date]
+  structs: [lv_calendar_date_t]
+  variables: [lv_calendar_class]
+---
+
+<RelatedHeaders name="lv_calendar_private.h" isPrivate={false} />
+
+<ApiSummary functions={16} structs={1} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (9)","Getters (6)","Other (1)"]}>
+<ApiTab value="Setters (9)">
+
+<ApiMember kind="function" name="lv_calendar_set_today_date" file="widgets/calendar/lv_calendar.h" line={65} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L65">
+
+### lv_calendar_set_today_date
+
+Set the today's year, month and day at once
+
+```c
+void lv_calendar_set_today_date(lv_obj_t *obj, uint32_t year, uint32_t month, uint32_t day)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object |
+| `year` | <ApiLink name="uint32_t" /> | today's year |
+| `month` | <ApiLink name="uint32_t" /> | today's month [1..12] |
+| `day` | <ApiLink name="uint32_t" /> | today's day [1..31] |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_set_today_year" file="widgets/calendar/lv_calendar.h" line={72} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L72">
+
+### lv_calendar_set_today_year
+
+Set the today's year
+
+```c
+void lv_calendar_set_today_year(lv_obj_t *obj, uint32_t year)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object |
+| `year` | <ApiLink name="uint32_t" /> | today's year |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_set_today_month" file="widgets/calendar/lv_calendar.h" line={79} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L79">
+
+### lv_calendar_set_today_month
+
+Set the today's year
+
+```c
+void lv_calendar_set_today_month(lv_obj_t *obj, uint32_t month)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object |
+| `month` | <ApiLink name="uint32_t" /> | today's month [1..12] |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_set_today_day" file="widgets/calendar/lv_calendar.h" line={86} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L86">
+
+### lv_calendar_set_today_day
+
+Set the today's year
+
+```c
+void lv_calendar_set_today_day(lv_obj_t *obj, uint32_t day)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object |
+| `day` | <ApiLink name="uint32_t" /> | today's day [1..31] |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_set_month_shown" file="widgets/calendar/lv_calendar.h" line={94} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L94">
+
+### lv_calendar_set_month_shown
+
+Set the currently shown year and month at once
+
+```c
+void lv_calendar_set_month_shown(lv_obj_t *obj, uint32_t year, uint32_t month)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object |
+| `year` | <ApiLink name="uint32_t" /> | shown year |
+| `month` | <ApiLink name="uint32_t" /> | shown month [1..12] |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_set_shown_year" file="widgets/calendar/lv_calendar.h" line={101} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L101">
+
+### lv_calendar_set_shown_year
+
+Set the currently shown year
+
+```c
+void lv_calendar_set_shown_year(lv_obj_t *obj, uint32_t year)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object |
+| `year` | <ApiLink name="uint32_t" /> | shown year |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_set_shown_month" file="widgets/calendar/lv_calendar.h" line={108} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L108">
+
+### lv_calendar_set_shown_month
+
+Set the currently shown month
+
+```c
+void lv_calendar_set_shown_month(lv_obj_t *obj, uint32_t month)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object |
+| `month` | <ApiLink name="uint32_t" /> | shown month [1..12] |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_set_highlighted_dates" file="widgets/calendar/lv_calendar.h" line={117} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L117">
+
+### lv_calendar_set_highlighted_dates
+
+Set the highlighted dates
+
+```c
+void lv_calendar_set_highlighted_dates(lv_obj_t *obj, lv_calendar_date_t highlighted[], size_t date_num)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object |
+| `highlighted` | <ApiLink name="lv_calendar_date_t" /> | pointer to an <ApiLink name="lv_calendar_date_t" /> array containing the dates. Only the pointer will be saved so this variable can't be local which will be destroyed later. |
+| `date_num` | <ApiLink name="size_t" /> | number of dates in the array |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_set_day_names" file="widgets/calendar/lv_calendar.h" line={126} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L126">
+
+### lv_calendar_set_day_names
+
+Set the name of the days
+
+```c
+void lv_calendar_set_day_names(lv_obj_t *obj, const char **day_names)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a calendar object |
+| `day_names` | `const char **` | pointer to an array with the names. E.g. `const char * days[7] = {"Sun", "Mon", ...}` Only the pointer will be saved so this variable can't be local which will be destroyed later. |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (6)">
+
+<ApiMember kind="function" name="lv_calendar_get_btnmatrix" file="widgets/calendar/lv_calendar.h" line={138} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L138">
+
+### lv_calendar_get_btnmatrix
+
+Get the button matrix object of the calendar. It shows the dates and day names.
+
+```c
+lv_obj_t * lv_calendar_get_btnmatrix(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a calendar object |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to a the button matrix
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_get_today_date" file="widgets/calendar/lv_calendar.h" line={145} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L145">
+
+### lv_calendar_get_today_date
+
+Get the today's date
+
+```c
+const lv_calendar_date_t * lv_calendar_get_today_date(const lv_obj_t *calendar)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `calendar` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a calendar object |
+
+**Returns:** <ApiLink name="lv_calendar_date_t" display="const lv_calendar_date_t *" /> — return pointer to an <ApiLink name="lv_calendar_date_t" /> variable containing the date of today.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_get_showed_date" file="widgets/calendar/lv_calendar.h" line={152} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L152">
+
+### lv_calendar_get_showed_date
+
+Get the currently showed
+
+```c
+const lv_calendar_date_t * lv_calendar_get_showed_date(const lv_obj_t *calendar)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `calendar` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a calendar object |
+
+**Returns:** <ApiLink name="lv_calendar_date_t" display="const lv_calendar_date_t *" /> — pointer to an <ApiLink name="lv_calendar_date_t" /> variable containing the date is being shown.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_get_highlighted_dates" file="widgets/calendar/lv_calendar.h" line={159} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L159">
+
+### lv_calendar_get_highlighted_dates
+
+Get the highlighted dates
+
+```c
+lv_calendar_date_t * lv_calendar_get_highlighted_dates(const lv_obj_t *calendar)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `calendar` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a calendar object |
+
+**Returns:** <ApiLink name="lv_calendar_date_t" display="lv_calendar_date_t *" /> — pointer to an <ApiLink name="lv_calendar_date_t" /> array containing the dates.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_get_highlighted_dates_num" file="widgets/calendar/lv_calendar.h" line={166} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L166">
+
+### lv_calendar_get_highlighted_dates_num
+
+Get the number of the highlighted dates
+
+```c
+size_t lv_calendar_get_highlighted_dates_num(const lv_obj_t *calendar)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `calendar` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a calendar object |
+
+**Returns:** <ApiLink name="size_t" /> — number of highlighted days
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calendar_get_pressed_date" file="widgets/calendar/lv_calendar.h" line={175} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L175">
+
+### lv_calendar_get_pressed_date
+
+Get the currently pressed day
+
+```c
+lv_result_t lv_calendar_get_pressed_date(const lv_obj_t *calendar, lv_calendar_date_t *date)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `calendar` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a calendar object |
+| `date` | <ApiLink name="lv_calendar_date_t" display="lv_calendar_date_t *" /> | store the pressed date here |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: there is a valid pressed date LV_RESULT_INVALID: there is no pressed data
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="lv_calendar_create" file="widgets/calendar/lv_calendar.h" line={48} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L48">
+
+### lv_calendar_create
+
+Create a calendar widget
+
+```c
+lv_obj_t * lv_calendar_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new calendar |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer the created calendar
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_calendar_date_t">
+
+### lv_calendar_date_t
+
+Represents a date on the calendar object (platform-agnostic).
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `year` | <ApiLink name="uint16_t" /> |  |
+| `month` | <ApiLink name="uint8_t" /> | 1..12 |
+| `day` | <ApiLink name="uint8_t" /> | 1..31 |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_calendar_date_t" count={4}>
+
+- `lv_calendar_set_highlighted_dates` — param `highlighted`
+- `lv_calendar_get_pressed_date` — param `date`
+- `lv_calendar_get_day_name` — param `gregorian`
+- `lv_calendar_gregorian_to_chinese` — param `gregorian_time`
+
+</TypeUsedBy>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_calendar_class" file="widgets/calendar/lv_calendar.h" line={37} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/widgets/calendar/lv_calendar.h#L37">
+
+### lv_calendar_class
+
+```c
+const lv_obj_class_t lv_calendar_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_buttonmatrix.h", "lv_calendar_header_arrow.h", "lv_calendar_header_dropdown.h", "lv_calendar_chinese.h"]}
+  includedBy={["lv_calendar_chinese.h", "lv_calendar_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

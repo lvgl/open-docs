@@ -1,0 +1,53 @@
+---
+title: lv_pxp_osa.h
+description: API reference for lv_pxp_osa.h
+api:
+  functions: [PXP_IRQHandler, pxp_get_default_cfg]
+---
+
+<ApiSummary functions={2} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (1)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="pxp_get_default_cfg" file="draw/nxp/pxp/lv_pxp_osa.h" line={49} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nxp/pxp/lv_pxp_osa.h#L49">
+
+### pxp_get_default_cfg
+
+Get the PXP default configuration.
+
+```c
+pxp_cfg_t * pxp_get_default_cfg(void)
+```
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="PXP_IRQHandler" file="draw/nxp/pxp/lv_pxp_osa.h" line={44} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nxp/pxp/lv_pxp_osa.h#L44">
+
+### PXP_IRQHandler
+
+Copyright 2020, 2022-2023 NXP
+
+SPDX-License-Identifier: MIT PXP device interrupt handler. Used to check PXP task completion status.
+
+```c
+void PXP_IRQHandler(void)
+```
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_pxp_cfg.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h", "lv_log.h", "lv_types.h"]}
+/>

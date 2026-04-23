@@ -1,0 +1,40 @@
+---
+title: "SVG"
+order: 15
+---
+
+LVGL's built-in SVG parser and renderer for scalable vector graphics. Enable with `LV_USE_SVG` in `lv_conf.h`.
+
+## SVG from inline markup
+
+<LvglExampleBrief>Render an SVG circle described by a literal string as an image source.</LvglExampleBrief>
+
+A static `lv_image_dsc_t` is populated with `LV_IMAGE_HEADER_MAGIC`, a
+450x150 display size, and a pointer to the literal SVG markup drawing
+a red circle with a blue stroke. The descriptor is handed to
+`lv_image_set_src` on an image widget placed on the active screen so
+the SVG decoder renders the markup on demand.
+
+<LvglExample name="lv_example_svg_1" path="libs/svg/lv_example_svg_1" />
+
+## SVG from filesystem
+
+<LvglExampleBrief>Load an SVG file through the LVGL filesystem and use it as an image source.</LvglExampleBrief>
+
+An image widget is created on the active screen and its source is set to
+`A:lvgl/examples/assets/circle.svg`, so the SVG decoder reads the file
+through the filesystem driver registered under drive letter `A`.
+
+<LvglExample name="lv_example_svg_2" path="libs/svg/lv_example_svg_2" />
+
+## Draw SVG in a draw event
+
+<LvglExampleBrief>Paint SVG markup directly into the screen's draw layer on `LV_EVENT_DRAW_MAIN`.</LvglExampleBrief>
+
+`lv_obj_add_event_cb` subscribes a handler to the active screen's
+`LV_EVENT_DRAW_MAIN`. The handler parses an inline SVG string with
+`lv_svg_load_data`, calls `lv_draw_svg` against the layer returned by
+`lv_event_get_layer`, and then releases the node with
+`lv_svg_node_delete`.
+
+<LvglExample name="lv_example_svg_3" path="libs/svg/lv_example_svg_3" />

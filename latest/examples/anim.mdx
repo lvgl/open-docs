@@ -1,0 +1,76 @@
+---
+title: "Animations"
+description: "Animate widget properties over time with lv_anim."
+order: 40
+---
+
+An `lv_anim_t` describes a value interpolated between a start and end over a duration, with an optional easing path and completion callback. Animations tick on display refresh, so their smoothness tracks the refresh rate. You can chain animations, run them in parallel, and reuse a single `lv_anim_t` descriptor to drive any numeric property through a setter.
+
+## Start animation on an event
+
+<LvglExampleBrief>Animate a label's x position when a switch's state changes.</LvglExampleBrief>
+
+A label and a switch (initially checked) are placed on the active screen.
+The switch's `LV_EVENT_VALUE_CHANGED` callback configures and starts an
+`lv_anim_t`: when checked, the label animates to x=100 with
+`lv_anim_path_overshoot`; when unchecked, it animates to `-width` with
+`lv_anim_path_ease_in`. Both animations run for 500 ms.
+
+<LvglExample name="lv_example_anim_1" path="anim/lv_example_anim_1" />
+
+## Animation timeline with transport controls
+
+<LvglExampleBrief>Drive staggered grow animations through a timeline the user can pause or scrub.</LvglExampleBrief>
+
+Three 90x70 objects are laid out in a flex row with a checkable Start
+button, a Pause button, and a progress slider ranged to
+`LV_ANIM_TIMELINE_PROGRESS_MAX`. An `lv_anim_timeline_t` schedules width
+and height animations for each object (`lv_anim_path_overshoot` for width
+and `lv_anim_path_ease_out` for height, each 300 ms) starting at offsets
+0, 200, and 400 ms, plus a linear 700 ms animation that sweeps the
+slider. The Start button toggles forward and reverse playback via
+`lv_anim_timeline_set_reverse`, Pause calls `lv_anim_timeline_pause`, and
+dragging the slider calls `lv_anim_timeline_set_progress`.
+
+<LvglExample name="lv_example_anim_timeline_1" path="anim/lv_example_anim_timeline_1" />
+
+## Infinite playback animation
+
+<LvglExampleBrief>Grow a red circle while sliding it right, then reverse and repeat.</LvglExampleBrief>
+
+A red circular object sits on the left edge of the active screen. One
+`lv_anim_t` drives `lv_obj_set_size` from 10 to 50 over 1000 ms; the same
+configured animation is then reused with `lv_obj_set_x` running from 10
+to 240. Both run with `lv_anim_path_ease_in_out`, a 300 ms reverse stage
+after a 100 ms reverse delay, a 500 ms gap between cycles, and
+`LV_ANIM_REPEAT_INFINITE`.
+
+<LvglExample name="lv_example_anim_2" path="anim/lv_example_anim_2" />
+
+## Cubic-bezier animation editor
+
+<LvglExampleBrief>Edit a cubic-bezier path with two sliders while a chart plots it live.</LvglExampleBrief>
+
+A 320x240 grid container holds an animated red square, two sliders that
+set the p1 and p2 control points of `lv_bezier3` (both ranged 0 to 1024),
+value labels, a play button with `LV_SYMBOL_PLAY`, and a scatter
+`lv_chart_t` that plots the current curve across 256 points. Slider
+`LV_EVENT_VALUE_CHANGED` callbacks update the stored control points and
+refresh the chart; clicking the play button calls `lv_anim_start` to run
+the square across the container using the custom bezier path callback
+over 2000 ms.
+
+<LvglExample name="lv_example_anim_3" path="anim/lv_example_anim_3" />
+
+## Pause a running animation
+
+<LvglExampleBrief>Pause a label slide for one second shortly after it starts.</LvglExampleBrief>
+
+A label and a pre-checked switch are placed on the active screen. When
+the switch's `LV_EVENT_VALUE_CHANGED` fires, an `lv_anim_t` slides the
+label to x=100 with `lv_anim_path_overshoot` on check or to `-width`
+with `lv_anim_path_ease_in` on uncheck, each 500 ms long. After starting
+the animation a 200 ms `lv_timer_t` calls `lv_anim_pause_for` to hold
+it for 1000 ms before it resumes.
+
+<LvglExample name="lv_example_anim_4" path="anim/lv_example_anim_4" />

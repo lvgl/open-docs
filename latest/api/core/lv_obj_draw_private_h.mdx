@@ -1,0 +1,57 @@
+---
+title: lv_obj_draw_private.h
+description: API reference for lv_obj_draw_private.h
+api:
+  functions: [lv_obj_get_ext_draw_size, lv_obj_get_layer_type]
+---
+
+<RelatedHeaders name="lv_obj_draw.h" isPrivate={true} />
+
+<ApiSummary functions={2} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_obj_get_ext_draw_size" file="core/lv_obj_draw_private.h" line={36} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_obj_draw_private.h#L36">
+
+### lv_obj_get_ext_draw_size
+
+Get the extended draw area of an object.
+
+```c
+int32_t lv_obj_get_ext_draw_size(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to an object |
+
+**Returns:** <ApiLink name="int32_t" /> — the size extended draw area around the real coordinates
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_layer_type" file="core/lv_obj_draw_private.h" line={38} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_obj_draw_private.h#L38">
+
+### lv_obj_get_layer_type
+
+```c
+lv_layer_type_t lv_obj_get_layer_type(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_draw.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

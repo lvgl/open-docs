@@ -1,0 +1,34 @@
+---
+title: lv_tick_private.h
+description: API reference for lv_tick_private.h
+api:
+  structs: [lv_tick_state_t]
+---
+
+<RelatedHeaders name="lv_tick.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="lv_tick_state_t">
+
+### lv_tick_state_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `sys_time` | <ApiLink name="uint32_t" display="volatile uint32_t" /> |  |
+| `sys_irq_flag` | <ApiLink name="uint8_t" display="volatile uint8_t" /> |  |
+| `tick_get_cb` | <ApiLink name="lv_tick_get_cb_t" /> |  |
+| `delay_cb` | <ApiLink name="lv_delay_cb_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_tick.h"]}
+  includedBy={["lv_global.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h", "lv_types.h"]}
+/>

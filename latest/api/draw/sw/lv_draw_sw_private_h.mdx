@@ -1,0 +1,49 @@
+---
+title: lv_draw_sw_private.h
+description: API reference for lv_draw_sw_private.h
+api:
+  structs: [lv_draw_sw_thread_dsc_t, _lv_draw_sw_unit_t]
+---
+
+<RelatedHeaders name="lv_draw_sw.h" isPrivate={true} />
+
+<ApiSummary structs={2} />
+
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_sw_thread_dsc_t">
+
+### lv_draw_sw_thread_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `task_act` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |  |
+| `thread` | `lv_thread_t` |  |
+| `sync` | `lv_thread_sync_t` |  |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> |  |
+| `idx` | <ApiLink name="uint32_t" /> |  |
+| `inited` | <ApiLink name="bool" display="volatile bool" /> |  |
+| `exit_status` | <ApiLink name="bool" display="volatile bool" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_draw_sw_unit_t">
+
+### _lv_draw_sw_unit_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base_unit` | <ApiLink name="lv_draw_unit_t" /> |  |
+| `thread_dscs` | `lv_draw_sw_thread_dsc_t[1]` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw_sw.h", "lv_draw_private.h"]}
+  includedBy={["lv_global.h", "lv_draw_g2d.h", "lv_g2d_utils.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_instance.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_private.h", "lv_cache_sc_da.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_mask.h", "lv_draw_rect.h", "lv_draw_sw_blend.h", "lv_draw_sw_mask.h", "lv_draw_sw_utils.h", "lv_draw_triangle.h", "lv_draw_vector.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_cache.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_image_header_cache.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_os.h", "lv_os_private.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_pthread.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

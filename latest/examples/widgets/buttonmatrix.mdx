@@ -1,0 +1,49 @@
+---
+title: "Button Matrix"
+order: 35
+---
+
+A grid of buttons defined from a single string map, emitting `LV_EVENT_VALUE_CHANGED` with the pressed button's index.
+
+## Numeric keypad with action row
+
+<LvglExampleBrief>A 3-row button matrix with a checkable Action1 button and a checked Action2 button.</LvglExampleBrief>
+
+`lv_buttonmatrix_set_map` lays out digits `1` through `0` on two rows and
+`Action1`/`Action2` on a third, where the newline strings split the rows.
+`Action1` is made twice as wide as `Action2` via
+`lv_buttonmatrix_set_button_width` and marked
+`LV_BUTTONMATRIX_CTRL_CHECKABLE`; `Action2` starts in the
+`LV_BUTTONMATRIX_CTRL_CHECKED` state. The callback subscribes to
+`LV_EVENT_ALL` and logs the text of the button that fired
+`LV_EVENT_VALUE_CHANGED`.
+
+<LvglExample name="lv_example_buttonmatrix_1" path="widgets/buttonmatrix/lv_example_buttonmatrix_1" />
+
+## Per-button custom drawing
+
+<LvglExampleBrief>Rewrite individual button draw descriptors through `LV_EVENT_DRAW_TASK_ADDED`.</LvglExampleBrief>
+
+A centered button matrix is flagged with `LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS`
+and subscribes to `LV_EVENT_DRAW_TASK_ADDED`. For each `LV_PART_ITEMS` draw
+task the callback inspects `base_dsc->id1`. Button index 1 becomes a blue
+rectangular button with an offset shadow and a white label. Button 2
+becomes a red `LV_RADIUS_CIRCLE` button that darkens on press. Button 3
+hides its label and draws the `img_star` image centered in the fill area
+with a 30% black recolor while pressed.
+
+<LvglExample name="lv_example_buttonmatrix_2" path="widgets/buttonmatrix/lv_example_buttonmatrix_2" />
+
+## Pagination button group
+
+<LvglExampleBrief>A pill-shaped matrix with arrow buttons that step through numbered pages.</LvglExampleBrief>
+
+A 225 x 35 button matrix holds `LV_SYMBOL_LEFT`, the digits `1` to `5`, and
+`LV_SYMBOL_RIGHT`. A background style with `LV_RADIUS_CIRCLE` and
+`clip_corner` gives the pill shape, and an `LV_PART_ITEMS` style draws a
+50% grey `LV_BORDER_SIDE_INTERNAL` divider between buttons. Only the number
+buttons are `LV_BUTTONMATRIX_CTRL_CHECKABLE` and `lv_buttonmatrix_set_one_checked`
+enforces a single selection; the `LV_EVENT_VALUE_CHANGED` callback moves
+the checked state one slot left or right when the arrow buttons fire.
+
+<LvglExample name="lv_example_buttonmatrix_3" path="widgets/buttonmatrix/lv_example_buttonmatrix_3" />

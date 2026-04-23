@@ -1,0 +1,31 @@
+---
+title: "List"
+order: 95
+---
+
+## Icon list with section headers
+
+<LvglExampleBrief>A 180x220 list grouped into File, Connectivity, and Exit sections with symbol icons.</LvglExampleBrief>
+
+`lv_list_create` builds a centered list; `lv_list_add_text` inserts
+section headers and `lv_list_add_button` adds entries such as
+`LV_SYMBOL_FILE` + "New" or `LV_SYMBOL_BLUETOOTH` + "Bluetooth". A
+single `LV_EVENT_CLICKED` handler logs the clicked entry via
+`lv_list_get_button_text`.
+
+<LvglExample name="lv_example_list_1" path="widgets/list/lv_example_list_1" />
+
+## Reorderable list with control panel
+
+<LvglExampleBrief>Select a row in one list and move it with Top, Up, Center, Down, Bottom, or Shuffle.</LvglExampleBrief>
+
+A 60% wide list on the left holds 15 `lv_button` rows labeled
+`Item 0` through `Item 14`; clicking a row marks it as the current
+selection with `LV_STATE_CHECKED` and clears the state on siblings.
+A 40% wide list on the right pins Top, Up, Center, Down, Bottom,
+and Shuffle buttons wired to `LV_EVENT_ALL` handlers that call
+`lv_obj_move_to_index` and `lv_obj_scroll_to_view` to reposition
+the selected row, with the Up, Center, Down, and Shuffle handlers
+also firing on `LV_EVENT_LONG_PRESSED_REPEAT`.
+
+<LvglExample name="lv_example_list_2" path="widgets/list/lv_example_list_2" />

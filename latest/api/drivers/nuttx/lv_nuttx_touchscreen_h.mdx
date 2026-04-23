@@ -1,0 +1,37 @@
+---
+title: lv_nuttx_touchscreen.h
+description: API reference for lv_nuttx_touchscreen.h
+api:
+  functions: [lv_nuttx_touchscreen_create]
+---
+
+<ApiSummary functions={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_nuttx_touchscreen_create" file="drivers/nuttx/lv_nuttx_touchscreen.h" line={43} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/nuttx/lv_nuttx_touchscreen.h#L43">
+
+### lv_nuttx_touchscreen_create
+
+Initialize indev with specified input device.
+
+```c
+lv_indev_t * lv_nuttx_touchscreen_create(const char *dev_path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dev_path` | `const char *` | path of input device |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_indev.h"]}
+  includedBy={["lv_drivers.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_event.h", "lv_group.h", "lv_ll.h", "lv_math.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

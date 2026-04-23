@@ -1,0 +1,233 @@
+---
+title: lv_nuttx_entry.h
+description: API reference for lv_nuttx_entry.h
+api:
+  functions: [lv_nuttx_dsc_init, lv_nuttx_init, lv_nuttx_deinit, lv_nuttx_init_custom, lv_nuttx_deinit_custom, lv_nuttx_run, lv_nuttx_get_idle]
+  structs: [lv_nuttx_dsc_t, lv_nuttx_result_t, _lv_nuttx_ctx_t]
+  typedefs: [lv_nuttx_ctx_t]
+---
+
+<ApiSummary functions={7} structs={3} typedefs={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (6)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_nuttx_get_idle" file="drivers/nuttx/lv_nuttx_entry.h" line={104} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/nuttx/lv_nuttx_entry.h#L104">
+
+### lv_nuttx_get_idle
+
+Get the idle percentage of the system.
+
+```c
+uint32_t lv_nuttx_get_idle(void)
+```
+
+**Returns:** <ApiLink name="uint32_t" /> — The idle percentage of the system.
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (6)">
+
+<ApiMember kind="function" name="lv_nuttx_dsc_init" file="drivers/nuttx/lv_nuttx_entry.h" line={62} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/nuttx/lv_nuttx_entry.h#L62">
+
+### lv_nuttx_dsc_init
+
+Initialize the <ApiLink name="lv_nuttx_dsc_t" /> structure with default values for the NuttX port of LVGL.
+
+```c
+void lv_nuttx_dsc_init(lv_nuttx_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_nuttx_dsc_t" display="lv_nuttx_dsc_t *" /> | Pointer to the <ApiLink name="lv_nuttx_dsc_t" /> structure to be initialized. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_nuttx_init" file="drivers/nuttx/lv_nuttx_entry.h" line={69} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/nuttx/lv_nuttx_entry.h#L69">
+
+### lv_nuttx_init
+
+Initialize the LVGL display driver for NuttX using the provided configuration information.
+
+```c
+void lv_nuttx_init(const lv_nuttx_dsc_t *dsc, lv_nuttx_result_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_nuttx_dsc_t" display="const lv_nuttx_dsc_t *" /> | Pointer to the <ApiLink name="lv_nuttx_dsc_t" /> structure containing the configuration information for the display driver. |
+| `result` | <ApiLink name="lv_nuttx_result_t" display="lv_nuttx_result_t *" /> | Pointer to the <ApiLink name="lv_nuttx_result_t" /> structure containing display and input device handler. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_nuttx_deinit" file="drivers/nuttx/lv_nuttx_entry.h" line={75} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/nuttx/lv_nuttx_entry.h#L75">
+
+### lv_nuttx_deinit
+
+Deinitialize the LVGL display driver for NuttX.
+
+```c
+void lv_nuttx_deinit(lv_nuttx_result_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `result` | <ApiLink name="lv_nuttx_result_t" display="lv_nuttx_result_t *" /> | Pointer to the <ApiLink name="lv_nuttx_result_t" /> structure containing display and input device handler. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_nuttx_init_custom" file="drivers/nuttx/lv_nuttx_entry.h" line={83} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/nuttx/lv_nuttx_entry.h#L83">
+
+### lv_nuttx_init_custom
+
+Initialize the LVGL display driver for NuttX using the provided custom configuration information.
+
+```c
+void lv_nuttx_init_custom(const lv_nuttx_dsc_t *dsc, lv_nuttx_result_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_nuttx_dsc_t" display="const lv_nuttx_dsc_t *" /> | Pointer to the <ApiLink name="lv_nuttx_dsc_t" /> structure containing the custom configuration for the display driver. |
+| `result` | <ApiLink name="lv_nuttx_result_t" display="lv_nuttx_result_t *" /> | Pointer to the <ApiLink name="lv_nuttx_result_t" /> structure containing display and input device handler. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_nuttx_deinit_custom" file="drivers/nuttx/lv_nuttx_entry.h" line={89} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/nuttx/lv_nuttx_entry.h#L89">
+
+### lv_nuttx_deinit_custom
+
+Deinitialize the LVGL display driver for NuttX using the provided custom configuration information.
+
+```c
+void lv_nuttx_deinit_custom(lv_nuttx_result_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `result` | <ApiLink name="lv_nuttx_result_t" display="lv_nuttx_result_t *" /> | Pointer to the <ApiLink name="lv_nuttx_result_t" /> structure containing display and input device handler. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_nuttx_run" file="drivers/nuttx/lv_nuttx_entry.h" line={98} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/nuttx/lv_nuttx_entry.h#L98">
+
+### lv_nuttx_run
+
+Call <ApiLink name="lv_timer_handler" display="lv_timer_handler()" /> (LVGL's super loop) in an endless loop. If LV_USE_NUTTX_LIBUV is enabled an UV timer will be created, else <ApiLink name="lv_timer_handler" display="lv_timer_handler()" /> will be called in a loop with some sleep.
+
+```c
+void lv_nuttx_run(lv_nuttx_result_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `result` | <ApiLink name="lv_nuttx_result_t" display="lv_nuttx_result_t *" /> | pointer to a variable initialized by <ApiLink name="lv_nuttx_init" display="lv_nuttx_init()" /> or <ApiLink name="lv_nuttx_init_custom" display="lv_nuttx_init_custom()" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_nuttx_dsc_t">
+
+### lv_nuttx_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `fb_path` | `const char *` |  |
+| `input_path` | `const char *` |  |
+| `utouch_path` | `const char *` |  |
+| `mouse_path` | `const char *` |  |
+| `trace_path` | `const char *` |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_nuttx_dsc_t" count={3}>
+
+- `lv_nuttx_dsc_init` — param `dsc`
+- `lv_nuttx_init` — param `dsc`
+- `lv_nuttx_init_custom` — param `dsc`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_nuttx_result_t">
+
+### lv_nuttx_result_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |  |
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> |  |
+| `utouch_indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> |  |
+| `mouse_indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_nuttx_result_t" count={5}>
+
+- `lv_nuttx_init` — param `result`
+- `lv_nuttx_deinit` — param `result`
+- `lv_nuttx_init_custom` — param `result`
+- `lv_nuttx_deinit_custom` — param `result`
+- `lv_nuttx_run` — param `result`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="_lv_nuttx_ctx_t">
+
+### _lv_nuttx_ctx_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `image_cache` | `void *` |  |
+| `trace_fd` | `int` |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_nuttx_ctx_t" file="drivers/nuttx/lv_nuttx_entry.h" line={52} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/nuttx/lv_nuttx_entry.h#L52">
+
+### lv_nuttx_ctx_t
+
+```c
+typedef struct _lv_nuttx_ctx_t lv_nuttx_ctx_t
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_display.h", "lv_indev.h"]}
+  includedBy={["lv_drivers.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_event.h", "lv_group.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

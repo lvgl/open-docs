@@ -1,0 +1,7 @@
+{
+  "title": "File_explorer",
+  "pages": [
+    "lv_file_explorer_h",
+    "lv_file_explorer_private_h"
+  ]
+}

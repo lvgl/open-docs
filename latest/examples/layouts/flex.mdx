@@ -1,0 +1,76 @@
+---
+title: "Flex"
+order: 5
+---
+
+A 1D layout that arranges children in a row or column, analogous to CSS Flexbox. Useful for toolbars, lists, and any stack where one axis drives placement.
+
+## Flex row and column basics
+
+<LvglExampleBrief>A row container and a column container, each filled with buttons.</LvglExampleBrief>
+
+Two containers are created on the active screen: one with
+`LV_FLEX_FLOW_ROW` and one with `LV_FLEX_FLOW_COLUMN`. Each is populated
+with ten buttons. Row items use a fixed 100 px width and full container
+height; column items use full container width with `LV_SIZE_CONTENT` height.
+
+<LvglExample name="lv_example_flex_1" path="layouts/flex/lv_example_flex_1" />
+
+## Row wrap with even spacing
+
+<LvglExampleBrief>A 300x220 container lays out eight checkable tiles in wrapping rows with even spacing.</LvglExampleBrief>
+
+A reusable `lv_style_t` sets `LV_LAYOUT_FLEX`, `LV_FLEX_FLOW_ROW_WRAP`, and
+`LV_FLEX_ALIGN_SPACE_EVENLY` on the main axis. The style is applied to a
+centered container holding eight 70 px-wide tiles with `LV_SIZE_CONTENT`
+height. Each tile carries `LV_OBJ_FLAG_CHECKABLE` so it toggles between
+default and `LV_STATE_CHECKED` when clicked.
+
+<LvglExample name="lv_example_flex_2" path="layouts/flex/lv_example_flex_2" />
+
+## Flex grow between fixed items
+
+<LvglExampleBrief>Distribute leftover row space between two grow items bracketed by fixed-size items.</LvglExampleBrief>
+
+A 300x220 row container holds four children. The first and last are fixed
+40x40 squares. The two middle children have a fixed height of 40 and take
+`lv_obj_set_flex_grow` weights of 1 and 2, splitting the remaining
+horizontal space in that proportion while the trailing fixed item is pushed
+against the right edge.
+
+<LvglExample name="lv_example_flex_3" path="layouts/flex/lv_example_flex_3" />
+
+## Reversed column flex order
+
+<LvglExampleBrief>Stack six items bottom-up inside a centered container.</LvglExampleBrief>
+
+A 300x220 container uses `LV_FLEX_FLOW_COLUMN_REVERSE`, so items added later
+in the loop appear higher on screen. Six 100x50 children numbered 0 through
+5 are added in ascending order but rendered in reverse, with "Item: 0"
+sitting at the bottom of the container.
+
+<LvglExample name="lv_example_flex_4" path="layouts/flex/lv_example_flex_4" />
+
+## Animated row and column gaps
+
+<LvglExampleBrief>Drive row and column padding of a wrap container with two looping animations.</LvglExampleBrief>
+
+A 300x220 container uses `LV_FLEX_FLOW_ROW_WRAP` to arrange nine 70 px
+tiles. Two `lv_anim_t` instances animate `pad_row` and `pad_column`
+between 0 and 10 with `LV_ANIM_REPEAT_INFINITE`: the row gap cycles every
+500 ms in each direction while the column gap cycles every 3000 ms, so the
+tile spacing shifts on two independent time scales.
+
+<LvglExample name="lv_example_flex_5" path="layouts/flex/lv_example_flex_5" />
+
+## RTL flex wrap and scrolling
+
+<LvglExampleBrief>Lay out twenty tiles in a right-to-left wrapping flex container.</LvglExampleBrief>
+
+A 300x220 container has `LV_BASE_DIR_RTL` set on its main part, then
+switches to `LV_FLEX_FLOW_ROW_WRAP`. Twenty 70 px tiles are placed in
+ascending order; the RTL base direction flips the main axis so item 0 sits
+at the top-right and rows fill leftward, and horizontal scrolling follows
+the same reversed direction.
+
+<LvglExample name="lv_example_flex_6" path="layouts/flex/lv_example_flex_6" />

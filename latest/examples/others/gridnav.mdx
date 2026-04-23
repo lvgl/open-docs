@@ -1,0 +1,71 @@
+---
+title: "Grid Navigation"
+order: 20
+---
+
+Navigate a grid of child widgets using keyboard or encoder input via `lv_gridnav_add`.
+
+## Basic grid navigation
+
+<LvglExampleBrief>Two side-by-side containers, one plain and one with rollover keypad navigation.</LvglExampleBrief>
+
+Each container is added to the default group with `lv_group_add_obj` and
+registered with `lv_gridnav_add`. The left container uses
+`LV_GRIDNAV_CTRL_NONE` and wraps 10 checkable buttons in `LV_FLEX_FLOW_ROW_WRAP`.
+The right container uses `LV_GRIDNAV_CTRL_ROLLOVER` and holds a textarea, a
+checkbox, and two switches placed by absolute position. Children are removed
+from the group with `lv_group_remove_obj` so gridnav handles keypad movement.
+
+<LvglExample name="lv_example_gridnav_1" path="others/gridnav/lv_example_gridnav_1" />
+
+## Keypad navigation across two lists
+
+<LvglExampleBrief>Side-by-side list widgets with distinct `lv_gridnav_ctrl_t` modes.</LvglExampleBrief>
+
+Two `lv_list` widgets sit at the left and right edges. The left list registers
+with `LV_GRIDNAV_CTRL_NONE` and is populated with 15 `LV_SYMBOL_FILE` buttons;
+the right list uses `LV_GRIDNAV_CTRL_ROLLOVER` and holds 15 `LV_SYMBOL_DIRECTORY`
+buttons. Each list is added to the default group while every item is removed
+with `lv_group_remove_obj` so gridnav drives focus inside the list.
+
+<LvglExample name="lv_example_gridnav_2" path="others/gridnav/lv_example_gridnav_2" />
+
+## Nested grid navigation with scroll-first
+
+<LvglExampleBrief>Outer gridnav wraps buttons and two sub-containers, one scrollable and one enter-to-focus.</LvglExampleBrief>
+
+The outer container registers with
+`LV_GRIDNAV_CTRL_ROLLOVER | LV_GRIDNAV_CTRL_SCROLL_FIRST` so arrow keys scroll
+a long text child before moving focus. It holds two buttons, a scrollable sub
+container with placeholder text, and a second sub container that has its own
+gridnav. The inner gridnav's `LV_EVENT_KEY` handler calls `lv_group_focus_obj`
+on `LV_KEY_ENTER` and `lv_group_focus_next` on `LV_KEY_ESC` so enter steps in
+and escape steps back out.
+
+<LvglExample name="lv_example_gridnav_3" path="others/gridnav/lv_example_gridnav_3" />
+
+## List with section separators
+
+<LvglExampleBrief>Twenty list buttons grouped by `lv_list_add_text` separators under gridnav rollover.</LvglExampleBrief>
+
+A list on the left is registered with `LV_GRIDNAV_CTRL_ROLLOVER`. Every fifth
+iteration adds a non-focusable separator via `lv_list_add_text`, and each
+focusable entry is added with `lv_list_add_button` using `LV_SYMBOL_FILE`.
+Items are removed from the default group so gridnav handles movement, and
+each item's `LV_EVENT_CLICKED` callback logs its text through
+`lv_list_get_button_text`. A separate `Button` sits at the right edge.
+
+<LvglExample name="lv_example_gridnav_4" path="others/gridnav/lv_example_gridnav_4" />
+
+## Single-axis gridnav with pass-through keys
+
+<LvglExampleBrief>Forward the unused axis to sliders and rollers so they mirror each other.</LvglExampleBrief>
+
+The top container registers with `LV_GRIDNAV_CTRL_VERTICAL_MOVE_ONLY` and holds
+three sliders; left and right arrows pass through as `LV_EVENT_KEY` to the
+focused slider. The bottom container uses `LV_GRIDNAV_CTRL_HORIZONTAL_MOVE_ONLY`
+and holds three rollers; up and down pass through to the focused roller. Key
+callbacks mirror values so roller i tracks slider i through
+`lv_roller_set_selected` and `lv_slider_set_value` with `LV_ANIM_ON`.
+
+<LvglExample name="lv_example_gridnav_5" path="others/gridnav/lv_example_gridnav_5" />

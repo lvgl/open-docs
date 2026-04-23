@@ -1,0 +1,346 @@
+---
+title: lv_draw_label.h
+description: API reference for lv_draw_label.h
+api:
+  functions: [lv_draw_letter_dsc_init, lv_draw_label_dsc_init, lv_draw_task_get_label_dsc, lv_draw_glyph_dsc_init, lv_draw_label, lv_draw_character, lv_draw_letter, lv_draw_label_iterate_characters, lv_draw_unit_draw_letter]
+  structs: [lv_draw_label_dsc_t, lv_draw_letter_dsc_t]
+  typedefs: [lv_draw_glyph_cb_t]
+  macros: [LV_DRAW_LABEL_NO_TXT_SEL]
+---
+
+<RelatedHeaders name="lv_draw_label_private.h" isPrivate={false} />
+
+<ApiSummary functions={9} structs={2} typedefs={1} macros={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (8)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_draw_task_get_label_dsc" file="draw/lv_draw_label.h" line={173} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/lv_draw_label.h#L173">
+
+### lv_draw_task_get_label_dsc
+
+Try to get a label draw descriptor from a draw task.
+
+```c
+lv_draw_label_dsc_t * lv_draw_task_get_label_dsc(lv_draw_task_t *task)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `task` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
+
+**Returns:** <ApiLink name="lv_draw_label_dsc_t" display="lv_draw_label_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_LABEL
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (8)">
+
+<ApiMember kind="function" name="lv_draw_letter_dsc_init" file="draw/lv_draw_label.h" line={160} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/lv_draw_label.h#L160">
+
+### lv_draw_letter_dsc_init
+
+```c
+void lv_draw_letter_dsc_init(lv_draw_letter_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_letter_dsc_t" display="lv_draw_letter_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_label_dsc_init" file="draw/lv_draw_label.h" line={166} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/lv_draw_label.h#L166">
+
+### lv_draw_label_dsc_init
+
+Initialize a label draw descriptor
+
+```c
+void lv_draw_label_dsc_init(lv_draw_label_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_label_dsc_t" display="lv_draw_label_dsc_t *" /> | pointer to a draw descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_glyph_dsc_init" file="draw/lv_draw_label.h" line={180} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/lv_draw_label.h#L180">
+
+### lv_draw_glyph_dsc_init
+
+Initialize a glyph draw descriptor. Used internally.
+
+```c
+void lv_draw_glyph_dsc_init(lv_draw_glyph_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_glyph_dsc_t" display="lv_draw_glyph_dsc_t *" /> | pointer to a draw descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_label" file="draw/lv_draw_label.h" line={188} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/lv_draw_label.h#L188">
+
+### lv_draw_label
+
+Create a draw task to render a text
+
+```c
+void lv_draw_label(lv_layer_t *layer, const lv_draw_label_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_label_dsc_t" display="const lv_draw_label_dsc_t *" /> | pointer to draw descriptor |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | coordinates of the character |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_character" file="draw/lv_draw_label.h" line={198} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/lv_draw_label.h#L198">
+
+### lv_draw_character
+
+Create a draw task to render a single character
+
+```c
+void lv_draw_character(lv_layer_t *layer, lv_draw_label_dsc_t *dsc, const lv_point_t *point, uint32_t unicode_letter)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_label_dsc_t" display="lv_draw_label_dsc_t *" /> | pointer to draw descriptor |
+| `point` | <ApiLink name="lv_point_t" display="const lv_point_t *" /> | position of the label |
+| `unicode_letter` | <ApiLink name="uint32_t" /> | the letter to draw |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_letter" file="draw/lv_draw_label.h" line={207} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/lv_draw_label.h#L207">
+
+### lv_draw_letter
+
+Draw a single letter
+
+```c
+void lv_draw_letter(lv_layer_t *layer, lv_draw_letter_dsc_t *dsc, const lv_point_t *point)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_letter_dsc_t" display="lv_draw_letter_dsc_t *" /> | pointer to draw descriptor |
+| `point` | <ApiLink name="lv_point_t" display="const lv_point_t *" /> | position of the label |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_label_iterate_characters" file="draw/lv_draw_label.h" line={218} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/lv_draw_label.h#L218">
+
+### lv_draw_label_iterate_characters
+
+Should be used during rendering the characters to get the position and other parameters of the characters
+
+```c
+void lv_draw_label_iterate_characters(lv_draw_task_t *t, const lv_draw_label_dsc_t *dsc, const lv_area_t *coords, lv_draw_glyph_cb_t cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a draw task |
+| `dsc` | <ApiLink name="lv_draw_label_dsc_t" display="const lv_draw_label_dsc_t *" /> | pointer to draw descriptor |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | coordinates of the label |
+| `cb` | <ApiLink name="lv_draw_glyph_cb_t" /> | a callback to call to draw each glyphs one by one |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_unit_draw_letter" file="draw/lv_draw_label.h" line={237} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/lv_draw_label.h#L237">
+
+### lv_draw_unit_draw_letter
+
+Draw a single letter using the provided draw unit, glyph descriptor, position, font, and callback.
+
+This function is responsible for rendering a single character from a text string, applying the necessary styling described by the glyph descriptor (`dsc`). It handles the retrieval of the glyph's description, checks its visibility within the clipping area, and invokes the callback (`cb`) to render the glyph at the specified position (`pos`) using the given font (`font`).
+
+```c
+void lv_draw_unit_draw_letter(lv_draw_task_t *t, lv_draw_glyph_dsc_t *dsc, const lv_point_t *pos, const lv_font_t *font, uint32_t letter, lv_draw_glyph_cb_t cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | Pointer to the drawing task. |
+| `dsc` | <ApiLink name="lv_draw_glyph_dsc_t" display="lv_draw_glyph_dsc_t *" /> | Pointer to the descriptor containing styling for the glyph to be drawn. |
+| `pos` | <ApiLink name="lv_point_t" display="const lv_point_t *" /> | Pointer to the point coordinates where the letter should be drawn. |
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> | Pointer to the font containing the glyph. |
+| `letter` | <ApiLink name="uint32_t" /> | The Unicode code point of the letter to be drawn. |
+| `cb` | <ApiLink name="lv_draw_glyph_cb_t" /> | Callback function to execute the actual rendering of the glyph. |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_label_dsc_t">
+
+### lv_draw_label_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `text` | `const char *` | The text to draw |
+| `text_size` | <ApiLink name="lv_point_t" /> | The size of the text |
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> | The font to use. Fallback fonts are also handled. |
+| `color` | <ApiLink name="lv_color_t" /> | Color of the text |
+| `line_space` | <ApiLink name="int32_t" /> | Extra space between the lines |
+| `letter_space` | <ApiLink name="int32_t" /> | Extra space between the characters |
+| `ofs_x` | <ApiLink name="int32_t" /> | Offset the text with this value horizontally |
+| `ofs_y` | <ApiLink name="int32_t" /> | Offset the text with this value vertically |
+| `rotation` | <ApiLink name="int32_t" /> | Rotation of the letters in 0.1 degree unit |
+| `sel_start` | <ApiLink name="uint32_t" /> | The first characters index for selection (not byte index). `LV_DRAW_LABEL_NO_TXT_SEL` for no selection |
+| `sel_end` | <ApiLink name="uint32_t" /> | The last characters's index for selection (not byte index). `LV_DRAW_LABEL_NO_TXT_SEL` for no selection |
+| `sel_color` | <ApiLink name="lv_color_t" /> | Color of the selected characters |
+| `sel_bg_color` | <ApiLink name="lv_color_t" /> | Background color of the selected characters |
+| `text_length` | <ApiLink name="uint32_t" /> | The number of characters to render. 0: means render until reaching the `\0` termination. |
+| `align` | <ApiLink name="lv_text_align_t" /> | The alignment of the text `LV_TEXT_ALIGN_LEFT/RIGHT/CENTER` |
+| `bidi_dir` | <ApiLink name="lv_base_dir_t" /> | The base direction. Used when type setting Right-to-left (e.g. Arabic) texts |
+| `opa` | <ApiLink name="lv_opa_t" /> | Opacity of the text in 0...255 range. LV_OPA_TRANSP, LV_OPA_10, LV_OPA_20, .. LV_OPA_COVER can be used as well |
+| `outline_stroke_opa` | <ApiLink name="lv_opa_t" /> | Letter outline stroke opacity |
+| `decor` | <ApiLink name="lv_text_decor_t" /> | Text decoration, e.g. underline |
+| `flag` | <ApiLink name="lv_text_flag_t" /> | Some flags to control type setting |
+| `text_local` | <ApiLink name="uint8_t" /> | 1: malloc a buffer and copy `text` there. 0: `text` will be valid during rendering. |
+| `text_static` | <ApiLink name="uint8_t" /> | Indicate that the text is constant and its pointer can be safely saved e.g. in a cache. |
+| `has_bided` | <ApiLink name="uint8_t" /> | 1: already executed lv_bidi_process_paragraph. 0: has not been executed lv_bidi_process_paragraph. |
+| `hint` | <ApiLink name="lv_draw_label_hint_t" display="lv_draw_label_hint_t *" /> | Pointer to an externally stored struct where some data can be cached to speed up rendering |
+| `outline_stroke_color` | <ApiLink name="lv_color_t" /> |  |
+| `outline_stroke_width` | <ApiLink name="int32_t" /> |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_label_dsc_t" count={12}>
+
+- `lv_obj_init_draw_label_dsc` — param `draw_dsc`
+- `lv_draw_eve_label` — param `dsc`
+- `lv_draw_label_dsc_init` — param `dsc`
+- `lv_draw_label` — param `dsc`
+- `lv_draw_character` — param `dsc`
+- `lv_draw_label_iterate_characters` — param `dsc`
+- `lv_draw_nanovg_label` — param `dsc`
+- `lv_draw_nema_gfx_label` — param `dsc`
+- `lv_draw_dave2d_label` — param `dsc`
+- `lv_draw_sdl_label` — param `dsc`
+- `lv_draw_sw_label` — param `dsc`
+- `lv_draw_vg_lite_label` — param `dsc`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_draw_letter_dsc_t">
+
+### lv_draw_letter_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `unicode` | <ApiLink name="uint32_t" /> |  |
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> |  |
+| `color` | <ApiLink name="lv_color_t" /> |  |
+| `rotation` | <ApiLink name="int32_t" /> |  |
+| `scale_x` | <ApiLink name="int32_t" /> |  |
+| `scale_y` | <ApiLink name="int32_t" /> |  |
+| `skew_x` | <ApiLink name="int32_t" /> |  |
+| `skew_y` | <ApiLink name="int32_t" /> |  |
+| `pivot` | <ApiLink name="lv_point_t" /> |  |
+| `opa` | <ApiLink name="lv_opa_t" /> |  |
+| `decor` | <ApiLink name="lv_text_decor_t" /> |  |
+| `blend_mode` | <ApiLink name="lv_blend_mode_t" /> |  |
+| `outline_stroke_opa` | <ApiLink name="lv_opa_t" /> |  |
+| `outline_stroke_width` | <ApiLink name="int32_t" /> |  |
+| `outline_stroke_color` | <ApiLink name="lv_color_t" /> |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_letter_dsc_t" count={5}>
+
+- `lv_draw_letter_dsc_init` — param `dsc`
+- `lv_draw_letter` — param `dsc`
+- `lv_draw_nanovg_letter` — param `dsc`
+- `lv_draw_sw_letter` — param `dsc`
+- `lv_draw_vg_lite_letter` — param `dsc`
+
+</TypeUsedBy>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_draw_glyph_cb_t" file="draw/lv_draw_label.h" line={153} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/lv_draw_label.h#L153">
+
+### lv_draw_glyph_cb_t
+
+```c
+typedef void(* lv_draw_glyph_cb_t) (lv_draw_task_t *t, lv_draw_glyph_dsc_t *dsc, lv_draw_fill_dsc_t *fill_dsc, const lv_area_t *fill_area)
+```
+
+Passed as a parameter to `lv_draw_label_iterate_characters` to draw the characters one by one
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_glyph_cb_t" count={2}>
+
+- `lv_draw_label_iterate_characters` — param `cb`
+- `lv_draw_unit_draw_letter` — param `cb`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_DRAW_LABEL_NO_TXT_SEL" file="draw/lv_draw_label.h" line={26} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/lv_draw_label.h#L26">
+
+### LV_DRAW_LABEL_NO_TXT_SEL
+
+```c
+#define LV_DRAW_LABEL_NO_TXT_SEL (0xFFFF)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw.h", "lv_draw_rect.h", "lv_bidi.h", "lv_text.h", "lv_color.h", "lv_style.h"]}
+  includedBy={["lv_obj_draw.h", "lv_draw_eve_private.h", "lv_draw_label_private.h", "lv_draw_nanovg_private.h", "lv_draw_dave2d.h", "lv_draw_sdl.h", "lv_draw_sw.h", "lv_draw_vg_lite.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

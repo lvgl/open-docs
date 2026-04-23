@@ -1,0 +1,95 @@
+---
+title: lv_sysmon_private.h
+description: API reference for lv_sysmon_private.h
+api:
+  functions: [lv_sysmon_builtin_init, lv_sysmon_builtin_deinit]
+  structs: [_lv_sysmon_backend_data_t, _lv_sysmon_perf_info_t]
+---
+
+<RelatedHeaders name="lv_sysmon.h" isPrivate={true} />
+
+<ApiSummary functions={2} structs={2} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_sysmon_builtin_init" file="debugging/sysmon/lv_sysmon_private.h" line={77} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/sysmon/lv_sysmon_private.h#L77">
+
+### lv_sysmon_builtin_init
+
+Initialize built-in system monitor, such as performance and memory monitor.
+
+```c
+void lv_sysmon_builtin_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sysmon_builtin_deinit" file="debugging/sysmon/lv_sysmon_private.h" line={82} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/debugging/sysmon/lv_sysmon_private.h#L82">
+
+### lv_sysmon_builtin_deinit
+
+DeInitialize built-in system monitor, such as performance and memory monitor.
+
+```c
+void lv_sysmon_builtin_deinit(void)
+```
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_sysmon_backend_data_t">
+
+### _lv_sysmon_backend_data_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `subject` | <ApiLink name="lv_subject_t" /> |  |
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_sysmon_perf_info_t">
+
+### _lv_sysmon_perf_info_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `inited` | <ApiLink name="bool" /> |  |
+| `refr_start` | <ApiLink name="uint32_t" /> |  |
+| `refr_interval_sum` | <ApiLink name="uint32_t" /> |  |
+| `refr_elaps_sum` | <ApiLink name="uint32_t" /> |  |
+| `refr_cnt` | <ApiLink name="uint32_t" /> |  |
+| `render_start` | <ApiLink name="uint32_t" /> |  |
+| `render_elaps_sum` | <ApiLink name="uint32_t" /> |  |
+| `render_cnt` | <ApiLink name="uint32_t" /> |  |
+| `flush_in_render_start` | <ApiLink name="uint32_t" /> |  |
+| `flush_in_render_elaps_sum` | <ApiLink name="uint32_t" /> |  |
+| `flush_not_in_render_start` | <ApiLink name="uint32_t" /> |  |
+| `flush_not_in_render_elaps_sum` | <ApiLink name="uint32_t" /> |  |
+| `last_report_timestamp` | <ApiLink name="uint32_t" /> |  |
+| `render_in_progress` | <ApiLink name="uint32_t" /> |  |
+| `measured` | <ApiLink name="_lv_sysmon_perf_info_t" display="struct _lv_sysmon_perf_info_t" /> |  |
+| `fps` | <ApiLink name="uint32_t" /> |  |
+| `cpu` | <ApiLink name="uint32_t" /> |  |
+| `refr_avg_time` | <ApiLink name="uint32_t" /> |  |
+| `render_avg_time` | <ApiLink name="uint32_t" /> | Pure rendering time without flush time |
+| `flush_avg_time` | <ApiLink name="uint32_t" /> | Pure flushing time without rendering time |
+| `cpu_avg_total` | <ApiLink name="uint32_t" /> |  |
+| `fps_avg_total` | <ApiLink name="uint32_t" /> |  |
+| `run_cnt` | <ApiLink name="uint32_t" /> |  |
+| `calculated` | <ApiLink name="_lv_sysmon_perf_info_t" display="struct _lv_sysmon_perf_info_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_sysmon.h"]}
+  includedBy={["lv_global.h", "lv_display_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

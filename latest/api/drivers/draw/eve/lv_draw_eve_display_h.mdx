@@ -1,0 +1,283 @@
+---
+title: lv_draw_eve_display.h
+description: API reference for lv_draw_eve_display.h
+api:
+  functions: [lv_draw_eve_display_create, lv_draw_eve_display_get_user_data, lv_draw_eve_touch_create, lv_draw_eve_pre_upload_image, lv_draw_eve_pre_upload_font_range, lv_draw_eve_pre_upload_font_text, lv_draw_eve_memread8, lv_draw_eve_memread16, lv_draw_eve_memread32, lv_draw_eve_memwrite8, lv_draw_eve_memwrite16, lv_draw_eve_memwrite32]
+---
+
+<ApiSummary functions={12} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (11)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_draw_eve_display_get_user_data" file="drivers/draw/eve/lv_draw_eve_display.h" line={49} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L49">
+
+### lv_draw_eve_display_get_user_data
+
+Get the `user_data` parameter that was passed to `lv_draw_eve_display_create`. Useful in the operation callback.
+
+```c
+void * lv_draw_eve_display_get_user_data(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to the lv_draw_eve display |
+
+**Returns:** `void *` — the `user_data` pointer
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (11)">
+
+<ApiMember kind="function" name="lv_draw_eve_display_create" file="drivers/draw/eve/lv_draw_eve_display.h" line={41} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L41">
+
+### lv_draw_eve_display_create
+
+Create a display for the EVE draw unit.
+
+```c
+lv_display_t * lv_draw_eve_display_create(const lv_draw_eve_parameters_t *params, lv_draw_eve_operation_cb_t op_cb, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `params` | <ApiLink name="lv_draw_eve_parameters_t" display="const lv_draw_eve_parameters_t *" /> | Pointer to a struct of display parameters. Can be a temporary variable |
+| `op_cb` | <ApiLink name="lv_draw_eve_operation_cb_t" /> | A callback that will be called to perform pin and SPI IO operations with the EVE chip |
+| `user_data` | `void *` | use `lv_draw_eve_display_get_user_data` to get this pointer inside the `op_cb` |
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — the EVE display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_touch_create" file="drivers/draw/eve/lv_draw_eve_display.h" line={56} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L56">
+
+### lv_draw_eve_touch_create
+
+Create a touchscreen indev for the EVE display.
+
+```c
+lv_indev_t * lv_draw_eve_touch_create(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to the lv_draw_eve display |
+
+**Returns:** <ApiLink name="lv_indev_t" display="lv_indev_t *" /> — the EVE touchscreen indev
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_pre_upload_image" file="drivers/draw/eve/lv_draw_eve_display.h" line={66} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L66">
+
+### lv_draw_eve_pre_upload_image
+
+Upload an image src to RAM_G now instead of as-needed during rendering.
+
+```c
+void lv_draw_eve_pre_upload_image(lv_display_t *disp, const void *src)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to the lv_draw_eve display |
+| `src` | `const void *` | image src. The value passed to `lv_image_set_src` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_pre_upload_font_range" file="drivers/draw/eve/lv_draw_eve_display.h" line={77} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L77">
+
+### lv_draw_eve_pre_upload_font_range
+
+Upload font glyphs to RAM_G now instead of as-needed during rendering. Upload all the glyphs in the range of unicode code points (inclusive of the start and end values). It can be called multiple times with different ranges.
+
+```c
+void lv_draw_eve_pre_upload_font_range(lv_display_t *disp, const lv_font_t *font, uint32_t unicode_range_start, uint32_t unicode_range_end)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to the lv_draw_eve display |
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> | the font to upload glyphs from |
+| `unicode_range_start` | <ApiLink name="uint32_t" /> | the first unicode code point in the range of glyphs to upload |
+| `unicode_range_end` | <ApiLink name="uint32_t" /> | the last unicode code point (inclusive) in the range of glyphs to upload |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_pre_upload_font_text" file="drivers/draw/eve/lv_draw_eve_display.h" line={88} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L88">
+
+### lv_draw_eve_pre_upload_font_text
+
+Upload font glyphs to RAM_G now instead of as-needed during rendering. It will upload all the glyphs needed to render the string `text`. It can be called multiple times with different strings.
+
+```c
+void lv_draw_eve_pre_upload_font_text(lv_display_t *disp, const lv_font_t *font, const char *text)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to the lv_draw_eve display |
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> | the font to upload glyphs from |
+| `text` | `const char *` | the ASCII or UTF-8 string that will be iterated for glyphs to upload |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_memread8" file="drivers/draw/eve/lv_draw_eve_display.h" line={99} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L99">
+
+### lv_draw_eve_memread8
+
+Call `EVE_memRead8` for custom low-level control of the display.
+
+```c
+uint8_t lv_draw_eve_memread8(lv_display_t *disp, uint32_t address)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | the display returned by `lv_draw_eve_display_create` |
+| `address` | <ApiLink name="uint32_t" /> | the EVE address to read from |
+
+**Returns:** <ApiLink name="uint8_t" /> — the read value
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_memread16" file="drivers/draw/eve/lv_draw_eve_display.h" line={107} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L107">
+
+### lv_draw_eve_memread16
+
+Call `EVE_memRead16` for custom low-level control of the display.
+
+```c
+uint16_t lv_draw_eve_memread16(lv_display_t *disp, uint32_t address)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | the display returned by `lv_draw_eve_display_create` |
+| `address` | <ApiLink name="uint32_t" /> | the EVE address to read from |
+
+**Returns:** <ApiLink name="uint16_t" /> — the read value
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_memread32" file="drivers/draw/eve/lv_draw_eve_display.h" line={115} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L115">
+
+### lv_draw_eve_memread32
+
+Call `EVE_memRead32` for custom low-level control of the display.
+
+```c
+uint32_t lv_draw_eve_memread32(lv_display_t *disp, uint32_t address)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | the display returned by `lv_draw_eve_display_create` |
+| `address` | <ApiLink name="uint32_t" /> | the EVE address to read from |
+
+**Returns:** <ApiLink name="uint32_t" /> — the read value
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_memwrite8" file="drivers/draw/eve/lv_draw_eve_display.h" line={123} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L123">
+
+### lv_draw_eve_memwrite8
+
+Call `EVE_memWrite8` for custom low-level control of the display.
+
+```c
+void lv_draw_eve_memwrite8(lv_display_t *disp, uint32_t address, uint8_t data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | the display returned by `lv_draw_eve_display_create` |
+| `address` | <ApiLink name="uint32_t" /> | the EVE address to write to |
+| `data` | <ApiLink name="uint8_t" /> | the value to write |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_memwrite16" file="drivers/draw/eve/lv_draw_eve_display.h" line={131} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L131">
+
+### lv_draw_eve_memwrite16
+
+Call `EVE_memWrite16` for custom low-level control of the display.
+
+```c
+void lv_draw_eve_memwrite16(lv_display_t *disp, uint32_t address, uint16_t data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | the display returned by `lv_draw_eve_display_create` |
+| `address` | <ApiLink name="uint32_t" /> | the EVE address to write to |
+| `data` | <ApiLink name="uint16_t" /> | the value to write |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_eve_memwrite32" file="drivers/draw/eve/lv_draw_eve_display.h" line={139} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/draw/eve/lv_draw_eve_display.h#L139">
+
+### lv_draw_eve_memwrite32
+
+Call `EVE_memWrite32` for custom low-level control of the display.
+
+```c
+void lv_draw_eve_memwrite32(lv_display_t *disp, uint32_t address, uint32_t data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | the display returned by `lv_draw_eve_display_create` |
+| `address` | <ApiLink name="uint32_t" /> | the EVE address to write to |
+| `data` | <ApiLink name="uint32_t" /> | the value to write |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_draw_eve_target.h"]}
+  includedBy={["lv_drivers.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h", "lv_types.h"]}
+/>

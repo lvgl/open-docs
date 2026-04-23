@@ -1,0 +1,42 @@
+---
+title: "Tiny TTF"
+order: 65
+---
+
+Lightweight TrueType font renderer based on stb_truetype. Enable with `LV_USE_TINY_TTF` in `lv_conf.h`.
+
+## Tiny TTF font from memory
+
+<LvglExampleBrief>Render a multi-line label with a 30 px TTF decoded from an embedded byte array.</LvglExampleBrief>
+
+`lv_tiny_ttf_create_data` loads the external `ubuntu_font` byte array at
+30 px. A style binds the resulting `lv_font_t` and centers text, then a
+label is placed at the center of the active screen showing a four-line
+greeting drawn with the decoded font.
+
+<LvglExample name="lv_example_tiny_ttf_1" path="libs/tiny_ttf/lv_example_tiny_ttf_1" />
+
+## Tiny TTF font from file
+
+<LvglExampleBrief>Render a multi-line label with a 30 px TTF opened from the LVGL filesystem.</LvglExampleBrief>
+
+`lv_tiny_ttf_create_file` reads `Ubuntu-Medium.ttf` at 30 px through the
+filesystem driver registered under drive letter `A`. A style binds the
+resulting `lv_font_t` and centers text, then a label placed at the
+center of the active screen shows a four-line greeting drawn with the
+decoded font. The file path requires `LV_TINY_TTF_FILE_SUPPORT`.
+
+<LvglExample name="lv_example_tiny_ttf_2" path="libs/tiny_ttf/lv_example_tiny_ttf_2" />
+
+## Resize Tiny TTF font with a slider
+
+<LvglExampleBrief>Rescale a Tiny TTF font live as a slider drives a bound subject.</LvglExampleBrief>
+
+`lv_tiny_ttf_create_data` builds a 25 px font from the embedded
+`ubuntu_font` array and applies it to a style used by a centered
+`Hello world!` label. A slider spanning 5 to 50 is bound through
+`lv_subject_t` to a label showing the current value, and an observer
+calls `lv_tiny_ttf_set_size` followed by `lv_obj_report_style_change`
+whenever the subject updates so the label redraws at the new size.
+
+<LvglExample name="lv_example_tiny_ttf_3" path="libs/tiny_ttf/lv_example_tiny_ttf_3" />

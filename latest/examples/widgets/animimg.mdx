@@ -1,0 +1,17 @@
+---
+title: "Animation Image"
+order: 10
+---
+
+## Three-frame animated image
+
+<LvglExampleBrief>Cycle three frames on a centered animated image widget.</LvglExampleBrief>
+
+An `lv_animimg` is centered on the active screen and receives an
+array of three `lv_image_dsc_t` descriptors through
+`lv_animimg_set_src`. `lv_animimg_set_duration` sets one full cycle
+to 1000 ms, `lv_animimg_set_repeat_count` uses
+`LV_ANIM_REPEAT_INFINITE`, and `lv_animimg_start` kicks the
+animation off.
+
+<LvglExample name="lv_example_animimg_1" path="widgets/animimg/lv_example_animimg_1" />

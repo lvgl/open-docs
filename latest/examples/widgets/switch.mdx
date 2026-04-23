@@ -1,0 +1,30 @@
+---
+title: "Switch"
+order: 145
+---
+
+## Switch states in a column
+
+<LvglExampleBrief>Four switches covering the default, checked, disabled, and checked-disabled states.</LvglExampleBrief>
+
+The active screen is set to `LV_FLEX_FLOW_COLUMN` with centered flex
+alignment and holds four switches: a default one with
+`LV_OBJ_FLAG_EVENT_BUBBLE` set, a `LV_STATE_CHECKED` switch, a
+`LV_STATE_DISABLED` switch, and one with both states combined. Each one
+subscribes to `LV_EVENT_ALL` and logs `On` or `Off` on
+`LV_EVENT_VALUE_CHANGED` based on `lv_obj_has_state(..., LV_STATE_CHECKED)`.
+
+<LvglExample name="lv_example_switch_1" path="widgets/switch/lv_example_switch_1" />
+
+## Vertical switch orientation
+
+<LvglExampleBrief>Two 30 x 60 switches, one horizontal and one forced to vertical orientation.</LvglExampleBrief>
+
+The active screen is laid out as `LV_FLEX_FLOW_ROW` with centered flex
+alignment. Both switches are sized 30 x 60 so one is taller than it is
+wide; the first keeps the default orientation while the second calls
+`lv_switch_set_orientation(..., LV_SWITCH_ORIENTATION_VERTICAL)` and starts
+in `LV_STATE_CHECKED`. A shared callback logs `On` or `Off` on
+`LV_EVENT_VALUE_CHANGED`.
+
+<LvglExample name="lv_example_switch_2" path="widgets/switch/lv_example_switch_2" />

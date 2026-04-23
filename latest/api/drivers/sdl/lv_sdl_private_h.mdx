@@ -1,0 +1,320 @@
+---
+title: lv_sdl_private.h
+description: API reference for lv_sdl_private.h
+api:
+  functions: [lv_sdl_backend_set_display_data, lv_sdl_backend_get_display_data, lv_sdl_window_get_horizontal_resolution, lv_sdl_window_get_vertical_resolution, lv_sdl_keyboard_handler, lv_sdl_mouse_handler, lv_sdl_mousewheel_handler, lv_sdl_get_disp_from_win_id, lv_sdl_egl_init, lv_sdl_egl_resize, lv_sdl_egl_deinit]
+  structs: [lv_sdl_window_t, lv_sdl_backend_ops_t]
+  typedefs: [lv_sdl_backend_init_display_t, lv_sdl_backend_resize_display_t, lv_sdl_backend_redraw_t, lv_sdl_backend_get_renderer_t, lv_sdl_backend_deinit_display_t]
+  variables: [lv_sdl_backend_ops]
+---
+
+<ApiSummary functions={11} structs={2} typedefs={5} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Getters (4)","Other (6)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_sdl_backend_set_display_data" file="drivers/sdl/lv_sdl_private.h" line={41} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L41">
+
+### lv_sdl_backend_set_display_data
+
+```c
+void lv_sdl_backend_set_display_data(lv_display_t *display, void *backend_display_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `backend_display_data` | `void *` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (4)">
+
+<ApiMember kind="function" name="lv_sdl_backend_get_display_data" file="drivers/sdl/lv_sdl_private.h" line={42} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L42">
+
+### lv_sdl_backend_get_display_data
+
+```c
+void * lv_sdl_backend_get_display_data(lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_window_get_horizontal_resolution" file="drivers/sdl/lv_sdl_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L44">
+
+### lv_sdl_window_get_horizontal_resolution
+
+```c
+int32_t lv_sdl_window_get_horizontal_resolution(lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_window_get_vertical_resolution" file="drivers/sdl/lv_sdl_private.h" line={45} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L45">
+
+### lv_sdl_window_get_vertical_resolution
+
+```c
+int32_t lv_sdl_window_get_vertical_resolution(lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_get_disp_from_win_id" file="drivers/sdl/lv_sdl_private.h" line={70} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L70">
+
+### lv_sdl_get_disp_from_win_id
+
+```c
+lv_display_t * lv_sdl_get_disp_from_win_id(uint32_t win_id)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `win_id` | <ApiLink name="uint32_t" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (6)">
+
+<ApiMember kind="function" name="lv_sdl_keyboard_handler" file="drivers/sdl/lv_sdl_private.h" line={67} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L67">
+
+### lv_sdl_keyboard_handler
+
+```c
+void lv_sdl_keyboard_handler(SDL_Event *event)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `event` | `SDL_Event *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_mouse_handler" file="drivers/sdl/lv_sdl_private.h" line={68} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L68">
+
+### lv_sdl_mouse_handler
+
+```c
+void lv_sdl_mouse_handler(SDL_Event *event)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `event` | `SDL_Event *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_mousewheel_handler" file="drivers/sdl/lv_sdl_private.h" line={69} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L69">
+
+### lv_sdl_mousewheel_handler
+
+```c
+void lv_sdl_mousewheel_handler(SDL_Event *event)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `event` | `SDL_Event *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_egl_init" file="drivers/sdl/lv_sdl_private.h" line={74} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L74">
+
+### lv_sdl_egl_init
+
+```c
+lv_result_t lv_sdl_egl_init(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_egl_resize" file="drivers/sdl/lv_sdl_private.h" line={75} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L75">
+
+### lv_sdl_egl_resize
+
+```c
+lv_result_t lv_sdl_egl_resize(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_egl_deinit" file="drivers/sdl/lv_sdl_private.h" line={76} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L76">
+
+### lv_sdl_egl_deinit
+
+```c
+void lv_sdl_egl_deinit(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_sdl_window_t">
+
+### lv_sdl_window_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `backend_data` | `void *` |  |
+| `window` | `SDL_Window *` |  |
+| `zoom` | `float` |  |
+| `ignore_size_chg` | <ApiLink name="uint8_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_sdl_backend_ops_t">
+
+### lv_sdl_backend_ops_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `init_display` | <ApiLink name="lv_sdl_backend_init_display_t" /> |  |
+| `resize_display` | <ApiLink name="lv_sdl_backend_resize_display_t" /> |  |
+| `deinit_display` | <ApiLink name="lv_sdl_backend_deinit_display_t" /> |  |
+| `redraw` | <ApiLink name="lv_sdl_backend_redraw_t" /> |  |
+| `get_renderer` | <ApiLink name="lv_sdl_backend_get_renderer_t" /> |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_sdl_backend_init_display_t" file="drivers/sdl/lv_sdl_private.h" line={47} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L47">
+
+### lv_sdl_backend_init_display_t
+
+```c
+typedef lv_result_t(* lv_sdl_backend_init_display_t) (lv_display_t *disp)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_sdl_backend_resize_display_t" file="drivers/sdl/lv_sdl_private.h" line={48} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L48">
+
+### lv_sdl_backend_resize_display_t
+
+```c
+typedef lv_result_t(* lv_sdl_backend_resize_display_t) (lv_display_t *disp)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_sdl_backend_redraw_t" file="drivers/sdl/lv_sdl_private.h" line={49} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L49">
+
+### lv_sdl_backend_redraw_t
+
+```c
+typedef lv_result_t(* lv_sdl_backend_redraw_t) (lv_display_t *disp)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_sdl_backend_get_renderer_t" file="drivers/sdl/lv_sdl_private.h" line={50} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L50">
+
+### lv_sdl_backend_get_renderer_t
+
+```c
+typedef SDL_Renderer *(* lv_sdl_backend_get_renderer_t) (lv_display_t *disp)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_sdl_backend_deinit_display_t" file="drivers/sdl/lv_sdl_private.h" line={51} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L51">
+
+### lv_sdl_backend_deinit_display_t
+
+```c
+typedef void(* lv_sdl_backend_deinit_display_t) (lv_display_t *disp)
+```
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_sdl_backend_ops" file="drivers/sdl/lv_sdl_private.h" line={61} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/sdl/lv_sdl_private.h#L61">
+
+### lv_sdl_backend_ops
+
+```c
+const lv_sdl_backend_ops_t lv_sdl_backend_ops
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h", "lv_sdl_window.h", "lv_opengles_egl_private.h", "lv_opengles_texture_private.h", "SDL.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_event.h", "lv_group.h", "lv_indev.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_opengles_egl.h", "lv_opengles_private.h", "lv_opengles_texture.h", "lv_palette.h", "lv_string.h", "lv_tick.h", "lv_timer.h"]}
+/>

@@ -1,0 +1,151 @@
+---
+title: lv_global.h
+description: API reference for lv_global.h
+api:
+  structs: [_lv_global_t]
+  typedefs: [lv_global_t]
+  macros: [ZERO_MEM_SENTINEL, LV_GLOBAL_DEFAULT]
+  variables: [lv_global]
+---
+
+<ApiSummary structs={1} typedefs={1} macros={2} variables={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_global_t">
+
+### _lv_global_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `user_data` | `void *` | User data for the LVGL library. Move from the bottom of the struct to avoid breaking the ABI. E.g., if the user data is used by a closed-source library, this can help to avoid re-compiling the library when the lvgl-related configs are changed. |
+| `inited` | <ApiLink name="bool" /> |  |
+| `deinit_in_progress` | <ApiLink name="bool" /> | Can be used e.g. in the LV_EVENT_DELETE to deinit the drivers too |
+| `disp_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `disp_refresh` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |  |
+| `disp_default` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |  |
+| `style_trans_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `style_refresh` | <ApiLink name="bool" /> |  |
+| `style_custom_table_size` | <ApiLink name="uint32_t" /> |  |
+| `style_last_custom_prop_id` | <ApiLink name="uint32_t" /> |  |
+| `style_custom_prop_flag_lookup_table` | <ApiLink name="uint8_t" display="uint8_t *" /> |  |
+| `group_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `group_default` | <ApiLink name="lv_group_t" display="lv_group_t *" /> |  |
+| `indev_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `indev_active` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> |  |
+| `indev_obj_active` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `layout_count` | <ApiLink name="uint32_t" /> |  |
+| `layout_list` | <ApiLink name="lv_layout_dsc_t" display="lv_layout_dsc_t *" /> |  |
+| `layout_update_mutex` | <ApiLink name="bool" /> |  |
+| `memory_zero` | <ApiLink name="uint32_t" /> |  |
+| `math_rand_seed` | <ApiLink name="uint32_t" /> |  |
+| `event_header` | <ApiLink name="lv_event_t" display="lv_event_t *" /> |  |
+| `event_last_register_id` | <ApiLink name="uint32_t" /> |  |
+| `timer_state` | <ApiLink name="lv_timer_state_t" /> |  |
+| `anim_state` | <ApiLink name="lv_anim_state_t" /> |  |
+| `tick_state` | <ApiLink name="lv_tick_state_t" /> |  |
+| `draw_buf_handlers` | <ApiLink name="lv_draw_buf_handlers_t" /> |  |
+| `font_draw_buf_handlers` | <ApiLink name="lv_draw_buf_handlers_t" /> |  |
+| `image_cache_draw_buf_handlers` | <ApiLink name="lv_draw_buf_handlers_t" /> | Ensure that all assigned draw buffers can be managed by image cache. |
+| `img_decoder_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `img_decoder_info_lock` | `lv_mutex_t` |  |
+| `img_decoder_open_lock` | `lv_mutex_t` |  |
+| `img_cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> |  |
+| `img_header_cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> |  |
+| `draw_info` | <ApiLink name="lv_draw_global_info_t" /> |  |
+| `draw_sw_blend_handler_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `sw_circle_cache` | <ApiLink name="lv_draw_sw_mask_radius_circle_dsc_arr_t" /> |  |
+| `custom_log_print_cb` | <ApiLink name="lv_log_print_g_cb_t" /> |  |
+| `log_last_log_time` | <ApiLink name="uint32_t" /> |  |
+| `theme_simple` | `void *` |  |
+| `theme_default` | `void *` |  |
+| `theme_mono` | `void *` |  |
+| `fsdrv_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `stdio_fs_drv` | <ApiLink name="lv_fs_drv_t" /> |  |
+| `posix_fs_drv` | <ApiLink name="lv_fs_drv_t" /> |  |
+| `fatfs_fs_drv` | <ApiLink name="lv_fs_drv_t" /> |  |
+| `win32_fs_drv` | <ApiLink name="lv_fs_drv_t" /> |  |
+| `uefi_fs_drv` | <ApiLink name="lv_fs_drv_t" /> |  |
+| `littlefs_fs_drv` | <ApiLink name="lv_fs_drv_t" /> |  |
+| `arduino_esp_littlefs_fs_drv` | <ApiLink name="lv_fs_drv_t" /> |  |
+| `arduino_sd_fs_drv` | <ApiLink name="lv_fs_drv_t" /> |  |
+| `frogfs_fs_drv` | <ApiLink name="lv_fs_drv_t" /> |  |
+| `ft_context` | <ApiLink name="_lv_freetype_context_t" display="struct _lv_freetype_context_t *" /> |  |
+| `font_fmt_rle` | <ApiLink name="lv_font_fmt_rle_t" /> |  |
+| `span_snippet_stack` | `struct _snippet_stack *` |  |
+| `profiler_context` | `struct _lv_profiler_builtin_ctx_t *` |  |
+| `file_explorer_quick_access_style` | <ApiLink name="lv_style_t" /> |  |
+| `file_explorer_count` | <ApiLink name="size_t" /> |  |
+| `sysmon_mem` | <ApiLink name="lv_sysmon_backend_data_t" /> |  |
+| `ime_cand_len` | <ApiLink name="size_t" /> |  |
+| `objid_array` | `void *` |  |
+| `objid_count` | <ApiLink name="uint32_t" /> |  |
+| `test_state` | <ApiLink name="lv_test_state_t" /> |  |
+| `translation_packs_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `translation_selected_lang` | `const char *` |  |
+| `nuttx_ctx` | <ApiLink name="_lv_nuttx_ctx_t" display="struct _lv_nuttx_ctx_t *" /> |  |
+| `lv_general_mutex` | `lv_mutex_t` |  |
+| `evdev_discovery` | <ApiLink name="lv_evdev_discovery_t" display="lv_evdev_discovery_t *" /> |  |
+| `draw_eve_unit` | <ApiLink name="lv_draw_eve_unit_t" display="lv_draw_eve_unit_t *" /> |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_global_t" file="core/lv_global.h" line={280} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_global.h#L280">
+
+### lv_global_t
+
+```c
+typedef struct _lv_global_t lv_global_t
+```
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="ZERO_MEM_SENTINEL" file="core/lv_global.h" line={58} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_global.h#L58">
+
+### ZERO_MEM_SENTINEL
+
+```c
+#define ZERO_MEM_SENTINEL 0xa1b2c3d4
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLOBAL_DEFAULT" file="core/lv_global.h" line={295} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_global.h#L295">
+
+### LV_GLOBAL_DEFAULT
+
+```c
+#define LV_GLOBAL_DEFAULT() \
+    (&lv_global)
+```
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_global" file="core/lv_global.h" line={294} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/core/lv_global.h#L294">
+
+### lv_global
+
+```c
+lv_global_t lv_global
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h", "lv_draw.h", "lv_draw_sw.h", "lv_anim.h", "lv_area.h", "lv_color_op.h", "lv_ll.h", "lv_log.h", "lv_style.h", "lv_timer.h", "lv_os_private.h", "lv_sysmon.h", "lv_tlsf.h", "lv_font_fmt_txt_private.h", "lv_tick.h", "lv_layout.h", "lv_timer_private.h", "lv_anim_private.h", "lv_tick_private.h", "lv_draw_buf_private.h", "lv_draw_private.h", "lv_draw_sw_private.h", "lv_draw_sw_mask_private.h", "lv_tlsf_private.h", "lv_sysmon_private.h", "lv_test_private.h", "lv_layout_private.h"]}
+  includedBy={["lv_draw_eve_private.h"]}
+  transitiveIncludes={["lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_instance.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_private.h", "lv_cache_sc_da.h", "lv_color.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_mask.h", "lv_draw_rect.h", "lv_draw_sw_blend.h", "lv_draw_sw_mask.h", "lv_draw_sw_utils.h", "lv_draw_triangle.h", "lv_draw_vector.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_font_fmt_txt.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_cache.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_image_header_cache.h", "lv_indev.h", "lv_indev_gesture.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_os.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_pthread.h", "lv_sprintf.h", "lv_string.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h"]}
+/>

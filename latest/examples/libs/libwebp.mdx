@@ -1,0 +1,17 @@
+---
+title: "LibWebP"
+order: 70
+---
+
+WEBP image decoder integration. Enable with `LV_USE_LIBWEBP` in `lv_conf.h`.
+
+## Decode WebP with libwebp
+
+<LvglExampleBrief>Load a WebP file through the libwebp decoder and center it on the screen.</LvglExampleBrief>
+
+An image widget is created on the active screen with its source set to
+`A:lvgl/examples/libs/libwebp/rose.webp`, so the libwebp image decoder
+reads the file through the filesystem driver registered under drive
+letter `A`.
+
+<LvglExample name="lv_example_libwebp_1" path="libs/libwebp/lv_example_libwebp_1" />

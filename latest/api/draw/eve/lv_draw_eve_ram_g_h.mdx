@@ -1,0 +1,52 @@
+---
+title: lv_draw_eve_ram_g.h
+description: API reference for lv_draw_eve_ram_g.h
+api:
+  functions: [lv_draw_eve_ramg_get_addr]
+  macros: [LV_DRAW_EVE_RAMG_OUT_OF_RAMG]
+---
+
+<ApiSummary functions={1} macros={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_eve_ramg_get_addr" file="draw/eve/lv_draw_eve_ram_g.h" line={39} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/eve/lv_draw_eve_ram_g.h#L39">
+
+### lv_draw_eve_ramg_get_addr
+
+```c
+bool lv_draw_eve_ramg_get_addr(uint32_t *addr_dst, uintptr_t key, uint32_t addr_size, uint32_t addr_align)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `addr_dst` | <ApiLink name="uint32_t" display="uint32_t *" /> |
+| `key` | <ApiLink name="uintptr_t" /> |
+| `addr_size` | <ApiLink name="uint32_t" /> |
+| `addr_align` | <ApiLink name="uint32_t" /> |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_DRAW_EVE_RAMG_OUT_OF_RAMG" file="draw/eve/lv_draw_eve_ram_g.h" line={29} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/eve/lv_draw_eve_ram_g.h#L29">
+
+### LV_DRAW_EVE_RAMG_OUT_OF_RAMG
+
+```c
+#define LV_DRAW_EVE_RAMG_OUT_OF_RAMG UINT32_MAX
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw_eve.h"]}
+  includedBy={["lv_draw_eve_private.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_eve_target.h", "lv_types.h"]}
+/>

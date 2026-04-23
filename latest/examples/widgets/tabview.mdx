@@ -1,0 +1,32 @@
+---
+title: "Tabview"
+order: 155
+---
+
+## Horizontal tab view with three tabs
+
+<LvglExampleBrief>Three tabs across the top with a scrollable long label in the first.</LvglExampleBrief>
+
+`lv_tabview_create` fills the active screen and
+`lv_tabview_add_tab` adds `Tab 1`, `Tab 2`, and `Tab 3`. Tab 1 holds
+a tall multi-line label that exceeds the tab height so it becomes
+scrollable, while Tab 2 and Tab 3 carry short labels. A final
+`lv_obj_scroll_to_view_recursive` on the third-tab label scrolls it
+into view with `LV_ANIM_ON`.
+
+<LvglExample name="lv_example_tabview_1" path="widgets/tabview/lv_example_tabview_1" />
+
+## Left-side vertical tab view
+
+<LvglExampleBrief>Five tabs arranged along the left edge with custom colors and swipe scrolling disabled.</LvglExampleBrief>
+
+`lv_tabview_set_tab_bar_position` sets `LV_DIR_LEFT` and
+`lv_tabview_set_tab_bar_size` reserves 80 px for the tab bar. The
+tab bar is painted dark grey over a red-tinted view body, and each
+tab button gets a right border on `LV_STATE_CHECKED` through
+`lv_obj_set_style_border_side`. Five tabs labeled `Tab 1` to
+`Tab 5` each carry a small label, the second tab is tinted amber,
+and `LV_OBJ_FLAG_SCROLLABLE` is removed from the content so swipes
+no longer pan between tabs.
+
+<LvglExample name="lv_example_tabview_2" path="widgets/tabview/lv_example_tabview_2" />

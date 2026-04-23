@@ -1,0 +1,42 @@
+---
+title: "Dropdown"
+order: 60
+---
+
+## Basic dropdown with event log
+
+<LvglExampleBrief>A dropdown of fruit names logs the picked option on change.</LvglExampleBrief>
+
+A single dropdown anchored to `LV_ALIGN_TOP_MID` is filled with a newline
+separated list of ten fruits via `lv_dropdown_set_options`. An `LV_EVENT_ALL`
+handler reacts to `LV_EVENT_VALUE_CHANGED` by copying the current selection
+with `lv_dropdown_get_selected_str` and printing it through `LV_LOG_USER`.
+
+<LvglExample name="lv_example_dropdown_1" path="widgets/dropdown/lv_example_dropdown_1" />
+
+## Dropdowns opening in four directions
+
+<LvglExampleBrief>Four dropdowns share a menu and open toward top, bottom, left, and right.</LvglExampleBrief>
+
+Four dropdowns built from the same `Apple/Banana/Orange/Melon` option string
+are anchored to the top, bottom, left, and right of the screen. Each one
+sets its open direction through `lv_dropdown_set_dir` (`LV_DIR_BOTTOM`,
+`LV_DIR_RIGHT`, `LV_DIR_LEFT`) and picks a matching arrow via
+`lv_dropdown_set_symbol` (`LV_SYMBOL_UP`, `LV_SYMBOL_RIGHT`,
+`LV_SYMBOL_LEFT`). The top dropdown keeps the default downward open.
+
+<LvglExample name="lv_example_dropdown_2" path="widgets/dropdown/lv_example_dropdown_2" />
+
+## Dropdown styled as a menu
+
+<LvglExampleBrief>Turn a dropdown into a fixed-label menu with a rotating caret image.</LvglExampleBrief>
+
+A dropdown in the top-left is filled with file-menu actions and given a
+fixed button label of `Menu` via `lv_dropdown_set_text`. `img_caret_down` is
+installed with `lv_dropdown_set_symbol` and rotated 180 degrees on
+`LV_PART_INDICATOR | LV_STATE_CHECKED` using `transform_rotation` so the
+caret flips when the list opens. `lv_dropdown_set_selected_highlight(false)`
+drops the last-picked highlight, and an `LV_EVENT_VALUE_CHANGED` handler
+logs the chosen item.
+
+<LvglExample name="lv_example_dropdown_3" path="widgets/dropdown/lv_example_dropdown_3" />

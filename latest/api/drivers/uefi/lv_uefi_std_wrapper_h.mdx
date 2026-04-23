@@ -1,0 +1,728 @@
+---
+title: lv_uefi_std_wrapper.h
+description: API reference for lv_uefi_std_wrapper.h
+api:
+  typedefs: [uint8_t, uint16_t, uint32_t, uint64_t, int8_t, int16_t, int32_t, int64_t, uint_fast32_t, uintptr_t, size_t, intptr_t, intmax_t, ptrdiff_t, bool]
+  macros: [false, true, PRId8, PRId16, PRId32, PRId64, PRIu8, PRIu16, PRIu32, PRIu64, PRIx8, PRIx16, PRIx32, PRIx64, PRIX8, PRIX16, PRIX32, PRIX64, INT8_MAX, UINT8_MAX, INT16_MAX, UINT16_MAX, INT32_MAX, UINT32_MAX, INT64_MAX, UINT64_MAX, INT_MAX, UINT_MAX, INT8_MIN, INT16_MIN, INT32_MIN, INT64_MIN, SIZE_MAX, LONG_MAX, ULONG_MAX, USHRT_MAX, CHAR_BIT]
+---
+
+<ApiSummary typedefs={15} macros={37} />
+
+## Typedefs
+
+<ApiMember kind="typedef" name="uint8_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={16} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L16">
+
+### uint8_t
+
+```c
+typedef UINT8 uint8_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="uint16_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={17} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L17">
+
+### uint16_t
+
+```c
+typedef UINT16 uint16_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="uint16_t" count={84}>
+
+- `lv_obj_set_style_layout` — param `value`
+- `lv_eve_scissor` — param `x1`
+- `lv_eve_scissor` — param `y1`
+- `lv_eve_scissor` — param `x2`
+- `lv_eve_scissor` — param `y2`
+- `lv_eve_point_size` — param `radius`
+- `lv_eve_draw_circle_simple` — param `radius_t`
+- `lv_eve_draw_rect_simple` — param `radius`
+- `lv_eve_bitmap_size` — param `width`
+- `lv_eve_bitmap_size` — param `height`
+- `lv_eve_bitmap_layout` — param `linestride`
+- `lv_eve_bitmap_layout` — param `height`
+- `lv_draw_arc_get_area` — param `radius`
+- `lv_image_buf_get_transformed_area` — param `scale_x`
+- `lv_image_buf_get_transformed_area` — param `scale_y`
+- `lv_draw_vector_dsc_set_fill_gradient_color_stops` — param `count`
+- `lv_draw_vector_dsc_set_stroke_dash` — param `dash_count`
+- `lv_draw_vector_dsc_set_stroke_miter_limit` — param `miter_limit`
+- `lv_draw_vector_dsc_set_stroke_gradient_color_stops` — param `count`
+- `arm_2d_helper_swap_rgb16` — param `phwBuffer`
+- `lv_ili9341_set_gap` — param `x`
+- `lv_ili9341_set_gap` — param `y`
+- `lv_lcd_generic_mipi_set_gap` — param `x`
+- `lv_lcd_generic_mipi_set_gap` — param `y`
+- `lv_nv3007_set_gap` — param `x`
+- `lv_nv3007_set_gap` — param `y`
+- `lv_st7735_set_gap` — param `x`
+- `lv_st7735_set_gap` — param `y`
+- `lv_st7789_set_gap` — param `x`
+- `lv_st7789_set_gap` — param `y`
+- `lv_st7796_set_gap` — param `x`
+- `lv_st7796_set_gap` — param `y`
+- `lv_draw_eve_memwrite16` — param `data`
+- `LV_EVE_BITMAP_LAYOUT` — param `linestride`
+- `LV_EVE_BITMAP_LAYOUT` — param `height`
+- `LV_EVE_BITMAP_SIZE` — param `width`
+- `LV_EVE_BITMAP_SIZE` — param `height`
+- `LV_EVE_BITMAP_LAYOUT_H` — param `linestride`
+- `LV_EVE_BITMAP_LAYOUT_H` — param `height`
+- `LV_EVE_BITMAP_SIZE_H` — param `width`
+- `LV_EVE_BITMAP_SIZE_H` — param `height`
+- `LV_EVE_CALL` — param `dest`
+- `LV_EVE_JUMP` — param `dest`
+- `LV_EVE_LINE_WIDTH` — param `width`
+- `LV_EVE_POINT_SIZE` — param `size`
+- `LV_EVE_SCISSOR_SIZE` — param `width`
+- `LV_EVE_SCISSOR_SIZE` — param `height`
+- `LV_EVE_SCISSOR_XY` — param `xc0`
+- `LV_EVE_SCISSOR_XY` — param `yc0`
+- `LV_EVE_VERTEX2II` — param `xc0`
+- `LV_EVE_VERTEX2II` — param `yc0`
+- `LV_EVE_BITMAP_EXT_FORMAT` — param `format`
+- `lv_imgfont_create` — param `height`
+- `lv_indev_set_long_press_time` — param `long_press_time`
+- `lv_indev_set_long_press_repeat_time` — param `long_press_repeat_time`
+- `lv_indev_gesture_detect_pinch` — param `touch_cnt`
+- `lv_indev_gesture_detect_rotation` — param `touch_cnt`
+- `lv_indev_gesture_detect_two_fingers_swipe` — param `touch_cnt`
+- `lv_indev_gesture_recognizers_update` — param `touch_cnt`
+- `lv_barcode_set_scale` — param `scale`
+- `lv_anim_timeline_set_progress` — param `progress`
+- `lv_bidi_get_visual_pos` — param `len`
+- `lv_bidi_process_paragraph` — param `pos_conv_out`
+- `lv_bidi_process_paragraph` — param `pos_conv_len`
+- `lv_color_16_16_mix` — param `c1`
+- `lv_color_16_16_mix` — param `c2`
+- `lv_color_hsv_to_rgb` — param `h`
+- `lv_color_swap_16` — param `c`
+- `lv_style_set_layout` — param `value`
+- `lv_swap_bytes_16` — param `x`
+- `lv_gif_get_size` — param `w`
+- `lv_gif_get_size` — param `h`
+- `lv_table_set_cell_user_data` — param `row`
+- `lv_table_set_cell_user_data` — param `col`
+- `lv_table_set_selected_cell` — param `row`
+- `lv_table_set_selected_cell` — param `col`
+- `lv_table_get_cell_user_data` — param `row`
+- `lv_table_get_cell_user_data` — param `col`
+- `fillScreen` — param `color`
+- `pushImage` — param `data`
+- `pushImageDMA` — param `data`
+- `writePixel` — param `color`
+- `getTouch` — param `x`
+- `getTouch` — param `y`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="uint32_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={18} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L18">
+
+### uint32_t
+
+```c
+typedef UINT32 uint32_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="uint64_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={19} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L19">
+
+### uint64_t
+
+```c
+typedef UINT64 uint64_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="int8_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={20} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L20">
+
+### int8_t
+
+```c
+typedef INT8 int8_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="int8_t" count={1}>
+
+- `lv_pow` — param `exp`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="int16_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={21} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L21">
+
+### int16_t
+
+```c
+typedef INT16 int16_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="int16_t" count={22}>
+
+- `lv_eve_vertex_2f` — param `x`
+- `lv_eve_vertex_2f` — param `y`
+- `lv_eve_draw_circle_simple` — param `coord_x1`
+- `lv_eve_draw_circle_simple` — param `coord_y1`
+- `lv_eve_draw_rect_simple` — param `coord_x1`
+- `lv_eve_draw_rect_simple` — param `coord_y1`
+- `lv_eve_draw_rect_simple` — param `coord_x2`
+- `lv_eve_draw_rect_simple` — param `coord_y2`
+- `lv_eve_mask_round` — param `coord_x1`
+- `lv_eve_mask_round` — param `coord_y1`
+- `lv_eve_mask_round` — param `coord_x2`
+- `lv_eve_mask_round` — param `coord_y2`
+- `lv_eve_mask_round` — param `radius`
+- `lv_draw_sw_mask_line_angle_init` — param `angle`
+- `LV_EVE_VERTEX2F` — param `xc0`
+- `LV_EVE_VERTEX2F` — param `yc0`
+- `lv_anim_set_bezier3_param` — param `x1`
+- `lv_anim_set_bezier3_param` — param `y1`
+- `lv_anim_set_bezier3_param` — param `x2`
+- `lv_anim_set_bezier3_param` — param `y2`
+- `lv_trigo_sin` — param `angle`
+- `lv_trigo_cos` — param `angle`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="int32_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={22} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L22">
+
+### int32_t
+
+```c
+typedef INT32 int32_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="int64_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={23} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L23">
+
+### int64_t
+
+```c
+typedef INT64 int64_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="int64_t" count={2}>
+
+- `lv_linux_drm_set_file` — param `connector_id`
+- `lv_pow` — param `base`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="uint_fast32_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={25} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L25">
+
+### uint_fast32_t
+
+```c
+typedef uint32_t uint_fast32_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="uintptr_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={26} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L26">
+
+### uintptr_t
+
+```c
+typedef UINTN uintptr_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="uintptr_t" count={1}>
+
+- `lv_draw_eve_ramg_get_addr` — param `key`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="size_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={27} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L27">
+
+### size_t
+
+```c
+typedef UINTN size_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="intptr_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={28} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L28">
+
+### intptr_t
+
+```c
+typedef INTN intptr_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="intmax_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={29} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L29">
+
+### intmax_t
+
+```c
+typedef INTN intmax_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="ptrdiff_t" file="drivers/uefi/lv_uefi_std_wrapper.h" line={30} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L30">
+
+### ptrdiff_t
+
+```c
+typedef INTN ptrdiff_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="bool" file="drivers/uefi/lv_uefi_std_wrapper.h" line={32} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L32">
+
+### bool
+
+```c
+typedef UINT8 bool
+```
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="false" file="drivers/uefi/lv_uefi_std_wrapper.h" line={37} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L37">
+
+### false
+
+```c
+#define false 0
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="true" file="drivers/uefi/lv_uefi_std_wrapper.h" line={38} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L38">
+
+### true
+
+```c
+#define true 1
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRId8" file="drivers/uefi/lv_uefi_std_wrapper.h" line={40} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L40">
+
+### PRId8
+
+```c
+#define PRId8 "d"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRId16" file="drivers/uefi/lv_uefi_std_wrapper.h" line={41} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L41">
+
+### PRId16
+
+```c
+#define PRId16 "d"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRId32" file="drivers/uefi/lv_uefi_std_wrapper.h" line={42} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L42">
+
+### PRId32
+
+```c
+#define PRId32 "d"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRId64" file="drivers/uefi/lv_uefi_std_wrapper.h" line={43} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L43">
+
+### PRId64
+
+```c
+#define PRId64 "d"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIu8" file="drivers/uefi/lv_uefi_std_wrapper.h" line={45} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L45">
+
+### PRIu8
+
+```c
+#define PRIu8 "u"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIu16" file="drivers/uefi/lv_uefi_std_wrapper.h" line={46} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L46">
+
+### PRIu16
+
+```c
+#define PRIu16 "u"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIu32" file="drivers/uefi/lv_uefi_std_wrapper.h" line={47} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L47">
+
+### PRIu32
+
+```c
+#define PRIu32 "u"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIu64" file="drivers/uefi/lv_uefi_std_wrapper.h" line={48} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L48">
+
+### PRIu64
+
+```c
+#define PRIu64 "u"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIx8" file="drivers/uefi/lv_uefi_std_wrapper.h" line={50} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L50">
+
+### PRIx8
+
+```c
+#define PRIx8 "x"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIx16" file="drivers/uefi/lv_uefi_std_wrapper.h" line={51} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L51">
+
+### PRIx16
+
+```c
+#define PRIx16 "x"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIx32" file="drivers/uefi/lv_uefi_std_wrapper.h" line={52} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L52">
+
+### PRIx32
+
+```c
+#define PRIx32 "x"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIx64" file="drivers/uefi/lv_uefi_std_wrapper.h" line={53} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L53">
+
+### PRIx64
+
+```c
+#define PRIx64 "x"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIX8" file="drivers/uefi/lv_uefi_std_wrapper.h" line={55} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L55">
+
+### PRIX8
+
+```c
+#define PRIX8 "X"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIX16" file="drivers/uefi/lv_uefi_std_wrapper.h" line={56} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L56">
+
+### PRIX16
+
+```c
+#define PRIX16 "X"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIX32" file="drivers/uefi/lv_uefi_std_wrapper.h" line={57} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L57">
+
+### PRIX32
+
+```c
+#define PRIX32 "X"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PRIX64" file="drivers/uefi/lv_uefi_std_wrapper.h" line={58} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L58">
+
+### PRIX64
+
+```c
+#define PRIX64 "X"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="INT8_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={64} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L64">
+
+### INT8_MAX
+
+```c
+#define INT8_MAX (0x7F)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="UINT8_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={68} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L68">
+
+### UINT8_MAX
+
+```c
+#define UINT8_MAX (0xFF)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="INT16_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={72} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L72">
+
+### INT16_MAX
+
+```c
+#define INT16_MAX (0x7FFF)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="UINT16_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={76} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L76">
+
+### UINT16_MAX
+
+```c
+#define UINT16_MAX (0xFFFF)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="INT32_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={80} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L80">
+
+### INT32_MAX
+
+```c
+#define INT32_MAX (0x7FFFFFFF)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="UINT32_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={84} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L84">
+
+### UINT32_MAX
+
+```c
+#define UINT32_MAX (0xFFFFFFFF)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="INT64_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={88} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L88">
+
+### INT64_MAX
+
+```c
+#define INT64_MAX (0x7FFFFFFFFFFFFFFFULL)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="UINT64_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={92} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L92">
+
+### UINT64_MAX
+
+```c
+#define UINT64_MAX (0xFFFFFFFFFFFFFFFFULL)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="INT_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={96} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L96">
+
+### INT_MAX
+
+```c
+#define INT_MAX (0x7FFFFFFFFFFFFFFFULL)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="UINT_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={100} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L100">
+
+### UINT_MAX
+
+```c
+#define UINT_MAX (0xFFFFFFFFFFFFFFFFULL)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="INT8_MIN" file="drivers/uefi/lv_uefi_std_wrapper.h" line={107} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L107">
+
+### INT8_MIN
+
+```c
+#define INT8_MIN ((  -127) - 1)
+```
+
+Minimum values for the signed UEFI Data Types
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="INT16_MIN" file="drivers/uefi/lv_uefi_std_wrapper.h" line={111} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L111">
+
+### INT16_MIN
+
+```c
+#define INT16_MIN (( -32767) - 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="INT32_MIN" file="drivers/uefi/lv_uefi_std_wrapper.h" line={115} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L115">
+
+### INT32_MIN
+
+```c
+#define INT32_MIN (( -2147483647) - 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="INT64_MIN" file="drivers/uefi/lv_uefi_std_wrapper.h" line={119} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L119">
+
+### INT64_MIN
+
+```c
+#define INT64_MIN (( -9223372036854775807LL) - 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SIZE_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={123} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L123">
+
+### SIZE_MAX
+
+```c
+#define SIZE_MAX (0xFFFFFFFF)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LONG_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={127} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L127">
+
+### LONG_MAX
+
+```c
+#define LONG_MAX (0x7FFFFFFF)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="ULONG_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={131} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L131">
+
+### ULONG_MAX
+
+```c
+#define ULONG_MAX (0xFFFFFFFF)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="USHRT_MAX" file="drivers/uefi/lv_uefi_std_wrapper.h" line={135} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L135">
+
+### USHRT_MAX
+
+```c
+#define USHRT_MAX (0xFFFF)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="CHAR_BIT" file="drivers/uefi/lv_uefi_std_wrapper.h" line={139} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/drivers/uefi/lv_uefi_std_wrapper.h#L139">
+
+### CHAR_BIT
+
+```c
+#define CHAR_BIT 8
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["LV_USE_UEFI_INCLUDE"]}
+/>

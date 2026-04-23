@@ -1,0 +1,133 @@
+---
+title: lv_pxp_cfg.h
+description: API reference for lv_pxp_cfg.h
+api:
+  functions: [lv_pxp_init, lv_pxp_deinit, lv_pxp_reset, lv_pxp_run, lv_pxp_wait]
+  structs: [pxp_cfg_t]
+  macros: [PXP_ID, PXP_IRQ_ID]
+---
+
+<ApiSummary functions={5} structs={1} macros={2} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_pxp_init" file="draw/nxp/pxp/lv_pxp_cfg.h" line={75} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nxp/pxp/lv_pxp_cfg.h#L75">
+
+### lv_pxp_init
+
+Reset and initialize PXP device. This function should be called as a part of display init sequence.
+
+```c
+void lv_pxp_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_pxp_deinit" file="draw/nxp/pxp/lv_pxp_cfg.h" line={80} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nxp/pxp/lv_pxp_cfg.h#L80">
+
+### lv_pxp_deinit
+
+Disable PXP device. Should be called during display deinit sequence.
+
+```c
+void lv_pxp_deinit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_pxp_reset" file="draw/nxp/pxp/lv_pxp_cfg.h" line={85} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nxp/pxp/lv_pxp_cfg.h#L85">
+
+### lv_pxp_reset
+
+Reset PXP device.
+
+```c
+void lv_pxp_reset(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_pxp_run" file="draw/nxp/pxp/lv_pxp_cfg.h" line={90} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nxp/pxp/lv_pxp_cfg.h#L90">
+
+### lv_pxp_run
+
+Clear cache and start PXP.
+
+```c
+void lv_pxp_run(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_pxp_wait" file="draw/nxp/pxp/lv_pxp_cfg.h" line={95} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nxp/pxp/lv_pxp_cfg.h#L95">
+
+### lv_pxp_wait
+
+Wait for PXP completion.
+
+```c
+void lv_pxp_wait(void)
+```
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="pxp_cfg_t">
+
+### pxp_cfg_t
+
+NXP PXP device configuration.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `pxp_interrupt_init` | `void(*)(void)` | Callback for PXP interrupt initialization |
+| `pxp_interrupt_deinit` | `void(*)(void)` | Callback for PXP interrupt de-initialization |
+| `pxp_run` | `void(*)(void)` | Callback for PXP start |
+| `pxp_wait` | `void(*)(void)` | Callback for waiting of PXP completion |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="PXP_ID" file="draw/nxp/pxp/lv_pxp_cfg.h" line={41} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nxp/pxp/lv_pxp_cfg.h#L41">
+
+### PXP_ID
+
+```c
+#define PXP_ID PXP
+```
+
+Copyright 2020-2023 NXP
+
+SPDX-License-Identifier: MIT PXP module instance to use
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="PXP_IRQ_ID" file="draw/nxp/pxp/lv_pxp_cfg.h" line={44} url="https://github.com/lvgl/lvgl/tree/75ae154f1cf78e6ca1e3598b8848a4965e01f65e/src/draw/nxp/pxp/lv_pxp_cfg.h#L44">
+
+### PXP_IRQ_ID
+
+```c
+#define PXP_IRQ_ID PXP_IRQn
+```
+
+PXP interrupt line ID
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "fsl_cache.h", "fsl_pxp.h", "lv_log.h"]}
+  includedBy={["lv_pxp_osa.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h", "lv_types.h"]}
+/>

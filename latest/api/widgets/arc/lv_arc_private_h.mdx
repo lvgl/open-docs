@@ -1,0 +1,47 @@
+---
+title: lv_arc_private.h
+description: API reference for lv_arc_private.h
+api:
+  structs: [_lv_arc_t]
+---
+
+<RelatedHeaders name="lv_arc.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_arc_t">
+
+### _lv_arc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `rotation` | <ApiLink name="int32_t" /> |  |
+| `indic_angle_start` | <ApiLink name="lv_value_precise_t" /> |  |
+| `indic_angle_end` | <ApiLink name="lv_value_precise_t" /> |  |
+| `bg_angle_start` | <ApiLink name="lv_value_precise_t" /> |  |
+| `bg_angle_end` | <ApiLink name="lv_value_precise_t" /> |  |
+| `value` | <ApiLink name="int32_t" /> | Current value of the arc |
+| `min_value` | <ApiLink name="int32_t" /> | Minimum value of the arc |
+| `max_value` | <ApiLink name="int32_t" /> | Maximum value of the arc |
+| `dragging` | <ApiLink name="uint32_t" /> |  |
+| `type` | <ApiLink name="uint32_t" /> |  |
+| `min_close` | <ApiLink name="uint32_t" /> | 1: the last pressed angle was closer to minimum end |
+| `in_out` | <ApiLink name="uint32_t" /> | 1: The click was within the background arc angles. 0: Click outside |
+| `chg_rate` | <ApiLink name="uint32_t" /> | Drag angle rate of change of the arc (degrees/sec) |
+| `last_tick` | <ApiLink name="uint32_t" /> | Last dragging event timestamp of the arc |
+| `last_angle` | <ApiLink name="lv_value_precise_t" /> | Last dragging angle of the arc |
+| `knob_offset` | <ApiLink name="int16_t" /> | knob offset from the main arc |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lv_arc.h"]}
+  includedBy={["lv_spinner_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

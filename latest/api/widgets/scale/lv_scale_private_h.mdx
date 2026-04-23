@@ -1,0 +1,82 @@
+---
+title: lv_scale_private.h
+description: API reference for lv_scale_private.h
+api:
+  structs: [_lv_scale_section_t, lv_scale_needle_t, _lv_scale_t]
+---
+
+<RelatedHeaders name="lv_scale.h" isPrivate={true} />
+
+<ApiSummary structs={3} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_scale_section_t">
+
+### _lv_scale_section_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `main_style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> | Style to use for MAIN part(s) of scale when it falls within this section's range |
+| `indicator_style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> | Style to use for INDICATOR part(s) of scale when it falls within this section's range |
+| `items_style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> | Style to use for ITEMS part(s) of scale when it falls within this section's range |
+| `range_min` | <ApiLink name="int32_t" /> | Scale parts with value >= this value will be drawn using applicable style. |
+| `range_max` | <ApiLink name="int32_t" /> | Scale parts with value \<= this value will be drawn using applicable style. |
+| `first_tick_idx_in_section` | <ApiLink name="uint32_t" /> | Internal (set during drawing): Tick index of first tick that falls within this section; LV_SCALE_TICK_IDX_DEFAULT_ID if section contains no ticks. |
+| `last_tick_idx_in_section` | <ApiLink name="uint32_t" /> | Internal (set during drawing): Tick index of last tick that falls within this section; LV_SCALE_TICK_IDX_DEFAULT_ID if section contains no ticks. |
+| `first_tick_in_section_width` | <ApiLink name="int32_t" /> | Internal (set during drawing) |
+| `last_tick_in_section_width` | <ApiLink name="int32_t" /> | Internal (set during drawing) |
+| `first_tick_in_section` | <ApiLink name="lv_point_t" /> | Internal (set during drawing) |
+| `last_tick_in_section` | <ApiLink name="lv_point_t" /> | Internal (set during drawing) |
+| `first_tick_idx_is_major` | <ApiLink name="uint32_t" /> | Internal (set during drawing): true if `first_tick_idx_in_section` represents a major tick. |
+| `last_tick_idx_is_major` | <ApiLink name="uint32_t" /> | Internal (set during drawing): true if `last_tick_idx_in_section` represents a major tick. |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_scale_needle_t">
+
+### lv_scale_needle_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `value` | <ApiLink name="int32_t" /> |  |
+| `length` | <ApiLink name="int32_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_scale_t">
+
+### _lv_scale_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> | Base Widget part of Scale |
+| `section_ll` | <ApiLink name="lv_ll_t" /> | Linked list for the sections (stores lv_scale_section_t) |
+| `txt_src` | `const char **` | Optional list of text strings for major ticks when custom labels are provided. |
+| `mode` | <ApiLink name="lv_scale_mode_t" /> | Orientation and layout of scale. |
+| `range_min` | <ApiLink name="int32_t" /> | Scale's minimum value |
+| `range_max` | <ApiLink name="int32_t" /> | Scale's maximum value |
+| `total_tick_count` | <ApiLink name="uint32_t" /> | Total number of ticks (major and minor) |
+| `major_tick_every` | <ApiLink name="uint32_t" /> | Frequency of major ticks to minor ticks |
+| `label_enabled` | <ApiLink name="uint32_t" /> | Draw labels for major ticks? |
+| `post_draw` | <ApiLink name="uint32_t" /> | false: drawing occurs during LV_EVENT_DRAW_MAIN; true : drawing occurs during LV_EVENT_DRAW_POST. |
+| `draw_ticks_on_top` | <ApiLink name="uint32_t" /> | Draw ticks on top of main line? |
+| `angle_range` | <ApiLink name="uint32_t" /> | Degrees between low end and high end of scale |
+| `rotation` | <ApiLink name="int32_t" /> | Clockwise angular offset from 3-o'clock position of low end of scale |
+| `custom_label_cnt` | <ApiLink name="int32_t" /> | Number of custom labels provided in `txt_src` |
+| `last_tick_width` | <ApiLink name="int32_t" /> | Width of last tick in pixels |
+| `first_tick_width` | <ApiLink name="int32_t" /> | Width of first tick in pixels |
+| `needles` | <ApiLink name="lv_array_t" /> | Needle list of this scale |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_scale.h", "lv_obj_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_line.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>
