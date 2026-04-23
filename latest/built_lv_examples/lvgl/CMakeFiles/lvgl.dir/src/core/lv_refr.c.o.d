@@ -144,6 +144,8 @@ lvgl/CMakeFiles/lvgl.dir/src/core/lv_refr.c.o: \
   /home/runner/work/lvgl/emscripten_builder/lvgl/src/core/../misc/../font/../draw/../misc/cache/instance/lv_image_header_cache.h \
   /home/runner/work/lvgl/emscripten_builder/lvgl/src/core/../misc/../font/../draw/../misc/cache/instance/../../lv_types.h \
   /home/runner/work/lvgl/emscripten_builder/lvgl/src/core/../misc/../font/../draw/../misc/cache/instance/lv_image_cache.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/core/../draw/opengles/lv_draw_opengles.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/core/../draw/opengles/../../lv_conf_internal.h \
   /home/runner/work/lvgl/emscripten_builder/lvgl/src/core/../stdlib/lv_string.h \
   /home/runner/work/lvgl/emscripten_builder/lvgl/src/core/lv_global.h \
   /home/runner/work/lvgl/emscripten_builder/lvgl/src/core/../draw/lv_draw.h \
