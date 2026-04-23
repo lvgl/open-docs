@@ -1,0 +1,236 @@
+---
+title: lv_linux_drm.h
+description: API reference for lv_linux_drm.h
+api:
+  functions: [lv_linux_drm_create, lv_linux_drm_set_file, lv_linux_drm_find_device_path, lv_linux_drm_set_mode_cb, lv_linux_drm_mode_get_horizontal_resolution, lv_linux_drm_mode_get_vertical_resolution, lv_linux_drm_mode_get_refresh_rate, lv_linux_drm_mode_is_preferred]
+  typedefs: [lv_linux_drm_mode_t, lv_linux_drm_select_mode_cb_t]
+---
+
+<ApiSummary functions={8} typedefs={2} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Getters (3)","Other (3)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_linux_drm_set_file" file="drivers/display/drm/lv_linux_drm.h" line={69} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/drm/lv_linux_drm.h#L69">
+
+### lv_linux_drm_set_file
+
+Configure the DRM device file and connector for a display.
+
+Sets the DRM device file path and connector ID to use for the specified display. The DRM device file is typically located at /dev/dri/cardN where N is the card number. The connector ID specifies which physical output (HDMI, VGA, etc.) to use.
+
+```c
+lv_result_t lv_linux_drm_set_file(lv_display_t *disp, const char *file, int64_t connector_id)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Pointer to the display object created with <ApiLink name="lv_linux_drm_create" display="lv_linux_drm_create()" /> |
+| `file` | `const char *` | Path to the DRM device file (e.g., "/dev/dri/card0") |
+| `connector_id` | <ApiLink name="int64_t" /> | ID of the DRM connector to use, or -1 to auto-select the first available |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the initialization succeeded or LV_RESULT_INVALID if it failed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_linux_drm_set_mode_cb" file="drivers/display/drm/lv_linux_drm.h" line={91} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/drm/lv_linux_drm.h#L91">
+
+### lv_linux_drm_set_mode_cb
+
+Set a callback function for custom DRM mode selection to override the default mode selection behavior
+
+The default mode selection behavior is selecting the native mode
+
+```c
+void lv_linux_drm_set_mode_cb(lv_display_t *disp, lv_linux_drm_select_mode_cb_t callback)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to the display object |
+| `callback` | <ApiLink name="lv_linux_drm_select_mode_cb_t" /> | function to be called when a display mode needs to be selected, or NULL to use the default mode selection behavior |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (3)">
+
+<ApiMember kind="function" name="lv_linux_drm_mode_get_horizontal_resolution" file="drivers/display/drm/lv_linux_drm.h" line={98} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/drm/lv_linux_drm.h#L98">
+
+### lv_linux_drm_mode_get_horizontal_resolution
+
+Get the horizontal resolution of a DRM mode
+
+```c
+int32_t lv_linux_drm_mode_get_horizontal_resolution(const lv_linux_drm_mode_t *mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `mode` | <ApiLink name="lv_linux_drm_mode_t" display="const lv_linux_drm_mode_t *" /> | pointer to the DRM mode object |
+
+**Returns:** <ApiLink name="int32_t" /> — horizontal resolution in pixels, or 0 if mode is invalid
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_linux_drm_mode_get_vertical_resolution" file="drivers/display/drm/lv_linux_drm.h" line={105} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/drm/lv_linux_drm.h#L105">
+
+### lv_linux_drm_mode_get_vertical_resolution
+
+Get the vertical resolution of a DRM mode
+
+```c
+int32_t lv_linux_drm_mode_get_vertical_resolution(const lv_linux_drm_mode_t *mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `mode` | <ApiLink name="lv_linux_drm_mode_t" display="const lv_linux_drm_mode_t *" /> | pointer to the DRM mode object |
+
+**Returns:** <ApiLink name="int32_t" /> — vertical resolution in pixels, or 0 if mode is invalid
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_linux_drm_mode_get_refresh_rate" file="drivers/display/drm/lv_linux_drm.h" line={112} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/drm/lv_linux_drm.h#L112">
+
+### lv_linux_drm_mode_get_refresh_rate
+
+Get the refresh rate of a DRM mode
+
+```c
+int32_t lv_linux_drm_mode_get_refresh_rate(const lv_linux_drm_mode_t *mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `mode` | <ApiLink name="lv_linux_drm_mode_t" display="const lv_linux_drm_mode_t *" /> | pointer to the DRM mode object |
+
+**Returns:** <ApiLink name="int32_t" /> — refresh rate in Hz, or 0 if mode is invalid
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_linux_drm_create" file="drivers/display/drm/lv_linux_drm.h" line={55} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/drm/lv_linux_drm.h#L55">
+
+### lv_linux_drm_create
+
+Create a new Linux DRM display.
+
+Creates and initializes a new LVGL display using the Linux DRM (Direct Rendering Manager) subsystem for hardware-accelerated graphics output.
+
+```c
+lv_display_t * lv_linux_drm_create(void)
+```
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — Pointer to the created display object, or NULL on failure
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_linux_drm_find_device_path" file="drivers/display/drm/lv_linux_drm.h" line={80} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/drm/lv_linux_drm.h#L80">
+
+### lv_linux_drm_find_device_path
+
+Automatically find a suitable DRM device path.
+
+Scans the system for available DRM devices and returns the path to a suitable device file that can be used with <ApiLink name="lv_linux_drm_set_file" display="lv_linux_drm_set_file()" />.
+
+```c
+char * lv_linux_drm_find_device_path(void)
+```
+
+**Returns:** `char *` — Dynamically allocated string containing the device path (must be freed with <ApiLink name="lv_free" display="lv_free()" />), or NULL if no suitable device is found
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_linux_drm_mode_is_preferred" file="drivers/display/drm/lv_linux_drm.h" line={119} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/drm/lv_linux_drm.h#L119">
+
+### lv_linux_drm_mode_is_preferred
+
+Check if a DRM mode is the preferred mode for the display
+
+```c
+bool lv_linux_drm_mode_is_preferred(const lv_linux_drm_mode_t *mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `mode` | <ApiLink name="lv_linux_drm_mode_t" display="const lv_linux_drm_mode_t *" /> | pointer to the DRM mode object |
+
+**Returns:** <ApiLink name="bool" /> — true if this is the preferred/native mode, false otherwise
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_linux_drm_mode_t" file="drivers/display/drm/lv_linux_drm.h" line={30} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/drm/lv_linux_drm.h#L30">
+
+### lv_linux_drm_mode_t
+
+```c
+typedef drmModeModeInfo lv_linux_drm_mode_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_linux_drm_mode_t" count={4}>
+
+- `lv_linux_drm_mode_get_horizontal_resolution` — param `mode`
+- `lv_linux_drm_mode_get_vertical_resolution` — param `mode`
+- `lv_linux_drm_mode_get_refresh_rate` — param `mode`
+- `lv_linux_drm_mode_is_preferred` — param `mode`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_linux_drm_select_mode_cb_t" file="drivers/display/drm/lv_linux_drm.h" line={39} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/drm/lv_linux_drm.h#L39">
+
+### lv_linux_drm_select_mode_cb_t
+
+```c
+typedef size_t(* lv_linux_drm_select_mode_cb_t) (lv_display_t *disp, const lv_linux_drm_mode_t *modes, size_t mode_count)
+```
+
+Callback function type for selecting a DRM display mode
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_linux_drm_select_mode_cb_t" count={1}>
+
+- `lv_linux_drm_set_mode_cb` — param `callback`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_display.h", "xf86drmMode.h"]}
+  includedBy={["lv_linux_drm_egl_private.h", "lv_drivers.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_event.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

@@ -1,0 +1,186 @@
+---
+title: lv_qrcode.h
+description: API reference for lv_qrcode.h
+api:
+  functions: [lv_qrcode_create, lv_qrcode_set_size, lv_qrcode_set_dark_color, lv_qrcode_set_light_color, lv_qrcode_update, lv_qrcode_set_data, lv_qrcode_set_quiet_zone]
+  variables: [lv_qrcode_class]
+---
+
+<RelatedHeaders name="lv_qrcode_private.h" isPrivate={false} />
+
+<ApiSummary functions={7} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (5)","Other (2)"]}>
+<ApiTab value="Setters (5)">
+
+<ApiMember kind="function" name="lv_qrcode_set_size" file="libs/qrcode/lv_qrcode.h" line={50} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/libs/qrcode/lv_qrcode.h#L50">
+
+### lv_qrcode_set_size
+
+Set QR code size.
+
+```c
+void lv_qrcode_set_size(lv_obj_t *obj, int32_t size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a QR code object |
+| `size` | <ApiLink name="int32_t" /> | width and height of the QR code |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_qrcode_set_dark_color" file="libs/qrcode/lv_qrcode.h" line={57} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/libs/qrcode/lv_qrcode.h#L57">
+
+### lv_qrcode_set_dark_color
+
+Set QR code dark color.
+
+```c
+void lv_qrcode_set_dark_color(lv_obj_t *obj, lv_color_t color)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a QR code object |
+| `color` | <ApiLink name="lv_color_t" /> | dark color of the QR code |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_qrcode_set_light_color" file="libs/qrcode/lv_qrcode.h" line={64} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/libs/qrcode/lv_qrcode.h#L64">
+
+### lv_qrcode_set_light_color
+
+Set QR code light color.
+
+```c
+void lv_qrcode_set_light_color(lv_obj_t *obj, lv_color_t color)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a QR code object |
+| `color` | <ApiLink name="lv_color_t" /> | light color of the QR code |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_qrcode_set_data" file="libs/qrcode/lv_qrcode.h" line={80} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/libs/qrcode/lv_qrcode.h#L80">
+
+### lv_qrcode_set_data
+
+Helper function to set the data of a QR code object
+
+```c
+void lv_qrcode_set_data(lv_obj_t *obj, const char *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a QR code object |
+| `data` | `const char *` | data to display as a string |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_qrcode_set_quiet_zone" file="libs/qrcode/lv_qrcode.h" line={88} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/libs/qrcode/lv_qrcode.h#L88">
+
+### lv_qrcode_set_quiet_zone
+
+Enable or disable quiet zone. Quiet zone is the area around the QR code where no data is encoded.
+
+```c
+void lv_qrcode_set_quiet_zone(lv_obj_t *obj, bool enable)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a QR code object |
+| `enable` | <ApiLink name="bool" /> | true: enable quiet zone; false: disable quiet zone |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_qrcode_create" file="libs/qrcode/lv_qrcode.h" line={43} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/libs/qrcode/lv_qrcode.h#L43">
+
+### lv_qrcode_create
+
+Create an empty QR code (an `lv_canvas`) object.
+
+```c
+lv_obj_t * lv_qrcode_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | point to an object where to create the QR code |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created QR code object
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_qrcode_update" file="libs/qrcode/lv_qrcode.h" line={73} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/libs/qrcode/lv_qrcode.h#L73">
+
+### lv_qrcode_update
+
+Set the data of a QR code object
+
+```c
+lv_result_t lv_qrcode_update(lv_obj_t *obj, const void *data, uint32_t data_len)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a QR code object |
+| `data` | `const void *` | data to display |
+| `data_len` | <ApiLink name="uint32_t" /> | length of data in bytes |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: if no error; LV_RESULT_INVALID: on error
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Variables
+
+<ApiMember kind="variable" name="lv_qrcode_class" file="libs/qrcode/lv_qrcode.h" line={32} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/libs/qrcode/lv_qrcode.h#L32">
+
+### lv_qrcode_class
+
+```c
+const lv_obj_class_t lv_qrcode_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_color.h", "lv_types.h", "lv_canvas.h", "stdbool.h", "stdint.h"]}
+  includedBy={["lv_qrcode_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_observer.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h"]}
+/>

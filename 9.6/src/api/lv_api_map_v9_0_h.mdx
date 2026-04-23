@@ -1,0 +1,152 @@
+---
+title: lv_api_map_v9_0.h
+description: API reference for lv_api_map_v9_0.h
+api:
+  macros: [lv_image_set_align, lv_image_get_align, lv_button_bind_checked, LV_DRAW_BUF_DEFINE, _lv_utils_bsearch, lv_draw_buf_align_user, lv_draw_buf_create_user, lv_draw_buf_width_to_stride_user, lv_draw_buf_dup_user, lv_draw_buf_invalidate_cache_user, lv_draw_buf_flush_cache_user, lv_draw_buf_destroy_user]
+---
+
+<ApiSummary macros={12} />
+
+## Macros
+
+<ApiMember kind="macro" name="lv_image_set_align" file="lv_api_map_v9_0.h" line={33} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L33">
+
+### lv_image_set_align
+
+```c
+#define lv_image_set_align lv_image_set_inner_align
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_image_get_align" file="lv_api_map_v9_0.h" line={34} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L34">
+
+### lv_image_get_align
+
+```c
+#define lv_image_get_align lv_image_get_inner_align
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_button_bind_checked" file="lv_api_map_v9_0.h" line={40} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L40">
+
+### lv_button_bind_checked
+
+```c
+#define lv_button_bind_checked lv_obj_bind_checked
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_BUF_DEFINE" file="lv_api_map_v9_0.h" line={42} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L42">
+
+### LV_DRAW_BUF_DEFINE
+
+```c
+#define LV_DRAW_BUF_DEFINE LV_DRAW_BUF_DEFINE_STATIC
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="_lv_utils_bsearch" file="lv_api_map_v9_0.h" line={44} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L44">
+
+### _lv_utils_bsearch
+
+```c
+#define _lv_utils_bsearch lv_utils_bsearch
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_draw_buf_align_user" file="lv_api_map_v9_0.h" line={45} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L45">
+
+### lv_draw_buf_align_user
+
+```c
+#define lv_draw_buf_align_user lv_draw_buf_align_ex
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_draw_buf_create_user" file="lv_api_map_v9_0.h" line={46} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L46">
+
+### lv_draw_buf_create_user
+
+```c
+#define lv_draw_buf_create_user lv_draw_buf_create_ex
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_draw_buf_width_to_stride_user" file="lv_api_map_v9_0.h" line={47} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L47">
+
+### lv_draw_buf_width_to_stride_user
+
+```c
+#define lv_draw_buf_width_to_stride_user lv_draw_buf_width_to_stride_ex
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_draw_buf_dup_user" file="lv_api_map_v9_0.h" line={48} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L48">
+
+### lv_draw_buf_dup_user
+
+```c
+#define lv_draw_buf_dup_user lv_draw_buf_dup_ex
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_draw_buf_invalidate_cache_user" file="lv_api_map_v9_0.h" line={50} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L50">
+
+### lv_draw_buf_invalidate_cache_user
+
+```c
+#define lv_draw_buf_invalidate_cache_user(handlers, drawbuf, area) \
+    lv_draw_buf_invalidate_cache(drawbuf, area)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_draw_buf_flush_cache_user" file="lv_api_map_v9_0.h" line={51} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L51">
+
+### lv_draw_buf_flush_cache_user
+
+```c
+#define lv_draw_buf_flush_cache_user(handlers, drawbuf, area) \
+    lv_draw_buf_flush_cache(drawbuf, area)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_draw_buf_destroy_user" file="lv_api_map_v9_0.h" line={52} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/lv_api_map_v9_0.h#L52">
+
+### lv_draw_buf_destroy_user
+
+```c
+#define lv_draw_buf_destroy_user(handlers, drawbuf) \
+    lv_draw_buf_destroy(drawbuf)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h"]}
+/>

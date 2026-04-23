@@ -1,0 +1,115 @@
+---
+title: lv_opengles_texture.h
+description: API reference for lv_opengles_texture.h
+api:
+  functions: [lv_opengles_texture_create, lv_opengles_texture_create_from_texture_id, lv_opengles_texture_get_texture_id, lv_opengles_texture_get_from_texture_id]
+---
+
+<RelatedHeaders name="lv_opengles_texture_private.h" isPrivate={false} />
+
+<ApiSummary functions={4} />
+
+## Functions
+
+<ApiTabs items={["Getters (2)","Other (2)"]}>
+<ApiTab value="Getters (2)">
+
+<ApiMember kind="function" name="lv_opengles_texture_get_texture_id" file="drivers/opengles/lv_opengles_texture.h" line={60} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/opengles/lv_opengles_texture.h#L60">
+
+### lv_opengles_texture_get_texture_id
+
+Get the OpenGL texture ID of the display
+
+```c
+unsigned int lv_opengles_texture_get_texture_id(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | display |
+
+**Returns:** `unsigned int` — texture ID
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_texture_get_from_texture_id" file="drivers/opengles/lv_opengles_texture.h" line={67} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/opengles/lv_opengles_texture.h#L67">
+
+### lv_opengles_texture_get_from_texture_id
+
+Get the display of an OpenGL texture if it is associated with one
+
+```c
+lv_display_t * lv_opengles_texture_get_from_texture_id(unsigned int texture_id)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `texture_id` | `unsigned int` | OpenGL texture ID |
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — display or `NULL` if there no display with that texture ID
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_opengles_texture_create" file="drivers/opengles/lv_opengles_texture.h" line={42} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/opengles/lv_opengles_texture.h#L42">
+
+### lv_opengles_texture_create
+
+Create a display that flushes to an OpenGL texture If you already have a texture and want to bind it to the display, see `lv_opengles_texture_create_from_texture_id`
+
+```c
+lv_display_t * lv_opengles_texture_create(int32_t w, int32_t h)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `w` | <ApiLink name="int32_t" /> | width in pixels of the texture |
+| `h` | <ApiLink name="int32_t" /> | height in pixels of the texture |
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — the new display or NULL on failure
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_texture_create_from_texture_id" file="drivers/opengles/lv_opengles_texture.h" line={53} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/opengles/lv_opengles_texture.h#L53">
+
+### lv_opengles_texture_create_from_texture_id
+
+Create a display that flushes to the provided OpenGL texture If you don't have a texture to bind it to the display, see `lv_opengles_texture_create`
+
+```c
+lv_display_t * lv_opengles_texture_create_from_texture_id(int32_t w, int32_t h, unsigned int texture_id)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `w` | <ApiLink name="int32_t" /> | width in pixels of the texture |
+| `h` | <ApiLink name="int32_t" /> | height in pixels of the texture |
+| `texture_id` | `unsigned int` | the texture LVGL will render to |
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — the new display or NULL on failure
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_display.h"]}
+  includedBy={["lv_drivers.h", "lv_opengles_texture_private.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_event.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

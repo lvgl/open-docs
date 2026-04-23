@@ -1,0 +1,171 @@
+---
+title: lv_st7789.h
+description: API reference for lv_st7789.h
+api:
+  functions: [lv_st7789_create, lv_st7789_set_gap, lv_st7789_set_invert, lv_st7789_set_gamma_curve, lv_st7789_send_cmd_list]
+  typedefs: [lv_st7789_send_cmd_cb_t, lv_st7789_send_color_cb_t]
+---
+
+This driver is just a wrapper around the generic MIPI compatible LCD controller driver
+
+<ApiSummary functions={5} typedefs={2} />
+
+## Functions
+
+<ApiTabs items={["Setters (3)","Other (2)"]}>
+<ApiTab value="Setters (3)">
+
+<ApiMember kind="function" name="lv_st7789_set_gap" file="drivers/display/st7789/lv_st7789.h" line={56} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/st7789/lv_st7789.h#L56">
+
+### lv_st7789_set_gap
+
+Set gap, i.e., the offset of the (0,0) pixel in the VRAM
+
+```c
+void lv_st7789_set_gap(lv_display_t *disp, uint16_t x, uint16_t y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | display object |
+| `x` | <ApiLink name="uint16_t" /> | x offset |
+| `y` | <ApiLink name="uint16_t" /> | y offset |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_st7789_set_invert" file="drivers/display/st7789/lv_st7789.h" line={63} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/st7789/lv_st7789.h#L63">
+
+### lv_st7789_set_invert
+
+Set color inversion
+
+```c
+void lv_st7789_set_invert(lv_display_t *disp, bool invert)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | display object |
+| `invert` | <ApiLink name="bool" /> | false: normal, true: invert |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_st7789_set_gamma_curve" file="drivers/display/st7789/lv_st7789.h" line={70} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/st7789/lv_st7789.h#L70">
+
+### lv_st7789_set_gamma_curve
+
+Set gamma curve
+
+```c
+void lv_st7789_set_gamma_curve(lv_display_t *disp, uint8_t gamma)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | display object |
+| `gamma` | <ApiLink name="uint8_t" /> | gamma curve |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_st7789_create" file="drivers/display/st7789/lv_st7789.h" line={47} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/st7789/lv_st7789.h#L47">
+
+### lv_st7789_create
+
+Create an LCD display with ST7789 driver
+
+```c
+lv_display_t * lv_st7789_create(uint32_t hor_res, uint32_t ver_res, lv_lcd_flag_t flags, lv_st7789_send_cmd_cb_t send_cmd_cb, lv_st7789_send_color_cb_t send_color_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `hor_res` | <ApiLink name="uint32_t" /> | horizontal resolution |
+| `ver_res` | <ApiLink name="uint32_t" /> | vertical resolution |
+| `flags` | <ApiLink name="lv_lcd_flag_t" /> | default configuration settings (mirror, RGB ordering, etc.) |
+| `send_cmd_cb` | <ApiLink name="lv_st7789_send_cmd_cb_t" /> |  |
+| `send_color_cb` | <ApiLink name="lv_st7789_send_color_cb_t" /> |  |
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — pointer to the created display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_st7789_send_cmd_list" file="drivers/display/st7789/lv_st7789.h" line={77} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/st7789/lv_st7789.h#L77">
+
+### lv_st7789_send_cmd_list
+
+Send list of commands.
+
+```c
+void lv_st7789_send_cmd_list(lv_display_t *disp, const uint8_t *cmd_list)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | display object |
+| `cmd_list` | <ApiLink name="uint8_t" display="const uint8_t *" /> | controller and panel-specific commands |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_st7789_send_cmd_cb_t" file="drivers/display/st7789/lv_st7789.h" line={31} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/st7789/lv_st7789.h#L31">
+
+### lv_st7789_send_cmd_cb_t
+
+```c
+typedef lv_lcd_send_cmd_cb_t lv_st7789_send_cmd_cb_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_st7789_send_cmd_cb_t" count={1}>
+
+- `lv_st7789_create` — param `send_cmd_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_st7789_send_color_cb_t" file="drivers/display/st7789/lv_st7789.h" line={32} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/drivers/display/st7789/lv_st7789.h#L32">
+
+### lv_st7789_send_color_cb_t
+
+```c
+typedef lv_lcd_send_color_cb_t lv_st7789_send_color_cb_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_st7789_send_color_cb_t" count={1}>
+
+- `lv_st7789_create` — param `send_color_cb`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_lcd_generic_mipi.h"]}
+  includedBy={["lv_drivers.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_event.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

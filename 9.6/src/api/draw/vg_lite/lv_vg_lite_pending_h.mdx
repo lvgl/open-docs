@@ -1,0 +1,186 @@
+---
+title: lv_vg_lite_pending.h
+description: API reference for lv_vg_lite_pending.h
+api:
+  functions: [lv_vg_lite_pending_create, lv_vg_lite_pending_destroy, lv_vg_lite_pending_set_free_cb, lv_vg_lite_pending_add, lv_vg_lite_pending_remove_all, lv_vg_lite_pending_swap]
+  typedefs: [lv_vg_lite_pending_t, lv_vg_lite_pending_free_cb_t]
+---
+
+<ApiSummary functions={6} typedefs={2} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Other (5)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_vg_lite_pending_set_free_cb" file="draw/vg_lite/lv_vg_lite_pending.h" line={57} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/vg_lite/lv_vg_lite_pending.h#L57">
+
+### lv_vg_lite_pending_set_free_cb
+
+Set a free callback for the pending list
+
+```c
+void lv_vg_lite_pending_set_free_cb(lv_vg_lite_pending_t *pending, lv_vg_lite_pending_free_cb_t free_cb, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pending` | <ApiLink name="lv_vg_lite_pending_t" display="lv_vg_lite_pending_t *" /> | pointer to the pending list |
+| `free_cb` | <ApiLink name="lv_vg_lite_pending_free_cb_t" /> | the free callback |
+| `user_data` | `void *` | user data to pass to the free callback |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (5)">
+
+<ApiMember kind="function" name="lv_vg_lite_pending_create" file="draw/vg_lite/lv_vg_lite_pending.h" line={43} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/vg_lite/lv_vg_lite_pending.h#L43">
+
+### lv_vg_lite_pending_create
+
+Create a pending list
+
+```c
+lv_vg_lite_pending_t * lv_vg_lite_pending_create(size_t obj_size, uint32_t capacity_default)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj_size` | <ApiLink name="size_t" /> | the size of the objects in the list |
+| `capacity_default` | <ApiLink name="uint32_t" /> | the default capacity of the list |
+
+**Returns:** <ApiLink name="lv_vg_lite_pending_t" display="lv_vg_lite_pending_t *" /> — a pointer to the pending list
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_pending_destroy" file="draw/vg_lite/lv_vg_lite_pending.h" line={49} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/vg_lite/lv_vg_lite_pending.h#L49">
+
+### lv_vg_lite_pending_destroy
+
+Destroy a pending list
+
+```c
+void lv_vg_lite_pending_destroy(lv_vg_lite_pending_t *pending)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pending` | <ApiLink name="lv_vg_lite_pending_t" display="lv_vg_lite_pending_t *" /> | pointer to the pending list |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_pending_add" file="draw/vg_lite/lv_vg_lite_pending.h" line={65} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/vg_lite/lv_vg_lite_pending.h#L65">
+
+### lv_vg_lite_pending_add
+
+Add an object to the pending list
+
+```c
+void lv_vg_lite_pending_add(lv_vg_lite_pending_t *pending, void *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pending` | <ApiLink name="lv_vg_lite_pending_t" display="lv_vg_lite_pending_t *" /> | pointer to the pending list |
+| `obj` | `void *` | pointer to the object to add |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_pending_remove_all" file="draw/vg_lite/lv_vg_lite_pending.h" line={71} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/vg_lite/lv_vg_lite_pending.h#L71">
+
+### lv_vg_lite_pending_remove_all
+
+Remove all objects from the active pending list
+
+```c
+void lv_vg_lite_pending_remove_all(lv_vg_lite_pending_t *pending)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pending` | <ApiLink name="lv_vg_lite_pending_t" display="lv_vg_lite_pending_t *" /> | pointer to the pending list |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_vg_lite_pending_swap" file="draw/vg_lite/lv_vg_lite_pending.h" line={77} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/vg_lite/lv_vg_lite_pending.h#L77">
+
+### lv_vg_lite_pending_swap
+
+Remove all old objects reference and swap new objects reference
+
+```c
+void lv_vg_lite_pending_swap(lv_vg_lite_pending_t *pending)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pending` | <ApiLink name="lv_vg_lite_pending_t" display="lv_vg_lite_pending_t *" /> | pointer to the pending list |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_vg_lite_pending_t" file="draw/vg_lite/lv_vg_lite_pending.h" line={29} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/vg_lite/lv_vg_lite_pending.h#L29">
+
+### lv_vg_lite_pending_t
+
+```c
+typedef struct _lv_vg_lite_pending_t lv_vg_lite_pending_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_vg_lite_pending_t" count={5}>
+
+- `lv_vg_lite_pending_destroy` — param `pending`
+- `lv_vg_lite_pending_set_free_cb` — param `pending`
+- `lv_vg_lite_pending_add` — param `pending`
+- `lv_vg_lite_pending_remove_all` — param `pending`
+- `lv_vg_lite_pending_swap` — param `pending`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_vg_lite_pending_free_cb_t" file="draw/vg_lite/lv_vg_lite_pending.h" line={31} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/vg_lite/lv_vg_lite_pending.h#L31">
+
+### lv_vg_lite_pending_free_cb_t
+
+```c
+typedef void(* lv_vg_lite_pending_free_cb_t) (void *obj, void *user_data)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_vg_lite_pending_free_cb_t" count={1}>
+
+- `lv_vg_lite_pending_set_free_cb` — param `free_cb`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h"]}
+/>

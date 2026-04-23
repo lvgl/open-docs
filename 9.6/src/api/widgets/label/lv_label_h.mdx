@@ -1,0 +1,599 @@
+---
+title: lv_label.h
+description: API reference for lv_label.h
+api:
+  functions: [lv_label_create, lv_label_set_text, lv_label_set_text_fmt, lv_label_set_text_vfmt, lv_label_set_text_static, lv_label_set_long_mode, lv_label_set_text_selection_start, lv_label_set_text_selection_end, lv_label_set_recolor, lv_label_set_translation_tag, lv_label_get_text, lv_label_get_long_mode, lv_label_get_letter_pos, lv_label_get_letter_on, lv_label_is_char_under_pos, lv_label_get_text_selection_start, lv_label_get_text_selection_end, lv_label_get_recolor, lv_label_bind_text, lv_label_ins_text, lv_label_cut_text]
+  enums: [lv_label_long_mode_t, _lv_property_label_id_t]
+  macros: [LV_LABEL_DOT_NUM, LV_LABEL_POS_LAST, LV_LABEL_TEXT_SELECTION_OFF, LV_LABEL_DEFAULT_TEXT]
+  variables: [lv_label_class]
+---
+
+<RelatedHeaders name="lv_label_private.h" isPrivate={false} />
+
+<ApiSummary functions={21} enums={2} macros={4} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (9)","Getters (7)","Other (5)"]}>
+<ApiTab value="Setters (9)">
+
+<ApiMember kind="function" name="lv_label_set_text" file="widgets/label/lv_label.h" line={91} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L91">
+
+### lv_label_set_text
+
+Set a new text for a label. Memory will be allocated to store the text by the label.
+
+```c
+void lv_label_set_text(lv_obj_t *obj, const char *text)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `text` | `const char *` | '\0' terminated character string. NULL to refresh with the current text. |
+
+<Callout type="info">
+If `LV_USE_ARABIC_PERSIAN_CHARS` is enabled the text will be modified to have the correct Arabic characters in it.
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_set_text_fmt" file="widgets/label/lv_label.h" line={103} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L103">
+
+### lv_label_set_text_fmt
+
+Set a new formatted text for a label. Memory will be allocated to store the text by the label.
+
+```c
+void lv_label_set_text_fmt(lv_obj_t *obj, const char *fmt,...)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `fmt` | `const char *` | `printf`-like format string Example:  `lv_label_set_text_fmt(label1, "%d user", user_num);` |
+| `...` | |  |
+
+<Callout type="info">
+If `LV_USE_ARABIC_PERSIAN_CHARS` is enabled the text will be modified to have the correct Arabic characters in it.
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_set_text_vfmt" file="widgets/label/lv_label.h" line={120} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L120">
+
+### lv_label_set_text_vfmt
+
+Set a new formatted text for a label. Memory will be allocated to store the text by the label. 
+Example: 
+```c
+va_list args;
+va_start(args, fmt);
+lv_label_set_text_vfmt(label1, fmt, args);
+va_end(args);
+```
+
+```c
+void lv_label_set_text_vfmt(lv_obj_t *obj, const char *fmt, va_list args)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `fmt` | `const char *` | `printf`-like format string |
+| `args` | `va_list` | variadic arguments list |
+
+<Callout type="info">
+It ignores `LV_USE_ARABIC_PERSIAN_CHARS`
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_set_text_static" file="widgets/label/lv_label.h" line={129} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L129">
+
+### lv_label_set_text_static
+
+Set a static text. It will not be saved by the label so the 'text' variable has to be 'alive' while the label exists.
+
+```c
+void lv_label_set_text_static(lv_obj_t *obj, const char *text)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `text` | `const char *` | pointer to a text. NULL to refresh with the current text. |
+
+<Callout type="info">
+It ignores `LV_USE_ARABIC_PERSIAN_CHARS`
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_set_long_mode" file="widgets/label/lv_label.h" line={137} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L137">
+
+### lv_label_set_long_mode
+
+Set the behavior of the label with text longer than the object size
+
+```c
+void lv_label_set_long_mode(lv_obj_t *obj, lv_label_long_mode_t long_mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `long_mode` | <ApiLink name="lv_label_long_mode_t" /> | the new mode from 'lv_label_long_mode' enum. In LV_LONG_WRAP/DOT/SCROLL/SCROLL_CIRC the size of the label should be set AFTER this function |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_set_text_selection_start" file="widgets/label/lv_label.h" line={144} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L144">
+
+### lv_label_set_text_selection_start
+
+Set where text selection should start
+
+```c
+void lv_label_set_text_selection_start(lv_obj_t *obj, uint32_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `index` | <ApiLink name="uint32_t" /> | character index from where selection should start. `LV_LABEL_TEXT_SELECTION_OFF` for no selection |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_set_text_selection_end" file="widgets/label/lv_label.h" line={151} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L151">
+
+### lv_label_set_text_selection_end
+
+Set where text selection should end
+
+```c
+void lv_label_set_text_selection_end(lv_obj_t *obj, uint32_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `index` | <ApiLink name="uint32_t" /> | character index where selection should end. `LV_LABEL_TEXT_SELECTION_OFF` for no selection |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_set_recolor" file="widgets/label/lv_label.h" line={159} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L159">
+
+### lv_label_set_recolor
+
+Enable the recoloring by in-line commands
+
+```c
+void lv_label_set_recolor(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `en` | <ApiLink name="bool" /> | true: enable recoloring, false: disable Example: "This is a #ff0000 red# word" |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_set_translation_tag" file="widgets/label/lv_label.h" line={169} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L169">
+
+### lv_label_set_translation_tag
+
+Assign a translation tag for this label. Memory will be allocated to store the tag by the label. The label text will automatically update when the language is changed via `lv_translation_set_language`.
+
+```c
+void lv_label_set_translation_tag(lv_obj_t *obj, const char *tag)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `tag` | `const char *` | '\0' terminated character string. |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (7)">
+
+<ApiMember kind="function" name="lv_label_get_text" file="widgets/label/lv_label.h" line={183} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L183">
+
+### lv_label_get_text
+
+Get the text of a label
+
+```c
+char * lv_label_get_text(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a label object |
+
+**Returns:** `char *` — the text of the label
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_get_long_mode" file="widgets/label/lv_label.h" line={190} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L190">
+
+### lv_label_get_long_mode
+
+Get the long mode of a label
+
+```c
+lv_label_long_mode_t lv_label_get_long_mode(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a label object |
+
+**Returns:** <ApiLink name="lv_label_long_mode_t" /> — the current long mode
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_get_letter_pos" file="widgets/label/lv_label.h" line={199} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L199">
+
+### lv_label_get_letter_pos
+
+Get the relative x and y coordinates of a letter
+
+```c
+void lv_label_get_letter_pos(const lv_obj_t *obj, uint32_t char_id, lv_point_t *pos)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a label object |
+| `char_id` | <ApiLink name="uint32_t" /> | index of the character [0 ... text length - 1]. Expressed in character index, not byte index (different in UTF-8) |
+| `pos` | <ApiLink name="lv_point_t" display="lv_point_t *" /> | store the result here (E.g. index = 0 gives 0;0 coordinates if the text if aligned to the left) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_get_letter_on" file="widgets/label/lv_label.h" line={209} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L209">
+
+### lv_label_get_letter_on
+
+Get the index of letter on a relative point of a label.
+
+```c
+uint32_t lv_label_get_letter_on(const lv_obj_t *obj, lv_point_t *pos_in, bool bidi)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to label object |
+| `pos_in` | <ApiLink name="lv_point_t" display="lv_point_t *" /> | pointer to point with coordinates on a the label |
+| `bidi` | <ApiLink name="bool" /> | whether to use bidi processed |
+
+**Returns:** <ApiLink name="uint32_t" /> — The index of the letter on the 'pos_p' point (E.g. on 0;0 is the 0. letter if aligned to the left) Expressed in character index and not byte index (different in UTF-8)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_get_text_selection_start" file="widgets/label/lv_label.h" line={224} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L224">
+
+### lv_label_get_text_selection_start
+
+Get the selection start index.
+
+```c
+uint32_t lv_label_get_text_selection_start(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a label object. |
+
+**Returns:** <ApiLink name="uint32_t" /> — selection start index. `LV_LABEL_TEXT_SELECTION_OFF` if nothing is selected.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_get_text_selection_end" file="widgets/label/lv_label.h" line={231} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L231">
+
+### lv_label_get_text_selection_end
+
+Get the selection end index.
+
+```c
+uint32_t lv_label_get_text_selection_end(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a label object. |
+
+**Returns:** <ApiLink name="uint32_t" /> — selection end index. `LV_LABEL_TXT_SEL_OFF` if nothing is selected.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_get_recolor" file="widgets/label/lv_label.h" line={238} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L238">
+
+### lv_label_get_recolor
+
+Get the recoloring attribute.
+
+```c
+bool lv_label_get_recolor(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a label object. |
+
+**Returns:** <ApiLink name="bool" /> — true: recoloring is enabled, false: recoloring is disabled
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (5)">
+
+<ApiMember kind="function" name="lv_label_create" file="widgets/label/lv_label.h" line={78} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L78">
+
+### lv_label_create
+
+Create a label object
+
+```c
+lv_obj_t * lv_label_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new label. |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created button
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_is_char_under_pos" file="widgets/label/lv_label.h" line={217} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L217">
+
+### lv_label_is_char_under_pos
+
+Check if a character is drawn under a point.
+
+```c
+bool lv_label_is_char_under_pos(const lv_obj_t *obj, lv_point_t *pos)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a label object |
+| `pos` | <ApiLink name="lv_point_t" display="lv_point_t *" /> | Point to check for character under |
+
+**Returns:** <ApiLink name="bool" /> — whether a character is drawn under the point
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_bind_text" file="widgets/label/lv_label.h" line={255} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L255">
+
+### lv_label_bind_text
+
+Bind an integer, string, or pointer Subject to a Label.
+
+```c
+lv_observer_t * lv_label_bind_text(lv_obj_t *obj, lv_subject_t *subject, const char *fmt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Label |
+| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
+| `fmt` | `const char *` | optional printf-like format string with 1 format specifier (e.g. "%d °C") or NULL to bind to the value directly. |
+
+**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
+
+<Callout type="info">
+If `fmt == NULL` strings and pointers (`\0` terminated string) will be shown as text as they are, integers as d, floats as %0.1f
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_ins_text" file="widgets/label/lv_label.h" line={266} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L266">
+
+### lv_label_ins_text
+
+Insert a text to a label. The label text cannot be static.
+
+```c
+void lv_label_ins_text(lv_obj_t *obj, uint32_t pos, const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `pos` | <ApiLink name="uint32_t" /> | character index to insert. Expressed in character index and not byte index. 0: before first char. LV_LABEL_POS_LAST: after last char. |
+| `txt` | `const char *` | pointer to the text to insert |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_cut_text" file="widgets/label/lv_label.h" line={275} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L275">
+
+### lv_label_cut_text
+
+Delete characters from a label. The label text cannot be static.
+
+```c
+void lv_label_cut_text(lv_obj_t *obj, uint32_t pos, uint32_t cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `pos` | <ApiLink name="uint32_t" /> | character index from where to cut. Expressed in character index and not byte index. 0: start in front of the first character |
+| `cnt` | <ApiLink name="uint32_t" /> | number of characters to cut |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_label_long_mode_t" file="widgets/label/lv_label.h" line={49} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L49">
+
+### lv_label_long_mode_t
+
+Long mode behaviors. Used in 'lv_label_ext_t'
+
+| Name | Description |
+|------|------|
+| `LV_LABEL_LONG_MODE_WRAP` | Keep the object width, wrap lines longer than object width and expand the object height |
+| `LV_LABEL_LONG_MODE_DOTS` | Keep the size and write dots at the end if the text is too long |
+| `LV_LABEL_LONG_MODE_SCROLL` | Keep the size and roll the text back and forth |
+| `LV_LABEL_LONG_MODE_SCROLL_CIRCULAR` | Keep the size and roll the text circularly |
+| `LV_LABEL_LONG_MODE_CLIP` | Keep the size and clip the text out of it |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_label_long_mode_t" count={1}>
+
+- `lv_label_set_long_mode` — param `long_mode`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="_lv_property_label_id_t" file="widgets/label/lv_label.h" line={58} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L58">
+
+### _lv_property_label_id_t
+
+| Name | Value |
+|------|------|
+| `LV_PROPERTY_LABEL_TEXT` | `(LV_PROPERTY_LABEL_START + ((int) 0 )) \| ((  7   ) <<  28 )` |
+| `LV_PROPERTY_LABEL_LONG_MODE` | `(LV_PROPERTY_LABEL_START + ((int) 1 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_LABEL_TEXT_SELECTION_START` | `(LV_PROPERTY_LABEL_START + ((int) 2 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_LABEL_TEXT_SELECTION_END` | `(LV_PROPERTY_LABEL_START + ((int) 3 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_LABEL_END` |  |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_LABEL_DOT_NUM" file="widgets/label/lv_label.h" line={31} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L31">
+
+### LV_LABEL_DOT_NUM
+
+```c
+#define LV_LABEL_DOT_NUM 3
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LABEL_POS_LAST" file="widgets/label/lv_label.h" line={32} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L32">
+
+### LV_LABEL_POS_LAST
+
+```c
+#define LV_LABEL_POS_LAST 0xFFFF
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LABEL_TEXT_SELECTION_OFF" file="widgets/label/lv_label.h" line={33} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L33">
+
+### LV_LABEL_TEXT_SELECTION_OFF
+
+```c
+#define LV_LABEL_TEXT_SELECTION_OFF LV_DRAW_LABEL_NO_TXT_SEL
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LABEL_DEFAULT_TEXT" file="widgets/label/lv_label.h" line={35} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L35">
+
+### LV_LABEL_DEFAULT_TEXT
+
+```c
+#define LV_LABEL_DEFAULT_TEXT "Text"
+```
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_label_class" file="widgets/label/lv_label.h" line={67} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/widgets/label/lv_label.h#L67">
+
+### lv_label_class
+
+```c
+const lv_obj_class_t lv_label_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h", "lv_obj.h", "lv_font.h", "lv_symbol_def.h", "lv_text.h", "lv_draw.h", "lv_observer.h"]}
+  includedBy={["lv_bar.h", "lv_dropdown.h", "lv_label_private.h", "lv_roller.h", "lv_table.h", "lv_textarea.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_tick.h", "lv_timer.h"]}
+/>

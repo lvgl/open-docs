@@ -1,0 +1,106 @@
+---
+title: lv_indev_scroll.h
+description: API reference for lv_indev_scroll.h
+api:
+  functions: [lv_indev_scroll_handler, lv_indev_scroll_throw_handler, lv_indev_scroll_throw_predict, lv_indev_scroll_get_snap_dist]
+---
+
+<ApiSummary functions={4} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (3)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_indev_scroll_get_snap_dist" file="indev/lv_indev_scroll.h" line={55} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/indev/lv_indev_scroll.h#L55">
+
+### lv_indev_scroll_get_snap_dist
+
+Get the distance of the nearest snap point
+
+```c
+void lv_indev_scroll_get_snap_dist(lv_obj_t *obj, lv_point_t *p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the object on which snap points should be found |
+| `p` | <ApiLink name="lv_point_t" display="lv_point_t *" /> | save the distance of the found snap point there |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_indev_scroll_handler" file="indev/lv_indev_scroll.h" line={34} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/indev/lv_indev_scroll.h#L34">
+
+### lv_indev_scroll_handler
+
+Handle scrolling. Called by LVGL during input device processing
+
+```c
+void lv_indev_scroll_handler(lv_indev_t *indev)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to an input device |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_scroll_throw_handler" file="indev/lv_indev_scroll.h" line={40} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/indev/lv_indev_scroll.h#L40">
+
+### lv_indev_scroll_throw_handler
+
+Handle throwing after scrolling. Called by LVGL during input device processing
+
+```c
+void lv_indev_scroll_throw_handler(lv_indev_t *indev)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to an input device |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_scroll_throw_predict" file="indev/lv_indev_scroll.h" line={48} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/indev/lv_indev_scroll.h#L48">
+
+### lv_indev_scroll_throw_predict
+
+Predict where would a scroll throw end
+
+```c
+int32_t lv_indev_scroll_throw_predict(lv_indev_t *indev, lv_dir_t dir)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to an input device |
+| `dir` | <ApiLink name="lv_dir_t" /> | `LV_DIR_VER` or `LV_DIR_HOR` |
+
+**Returns:** <ApiLink name="int32_t" /> — the difference compared to the current position when the throw would be finished
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj.h"]}
+  includedBy={["lv_indev_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>

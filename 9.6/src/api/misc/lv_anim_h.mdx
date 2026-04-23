@@ -1,0 +1,1688 @@
+---
+title: lv_anim.h
+description: API reference for lv_anim.h
+api:
+  functions: [lv_anim_init, lv_anim_set_var, lv_anim_set_exec_cb, lv_anim_set_duration, lv_anim_set_delay, lv_anim_resume, lv_anim_pause, lv_anim_pause_for, lv_anim_is_paused, lv_anim_set_values, lv_anim_set_custom_exec_cb, lv_anim_set_path_cb, lv_anim_set_start_cb, lv_anim_set_get_value_cb, lv_anim_set_completed_cb, lv_anim_set_deleted_cb, lv_anim_set_reverse_duration, lv_anim_set_reverse_time, lv_anim_set_reverse_delay, lv_anim_set_repeat_count, lv_anim_set_repeat_delay, lv_anim_set_early_apply, lv_anim_set_user_data, lv_anim_set_bezier3_param, lv_anim_start, lv_anim_get_delay, lv_anim_get_playtime, lv_anim_get_time, lv_anim_get_repeat_count, lv_anim_get_user_data, lv_anim_delete, lv_anim_delete_all, lv_anim_get, lv_anim_get_timer, lv_anim_custom_delete, lv_anim_custom_get, lv_anim_count_running, lv_anim_speed, lv_anim_speed_clamped, lv_anim_resolve_speed, lv_anim_speed_to_time, lv_anim_refr_now, lv_anim_path_linear, lv_anim_path_ease_in, lv_anim_path_ease_out, lv_anim_path_ease_in_out, lv_anim_path_overshoot, lv_anim_path_bounce, lv_anim_path_step, lv_anim_path_custom_bezier3, lv_anim_set_external_data]
+  structs: [lv_anim_bezier3_para_t, _lv_anim_t, "_lv_anim_t::_lv_anim_path_para_t"]
+  typedefs: [lv_anim_enable_t, lv_anim_path_cb_t, lv_anim_exec_xcb_t, lv_anim_custom_exec_cb_t, lv_anim_completed_cb_t, lv_anim_start_cb_t, lv_anim_get_value_cb_t, lv_anim_deleted_cb_t]
+  macros: [LV_ANIM_REPEAT_INFINITE, LV_ANIM_PLAYTIME_INFINITE, LV_ANIM_PAUSE_FOREVER, _PARA, LV_ANIM_SET_EASE_IN_SINE, LV_ANIM_SET_EASE_OUT_SINE, LV_ANIM_SET_EASE_IN_OUT_SINE, LV_ANIM_SET_EASE_IN_QUAD, LV_ANIM_SET_EASE_OUT_QUAD, LV_ANIM_SET_EASE_IN_OUT_QUAD, LV_ANIM_SET_EASE_IN_CUBIC, LV_ANIM_SET_EASE_OUT_CUBIC, LV_ANIM_SET_EASE_IN_OUT_CUBIC, LV_ANIM_SET_EASE_IN_QUART, LV_ANIM_SET_EASE_OUT_QUART, LV_ANIM_SET_EASE_IN_OUT_QUART, LV_ANIM_SET_EASE_IN_QUINT, LV_ANIM_SET_EASE_OUT_QUINT, LV_ANIM_SET_EASE_IN_OUT_QUINT, LV_ANIM_SET_EASE_IN_EXPO, LV_ANIM_SET_EASE_OUT_EXPO, LV_ANIM_SET_EASE_IN_OUT_EXPO, LV_ANIM_SET_EASE_IN_CIRC, LV_ANIM_SET_EASE_OUT_CIRC, LV_ANIM_SET_EASE_IN_OUT_CIRC, LV_ANIM_SET_EASE_IN_BACK, LV_ANIM_SET_EASE_OUT_BACK, LV_ANIM_SET_EASE_IN_OUT_BACK, LV_ANIM_OFF, LV_ANIM_ON]
+---
+
+<RelatedHeaders name="lv_anim_private.h" isPrivate={false} />
+
+<ApiSummary functions={51} structs={3} typedefs={8} macros={30} />
+
+## Functions
+
+<ApiTabs items={["Setters (20)","Getters (8)","Other (23)"]}>
+<ApiTab value="Setters (20)">
+
+<ApiMember kind="function" name="lv_anim_set_var" file="misc/lv_anim.h" line={184} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L184">
+
+### lv_anim_set_var
+
+Set a variable to animate
+
+```c
+void lv_anim_set_var(lv_anim_t *a, void *var)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `var` | `void *` | pointer to a variable to animate |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_exec_cb" file="misc/lv_anim.h" line={193} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L193">
+
+### lv_anim_set_exec_cb
+
+Set a function to animate `var`
+
+```c
+void lv_anim_set_exec_cb(lv_anim_t *a, lv_anim_exec_xcb_t exec_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `exec_cb` | <ApiLink name="lv_anim_exec_xcb_t" /> | a function to execute during animation LVGL's built-in functions can be used. E.g. lv_obj_set_x |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_duration" file="misc/lv_anim.h" line={200} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L200">
+
+### lv_anim_set_duration
+
+Set the duration of an animation
+
+```c
+void lv_anim_set_duration(lv_anim_t *a, uint32_t duration)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `duration` | <ApiLink name="uint32_t" /> | duration of the animation in milliseconds |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_delay" file="misc/lv_anim.h" line={207} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L207">
+
+### lv_anim_set_delay
+
+Set a delay before starting the animation
+
+```c
+void lv_anim_set_delay(lv_anim_t *a, uint32_t delay)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `delay` | <ApiLink name="uint32_t" /> | delay before the animation in milliseconds |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_values" file="misc/lv_anim.h" line={241} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L241">
+
+### lv_anim_set_values
+
+Set the start and end values of an animation
+
+```c
+void lv_anim_set_values(lv_anim_t *a, int32_t start, int32_t end)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `start` | <ApiLink name="int32_t" /> | the start value |
+| `end` | <ApiLink name="int32_t" /> | the end value |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_custom_exec_cb" file="misc/lv_anim.h" line={251} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L251">
+
+### lv_anim_set_custom_exec_cb
+
+Similar to `lv_anim_set_exec_cb` but `lv_anim_custom_exec_cb_t` receives `lv_anim_t *` as its first parameter instead of `void *`. This function might be used when LVGL is bound to other languages because it's more consistent to have `lv_anim_t *` as first parameter.
+
+```c
+void lv_anim_set_custom_exec_cb(lv_anim_t *a, lv_anim_custom_exec_cb_t exec_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `exec_cb` | <ApiLink name="lv_anim_custom_exec_cb_t" /> | a function to execute. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_path_cb" file="misc/lv_anim.h" line={258} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L258">
+
+### lv_anim_set_path_cb
+
+Set the path (curve) of the animation.
+
+```c
+void lv_anim_set_path_cb(lv_anim_t *a, lv_anim_path_cb_t path_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `path_cb` | <ApiLink name="lv_anim_path_cb_t" /> | a function to set the current value of the animation. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_start_cb" file="misc/lv_anim.h" line={265} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L265">
+
+### lv_anim_set_start_cb
+
+Set a function call when the animation really starts (considering `delay`)
+
+```c
+void lv_anim_set_start_cb(lv_anim_t *a, lv_anim_start_cb_t start_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `start_cb` | <ApiLink name="lv_anim_start_cb_t" /> | a function call when the animation starts |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_get_value_cb" file="misc/lv_anim.h" line={273} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L273">
+
+### lv_anim_set_get_value_cb
+
+Set a function to use the current value of the variable and make start and end value relative to the returned current value.
+
+```c
+void lv_anim_set_get_value_cb(lv_anim_t *a, lv_anim_get_value_cb_t get_value_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `get_value_cb` | <ApiLink name="lv_anim_get_value_cb_t" /> | a function call when the animation starts |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_completed_cb" file="misc/lv_anim.h" line={280} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L280">
+
+### lv_anim_set_completed_cb
+
+Set a function call when the animation is completed
+
+```c
+void lv_anim_set_completed_cb(lv_anim_t *a, lv_anim_completed_cb_t completed_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `completed_cb` | <ApiLink name="lv_anim_completed_cb_t" /> | a function call when the animation is fully completed |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_deleted_cb" file="misc/lv_anim.h" line={287} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L287">
+
+### lv_anim_set_deleted_cb
+
+Set a function call when the animation is deleted.
+
+```c
+void lv_anim_set_deleted_cb(lv_anim_t *a, lv_anim_deleted_cb_t deleted_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `deleted_cb` | <ApiLink name="lv_anim_deleted_cb_t" /> | a function call when the animation is deleted |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_reverse_duration" file="misc/lv_anim.h" line={294} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L294">
+
+### lv_anim_set_reverse_duration
+
+Make the animation to play back to when the forward direction is ready
+
+```c
+void lv_anim_set_reverse_duration(lv_anim_t *a, uint32_t duration)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `duration` | <ApiLink name="uint32_t" /> | duration of playback animation in milliseconds. 0: disable playback |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_reverse_time" file="misc/lv_anim.h" line={299} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L299">
+
+### lv_anim_set_reverse_time
+
+Legacy `lv_anim_set_reverse_time` API will be removed soon, use `lv_anim_set_reverse_duration` instead.
+
+```c
+void lv_anim_set_reverse_time(lv_anim_t *a, uint32_t duration)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> |
+| `duration` | <ApiLink name="uint32_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_reverse_delay" file="misc/lv_anim.h" line={306} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L306">
+
+### lv_anim_set_reverse_delay
+
+Make the animation to play back to when the forward direction is ready
+
+```c
+void lv_anim_set_reverse_delay(lv_anim_t *a, uint32_t delay)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `delay` | <ApiLink name="uint32_t" /> | delay in milliseconds before starting the playback animation. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_repeat_count" file="misc/lv_anim.h" line={313} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L313">
+
+### lv_anim_set_repeat_count
+
+Make the animation repeat itself.
+
+```c
+void lv_anim_set_repeat_count(lv_anim_t *a, uint32_t cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `cnt` | <ApiLink name="uint32_t" /> | repeat count or `LV_ANIM_REPEAT_INFINITE` for infinite repetition. 0: to disable repetition. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_repeat_delay" file="misc/lv_anim.h" line={320} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L320">
+
+### lv_anim_set_repeat_delay
+
+Set a delay before repeating the animation.
+
+```c
+void lv_anim_set_repeat_delay(lv_anim_t *a, uint32_t delay)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `delay` | <ApiLink name="uint32_t" /> | delay in milliseconds before repeating the animation. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_early_apply" file="misc/lv_anim.h" line={328} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L328">
+
+### lv_anim_set_early_apply
+
+Set a whether the animation's should be applied immediately or only when the delay expired.
+
+```c
+void lv_anim_set_early_apply(lv_anim_t *a, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `en` | <ApiLink name="bool" /> | true: apply the start value immediately in `lv_anim_start`; false: apply the start value only when `delay` ms is elapsed and the animations really starts |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_user_data" file="misc/lv_anim.h" line={335} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L335">
+
+### lv_anim_set_user_data
+
+Set the custom user data field of the animation.
+
+```c
+void lv_anim_set_user_data(lv_anim_t *a, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `user_data` | `void *` | pointer to the new user_data. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_bezier3_param" file="misc/lv_anim.h" line={345} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L345">
+
+### lv_anim_set_bezier3_param
+
+Set parameter for cubic bezier path
+
+```c
+void lv_anim_set_bezier3_param(lv_anim_t *a, int16_t x1, int16_t y1, int16_t x2, int16_t y2)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `x1` | <ApiLink name="int16_t" /> | first control point X |
+| `y1` | <ApiLink name="int16_t" /> | first control point Y |
+| `x2` | <ApiLink name="int16_t" /> | second control point X |
+| `y2` | <ApiLink name="int16_t" /> | second control point Y |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_set_external_data" file="misc/lv_anim.h" line={578} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L578">
+
+### lv_anim_set_external_data
+
+Associates external user data with an animation instance.
+
+Attaches arbitrary user-defined data to an LVGL animation object along with an optional destructor callback that will be automatically invoked when the animation completes or is deleted, enabling proper resource cleanup.
+
+```c
+void lv_anim_set_external_data(lv_anim_t *anim, void *data, void(*free_cb)(void *data))
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `anim` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | Pointer to the animation object to configure |
+| `data` | `void *` | User-defined data pointer to associate |
+| `free_cb` | `void(*)(void *data)` | Cleanup callback that receives ext_data when:<br/>- Animation completes naturally<br/>- Animation is deleted prematurely<br/>- New data replaces current association NULL indicates no cleanup required |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (8)">
+
+<ApiMember kind="function" name="lv_anim_get_delay" file="misc/lv_anim.h" line={359} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L359">
+
+### lv_anim_get_delay
+
+Get a delay before starting the animation
+
+```c
+uint32_t lv_anim_get_delay(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+
+**Returns:** <ApiLink name="uint32_t" /> — delay before the animation in milliseconds
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_get_playtime" file="misc/lv_anim.h" line={366} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L366">
+
+### lv_anim_get_playtime
+
+Get the time used to play the animation.
+
+```c
+uint32_t lv_anim_get_playtime(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an animation. |
+
+**Returns:** <ApiLink name="uint32_t" /> — the play time in milliseconds.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_get_time" file="misc/lv_anim.h" line={373} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L373">
+
+### lv_anim_get_time
+
+Get the duration of an animation
+
+```c
+uint32_t lv_anim_get_time(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+
+**Returns:** <ApiLink name="uint32_t" /> — the duration of the animation in milliseconds
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_get_repeat_count" file="misc/lv_anim.h" line={380} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L380">
+
+### lv_anim_get_repeat_count
+
+Get the repeat count of the animation.
+
+```c
+uint32_t lv_anim_get_repeat_count(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+
+**Returns:** <ApiLink name="uint32_t" /> — the repeat count or `LV_ANIM_REPEAT_INFINITE` for infinite repetition. 0: disabled repetition.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_get_user_data" file="misc/lv_anim.h" line={387} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L387">
+
+### lv_anim_get_user_data
+
+Get the user_data field of the animation
+
+```c
+void * lv_anim_get_user_data(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+
+**Returns:** `void *` — the pointer to the custom user_data of the animation
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_get" file="misc/lv_anim.h" line={409} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L409">
+
+### lv_anim_get
+
+Get the animation of a variable and its `exec_cb`.
+
+```c
+lv_anim_t * lv_anim_get(void *var, lv_anim_exec_xcb_t exec_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `var` | `void *` | pointer to variable |
+| `exec_cb` | <ApiLink name="lv_anim_exec_xcb_t" /> | a function pointer which is animating 'var', or NULL to return first matching 'var' |
+
+**Returns:** <ApiLink name="lv_anim_t" display="lv_anim_t *" /> — pointer to the animation.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_get_timer" file="misc/lv_anim.h" line={415} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L415">
+
+### lv_anim_get_timer
+
+Get global animation refresher timer.
+
+```c
+lv_timer_t * lv_anim_get_timer(void)
+```
+
+**Returns:** <ApiLink name="lv_timer_t" display="lv_timer_t *" /> — pointer to the animation refresher timer.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_custom_get" file="misc/lv_anim.h" line={439} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L439">
+
+### lv_anim_custom_get
+
+Get the animation of a variable and its `exec_cb`. This function exists because it's logical that all anim. functions receives an `lv_anim_t` as their first parameter. It's not practical in C but might make the API more consequent and makes easier to generate bindings.
+
+```c
+lv_anim_t * lv_anim_custom_get(lv_anim_t *a, lv_anim_custom_exec_cb_t exec_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an animation. |
+| `exec_cb` | <ApiLink name="lv_anim_custom_exec_cb_t" /> | a function pointer which is animating 'var', or NULL to return first matching 'var' |
+
+**Returns:** <ApiLink name="lv_anim_t" display="lv_anim_t *" /> — pointer to the animation.
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (23)">
+
+<ApiMember kind="function" name="lv_anim_init" file="misc/lv_anim.h" line={177} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L177">
+
+### lv_anim_init
+
+Initialize an animation variable. E.g.: lv_anim_t a; lv_anim_init(&a); lv_anim_set_...(&a); lv_anim_start(&a);
+
+```c
+void lv_anim_init(lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an `lv_anim_t` variable to initialize |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_resume" file="misc/lv_anim.h" line={213} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L213">
+
+### lv_anim_resume
+
+Resumes a paused animation
+
+```c
+void lv_anim_resume(lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_pause" file="misc/lv_anim.h" line={219} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L219">
+
+### lv_anim_pause
+
+Pauses the animation
+
+```c
+void lv_anim_pause(lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_pause_for" file="misc/lv_anim.h" line={226} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L226">
+
+### lv_anim_pause_for
+
+Pauses the animation for ms milliseconds
+
+```c
+void lv_anim_pause_for(lv_anim_t *a, uint32_t ms)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+| `ms` | <ApiLink name="uint32_t" /> | the pause time in milliseconds |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_is_paused" file="misc/lv_anim.h" line={233} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L233">
+
+### lv_anim_is_paused
+
+Check if the animation is paused
+
+```c
+bool lv_anim_is_paused(lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an initialized `lv_anim_t` variable |
+
+**Returns:** <ApiLink name="bool" /> — true if the animation is paused else false
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_start" file="misc/lv_anim.h" line={352} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L352">
+
+### lv_anim_start
+
+Create an animation
+
+```c
+lv_anim_t * lv_anim_start(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | an initialized 'anim_t' variable. Not required after call. |
+
+**Returns:** <ApiLink name="lv_anim_t" display="lv_anim_t *" /> — pointer to the created animation (different from the `a` parameter)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_delete" file="misc/lv_anim.h" line={396} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L396">
+
+### lv_anim_delete
+
+Delete animation(s) of a variable with a given animator function
+
+```c
+bool lv_anim_delete(void *var, lv_anim_exec_xcb_t exec_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `var` | `void *` | pointer to variable |
+| `exec_cb` | <ApiLink name="lv_anim_exec_xcb_t" /> | a function pointer which is animating 'var', or NULL to ignore it and delete all the animations of 'var |
+
+**Returns:** <ApiLink name="bool" /> — true: at least 1 animation is deleted, false: no animation is deleted
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_delete_all" file="misc/lv_anim.h" line={401} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L401">
+
+### lv_anim_delete_all
+
+Delete all the animations
+
+```c
+void lv_anim_delete_all(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_custom_delete" file="misc/lv_anim.h" line={428} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L428">
+
+### lv_anim_custom_delete
+
+Delete an animation by getting the animated variable from `a`. Only animations with `exec_cb` will be deleted. This function exists because it's logical that all anim. functions receives an `lv_anim_t` as their first parameter. It's not practical in C but might make the API more consequent and makes easier to generate bindings.
+
+```c
+bool lv_anim_custom_delete(lv_anim_t *a, lv_anim_custom_exec_cb_t exec_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | pointer to an animation. |
+| `exec_cb` | <ApiLink name="lv_anim_custom_exec_cb_t" /> | a function pointer which is animating 'var', or NULL to ignore it and delete all the animations of 'var |
+
+**Returns:** <ApiLink name="bool" /> — true: at least 1 animation is deleted, false: no animation is deleted
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_count_running" file="misc/lv_anim.h" line={445} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L445">
+
+### lv_anim_count_running
+
+Get the number of currently running animations
+
+```c
+uint16_t lv_anim_count_running(void)
+```
+
+**Returns:** <ApiLink name="uint16_t" /> — the number of running animations
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_speed" file="misc/lv_anim.h" line={457} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L457">
+
+### lv_anim_speed
+
+Store the speed as a special value which can be used as time in animations. It will be converted to time internally based on the start and end values. The return value can be used as a constant with multiple animations and let LVGL convert the speed to time based on the actual values. LIMITATION: the max time stored this way can be 10,000 ms.
+
+```c
+uint32_t lv_anim_speed(uint32_t speed)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `speed` | <ApiLink name="uint32_t" /> | the speed of the animation in with unit / sec resolution in 0..10k range |
+
+**Returns:** <ApiLink name="uint32_t" /> — a special value which can be used as an animation time
+
+<Callout type="info">
+internally speed is stored as 10 unit/sec
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_speed_clamped" file="misc/lv_anim.h" line={472} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L472">
+
+### lv_anim_speed_clamped
+
+Store the speed as a special value which can be used as time in animations. It will be converted to time internally based on the start and end values. The return value can be used as a constant with multiple animations and let LVGL convert the speed to time based on the actual values.
+
+```c
+uint32_t lv_anim_speed_clamped(uint32_t speed, uint32_t min_time, uint32_t max_time)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `speed` | <ApiLink name="uint32_t" /> | the speed of the animation in as unit / sec resolution in 0..10k range |
+| `min_time` | <ApiLink name="uint32_t" /> | the minimum time in 0..10k range |
+| `max_time` | <ApiLink name="uint32_t" /> | the maximum time in 0..10k range |
+
+**Returns:** <ApiLink name="uint32_t" /> — a special value in where all three values are stored and can be used as an animation time
+
+<Callout type="info">
+internally speed is stored as 10 unit/sec
+</Callout>
+
+<Callout type="info">
+internally min/max_time are stored with 10 ms unit
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_resolve_speed" file="misc/lv_anim.h" line={482} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L482">
+
+### lv_anim_resolve_speed
+
+Resolve the speed (created with `lv_anim_speed` or `lv_anim_speed_clamped`) to time based on start and end values.
+
+```c
+uint32_t lv_anim_resolve_speed(uint32_t speed, int32_t start, int32_t end)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `speed` | <ApiLink name="uint32_t" /> | return values of `lv_anim_speed` or `lv_anim_speed_clamped` |
+| `start` | <ApiLink name="int32_t" /> | the start value of the animation |
+| `end` | <ApiLink name="int32_t" /> | the end value of the animation |
+
+**Returns:** <ApiLink name="uint32_t" /> — the time required to get from `start` to `end` with the given `speed` setting
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_speed_to_time" file="misc/lv_anim.h" line={494} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L494">
+
+### lv_anim_speed_to_time
+
+Calculate the time of an animation based on its speed, start and end values. It simpler than `lv_anim_speed` or `lv_anim_speed_clamped` as it converts speed, start, and end to a time immediately. As it's simpler there is no limit on the maximum time.
+
+```c
+uint32_t lv_anim_speed_to_time(uint32_t speed, int32_t start, int32_t end)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `speed` | <ApiLink name="uint32_t" /> | the speed of the animation |
+| `start` | <ApiLink name="int32_t" /> | the start value |
+| `end` | <ApiLink name="int32_t" /> | the end value |
+
+**Returns:** <ApiLink name="uint32_t" /> — the time of the animation in milliseconds
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_refr_now" file="misc/lv_anim.h" line={503} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L503">
+
+### lv_anim_refr_now
+
+Manually refresh the state of the animations. Useful to make the animations running in a blocking process where `lv_timer_handler` can't run for a while. Shouldn't be used directly because it is called in <ApiLink name="lv_refr_now" display="lv_refr_now()" />.
+
+```c
+void lv_anim_refr_now(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_path_linear" file="misc/lv_anim.h" line={510} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L510">
+
+### lv_anim_path_linear
+
+Calculate the current value of an animation applying linear characteristic
+
+```c
+int32_t lv_anim_path_linear(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an animation |
+
+**Returns:** <ApiLink name="int32_t" /> — the current value to set
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_path_ease_in" file="misc/lv_anim.h" line={517} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L517">
+
+### lv_anim_path_ease_in
+
+Calculate the current value of an animation slowing down the start phase
+
+```c
+int32_t lv_anim_path_ease_in(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an animation |
+
+**Returns:** <ApiLink name="int32_t" /> — the current value to set
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_path_ease_out" file="misc/lv_anim.h" line={524} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L524">
+
+### lv_anim_path_ease_out
+
+Calculate the current value of an animation slowing down the end phase
+
+```c
+int32_t lv_anim_path_ease_out(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an animation |
+
+**Returns:** <ApiLink name="int32_t" /> — the current value to set
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_path_ease_in_out" file="misc/lv_anim.h" line={531} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L531">
+
+### lv_anim_path_ease_in_out
+
+Calculate the current value of an animation applying an "S" characteristic (cosine)
+
+```c
+int32_t lv_anim_path_ease_in_out(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an animation |
+
+**Returns:** <ApiLink name="int32_t" /> — the current value to set
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_path_overshoot" file="misc/lv_anim.h" line={538} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L538">
+
+### lv_anim_path_overshoot
+
+Calculate the current value of an animation with overshoot at the end
+
+```c
+int32_t lv_anim_path_overshoot(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an animation |
+
+**Returns:** <ApiLink name="int32_t" /> — the current value to set
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_path_bounce" file="misc/lv_anim.h" line={545} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L545">
+
+### lv_anim_path_bounce
+
+Calculate the current value of an animation with 3 bounces
+
+```c
+int32_t lv_anim_path_bounce(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an animation |
+
+**Returns:** <ApiLink name="int32_t" /> — the current value to set
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_path_step" file="misc/lv_anim.h" line={553} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L553">
+
+### lv_anim_path_step
+
+Calculate the current value of an animation applying step characteristic. (Set end value on the end of the animation)
+
+```c
+int32_t lv_anim_path_step(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an animation |
+
+**Returns:** <ApiLink name="int32_t" /> — the current value to set
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_path_custom_bezier3" file="misc/lv_anim.h" line={560} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L560">
+
+### lv_anim_path_custom_bezier3
+
+A custom cubic bezier animation path, need to specify cubic-parameters in a->parameter.bezier3
+
+```c
+int32_t lv_anim_path_custom_bezier3(const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an animation |
+
+**Returns:** <ApiLink name="int32_t" /> — the current value to set
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_anim_bezier3_para_t">
+
+### lv_anim_bezier3_para_t
+
+Parameter used when path is custom_bezier
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `x1` | <ApiLink name="int16_t" /> |  |
+| `y1` | <ApiLink name="int16_t" /> |  |
+| `x2` | <ApiLink name="int16_t" /> |  |
+| `y2` | <ApiLink name="int16_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_anim_t">
+
+### _lv_anim_t
+
+Describes an animation
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `ext_data` | <ApiLink name="lv_ext_data_t" /> |  |
+| `var` | `void *` | Variable (Widget or other user-provided object) to animate |
+| `exec_cb` | <ApiLink name="lv_anim_exec_xcb_t" /> | Function to execute to animate |
+| `custom_exec_cb` | <ApiLink name="lv_anim_custom_exec_cb_t" /> | Function to execute to animate, same purpose as exec_cb but different parameters |
+| `start_cb` | <ApiLink name="lv_anim_start_cb_t" /> | Call it when animation is starts (considering `delay`) |
+| `completed_cb` | <ApiLink name="lv_anim_completed_cb_t" /> | Call it when animation is fully completed |
+| `deleted_cb` | <ApiLink name="lv_anim_deleted_cb_t" /> | Call it when animation is deleted |
+| `get_value_cb` | <ApiLink name="lv_anim_get_value_cb_t" /> | Get current value in relative mode |
+| `user_data` | `void *` | Custom user data |
+| `path_cb` | <ApiLink name="lv_anim_path_cb_t" /> | Provides path (curve) of animation |
+| `start_value` | <ApiLink name="int32_t" /> | Start value |
+| `current_value` | <ApiLink name="int32_t" /> | Current value |
+| `end_value` | <ApiLink name="int32_t" /> | End value |
+| `duration` | <ApiLink name="int32_t" /> | Animation duration in ms |
+| `act_time` | <ApiLink name="int32_t" /> | Ms elapsed since animation started. Set to negative to make delay. |
+| `reverse_delay` | <ApiLink name="uint32_t" /> | Wait (in ms) after forward play ends and before reverse play begins. |
+| `reverse_duration` | <ApiLink name="uint32_t" /> | Reverse animation duration in ms |
+| `repeat_delay` | <ApiLink name="uint32_t" /> | Wait before repeating |
+| `repeat_cnt` | <ApiLink name="uint32_t" /> | Repeat count for animation |
+| `parameter` | <ApiLink name="_lv_anim_t::_lv_anim_path_para_t" display="union _lv_anim_t::_lv_anim_path_para_t" /> |  |
+| `last_timer_run` | <ApiLink name="uint32_t" /> |  |
+| `pause_time` | <ApiLink name="uint32_t" /> | The time when the animation was paused |
+| `pause_duration` | <ApiLink name="uint32_t" /> | The amount of the time the animation must stay paused for |
+| `is_paused` | <ApiLink name="uint8_t" /> | Indicates that the animation is paused |
+| `reverse_play_in_progress` | <ApiLink name="uint8_t" /> | Reverse play is in progress |
+| `run_round` | <ApiLink name="uint8_t" /> | When not equal to global.anim_state.anim_run_round (which toggles each time animation timer executes), indicates this animation needs to be updated. |
+| `start_cb_called` | <ApiLink name="uint8_t" /> | Indicates that `start_cb` was already called |
+| `early_apply` | <ApiLink name="uint8_t" /> | 1: Apply start value immediately even is there is a `delay` |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_anim_t::_lv_anim_path_para_t">
+
+### _lv_anim_t::_lv_anim_path_para_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `bezier3` | <ApiLink name="lv_anim_bezier3_para_t" /> | Parameter used when path is custom_bezier |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_anim_enable_t" file="misc/lv_anim.h" line={87} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L87">
+
+### lv_anim_enable_t
+
+```c
+typedef bool lv_anim_enable_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_anim_enable_t" count={19}>
+
+- `lv_obj_scroll_by` — param `anim_en`
+- `lv_obj_scroll_by_bounded` — param `anim_en`
+- `lv_obj_scroll_to` — param `anim_en`
+- `lv_obj_scroll_to_x` — param `anim_en`
+- `lv_obj_scroll_to_y` — param `anim_en`
+- `lv_obj_scroll_to_view` — param `anim_en`
+- `lv_obj_scroll_to_view_recursive` — param `anim_en`
+- `lv_obj_update_snap` — param `anim_en`
+- `lv_obj_readjust_scroll` — param `anim_en`
+- `lv_gridnav_set_focused` — param `anim_en`
+- `lv_bar_set_value` — param `anim`
+- `lv_bar_set_start_value` — param `anim`
+- `lv_roller_set_selected` — param `anim`
+- `lv_roller_set_selected_str` — param `anim`
+- `lv_slider_set_value` — param `anim`
+- `lv_slider_set_start_value` — param `anim`
+- `lv_tabview_set_active` — param `anim_en`
+- `lv_tileview_set_tile` — param `anim_en`
+- `lv_tileview_set_tile_by_index` — param `anim_en`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_anim_path_cb_t" file="misc/lv_anim.h" line={90} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L90">
+
+### lv_anim_path_cb_t
+
+```c
+typedef int32_t(* lv_anim_path_cb_t) (const lv_anim_t *)
+```
+
+Get the current value during an animation
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_anim_path_cb_t" count={2}>
+
+- `lv_anim_set_path_cb` — param `path_cb`
+- `lv_style_transition_dsc_init` — param `path_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_anim_exec_xcb_t" file="misc/lv_anim.h" line={98} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L98">
+
+### lv_anim_exec_xcb_t
+
+```c
+typedef void(* lv_anim_exec_xcb_t) (void *, int32_t)
+```
+
+Generic prototype of "animator" functions. First parameter is the variable to animate. Second parameter is the value to set. Compatible with `lv_xxx_set_yyy(obj, value)` functions The `x` in `_xcb_t` means it's not a fully generic prototype because it doesn't receive `lv_anim_t *` as its first argument
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_anim_exec_xcb_t" count={3}>
+
+- `lv_anim_set_exec_cb` — param `exec_cb`
+- `lv_anim_delete` — param `exec_cb`
+- `lv_anim_get` — param `exec_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_anim_custom_exec_cb_t" file="misc/lv_anim.h" line={102} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L102">
+
+### lv_anim_custom_exec_cb_t
+
+```c
+typedef void(* lv_anim_custom_exec_cb_t) (lv_anim_t *, int32_t)
+```
+
+Same as `lv_anim_exec_xcb_t` but receives `lv_anim_t *` as the first parameter. It's more consistent but less convenient. Might be used by binding generator functions.
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_anim_custom_exec_cb_t" count={3}>
+
+- `lv_anim_set_custom_exec_cb` — param `exec_cb`
+- `lv_anim_custom_delete` — param `exec_cb`
+- `lv_anim_custom_get` — param `exec_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_anim_completed_cb_t" file="misc/lv_anim.h" line={105} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L105">
+
+### lv_anim_completed_cb_t
+
+```c
+typedef void(* lv_anim_completed_cb_t) (lv_anim_t *)
+```
+
+Callback to call when the animation is ready
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_anim_completed_cb_t" count={2}>
+
+- `lv_anim_set_completed_cb` — param `completed_cb`
+- `lv_animimg_set_completed_cb` — param `completed_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_anim_start_cb_t" file="misc/lv_anim.h" line={108} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L108">
+
+### lv_anim_start_cb_t
+
+```c
+typedef void(* lv_anim_start_cb_t) (lv_anim_t *)
+```
+
+Callback to call when the animation really stars (considering `delay`)
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_anim_start_cb_t" count={2}>
+
+- `lv_anim_set_start_cb` — param `start_cb`
+- `lv_animimg_set_start_cb` — param `start_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_anim_get_value_cb_t" file="misc/lv_anim.h" line={111} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L111">
+
+### lv_anim_get_value_cb_t
+
+```c
+typedef int32_t(* lv_anim_get_value_cb_t) (lv_anim_t *)
+```
+
+Callback used when the animation values are relative to get the current value
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_anim_get_value_cb_t" count={1}>
+
+- `lv_anim_set_get_value_cb` — param `get_value_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_anim_deleted_cb_t" file="misc/lv_anim.h" line={114} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L114">
+
+### lv_anim_deleted_cb_t
+
+```c
+typedef void(* lv_anim_deleted_cb_t) (lv_anim_t *)
+```
+
+Callback used when the animation is deleted
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_anim_deleted_cb_t" count={1}>
+
+- `lv_anim_set_deleted_cb` — param `deleted_cb`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_ANIM_REPEAT_INFINITE" file="misc/lv_anim.h" line={27} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L27">
+
+### LV_ANIM_REPEAT_INFINITE
+
+```c
+#define LV_ANIM_REPEAT_INFINITE 0xFFFFFFFF
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_PLAYTIME_INFINITE" file="misc/lv_anim.h" line={28} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L28">
+
+### LV_ANIM_PLAYTIME_INFINITE
+
+```c
+#define LV_ANIM_PLAYTIME_INFINITE 0xFFFFFFFF
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_PAUSE_FOREVER" file="misc/lv_anim.h" line={29} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L29">
+
+### LV_ANIM_PAUSE_FOREVER
+
+```c
+#define LV_ANIM_PAUSE_FOREVER 0xFFFFFFFF
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="_PARA" file="misc/lv_anim.h" line={46} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L46">
+
+### _PARA
+
+```c
+#define _PARA(a, x1, y1, x2, y2) \
+    ((a)->parameter.bezier3 = \
+    (lv_anim_bezier3_para_t) { \
+        LV_BEZIER_VAL_FLOAT(x1), LV_BEZIER_VAL_FLOAT(y1), \
+        LV_BEZIER_VAL_FLOAT(x2), LV_BEZIER_VAL_FLOAT(y2) } \
+                                     )
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_SINE" file="misc/lv_anim.h" line={52} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L52">
+
+### LV_ANIM_SET_EASE_IN_SINE
+
+```c
+#define LV_ANIM_SET_EASE_IN_SINE(a) \
+    _PARA(a, 0.12, 0, 0.39, 0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_OUT_SINE" file="misc/lv_anim.h" line={53} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L53">
+
+### LV_ANIM_SET_EASE_OUT_SINE
+
+```c
+#define LV_ANIM_SET_EASE_OUT_SINE(a) \
+    _PARA(a, 0.61, 1, 0.88, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_OUT_SINE" file="misc/lv_anim.h" line={54} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L54">
+
+### LV_ANIM_SET_EASE_IN_OUT_SINE
+
+```c
+#define LV_ANIM_SET_EASE_IN_OUT_SINE(a) \
+    _PARA(a, 0.37, 0, 0.63, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_QUAD" file="misc/lv_anim.h" line={55} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L55">
+
+### LV_ANIM_SET_EASE_IN_QUAD
+
+```c
+#define LV_ANIM_SET_EASE_IN_QUAD(a) \
+    _PARA(a, 0.11, 0, 0.5, 0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_OUT_QUAD" file="misc/lv_anim.h" line={56} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L56">
+
+### LV_ANIM_SET_EASE_OUT_QUAD
+
+```c
+#define LV_ANIM_SET_EASE_OUT_QUAD(a) \
+    _PARA(a, 0.5, 1, 0.89, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_OUT_QUAD" file="misc/lv_anim.h" line={57} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L57">
+
+### LV_ANIM_SET_EASE_IN_OUT_QUAD
+
+```c
+#define LV_ANIM_SET_EASE_IN_OUT_QUAD(a) \
+    _PARA(a, 0.45, 0, 0.55, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_CUBIC" file="misc/lv_anim.h" line={58} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L58">
+
+### LV_ANIM_SET_EASE_IN_CUBIC
+
+```c
+#define LV_ANIM_SET_EASE_IN_CUBIC(a) \
+    _PARA(a, 0.32, 0, 0.67, 0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_OUT_CUBIC" file="misc/lv_anim.h" line={59} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L59">
+
+### LV_ANIM_SET_EASE_OUT_CUBIC
+
+```c
+#define LV_ANIM_SET_EASE_OUT_CUBIC(a) \
+    _PARA(a, 0.33, 1, 0.68, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_OUT_CUBIC" file="misc/lv_anim.h" line={60} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L60">
+
+### LV_ANIM_SET_EASE_IN_OUT_CUBIC
+
+```c
+#define LV_ANIM_SET_EASE_IN_OUT_CUBIC(a) \
+    _PARA(a, 0.65, 0, 0.35, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_QUART" file="misc/lv_anim.h" line={61} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L61">
+
+### LV_ANIM_SET_EASE_IN_QUART
+
+```c
+#define LV_ANIM_SET_EASE_IN_QUART(a) \
+    _PARA(a, 0.5, 0, 0.75, 0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_OUT_QUART" file="misc/lv_anim.h" line={62} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L62">
+
+### LV_ANIM_SET_EASE_OUT_QUART
+
+```c
+#define LV_ANIM_SET_EASE_OUT_QUART(a) \
+    _PARA(a, 0.25, 1, 0.5, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_OUT_QUART" file="misc/lv_anim.h" line={63} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L63">
+
+### LV_ANIM_SET_EASE_IN_OUT_QUART
+
+```c
+#define LV_ANIM_SET_EASE_IN_OUT_QUART(a) \
+    _PARA(a, 0.76, 0, 0.24, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_QUINT" file="misc/lv_anim.h" line={64} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L64">
+
+### LV_ANIM_SET_EASE_IN_QUINT
+
+```c
+#define LV_ANIM_SET_EASE_IN_QUINT(a) \
+    _PARA(a, 0.64, 0, 0.78, 0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_OUT_QUINT" file="misc/lv_anim.h" line={65} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L65">
+
+### LV_ANIM_SET_EASE_OUT_QUINT
+
+```c
+#define LV_ANIM_SET_EASE_OUT_QUINT(a) \
+    _PARA(a, 0.22, 1, 0.36, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_OUT_QUINT" file="misc/lv_anim.h" line={66} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L66">
+
+### LV_ANIM_SET_EASE_IN_OUT_QUINT
+
+```c
+#define LV_ANIM_SET_EASE_IN_OUT_QUINT(a) \
+    _PARA(a, 0.83, 0, 0.17, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_EXPO" file="misc/lv_anim.h" line={67} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L67">
+
+### LV_ANIM_SET_EASE_IN_EXPO
+
+```c
+#define LV_ANIM_SET_EASE_IN_EXPO(a) \
+    _PARA(a, 0.7, 0, 0.84, 0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_OUT_EXPO" file="misc/lv_anim.h" line={68} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L68">
+
+### LV_ANIM_SET_EASE_OUT_EXPO
+
+```c
+#define LV_ANIM_SET_EASE_OUT_EXPO(a) \
+    _PARA(a, 0.16, 1, 0.3, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_OUT_EXPO" file="misc/lv_anim.h" line={69} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L69">
+
+### LV_ANIM_SET_EASE_IN_OUT_EXPO
+
+```c
+#define LV_ANIM_SET_EASE_IN_OUT_EXPO(a) \
+    _PARA(a, 0.87, 0, 0.13, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_CIRC" file="misc/lv_anim.h" line={70} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L70">
+
+### LV_ANIM_SET_EASE_IN_CIRC
+
+```c
+#define LV_ANIM_SET_EASE_IN_CIRC(a) \
+    _PARA(a, 0.55, 0, 1, 0.45)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_OUT_CIRC" file="misc/lv_anim.h" line={71} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L71">
+
+### LV_ANIM_SET_EASE_OUT_CIRC
+
+```c
+#define LV_ANIM_SET_EASE_OUT_CIRC(a) \
+    _PARA(a, 0, 0.55, 0.45, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_OUT_CIRC" file="misc/lv_anim.h" line={72} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L72">
+
+### LV_ANIM_SET_EASE_IN_OUT_CIRC
+
+```c
+#define LV_ANIM_SET_EASE_IN_OUT_CIRC(a) \
+    _PARA(a, 0.85, 0, 0.15, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_BACK" file="misc/lv_anim.h" line={73} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L73">
+
+### LV_ANIM_SET_EASE_IN_BACK
+
+```c
+#define LV_ANIM_SET_EASE_IN_BACK(a) \
+    _PARA(a, 0.36, 0, 0.66, -0.56)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_OUT_BACK" file="misc/lv_anim.h" line={74} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L74">
+
+### LV_ANIM_SET_EASE_OUT_BACK
+
+```c
+#define LV_ANIM_SET_EASE_OUT_BACK(a) \
+    _PARA(a, 0.34, 1.56, 0.64, 1)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_SET_EASE_IN_OUT_BACK" file="misc/lv_anim.h" line={75} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L75">
+
+### LV_ANIM_SET_EASE_IN_OUT_BACK
+
+```c
+#define LV_ANIM_SET_EASE_IN_OUT_BACK(a) \
+    _PARA(a, 0.68, -0.6, 0.32, 1.6)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_OFF" file="misc/lv_anim.h" line={85} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L85">
+
+### LV_ANIM_OFF
+
+```c
+#define LV_ANIM_OFF false
+```
+
+Can be used to indicate if animations are enabled or disabled in a case
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ANIM_ON" file="misc/lv_anim.h" line={86} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/misc/lv_anim.h#L86">
+
+### LV_ANIM_ON
+
+```c
+#define LV_ANIM_ON true
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_ext_data.h", "lv_types.h", "lv_math.h", "lv_timer.h", "lv_ll.h"]}
+  includedBy={["lv_global.h", "lv_obj_scroll.h", "lv_obj_tree.h", "lv_indev_private.h", "lv_anim_private.h", "lv_anim_timeline.h", "lv_style.h", "lv_bar.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h", "lv_tick.h"]}
+/>

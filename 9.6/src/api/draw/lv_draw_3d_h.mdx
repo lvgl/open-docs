@@ -1,0 +1,113 @@
+---
+title: lv_draw_3d.h
+description: API reference for lv_draw_3d.h
+api:
+  functions: [lv_draw_3d_dsc_init, lv_draw_task_get_3d_dsc, lv_draw_3d]
+  structs: [lv_draw_3d_dsc_t]
+---
+
+<ApiSummary functions={3} structs={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (2)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_draw_task_get_3d_dsc" file="draw/lv_draw_3d.h" line={53} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_3d.h#L53">
+
+### lv_draw_task_get_3d_dsc
+
+Try to get a 3D draw descriptor from a draw task.
+
+```c
+lv_draw_3d_dsc_t * lv_draw_task_get_3d_dsc(lv_draw_task_t *task)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `task` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
+
+**Returns:** <ApiLink name="lv_draw_3d_dsc_t" display="lv_draw_3d_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_3D
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_draw_3d_dsc_init" file="draw/lv_draw_3d.h" line={46} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_3d.h#L46">
+
+### lv_draw_3d_dsc_init
+
+Initialize a 3D draw descriptor
+
+```c
+void lv_draw_3d_dsc_init(lv_draw_3d_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_3d_dsc_t" display="lv_draw_3d_dsc_t *" /> | pointer to a draw descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_3d" file="draw/lv_draw_3d.h" line={60} url="https://github.com/lvgl/lvgl/tree/cb7045d6ac326f41023cfbc99acc5a5aa061f481/src/draw/lv_draw_3d.h#L60">
+
+### lv_draw_3d
+
+Create a 3D draw task
+
+```c
+void lv_draw_3d(lv_layer_t *layer, const lv_draw_3d_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_3d_dsc_t" display="const lv_draw_3d_dsc_t *" /> | pointer to an initialized <ApiLink name="lv_draw_3d_dsc_t" /> variable |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |  |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_3d_dsc_t">
+
+### lv_draw_3d_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `tex_id` | <ApiLink name="lv_3dtexture_id_t" /> |  |
+| `h_flip` | <ApiLink name="bool" /> |  |
+| `v_flip` | <ApiLink name="bool" /> |  |
+| `opa` | <ApiLink name="lv_opa_t" /> |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_3d_dsc_t" count={3}>
+
+- `lv_draw_3d_dsc_init` — param `dsc`
+- `lv_draw_3d` — param `dsc`
+- `lv_draw_nanovg_3d` — param `dsc`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_draw.h"]}
+  includedBy={["lv_draw_nanovg_private.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+/>
