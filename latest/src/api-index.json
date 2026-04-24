@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-04-23T10:51:05.379Z",
-    "symbolCount": 8796
+    "generatedAt": "2026-04-24T05:57:24.773Z",
+    "symbolCount": 8797
   },
   "symbols": {
     "lv_global.h": {
@@ -4989,6 +4989,11 @@
     "lv_test_screenshot_compare": {
       "path": "debugging/test/lv_test_screenshot_compare_h",
       "anchor": "lv_test_screenshot_compare",
+      "kind": "function"
+    },
+    "lv_test_screenshot_compare_core": {
+      "path": "debugging/test/lv_test_screenshot_compare_h",
+      "anchor": "lv_test_screenshot_compare_core",
       "kind": "function"
     },
     "lv_test_screenshot_result_t": {

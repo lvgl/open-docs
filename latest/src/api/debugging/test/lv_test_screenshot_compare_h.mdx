@@ -2,19 +2,19 @@
 title: lv_test_screenshot_compare.h
 description: API reference for lv_test_screenshot_compare.h
 api:
-  functions: [lv_test_screenshot_compare]
+  functions: [lv_test_screenshot_compare, lv_test_screenshot_compare_core]
   enums: [lv_test_screenshot_result_t]
 ---
 
-<ApiSummary functions={1} enums={1} />
+<ApiSummary functions={2} enums={1} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_test_screenshot_compare" file="debugging/test/lv_test_screenshot_compare.h" line={67} url="https://github.com/lvgl/lvgl/tree/b1e55eabe99f43ecbc73c3c965b22e55505bf156/src/debugging/test/lv_test_screenshot_compare.h#L67">
+<ApiMember kind="function" name="lv_test_screenshot_compare" file="debugging/test/lv_test_screenshot_compare.h" line={67} url="https://github.com/lvgl/lvgl/tree/14a1e1fd479a6bb3609892c495c274292b8c1786/src/debugging/test/lv_test_screenshot_compare.h#L67">
 
 ### lv_test_screenshot_compare
 
-Compare the current content of the test screen with a reference PNG image
+Invalidate and redraw the current screen and compare its content with a reference PNG image
 - If the reference image is not found it will be created automatically from the rendered screen.
 - If the compare fails an `<image_name>_err.png` file will be created with the rendered content next to the reference image.
 
@@ -39,9 +39,28 @@ This function assumes that the default display is the test display that was crea
 
 </ApiMember>
 
+<ApiMember kind="function" name="lv_test_screenshot_compare_core" file="debugging/test/lv_test_screenshot_compare.h" line={75} url="https://github.com/lvgl/lvgl/tree/14a1e1fd479a6bb3609892c495c274292b8c1786/src/debugging/test/lv_test_screenshot_compare.h#L75">
+
+### lv_test_screenshot_compare_core
+
+Works the same way as `lv_test_screenshot_compare` but it doesn't invalidate and redraw the screen but uses its current content. (lv_refr_now(NULL) might be called earlier)
+
+```c
+lv_test_screenshot_result_t lv_test_screenshot_compare_core(const char *fn_ref)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `fn_ref` | `const char *` | reference image path |
+
+
+</ApiMember>
+
 ## Enums
 
-<ApiMember kind="enum" name="lv_test_screenshot_result_t" file="debugging/test/lv_test_screenshot_compare.h" line={30} url="https://github.com/lvgl/lvgl/tree/b1e55eabe99f43ecbc73c3c965b22e55505bf156/src/debugging/test/lv_test_screenshot_compare.h#L30">
+<ApiMember kind="enum" name="lv_test_screenshot_result_t" file="debugging/test/lv_test_screenshot_compare.h" line={30} url="https://github.com/lvgl/lvgl/tree/14a1e1fd479a6bb3609892c495c274292b8c1786/src/debugging/test/lv_test_screenshot_compare.h#L30">
 
 ### lv_test_screenshot_result_t
 
