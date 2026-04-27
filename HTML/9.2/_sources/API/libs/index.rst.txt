@@ -1,0 +1,26 @@
+====
+libs
+====
+
+
+.. toctree::
+    :maxdepth: 2
+
+    libjpeg_turbo/index
+    ffmpeg/index
+    bin_decoder/index
+    rle/index
+    qrcode/index
+    lz4/index
+    libpng/index
+    bmp/index
+    tjpgd/index
+    rlottie/index
+    tiny_ttf/index
+    barcode/index
+    freetype/index
+    thorvg/index
+    fsdrv/index
+    lodepng/index
+    gif/index
+

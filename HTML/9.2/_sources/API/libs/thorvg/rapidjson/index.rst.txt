@@ -1,0 +1,33 @@
+=========
+rapidjson
+=========
+
+
+.. toctree::
+    :maxdepth: 2
+
+    filereadstream
+    writer
+    pointer
+    schema
+    allocators
+    cursorstreamwrapper
+    filewritestream
+    istreamwrapper
+    uri
+    document
+    memorystream
+    prettywriter
+    stream
+    reader
+    encodings
+    fwd
+    encodedstream
+    stringbuffer
+    memorybuffer
+    ostreamwrapper
+    rapidjson
+    msinttypes/index
+    error/index
+    internal/index
+
