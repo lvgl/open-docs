@@ -28,9 +28,9 @@
     "lv_conf_internal_h",
     "lv_conf_kconfig_h",
     "lv_init_h",
-    "lv_public_api_h",
     "lvgl_h",
     "lvgl_private_h",
+    "lvgl_public_h",
     "todo"
   ]
 }

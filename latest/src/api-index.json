@@ -2,7 +2,7 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-05-07T08:23:04.247Z",
+    "generatedAt": "2026-05-07T08:36:01.562Z",
     "symbolCount": 2343
   },
   "symbols": {
@@ -9151,11 +9151,6 @@
       "anchor": "",
       "kind": "header"
     },
-    "lv_public_api.h": {
-      "path": "lv_public_api_h",
-      "anchor": "",
-      "kind": "header"
-    },
     "lvgl.h": {
       "path": "lvgl_h",
       "anchor": "",
@@ -9163,6 +9158,11 @@
     },
     "lvgl_private.h": {
       "path": "lvgl_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lvgl_public.h": {
+      "path": "lvgl_public_h",
       "anchor": "",
       "kind": "header"
     },
