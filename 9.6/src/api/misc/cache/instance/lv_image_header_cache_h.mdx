@@ -9,7 +9,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_image_header_cache_init" file="misc/cache/instance/lv_image_header_cache.h" line={36} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_header_cache.h#L36">
+<ApiMember kind="function" name="lv_image_header_cache_init" file="misc/cache/instance/lv_image_header_cache.h" line={36} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_header_cache.h#L36">
 
 ### lv_image_header_cache_init
 
@@ -23,14 +23,14 @@ lv_result_t lv_image_header_cache_init(uint32_t count)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `count` | <ApiLink name="uint32_t" /> | initial size of the cache in count of image headers. |
+| `count` | `uint32_t` | initial size of the cache in count of image headers. |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: initialization succeeded, LV_RESULT_INVALID: failed.
+**Returns:** `lv_result_t` — LV_RESULT_OK: initialization succeeded, LV_RESULT_INVALID: failed.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_header_cache_resize" file="misc/cache/instance/lv_image_header_cache.h" line={44} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_header_cache.h#L44">
+<ApiMember kind="function" name="lv_image_header_cache_resize" file="misc/cache/instance/lv_image_header_cache.h" line={44} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_header_cache.h#L44">
 
 ### lv_image_header_cache_resize
 
@@ -44,13 +44,13 @@ void lv_image_header_cache_resize(uint32_t count, bool evict_now)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `count` | <ApiLink name="uint32_t" /> | new max count of cached image headers. |
-| `evict_now` | <ApiLink name="bool" /> | true: evict the image headers should be removed by the eviction policy, false: wait for the next cache cleanup. |
+| `count` | `uint32_t` | new max count of cached image headers. |
+| `evict_now` | `bool` | true: evict the image headers should be removed by the eviction policy, false: wait for the next cache cleanup. |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_header_cache_drop" file="misc/cache/instance/lv_image_header_cache.h" line={51} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_header_cache.h#L51">
+<ApiMember kind="function" name="lv_image_header_cache_drop" file="misc/cache/instance/lv_image_header_cache.h" line={51} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_header_cache.h#L51">
 
 ### lv_image_header_cache_drop
 
@@ -69,7 +69,7 @@ void lv_image_header_cache_drop(const void *src)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_header_cache_is_enabled" file="misc/cache/instance/lv_image_header_cache.h" line={57} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_header_cache.h#L57">
+<ApiMember kind="function" name="lv_image_header_cache_is_enabled" file="misc/cache/instance/lv_image_header_cache.h" line={57} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_header_cache.h#L57">
 
 ### lv_image_header_cache_is_enabled
 
@@ -79,12 +79,12 @@ Return true if the image header cache is enabled.
 bool lv_image_header_cache_is_enabled(void)
 ```
 
-**Returns:** <ApiLink name="bool" /> — true: enabled, false: disabled.
+**Returns:** `bool` — true: enabled, false: disabled.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_header_cache_iter_create" file="misc/cache/instance/lv_image_header_cache.h" line={63} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_header_cache.h#L63">
+<ApiMember kind="function" name="lv_image_header_cache_iter_create" file="misc/cache/instance/lv_image_header_cache.h" line={63} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_header_cache.h#L63">
 
 ### lv_image_header_cache_iter_create
 
@@ -99,7 +99,7 @@ lv_iter_t * lv_image_header_cache_iter_create(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_header_cache_dump" file="misc/cache/instance/lv_image_header_cache.h" line={68} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_header_cache.h#L68">
+<ApiMember kind="function" name="lv_image_header_cache_dump" file="misc/cache/instance/lv_image_header_cache.h" line={68} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_header_cache.h#L68">
 
 ### lv_image_header_cache_dump
 
@@ -115,7 +115,7 @@ void lv_image_header_cache_dump(void)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_types.h"]}
+  includes={["lv_public_api.h"]}
   includedBy={["lv_cache_instance.h"]}
-  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

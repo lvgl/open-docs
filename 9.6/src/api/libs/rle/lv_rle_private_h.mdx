@@ -1,0 +1,41 @@
+---
+title: lv_rle_private.h
+description: API reference for lv_rle_private.h
+api:
+  functions: [lv_rle_decompress]
+---
+
+<RelatedHeaders name="lv_rle.h" isPrivate={true} />
+
+<ApiSummary functions={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_rle_decompress" file="libs/rle/lv_rle_private.h" line={32} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/rle/lv_rle_private.h#L32">
+
+### lv_rle_decompress
+
+```c
+uint32_t lv_rle_decompress(const uint8_t *input, uint32_t input_buff_len, uint8_t *output, uint32_t output_buff_len, uint8_t blk_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `input` | `const uint8_t *` |
+| `input_buff_len` | `uint32_t` |
+| `output` | `uint8_t *` |
+| `output_buff_len` | `uint32_t` |
+| `blk_size` | `uint8_t` |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_public_api.h"]}
+  includedBy={["lv_rle.h"]}
+  transitiveIncludes={["lvgl.h"]}
+/>

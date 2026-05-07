@@ -14,7 +14,7 @@ api:
 <ApiTabs items={["Setters (1)","Other (1)"]}>
 <ApiTab value="Setters (1)">
 
-<ApiMember kind="function" name="lv_draw_eve_set_display_data" file="draw/eve/lv_draw_eve.h" line={43} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/eve/lv_draw_eve.h#L43">
+<ApiMember kind="function" name="lv_draw_eve_set_display_data" file="draw/eve/lv_draw_eve.h" line={41} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/eve/lv_draw_eve.h#L41">
 
 ### lv_draw_eve_set_display_data
 
@@ -26,9 +26,9 @@ void lv_draw_eve_set_display_data(lv_display_t *disp, const lv_draw_eve_paramete
 
 | Name | Type |
 |------|------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
-| `params` | <ApiLink name="lv_draw_eve_parameters_t" display="const lv_draw_eve_parameters_t *" /> |
-| `op_cb` | <ApiLink name="lv_draw_eve_operation_cb_t" /> |
+| `disp` | `lv_display_t *` |
+| `params` | `const lv_draw_eve_parameters_t *` |
+| `op_cb` | `lv_draw_eve_operation_cb_t` |
 
 
 </ApiMember>
@@ -36,7 +36,7 @@ void lv_draw_eve_set_display_data(lv_display_t *disp, const lv_draw_eve_paramete
 </ApiTab>
 <ApiTab value="Other (1)">
 
-<ApiMember kind="function" name="lv_draw_eve_init" file="draw/eve/lv_draw_eve.h" line={41} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/eve/lv_draw_eve.h#L41">
+<ApiMember kind="function" name="lv_draw_eve_init" file="draw/eve/lv_draw_eve.h" line={39} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/eve/lv_draw_eve.h#L39">
 
 ### lv_draw_eve_init
 
@@ -52,7 +52,7 @@ void lv_draw_eve_init(void)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_draw_eve_target.h"]}
-  includedBy={["lv_draw_eve_private.h", "lv_draw_eve_ram_g.h", "lv_eve.h"]}
-  transitiveIncludes={["lv_conf_kconfig.h", "lv_types.h"]}
+  includes={["lv_public_api.h"]}
+  includedBy={["lv_draw_eve_ram_g.h", "lv_eve.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

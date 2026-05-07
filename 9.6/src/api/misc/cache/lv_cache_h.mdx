@@ -2,19 +2,20 @@
 title: lv_cache.h
 description: API reference for lv_cache.h
 api:
-  functions: [lv_cache_create, lv_cache_destroy, lv_cache_acquire, lv_cache_acquire_or_create, lv_cache_add, lv_cache_release, lv_cache_reserve, lv_cache_drop, lv_cache_drop_all, lv_cache_evict_one, lv_cache_set_max_size, lv_cache_get_max_size, lv_cache_get_size, lv_cache_get_free_size, lv_cache_is_enabled, lv_cache_set_compare_cb, lv_cache_set_create_cb, lv_cache_set_free_cb, lv_cache_set_name, lv_cache_get_name, lv_cache_iter_create]
+  functions: [lv_cache_create, lv_cache_destroy, lv_cache_acquire, lv_cache_acquire_or_create, lv_cache_add, lv_cache_release, lv_cache_reserve, lv_cache_drop, lv_cache_drop_all, lv_cache_evict_one, lv_cache_set_max_size, lv_cache_get_max_size, lv_cache_get_size, lv_cache_get_free_size, lv_cache_is_enabled, lv_cache_set_compare_cb, lv_cache_set_create_cb, lv_cache_set_free_cb, lv_cache_set_name, lv_cache_get_name, lv_cache_iter_create, lv_cache_entry_get_cache, lv_cache_entry_alloc, lv_cache_entry_init, lv_cache_entry_delete]
+  enums: [lv_cache_reserve_cond_res_t]
+  structs: [_lv_cache_ops_t, _lv_cache_t, _lv_cache_class_t, _lv_cache_slot_size_t]
+  typedefs: [lv_cache_entry_t, lv_cache_t, lv_cache_ops_t, lv_cache_class_t, lv_cache_compare_res_t, lv_cache_create_cb_t, lv_cache_free_cb_t, lv_cache_compare_cb_t, lv_cache_alloc_cb_t, lv_cache_init_cb_t, lv_cache_destroy_cb_t, lv_cache_get_cb_t, lv_cache_add_cb_t, lv_cache_remove_cb_t, lv_cache_drop_cb_t, lv_cache_drop_all_cb_t, lv_cache_get_victim_cb, lv_cache_reserve_cond_cb, lv_cache_iter_create_cb, lv_cache_slot_size_t]
 ---
 
-<RelatedHeaders name="lv_cache_private.h" isPrivate={false} />
-
-<ApiSummary functions={21} />
+<ApiSummary functions={25} enums={1} structs={4} typedefs={20} />
 
 ## Functions
 
-<ApiTabs items={["Setters (5)","Getters (4)","Other (12)"]}>
+<ApiTabs items={["Setters (5)","Getters (5)","Other (15)"]}>
 <ApiTab value="Setters (5)">
 
-<ApiMember kind="function" name="lv_cache_set_max_size" file="misc/cache/lv_cache.h" line={146} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L146">
+<ApiMember kind="function" name="lv_cache_set_max_size" file="misc/cache/lv_cache.h" line={299} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L299">
 
 ### lv_cache_set_max_size
 
@@ -29,7 +30,7 @@ void lv_cache_set_max_size(lv_cache_t *cache, size_t max_size, void *user_data)
 | Name | Type | Description |
 |------|------|-------------|
 | `cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> | The cache object pointer to set the maximum size. |
-| `max_size` | <ApiLink name="size_t" /> | The new maximum size of the cache. |
+| `max_size` | `size_t` | The new maximum size of the cache. |
 | `user_data` | `void *` | A user data pointer that will be passed to the free callback. |
 
 <Callout type="info">
@@ -39,7 +40,7 @@ But this behavior will happen only new entries are added to the cache.
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_set_compare_cb" file="misc/cache/lv_cache.h" line={186} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L186">
+<ApiMember kind="function" name="lv_cache_set_compare_cb" file="misc/cache/lv_cache.h" line={339} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L339">
 
 ### lv_cache_set_compare_cb
 
@@ -60,7 +61,7 @@ void lv_cache_set_compare_cb(lv_cache_t *cache, lv_cache_compare_cb_t compare_cb
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_set_create_cb" file="misc/cache/lv_cache.h" line={194} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L194">
+<ApiMember kind="function" name="lv_cache_set_create_cb" file="misc/cache/lv_cache.h" line={347} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L347">
 
 ### lv_cache_set_create_cb
 
@@ -81,7 +82,7 @@ void lv_cache_set_create_cb(lv_cache_t *cache, lv_cache_create_cb_t alloc_cb, vo
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_set_free_cb" file="misc/cache/lv_cache.h" line={202} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L202">
+<ApiMember kind="function" name="lv_cache_set_free_cb" file="misc/cache/lv_cache.h" line={355} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L355">
 
 ### lv_cache_set_free_cb
 
@@ -102,7 +103,7 @@ void lv_cache_set_free_cb(lv_cache_t *cache, lv_cache_free_cb_t free_cb, void *u
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_set_name" file="misc/cache/lv_cache.h" line={209} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L209">
+<ApiMember kind="function" name="lv_cache_set_name" file="misc/cache/lv_cache.h" line={362} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L362">
 
 ### lv_cache_set_name
 
@@ -123,9 +124,9 @@ void lv_cache_set_name(lv_cache_t *cache, const char *name)
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Getters (4)">
+<ApiTab value="Getters (5)">
 
-<ApiMember kind="function" name="lv_cache_get_max_size" file="misc/cache/lv_cache.h" line={154} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L154">
+<ApiMember kind="function" name="lv_cache_get_max_size" file="misc/cache/lv_cache.h" line={307} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L307">
 
 ### lv_cache_get_max_size
 
@@ -142,12 +143,12 @@ size_t lv_cache_get_max_size(lv_cache_t *cache, void *user_data)
 | `cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> | The cache object pointer to get the maximum size. |
 | `user_data` | `void *` | A user data pointer that will be passed to the free callback. |
 
-**Returns:** <ApiLink name="size_t" /> — Returns the maximum size of the cache.
+**Returns:** `size_t` — Returns the maximum size of the cache.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_get_size" file="misc/cache/lv_cache.h" line={162} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L162">
+<ApiMember kind="function" name="lv_cache_get_size" file="misc/cache/lv_cache.h" line={315} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L315">
 
 ### lv_cache_get_size
 
@@ -164,12 +165,12 @@ size_t lv_cache_get_size(lv_cache_t *cache, void *user_data)
 | `cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> | The cache object pointer to get the current size. |
 | `user_data` | `void *` | A user data pointer that will be passed to the free callback. |
 
-**Returns:** <ApiLink name="size_t" /> — Returns the current size of the cache.
+**Returns:** `size_t` — Returns the current size of the cache.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_get_free_size" file="misc/cache/lv_cache.h" line={170} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L170">
+<ApiMember kind="function" name="lv_cache_get_free_size" file="misc/cache/lv_cache.h" line={323} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L323">
 
 ### lv_cache_get_free_size
 
@@ -186,12 +187,12 @@ size_t lv_cache_get_free_size(lv_cache_t *cache, void *user_data)
 | `cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> | The cache object pointer to get the free size. |
 | `user_data` | `void *` | A user data pointer that will be passed to the free callback. |
 
-**Returns:** <ApiLink name="size_t" /> — Returns the free size of the cache.
+**Returns:** `size_t` — Returns the free size of the cache.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_get_name" file="misc/cache/lv_cache.h" line={216} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L216">
+<ApiMember kind="function" name="lv_cache_get_name" file="misc/cache/lv_cache.h" line={369} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L369">
 
 ### lv_cache_get_name
 
@@ -212,10 +213,31 @@ const char * lv_cache_get_name(lv_cache_t *cache)
 
 </ApiMember>
 
-</ApiTab>
-<ApiTab value="Other (12)">
+<ApiMember kind="function" name="lv_cache_entry_get_cache" file="misc/cache/lv_cache.h" line={383} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L383">
 
-<ApiMember kind="function" name="lv_cache_create" file="misc/cache/lv_cache.h" line={48} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L48">
+### lv_cache_entry_get_cache
+
+Get the cache instance of a cache entry.
+
+```c
+const lv_cache_t * lv_cache_entry_get_cache(const lv_cache_entry_t *entry)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `entry` | <ApiLink name="lv_cache_entry_t" display="const lv_cache_entry_t *" /> | The cache entry to get the cache instance of. |
+
+**Returns:** <ApiLink name="lv_cache_t" display="const lv_cache_t *" /> — The pointer to the cache instance of the cache entry.
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (15)">
+
+<ApiMember kind="function" name="lv_cache_create" file="misc/cache/lv_cache.h" line={201} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L201">
 
 ### lv_cache_create
 
@@ -230,8 +252,8 @@ lv_cache_t * lv_cache_create(const lv_cache_class_t *cache_class, size_t node_si
 | Name | Type | Description |
 |------|------|-------------|
 | `cache_class` | <ApiLink name="lv_cache_class_t" display="const lv_cache_class_t *" /> | The class of the cache. Currently only support one two builtin classes:<br/>- lv_cache_class_lru_rb_count for LRU-based cache with count-based eviction policy.<br/>- lv_cache_class_lru_rb_size for LRU-based cache with size-based eviction policy. |
-| `node_size` | <ApiLink name="size_t" /> | The node size is the size of the data stored in the cache.. |
-| `max_size` | <ApiLink name="size_t" /> | The max size is the maximum amount of memory or count that the cache can hold.<br/>- lv_cache_class_lru_rb_count: max_size is the maximum count of nodes in the cache.<br/>- lv_cache_class_lru_rb_size: max_size is the maximum size of the cache in bytes. |
+| `node_size` | `size_t` | The node size is the size of the data stored in the cache.. |
+| `max_size` | `size_t` | The max size is the maximum amount of memory or count that the cache can hold.<br/>- lv_cache_class_lru_rb_count: max_size is the maximum count of nodes in the cache.<br/>- lv_cache_class_lru_rb_size: max_size is the maximum size of the cache in bytes. |
 | `ops` | <ApiLink name="lv_cache_ops_t" /> | A set of operations that can be performed on the cache. See lv_cache_ops_t for details. |
 
 **Returns:** <ApiLink name="lv_cache_t" display="lv_cache_t *" /> — Returns a pointer to the created cache object on success, `NULL` on error.
@@ -239,7 +261,7 @@ lv_cache_t * lv_cache_create(const lv_cache_class_t *cache_class, size_t node_si
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_destroy" file="misc/cache/lv_cache.h" line={57} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L57">
+<ApiMember kind="function" name="lv_cache_destroy" file="misc/cache/lv_cache.h" line={210} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L210">
 
 ### lv_cache_destroy
 
@@ -259,7 +281,7 @@ void lv_cache_destroy(lv_cache_t *cache, void *user_data)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_acquire" file="misc/cache/lv_cache.h" line={67} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L67">
+<ApiMember kind="function" name="lv_cache_acquire" file="misc/cache/lv_cache.h" line={220} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L220">
 
 ### lv_cache_acquire
 
@@ -282,7 +304,7 @@ lv_cache_entry_t * lv_cache_acquire(lv_cache_t *cache, const void *key, void *us
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_acquire_or_create" file="misc/cache/lv_cache.h" line={80} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L80">
+<ApiMember kind="function" name="lv_cache_acquire_or_create" file="misc/cache/lv_cache.h" line={233} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L233">
 
 ### lv_cache_acquire_or_create
 
@@ -305,7 +327,7 @@ lv_cache_entry_t * lv_cache_acquire_or_create(lv_cache_t *cache, const void *key
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_add" file="misc/cache/lv_cache.h" line={89} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L89">
+<ApiMember kind="function" name="lv_cache_add" file="misc/cache/lv_cache.h" line={242} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L242">
 
 ### lv_cache_add
 
@@ -328,7 +350,7 @@ lv_cache_entry_t * lv_cache_add(lv_cache_t *cache, const void *key, void *user_d
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_release" file="misc/cache/lv_cache.h" line={98} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L98">
+<ApiMember kind="function" name="lv_cache_release" file="misc/cache/lv_cache.h" line={251} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L251">
 
 ### lv_cache_release
 
@@ -349,7 +371,7 @@ void lv_cache_release(lv_cache_t *cache, lv_cache_entry_t *entry, void *user_dat
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_reserve" file="misc/cache/lv_cache.h" line={108} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L108">
+<ApiMember kind="function" name="lv_cache_reserve" file="misc/cache/lv_cache.h" line={261} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L261">
 
 ### lv_cache_reserve
 
@@ -364,13 +386,13 @@ void lv_cache_reserve(lv_cache_t *cache, uint32_t reserved_size, void *user_data
 | Name | Type | Description |
 |------|------|-------------|
 | `cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> | The cache object pointer to reserve. |
-| `reserved_size` | <ApiLink name="uint32_t" /> | The amount of memory/count to reserve. |
+| `reserved_size` | `uint32_t` | The amount of memory/count to reserve. |
 | `user_data` | `void *` | A user data pointer that will be passed to the free callback. |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_drop" file="misc/cache/lv_cache.h" line={119} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L119">
+<ApiMember kind="function" name="lv_cache_drop" file="misc/cache/lv_cache.h" line={272} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L272">
 
 ### lv_cache_drop
 
@@ -395,7 +417,7 @@ The data will not be freed immediately but when the last reference to it is rele
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_drop_all" file="misc/cache/lv_cache.h" line={127} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L127">
+<ApiMember kind="function" name="lv_cache_drop_all" file="misc/cache/lv_cache.h" line={280} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L280">
 
 ### lv_cache_drop_all
 
@@ -419,7 +441,7 @@ If some entries are still referenced by other objects, it will issue an error. A
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_evict_one" file="misc/cache/lv_cache.h" line={135} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L135">
+<ApiMember kind="function" name="lv_cache_evict_one" file="misc/cache/lv_cache.h" line={288} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L288">
 
 ### lv_cache_evict_one
 
@@ -436,12 +458,12 @@ bool lv_cache_evict_one(lv_cache_t *cache, void *user_data)
 | `cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> | The cache object pointer to evict an entry. |
 | `user_data` | `void *` | A user data pointer that will be passed to the free callback. |
 
-**Returns:** <ApiLink name="bool" /> — Returns true if an entry is evicted, false if no entry is evicted.
+**Returns:** `bool` — Returns true if an entry is evicted, false if no entry is evicted.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_is_enabled" file="misc/cache/lv_cache.h" line={178} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L178">
+<ApiMember kind="function" name="lv_cache_is_enabled" file="misc/cache/lv_cache.h" line={331} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L331">
 
 ### lv_cache_is_enabled
 
@@ -457,12 +479,12 @@ bool lv_cache_is_enabled(lv_cache_t *cache)
 |------|------|-------------|
 | `cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> | The cache object pointer to check if it's disabled. |
 
-**Returns:** <ApiLink name="bool" /> — Returns true if the cache is enabled, false otherwise.
+**Returns:** `bool` — Returns true if the cache is enabled, false otherwise.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_cache_iter_create" file="misc/cache/lv_cache.h" line={223} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/lv_cache.h#L223">
+<ApiMember kind="function" name="lv_cache_iter_create" file="misc/cache/lv_cache.h" line={376} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L376">
 
 ### lv_cache_iter_create
 
@@ -483,12 +505,497 @@ lv_iter_t * lv_cache_iter_create(lv_cache_t *cache)
 
 </ApiMember>
 
+<ApiMember kind="function" name="lv_cache_entry_alloc" file="misc/cache/lv_cache.h" line={391} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L391">
+
+### lv_cache_entry_alloc
+
+Allocate a cache entry.
+
+```c
+lv_cache_entry_t * lv_cache_entry_alloc(const uint32_t node_size, const lv_cache_t *cache)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node_size` | `const uint32_t` | The size of the node in the cache. |
+| `cache` | <ApiLink name="lv_cache_t" display="const lv_cache_t *" /> | The cache instance to allocate the cache entry from. |
+
+**Returns:** <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> — The pointer to the allocated cache entry.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_cache_entry_init" file="misc/cache/lv_cache.h" line={399} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L399">
+
+### lv_cache_entry_init
+
+Initialize a cache entry.
+
+```c
+void lv_cache_entry_init(lv_cache_entry_t *entry, const lv_cache_t *cache, const uint32_t node_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `entry` | <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> | The cache entry to initialize. |
+| `cache` | <ApiLink name="lv_cache_t" display="const lv_cache_t *" /> | The cache instance to allocate the cache entry from. |
+| `node_size` | `const uint32_t` | The size of the node in the cache. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_cache_entry_delete" file="misc/cache/lv_cache.h" line={405} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L405">
+
+### lv_cache_entry_delete
+
+Deallocate a cache entry. And the data of the cache entry will be freed.
+
+```c
+void lv_cache_entry_delete(lv_cache_entry_t *entry)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `entry` | <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> | The cache entry to deallocate. |
+
+
+</ApiMember>
+
 </ApiTab>
 </ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_cache_reserve_cond_res_t" file="misc/cache/lv_cache.h" line={35} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L35">
+
+### lv_cache_reserve_cond_res_t
+
+The result of the cache reserve condition callback
+
+| Name | Description |
+|------|------|
+| `LV_CACHE_RESERVE_COND_OK` | The condition is met and no entries need to be evicted |
+| `LV_CACHE_RESERVE_COND_TOO_LARGE` | The condition is not met and the reserve size is too large |
+| `LV_CACHE_RESERVE_COND_NEED_VICTIM` | The condition is not met and a victim is needed to be evicted |
+| `LV_CACHE_RESERVE_COND_ERROR` | An error occurred while checking the condition |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_cache_ops_t">
+
+### _lv_cache_ops_t
+
+The cache operations struct
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `compare_cb` | <ApiLink name="lv_cache_compare_cb_t" /> | Compare function for keys |
+| `create_cb` | <ApiLink name="lv_cache_create_cb_t" /> | Create function for nodes |
+| `free_cb` | <ApiLink name="lv_cache_free_cb_t" /> | Free function for nodes |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_cache_t">
+
+### _lv_cache_t
+
+The cache entry struct
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `clz` | <ApiLink name="lv_cache_class_t" display="const lv_cache_class_t *" /> | Cache class. There are two built-in classes:<br/>- lv_cache_class_lru_rb_count for LRU-based cache with count-based eviction policy.<br/>- lv_cache_class_lru_rb_size for LRU-based cache with size-based eviction policy. |
+| `node_size` | `uint32_t` | Size of a node |
+| `max_size` | `uint32_t` | Maximum size of the cache |
+| `size` | `uint32_t` | Current size of the cache |
+| `ops` | <ApiLink name="lv_cache_ops_t" /> | Cache operations struct <ApiLink name="_lv_cache_ops_t" /> |
+| `lock` | `lv_mutex_t` | Cache lock used to protect the cache in multithreading environments |
+| `name` | `const char *` | Name of the cache |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_cache_class_t">
+
+### _lv_cache_class_t
+
+Cache class struct for building custom cache classes
+
+Examples:
+- lv_cache_class_lru_rb_count for LRU-based cache with count-based eviction policy.
+- lv_cache_class_lru_rb_size for LRU-based cache with size-based eviction policy.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `alloc_cb` | <ApiLink name="lv_cache_alloc_cb_t" /> | The allocation function for cache entries |
+| `init_cb` | <ApiLink name="lv_cache_init_cb_t" /> | The initialization function for cache entries |
+| `destroy_cb` | <ApiLink name="lv_cache_destroy_cb_t" /> | The destruction function for cache entries |
+| `get_cb` | <ApiLink name="lv_cache_get_cb_t" /> | The get function for cache entries |
+| `add_cb` | <ApiLink name="lv_cache_add_cb_t" /> | The add function for cache entries |
+| `remove_cb` | <ApiLink name="lv_cache_remove_cb_t" /> | The remove function for cache entries |
+| `drop_cb` | <ApiLink name="lv_cache_drop_cb_t" /> | The drop function for cache entries |
+| `drop_all_cb` | <ApiLink name="lv_cache_drop_all_cb_t" /> | The drop all function for cache entries |
+| `get_victim_cb` | <ApiLink name="lv_cache_get_victim_cb" /> | The get victim function for cache entries |
+| `reserve_cond_cb` | <ApiLink name="lv_cache_reserve_cond_cb" /> | The reserve condition function for cache entries |
+| `iter_create_cb` | <ApiLink name="lv_cache_iter_create_cb" /> | The iterator creation function for cache entries |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_cache_slot_size_t">
+
+### _lv_cache_slot_size_t
+
+Cache entry slot struct
+
+To add new fields to the cache entry, add them to a new struct and add it to the first field of the cache data struct. And this one is a size slot for the cache entry.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `size` | `size_t` |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_cache_entry_t" file="misc/cache/lv_cache.h" line={29} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L29">
+
+### lv_cache_entry_t
+
+```c
+typedef struct _lv_cache_entry_t lv_cache_entry_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_cache_entry_t" count={20}>
+
+- `lv_vg_lite_stroke_get_path` — param `cache_entry`
+- `lv_vg_lite_stroke_drop` — param `cache_entry`
+- `lv_cache_release` — param `entry`
+- `lv_cache_entry_get_cache` — param `entry`
+- `lv_cache_entry_init` — param `entry`
+- `lv_cache_entry_delete` — param `entry`
+- `lv_cache_entry_get_ref` — param `entry`
+- `lv_cache_entry_get_node_size` — param `entry`
+- `lv_cache_entry_is_invalid` — param `entry`
+- `lv_cache_entry_get_data` — param `entry`
+- `lv_cache_entry_reset_ref` — param `entry`
+- `lv_cache_entry_inc_ref` — param `entry`
+- `lv_cache_entry_dec_ref` — param `entry`
+- `lv_cache_entry_set_node_size` — param `entry`
+- `lv_cache_entry_set_cache` — param `entry`
+- `lv_cache_entry_acquire_data` — param `entry`
+- `lv_cache_entry_release_data` — param `entry`
+- `lv_cache_entry_set_flag` — param `entry`
+- `lv_cache_entry_remove_flag` — param `entry`
+- `lv_cache_entry_has_flag` — param `entry`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_cache_t" file="misc/cache/lv_cache.h" line={30} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L30">
+
+### lv_cache_t
+
+```c
+typedef struct _lv_cache_t lv_cache_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_cache_t" count={23}>
+
+- `lv_cache_destroy` — param `cache`
+- `lv_cache_acquire` — param `cache`
+- `lv_cache_acquire_or_create` — param `cache`
+- `lv_cache_add` — param `cache`
+- `lv_cache_release` — param `cache`
+- `lv_cache_reserve` — param `cache`
+- `lv_cache_drop` — param `cache`
+- `lv_cache_drop_all` — param `cache`
+- `lv_cache_evict_one` — param `cache`
+- `lv_cache_set_max_size` — param `cache`
+- `lv_cache_get_max_size` — param `cache`
+- `lv_cache_get_size` — param `cache`
+- `lv_cache_get_free_size` — param `cache`
+- `lv_cache_is_enabled` — param `cache`
+- `lv_cache_set_compare_cb` — param `cache`
+- `lv_cache_set_create_cb` — param `cache`
+- `lv_cache_set_free_cb` — param `cache`
+- `lv_cache_set_name` — param `cache`
+- `lv_cache_get_name` — param `cache`
+- `lv_cache_iter_create` — param `cache`
+- `lv_cache_entry_alloc` — param `cache`
+- `lv_cache_entry_init` — param `cache`
+- `lv_cache_entry_set_cache` — param `cache`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_cache_ops_t" file="misc/cache/lv_cache.h" line={43} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L43">
+
+### lv_cache_ops_t
+
+```c
+typedef struct _lv_cache_ops_t lv_cache_ops_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_cache_ops_t" count={1}>
+
+- `lv_cache_create` — param `ops`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_cache_class_t" file="misc/cache/lv_cache.h" line={44} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L44">
+
+### lv_cache_class_t
+
+```c
+typedef struct _lv_cache_class_t lv_cache_class_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_cache_class_t" count={1}>
+
+- `lv_cache_create` — param `cache_class`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_cache_compare_res_t" file="misc/cache/lv_cache.h" line={46} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L46">
+
+### lv_cache_compare_res_t
+
+```c
+typedef int32_t lv_cache_compare_res_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_create_cb_t" file="misc/cache/lv_cache.h" line={47} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L47">
+
+### lv_cache_create_cb_t
+
+```c
+typedef bool(* lv_cache_create_cb_t) (void *node, void *user_data)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_cache_create_cb_t" count={1}>
+
+- `lv_cache_set_create_cb` — param `alloc_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_cache_free_cb_t" file="misc/cache/lv_cache.h" line={48} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L48">
+
+### lv_cache_free_cb_t
+
+```c
+typedef void(* lv_cache_free_cb_t) (void *node, void *user_data)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_cache_free_cb_t" count={1}>
+
+- `lv_cache_set_free_cb` — param `free_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_cache_compare_cb_t" file="misc/cache/lv_cache.h" line={49} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L49">
+
+### lv_cache_compare_cb_t
+
+```c
+typedef lv_cache_compare_res_t(* lv_cache_compare_cb_t) (const void *a, const void *b)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_cache_compare_cb_t" count={1}>
+
+- `lv_cache_set_compare_cb` — param `compare_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_cache_alloc_cb_t" file="misc/cache/lv_cache.h" line={55} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L55">
+
+### lv_cache_alloc_cb_t
+
+```c
+typedef void *(* lv_cache_alloc_cb_t) (void)
+```
+
+The cache instance allocation function, used by the cache class to allocate memory for cache instances.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_init_cb_t" file="misc/cache/lv_cache.h" line={61} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L61">
+
+### lv_cache_init_cb_t
+
+```c
+typedef bool(* lv_cache_init_cb_t) (lv_cache_t *cache)
+```
+
+The cache instance initialization function, used by the cache class to initialize the cache instance.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_destroy_cb_t" file="misc/cache/lv_cache.h" line={66} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L66">
+
+### lv_cache_destroy_cb_t
+
+```c
+typedef void(* lv_cache_destroy_cb_t) (lv_cache_t *cache, void *user_data)
+```
+
+The cache instance destruction function, used by the cache class to destroy the cache instance.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_get_cb_t" file="misc/cache/lv_cache.h" line={72} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L72">
+
+### lv_cache_get_cb_t
+
+```c
+typedef lv_cache_entry_t *(* lv_cache_get_cb_t) (lv_cache_t *cache, const void *key, void *user_data)
+```
+
+The cache get function, used by the cache class to get a cache entry by its key.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_add_cb_t" file="misc/cache/lv_cache.h" line={79} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L79">
+
+### lv_cache_add_cb_t
+
+```c
+typedef lv_cache_entry_t *(* lv_cache_add_cb_t) (lv_cache_t *cache, const void *key, void *user_data)
+```
+
+The cache add function, used by the cache class to add a cache entry with a given key. This function only cares about how to add the entry, it doesn't check if the entry already exists and doesn't care about is it a victim or not.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_remove_cb_t" file="misc/cache/lv_cache.h" line={85} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L85">
+
+### lv_cache_remove_cb_t
+
+```c
+typedef void(* lv_cache_remove_cb_t) (lv_cache_t *cache, lv_cache_entry_t *entry, void *user_data)
+```
+
+The cache remove function, used by the cache class to remove a cache entry from the cache but doesn't free the memory.. This function only cares about how to remove the entry, it doesn't care about is it a victim or not.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_drop_cb_t" file="misc/cache/lv_cache.h" line={90} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L90">
+
+### lv_cache_drop_cb_t
+
+```c
+typedef void(* lv_cache_drop_cb_t) (lv_cache_t *cache, const void *key, void *user_data)
+```
+
+The cache drop function, used by the cache class to remove a cache entry from the cache and free the memory.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_drop_all_cb_t" file="misc/cache/lv_cache.h" line={95} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L95">
+
+### lv_cache_drop_all_cb_t
+
+```c
+typedef void(* lv_cache_drop_all_cb_t) (lv_cache_t *cache, void *user_data)
+```
+
+The cache drop all function, used by the cache class to remove all cache entries from the cache and free the memory.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_get_victim_cb" file="misc/cache/lv_cache.h" line={100} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L100">
+
+### lv_cache_get_victim_cb
+
+```c
+typedef lv_cache_entry_t *(* lv_cache_get_victim_cb) (lv_cache_t *cache, void *user_data)
+```
+
+The cache get victim function, used by the cache class to get a victim entry to be evicted.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_reserve_cond_cb" file="misc/cache/lv_cache.h" line={106} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L106">
+
+### lv_cache_reserve_cond_cb
+
+```c
+typedef lv_cache_reserve_cond_res_t(* lv_cache_reserve_cond_cb) (lv_cache_t *cache, const void *key, size_t size, void *user_data)
+```
+
+The cache reserve condition function, used by the cache class to check if a new entry can be added to the cache without exceeding its maximum size. See lv_cache_reserve_cond_res_t for the possible results.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_iter_create_cb" file="misc/cache/lv_cache.h" line={113} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L113">
+
+### lv_cache_iter_create_cb
+
+```c
+typedef lv_iter_t *(* lv_cache_iter_create_cb) (lv_cache_t *cache)
+```
+
+The cache iterator creation function, used by the cache class to create an iterator for the cache.
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_cache_slot_size_t" file="misc/cache/lv_cache.h" line={173} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/lv_cache.h#L173">
+
+### lv_cache_slot_size_t
+
+```c
+typedef struct _lv_cache_slot_size_t lv_cache_slot_size_t
+```
+
+
+</ApiMember>
+
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_types.h", "lv_cache_entry.h", "lv_cache_class.h", "lv_cache_instance.h"]}
-  includedBy={["lv_draw_private.h", "lv_image_decoder_private.h", "lv_freetype_private.h"]}
-  transitiveIncludes={["lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_private.h", "lv_cache_sc_da.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_image_cache.h", "lv_image_header_cache.h", "lv_os.h", "lv_os_private.h", "lv_pthread.h"]}
+  includes={["lv_public_api.h", "lv_iter_private.h", "lv_os_private.h", "lv_cache_class.h", "lv_image_cache.h"]}
+  includedBy={["lv_draw_private.h", "lv_image_decoder_private.h", "lv_freetype_private.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_image_cache.h", "lv_cache_entry.h", "lv_cache_entry_private.h"]}
+  transitiveIncludes={["lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_pthread.h", "lvgl.h"]}
 />

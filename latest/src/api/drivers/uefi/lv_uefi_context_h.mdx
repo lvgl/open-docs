@@ -1,76 +1,10 @@
 ---
 title: lv_uefi_context.h
 description: API reference for lv_uefi_context.h
-api:
-  functions: [lv_uefi_init, lv_uefi_platform_init, lv_uefi_platform_deinit]
 ---
-
-<ApiSummary functions={3} />
-
-## Functions
-
-<ApiMember kind="function" name="lv_uefi_init" file="drivers/uefi/lv_uefi_context.h" line={41} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/drivers/uefi/lv_uefi_context.h#L41">
-
-### lv_uefi_init
-
-Initialize the UEFI cache variables.
-
-```c
-void lv_uefi_init(EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *system_table)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `image_handle` | `EFI_HANDLE` | The handle of the current image |
-| `system_table` | `EFI_SYSTEM_TABLE *` | Pointer to the system table |
-
-<Callout type="info">
-**Remark:** This has to be called before <ApiLink name="lv_init" display="lv_init()" />.
-</Callout>
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_uefi_platform_init" file="drivers/uefi/lv_uefi_context.h" line={51} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/drivers/uefi/lv_uefi_context.h#L51">
-
-### lv_uefi_platform_init
-
-Initialize the LVGL UEFI backend.
-
-```c
-void lv_uefi_platform_init(void)
-```
-
-<Callout type="info">
-**Remark:** This is a private API which is used for LVGL UEFI backend implementation. LVGL users shouldn't use that because the LVGL has already used it in lv_init.
-</Callout>
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_uefi_platform_deinit" file="drivers/uefi/lv_uefi_context.h" line={59} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/drivers/uefi/lv_uefi_context.h#L59">
-
-### lv_uefi_platform_deinit
-
-Cleanup the LVGL UEFI backend.
-
-```c
-void lv_uefi_platform_deinit(void)
-```
-
-<Callout type="info">
-**Remark:** This is a private API which is used for LVGL UEFI backend implementation. LVGL users shouldn't use that because the LVGL has already used it in lv_deinit.
-</Callout>
-
-
-</ApiMember>
 
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_uefi.h"]}
-  includedBy={["lv_drivers.h"]}
-  transitiveIncludes={["lv_conf_kconfig.h"]}
+  includes={["lvgl.h"]}
 />

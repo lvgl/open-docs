@@ -12,7 +12,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_opengles_texture_reshape" file="drivers/opengles/lv_opengles_texture_private.h" line={43} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/drivers/opengles/lv_opengles_texture_private.h#L43">
+<ApiMember kind="function" name="lv_opengles_texture_reshape" file="drivers/opengles/lv_opengles_texture_private.h" line={41} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/drivers/opengles/lv_opengles_texture_private.h#L41">
 
 ### lv_opengles_texture_reshape
 
@@ -25,14 +25,14 @@ lv_result_t lv_opengles_texture_reshape(lv_opengles_texture_t *texture, lv_displ
 | Name | Type |
 |------|------|
 | `texture` | <ApiLink name="lv_opengles_texture_t" display="lv_opengles_texture_t *" /> |
-| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
-| `width` | <ApiLink name="int32_t" /> |
-| `height` | <ApiLink name="int32_t" /> |
+| `display` | `lv_display_t *` |
+| `width` | `int32_t` |
+| `height` | `int32_t` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_opengles_texture_deinit" file="drivers/opengles/lv_opengles_texture_private.h" line={45} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/drivers/opengles/lv_opengles_texture_private.h#L45">
+<ApiMember kind="function" name="lv_opengles_texture_deinit" file="drivers/opengles/lv_opengles_texture_private.h" line={43} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/drivers/opengles/lv_opengles_texture_private.h#L43">
 
 ### lv_opengles_texture_deinit
 
@@ -58,7 +58,7 @@ void lv_opengles_texture_deinit(lv_opengles_texture_t *texture)
 | Member | Type | Description |
 |--------|------|-------------|
 | `texture_id` | `unsigned int` |  |
-| `is_texture_owner` | <ApiLink name="bool" /> | LV_USE_DRAW_OPENGLES |
+| `is_texture_owner` | `bool` | LV_USE_DRAW_OPENGLES |
 
 
 </ApiMember>
@@ -73,7 +73,7 @@ void lv_opengles_texture_deinit(lv_opengles_texture_t *texture)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_opengles_texture.h"]}
+  includes={["lv_public_api.h"]}
   includedBy={["lv_linux_drm_egl_private.h", "lv_sdl_private.h"]}
-  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_event.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

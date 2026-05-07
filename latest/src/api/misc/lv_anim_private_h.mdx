@@ -12,7 +12,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_anim_core_init" file="misc/lv_anim_private.h" line={42} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_anim_private.h#L42">
+<ApiMember kind="function" name="lv_anim_core_init" file="misc/lv_anim_private.h" line={42} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_anim_private.h#L42">
 
 ### lv_anim_core_init
 
@@ -25,7 +25,7 @@ void lv_anim_core_init(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_anim_core_deinit" file="misc/lv_anim_private.h" line={47} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_anim_private.h#L47">
+<ApiMember kind="function" name="lv_anim_core_deinit" file="misc/lv_anim_private.h" line={47} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_anim_private.h#L47">
 
 ### lv_anim_core_deinit
 
@@ -38,7 +38,7 @@ void lv_anim_core_deinit(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_anim_enable_vsync_mode" file="misc/lv_anim_private.h" line={53} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_anim_private.h#L53">
+<ApiMember kind="function" name="lv_anim_enable_vsync_mode" file="misc/lv_anim_private.h" line={53} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_anim_private.h#L53">
 
 ### lv_anim_enable_vsync_mode
 
@@ -50,7 +50,7 @@ void lv_anim_enable_vsync_mode(bool enable)
 
 | Name | Type |
 |------|------|
-| `enable` | <ApiLink name="bool" /> |
+| `enable` | `bool` |
 
 
 </ApiMember>
@@ -63,11 +63,11 @@ void lv_anim_enable_vsync_mode(bool enable)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `anim_list_changed` | <ApiLink name="bool" /> |  |
-| `anim_run_round` | <ApiLink name="bool" /> |  |
-| `anim_vsync_registered` | <ApiLink name="bool" /> |  |
-| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> |  |
-| `anim_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `anim_list_changed` | `bool` |  |
+| `anim_run_round` | `bool` |  |
+| `anim_vsync_registered` | `bool` |  |
+| `timer` | `lv_timer_t *` |  |
+| `anim_ll` | `lv_ll_t` |  |
 
 
 </ApiMember>
@@ -75,7 +75,7 @@ void lv_anim_enable_vsync_mode(bool enable)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_anim.h"]}
+  includes={["lv_public_api.h"]}
   includedBy={["lv_global.h", "lv_animimage_private.h"]}
-  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h", "lv_ext_data.h", "lv_ll.h", "lv_math.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

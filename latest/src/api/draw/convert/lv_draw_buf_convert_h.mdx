@@ -9,7 +9,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_buf_convert_premultiply" file="draw/convert/lv_draw_buf_convert.h" line={32} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/convert/lv_draw_buf_convert.h#L32">
+<ApiMember kind="function" name="lv_draw_buf_convert_premultiply" file="draw/convert/lv_draw_buf_convert.h" line={31} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/convert/lv_draw_buf_convert.h#L31">
 
 ### lv_draw_buf_convert_premultiply
 
@@ -23,7 +23,7 @@ lv_result_t lv_draw_buf_convert_premultiply(lv_draw_buf_t *buf)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to a draw buf |
+| `buf` | `lv_draw_buf_t *` | pointer to a draw buf |
 
 
 </ApiMember>
@@ -31,6 +31,6 @@ lv_result_t lv_draw_buf_convert_premultiply(lv_draw_buf_t *buf)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_color.h", "lv_draw_buf.h"]}
-  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_image_dsc.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_types.h"]}
+  includes={["lv_public_api.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

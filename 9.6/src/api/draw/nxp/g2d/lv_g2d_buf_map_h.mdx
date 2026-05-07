@@ -11,7 +11,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="g2d_create_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={60} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nxp/g2d/lv_g2d_buf_map.h#L60">
+<ApiMember kind="function" name="g2d_create_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={59} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nxp/g2d/lv_g2d_buf_map.h#L59">
 
 ### g2d_create_buf_map
 
@@ -22,7 +22,7 @@ void g2d_create_buf_map(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="g2d_free_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={62} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nxp/g2d/lv_g2d_buf_map.h#L62">
+<ApiMember kind="function" name="g2d_free_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={61} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nxp/g2d/lv_g2d_buf_map.h#L61">
 
 ### g2d_free_buf_map
 
@@ -33,7 +33,7 @@ void g2d_free_buf_map(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="g2d_insert_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={64} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nxp/g2d/lv_g2d_buf_map.h#L64">
+<ApiMember kind="function" name="g2d_insert_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={63} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nxp/g2d/lv_g2d_buf_map.h#L63">
 
 ### g2d_insert_buf_map
 
@@ -51,7 +51,7 @@ void g2d_insert_buf_map(void *key, struct g2d_buf *value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="g2d_search_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={66} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nxp/g2d/lv_g2d_buf_map.h#L66">
+<ApiMember kind="function" name="g2d_search_buf_map" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={65} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nxp/g2d/lv_g2d_buf_map.h#L65">
 
 ### g2d_search_buf_map
 
@@ -68,7 +68,7 @@ struct g2d_buf * g2d_search_buf_map(void *key)
 
 </ApiMember>
 
-<ApiMember kind="function" name="g2d_free_item" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={68} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nxp/g2d/lv_g2d_buf_map.h#L68">
+<ApiMember kind="function" name="g2d_free_item" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={67} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nxp/g2d/lv_g2d_buf_map.h#L67">
 
 ### g2d_free_item
 
@@ -85,7 +85,7 @@ void g2d_free_item(void *key)
 
 </ApiMember>
 
-<ApiMember kind="function" name="g2d_print_table" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={70} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nxp/g2d/lv_g2d_buf_map.h#L70">
+<ApiMember kind="function" name="g2d_print_table" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={69} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nxp/g2d/lv_g2d_buf_map.h#L69">
 
 ### g2d_print_table
 
@@ -121,7 +121,7 @@ SPDX-License-Identifier: MIT
 | Member | Type | Description |
 |--------|------|-------------|
 | `items` | <ApiLink name="lv_map_item_t" display="lv_map_item_t **" /> |  |
-| `overflow_list` | <ApiLink name="lv_array_t" display="lv_array_t **" /> |  |
+| `overflow_list` | `lv_array_t **` |  |
 | `size` | `int` |  |
 | `count` | `int` |  |
 
@@ -130,7 +130,7 @@ SPDX-License-Identifier: MIT
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_map_item_t" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={45} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nxp/g2d/lv_g2d_buf_map.h#L45">
+<ApiMember kind="typedef" name="lv_map_item_t" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={44} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nxp/g2d/lv_g2d_buf_map.h#L44">
 
 ### lv_map_item_t
 
@@ -145,7 +145,7 @@ SPDX-License-Identifier: MIT
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_buf_map_t" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={54} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nxp/g2d/lv_g2d_buf_map.h#L54">
+<ApiMember kind="typedef" name="lv_buf_map_t" file="draw/nxp/g2d/lv_g2d_buf_map.h" line={53} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nxp/g2d/lv_g2d_buf_map.h#L53">
 
 ### lv_buf_map_t
 
@@ -159,6 +159,6 @@ typedef struct lv_buf_map lv_buf_map_t
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_array.h", "string.h"]}
-  transitiveIncludes={["lv_conf_kconfig.h", "lv_types.h"]}
+  includes={["lv_public_api.h", "string.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

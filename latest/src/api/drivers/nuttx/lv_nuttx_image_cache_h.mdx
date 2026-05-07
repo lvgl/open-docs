@@ -9,7 +9,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_nuttx_image_cache_init" file="drivers/nuttx/lv_nuttx_image_cache.h" line={32} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/drivers/nuttx/lv_nuttx_image_cache.h#L32">
+<ApiMember kind="function" name="lv_nuttx_image_cache_init" file="drivers/nuttx/lv_nuttx_image_cache.h" line={32} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/drivers/nuttx/lv_nuttx_image_cache.h#L32">
 
 ### lv_nuttx_image_cache_init
 
@@ -21,12 +21,12 @@ void lv_nuttx_image_cache_init(bool use_independent_image_heap)
 
 | Name | Type |
 |------|------|
-| `use_independent_image_heap` | <ApiLink name="bool" /> |
+| `use_independent_image_heap` | `bool` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_nuttx_image_cache_deinit" file="drivers/nuttx/lv_nuttx_image_cache.h" line={34} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/drivers/nuttx/lv_nuttx_image_cache.h#L34">
+<ApiMember kind="function" name="lv_nuttx_image_cache_deinit" file="drivers/nuttx/lv_nuttx_image_cache.h" line={34} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/drivers/nuttx/lv_nuttx_image_cache.h#L34">
 
 ### lv_nuttx_image_cache_deinit
 
@@ -40,6 +40,6 @@ void lv_nuttx_image_cache_deinit(void)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "stdbool.h"]}
-  transitiveIncludes={["lv_conf_kconfig.h"]}
+  includes={["lv_public_api.h", "stdbool.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

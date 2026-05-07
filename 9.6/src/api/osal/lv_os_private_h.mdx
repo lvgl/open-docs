@@ -15,7 +15,7 @@ api:
 <ApiTabs items={["Getters (1)","Other (13)"]}>
 <ApiTab value="Getters (1)">
 
-<ApiMember kind="function" name="lv_os_get_idle_percent" file="osal/lv_os_private.h" line={77} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L77">
+<ApiMember kind="function" name="lv_os_get_idle_percent" file="osal/lv_os_private.h" line={74} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L74">
 
 ### lv_os_get_idle_percent
 
@@ -25,7 +25,7 @@ Set it for `LV_SYSMON_GET_IDLE` to show the CPU usage
 uint32_t lv_os_get_idle_percent(void)
 ```
 
-**Returns:** <ApiLink name="uint32_t" /> — the idle percentage since the last call
+**Returns:** `uint32_t` — the idle percentage since the last call
 
 
 </ApiMember>
@@ -33,7 +33,7 @@ uint32_t lv_os_get_idle_percent(void)
 </ApiTab>
 <ApiTab value="Other (13)">
 
-<ApiMember kind="function" name="lv_os_init" file="osal/lv_os_private.h" line={71} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L71">
+<ApiMember kind="function" name="lv_os_init" file="osal/lv_os_private.h" line={68} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L68">
 
 ### lv_os_init
 
@@ -46,7 +46,7 @@ void lv_os_init(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_thread_init" file="osal/lv_os_private.h" line={102} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L102">
+<ApiMember kind="function" name="lv_thread_init" file="osal/lv_os_private.h" line={99} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L99">
 
 ### lv_thread_init
 
@@ -64,15 +64,15 @@ lv_result_t lv_thread_init(lv_thread_t *thread, const char *const name, lv_threa
 | `name` | `const char *const` | the name of the thread |
 | `prio` | <ApiLink name="lv_thread_prio_t" /> | priority of the thread |
 | `callback` | `void(*)(void *)` | function of the thread |
-| `stack_size` | <ApiLink name="size_t" /> | stack size in bytes |
+| `stack_size` | `size_t` | stack size in bytes |
 | `user_data` | `void *` | arbitrary data, will be available in the callback |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_thread_delete" file="osal/lv_os_private.h" line={111} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L111">
+<ApiMember kind="function" name="lv_thread_delete" file="osal/lv_os_private.h" line={108} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L108">
 
 ### lv_thread_delete
 
@@ -88,12 +88,12 @@ lv_result_t lv_thread_delete(lv_thread_t *thread)
 |------|------|-------------|
 | `thread` | `lv_thread_t *` | the thread to delete |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_mutex_init" file="osal/lv_os_private.h" line={118} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L118">
+<ApiMember kind="function" name="lv_mutex_init" file="osal/lv_os_private.h" line={115} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L115">
 
 ### lv_mutex_init
 
@@ -109,12 +109,12 @@ lv_result_t lv_mutex_init(lv_mutex_t *mutex)
 |------|------|-------------|
 | `mutex` | `lv_mutex_t *` | a variable in which the thread will be stored |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_mutex_lock" file="osal/lv_os_private.h" line={125} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L125">
+<ApiMember kind="function" name="lv_mutex_lock" file="osal/lv_os_private.h" line={122} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L122">
 
 ### lv_mutex_lock
 
@@ -130,12 +130,12 @@ lv_result_t lv_mutex_lock(lv_mutex_t *mutex)
 |------|------|-------------|
 | `mutex` | `lv_mutex_t *` | the mutex to lock |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_mutex_lock_isr" file="osal/lv_os_private.h" line={132} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L132">
+<ApiMember kind="function" name="lv_mutex_lock_isr" file="osal/lv_os_private.h" line={129} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L129">
 
 ### lv_mutex_lock_isr
 
@@ -151,12 +151,12 @@ lv_result_t lv_mutex_lock_isr(lv_mutex_t *mutex)
 |------|------|-------------|
 | `mutex` | `lv_mutex_t *` | the mutex to lock |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_mutex_unlock" file="osal/lv_os_private.h" line={139} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L139">
+<ApiMember kind="function" name="lv_mutex_unlock" file="osal/lv_os_private.h" line={136} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L136">
 
 ### lv_mutex_unlock
 
@@ -172,12 +172,12 @@ lv_result_t lv_mutex_unlock(lv_mutex_t *mutex)
 |------|------|-------------|
 | `mutex` | `lv_mutex_t *` | the mutex to unlock |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_mutex_delete" file="osal/lv_os_private.h" line={146} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L146">
+<ApiMember kind="function" name="lv_mutex_delete" file="osal/lv_os_private.h" line={143} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L143">
 
 ### lv_mutex_delete
 
@@ -193,12 +193,12 @@ lv_result_t lv_mutex_delete(lv_mutex_t *mutex)
 |------|------|-------------|
 | `mutex` | `lv_mutex_t *` | the mutex to delete |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_thread_sync_init" file="osal/lv_os_private.h" line={153} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L153">
+<ApiMember kind="function" name="lv_thread_sync_init" file="osal/lv_os_private.h" line={150} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L150">
 
 ### lv_thread_sync_init
 
@@ -214,12 +214,12 @@ lv_result_t lv_thread_sync_init(lv_thread_sync_t *sync)
 |------|------|-------------|
 | `sync` | `lv_thread_sync_t *` | a variable in which the sync will be stored |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_thread_sync_wait" file="osal/lv_os_private.h" line={160} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L160">
+<ApiMember kind="function" name="lv_thread_sync_wait" file="osal/lv_os_private.h" line={157} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L157">
 
 ### lv_thread_sync_wait
 
@@ -235,12 +235,12 @@ lv_result_t lv_thread_sync_wait(lv_thread_sync_t *sync)
 |------|------|-------------|
 | `sync` | `lv_thread_sync_t *` | a sync object |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_thread_sync_signal" file="osal/lv_os_private.h" line={167} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L167">
+<ApiMember kind="function" name="lv_thread_sync_signal" file="osal/lv_os_private.h" line={164} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L164">
 
 ### lv_thread_sync_signal
 
@@ -256,12 +256,12 @@ lv_result_t lv_thread_sync_signal(lv_thread_sync_t *sync)
 |------|------|-------------|
 | `sync` | `lv_thread_sync_t *` | a sync object |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_thread_sync_signal_isr" file="osal/lv_os_private.h" line={174} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L174">
+<ApiMember kind="function" name="lv_thread_sync_signal_isr" file="osal/lv_os_private.h" line={171} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L171">
 
 ### lv_thread_sync_signal_isr
 
@@ -277,12 +277,12 @@ lv_result_t lv_thread_sync_signal_isr(lv_thread_sync_t *sync)
 |------|------|-------------|
 | `sync` | `lv_thread_sync_t *` | a sync object |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_thread_sync_delete" file="osal/lv_os_private.h" line={181} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L181">
+<ApiMember kind="function" name="lv_thread_sync_delete" file="osal/lv_os_private.h" line={178} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L178">
 
 ### lv_thread_sync_delete
 
@@ -298,7 +298,7 @@ lv_result_t lv_thread_sync_delete(lv_thread_sync_t *sync)
 |------|------|-------------|
 | `sync` | `lv_thread_sync_t *` | a sync object to delete |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
 
 
 </ApiMember>
@@ -307,7 +307,7 @@ lv_result_t lv_thread_sync_delete(lv_thread_sync_t *sync)
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_thread_prio_t" file="osal/lv_os_private.h" line={56} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/osal/lv_os_private.h#L56">
+<ApiMember kind="enum" name="lv_thread_prio_t" file="osal/lv_os_private.h" line={53} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/osal/lv_os_private.h#L53">
 
 ### lv_thread_prio_t
 
@@ -331,7 +331,7 @@ lv_result_t lv_thread_sync_delete(lv_thread_sync_t *sync)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_os.h", "lv_types.h", "lv_pthread.h"]}
-  includedBy={["lv_global.h", "lv_draw_private.h", "lv_draw_sdl.h", "lv_cache_private.h", "lv_freertos.h", "lv_mqx.h"]}
-  transitiveIncludes={["lv_conf_kconfig.h"]}
+  includes={["lv_public_api.h", "lv_pthread.h"]}
+  includedBy={["lv_global.h", "lv_draw_private.h", "lv_draw_sdl.h", "lv_cache.h", "lv_freertos.h", "lv_linux.h", "lv_mqx.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

@@ -17,7 +17,6 @@
     "themes",
     "tick",
     "widgets",
-    "deprecated",
     "fastgltf",
     "lv_api_map_v8_h",
     "lv_api_map_v9_0_h",
@@ -29,6 +28,7 @@
     "lv_conf_internal_h",
     "lv_conf_kconfig_h",
     "lv_init_h",
+    "lv_public_api_h",
     "lvgl_h",
     "lvgl_private_h",
     "todo"

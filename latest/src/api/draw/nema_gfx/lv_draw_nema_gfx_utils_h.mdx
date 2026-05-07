@@ -26,7 +26,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <ApiTabs items={["Setters (1)","Other (3)"]}>
 <ApiTab value="Setters (1)">
 
-<ApiMember kind="function" name="lv_nemagfx_grad_set" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={175} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L175">
+<ApiMember kind="function" name="lv_nemagfx_grad_set" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={175} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L175">
 
 ### lv_nemagfx_grad_set
 
@@ -41,8 +41,8 @@ void lv_nemagfx_grad_set(void *gradient, lv_grad_dsc_t lv_grad, lv_opa_t opa)
 | Name | Type | Description |
 |------|------|-------------|
 | **[in]** `gradient` | `void *` | NemaGFX Gradient Buffer |
-| **[in]** `lv_grad` | <ApiLink name="lv_grad_dsc_t" /> | Gradient descriptor |
-| **[in]** `opa` | <ApiLink name="lv_opa_t" /> | Descriptor's opacity |
+| **[in]** `lv_grad` | `lv_grad_dsc_t` | Gradient descriptor |
+| **[in]** `opa` | `lv_opa_t` | Descriptor's opacity |
 
 
 </ApiMember>
@@ -50,7 +50,7 @@ void lv_nemagfx_grad_set(void *gradient, lv_grad_dsc_t lv_grad, lv_opa_t opa)
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_nemagfx_is_cf_supported" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={145} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L145">
+<ApiMember kind="function" name="lv_nemagfx_is_cf_supported" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={145} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L145">
 
 ### lv_nemagfx_is_cf_supported
 
@@ -64,14 +64,14 @@ bool lv_nemagfx_is_cf_supported(lv_color_format_t cf)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `cf` | <ApiLink name="lv_color_format_t" /> | The LVGL color format |
+| `cf` | `lv_color_format_t` | The LVGL color format |
 
-**Returns:** <ApiLink name="bool" /> — True/false
+**Returns:** `bool` — True/false
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_nemagfx_cf_to_nema" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={152} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L152">
+<ApiMember kind="function" name="lv_nemagfx_cf_to_nema" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={152} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L152">
 
 ### lv_nemagfx_cf_to_nema
 
@@ -85,14 +85,14 @@ uint32_t lv_nemagfx_cf_to_nema(lv_color_format_t cf)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `cf` | <ApiLink name="lv_color_format_t" /> | The LVGL color format |
+| `cf` | `lv_color_format_t` | The LVGL color format |
 
-**Returns:** <ApiLink name="uint32_t" /> — The Nema color format
+**Returns:** `uint32_t` — The Nema color format
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_nemagfx_blending_mode" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={162} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L162">
+<ApiMember kind="function" name="lv_nemagfx_blending_mode" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={162} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L162">
 
 ### lv_nemagfx_blending_mode
 
@@ -106,9 +106,9 @@ uint32_t lv_nemagfx_blending_mode(lv_blend_mode_t lv_blend_mode)
 
 | Name | Type | Description |
 |------|------|-------------|
-| **[in]** `lv_blend_mode` | <ApiLink name="lv_blend_mode_t" /> | The LVGL blend mode |
+| **[in]** `lv_blend_mode` | `lv_blend_mode_t` | The LVGL blend mode |
 
-**Returns:** <ApiLink name="uint32_t" /> — NemaGFX blending mode
+**Returns:** `uint32_t` — NemaGFX blending mode
 
 
 </ApiMember>
@@ -117,7 +117,7 @@ uint32_t lv_nemagfx_blending_mode(lv_blend_mode_t lv_blend_mode)
 </ApiTabs>
 ## Macros
 
-<ApiMember kind="macro" name="NEMA_VIRT2PHYS" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={113} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L113">
+<ApiMember kind="macro" name="NEMA_VIRT2PHYS" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={113} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L113">
 
 ### NEMA_VIRT2PHYS
 
@@ -128,7 +128,7 @@ uint32_t lv_nemagfx_blending_mode(lv_blend_mode_t lv_blend_mode)
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_NEMA_GFX_COLOR_FORMAT" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={123} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L123">
+<ApiMember kind="macro" name="LV_NEMA_GFX_COLOR_FORMAT" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={123} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L123">
 
 ### LV_NEMA_GFX_COLOR_FORMAT
 
@@ -139,7 +139,7 @@ uint32_t lv_nemagfx_blending_mode(lv_blend_mode_t lv_blend_mode)
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_NEMA_GFX_FORMAT_MULTIPLIER" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={124} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L124">
+<ApiMember kind="macro" name="LV_NEMA_GFX_FORMAT_MULTIPLIER" file="draw/nema_gfx/lv_draw_nema_gfx_utils.h" line={124} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h#L124">
 
 ### LV_NEMA_GFX_FORMAT_MULTIPLIER
 
@@ -153,7 +153,7 @@ uint32_t lv_nemagfx_blending_mode(lv_blend_mode_t lv_blend_mode)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_draw_sw.h", "build_version.h", "nema_blender.h", "nema_cmdlist.h", "nema_core.h", "nema_easing.h", "nema_error.h", "nema_font.h", "nema_graphics.h", "nema_hal.h", "nema_interpolators.h", "nema_math.h", "nema_matrix3x3.h", "nema_matrix4x4.h", "nema_provisional.h", "nema_raster.h", "nema_sys_defs.h", "nema_transitions.h", "nema_utils.h", "nema_version.h", "nema_vg_context.h", "nema_vg_font.h", "nema_vg.h", "nema_vg_paint.h", "nema_vg_path.h", "nema_vg_tsvg.h", "nema_vg_version.h", "tsi_malloc.h"]}
+  includes={["lv_public_api.h", "lv_draw_sw.h", "build_version.h", "nema_blender.h", "nema_cmdlist.h", "nema_core.h", "nema_easing.h", "nema_error.h", "nema_font.h", "nema_graphics.h", "nema_hal.h", "nema_interpolators.h", "nema_math.h", "nema_matrix3x3.h", "nema_matrix4x4.h", "nema_provisional.h", "nema_raster.h", "nema_sys_defs.h", "nema_transitions.h", "nema_utils.h", "nema_version.h", "nema_vg_context.h", "nema_vg_font.h", "nema_vg.h", "nema_vg_paint.h", "nema_vg_path.h", "nema_vg_tsvg.h", "nema_vg_version.h", "tsi_malloc.h"]}
   includedBy={["lv_draw_nema_gfx.h"]}
-  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_mask.h", "lv_draw_rect.h", "lv_draw_sw_blend.h", "lv_draw_sw_mask.h", "lv_draw_sw_utils.h", "lv_draw_triangle.h", "lv_draw_vector.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_draw_private.h", "lv_draw_sw_blend.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h", "lv_pthread.h", "lvgl.h"]}
 />

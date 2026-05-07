@@ -1,6 +1,7 @@
 {
   "title": "Rle",
   "pages": [
-    "lv_rle_h"
+    "lv_rle_h",
+    "lv_rle_private_h"
   ]
 }

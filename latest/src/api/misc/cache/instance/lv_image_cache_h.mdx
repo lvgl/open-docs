@@ -9,7 +9,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_image_cache_init" file="misc/cache/instance/lv_image_cache.h" line={36} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_cache.h#L36">
+<ApiMember kind="function" name="lv_image_cache_init" file="misc/cache/instance/lv_image_cache.h" line={38} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_cache.h#L38">
 
 ### lv_image_cache_init
 
@@ -23,14 +23,14 @@ lv_result_t lv_image_cache_init(uint32_t size)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `size` | <ApiLink name="uint32_t" /> | size of the cache in bytes. |
+| `size` | `uint32_t` | size of the cache in bytes. |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: initialization succeeded, LV_RESULT_INVALID: failed.
+**Returns:** `lv_result_t` — LV_RESULT_OK: initialization succeeded, LV_RESULT_INVALID: failed.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_cache_resize" file="misc/cache/instance/lv_image_cache.h" line={44} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_cache.h#L44">
+<ApiMember kind="function" name="lv_image_cache_resize" file="misc/cache/instance/lv_image_cache.h" line={46} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_cache.h#L46">
 
 ### lv_image_cache_resize
 
@@ -44,13 +44,13 @@ void lv_image_cache_resize(uint32_t new_size, bool evict_now)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `new_size` | <ApiLink name="uint32_t" /> | new size of the cache in bytes. |
-| `evict_now` | <ApiLink name="bool" /> | true: evict the images should be removed by the eviction policy, false: wait for the next cache cleanup. |
+| `new_size` | `uint32_t` | new size of the cache in bytes. |
+| `evict_now` | `bool` | true: evict the images should be removed by the eviction policy, false: wait for the next cache cleanup. |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_cache_drop" file="misc/cache/instance/lv_image_cache.h" line={50} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_cache.h#L50">
+<ApiMember kind="function" name="lv_image_cache_drop" file="misc/cache/instance/lv_image_cache.h" line={52} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_cache.h#L52">
 
 ### lv_image_cache_drop
 
@@ -69,7 +69,7 @@ void lv_image_cache_drop(const void *src)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_cache_is_enabled" file="misc/cache/instance/lv_image_cache.h" line={56} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_cache.h#L56">
+<ApiMember kind="function" name="lv_image_cache_is_enabled" file="misc/cache/instance/lv_image_cache.h" line={58} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_cache.h#L58">
 
 ### lv_image_cache_is_enabled
 
@@ -79,12 +79,12 @@ Return true if the image cache is enabled.
 bool lv_image_cache_is_enabled(void)
 ```
 
-**Returns:** <ApiLink name="bool" /> — true: enabled, false: disabled.
+**Returns:** `bool` — true: enabled, false: disabled.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_cache_iter_create" file="misc/cache/instance/lv_image_cache.h" line={62} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_cache.h#L62">
+<ApiMember kind="function" name="lv_image_cache_iter_create" file="misc/cache/instance/lv_image_cache.h" line={64} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_cache.h#L64">
 
 ### lv_image_cache_iter_create
 
@@ -99,7 +99,7 @@ lv_iter_t * lv_image_cache_iter_create(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_cache_dump" file="misc/cache/instance/lv_image_cache.h" line={67} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/cache/instance/lv_image_cache.h#L67">
+<ApiMember kind="function" name="lv_image_cache_dump" file="misc/cache/instance/lv_image_cache.h" line={69} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/cache/instance/lv_image_cache.h#L69">
 
 ### lv_image_cache_dump
 
@@ -115,7 +115,7 @@ void lv_image_cache_dump(void)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_types.h"]}
-  includedBy={["lv_cache_instance.h"]}
-  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h"]}
+  includes={["lv_public_api.h", "lv_iter_private.h", "lv_cache.h"]}
+  includedBy={["lv_cache_instance.h", "lv_cache.h"]}
+  transitiveIncludes={["lv_cache_class.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_os_private.h", "lv_pthread.h", "lvgl.h"]}
 />

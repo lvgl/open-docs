@@ -17,10 +17,10 @@ api:
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `sys_time` | <ApiLink name="uint32_t" display="volatile uint32_t" /> |  |
-| `sys_irq_flag` | <ApiLink name="uint8_t" display="volatile uint8_t" /> |  |
-| `tick_get_cb` | <ApiLink name="lv_tick_get_cb_t" /> |  |
-| `delay_cb` | <ApiLink name="lv_delay_cb_t" /> |  |
+| `sys_time` | `volatile uint32_t` |  |
+| `sys_irq_flag` | `volatile uint8_t` |  |
+| `tick_get_cb` | `lv_tick_get_cb_t` |  |
+| `delay_cb` | `lv_delay_cb_t` |  |
 
 
 </ApiMember>
@@ -28,7 +28,7 @@ api:
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_tick.h"]}
+  includes={["lv_public_api.h"]}
   includedBy={["lv_global.h"]}
-  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h", "lv_types.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

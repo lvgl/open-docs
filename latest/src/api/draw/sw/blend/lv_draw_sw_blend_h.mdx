@@ -13,7 +13,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_sw_blend" file="draw/sw/blend/lv_draw_sw_blend.h" line={52} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/sw/blend/lv_draw_sw_blend.h#L52">
+<ApiMember kind="function" name="lv_draw_sw_blend" file="draw/sw/blend/lv_draw_sw_blend.h" line={50} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/sw/blend/lv_draw_sw_blend.h#L50">
 
 ### lv_draw_sw_blend
 
@@ -27,8 +27,8 @@ void lv_draw_sw_blend(lv_draw_task_t *t, const lv_draw_sw_blend_dsc_t *dsc)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |  |
-| `dsc` | <ApiLink name="lv_draw_sw_blend_dsc_t" display="const lv_draw_sw_blend_dsc_t *" /> | pointer to an initialized blend descriptor |
+| `t` | `lv_draw_task_t *` |  |
+| `dsc` | `const lv_draw_sw_blend_dsc_t *` | pointer to an initialized blend descriptor |
 
 
 </ApiMember>
@@ -41,7 +41,7 @@ void lv_draw_sw_blend(lv_draw_task_t *t, const lv_draw_sw_blend_dsc_t *dsc)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `dest_cf` | <ApiLink name="lv_color_format_t" /> |  |
+| `dest_cf` | `lv_color_format_t` |  |
 | `handler` | <ApiLink name="lv_draw_sw_blend_handler_t" /> |  |
 
 
@@ -55,7 +55,7 @@ void lv_draw_sw_blend(lv_draw_task_t *t, const lv_draw_sw_blend_dsc_t *dsc)
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_draw_sw_blend_handler_t" file="draw/sw/blend/lv_draw_sw_blend.h" line={40} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/sw/blend/lv_draw_sw_blend.h#L40">
+<ApiMember kind="typedef" name="lv_draw_sw_blend_handler_t" file="draw/sw/blend/lv_draw_sw_blend.h" line={38} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/sw/blend/lv_draw_sw_blend.h#L38">
 
 ### lv_draw_sw_blend_handler_t
 
@@ -71,7 +71,7 @@ Custom draw function for SW rendering.
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_draw_sw_mask.h", "lv_color.h", "lv_area.h", "lv_style.h"]}
+  includes={["lv_public_api.h"]}
   includedBy={["lv_draw_sw_blend_private.h", "lv_blend_riscv_v.h", "lv_draw_sw.h"]}
-  transitiveIncludes={["lv_anim.h", "lv_assert.h", "lv_bidi.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_grad.h", "lv_grid.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_sprintf.h", "lv_string.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

@@ -1,79 +1,10 @@
 ---
 title: lv_imgfont.h
 description: API reference for lv_imgfont.h
-api:
-  functions: [lv_imgfont_create, lv_imgfont_destroy]
-  typedefs: [lv_imgfont_get_path_cb_t]
 ---
-
-<ApiSummary functions={2} typedefs={1} />
-
-## Functions
-
-<ApiMember kind="function" name="lv_imgfont_create" file="font/imgfont/lv_imgfont.h" line={45} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/font/imgfont/lv_imgfont.h#L45">
-
-### lv_imgfont_create
-
-Creates a image font with info parameter specified.
-
-```c
-lv_font_t * lv_imgfont_create(uint16_t height, lv_imgfont_get_path_cb_t path_cb, void *user_data)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `height` | <ApiLink name="uint16_t" /> | font size |
-| `path_cb` | <ApiLink name="lv_imgfont_get_path_cb_t" /> | a function to get the image path name of character. |
-| `user_data` | `void *` | pointer to user data |
-
-**Returns:** <ApiLink name="lv_font_t" display="lv_font_t *" /> — pointer to the new imgfont or NULL if create error.
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_imgfont_destroy" file="font/imgfont/lv_imgfont.h" line={51} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/font/imgfont/lv_imgfont.h#L51">
-
-### lv_imgfont_destroy
-
-Destroy a image font that has been created.
-
-```c
-void lv_imgfont_destroy(lv_font_t *font)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `font` | <ApiLink name="lv_font_t" display="lv_font_t *" /> | pointer to image font handle. |
-
-
-</ApiMember>
-
-## Typedefs
-
-<ApiMember kind="typedef" name="lv_imgfont_get_path_cb_t" file="font/imgfont/lv_imgfont.h" line={30} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/font/imgfont/lv_imgfont.h#L30">
-
-### lv_imgfont_get_path_cb_t
-
-```c
-typedef const void *(* lv_imgfont_get_path_cb_t) (const lv_font_t *font, uint32_t unicode, uint32_t unicode_next, int32_t *offset_y, void *user_data)
-```
-
-
-</ApiMember>
-
-<TypeUsedBy name="lv_imgfont_get_path_cb_t" count={1}>
-
-- `lv_imgfont_create` — param `path_cb`
-
-</TypeUsedBy>
 
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_font.h"]}
-  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_image_dsc.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_symbol_def.h", "lv_types.h"]}
+  includes={["lvgl.h"]}
 />

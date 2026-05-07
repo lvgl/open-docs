@@ -1,80 +1,10 @@
 ---
 title: lv_async.h
 description: API reference for lv_async.h
-api:
-  functions: [lv_async_call, lv_async_call_cancel]
-  typedefs: [lv_async_cb_t]
 ---
-
-<ApiSummary functions={2} typedefs={1} />
-
-## Functions
-
-<ApiMember kind="function" name="lv_async_call" file="misc/lv_async.h" line={44} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_async.h#L44">
-
-### lv_async_call
-
-Call an asynchronous function the next time <ApiLink name="lv_timer_handler" display="lv_timer_handler()" /> is run. This function is likely to return **before** the call actually happens!
-
-```c
-lv_result_t lv_async_call(lv_async_cb_t async_xcb, void *user_data)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `async_xcb` | <ApiLink name="lv_async_cb_t" /> | a callback which is the task itself. (the 'x' in the argument name indicates that it's not a fully generic function because it not follows the `func_name(object, callback, ...)` convention) |
-| `user_data` | `void *` | custom parameter |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_async_call_cancel" file="misc/lv_async.h" line={51} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_async.h#L51">
-
-### lv_async_call_cancel
-
-Cancel an asynchronous function call
-
-```c
-lv_result_t lv_async_call_cancel(lv_async_cb_t async_xcb, void *user_data)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `async_xcb` | <ApiLink name="lv_async_cb_t" /> | a callback which is the task itself. |
-| `user_data` | `void *` | custom parameter |
-
-
-</ApiMember>
-
-## Typedefs
-
-<ApiMember kind="typedef" name="lv_async_cb_t" file="misc/lv_async.h" line={30} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_async.h#L30">
-
-### lv_async_cb_t
-
-```c
-typedef void(* lv_async_cb_t) (void *)
-```
-
-Type for async callback.
-
-
-</ApiMember>
-
-<TypeUsedBy name="lv_async_cb_t" count={2}>
-
-- `lv_async_call` — param `async_xcb`
-- `lv_async_call_cancel` — param `async_xcb`
-
-</TypeUsedBy>
 
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_types.h"]}
-  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h"]}
+  includes={["lvgl.h"]}
 />

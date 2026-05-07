@@ -12,7 +12,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_buf_init_handlers" file="draw/lv_draw_buf_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/lv_draw_buf_private.h#L44">
+<ApiMember kind="function" name="lv_draw_buf_init_handlers" file="draw/lv_draw_buf_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/lv_draw_buf_private.h#L44">
 
 ### lv_draw_buf_init_handlers
 
@@ -33,13 +33,13 @@ void lv_draw_buf_init_handlers(void)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `buf_malloc_cb` | <ApiLink name="lv_draw_buf_malloc_cb_t" /> |  |
-| `buf_free_cb` | <ApiLink name="lv_draw_buf_free_cb_t" /> |  |
-| `buf_copy_cb` | <ApiLink name="lv_draw_buf_copy_cb_t" /> |  |
-| `align_pointer_cb` | <ApiLink name="lv_draw_buf_align_cb_t" /> |  |
-| `invalidate_cache_cb` | <ApiLink name="lv_draw_buf_cache_operation_cb_t" /> |  |
-| `flush_cache_cb` | <ApiLink name="lv_draw_buf_cache_operation_cb_t" /> |  |
-| `width_to_stride_cb` | <ApiLink name="lv_draw_buf_width_to_stride_cb_t" /> |  |
+| `buf_malloc_cb` | `lv_draw_buf_malloc_cb_t` |  |
+| `buf_free_cb` | `lv_draw_buf_free_cb_t` |  |
+| `buf_copy_cb` | `lv_draw_buf_copy_cb_t` |  |
+| `align_pointer_cb` | `lv_draw_buf_align_cb_t` |  |
+| `invalidate_cache_cb` | `lv_draw_buf_cache_operation_cb_t` |  |
+| `flush_cache_cb` | `lv_draw_buf_cache_operation_cb_t` |  |
+| `width_to_stride_cb` | `lv_draw_buf_width_to_stride_cb_t` |  |
 
 
 </ApiMember>
@@ -47,7 +47,7 @@ void lv_draw_buf_init_handlers(void)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_draw_buf.h"]}
+  includes={["lv_public_api.h"]}
   includedBy={["lv_global.h", "lv_draw_nema_gfx.h"]}
-  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_image_dsc.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_types.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

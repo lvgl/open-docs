@@ -1,78 +1,12 @@
 ---
 title: lv_refr.h
 description: API reference for lv_refr.h
-api:
-  functions: [lv_refr_now, lv_obj_redraw, lv_display_refr_timer]
 ---
 
 <RelatedHeaders name="lv_refr_private.h" isPrivate={false} />
 
-<ApiSummary functions={3} />
-
-## Functions
-
-<ApiMember kind="function" name="lv_refr_now" file="core/lv_refr.h" line={51} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/core/lv_refr.h#L51">
-
-### lv_refr_now
-
-Redraw the invalidated areas now. Normally the redrawing is periodically executed in `lv_timer_handler` but a long blocking process can prevent the call of `lv_timer_handler`. In this case if the GUI is updated in the process (e.g. progress bar) this function can be called when the screen should be updated.
-
-```c
-void lv_refr_now(lv_display_t *disp)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display to refresh. NULL to refresh all displays. |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_redraw" file="core/lv_refr.h" line={58} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/core/lv_refr.h#L58">
-
-### lv_obj_redraw
-
-Redrawn on object and all its children using the passed draw context
-
-```c
-void lv_obj_redraw(lv_layer_t *layer, lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer where to draw. |
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the start object from the redraw should start |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_display_refr_timer" file="core/lv_refr.h" line={64} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/core/lv_refr.h#L64">
-
-### lv_display_refr_timer
-
-Called periodically to handle the refreshing
-
-```c
-void lv_display_refr_timer(lv_timer_t *timer)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to the timer itself, or `NULL` |
-
-
-</ApiMember>
-
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_obj.h", "lv_display.h", "lv_types.h"]}
-  includedBy={["lv_refr_private.h"]}
-  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h"]}
+  includes={["lvgl.h"]}
 />

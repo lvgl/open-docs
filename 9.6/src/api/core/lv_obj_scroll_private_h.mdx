@@ -11,7 +11,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_obj_scroll_by_raw" file="core/lv_obj_scroll_private.h" line={40} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/core/lv_obj_scroll_private.h#L40">
+<ApiMember kind="function" name="lv_obj_scroll_by_raw" file="core/lv_obj_scroll_private.h" line={40} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/core/lv_obj_scroll_private.h#L40">
 
 ### lv_obj_scroll_by_raw
 
@@ -25,11 +25,11 @@ lv_result_t lv_obj_scroll_by_raw(lv_obj_t *obj, int32_t x, int32_t y)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object to scroll |
-| `x` | <ApiLink name="int32_t" /> | pixels to scroll horizontally |
-| `y` | <ApiLink name="int32_t" /> | pixels to scroll vertically |
+| `obj` | `lv_obj_t *` | pointer to an object to scroll |
+| `x` | `int32_t` | pixels to scroll horizontally |
+| `y` | `int32_t` | pixels to scroll vertically |
 
-**Returns:** <ApiLink name="lv_result_t" /> — `LV_RESULT_INVALID`: to object was deleted in `LV_EVENT_SCROLL`; `LV_RESULT_OK`: if the object is still valid
+**Returns:** `lv_result_t` — `LV_RESULT_INVALID`: to object was deleted in `LV_EVENT_SCROLL`; `LV_RESULT_OK`: if the object is still valid
 
 
 </ApiMember>
@@ -37,6 +37,6 @@ lv_result_t lv_obj_scroll_by_raw(lv_obj_t *obj, int32_t x, int32_t y)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_obj_scroll.h"]}
-  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_ext_data.h", "lv_ll.h", "lv_math.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+  includes={["lv_public_api.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

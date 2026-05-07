@@ -11,7 +11,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_templ_create" file="widgets/objx_templ/lv_objx_templ.h" line={53} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/widgets/objx_templ/lv_objx_templ.h#L53">
+<ApiMember kind="function" name="lv_templ_create" file="widgets/objx_templ/lv_objx_templ.h" line={53} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/widgets/objx_templ/lv_objx_templ.h#L53">
 
 ### lv_templ_create
 
@@ -25,9 +25,9 @@ lv_obj_t * lv_templ_create(lv_obj_t *parent)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new templ |
+| `parent` | `lv_obj_t *` | pointer to an object, it will be the parent of the new templ |
 
-**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created bar
+**Returns:** `lv_obj_t *` — pointer to the created bar
 
 
 </ApiMember>
@@ -49,7 +49,7 @@ TODO Remove these instructions Search and replace: templ -\> object short name w
 
 ## Variables
 
-<ApiMember kind="variable" name="lv_templ_class" file="widgets/objx_templ/lv_objx_templ.h" line={42} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/widgets/objx_templ/lv_objx_templ.h#L42">
+<ApiMember kind="variable" name="lv_templ_class" file="widgets/objx_templ/lv_objx_templ.h" line={42} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/widgets/objx_templ/lv_objx_templ.h#L42">
 
 ### lv_templ_class
 
@@ -63,6 +63,6 @@ const lv_obj_class_t lv_templ_class
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_obj.h"]}
-  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+  includes={["lv_public_api.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

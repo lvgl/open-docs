@@ -14,7 +14,7 @@ api:
 <ApiTabs items={["Getters (2)","Other (3)"]}>
 <ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_bidi_get_logical_pos" file="misc/lv_bidi_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_bidi_private.h#L60">
+<ApiMember kind="function" name="lv_bidi_get_logical_pos" file="misc/lv_bidi_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_bidi_private.h#L60">
 
 ### lv_bidi_get_logical_pos
 
@@ -29,18 +29,18 @@ uint16_t lv_bidi_get_logical_pos(const char *str_in, char **bidi_txt, uint32_t l
 | Name | Type | Description |
 |------|------|-------------|
 | `str_in` | `const char *` | the input string. Can be only one line. |
-| `bidi_txt` | `char **` | internally the text is bidi processed which buffer can be get here. If not required anymore has to freed with <ApiLink name="lv_free" display="lv_free()" /> Can be `NULL` is unused |
-| `len` | <ApiLink name="uint32_t" /> | length of the line in character count |
-| `base_dir` | <ApiLink name="lv_base_dir_t" /> | base direction of the text: `LV_BASE_DIR_LTR` or `LV_BASE_DIR_RTL` |
-| `visual_pos` | <ApiLink name="uint32_t" /> | the visual character position which logical position should be get |
-| `is_rtl` | <ApiLink name="bool" display="bool *" /> | tell the char at `visual_pos` is RTL or LTR context |
+| `bidi_txt` | `char **` | internally the text is bidi processed which buffer can be get here. If not required anymore has to freed with `lv_free()` Can be `NULL` is unused |
+| `len` | `uint32_t` | length of the line in character count |
+| `base_dir` | `lv_base_dir_t` | base direction of the text: `LV_BASE_DIR_LTR` or `LV_BASE_DIR_RTL` |
+| `visual_pos` | `uint32_t` | the visual character position which logical position should be get |
+| `is_rtl` | `bool *` | tell the char at `visual_pos` is RTL or LTR context |
 
-**Returns:** <ApiLink name="uint16_t" /> — the logical character position
+**Returns:** `uint16_t` — the logical character position
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_bidi_get_visual_pos" file="misc/lv_bidi_private.h" line={75} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_bidi_private.h#L75">
+<ApiMember kind="function" name="lv_bidi_get_visual_pos" file="misc/lv_bidi_private.h" line={75} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_bidi_private.h#L75">
 
 ### lv_bidi_get_visual_pos
 
@@ -55,13 +55,13 @@ uint16_t lv_bidi_get_visual_pos(const char *str_in, char **bidi_txt, uint16_t le
 | Name | Type | Description |
 |------|------|-------------|
 | `str_in` | `const char *` | the input string. Can be only one line. |
-| `bidi_txt` | `char **` | internally the text is bidi processed which buffer can be get here. If not required anymore has to freed with <ApiLink name="lv_free" display="lv_free()" /> Can be `NULL` is unused |
-| `len` | <ApiLink name="uint16_t" /> | length of the line in character count |
-| `base_dir` | <ApiLink name="lv_base_dir_t" /> | base direction of the text: `LV_BASE_DIR_LTR` or `LV_BASE_DIR_RTL` |
-| `logical_pos` | <ApiLink name="uint32_t" /> | the logical character position which visual position should be get |
-| `is_rtl` | <ApiLink name="bool" display="bool *" /> | tell the char at `logical_pos` is RTL or LTR context |
+| `bidi_txt` | `char **` | internally the text is bidi processed which buffer can be get here. If not required anymore has to freed with `lv_free()` Can be `NULL` is unused |
+| `len` | `uint16_t` | length of the line in character count |
+| `base_dir` | `lv_base_dir_t` | base direction of the text: `LV_BASE_DIR_LTR` or `LV_BASE_DIR_RTL` |
+| `logical_pos` | `uint32_t` | the logical character position which visual position should be get |
+| `is_rtl` | `bool *` | tell the char at `logical_pos` is RTL or LTR context |
 
-**Returns:** <ApiLink name="uint16_t" /> — the visual character position
+**Returns:** `uint16_t` — the visual character position
 
 
 </ApiMember>
@@ -69,7 +69,7 @@ uint16_t lv_bidi_get_visual_pos(const char *str_in, char **bidi_txt, uint16_t le
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_bidi_process" file="misc/lv_bidi_private.h" line={39} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_bidi_private.h#L39">
+<ApiMember kind="function" name="lv_bidi_process" file="misc/lv_bidi_private.h" line={39} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_bidi_private.h#L39">
 
 ### lv_bidi_process
 
@@ -85,12 +85,12 @@ void lv_bidi_process(const char *str_in, char *str_out, lv_base_dir_t base_dir)
 |------|------|-------------|
 | `str_in` | `const char *` | the text to process |
 | `str_out` | `char *` | store the result here. Has the be `strlen(str_in)` length |
-| `base_dir` | <ApiLink name="lv_base_dir_t" /> | `LV_BASE_DIR_LTR` or `LV_BASE_DIR_RTL` |
+| `base_dir` | `lv_base_dir_t` | `LV_BASE_DIR_LTR` or `LV_BASE_DIR_RTL` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_bidi_detect_base_dir" file="misc/lv_bidi_private.h" line={46} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_bidi_private.h#L46">
+<ApiMember kind="function" name="lv_bidi_detect_base_dir" file="misc/lv_bidi_private.h" line={46} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_bidi_private.h#L46">
 
 ### lv_bidi_detect_base_dir
 
@@ -106,12 +106,12 @@ lv_base_dir_t lv_bidi_detect_base_dir(const char *txt)
 |------|------|-------------|
 | `txt` | `const char *` | the text to process |
 
-**Returns:** <ApiLink name="lv_base_dir_t" /> — `LV_BASE_DIR_LTR` or `LV_BASE_DIR_RTL`
+**Returns:** `lv_base_dir_t` — `LV_BASE_DIR_LTR` or `LV_BASE_DIR_RTL`
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_bidi_process_paragraph" file="misc/lv_bidi_private.h" line={88} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_bidi_private.h#L88">
+<ApiMember kind="function" name="lv_bidi_process_paragraph" file="misc/lv_bidi_private.h" line={88} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_bidi_private.h#L88">
 
 ### lv_bidi_process_paragraph
 
@@ -127,10 +127,10 @@ void lv_bidi_process_paragraph(const char *str_in, char *str_out, uint32_t len, 
 |------|------|-------------|
 | `str_in` | `const char *` | the string to process |
 | `str_out` | `char *` | store the result here |
-| `len` | <ApiLink name="uint32_t" /> | length of the text |
-| `base_dir` | <ApiLink name="lv_base_dir_t" /> | base dir of the text |
-| `pos_conv_out` | <ApiLink name="uint16_t" display="uint16_t *" /> | an `uint16_t` array to store the related logical position of the character. Can be `NULL` is unused |
-| `pos_conv_len` | <ApiLink name="uint16_t" /> | length of `pos_conv_out` in element count |
+| `len` | `uint32_t` | length of the text |
+| `base_dir` | `lv_base_dir_t` | base dir of the text |
+| `pos_conv_out` | `uint16_t *` | an `uint16_t` array to store the related logical position of the character. Can be `NULL` is unused |
+| `pos_conv_len` | `uint16_t` | length of `pos_conv_out` in element count |
 
 
 </ApiMember>
@@ -140,6 +140,6 @@ void lv_bidi_process_paragraph(const char *str_in, char *str_out, uint32_t len, 
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_bidi.h"]}
-  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_font.h", "lv_image_dsc.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_sprintf.h", "lv_string.h", "lv_symbol_def.h", "lv_text.h", "lv_types.h"]}
+  includes={["lv_public_api.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

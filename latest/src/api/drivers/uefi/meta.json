@@ -7,7 +7,6 @@
     "lv_uefi_gnu_efi_h",
     "lv_uefi_h",
     "lv_uefi_indev_h",
-    "lv_uefi_private_h",
-    "lv_uefi_std_wrapper_h"
+    "lv_uefi_private_h"
   ]
 }

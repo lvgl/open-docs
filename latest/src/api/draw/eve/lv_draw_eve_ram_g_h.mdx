@@ -10,7 +10,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_eve_ramg_get_addr" file="draw/eve/lv_draw_eve_ram_g.h" line={39} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/eve/lv_draw_eve_ram_g.h#L39">
+<ApiMember kind="function" name="lv_draw_eve_ramg_get_addr" file="draw/eve/lv_draw_eve_ram_g.h" line={39} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/eve/lv_draw_eve_ram_g.h#L39">
 
 ### lv_draw_eve_ramg_get_addr
 
@@ -22,17 +22,17 @@ bool lv_draw_eve_ramg_get_addr(uint32_t *addr_dst, uintptr_t key, uint32_t addr_
 
 | Name | Type |
 |------|------|
-| `addr_dst` | <ApiLink name="uint32_t" display="uint32_t *" /> |
-| `key` | <ApiLink name="uintptr_t" /> |
-| `addr_size` | <ApiLink name="uint32_t" /> |
-| `addr_align` | <ApiLink name="uint32_t" /> |
+| `addr_dst` | `uint32_t *` |
+| `key` | `uintptr_t` |
+| `addr_size` | `uint32_t` |
+| `addr_align` | `uint32_t` |
 
 
 </ApiMember>
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_DRAW_EVE_RAMG_OUT_OF_RAMG" file="draw/eve/lv_draw_eve_ram_g.h" line={29} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/eve/lv_draw_eve_ram_g.h#L29">
+<ApiMember kind="macro" name="LV_DRAW_EVE_RAMG_OUT_OF_RAMG" file="draw/eve/lv_draw_eve_ram_g.h" line={29} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/eve/lv_draw_eve_ram_g.h#L29">
 
 ### LV_DRAW_EVE_RAMG_OUT_OF_RAMG
 
@@ -48,5 +48,5 @@ bool lv_draw_eve_ramg_get_addr(uint32_t *addr_dst, uintptr_t key, uint32_t addr_
 <FileIncludes
   includes={["lv_draw_eve.h"]}
   includedBy={["lv_draw_eve_private.h"]}
-  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_eve_target.h", "lv_types.h"]}
+  transitiveIncludes={["lv_public_api.h", "lvgl.h"]}
 />

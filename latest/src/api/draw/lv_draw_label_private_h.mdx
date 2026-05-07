@@ -19,9 +19,9 @@ Store some info to speed up drawing of very large texts It takes a lot of time t
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `line_start` | <ApiLink name="int32_t" /> | Index of the line at `y` coordinate |
-| `y` | <ApiLink name="int32_t" /> | Give the `y` coordinate of the first letter at `line start` index. Relative to the label's coordinates |
-| `coord_y` | <ApiLink name="int32_t" /> | The 'y1' coordinate of the label when the hint was saved. Used to invalidate the hint if the label has moved too much. |
+| `line_start` | `int32_t` | Index of the line at `y` coordinate |
+| `y` | `int32_t` | Give the `y` coordinate of the first letter at `line start` index. Relative to the label's coordinates |
+| `coord_y` | `int32_t` | The 'y1' coordinate of the label when the hint was saved. Used to invalidate the hint if the label has moved too much. |
 
 
 </ApiMember>
@@ -33,18 +33,18 @@ Store some info to speed up drawing of very large texts It takes a lot of time t
 | Member | Type | Description |
 |--------|------|-------------|
 | `glyph_data` | `const void *` | Depends on `format` field, it could be image source or draw buf of bitmap or vector data. |
-| `format` | <ApiLink name="lv_font_glyph_format_t" /> |  |
-| `letter_coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |  |
-| `bg_coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |  |
-| `g` | <ApiLink name="lv_font_glyph_dsc_t" display="lv_font_glyph_dsc_t *" /> |  |
-| `color` | <ApiLink name="lv_color_t" /> |  |
-| `opa` | <ApiLink name="lv_opa_t" /> |  |
-| `outline_stroke_color` | <ApiLink name="lv_color_t" /> |  |
-| `outline_stroke_opa` | <ApiLink name="lv_opa_t" /> |  |
-| `outline_stroke_width` | <ApiLink name="int32_t" /> |  |
-| `rotation` | <ApiLink name="int32_t" /> |  |
-| `pivot` | <ApiLink name="lv_point_t" /> | Rotation pivot point associated with total glyph including line_height |
-| `_draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | a shared draw buf for get_bitmap, do not use it directly, use glyph_data instead |
+| `format` | `lv_font_glyph_format_t` |  |
+| `letter_coords` | `const lv_area_t *` |  |
+| `bg_coords` | `const lv_area_t *` |  |
+| `g` | `lv_font_glyph_dsc_t *` |  |
+| `color` | `lv_color_t` |  |
+| `opa` | `lv_opa_t` |  |
+| `outline_stroke_color` | `lv_color_t` |  |
+| `outline_stroke_opa` | `lv_opa_t` |  |
+| `outline_stroke_width` | `int32_t` |  |
+| `rotation` | `int32_t` |  |
+| `pivot` | `lv_point_t` | Rotation pivot point associated with total glyph including line_height |
+| `_draw_buf` | `lv_draw_buf_t *` | a shared draw buf for get_bitmap, do not use it directly, use glyph_data instead |
 
 
 </ApiMember>
@@ -52,7 +52,7 @@ Store some info to speed up drawing of very large texts It takes a lot of time t
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_draw_label.h"]}
+  includes={["lv_public_api.h"]}
   includedBy={["lv_draw_nema_gfx.h", "lv_label_private.h"]}
-  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw.h", "lv_draw_buf.h", "lv_draw_rect.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

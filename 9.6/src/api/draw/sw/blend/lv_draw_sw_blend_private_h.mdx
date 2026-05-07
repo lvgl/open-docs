@@ -17,18 +17,18 @@ api:
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `blend_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | The area with absolute coordinates to draw on `layer->buf` will be clipped to `layer->clip_area` |
+| `blend_area` | `const lv_area_t *` | The area with absolute coordinates to draw on `layer->buf` will be clipped to `layer->clip_area` |
 | `src_buf` | `const void *` | Pointer to an image to blend. If set `fill_color` is ignored |
-| `src_stride` | <ApiLink name="uint32_t" /> |  |
-| `src_color_format` | <ApiLink name="lv_color_format_t" /> |  |
-| `src_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |  |
-| `opa` | <ApiLink name="lv_opa_t" /> | The overall opacity |
-| `color` | <ApiLink name="lv_color_t" /> | Fill color |
-| `mask_buf` | <ApiLink name="lv_opa_t" display="const lv_opa_t *" /> | NULL if ignored, or an alpha mask to apply on `blend_area` |
+| `src_stride` | `uint32_t` |  |
+| `src_color_format` | `lv_color_format_t` |  |
+| `src_area` | `const lv_area_t *` |  |
+| `opa` | `lv_opa_t` | The overall opacity |
+| `color` | `lv_color_t` | Fill color |
+| `mask_buf` | `const lv_opa_t *` | NULL if ignored, or an alpha mask to apply on `blend_area` |
 | `mask_res` | <ApiLink name="lv_draw_sw_mask_res_t" /> | The result of the previous mask operation |
-| `mask_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | The area of `mask_buf` with absolute coordinates |
-| `mask_stride` | <ApiLink name="int32_t" /> |  |
-| `blend_mode` | <ApiLink name="lv_blend_mode_t" /> | E.g. LV_BLEND_MODE_ADDITIVE |
+| `mask_area` | `const lv_area_t *` | The area of `mask_buf` with absolute coordinates |
+| `mask_stride` | `int32_t` |  |
+| `blend_mode` | `lv_blend_mode_t` | E.g. LV_BLEND_MODE_ADDITIVE |
 
 
 </ApiMember>
@@ -40,14 +40,14 @@ api:
 | Member | Type | Description |
 |--------|------|-------------|
 | `dest_buf` | `void *` |  |
-| `dest_w` | <ApiLink name="int32_t" /> |  |
-| `dest_h` | <ApiLink name="int32_t" /> |  |
-| `dest_stride` | <ApiLink name="int32_t" /> |  |
-| `mask_buf` | <ApiLink name="lv_opa_t" display="const lv_opa_t *" /> |  |
-| `mask_stride` | <ApiLink name="int32_t" /> |  |
-| `color` | <ApiLink name="lv_color_t" /> |  |
-| `opa` | <ApiLink name="lv_opa_t" /> |  |
-| `relative_area` | <ApiLink name="lv_area_t" /> |  |
+| `dest_w` | `int32_t` |  |
+| `dest_h` | `int32_t` |  |
+| `dest_stride` | `int32_t` |  |
+| `mask_buf` | `const lv_opa_t *` |  |
+| `mask_stride` | `int32_t` |  |
+| `color` | `lv_color_t` |  |
+| `opa` | `lv_opa_t` |  |
+| `relative_area` | `lv_area_t` |  |
 
 
 </ApiMember>
@@ -59,18 +59,18 @@ api:
 | Member | Type | Description |
 |--------|------|-------------|
 | `dest_buf` | `void *` |  |
-| `dest_w` | <ApiLink name="int32_t" /> |  |
-| `dest_h` | <ApiLink name="int32_t" /> |  |
-| `dest_stride` | <ApiLink name="int32_t" /> |  |
-| `mask_buf` | <ApiLink name="lv_opa_t" display="const lv_opa_t *" /> |  |
-| `mask_stride` | <ApiLink name="int32_t" /> |  |
+| `dest_w` | `int32_t` |  |
+| `dest_h` | `int32_t` |  |
+| `dest_stride` | `int32_t` |  |
+| `mask_buf` | `const lv_opa_t *` |  |
+| `mask_stride` | `int32_t` |  |
 | `src_buf` | `const void *` |  |
-| `src_stride` | <ApiLink name="int32_t" /> |  |
-| `src_color_format` | <ApiLink name="lv_color_format_t" /> |  |
-| `opa` | <ApiLink name="lv_opa_t" /> |  |
-| `blend_mode` | <ApiLink name="lv_blend_mode_t" /> |  |
-| `relative_area` | <ApiLink name="lv_area_t" /> | The blend area relative to the layer's buffer area. |
-| `src_area` | <ApiLink name="lv_area_t" /> | The original src area. |
+| `src_stride` | `int32_t` |  |
+| `src_color_format` | `lv_color_format_t` |  |
+| `opa` | `lv_opa_t` |  |
+| `blend_mode` | `lv_blend_mode_t` |  |
+| `relative_area` | `lv_area_t` | The blend area relative to the layer's buffer area. |
+| `src_area` | `lv_area_t` | The original src area. |
 
 
 </ApiMember>
@@ -78,6 +78,6 @@ api:
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_draw_sw_blend.h"]}
-  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_draw_sw_mask.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_grad.h", "lv_grid.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+  includes={["lv_draw_sw_blend.h", "lv_draw_sw_mask.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_draw_private.h", "lv_draw_sw.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h", "lv_pthread.h", "lv_public_api.h", "lvgl.h"]}
 />

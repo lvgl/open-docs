@@ -12,7 +12,7 @@ api:
 <ApiTabs items={["Getters (2)","Other (3)"]}>
 <ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_vg_lite_stroke_get" file="draw/vg_lite/lv_vg_lite_stroke.h" line={56} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/vg_lite/lv_vg_lite_stroke.h#L56">
+<ApiMember kind="function" name="lv_vg_lite_stroke_get" file="draw/vg_lite/lv_vg_lite_stroke.h" line={58} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/vg_lite/lv_vg_lite_stroke.h#L58">
 
 ### lv_vg_lite_stroke_get
 
@@ -28,14 +28,14 @@ lv_cache_entry_t * lv_vg_lite_stroke_get(struct _lv_draw_vg_lite_unit_t *unit, s
 |------|------|-------------|
 | `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> | pointer to the unit |
 | `path` | `struct _lv_vg_lite_path_t *` | pointer to the path |
-| `dsc` | <ApiLink name="lv_vector_stroke_dsc_t" display="const lv_vector_stroke_dsc_t *" /> | pointer to the stroke descriptor |
+| `dsc` | `const lv_vector_stroke_dsc_t *` | pointer to the stroke descriptor |
 
 **Returns:** <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> — pointer to the stroke cache entry
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_vg_lite_stroke_get_path" file="draw/vg_lite/lv_vg_lite_stroke.h" line={65} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/vg_lite/lv_vg_lite_stroke.h#L65">
+<ApiMember kind="function" name="lv_vg_lite_stroke_get_path" file="draw/vg_lite/lv_vg_lite_stroke.h" line={67} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/vg_lite/lv_vg_lite_stroke.h#L67">
 
 ### lv_vg_lite_stroke_get_path
 
@@ -59,7 +59,7 @@ struct _lv_vg_lite_path_t * lv_vg_lite_stroke_get_path(lv_cache_entry_t *cache_e
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_vg_lite_stroke_init" file="draw/vg_lite/lv_vg_lite_stroke.h" line={41} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/vg_lite/lv_vg_lite_stroke.h#L41">
+<ApiMember kind="function" name="lv_vg_lite_stroke_init" file="draw/vg_lite/lv_vg_lite_stroke.h" line={43} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/vg_lite/lv_vg_lite_stroke.h#L43">
 
 ### lv_vg_lite_stroke_init
 
@@ -74,12 +74,12 @@ void lv_vg_lite_stroke_init(struct _lv_draw_vg_lite_unit_t *unit, uint32_t cache
 | Name | Type | Description |
 |------|------|-------------|
 | `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> | pointer to the unit |
-| `cache_cnt` | <ApiLink name="uint32_t" /> |  |
+| `cache_cnt` | `uint32_t` |  |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_vg_lite_stroke_deinit" file="draw/vg_lite/lv_vg_lite_stroke.h" line={47} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/vg_lite/lv_vg_lite_stroke.h#L47">
+<ApiMember kind="function" name="lv_vg_lite_stroke_deinit" file="draw/vg_lite/lv_vg_lite_stroke.h" line={49} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/vg_lite/lv_vg_lite_stroke.h#L49">
 
 ### lv_vg_lite_stroke_deinit
 
@@ -98,7 +98,7 @@ void lv_vg_lite_stroke_deinit(struct _lv_draw_vg_lite_unit_t *unit)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_vg_lite_stroke_drop" file="draw/vg_lite/lv_vg_lite_stroke.h" line={72} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/vg_lite/lv_vg_lite_stroke.h#L72">
+<ApiMember kind="function" name="lv_vg_lite_stroke_drop" file="draw/vg_lite/lv_vg_lite_stroke.h" line={74} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/vg_lite/lv_vg_lite_stroke.h#L74">
 
 ### lv_vg_lite_stroke_drop
 
@@ -123,6 +123,6 @@ void lv_vg_lite_stroke_drop(struct _lv_draw_vg_lite_unit_t *unit, lv_cache_entry
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_vg_lite_utils.h"]}
-  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_grad.h", "lv_grid.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+  includes={["lv_vg_lite_utils.h", "lv_cache_entry.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_class.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h", "lv_pthread.h", "lv_public_api.h", "lvgl.h"]}
 />

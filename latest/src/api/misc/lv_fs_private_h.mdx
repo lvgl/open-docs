@@ -12,7 +12,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_fs_init" file="misc/lv_fs_private.h" line={41} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_fs_private.h#L41">
+<ApiMember kind="function" name="lv_fs_init" file="misc/lv_fs_private.h" line={41} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_fs_private.h#L41">
 
 ### lv_fs_init
 
@@ -25,7 +25,7 @@ void lv_fs_init(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_fs_deinit" file="misc/lv_fs_private.h" line={46} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_fs_private.h#L46">
+<ApiMember kind="function" name="lv_fs_deinit" file="misc/lv_fs_private.h" line={46} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_fs_private.h#L46">
 
 ### lv_fs_deinit
 
@@ -46,9 +46,9 @@ void lv_fs_deinit(void)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `start` | <ApiLink name="uint32_t" /> |  |
-| `end` | <ApiLink name="uint32_t" /> |  |
-| `file_position` | <ApiLink name="uint32_t" /> |  |
+| `start` | `uint32_t` |  |
+| `end` | `uint32_t` |  |
+| `file_position` | `uint32_t` |  |
 | `buffer` | `void *` |  |
 
 
@@ -57,6 +57,6 @@ void lv_fs_deinit(void)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_fs.h"]}
-  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h", "lv_types.h"]}
+  includes={["lv_public_api.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

@@ -13,7 +13,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_obj_allocate_spec_attr" file="core/lv_obj_private.h" line={102} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/core/lv_obj_private.h#L102">
+<ApiMember kind="function" name="lv_obj_allocate_spec_attr" file="core/lv_obj_private.h" line={102} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/core/lv_obj_private.h#L102">
 
 ### lv_obj_allocate_spec_attr
 
@@ -27,14 +27,14 @@ lv_obj_spec_attr_t * lv_obj_allocate_spec_attr(lv_obj_t *obj)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+| `obj` | `lv_obj_t *` | pointer to an object |
 
 **Returns:** <ApiLink name="lv_obj_spec_attr_t" display="lv_obj_spec_attr_t *" /> — the spec_attr created or NULL if something went wrong
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_child" file="core/lv_obj_private.h" line={104} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/core/lv_obj_private.h#L104">
+<ApiMember kind="function" name="lv_obj_add_child" file="core/lv_obj_private.h" line={104} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/core/lv_obj_private.h#L104">
 
 ### lv_obj_add_child
 
@@ -46,13 +46,13 @@ lv_result_t lv_obj_add_child(lv_obj_t *parent, lv_obj_t *child)
 
 | Name | Type |
 |------|------|
-| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `child` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `parent` | `lv_obj_t *` |
+| `child` | `lv_obj_t *` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_child" file="core/lv_obj_private.h" line={105} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/core/lv_obj_private.h#L105">
+<ApiMember kind="function" name="lv_obj_remove_child" file="core/lv_obj_private.h" line={105} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/core/lv_obj_private.h#L105">
 
 ### lv_obj_remove_child
 
@@ -64,8 +64,8 @@ void lv_obj_remove_child(lv_obj_t *parent, lv_obj_t *child)
 
 | Name | Type |
 |------|------|
-| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `child` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `parent` | `lv_obj_t *` |
+| `child` | `lv_obj_t *` |
 
 
 </ApiMember>
@@ -80,20 +80,20 @@ Special, rarely used attributes. They are allocated automatically if any element
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `children` | <ApiLink name="lv_obj_t" display="lv_obj_t **" /> | Store the pointer of the children in an array. |
-| `group_p` | <ApiLink name="lv_group_t" display="lv_group_t *" /> |  |
-| `event_list` | <ApiLink name="lv_event_list_t" /> |  |
+| `children` | `lv_obj_t **` | Store the pointer of the children in an array. |
+| `group_p` | `lv_group_t *` |  |
+| `event_list` | `lv_event_list_t` |  |
 | `name` | `const char *` | Pointer to the name |
-| `scroll` | <ApiLink name="lv_point_t" /> | The current X/Y scroll offset |
-| `ext_click_pad` | <ApiLink name="int32_t" /> | Extra click padding in all direction |
-| `ext_draw_size` | <ApiLink name="int32_t" /> | EXTend the size in every direction for drawing. |
-| `child_cnt` | <ApiLink name="uint16_t" /> | Number of children |
-| `scrollbar_mode` | <ApiLink name="uint16_t" /> | How to display scrollbars, see `lv_scrollbar_mode_t` |
-| `scroll_snap_x` | <ApiLink name="uint16_t" /> | Where to align the snappable children horizontally, see `lv_scroll_snap_t` |
-| `scroll_snap_y` | <ApiLink name="uint16_t" /> | Where to align the snappable children vertically |
-| `scroll_dir` | <ApiLink name="uint16_t" /> | The allowed scroll direction(s), see `lv_dir_t` |
-| `layer_type` | <ApiLink name="uint16_t" /> | Cache the layer type here. Element of lv_intermediate_layer_type_t |
-| `name_static` | <ApiLink name="uint16_t" /> | 1: `name` was not dynamically allocated |
+| `scroll` | `lv_point_t` | The current X/Y scroll offset |
+| `ext_click_pad` | `int32_t` | Extra click padding in all direction |
+| `ext_draw_size` | `int32_t` | EXTend the size in every direction for drawing. |
+| `child_cnt` | `uint16_t` | Number of children |
+| `scrollbar_mode` | `uint16_t` | How to display scrollbars, see `lv_scrollbar_mode_t` |
+| `scroll_snap_x` | `uint16_t` | Where to align the snappable children horizontally, see `lv_scroll_snap_t` |
+| `scroll_snap_y` | `uint16_t` | Where to align the snappable children vertically |
+| `scroll_dir` | `uint16_t` | The allowed scroll direction(s), see `lv_dir_t` |
+| `layer_type` | `uint16_t` | Cache the layer type here. Element of lv_intermediate_layer_type_t |
+| `name_static` | `uint16_t` | 1: `name` was not dynamically allocated |
 
 
 </ApiMember>
@@ -104,41 +104,35 @@ Special, rarely used attributes. They are allocated automatically if any element
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `ext_data` | <ApiLink name="lv_ext_data_t" /> |  |
-| `class_p` | <ApiLink name="lv_obj_class_t" display="const lv_obj_class_t *" /> |  |
-| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `ext_data` | `lv_ext_data_t` |  |
+| `class_p` | `const lv_obj_class_t *` |  |
+| `parent` | `lv_obj_t *` |  |
 | `spec_attr` | <ApiLink name="lv_obj_spec_attr_t" display="lv_obj_spec_attr_t *" /> |  |
-| `styles` | <ApiLink name="lv_obj_style_t" display="lv_obj_style_t *" /> |  |
+| `styles` | `lv_obj_style_t *` |  |
 | `user_data` | `void *` |  |
 | `id` | `void *` |  |
-| `coords` | <ApiLink name="lv_area_t" /> |  |
-| `flags` | <ApiLink name="lv_obj_flag_t" /> |  |
-| `state` | <ApiLink name="uint16_t" /> |  |
-| `layout_inv` | <ApiLink name="uint16_t" /> |  |
-| `readjust_scroll_after_layout` | <ApiLink name="uint16_t" /> |  |
-| `scr_layout_inv` | <ApiLink name="uint16_t" /> |  |
-| `skip_trans` | <ApiLink name="uint16_t" /> |  |
-| `style_cnt` | <ApiLink name="uint16_t" /> |  |
-| `h_layout` | <ApiLink name="uint16_t" /> |  |
-| `w_layout` | <ApiLink name="uint16_t" /> |  |
-| `h_ignore_size` | <ApiLink name="uint16_t" /> |  |
-| `w_ignore_size` | <ApiLink name="uint16_t" /> |  |
-| `is_deleting` | <ApiLink name="uint16_t" /> |  |
-| `radio_button` | <ApiLink name="uint16_t" /> | Allow only one RADIO_BUTTON sibling to be checked |
-| `rendered` | <ApiLink name="uint16_t" /> | The widget is rendered at least once already. It's used to skip initial animations and transitions. |
+| `coords` | `lv_area_t` |  |
+| `flags` | `lv_obj_flag_t` |  |
+| `state` | `uint16_t` |  |
+| `layout_inv` | `uint16_t` |  |
+| `readjust_scroll_after_layout` | `uint16_t` |  |
+| `scr_layout_inv` | `uint16_t` |  |
+| `skip_trans` | `uint16_t` |  |
+| `style_cnt` | `uint16_t` |  |
+| `h_layout` | `uint16_t` |  |
+| `w_layout` | `uint16_t` |  |
+| `h_ignore_size` | `uint16_t` |  |
+| `w_ignore_size` | `uint16_t` |  |
+| `is_deleting` | `uint16_t` |  |
+| `radio_button` | `uint16_t` | Allow only one RADIO_BUTTON sibling to be checked |
+| `rendered` | `uint16_t` | The widget is rendered at least once already. It's used to skip initial animations and transitions. |
 
 
 </ApiMember>
 
-<TypeUsedBy name="_lv_obj_t" count={1}>
-
-- `lv_screen_load` — param `scr`
-
-</TypeUsedBy>
-
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_obj_spec_attr_t" file="core/lv_obj_private.h" line={53} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/core/lv_obj_private.h#L53">
+<ApiMember kind="typedef" name="lv_obj_spec_attr_t" file="core/lv_obj_private.h" line={53} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/core/lv_obj_private.h#L53">
 
 ### lv_obj_spec_attr_t
 
@@ -154,7 +148,7 @@ Special, rarely used attributes. They are allocated automatically if any element
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_ext_data.h", "lv_obj.h"]}
-  includedBy={["lv_file_explorer_private.h", "lv_3dtexture_private.h", "lv_arc_private.h", "lv_arclabel_private.h", "lv_bar_private.h", "lv_button_private.h", "lv_buttonmatrix_private.h", "lv_calendar_private.h", "lv_chart_private.h", "lv_checkbox_private.h", "lv_dropdown_private.h", "lv_image_private.h", "lv_imagebutton_private.h", "lv_ime_pinyin_private.h", "lv_label_private.h", "lv_led_private.h", "lv_line_private.h", "lv_menu_private.h", "lv_msgbox_private.h", "lv_roller_private.h", "lv_scale_private.h", "lv_span_private.h", "lv_switch_private.h", "lv_table_private.h", "lv_tabview_private.h", "lv_textarea_private.h", "lv_tileview_private.h", "lv_win_private.h"]}
-  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_property_names.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_style_properties.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+  includes={["lv_public_api.h"]}
+  includedBy={["lv_file_explorer_private.h", "lv_3dtexture_private.h", "lv_arc_private.h", "lv_arclabel_private.h", "lv_bar_private.h", "lv_button_private.h", "lv_buttonmatrix_private.h", "lv_calendar_private.h", "lv_chart_private.h", "lv_checkbox_private.h", "lv_dropdown_private.h", "lv_image_private.h", "lv_imagebutton_private.h", "lv_ime_pinyin_private.h", "lv_keyboard_private.h", "lv_label_private.h", "lv_led_private.h", "lv_line_private.h", "lv_lottie_private.h", "lv_menu_private.h", "lv_msgbox_private.h", "lv_roller_private.h", "lv_scale_private.h", "lv_slider_private.h", "lv_span_private.h", "lv_spinbox_private.h", "lv_spinner_private.h", "lv_switch_private.h", "lv_table_private.h", "lv_tabview_private.h", "lv_textarea_private.h", "lv_tileview_private.h", "lv_win_private.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

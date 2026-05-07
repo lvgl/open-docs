@@ -12,7 +12,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_vector_for_each_destroy_tasks" file="draw/lv_draw_vector_private.h" line={129} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/lv_draw_vector_private.h#L129">
+<ApiMember kind="function" name="lv_vector_for_each_destroy_tasks" file="draw/lv_draw_vector_private.h" line={129} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/lv_draw_vector_private.h#L129">
 
 ### lv_vector_for_each_destroy_tasks
 
@@ -26,8 +26,8 @@ void lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb
 
 | Name | Type | Description |
 |------|------|-------------|
-| `task_list` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to the linked list in `lv_draw_vector_dsc_t` that stores the path shapes and their attributes. |
-| `cb` | <ApiLink name="vector_draw_task_cb" /> | the callback used to iterate through the task |
+| `task_list` | `lv_ll_t *` | pointer to the linked list in `lv_draw_vector_dsc_t` that stores the path shapes and their attributes. |
+| `cb` | `vector_draw_task_cb` | the callback used to iterate through the task |
 | `used_data` | `void *` |  |
 
 
@@ -45,9 +45,9 @@ Stores the shape of the path as arrays of operations and points. For example mov
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `quality` | <ApiLink name="lv_vector_path_quality_t" /> |  |
-| `ops` | <ApiLink name="lv_array_t" /> |  |
-| `points` | <ApiLink name="lv_array_t" /> |  |
+| `quality` | `lv_vector_path_quality_t` |  |
+| `ops` | `lv_array_t` |  |
+| `points` | `lv_array_t` |  |
 
 
 </ApiMember>
@@ -58,9 +58,9 @@ Stores the shape of the path as arrays of operations and points. For example mov
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `style` | <ApiLink name="lv_vector_gradient_style_t" /> |  |
+| `style` | `lv_vector_gradient_style_t` |  |
 | `stops` | `lv_grad_stop_t[2]` | A gradient stop array |
-| `stops_count` | <ApiLink name="uint16_t" /> | The number of used stops in the array |
+| `stops_count` | `uint16_t` | The number of used stops in the array |
 | `x1` | `float` |  |
 | `y1` | `float` |  |
 | `x2` | `float` |  |
@@ -68,7 +68,7 @@ Stores the shape of the path as arrays of operations and points. For example mov
 | `cx` | `float` |  |
 | `cy` | `float` |  |
 | `cr` | `float` |  |
-| `spread` | <ApiLink name="lv_vector_gradient_spread_t" /> |  |
+| `spread` | `lv_vector_gradient_spread_t` |  |
 
 
 </ApiMember>
@@ -79,14 +79,14 @@ Stores the shape of the path as arrays of operations and points. For example mov
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `style` | <ApiLink name="lv_vector_draw_style_t" /> |  |
-| `color` | <ApiLink name="lv_color32_t" /> |  |
-| `opa` | <ApiLink name="lv_opa_t" /> |  |
-| `fill_rule` | <ApiLink name="lv_vector_fill_t" /> |  |
-| `fill_units` | <ApiLink name="lv_vector_fill_units_t" /> |  |
-| `img_dsc` | <ApiLink name="lv_draw_image_dsc_t" /> |  |
-| `gradient` | <ApiLink name="lv_vector_gradient_t" /> |  |
-| `matrix` | <ApiLink name="lv_matrix_t" /> |  |
+| `style` | `lv_vector_draw_style_t` |  |
+| `color` | `lv_color32_t` |  |
+| `opa` | `lv_opa_t` |  |
+| `fill_rule` | `lv_vector_fill_t` |  |
+| `fill_units` | `lv_vector_fill_units_t` |  |
+| `img_dsc` | `lv_draw_image_dsc_t` |  |
+| `gradient` | `lv_vector_gradient_t` |  |
+| `matrix` | `lv_matrix_t` |  |
 
 
 </ApiMember>
@@ -97,16 +97,16 @@ Stores the shape of the path as arrays of operations and points. For example mov
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `style` | <ApiLink name="lv_vector_draw_style_t" /> |  |
-| `color` | <ApiLink name="lv_color32_t" /> |  |
-| `opa` | <ApiLink name="lv_opa_t" /> |  |
+| `style` | `lv_vector_draw_style_t` |  |
+| `color` | `lv_color32_t` |  |
+| `opa` | `lv_opa_t` |  |
 | `width` | `float` |  |
-| `dash_pattern` | <ApiLink name="lv_array_t" /> |  |
-| `cap` | <ApiLink name="lv_vector_stroke_cap_t" /> |  |
-| `join` | <ApiLink name="lv_vector_stroke_join_t" /> |  |
-| `miter_limit` | <ApiLink name="uint16_t" /> |  |
-| `gradient` | <ApiLink name="lv_vector_gradient_t" /> |  |
-| `matrix` | <ApiLink name="lv_matrix_t" /> |  |
+| `dash_pattern` | `lv_array_t` |  |
+| `cap` | `lv_vector_stroke_cap_t` |  |
+| `join` | `lv_vector_stroke_join_t` |  |
+| `miter_limit` | `uint16_t` |  |
+| `gradient` | `lv_vector_gradient_t` |  |
+| `matrix` | `lv_matrix_t` |  |
 
 
 </ApiMember>
@@ -119,11 +119,11 @@ Stores how to fill, stroke, transform etc a given path
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `fill_dsc` | <ApiLink name="lv_vector_fill_dsc_t" /> |  |
-| `stroke_dsc` | <ApiLink name="lv_vector_stroke_dsc_t" /> |  |
-| `matrix` | <ApiLink name="lv_matrix_t" /> |  |
-| `blend_mode` | <ApiLink name="lv_vector_blend_t" /> |  |
-| `scissor_area` | <ApiLink name="lv_area_t" /> |  |
+| `fill_dsc` | `lv_vector_fill_dsc_t` |  |
+| `stroke_dsc` | `lv_vector_stroke_dsc_t` |  |
+| `matrix` | `lv_matrix_t` |  |
+| `blend_mode` | `lv_vector_blend_t` |  |
+| `scissor_area` | `lv_area_t` |  |
 
 
 </ApiMember>
@@ -134,9 +134,9 @@ Stores how to fill, stroke, transform etc a given path
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
-| `ctx` | <ApiLink name="lv_vector_path_ctx_t" display="lv_vector_path_ctx_t *" /> | The current colors, opacities, matrix, etc for the next task to be added by |
-| `task_list` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | Store path shapes and their attributes in a list as <ApiLink name="lv_draw_vector_subtask_t" />. |
+| `base` | `lv_draw_dsc_base_t` |  |
+| `ctx` | `lv_vector_path_ctx_t *` | The current colors, opacities, matrix, etc for the next task to be added by |
+| `task_list` | `lv_ll_t *` | Store path shapes and their attributes in a list as <ApiLink name="lv_draw_vector_subtask_t" />. |
 
 
 </ApiMember>
@@ -149,8 +149,8 @@ Contains a path shape and its attributes together. It's a task that will be pass
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `path` | <ApiLink name="lv_vector_path_t" display="lv_vector_path_t *" /> |  |
-| `ctx` | <ApiLink name="lv_vector_path_ctx_t" /> |  |
+| `path` | `lv_vector_path_t *` |  |
+| `ctx` | `lv_vector_path_ctx_t` |  |
 
 
 </ApiMember>
@@ -158,7 +158,7 @@ Contains a path shape and its attributes together. It's a task that will be pass
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_draw_vector.h"]}
+  includes={["lv_draw_private.h"]}
   includedBy={["lv_draw_nema_gfx.h", "lv_svg_render.h"]}
-  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_types.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h", "lv_pthread.h", "lv_public_api.h", "lvgl.h"]}
 />

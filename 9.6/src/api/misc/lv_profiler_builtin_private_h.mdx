@@ -12,7 +12,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_profiler_builtin_posix_init" file="misc/lv_profiler_builtin_private.h" line={51} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_profiler_builtin_private.h#L51">
+<ApiMember kind="function" name="lv_profiler_builtin_posix_init" file="misc/lv_profiler_builtin_private.h" line={51} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_profiler_builtin_private.h#L51">
 
 ### lv_profiler_builtin_posix_init
 
@@ -35,8 +35,8 @@ LVGL profiler built-in configuration structure.
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `buf_size` | <ApiLink name="size_t" /> | The size of the buffer used for profiling data |
-| `tick_per_sec` | <ApiLink name="uint32_t" /> | The number of ticks per second |
+| `buf_size` | `size_t` | The size of the buffer used for profiling data |
+| `tick_per_sec` | `uint32_t` | The number of ticks per second |
 | `tick_get_cb` | `uint64_t(*)(void)` | Callback function to get the current tick count |
 | `flush_cb` | `void(*)(const char *buf)` | Callback function to flush the profiling data |
 | `tid_get_cb` | `int(*)(void)` | Callback function to get the current thread ID |
@@ -48,6 +48,6 @@ LVGL profiler built-in configuration structure.
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_profiler_builtin.h"]}
-  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h", "lv_types.h"]}
+  includes={["lv_public_api.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

@@ -13,7 +13,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="_lv_svg_tokenizer" file="libs/svg/lv_svg_token.h" line={63} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_token.h#L63">
+<ApiMember kind="function" name="_lv_svg_tokenizer" file="libs/svg/lv_svg_token.h" line={63} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_token.h#L63">
 
 ### _lv_svg_tokenizer
 
@@ -28,18 +28,18 @@ bool _lv_svg_tokenizer(const char *svg_data, uint32_t len, svg_token_process cb,
 | Name | Type | Description |
 |------|------|-------------|
 | `svg_data` | `const char *` | pointer to SVG data |
-| `len` | <ApiLink name="uint32_t" /> | length of the SVG data |
+| `len` | `uint32_t` | length of the SVG data |
 | `cb` | <ApiLink name="svg_token_process" /> | callback function to be called for each token |
 | `user_data` | `void *` | custom data to be passed to the callback function |
 
-**Returns:** <ApiLink name="bool" /> — true: SVG data successfully parsed, false: error occurred
+**Returns:** `bool` — true: SVG data successfully parsed, false: error occurred
 
 
 </ApiMember>
 
 ## Enums
 
-<ApiMember kind="enum" name="_lv_svg_token_type_t" file="libs/svg/lv_svg_token.h" line={27} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_token.h#L27">
+<ApiMember kind="enum" name="_lv_svg_token_type_t" file="libs/svg/lv_svg_token.h" line={27} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_token.h#L27">
 
 ### _lv_svg_token_type_t
 
@@ -77,9 +77,9 @@ bool _lv_svg_tokenizer(const char *svg_data, uint32_t len, svg_token_process cb,
 | `start` | `const char *` |  |
 | `end` | `const char *` |  |
 | `type` | <ApiLink name="_lv_svg_token_type_t" /> |  |
-| `flat` | <ApiLink name="bool" /> |  |
+| `flat` | `bool` |  |
 | `cur_attr` | <ApiLink name="_lv_svg_token_attr_t" display="_lv_svg_token_attr_t *" /> |  |
-| `attrs` | <ApiLink name="lv_array_t" /> |  |
+| `attrs` | `lv_array_t` |  |
 
 
 </ApiMember>
@@ -92,7 +92,7 @@ bool _lv_svg_tokenizer(const char *svg_data, uint32_t len, svg_token_process cb,
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="svg_token_process" file="libs/svg/lv_svg_token.h" line={49} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_token.h#L49">
+<ApiMember kind="typedef" name="svg_token_process" file="libs/svg/lv_svg_token.h" line={49} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_token.h#L49">
 
 ### svg_token_process
 
@@ -111,7 +111,7 @@ typedef bool(* svg_token_process) (_lv_svg_token_t *token, void *user_data)
 
 ## Macros
 
-<ApiMember kind="macro" name="SVG_TOKEN_LEN" file="libs/svg/lv_svg_token.h" line={21} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_token.h#L21">
+<ApiMember kind="macro" name="SVG_TOKEN_LEN" file="libs/svg/lv_svg_token.h" line={21} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_token.h#L21">
 
 ### SVG_TOKEN_LEN
 
@@ -126,7 +126,7 @@ typedef bool(* svg_token_process) (_lv_svg_token_t *token, void *user_data)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_array.h"]}
+  includes={["lv_public_api.h"]}
   includedBy={["lv_svg_parser.h"]}
-  transitiveIncludes={["lv_conf_kconfig.h", "lv_types.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

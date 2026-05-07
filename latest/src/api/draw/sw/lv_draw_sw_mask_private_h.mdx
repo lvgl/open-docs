@@ -13,7 +13,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_sw_mask_cleanup" file="draw/sw/lv_draw_sw_mask_private.h" line={145} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/sw/lv_draw_sw_mask_private.h#L145">
+<ApiMember kind="function" name="lv_draw_sw_mask_cleanup" file="draw/sw/lv_draw_sw_mask_private.h" line={145} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/sw/lv_draw_sw_mask_private.h#L145">
 
 ### lv_draw_sw_mask_cleanup
 
@@ -34,13 +34,13 @@ void lv_draw_sw_mask_cleanup(void)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `buf` | <ApiLink name="uint8_t" display="uint8_t *" /> |  |
-| `cir_opa` | <ApiLink name="lv_opa_t" display="lv_opa_t *" /> | Opacity of values on the circumference of an 1/4 circle |
-| `x_start_on_y` | <ApiLink name="uint16_t" display="uint16_t *" /> | The x coordinate of the circle for each y value |
-| `opa_start_on_y` | <ApiLink name="uint16_t" display="uint16_t *" /> | The index of `cir_opa` for each y value |
-| `life` | <ApiLink name="int32_t" /> | How many times the entry way used |
-| `used_cnt` | <ApiLink name="uint32_t" /> | Like a semaphore to count the referencing masks |
-| `radius` | <ApiLink name="int32_t" /> | The radius of the entry |
+| `buf` | `uint8_t *` |  |
+| `cir_opa` | `lv_opa_t *` | Opacity of values on the circumference of an 1/4 circle |
+| `x_start_on_y` | `uint16_t *` | The x coordinate of the circle for each y value |
+| `opa_start_on_y` | `uint16_t *` | The index of `cir_opa` for each y value |
+| `life` | `int32_t` | How many times the entry way used |
+| `used_cnt` | `uint32_t` | Like a semaphore to count the referencing masks |
+| `radius` | `int32_t` | The radius of the entry |
 
 
 </ApiMember>
@@ -63,18 +63,18 @@ void lv_draw_sw_mask_cleanup(void)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `dsc` | <ApiLink name="lv_draw_sw_mask_common_dsc_t" /> | The first element must be the common descriptor |
-| `p1` | <ApiLink name="lv_point_t" /> |  |
-| `p2` | <ApiLink name="lv_point_t" /> |  |
+| `dsc` | `lv_draw_sw_mask_common_dsc_t` | The first element must be the common descriptor |
+| `p1` | `lv_point_t` |  |
+| `p2` | `lv_point_t` |  |
 | `side` | <ApiLink name="lv_draw_sw_mask_line_side_t" /> |  |
 | `cfg` | <ApiLink name="_lv_draw_sw_mask_line_param_t" display="struct _lv_draw_sw_mask_line_param_t" /> |  |
-| `origo` | <ApiLink name="lv_point_t" /> | A point of the line |
-| `xy_steep` | <ApiLink name="int32_t" /> | X / (1024*Y) steepness (X is 0..1023 range). What is the change of X in 1024 Y? |
-| `yx_steep` | <ApiLink name="int32_t" /> | Y / (1024*X) steepness (Y is 0..1023 range). What is the change of Y in 1024 X? |
-| `steep` | <ApiLink name="int32_t" /> | Helper which stores yx_steep for flat lines and xy_steep for steep (non flat) lines |
-| `spx` | <ApiLink name="int32_t" /> | Steepness in 1 px in 0..255 range. Used only by flat lines. |
-| `flat` | <ApiLink name="uint8_t" /> | 1: It's a flat line? (Near to horizontal) |
-| `inv` | <ApiLink name="uint8_t" /> | Invert the mask. The default is: Keep the left part. It is used to select left/right/top/bottom |
+| `origo` | `lv_point_t` | A point of the line |
+| `xy_steep` | `int32_t` | X / (1024*Y) steepness (X is 0..1023 range). What is the change of X in 1024 Y? |
+| `yx_steep` | `int32_t` | Y / (1024*X) steepness (Y is 0..1023 range). What is the change of Y in 1024 X? |
+| `steep` | `int32_t` | Helper which stores yx_steep for flat lines and xy_steep for steep (non flat) lines |
+| `spx` | `int32_t` | Steepness in 1 px in 0..255 range. Used only by flat lines. |
+| `flat` | `uint8_t` | 1: It's a flat line? (Near to horizontal) |
+| `inv` | `uint8_t` | Invert the mask. The default is: Keep the left part. It is used to select left/right/top/bottom |
 
 
 </ApiMember>
@@ -85,14 +85,14 @@ void lv_draw_sw_mask_cleanup(void)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `dsc` | <ApiLink name="lv_draw_sw_mask_common_dsc_t" /> | The first element must be the common descriptor |
-| `vertex_p` | <ApiLink name="lv_point_t" /> |  |
-| `start_angle` | <ApiLink name="int32_t" /> |  |
-| `end_angle` | <ApiLink name="int32_t" /> |  |
+| `dsc` | `lv_draw_sw_mask_common_dsc_t` | The first element must be the common descriptor |
+| `vertex_p` | `lv_point_t` |  |
+| `start_angle` | `int32_t` |  |
+| `end_angle` | `int32_t` |  |
 | `cfg` | <ApiLink name="_lv_draw_sw_mask_angle_param_t" display="struct _lv_draw_sw_mask_angle_param_t" /> |  |
-| `start_line` | <ApiLink name="lv_draw_sw_mask_line_param_t" /> |  |
-| `end_line` | <ApiLink name="lv_draw_sw_mask_line_param_t" /> |  |
-| `delta_deg` | <ApiLink name="uint16_t" /> |  |
+| `start_line` | `lv_draw_sw_mask_line_param_t` |  |
+| `end_line` | `lv_draw_sw_mask_line_param_t` |  |
+| `delta_deg` | `uint16_t` |  |
 
 
 </ApiMember>
@@ -103,10 +103,10 @@ void lv_draw_sw_mask_cleanup(void)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `dsc` | <ApiLink name="lv_draw_sw_mask_common_dsc_t" /> | The first element must be the common descriptor |
-| `rect` | <ApiLink name="lv_area_t" /> |  |
-| `radius` | <ApiLink name="int32_t" /> |  |
-| `outer` | <ApiLink name="uint8_t" /> | Invert the mask. 0: Keep the pixels inside. |
+| `dsc` | `lv_draw_sw_mask_common_dsc_t` | The first element must be the common descriptor |
+| `rect` | `lv_area_t` |  |
+| `radius` | `int32_t` |  |
+| `outer` | `uint8_t` | Invert the mask. 0: Keep the pixels inside. |
 | `cfg` | <ApiLink name="_lv_draw_sw_mask_radius_param_t" display="struct _lv_draw_sw_mask_radius_param_t" /> |  |
 | `circle` | <ApiLink name="lv_draw_sw_mask_radius_circle_dsc_t" display="lv_draw_sw_mask_radius_circle_dsc_t *" /> |  |
 
@@ -119,12 +119,12 @@ void lv_draw_sw_mask_cleanup(void)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `dsc` | <ApiLink name="lv_draw_sw_mask_common_dsc_t" /> | The first element must be the common descriptor |
-| `coords` | <ApiLink name="lv_area_t" /> |  |
-| `y_top` | <ApiLink name="int32_t" /> |  |
-| `y_bottom` | <ApiLink name="int32_t" /> |  |
-| `opa_top` | <ApiLink name="lv_opa_t" /> |  |
-| `opa_bottom` | <ApiLink name="lv_opa_t" /> |  |
+| `dsc` | `lv_draw_sw_mask_common_dsc_t` | The first element must be the common descriptor |
+| `coords` | `lv_area_t` |  |
+| `y_top` | `int32_t` |  |
+| `y_bottom` | `int32_t` |  |
+| `opa_top` | `lv_opa_t` |  |
+| `opa_bottom` | `lv_opa_t` |  |
 | `cfg` | <ApiLink name="_lv_draw_sw_mask_fade_param_t" display="struct _lv_draw_sw_mask_fade_param_t" /> |  |
 
 
@@ -138,7 +138,7 @@ void lv_draw_sw_mask_cleanup(void)
 |--------|------|-------------|
 | `dsc` | <ApiLink name="lv_draw_sw_mask_common_dsc_t" /> | The first element must be the common descriptor |
 | `coords` | <ApiLink name="lv_area_t" /> |  |
-| `map` | <ApiLink name="lv_opa_t" display="const lv_opa_t *" /> |  |
+| `map` | `const lv_opa_t *` |  |
 | `cfg` | <ApiLink name="struct" />` `<ApiLink name="_lv_draw_sw_mask_map_param_t" /> |  |
 
 
@@ -146,7 +146,7 @@ void lv_draw_sw_mask_cleanup(void)
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_draw_sw_mask_radius_circle_dsc_arr_t" file="draw/sw/lv_draw_sw_mask_private.h" line={135} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/sw/lv_draw_sw_mask_private.h#L135">
+<ApiMember kind="typedef" name="lv_draw_sw_mask_radius_circle_dsc_arr_t" file="draw/sw/lv_draw_sw_mask_private.h" line={135} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/sw/lv_draw_sw_mask_private.h#L135">
 
 ### lv_draw_sw_mask_radius_circle_dsc_arr_t
 
@@ -162,5 +162,5 @@ typedef lv_draw_sw_mask_radius_circle_dsc_t lv_draw_sw_mask_radius_circle_dsc_ar
 <FileIncludes
   includes={["lv_draw_sw_mask.h"]}
   includedBy={["lv_global.h"]}
-  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_types.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_draw_private.h", "lv_draw_sw.h", "lv_draw_sw_blend.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h", "lv_pthread.h", "lv_public_api.h", "lvgl.h"]}
 />

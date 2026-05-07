@@ -11,7 +11,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="_lv_svg_parser_init" file="libs/svg/lv_svg_parser.h" line={48} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_parser.h#L48">
+<ApiMember kind="function" name="_lv_svg_parser_init" file="libs/svg/lv_svg_parser.h" line={49} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_parser.h#L49">
 
 ### _lv_svg_parser_init
 
@@ -30,7 +30,7 @@ void _lv_svg_parser_init(_lv_svg_parser_t *parser)
 
 </ApiMember>
 
-<ApiMember kind="function" name="_lv_svg_parser_deinit" file="libs/svg/lv_svg_parser.h" line={54} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_parser.h#L54">
+<ApiMember kind="function" name="_lv_svg_parser_deinit" file="libs/svg/lv_svg_parser.h" line={55} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_parser.h#L55">
 
 ### _lv_svg_parser_deinit
 
@@ -49,7 +49,7 @@ void _lv_svg_parser_deinit(_lv_svg_parser_t *parser)
 
 </ApiMember>
 
-<ApiMember kind="function" name="_lv_svg_parser_token" file="libs/svg/lv_svg_parser.h" line={62} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_parser.h#L62">
+<ApiMember kind="function" name="_lv_svg_parser_token" file="libs/svg/lv_svg_parser.h" line={63} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_parser.h#L63">
 
 ### _lv_svg_parser_token
 
@@ -66,12 +66,12 @@ bool _lv_svg_parser_token(_lv_svg_parser_t *parser, const _lv_svg_token_t *token
 | `parser` | <ApiLink name="_lv_svg_parser_t" display="_lv_svg_parser_t *" /> | pointer to a parser object |
 | `token` | <ApiLink name="_lv_svg_token_t" display="const _lv_svg_token_t *" /> | pointer to a token object |
 
-**Returns:** <ApiLink name="bool" /> — true: the parsing is finished, false: the parsing is not finished yet.
+**Returns:** `bool` — true: the parsing is finished, false: the parsing is not finished yet.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="_lv_svg_parser_is_finish" file="libs/svg/lv_svg_parser.h" line={69} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_parser.h#L69">
+<ApiMember kind="function" name="_lv_svg_parser_is_finish" file="libs/svg/lv_svg_parser.h" line={70} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_parser.h#L70">
 
 ### _lv_svg_parser_is_finish
 
@@ -87,12 +87,12 @@ bool _lv_svg_parser_is_finish(_lv_svg_parser_t *parser)
 |------|------|-------------|
 | `parser` | <ApiLink name="_lv_svg_parser_t" display="_lv_svg_parser_t *" /> | pointer to a parser object |
 
-**Returns:** <ApiLink name="bool" /> — true: the parsing is finished, false: the parsing is not finished yet.
+**Returns:** `bool` — true: the parsing is finished, false: the parsing is not finished yet.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="_lv_svg_dump_tree" file="libs/svg/lv_svg_parser.h" line={76} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_parser.h#L76">
+<ApiMember kind="function" name="_lv_svg_dump_tree" file="libs/svg/lv_svg_parser.h" line={77} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_parser.h#L77">
 
 ### _lv_svg_dump_tree
 
@@ -106,7 +106,7 @@ void _lv_svg_dump_tree(lv_svg_node_t *root, int depth)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `root` | <ApiLink name="lv_svg_node_t" display="lv_svg_node_t *" /> | pointer to the root of the SVG tree |
+| `root` | `lv_svg_node_t *` | pointer to the root of the SVG tree |
 | `depth` | `int` | the depth of the current node in the tree |
 
 
@@ -114,7 +114,7 @@ void _lv_svg_dump_tree(lv_svg_node_t *root, int depth)
 
 ## Enums
 
-<ApiMember kind="enum" name="_lv_svg_parser_state_t" file="libs/svg/lv_svg_parser.h" line={26} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_parser.h#L26">
+<ApiMember kind="enum" name="_lv_svg_parser_state_t" file="libs/svg/lv_svg_parser.h" line={27} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_parser.h#L27">
 
 ### _lv_svg_parser_state_t
 
@@ -134,12 +134,12 @@ void _lv_svg_dump_tree(lv_svg_node_t *root, int depth)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `state` | <ApiLink name="uint16_t" /> |  |
+| `state` | `uint16_t` |  |
 | `ignore_name` | `char *` |  |
-| `ignore_len` | <ApiLink name="uint32_t" /> |  |
-| `dpi` | <ApiLink name="int32_t" /> |  |
-| `doc_root` | <ApiLink name="lv_svg_node_t" display="lv_svg_node_t *" /> |  |
-| `cur_node` | <ApiLink name="lv_svg_node_t" display="lv_svg_node_t *" /> |  |
+| `ignore_len` | `uint32_t` |  |
+| `dpi` | `int32_t` |  |
+| `doc_root` | `lv_svg_node_t *` |  |
+| `cur_node` | `lv_svg_node_t *` |  |
 
 
 </ApiMember>
@@ -156,6 +156,6 @@ void _lv_svg_dump_tree(lv_svg_node_t *root, int depth)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_svg.h", "lv_svg_token.h"]}
-  transitiveIncludes={["lv_array.h", "lv_conf_kconfig.h", "lv_tree.h", "lv_types.h"]}
+  includes={["lv_public_api.h", "lv_svg_token.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

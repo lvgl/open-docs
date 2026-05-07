@@ -30,11 +30,11 @@ api:
 | Member | Type | Description |
 |--------|------|-------------|
 | `languages` | `const char **` |  |
-| `language_cnt` | <ApiLink name="uint32_t" /> |  |
-| `is_static` | <ApiLink name="uint32_t" /> |  |
+| `language_cnt` | `uint32_t` |  |
+| `is_static` | `uint32_t` |  |
 | `tag_p` | `const char **` |  |
 | `translation_p` | `const char **` |  |
-| `translation_array` | <ApiLink name="lv_array_t" /> |  |
+| `translation_array` | `lv_array_t` |  |
 
 
 </ApiMember>
@@ -42,6 +42,6 @@ api:
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "stdint.h", "lv_array.h"]}
-  transitiveIncludes={["lv_conf_kconfig.h", "lv_types.h"]}
+  includes={["lv_public_api.h", "stdint.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

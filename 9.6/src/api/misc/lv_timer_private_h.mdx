@@ -12,7 +12,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_timer_core_init" file="misc/lv_timer_private.h" line={70} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_timer_private.h#L70">
+<ApiMember kind="function" name="lv_timer_core_init" file="misc/lv_timer_private.h" line={69} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_timer_private.h#L69">
 
 ### lv_timer_core_init
 
@@ -25,7 +25,7 @@ void lv_timer_core_init(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_core_deinit" file="misc/lv_timer_private.h" line={75} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_timer_private.h#L75">
+<ApiMember kind="function" name="lv_timer_core_deinit" file="misc/lv_timer_private.h" line={74} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_timer_private.h#L74">
 
 ### lv_timer_core_deinit
 
@@ -48,14 +48,14 @@ Descriptor of a lv_timer
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `ext_data` | <ApiLink name="lv_ext_data_t" /> |  |
-| `period` | <ApiLink name="uint32_t" /> | How often the timer should run |
-| `last_run` | <ApiLink name="uint32_t" /> | Last time the timer ran |
-| `timer_cb` | <ApiLink name="lv_timer_cb_t" /> | Timer function |
+| `ext_data` | `lv_ext_data_t` |  |
+| `period` | `uint32_t` | How often the timer should run |
+| `last_run` | `uint32_t` | Last time the timer ran |
+| `timer_cb` | `lv_timer_cb_t` | Timer function |
 | `user_data` | `void *` | Custom user data |
-| `repeat_count` | <ApiLink name="int32_t" /> | 1: One time; -1 : infinity; n\>0: residual times |
+| `repeat_count` | `int32_t` | 1: One time; -1 : infinity; n\>0: residual times |
 | `paused` | `volatile int` |  |
-| `auto_delete` | <ApiLink name="uint32_t" /> |  |
+| `auto_delete` | `uint32_t` |  |
 
 
 </ApiMember>
@@ -66,18 +66,18 @@ Descriptor of a lv_timer
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `timer_ll` | <ApiLink name="lv_ll_t" /> | Linked list to store the lv_timers |
-| `lv_timer_run` | <ApiLink name="bool" /> |  |
-| `idle_last` | <ApiLink name="uint8_t" /> |  |
-| `timer_deleted` | <ApiLink name="bool" /> |  |
-| `timer_created` | <ApiLink name="bool" /> |  |
-| `timer_time_until_next` | <ApiLink name="uint32_t" display="volatile uint32_t" /> |  |
-| `already_running` | <ApiLink name="bool" /> |  |
-| `periodic_last_tick` | <ApiLink name="uint32_t" /> |  |
-| `busy_time` | <ApiLink name="uint32_t" /> |  |
-| `idle_period_start` | <ApiLink name="uint32_t" /> |  |
-| `run_cnt` | <ApiLink name="uint32_t" /> |  |
-| `resume_cb` | <ApiLink name="lv_timer_handler_resume_cb_t" /> |  |
+| `timer_ll` | `lv_ll_t` | Linked list to store the lv_timers |
+| `lv_timer_run` | `bool` |  |
+| `idle_last` | `uint8_t` |  |
+| `timer_deleted` | `bool` |  |
+| `timer_created` | `bool` |  |
+| `timer_time_until_next` | `volatile uint32_t` |  |
+| `already_running` | `bool` |  |
+| `periodic_last_tick` | `uint32_t` |  |
+| `busy_time` | `uint32_t` |  |
+| `idle_period_start` | `uint32_t` |  |
+| `run_cnt` | `uint32_t` |  |
+| `resume_cb` | `lv_timer_handler_resume_cb_t` |  |
 | `resume_data` | `void *` |  |
 
 
@@ -86,7 +86,7 @@ Descriptor of a lv_timer
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_ext_data.h", "lv_timer.h"]}
+  includes={["lv_public_api.h"]}
   includedBy={["lv_global.h"]}
-  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h", "lv_ll.h", "lv_tick.h", "lv_types.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

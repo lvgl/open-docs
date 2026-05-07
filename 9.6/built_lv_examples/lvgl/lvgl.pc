@@ -1,5 +1,5 @@
 prefix="/usr/local"
-includedir="${prefix}/include/lvgl"
+includedir="${prefix}/include"
 libdir=${prefix}/lib
 
 Name: lvgl

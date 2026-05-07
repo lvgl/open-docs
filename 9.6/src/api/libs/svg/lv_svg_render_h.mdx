@@ -2,20 +2,20 @@
 title: lv_svg_render.h
 description: API reference for lv_svg_render.h
 api:
-  functions: [lv_svg_render_init, lv_svg_render_create, lv_svg_render_delete, lv_svg_render_get_size, lv_svg_render_get_viewport_size, lv_draw_svg_render, lv_draw_svg]
+  functions: [lv_svg_render_init, lv_svg_render_create, lv_svg_render_delete, lv_svg_render_get_size, lv_svg_render_get_viewport_size, lv_draw_svg_render]
   structs: [_lv_svg_render_obj, _lv_svg_render_class, _lv_svg_render_hal]
   typedefs: [lv_svg_render_obj_t, lv_svg_render_class, lv_svg_render_hal_t]
   macros: [LV_SVG_RENDER_OBJ]
 ---
 
-<ApiSummary functions={7} structs={3} typedefs={3} macros={1} />
+<ApiSummary functions={6} structs={3} typedefs={3} macros={1} />
 
 ## Functions
 
-<ApiTabs items={["Getters (2)","Other (5)"]}>
+<ApiTabs items={["Getters (2)","Other (4)"]}>
 <ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_svg_render_get_size" file="libs/svg/lv_svg_render.h" line={94} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_render.h#L94">
+<ApiMember kind="function" name="lv_svg_render_get_size" file="libs/svg/lv_svg_render.h" line={92} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_render.h#L92">
 
 ### lv_svg_render_get_size
 
@@ -31,12 +31,12 @@ uint32_t lv_svg_render_get_size(const lv_svg_render_obj_t *render)
 |------|------|-------------|
 | `render` | <ApiLink name="lv_svg_render_obj_t" display="const lv_svg_render_obj_t *" /> | pointer to the SVG render object |
 
-**Returns:** <ApiLink name="uint32_t" /> — the bytes of SVG render objects
+**Returns:** `uint32_t` — the bytes of SVG render objects
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_svg_render_get_viewport_size" file="libs/svg/lv_svg_render.h" line={103} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_render.h#L103">
+<ApiMember kind="function" name="lv_svg_render_get_viewport_size" file="libs/svg/lv_svg_render.h" line={101} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_render.h#L101">
 
 ### lv_svg_render_get_viewport_size
 
@@ -54,15 +54,15 @@ lv_result_t lv_svg_render_get_viewport_size(const lv_svg_render_obj_t *render, f
 | `width` | `float *` | pointer to save the width of the viewport of the SVG render object |
 | `height` | `float *` | pointer to save the height of the viewport of the SVG render object |
 
-**Returns:** <ApiLink name="lv_result_t" /> — lv_result_t, LV_RESULT_OK if success, LV_RESULT_INVALID if fail
+**Returns:** `lv_result_t` — lv_result_t, LV_RESULT_OK if success, LV_RESULT_INVALID if fail
 
 
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Other (5)">
+<ApiTab value="Other (4)">
 
-<ApiMember kind="function" name="lv_svg_render_init" file="libs/svg/lv_svg_render.h" line={74} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_render.h#L74">
+<ApiMember kind="function" name="lv_svg_render_init" file="libs/svg/lv_svg_render.h" line={72} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_render.h#L72">
 
 ### lv_svg_render_init
 
@@ -81,7 +81,7 @@ void lv_svg_render_init(const lv_svg_render_hal_t *hal)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_svg_render_create" file="libs/svg/lv_svg_render.h" line={81} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_render.h#L81">
+<ApiMember kind="function" name="lv_svg_render_create" file="libs/svg/lv_svg_render.h" line={79} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_render.h#L79">
 
 ### lv_svg_render_create
 
@@ -95,14 +95,14 @@ lv_svg_render_obj_t * lv_svg_render_create(const lv_svg_node_t *svg_doc)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `svg_doc` | <ApiLink name="lv_svg_node_t" display="const lv_svg_node_t *" /> | pointer to the SVG document |
+| `svg_doc` | `const lv_svg_node_t *` | pointer to the SVG document |
 
 **Returns:** <ApiLink name="lv_svg_render_obj_t" display="lv_svg_render_obj_t *" /> — pointer to the new SVG render object
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_svg_render_delete" file="libs/svg/lv_svg_render.h" line={87} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_render.h#L87">
+<ApiMember kind="function" name="lv_svg_render_delete" file="libs/svg/lv_svg_render.h" line={85} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_render.h#L85">
 
 ### lv_svg_render_delete
 
@@ -121,7 +121,7 @@ void lv_svg_render_delete(lv_svg_render_obj_t *render)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_svg_render" file="libs/svg/lv_svg_render.h" line={110} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_render.h#L110">
+<ApiMember kind="function" name="lv_draw_svg_render" file="libs/svg/lv_svg_render.h" line={108} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_render.h#L108">
 
 ### lv_draw_svg_render
 
@@ -135,28 +135,8 @@ void lv_draw_svg_render(lv_draw_vector_dsc_t *dsc, const lv_svg_render_obj_t *re
 
 | Name | Type | Description |
 |------|------|-------------|
-| `dsc` | <ApiLink name="lv_draw_vector_dsc_t" display="lv_draw_vector_dsc_t *" /> | pointer to the vector graphics descriptor |
+| `dsc` | `lv_draw_vector_dsc_t *` | pointer to the vector graphics descriptor |
 | `render` | <ApiLink name="lv_svg_render_obj_t" display="const lv_svg_render_obj_t *" /> | pointer to the SVG render object to render |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_draw_svg" file="libs/svg/lv_svg_render.h" line={117} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_render.h#L117">
-
-### lv_draw_svg
-
-Draw an SVG document to a layer.
-
-```c
-void lv_draw_svg(lv_layer_t *layer, const lv_svg_node_t *svg_doc)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to the target layer |
-| `svg_doc` | <ApiLink name="lv_svg_node_t" display="const lv_svg_node_t *" /> | pointer to the SVG document to draw |
 
 
 </ApiMember>
@@ -172,11 +152,11 @@ void lv_draw_svg(lv_layer_t *layer, const lv_svg_node_t *svg_doc)
 | Member | Type | Description |
 |--------|------|-------------|
 | `next` | <ApiLink name="_lv_svg_render_obj" display="struct _lv_svg_render_obj *" /> |  |
-| `tag` | <ApiLink name="lv_svg_tag_t" /> |  |
-| `flags` | <ApiLink name="uint32_t" /> |  |
+| `tag` | `lv_svg_tag_t` |  |
+| `flags` | `uint32_t` |  |
 | `id` | `char *` |  |
-| `dsc` | <ApiLink name="lv_vector_path_ctx_t" /> |  |
-| `matrix` | <ApiLink name="lv_matrix_t" /> |  |
+| `dsc` | `lv_vector_path_ctx_t` |  |
+| `matrix` | `lv_matrix_t` |  |
 | `head` | <ApiLink name="_lv_svg_render_obj" display="struct _lv_svg_render_obj *" /> |  |
 | `fill_ref` | `char *` |  |
 | `stroke_ref` | `char *` |  |
@@ -216,7 +196,7 @@ void lv_draw_svg(lv_layer_t *layer, const lv_svg_node_t *svg_doc)
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_svg_render_obj_t" file="libs/svg/lv_svg_render.h" line={47} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_render.h#L47">
+<ApiMember kind="typedef" name="lv_svg_render_obj_t" file="libs/svg/lv_svg_render.h" line={45} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_render.h#L45">
 
 ### lv_svg_render_obj_t
 
@@ -236,7 +216,7 @@ typedef struct _lv_svg_render_obj lv_svg_render_obj_t
 
 </TypeUsedBy>
 
-<ApiMember kind="typedef" name="lv_svg_render_class" file="libs/svg/lv_svg_render.h" line={59} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_render.h#L59">
+<ApiMember kind="typedef" name="lv_svg_render_class" file="libs/svg/lv_svg_render.h" line={57} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_render.h#L57">
 
 ### lv_svg_render_class
 
@@ -247,7 +227,7 @@ typedef struct _lv_svg_render_class lv_svg_render_class
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_svg_render_hal_t" file="libs/svg/lv_svg_render.h" line={64} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_render.h#L64">
+<ApiMember kind="typedef" name="lv_svg_render_hal_t" file="libs/svg/lv_svg_render.h" line={62} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_render.h#L62">
 
 ### lv_svg_render_hal_t
 
@@ -266,7 +246,7 @@ typedef struct _lv_svg_render_hal lv_svg_render_hal_t
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_SVG_RENDER_OBJ" file="libs/svg/lv_svg_render.h" line={27} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/libs/svg/lv_svg_render.h#L27">
+<ApiMember kind="macro" name="LV_SVG_RENDER_OBJ" file="libs/svg/lv_svg_render.h" line={25} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/libs/svg/lv_svg_render.h#L25">
 
 ### LV_SVG_RENDER_OBJ
 
@@ -281,6 +261,6 @@ typedef struct _lv_svg_render_hal lv_svg_render_hal_t
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_svg.h", "lv_types.h", "lv_draw_vector_private.h"]}
-  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_draw.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_vector.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_layout.h", "lv_ll.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_tick.h", "lv_timer.h", "lv_tree.h"]}
+  includes={["lv_public_api.h", "lv_draw_vector_private.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_draw_private.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h", "lv_pthread.h", "lvgl.h"]}
 />

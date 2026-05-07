@@ -12,7 +12,7 @@ api:
 <ApiTabs items={["Getters (1)","Other (1)"]}>
 <ApiTab value="Getters (1)">
 
-<ApiMember kind="function" name="pxp_get_default_cfg" file="draw/nxp/pxp/lv_pxp_osa.h" line={49} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nxp/pxp/lv_pxp_osa.h#L49">
+<ApiMember kind="function" name="pxp_get_default_cfg" file="draw/nxp/pxp/lv_pxp_osa.h" line={49} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nxp/pxp/lv_pxp_osa.h#L49">
 
 ### pxp_get_default_cfg
 
@@ -28,7 +28,7 @@ pxp_cfg_t * pxp_get_default_cfg(void)
 </ApiTab>
 <ApiTab value="Other (1)">
 
-<ApiMember kind="function" name="PXP_IRQHandler" file="draw/nxp/pxp/lv_pxp_osa.h" line={44} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/draw/nxp/pxp/lv_pxp_osa.h#L44">
+<ApiMember kind="function" name="PXP_IRQHandler" file="draw/nxp/pxp/lv_pxp_osa.h" line={44} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/draw/nxp/pxp/lv_pxp_osa.h#L44">
 
 ### PXP_IRQHandler
 
@@ -48,6 +48,6 @@ void PXP_IRQHandler(void)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_pxp_cfg.h"]}
-  transitiveIncludes={["lv_conf_kconfig.h", "lv_log.h", "lv_types.h"]}
+  includes={["lv_public_api.h", "lv_pxp_cfg.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />

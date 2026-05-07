@@ -9,7 +9,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_utils_bsearch" file="misc/lv_utils.h" line={49} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_utils.h#L49">
+<ApiMember kind="function" name="lv_utils_bsearch" file="misc/lv_utils.h" line={48} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_utils.h#L48">
 
 ### lv_utils_bsearch
 
@@ -25,8 +25,8 @@ void * lv_utils_bsearch(const void *key, const void *base, size_t n, size_t size
 |------|------|-------------|
 | `key` | `const void *` | Pointer to item being searched for |
 | `base` | `const void *` | Pointer to first element to search |
-| `n` | <ApiLink name="size_t" /> | Number of elements |
-| `size` | <ApiLink name="size_t" /> | Size of each element |
+| `n` | `size_t` | Number of elements |
+| `size` | `size_t` | Size of each element |
 | `cmp` | `int(*)(const void *pRef, const void *pElement)` | Pointer to comparison function (see unicode_list_compare() as a comparison function example) |
 
 **Returns:** `void *` — a pointer to a matching item, or NULL if none exists.
@@ -42,7 +42,7 @@ Items in the array must be in ascending order.
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_buf_save_to_file" file="misc/lv_utils.h" line={58} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_utils.h#L58">
+<ApiMember kind="function" name="lv_draw_buf_save_to_file" file="misc/lv_utils.h" line={57} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_utils.h#L57">
 
 ### lv_draw_buf_save_to_file
 
@@ -56,15 +56,15 @@ lv_result_t lv_draw_buf_save_to_file(const lv_draw_buf_t *draw_buf, const char *
 
 | Name | Type | Description |
 |------|------|-------------|
-| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="const lv_draw_buf_t *" /> | pointer to a draw buffer |
+| `draw_buf` | `const lv_draw_buf_t *` | pointer to a draw buffer |
 | `path` | `const char *` | path to the file to save |
 
-**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: error
+**Returns:** `lv_result_t` — LV_RESULT_OK: success; LV_RESULT_INVALID: error
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_swap_bytes_32" file="misc/lv_utils.h" line={65} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_utils.h#L65">
+<ApiMember kind="function" name="lv_swap_bytes_32" file="misc/lv_utils.h" line={64} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_utils.h#L64">
 
 ### lv_swap_bytes_32
 
@@ -78,14 +78,14 @@ static uint32_t lv_swap_bytes_32(uint32_t x)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `x` | <ApiLink name="uint32_t" /> | a 32-bit value. |
+| `x` | `uint32_t` | a 32-bit value. |
 
-**Returns:** <ApiLink name="uint32_t" /> — the value `x` with reversed byte-order.
+**Returns:** `uint32_t` — the value `x` with reversed byte-order.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_swap_bytes_16" file="misc/lv_utils.h" line={78} url="https://github.com/lvgl/lvgl/tree/65ff21fa152444870f888d2add8ffad20350f0f9/src/misc/lv_utils.h#L78">
+<ApiMember kind="function" name="lv_swap_bytes_16" file="misc/lv_utils.h" line={77} url="https://github.com/lvgl/lvgl/tree/998021546f59bf6a04d850effb6918e89adff23b/src/misc/lv_utils.h#L77">
 
 ### lv_swap_bytes_16
 
@@ -99,9 +99,9 @@ static uint16_t lv_swap_bytes_16(uint16_t x)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `x` | <ApiLink name="uint16_t" /> | a 16-bit value. |
+| `x` | `uint16_t` | a 16-bit value. |
 
-**Returns:** <ApiLink name="uint16_t" /> — the value `x` with reversed byte-order.
+**Returns:** `uint16_t` — the value `x` with reversed byte-order.
 
 
 </ApiMember>
@@ -109,6 +109,6 @@ static uint16_t lv_swap_bytes_16(uint16_t x)
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_types.h", "lv_draw_buf.h"]}
-  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_image_dsc.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h"]}
+  includes={["lv_public_api.h"]}
+  transitiveIncludes={["lvgl.h"]}
 />
