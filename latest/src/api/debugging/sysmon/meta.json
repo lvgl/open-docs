@@ -1,7 +1,0 @@
-{
-  "title": "Sysmon",
-  "pages": [
-    "lv_sysmon_h",
-    "lv_sysmon_private_h"
-  ]
-}

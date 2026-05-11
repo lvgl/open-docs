@@ -1,9 +1,0 @@
-{
-  "title": "Stdlib",
-  "pages": [
-    "builtin",
-    "lv_mem_h",
-    "lv_sprintf_h",
-    "lv_string_h"
-  ]
-}

@@ -1,0 +1,451 @@
+---
+title: lv_anim_timeline.h
+description: API reference for lv_anim_timeline.h
+api:
+  functions: [lv_anim_timeline_create, lv_anim_timeline_delete, lv_anim_timeline_add, lv_anim_timeline_start, lv_anim_timeline_pause, lv_anim_timeline_set_reverse, lv_anim_timeline_set_delay, lv_anim_timeline_set_repeat_count, lv_anim_timeline_set_repeat_delay, lv_anim_timeline_set_progress, lv_anim_timeline_set_user_data, lv_anim_timeline_get_playtime, lv_anim_timeline_get_reverse, lv_anim_timeline_get_delay, lv_anim_timeline_get_progress, lv_anim_timeline_get_repeat_count, lv_anim_timeline_get_repeat_delay, lv_anim_timeline_get_user_data, lv_anim_timeline_merge]
+  structs: [_lv_anim_timeline_dsc_t]
+  typedefs: [lv_anim_timeline_dsc_t]
+  macros: [LV_ANIM_TIMELINE_PROGRESS_MAX]
+---
+
+<ApiSummary functions={19} structs={1} typedefs={1} macros={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (6)","Getters (7)","Other (6)"]}>
+<ApiTab value="Setters (6)">
+
+<ApiMember kind="function" name="lv_anim_timeline_set_reverse" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={80} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L80">
+
+### lv_anim_timeline_set_reverse
+
+Set the playback direction of the animation timeline.
+
+```c
+void lv_anim_timeline_set_reverse(lv_anim_timeline_t *at, bool reverse)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+| `reverse` | `bool` | whether to play in reverse. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_set_delay" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={88} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L88">
+
+### lv_anim_timeline_set_delay
+
+Set the time to wait before starting the animation. Applies only when playing from the very start, or reverse from the very end.
+
+```c
+void lv_anim_timeline_set_delay(lv_anim_timeline_t *at, uint32_t delay)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to an animation timeline |
+| `delay` | `uint32_t` | the delay time in milliseconds |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_set_repeat_count" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={95} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L95">
+
+### lv_anim_timeline_set_repeat_count
+
+Make the animation timeline repeat itself.
+
+```c
+void lv_anim_timeline_set_repeat_count(lv_anim_timeline_t *at, uint32_t cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+| `cnt` | `uint32_t` | repeat count or `LV_ANIM_REPEAT_INFINITE` for infinite repetition. 0: to disable repetition. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_set_repeat_delay" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={102} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L102">
+
+### lv_anim_timeline_set_repeat_delay
+
+Set a delay before repeating the animation timeline.
+
+```c
+void lv_anim_timeline_set_repeat_delay(lv_anim_timeline_t *at, uint32_t delay)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+| `delay` | `uint32_t` | delay in milliseconds before repeating the animation timeline. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_set_progress" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={109} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L109">
+
+### lv_anim_timeline_set_progress
+
+Set the progress of the animation timeline.
+
+```c
+void lv_anim_timeline_set_progress(lv_anim_timeline_t *at, uint16_t progress)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+| `progress` | `uint16_t` | set value 0~65535 to map 0~100% animation progress. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_set_user_data" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={116} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L116">
+
+### lv_anim_timeline_set_user_data
+
+Set the user_data of a an animation timeline
+
+```c
+void lv_anim_timeline_set_user_data(lv_anim_timeline_t *at, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+| `user_data` | `void *` | pointer to any data. Only the pointer will be saved. |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (7)">
+
+<ApiMember kind="function" name="lv_anim_timeline_get_playtime" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={123} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L123">
+
+### lv_anim_timeline_get_playtime
+
+Get the time used to play the animation timeline.
+
+```c
+uint32_t lv_anim_timeline_get_playtime(lv_anim_timeline_t *at)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+
+**Returns:** `uint32_t` — total time spent in animation timeline.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_get_reverse" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={130} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L130">
+
+### lv_anim_timeline_get_reverse
+
+Get whether the animation timeline is played in reverse.
+
+```c
+bool lv_anim_timeline_get_reverse(lv_anim_timeline_t *at)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+
+**Returns:** `bool` — return true if it is reverse playback.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_get_delay" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={137} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L137">
+
+### lv_anim_timeline_get_delay
+
+Get the wait time when playing from the very start, or reverse from the very end.
+
+```c
+uint32_t lv_anim_timeline_get_delay(lv_anim_timeline_t *at)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to an animation timeline |
+
+**Returns:** `uint32_t` — the remaining time in milliseconds
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_get_progress" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={144} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L144">
+
+### lv_anim_timeline_get_progress
+
+Get the progress of the animation timeline.
+
+```c
+uint16_t lv_anim_timeline_get_progress(lv_anim_timeline_t *at)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+
+**Returns:** `uint16_t` — return value 0~65535 to map 0~100% animation progress.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_get_repeat_count" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={150} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L150">
+
+### lv_anim_timeline_get_repeat_count
+
+Get repeat count of the animation timeline.
+
+```c
+uint32_t lv_anim_timeline_get_repeat_count(lv_anim_timeline_t *at)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_get_repeat_delay" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={156} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L156">
+
+### lv_anim_timeline_get_repeat_delay
+
+Get repeat delay of the animation timeline.
+
+```c
+uint32_t lv_anim_timeline_get_repeat_delay(lv_anim_timeline_t *at)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_get_user_data" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={162} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L162">
+
+### lv_anim_timeline_get_user_data
+
+Get the user_data of a an animation timeline
+
+```c
+void * lv_anim_timeline_get_user_data(lv_anim_timeline_t *at)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (6)">
+
+<ApiMember kind="function" name="lv_anim_timeline_create" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={46} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L46">
+
+### lv_anim_timeline_create
+
+Create an animation timeline.
+
+```c
+lv_anim_timeline_t * lv_anim_timeline_create(void)
+```
+
+**Returns:** <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> — pointer to the animation timeline.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_delete" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={52} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L52">
+
+### lv_anim_timeline_delete
+
+Delete animation timeline.
+
+```c
+void lv_anim_timeline_delete(lv_anim_timeline_t *at)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_add" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={60} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L60">
+
+### lv_anim_timeline_add
+
+Add animation to the animation timeline.
+
+```c
+void lv_anim_timeline_add(lv_anim_timeline_t *at, uint32_t start_time, const lv_anim_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+| `start_time` | `uint32_t` | the time the animation started on the timeline, note that start_time will override the value of delay. |
+| `a` | <ApiLink name="lv_anim_t" display="const lv_anim_t *" /> | pointer to an animation. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_start" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={67} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L67">
+
+### lv_anim_timeline_start
+
+Start the animation timeline.
+
+```c
+uint32_t lv_anim_timeline_start(lv_anim_timeline_t *at)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+
+**Returns:** `uint32_t` — total time spent in animation timeline.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_pause" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={73} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L73">
+
+### lv_anim_timeline_pause
+
+Pause the animation timeline.
+
+```c
+void lv_anim_timeline_pause(lv_anim_timeline_t *at)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `at` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | pointer to the animation timeline. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_timeline_merge" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={170} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L170">
+
+### lv_anim_timeline_merge
+
+Merge (add) all animations of a timeline to another
+
+```c
+void lv_anim_timeline_merge(lv_anim_timeline_t *dest, const lv_anim_timeline_t *src, int32_t delay)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dest` | <ApiLink name="lv_anim_timeline_t" display="lv_anim_timeline_t *" /> | merge animation into this timeline |
+| `src` | <ApiLink name="lv_anim_timeline_t" display="const lv_anim_timeline_t *" /> | merge the animations of this timeline |
+| `delay` | `int32_t` | add the animations with this extra delay |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="_lv_anim_timeline_dsc_t">
+
+### _lv_anim_timeline_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `anim` | <ApiLink name="lv_anim_t" /> |  |
+| `start_time` | `uint32_t` |  |
+| `is_started` | `uint8_t` |  |
+| `is_completed` | `uint8_t` |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_anim_timeline_dsc_t" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={35} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L35">
+
+### lv_anim_timeline_dsc_t
+
+```c
+typedef struct _lv_anim_timeline_dsc_t lv_anim_timeline_dsc_t
+```
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_ANIM_TIMELINE_PROGRESS_MAX" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h" line={23} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_anim_timeline.h#L23">
+
+### LV_ANIM_TIMELINE_PROGRESS_MAX
+
+```c
+#define LV_ANIM_TIMELINE_PROGRESS_MAX 0xFFFF
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_anim.h"]}
+  includedBy={["lv_api_map_v8.h", "lvgl.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h", "lv_ext_data.h", "lv_math.h", "lv_types.h"]}
+/>

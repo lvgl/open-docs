@@ -1,0 +1,157 @@
+---
+title: lv_draw_line.h
+description: API reference for lv_draw_line.h
+api:
+  functions: [lv_draw_line_dsc_init, lv_draw_task_get_line_dsc, lv_draw_line, lv_draw_line_iterate]
+  structs: [lv_draw_line_dsc_t]
+  macros: [LV_DRAW_LINE_POINT_NONE]
+---
+
+<ApiSummary functions={4} structs={1} macros={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (3)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_draw_task_get_line_dsc" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_line.h" line={95} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_line.h#L95">
+
+### lv_draw_task_get_line_dsc
+
+Try to get a line draw descriptor from a draw task.
+
+```c
+lv_draw_line_dsc_t * lv_draw_task_get_line_dsc(lv_draw_task_t *task)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `task` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
+
+**Returns:** <ApiLink name="lv_draw_line_dsc_t" display="lv_draw_line_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_LINE
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_draw_line_dsc_init" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_line.h" line={88} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_line.h#L88">
+
+### lv_draw_line_dsc_init
+
+Initialize a line draw descriptor
+
+```c
+void lv_draw_line_dsc_init(lv_draw_line_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_line_dsc_t" display="lv_draw_line_dsc_t *" /> | pointer to a draw descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_line" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_line.h" line={102} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_line.h#L102">
+
+### lv_draw_line
+
+Create a line draw task
+
+```c
+void lv_draw_line(lv_layer_t *layer, const lv_draw_line_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_line_dsc_t" display="const lv_draw_line_dsc_t *" /> | pointer to an initialized <ApiLink name="lv_draw_line_dsc_t" /> variable |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_line_iterate" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_line.h" line={112} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_line.h#L112">
+
+### lv_draw_line_iterate
+
+A helper function to call a callback which draws a line between two points. This way it doesn't matter if `p1, p2` or `points` were used as it calls the `callback` as needed.
+
+```c
+void lv_draw_line_iterate(lv_draw_task_t *t, lv_draw_line_dsc_t *dsc, void(*draw_line_cb)(lv_draw_task_t *t, const lv_draw_line_dsc_t *dsc))
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
+| `dsc` | <ApiLink name="lv_draw_line_dsc_t" display="lv_draw_line_dsc_t *" /> | pointer to a draw descriptor |
+| `draw_line_cb` | `void(*)(`<ApiLink name="lv_draw_task_t" />` *t, const `<ApiLink name="lv_draw_line_dsc_t" />` *dsc)` | a callback that draws a line between `dsc->p1` and `dsc->p2` |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_line_dsc_t">
+
+### lv_draw_line_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `p1` | <ApiLink name="lv_point_precise_t" /> | The first point of the line. If `LV_USE_FLOAT` is enabled float number can be also used. Ignored if `points` are set |
+| `p2` | <ApiLink name="lv_point_precise_t" /> | The second point of the line. If `LV_USE_FLOAT` is enabled float number can be also used Ignored if `points` are set |
+| `points` | <ApiLink name="lv_point_precise_t" display="lv_point_precise_t *" /> | Array of points to draw. If `LV_USE_FLOAT` is enabled, float numbers can also be used. |
+| `point_cnt` | `int32_t` | Number of points in the `points` |
+| `color` | <ApiLink name="lv_color_t" /> | The color of the line |
+| `width` | `int32_t` | The width (thickness) of the line |
+| `dash_width` | `int32_t` | The length of a dash (0: don't dash) |
+| `dash_gap` | `int32_t` | The length of the gaps between dashes (0: don't dash) |
+| `opa` | <ApiLink name="lv_opa_t" /> | Opacity of the line in 0...255 range. LV_OPA_TRANSP, LV_OPA_10, LV_OPA_20, .. LV_OPA_COVER can be used as well |
+| `round_start` | `uint8_t` | Make the line start rounded |
+| `round_end` | `uint8_t` | Make the line end rounded |
+| `raw_end` | `uint8_t` | 1: Do not bother with line ending (if it's not visible for any reason) |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_line_dsc_t" count={5}>
+
+- `lv_obj_init_draw_line_dsc` — param `draw_dsc`
+- `lv_draw_line_dsc_init` — param `dsc`
+- `lv_draw_line` — param `dsc`
+- `lv_draw_line_iterate` — param `dsc`
+- `lv_draw_line_iterate` — param `draw_line_cb`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_DRAW_LINE_POINT_NONE" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_line.h" line={26} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_line.h#L26">
+
+### LV_DRAW_LINE_POINT_NONE
+
+```c
+#define LV_DRAW_LINE_POINT_NONE FLT_MAX
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw.h", "lv_color.h", "lv_area.h", "lv_style.h", "float.h"]}
+  includedBy={["lv_obj_draw.h", "lvgl.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_grad.h", "lv_grid.h", "lv_image_dsc.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_types.h"]}
+/>

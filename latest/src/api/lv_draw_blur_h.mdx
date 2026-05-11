@@ -1,0 +1,112 @@
+---
+title: lv_draw_blur.h
+description: API reference for lv_draw_blur.h
+api:
+  functions: [lv_draw_blur_dsc_init, lv_draw_task_get_blur_dsc, lv_draw_blur]
+  structs: [lv_draw_blur_dsc_t]
+---
+
+<ApiSummary functions={3} structs={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (2)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_draw_task_get_blur_dsc" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_blur.h" line={65} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_blur.h#L65">
+
+### lv_draw_task_get_blur_dsc
+
+Try to get a blur draw descriptor from a draw task.
+
+```c
+lv_draw_blur_dsc_t * lv_draw_task_get_blur_dsc(lv_draw_task_t *task)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `task` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
+
+**Returns:** <ApiLink name="lv_draw_blur_dsc_t" display="lv_draw_blur_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_BLUR
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_draw_blur_dsc_init" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_blur.h" line={58} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_blur.h#L58">
+
+### lv_draw_blur_dsc_init
+
+Initialize a blur draw descriptor
+
+```c
+void lv_draw_blur_dsc_init(lv_draw_blur_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_blur_dsc_t" display="lv_draw_blur_dsc_t *" /> | pointer to a draw descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_blur" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_blur.h" line={73} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_blur.h#L73">
+
+### lv_draw_blur
+
+Create a blur draw task
+
+```c
+void lv_draw_blur(lv_layer_t *layer, const lv_draw_blur_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_blur_dsc_t" display="const lv_draw_blur_dsc_t *" /> | pointer to an initialized <ApiLink name="lv_draw_blur_dsc_t" /> variable |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | coordinates of the character |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_blur_dsc_t">
+
+### lv_draw_blur_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `blur_radius` | `int32_t` | The intensity of blur. |
+| `corner_radius` | `int32_t` | The corner radius of the blurred area |
+| `quality` | <ApiLink name="lv_blur_quality_t" /> | Sets whether to prefer speed or precision |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_blur_dsc_t" count={3}>
+
+- `lv_obj_init_draw_blur_dsc` — param `draw_dsc`
+- `lv_draw_blur_dsc_init` — param `dsc`
+- `lv_draw_blur` — param `dsc`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_draw.h", "lv_color.h", "lv_area.h", "lv_style.h"]}
+  includedBy={["lv_obj_draw.h", "lvgl.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_grad.h", "lv_grid.h", "lv_image_dsc.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_types.h"]}
+/>

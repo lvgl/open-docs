@@ -1,9 +1,0 @@
-{
-  "title": "Layouts",
-  "pages": [
-    "flex",
-    "grid",
-    "lv_layout_h",
-    "lv_layout_private_h"
-  ]
-}

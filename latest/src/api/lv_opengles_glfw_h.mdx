@@ -1,0 +1,140 @@
+---
+title: lv_opengles_glfw.h
+description: API reference for lv_opengles_glfw.h
+api:
+  functions: [lv_opengles_glfw_window_create, lv_opengles_glfw_window_create_ex, lv_opengles_glfw_window_set_title, lv_opengles_glfw_window_set_flip, lv_opengles_glfw_window_get_glfw_window]
+---
+
+<ApiSummary functions={5} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Getters (1)","Other (2)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_opengles_glfw_window_set_title" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_glfw.h" line={61} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_glfw.h#L61">
+
+### lv_opengles_glfw_window_set_title
+
+Set the window's title text
+
+```c
+void lv_opengles_glfw_window_set_title(lv_opengles_window_t *window, const char *new_title)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `window` | <ApiLink name="lv_opengles_window_t" display="lv_opengles_window_t *" /> | GLFW window to configure |
+| `new_title` | `const char *` | The new title text |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_glfw_window_set_flip" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_glfw.h" line={69} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_glfw.h#L69">
+
+### lv_opengles_glfw_window_set_flip
+
+Set the horizontal / vertical flipping of a GLFW window
+
+```c
+void lv_opengles_glfw_window_set_flip(lv_opengles_window_t *window, bool h_flip, bool v_flip)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `window` | <ApiLink name="lv_opengles_window_t" display="lv_opengles_window_t *" /> | GLFW window to configure |
+| `h_flip` | `bool` | Should the window contents be horizontally mirrored? |
+| `v_flip` | `bool` | Should the window contents be vertically mirrored? |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_opengles_glfw_window_get_glfw_window" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_glfw.h" line={76} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_glfw.h#L76">
+
+### lv_opengles_glfw_window_get_glfw_window
+
+Get the GLFW window handle for a GLFW lv_opengles_window_t
+
+```c
+void * lv_opengles_glfw_window_get_glfw_window(lv_opengles_window_t *window)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `window` | <ApiLink name="lv_opengles_window_t" display="lv_opengles_window_t *" /> | GLFW window to return the handle of |
+
+**Returns:** `void *` — the GLFW window handle
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_opengles_glfw_window_create" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_glfw.h" line={41} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_glfw.h#L41">
+
+### lv_opengles_glfw_window_create
+
+Create a GLFW OpenGL window with no textures and initialize OpenGL
+
+```c
+lv_opengles_window_t * lv_opengles_glfw_window_create(int32_t hor_res, int32_t ver_res, bool use_mouse_indev)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `hor_res` | `int32_t` | width in pixels of the window |
+| `ver_res` | `int32_t` | height in pixels of the window |
+| `use_mouse_indev` | `bool` | send pointer indev input to LVGL display textures |
+
+**Returns:** <ApiLink name="lv_opengles_window_t" display="lv_opengles_window_t *" /> — the new GLFW OpenGL window handle
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_glfw_window_create_ex" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_glfw.h" line={53} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_glfw.h#L53">
+
+### lv_opengles_glfw_window_create_ex
+
+Create a GLFW window with no textures and initialize OpenGL
+
+```c
+lv_opengles_window_t * lv_opengles_glfw_window_create_ex(int32_t hor_res, int32_t ver_res, bool use_mouse_indev, bool h_flip, bool v_flip, const char *title)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `hor_res` | `int32_t` | width in pixels of the window |
+| `ver_res` | `int32_t` | height in pixels of the window |
+| `use_mouse_indev` | `bool` | send pointer indev input to LVGL display textures |
+| `h_flip` | `bool` | Should the window contents be horizontally mirrored? |
+| `v_flip` | `bool` | Should the window contents be vertically mirrored? |
+| `title` | `const char *` | The window title |
+
+**Returns:** <ApiLink name="lv_opengles_window_t" display="lv_opengles_window_t *" /> — the new GLFW window handle
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

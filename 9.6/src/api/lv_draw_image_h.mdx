@@ -1,0 +1,186 @@
+---
+title: lv_draw_image.h
+description: API reference for lv_draw_image.h
+api:
+  functions: [lv_draw_image_dsc_init, lv_draw_task_get_image_dsc, lv_draw_image, lv_draw_layer, lv_image_src_get_type]
+  structs: [_lv_draw_image_dsc_t]
+  typedefs: [lv_draw_image_core_cb]
+---
+
+<ApiSummary functions={5} structs={1} typedefs={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (2)","Other (3)"]}>
+<ApiTab value="Getters (2)">
+
+<ApiMember kind="function" name="lv_draw_task_get_image_dsc" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h" line={130} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h#L130">
+
+### lv_draw_task_get_image_dsc
+
+Try to get an image draw descriptor from a draw task.
+
+```c
+lv_draw_image_dsc_t * lv_draw_task_get_image_dsc(lv_draw_task_t *task)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `task` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
+
+**Returns:** <ApiLink name="lv_draw_image_dsc_t" display="lv_draw_image_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_IMAGE
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_src_get_type" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h" line={161} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h#L161">
+
+### lv_image_src_get_type
+
+Get the type of an image source
+
+```c
+lv_image_src_t lv_image_src_get_type(const void *src)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `src` | `const void *` | pointer to an image source:<br/>- pointer to an 'lv_image_t' variable (image stored internally and compiled into the code)<br/>- a path to a file (e.g. "S:/folder/image.bin")<br/>- or a symbol (e.g. LV_SYMBOL_CLOSE) |
+
+**Returns:** <ApiLink name="lv_image_src_t" /> — type of the image source LV_IMAGE_SRC_VARIABLE/FILE/SYMBOL/UNKNOWN
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_draw_image_dsc_init" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h" line={123} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h#L123">
+
+### lv_draw_image_dsc_init
+
+Initialize an image draw descriptor.
+
+```c
+void lv_draw_image_dsc_init(lv_draw_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_image_dsc_t" display="lv_draw_image_dsc_t *" /> | pointer to a draw descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_image" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h" line={141} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h#L141">
+
+### lv_draw_image
+
+Create an image draw task
+
+```c
+void lv_draw_image(lv_layer_t *layer, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> | pointer to an initialized draw descriptor |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the image |
+
+<Callout type="info">
+`coords` can be small than the real image area (if only a part of the image is rendered) or can be larger (in case of tiled images). .
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_layer" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h" line={151} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h#L151">
+
+### lv_draw_layer
+
+Create a draw task to blend a layer to another layer
+
+```c
+void lv_draw_layer(lv_layer_t *layer, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
+| `dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> | pointer to an initialized draw descriptor. `src` must be set to the layer to blend |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the layer. |
+
+<Callout type="info">
+`coords` can be small than the total widget area from which the layer is created (if only a part of the widget was rendered to a layer)
+</Callout>
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="_lv_draw_image_dsc_t">
+
+### _lv_draw_image_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `src` | `const void *` | The image source: pointer to <ApiLink name="lv_image_dsc_t" /> or a path to a file |
+| `header` | <ApiLink name="lv_image_header_t" /> | The header of the image. Initialized internally in `lv_draw_image` |
+| `clip_radius` | `int32_t` | Clip the corner of the image with this radius. Use `LV_RADIUS_CIRCLE` for max. radius |
+| `rotation` | `int32_t` | The rotation of the image in 0.1 degree unit. E.g. 234 means 23.4° |
+| `scale_x` | `int32_t` | Horizontal scale (zoom) of the image. 256 (LV_SCALE_NONE): means no zoom, 512 double size, 128 half size. |
+| `scale_y` | `int32_t` | Same as `scale_y` but vertically |
+| `skew_x` | `int32_t` | Parallelogram like transformation of the image horizontally in 0.1 degree unit. E.g. 456 means 45.6°. |
+| `skew_y` | `int32_t` | Same as `skew_x` but vertically |
+| `pivot` | <ApiLink name="lv_point_t" /> | The pivot point of transformation (scale and rotation). 0;0 is the top left corner of the image. Can be outside of the image too. |
+| `recolor` | <ApiLink name="lv_color_t" /> | Mix this color to the images. In case of `LV_COLOR_FORMAT_A8` it will be the color of the visible pixels |
+| `recolor_opa` | <ApiLink name="lv_opa_t" /> | The intensity of recoloring. 0 means, no recolor, 255 means full cover (transparent pixels remain transparent) |
+| `opa` | <ApiLink name="lv_opa_t" /> | Opacity in 0...255 range. LV_OPA_TRANSP, LV_OPA_10, LV_OPA_20, .. LV_OPA_COVER can be used as well |
+| `blend_mode` | <ApiLink name="lv_blend_mode_t" /> | Describes how to blend the pixels of the image to the background. See `lv_blend_mode_t` for more details. |
+| `antialias` | `uint16_t` | 1: perform the transformation with anti-aliasing |
+| `tile` | `uint16_t` | If the image is smaller than the `image_area` field of `lv_draw_image_dsc_t` tile the image (repeat is both horizontally and vertically) to fill the `image_area` area |
+| `colorkey` | <ApiLink name="lv_image_colorkey_t" display="const lv_image_colorkey_t *" /> |  |
+| `sup` | <ApiLink name="lv_draw_image_sup_t" display="lv_draw_image_sup_t *" /> | Used internally to store some information about the palette or the color of A8 images |
+| `image_area` | <ApiLink name="lv_area_t" /> | Used to indicate the entire original, non-clipped area where the image is to be drawn. This is important for:<br/>1. Layer rendering, where it might happen that only a smaller area of the layer is rendered and e.g. `clip_radius` needs to know what the original image was.<br/>2. Tiled images, where the target draw area is larger than the image to be tiled. |
+| `bitmap_mask_src` | <ApiLink name="lv_image_dsc_t" display="const lv_image_dsc_t *" /> | Pointer to an A8 or L8 image descriptor to mask the image with. The mask is always center aligned. |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_draw_image_core_cb" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h" line={111} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_image.h#L111">
+
+### lv_draw_image_core_cb
+
+```c
+typedef void(* lv_draw_image_core_cb) (lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc, const lv_image_decoder_dsc_t *decoder_dsc, lv_draw_image_sup_t *sup, const lv_area_t *img_coords, const lv_area_t *clipped_img_area)
+```
+
+PErform the actual rendering of a decoded image
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw.h", "lv_image_decoder.h", "lv_draw_buf.h", "lv_style.h"]}
+  includedBy={["lv_obj_draw.h", "lv_draw_vector.h", "lvgl.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_image_dsc.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_types.h"]}
+/>

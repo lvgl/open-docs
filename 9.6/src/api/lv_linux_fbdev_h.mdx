@@ -1,0 +1,75 @@
+---
+title: lv_linux_fbdev.h
+description: API reference for lv_linux_fbdev.h
+api:
+  functions: [lv_linux_fbdev_create, lv_linux_fbdev_set_file, lv_linux_fbdev_set_force_refresh]
+---
+
+<ApiSummary functions={3} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Other (1)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_linux_fbdev_set_file" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/display/lv_linux_fbdev.h" line={34} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/display/lv_linux_fbdev.h#L34">
+
+### lv_linux_fbdev_set_file
+
+```c
+lv_result_t lv_linux_fbdev_set_file(lv_display_t *disp, const char *file)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `file` | `const char *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_linux_fbdev_set_force_refresh" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/display/lv_linux_fbdev.h" line={40} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/display/lv_linux_fbdev.h#L40">
+
+### lv_linux_fbdev_set_force_refresh
+
+Force the display to be refreshed on every change. Expected to be used with LV_DISPLAY_RENDER_MODE_DIRECT or LV_DISPLAY_RENDER_MODE_FULL.
+
+```c
+void lv_linux_fbdev_set_force_refresh(lv_display_t *disp, bool enabled)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `enabled` | `bool` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="lv_linux_fbdev_create" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/display/lv_linux_fbdev.h" line={32} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/display/lv_linux_fbdev.h#L32">
+
+### lv_linux_fbdev_create
+
+```c
+lv_display_t * lv_linux_fbdev_create(void)
+```
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_display.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_event.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_timer.h", "lv_types.h"]}
+/>

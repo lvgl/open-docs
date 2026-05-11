@@ -1,0 +1,212 @@
+---
+title: lv_opengles_window.h
+description: API reference for lv_opengles_window.h
+api:
+  functions: [lv_opengles_window_delete, lv_opengles_window_add_texture, lv_opengles_window_display_create, lv_opengles_window_display_get_window_texture, lv_opengles_window_texture_remove, lv_opengles_window_texture_set_x, lv_opengles_window_texture_set_y, lv_opengles_window_texture_set_opa, lv_opengles_window_texture_get_mouse_indev]
+---
+
+<ApiSummary functions={9} />
+
+## Functions
+
+<ApiTabs items={["Setters (3)","Getters (2)","Other (4)"]}>
+<ApiTab value="Setters (3)">
+
+<ApiMember kind="function" name="lv_opengles_window_texture_set_x" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h" line={66} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h#L66">
+
+### lv_opengles_window_texture_set_x
+
+Set the x position of a texture within its OpenGL window
+
+```c
+void lv_opengles_window_texture_set_x(lv_opengles_window_texture_t *texture, int32_t x)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `texture` | <ApiLink name="lv_opengles_window_texture_t" display="lv_opengles_window_texture_t *" /> | handle of an OpenGL window texture |
+| `x` | `int32_t` | new x position of the texture |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_window_texture_set_y" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h" line={73} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h#L73">
+
+### lv_opengles_window_texture_set_y
+
+Set the y position of a texture within its OpenGL window
+
+```c
+void lv_opengles_window_texture_set_y(lv_opengles_window_texture_t *texture, int32_t y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `texture` | <ApiLink name="lv_opengles_window_texture_t" display="lv_opengles_window_texture_t *" /> | handle of an OpenGL window texture |
+| `y` | `int32_t` | new y position of the texture |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_window_texture_set_opa" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h" line={80} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h#L80">
+
+### lv_opengles_window_texture_set_opa
+
+Set the opacity of a texture in an OpenGL window
+
+```c
+void lv_opengles_window_texture_set_opa(lv_opengles_window_texture_t *texture, lv_opa_t opa)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `texture` | <ApiLink name="lv_opengles_window_texture_t" display="lv_opengles_window_texture_t *" /> | handle of an OpenGL window texture |
+| `opa` | <ApiLink name="lv_opa_t" /> | new opacity of the texture |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (2)">
+
+<ApiMember kind="function" name="lv_opengles_window_display_get_window_texture" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h" line={53} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h#L53">
+
+### lv_opengles_window_display_get_window_texture
+
+```c
+lv_opengles_window_texture_t * lv_opengles_window_display_get_window_texture(lv_display_t *window_display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `window_display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_window_texture_get_mouse_indev" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h" line={90} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h#L90">
+
+### lv_opengles_window_texture_get_mouse_indev
+
+Get the mouse indev associated with a texture in an OpenGL window, if it exists
+
+```c
+lv_indev_t * lv_opengles_window_texture_get_mouse_indev(lv_opengles_window_texture_t *texture)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `texture` | <ApiLink name="lv_opengles_window_texture_t" display="lv_opengles_window_texture_t *" /> | handle of an OpenGL window texture |
+
+**Returns:** <ApiLink name="lv_indev_t" display="lv_indev_t *" /> — the indev or `NULL`
+
+<Callout type="info">
+there will only be an indev if the texture is based on an LVGL display texture and the window was created with `use_mouse_indev` as `true`
+</Callout>
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (4)">
+
+<ApiMember kind="function" name="lv_opengles_window_delete" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h" line={38} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h#L38">
+
+### lv_opengles_window_delete
+
+Delete an OpenGL window. If it is the last one, the process will exit
+
+```c
+void lv_opengles_window_delete(lv_opengles_window_t *window)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `window` | <ApiLink name="lv_opengles_window_t" display="lv_opengles_window_t *" /> | OpenGL window to delete |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_window_add_texture" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h" line={48} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h#L48">
+
+### lv_opengles_window_add_texture
+
+Add a texture to the OpenGL window. It can be an LVGL display texture, or any OpenGL texture
+
+```c
+lv_opengles_window_texture_t * lv_opengles_window_add_texture(lv_opengles_window_t *window, unsigned int texture_id, int32_t w, int32_t h)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `window` | <ApiLink name="lv_opengles_window_t" display="lv_opengles_window_t *" /> | OpenGL window |
+| `texture_id` | `unsigned int` | OpenGL texture ID |
+| `w` | `int32_t` | width in pixels of the texture |
+| `h` | `int32_t` | height in pixels of the texture |
+
+**Returns:** <ApiLink name="lv_opengles_window_texture_t" display="lv_opengles_window_texture_t *" /> — the new texture handle
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_window_display_create" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h" line={51} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h#L51">
+
+### lv_opengles_window_display_create
+
+```c
+lv_display_t * lv_opengles_window_display_create(lv_opengles_window_t *window, int32_t w, int32_t h)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `window` | <ApiLink name="lv_opengles_window_t" display="lv_opengles_window_t *" /> |
+| `w` | `int32_t` |
+| `h` | `int32_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_window_texture_remove" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h" line={59} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/opengles/lv_opengles_window.h#L59">
+
+### lv_opengles_window_texture_remove
+
+Remove a texture from its OpenGL window and delete it
+
+```c
+void lv_opengles_window_texture_remove(lv_opengles_window_texture_t *texture)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `texture` | <ApiLink name="lv_opengles_window_texture_t" display="lv_opengles_window_texture_t *" /> | handle of an OpenGL window texture |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

@@ -1,0 +1,399 @@
+---
+title: lv_mem.h
+description: API reference for lv_mem.h
+api:
+  functions: [lv_mem_init, lv_mem_deinit, lv_mem_add_pool, lv_mem_remove_pool, lv_malloc, lv_calloc, lv_zalloc, lv_malloc_zeroed, lv_free, lv_realloc, lv_reallocf, lv_malloc_core, lv_free_core, lv_realloc_core, lv_mem_monitor_core, lv_mem_test_core, lv_mem_test, lv_mem_monitor]
+  structs: [lv_mem_monitor_t]
+  typedefs: [lv_mem_pool_t]
+---
+
+<ApiSummary functions={18} structs={1} typedefs={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_mem_init" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={51} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L51">
+
+### lv_mem_init
+
+Initialize to use malloc/free/realloc etc
+
+```c
+void lv_mem_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_mem_deinit" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={56} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L56">
+
+### lv_mem_deinit
+
+Drop all dynamically allocated memory and reset the memory pools' state
+
+```c
+void lv_mem_deinit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_mem_add_pool" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={58} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L58">
+
+### lv_mem_add_pool
+
+```c
+lv_mem_pool_t lv_mem_add_pool(void *mem, size_t bytes)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `mem` | `void *` |
+| `bytes` | `size_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_mem_remove_pool" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={60} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L60">
+
+### lv_mem_remove_pool
+
+```c
+void lv_mem_remove_pool(lv_mem_pool_t pool)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `pool` | <ApiLink name="lv_mem_pool_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_malloc" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={67} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L67">
+
+### lv_malloc
+
+Allocate memory dynamically
+
+```c
+void * lv_malloc(size_t size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `size` | `size_t` | requested size in bytes |
+
+**Returns:** `void *` — pointer to allocated uninitialized memory, or NULL on failure
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_calloc" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={75} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L75">
+
+### lv_calloc
+
+Allocate a block of zeroed memory dynamically
+
+```c
+void * lv_calloc(size_t num, size_t size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `num` | `size_t` | requested number of element to be allocated. |
+| `size` | `size_t` | requested size of each element in bytes. |
+
+**Returns:** `void *` — pointer to allocated zeroed memory, or NULL on failure
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_zalloc" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={82} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L82">
+
+### lv_zalloc
+
+Allocate zeroed memory dynamically
+
+```c
+void * lv_zalloc(size_t size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `size` | `size_t` | requested size in bytes |
+
+**Returns:** `void *` — pointer to allocated zeroed memory, or NULL on failure
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_malloc_zeroed" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={89} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L89">
+
+### lv_malloc_zeroed
+
+Allocate zeroed memory dynamically
+
+```c
+void * lv_malloc_zeroed(size_t size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `size` | `size_t` | requested size in bytes |
+
+**Returns:** `void *` — pointer to allocated zeroed memory, or NULL on failure
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_free" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={95} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L95">
+
+### lv_free
+
+Free an allocated data
+
+```c
+void lv_free(void *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | `void *` | pointer to an allocated memory |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_realloc" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={104} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L104">
+
+### lv_realloc
+
+Reallocate a memory with a new size. The old content will be kept.
+
+```c
+void * lv_realloc(void *data_p, size_t new_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data_p` | `void *` | pointer to an allocated memory. Its content will be copied to the new memory block and freed |
+| `new_size` | `size_t` | the desired new size in byte |
+
+**Returns:** `void *` — pointer to the new memory, NULL on failure
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_reallocf" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={114} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L114">
+
+### lv_reallocf
+
+Reallocate a memory with a new size. The old content will be kept. In case of failure, the old pointer is free'd.
+
+```c
+void * lv_reallocf(void *data_p, size_t new_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data_p` | `void *` | pointer to an allocated memory. Its content will be copied to the new memory block and freed |
+| `new_size` | `size_t` | the desired new size in byte |
+
+**Returns:** `void *` — pointer to the new memory, NULL on failure
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_malloc_core" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={120} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L120">
+
+### lv_malloc_core
+
+Used internally to execute a plain `malloc` operation
+
+```c
+void * lv_malloc_core(size_t size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `size` | `size_t` | size in bytes to `malloc` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_free_core" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={126} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L126">
+
+### lv_free_core
+
+Used internally to execute a plain `free` operation
+
+```c
+void lv_free_core(void *p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `p` | `void *` | memory address to free |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_realloc_core" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={133} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L133">
+
+### lv_realloc_core
+
+Used internally to execute a plain realloc operation
+
+```c
+void * lv_realloc_core(void *p, size_t new_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `p` | `void *` | memory address to realloc |
+| `new_size` | `size_t` | size in bytes to realloc |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_mem_monitor_core" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={139} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L139">
+
+### lv_mem_monitor_core
+
+Used internally by <ApiLink name="lv_mem_monitor" display="lv_mem_monitor()" /> to gather LVGL heap state information.
+
+```c
+void lv_mem_monitor_core(lv_mem_monitor_t *mon_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `mon_p` | <ApiLink name="lv_mem_monitor_t" display="lv_mem_monitor_t *" /> | pointer to <ApiLink name="lv_mem_monitor_t" /> object to be populated. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_mem_test_core" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={141} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L141">
+
+### lv_mem_test_core
+
+```c
+lv_result_t lv_mem_test_core(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_mem_test" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={147} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L147">
+
+### lv_mem_test
+
+Tests the memory allocation system by allocating and freeing a block of memory.
+
+```c
+lv_result_t lv_mem_test(void)
+```
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the memory allocation system is working properly, or LV_RESULT_INVALID if there is an error.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_mem_monitor" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={154} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L154">
+
+### lv_mem_monitor
+
+Give information about the work memory of dynamic allocation
+
+```c
+void lv_mem_monitor(lv_mem_monitor_t *mon_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `mon_p` | <ApiLink name="lv_mem_monitor_t" display="lv_mem_monitor_t *" /> | pointer to a <ApiLink name="lv_mem_monitor_t" /> variable, the result of the analysis will be stored here |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_mem_monitor_t">
+
+### lv_mem_monitor_t
+
+Heap information structure.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `total_size` | `size_t` | Total heap size |
+| `free_cnt` | `size_t` |  |
+| `free_size` | `size_t` | Size of available memory |
+| `free_biggest_size` | `size_t` |  |
+| `used_cnt` | `size_t` |  |
+| `max_used` | `size_t` | Max size of Heap memory used |
+| `used_pct` | `uint8_t` | Percentage used |
+| `frag_pct` | `uint8_t` | Amount of fragmentation |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_mem_monitor_t" count={2}>
+
+- `lv_mem_monitor_core` — param `mon_p`
+- `lv_mem_monitor` — param `mon_p`
+
+</TypeUsedBy>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_mem_pool_t" file="/home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h" line={28} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/stdlib/lv_mem.h#L28">
+
+### lv_mem_pool_t
+
+```c
+typedef void* lv_mem_pool_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_mem_pool_t" count={1}>
+
+- `lv_mem_remove_pool` — param `pool`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includedBy={["lv_assert.h", "lv_test_helpers.h", "lvgl.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

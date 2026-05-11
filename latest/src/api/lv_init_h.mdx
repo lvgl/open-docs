@@ -1,11 +1,57 @@
 ---
 title: lv_init.h
 description: API reference for lv_init.h
+api:
+  functions: [lv_init, lv_deinit, lv_is_initialized]
 ---
+
+<ApiSummary functions={3} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_init" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_init.h" line={35} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_init.h#L35">
+
+### lv_init
+
+Initialize LVGL library. Should be called before any other LVGL related function.
+
+```c
+void lv_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_deinit" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_init.h" line={40} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_init.h#L40">
+
+### lv_deinit
+
+Deinit the 'lv' library
+
+```c
+void lv_deinit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_is_initialized" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_init.h" line={45} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_init.h#L45">
+
+### lv_is_initialized
+
+Returns whether the 'lv' library is currently initialized
+
+```c
+bool lv_is_initialized(void)
+```
+
+
+</ApiMember>
 
 ## Dependencies
 
 <FileIncludes
-  includes={["lvgl.h"]}
-  transitiveIncludes={["lvgl_public.h"]}
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
 />

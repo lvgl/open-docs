@@ -1,0 +1,105 @@
+---
+title: lv_assert.h
+description: API reference for lv_assert.h
+api:
+  macros: [LV_ASSERT, LV_ASSERT_MSG, LV_ASSERT_FORMAT_MSG, LV_ASSERT_NULL, LV_ASSERT_MALLOC, LV_ASSERT_MEM_INTEGRITY]
+---
+
+<ApiSummary macros={6} />
+
+## Macros
+
+<ApiMember kind="macro" name="LV_ASSERT" file="/home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h" line={37} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h#L37">
+
+### LV_ASSERT
+
+```c
+#define LV_ASSERT(expr) \
+    do { \
+            if(!(expr)) { \
+                LV_LOG_ERROR("Asserted at expression: %s", #expr); \
+                LV_ASSERT_HANDLER \
+            } \
+        } while(0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ASSERT_MSG" file="/home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h" line={45} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h#L45">
+
+### LV_ASSERT_MSG
+
+```c
+#define LV_ASSERT_MSG(expr, msg) \
+    do { \
+            if(!(expr)) { \
+                LV_LOG_ERROR("Asserted at expression: %s (%s)", #expr, msg); \
+                LV_ASSERT_HANDLER \
+            } \
+        } while(0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ASSERT_FORMAT_MSG" file="/home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h" line={53} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h#L53">
+
+### LV_ASSERT_FORMAT_MSG
+
+```c
+#define LV_ASSERT_FORMAT_MSG(expr, format, ...) \
+    do { \
+            if(!(expr)) { \
+                LV_LOG_ERROR("Asserted at expression: %s " format , #expr, __VA_ARGS__); \
+                LV_ASSERT_HANDLER \
+            } \
+        } while(0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ASSERT_NULL" file="/home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h" line={66} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h#L66">
+
+### LV_ASSERT_NULL
+
+```c
+#define LV_ASSERT_NULL(p) \
+    LV_ASSERT_MSG(p != NULL, "NULL pointer");
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ASSERT_MALLOC" file="/home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h" line={72} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h#L72">
+
+### LV_ASSERT_MALLOC
+
+```c
+#define LV_ASSERT_MALLOC(p) \
+    LV_ASSERT_MSG(p != NULL, "Out of memory");
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ASSERT_MEM_INTEGRITY" file="/home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h" line={78} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_assert.h#L78">
+
+### LV_ASSERT_MEM_INTEGRITY
+
+```c
+#define LV_ASSERT_MEM_INTEGRITY() \
+    LV_ASSERT_MSG(lv_mem_test() == LV_RESULT_OK, "Memory integrity error");
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_log.h", "lv_mem.h", "stdint.h"]}
+  includedBy={["lv_obj.h", "lv_style.h", "lv_check_arg.h", "lv_color.h", "lv_color_op.h", "lvgl.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h", "lv_types.h"]}
+/>

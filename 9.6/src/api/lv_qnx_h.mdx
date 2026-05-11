@@ -1,0 +1,133 @@
+---
+title: lv_qnx.h
+description: API reference for lv_qnx.h
+api:
+  functions: [lv_qnx_window_create, lv_qnx_window_set_title, lv_qnx_add_pointer_device, lv_qnx_add_keyboard_device, lv_qnx_event_loop]
+---
+
+LVGL driver for the QNX Screen compositing window manager.
+
+<ApiSummary functions={5} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Other (4)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_qnx_window_set_title" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/qnx/lv_qnx.h" line={50} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/qnx/lv_qnx.h#L50">
+
+### lv_qnx_window_set_title
+
+Set the title of the window identified by the given display.
+
+```c
+void lv_qnx_window_set_title(lv_display_t *disp, const char *title)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | The display object for the window |
+| `title` | `const char *` | The new title to set |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (4)">
+
+<ApiMember kind="function" name="lv_qnx_window_create" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/qnx/lv_qnx.h" line={43} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/qnx/lv_qnx.h#L43">
+
+### lv_qnx_window_create
+
+Create a window to use as a display for LVGL.
+
+```c
+lv_display_t * lv_qnx_window_create(int32_t hor_res, int32_t ver_res)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `hor_res` | `int32_t` | The horizontal resolution (size) of the window |
+| `ver_res` | `int32_t` | The vertical resolution (size) of the window |
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — A pointer to a new display object if successful, NULL otherwise
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_qnx_add_pointer_device" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/qnx/lv_qnx.h" line={58} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/qnx/lv_qnx.h#L58">
+
+### lv_qnx_add_pointer_device
+
+Create a pointer input device for the display. Only one pointer object is currently supported.
+
+```c
+bool lv_qnx_add_pointer_device(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | The display object associated with the device |
+
+**Returns:** `bool` — true if successful, false otherwise
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_qnx_add_keyboard_device" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/qnx/lv_qnx.h" line={66} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/qnx/lv_qnx.h#L66">
+
+### lv_qnx_add_keyboard_device
+
+Create a keyboard input device for the display. Only one keyboard object is currently supported.
+
+```c
+bool lv_qnx_add_keyboard_device(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | The display object associated with the device |
+
+**Returns:** `bool` — true if successful, false otherwise
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_qnx_event_loop" file="/home/runner/work/lvgl/lvgl/include/lvgl/drivers/qnx/lv_qnx.h" line={74} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/drivers/qnx/lv_qnx.h#L74">
+
+### lv_qnx_event_loop
+
+Runs the event loop for the display. The function only returns in response to a close event.
+
+```c
+int lv_qnx_event_loop(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | The display for the event loop |
+
+**Returns:** `int` — Exit code
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_display.h", "lv_indev.h", "stdbool.h", "screen.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_event.h", "lv_group.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_timer.h", "lv_types.h"]}
+/>

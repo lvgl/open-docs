@@ -1,7 +1,0 @@
-{
-  "title": "Evdev",
-  "pages": [
-    "lv_evdev_h",
-    "lv_evdev_private_h"
-  ]
-}

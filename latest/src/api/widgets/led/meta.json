@@ -1,7 +1,0 @@
-{
-  "title": "Led",
-  "pages": [
-    "lv_led_h",
-    "lv_led_private_h"
-  ]
-}

@@ -1,0 +1,167 @@
+---
+title: lv_gltf_environment.h
+description: API reference for lv_gltf_environment.h
+api:
+  functions: [lv_gltf_ibl_sampler_create, lv_gltf_ibl_sampler_set_cube_map_pixel_resolution, lv_gltf_ibl_sampler_delete, lv_gltf_environment_create, lv_gltf_environment_set_angle, lv_gltf_environment_delete]
+  macros: [LV_GLTF_DEFAULT_CUBE_MAP_RESOLUTION]
+---
+
+<ApiSummary functions={6} macros={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Other (4)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_gltf_ibl_sampler_set_cube_map_pixel_resolution" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h" line={49} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h#L49">
+
+### lv_gltf_ibl_sampler_set_cube_map_pixel_resolution
+
+Set the resolution for each cubemap face
+
+```c
+void lv_gltf_ibl_sampler_set_cube_map_pixel_resolution(lv_gltf_ibl_sampler_t *sampler, uint32_t resolution)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `sampler` | <ApiLink name="lv_gltf_ibl_sampler_t" display="lv_gltf_ibl_sampler_t *" /> |  |
+| `resolution` | `uint32_t` | of each cube map face in pixels (recommended: 64-512 for embedded) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_environment_set_angle" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h" line={73} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h#L73">
+
+### lv_gltf_environment_set_angle
+
+Set the rotation angle of the environment map
+
+```c
+void lv_gltf_environment_set_angle(lv_gltf_environment_t *env, float angle)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `env` | <ApiLink name="lv_gltf_environment_t" display="lv_gltf_environment_t *" /> | pointer to the environment |
+| `angle` | `float` | rotation angle in degrees |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (4)">
+
+<ApiMember kind="function" name="lv_gltf_ibl_sampler_create" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h" line={42} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h#L42">
+
+### lv_gltf_ibl_sampler_create
+
+Create an IBL sampler for processing environment images
+
+```c
+lv_gltf_ibl_sampler_t * lv_gltf_ibl_sampler_create(void)
+```
+
+**Returns:** <ApiLink name="lv_gltf_ibl_sampler_t" display="lv_gltf_ibl_sampler_t *" /> — pointer to the created sampler, or NULL on failure
+
+<Callout type="info">
+Can be safely deleted after environments are created
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_ibl_sampler_delete" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h" line={55} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h#L55">
+
+### lv_gltf_ibl_sampler_delete
+
+Delete an IBL sampler
+
+```c
+void lv_gltf_ibl_sampler_delete(lv_gltf_ibl_sampler_t *sampler)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `sampler` | <ApiLink name="lv_gltf_ibl_sampler_t" display="lv_gltf_ibl_sampler_t *" /> | pointer to the sampler to delete |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_environment_create" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h" line={66} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h#L66">
+
+### lv_gltf_environment_create
+
+Create an environment from an HDR or JPEG panoramic image for IBL rendering
+
+```c
+lv_gltf_environment_t * lv_gltf_environment_create(lv_gltf_ibl_sampler_t *sampler, const char *file_path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `sampler` | <ApiLink name="lv_gltf_ibl_sampler_t" display="lv_gltf_ibl_sampler_t *" /> | IBL sampler defining output resolution (can be deleted after this call) |
+| `file_path` | `const char *` | path to equirectangular environment image, or NULL to use default embedded image |
+
+**Returns:** <ApiLink name="lv_gltf_environment_t" display="lv_gltf_environment_t *" /> — pointer to the created environment, or NULL on failure
+
+<Callout type="info">
+The source image will be downsampled to the sampler's texture_size
+</Callout>
+
+<Callout type="info">
+The environment can be shared across multiple glTF objects
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_environment_delete" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h" line={79} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h#L79">
+
+### lv_gltf_environment_delete
+
+Delete an environment
+
+```c
+void lv_gltf_environment_delete(lv_gltf_environment_t *environment)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `environment` | <ApiLink name="lv_gltf_environment_t" display="lv_gltf_environment_t *" /> | pointer to the environment to delete |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Macros
+
+<ApiMember kind="macro" name="LV_GLTF_DEFAULT_CUBE_MAP_RESOLUTION" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h" line={26} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h#L26">
+
+### LV_GLTF_DEFAULT_CUBE_MAP_RESOLUTION
+
+```c
+#define LV_GLTF_DEFAULT_CUBE_MAP_RESOLUTION 128
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

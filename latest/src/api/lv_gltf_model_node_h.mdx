@@ -1,0 +1,601 @@
+---
+title: lv_gltf_model_node.h
+description: API reference for lv_gltf_model_node.h
+api:
+  functions: [lv_gltf_model_node_get_by_index, lv_gltf_model_node_get_by_numeric_path, lv_gltf_model_node_get_by_path, lv_gltf_model_node_get_path, lv_gltf_model_node_get_ip, lv_gltf_model_node_add_event_cb, lv_gltf_model_node_add_event_cb_with_world_position, lv_gltf_model_get_node_count, lv_gltf_model_node_set_position_x, lv_gltf_model_node_set_position_y, lv_gltf_model_node_set_position_z, lv_gltf_model_node_set_rotation_x, lv_gltf_model_node_set_rotation_y, lv_gltf_model_node_set_rotation_z, lv_gltf_model_node_set_scale_x, lv_gltf_model_node_set_scale_y, lv_gltf_model_node_set_scale_z, lv_gltf_model_node_get_local_position, lv_gltf_model_node_get_world_position, lv_gltf_model_node_get_scale, lv_gltf_model_node_get_euler_rotation]
+  macros: [LV_GLTF_ANIM_SPEED_TENTH, LV_GLTF_ANIM_SPEED_QUARTER, LV_GLTF_ANIM_SPEED_HALF, LV_GLTF_ANIM_SPEED_NORMAL, LV_GLTF_ANIM_SPEED_2X, LV_GLTF_ANIM_SPEED_3X, LV_GLTF_ANIM_SPEED_4X, LV_GLTF_DEFAULT_CAMERA]
+---
+
+<ApiSummary functions={21} macros={8} />
+
+## Functions
+
+<ApiTabs items={["Setters (9)","Getters (10)","Other (2)"]}>
+<ApiTab value="Setters (9)">
+
+<ApiMember kind="function" name="lv_gltf_model_node_set_position_x" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={132} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L132">
+
+### lv_gltf_model_node_set_position_x
+
+Set the X position of a glTF model node. The operation is queued and applied on the next rendering phase.
+
+```c
+lv_result_t lv_gltf_model_node_set_position_x(lv_gltf_model_node_t *node, float x)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+| `x` | `float` | The X position value |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the operation is queued successfully, LV_RESULT_INVALID if node is null or no more memory to queue the operation
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_set_position_y" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={141} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L141">
+
+### lv_gltf_model_node_set_position_y
+
+Set the Y position of a glTF model node. The operation is queued and applied on the next rendering phase.
+
+```c
+lv_result_t lv_gltf_model_node_set_position_y(lv_gltf_model_node_t *node, float y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+| `y` | `float` | The Y position value |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the operation is queued successfully, LV_RESULT_INVALID if node is null or no more memory to queue the operation
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_set_position_z" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={150} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L150">
+
+### lv_gltf_model_node_set_position_z
+
+Set the Z position of a glTF model node. The operation is queued and applied on the next rendering phase.
+
+```c
+lv_result_t lv_gltf_model_node_set_position_z(lv_gltf_model_node_t *node, float z)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+| `z` | `float` | The Z position value |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the operation is queued successfully, LV_RESULT_INVALID if node is null or no more memory to queue the operation
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_set_rotation_x" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={159} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L159">
+
+### lv_gltf_model_node_set_rotation_x
+
+Set the X component of a glTF model node's rotation quaternion. The operation is queued and applied on the next rendering phase.
+
+```c
+lv_result_t lv_gltf_model_node_set_rotation_x(lv_gltf_model_node_t *node, float x)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+| `x` | `float` | The X rotation component value |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the operation is queued successfully, LV_RESULT_INVALID if node is null or no more memory to queue the operation
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_set_rotation_y" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={168} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L168">
+
+### lv_gltf_model_node_set_rotation_y
+
+Set the Y component of a glTF model node's rotation quaternion. The operation is queued and applied on the next rendering phase.
+
+```c
+lv_result_t lv_gltf_model_node_set_rotation_y(lv_gltf_model_node_t *node, float y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+| `y` | `float` | The Y rotation component value |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the operation is queued successfully, LV_RESULT_INVALID if node is null or no more memory to queue the operation
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_set_rotation_z" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={177} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L177">
+
+### lv_gltf_model_node_set_rotation_z
+
+Set the Z component of a glTF model node's rotation quaternion. The operation is queued and applied on the next rendering phase.
+
+```c
+lv_result_t lv_gltf_model_node_set_rotation_z(lv_gltf_model_node_t *node, float z)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+| `z` | `float` | The Z rotation component value |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the operation is queued successfully, LV_RESULT_INVALID if node is null or no more memory to queue the operation
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_set_scale_x" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={186} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L186">
+
+### lv_gltf_model_node_set_scale_x
+
+Set the X scale of a glTF model node. The operation is queued and applied on the next rendering phase.
+
+```c
+lv_result_t lv_gltf_model_node_set_scale_x(lv_gltf_model_node_t *node, float x)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+| `x` | `float` | The X scale value |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the operation is queued successfully, LV_RESULT_INVALID if node is null or no more memory to queue the operation
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_set_scale_y" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={195} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L195">
+
+### lv_gltf_model_node_set_scale_y
+
+Set the Y scale of a glTF model node. The operation is queued and applied on the next rendering phase.
+
+```c
+lv_result_t lv_gltf_model_node_set_scale_y(lv_gltf_model_node_t *node, float y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+| `y` | `float` | The Y scale value |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the operation is queued successfully, LV_RESULT_INVALID if node is null or no more memory to queue the operation
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_set_scale_z" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={204} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L204">
+
+### lv_gltf_model_node_set_scale_z
+
+Set the Z scale of a glTF model node. The operation is queued and applied on the next rendering phase.
+
+```c
+lv_result_t lv_gltf_model_node_set_scale_z(lv_gltf_model_node_t *node, float z)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+| `z` | `float` | The Z scale value |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the operation is queued successfully, LV_RESULT_INVALID if node is null or no more memory to queue the operation
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (10)">
+
+<ApiMember kind="function" name="lv_gltf_model_node_get_by_index" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={53} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L53">
+
+### lv_gltf_model_node_get_by_index
+
+Get a glTF model node by its index.
+
+```c
+lv_gltf_model_node_t * lv_gltf_model_node_get_by_index(lv_gltf_model_t *data, size_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the glTF model structure |
+| `index` | `size_t` | The index of the node to retrieve |
+
+**Returns:** <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> — Pointer to the glTF model node, or NULL if not found
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_get_by_numeric_path" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={62} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L62">
+
+### lv_gltf_model_node_get_by_numeric_path
+
+Get a glTF model node by its numeric path.
+
+```c
+lv_gltf_model_node_t * lv_gltf_model_node_get_by_numeric_path(lv_gltf_model_t *data, const char *num_path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the glTF model structure |
+| `num_path` | `const char *` | The numeric path string of the node to retrieve (eg. ".0") |
+
+**Returns:** <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> — Pointer to the glTF model node, or NULL if not found
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_get_by_path" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={71} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L71">
+
+### lv_gltf_model_node_get_by_path
+
+Get a glTF model node by its path.
+
+```c
+lv_gltf_model_node_t * lv_gltf_model_node_get_by_path(lv_gltf_model_t *data, const char *path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the glTF model structure |
+| `path` | `const char *` | The path string of the node to retrieve |
+
+**Returns:** <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> — Pointer to the glTF model node, or NULL if not found
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_get_path" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={79} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L79">
+
+### lv_gltf_model_node_get_path
+
+Get the path of a glTF model node.
+
+```c
+const char * lv_gltf_model_node_get_path(lv_gltf_model_node_t *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+
+**Returns:** `const char *` — The path string of the node, or NULL if node is invalid
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_get_ip" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={87} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L87">
+
+### lv_gltf_model_node_get_ip
+
+Get the IP (internal pointer/identifier) of a glTF model node.
+
+```c
+const char * lv_gltf_model_node_get_ip(lv_gltf_model_node_t *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+
+**Returns:** `const char *` — The IP string of the node, or NULL if node is invalid
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_get_node_count" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={123} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L123">
+
+### lv_gltf_model_get_node_count
+
+Get the number of nodes in the glTF model.
+
+Nodes form the scene graph hierarchy and can contain transformations, meshes, cameras, or other nodes as children. They define the spatial relationships between objects in the scene.
+
+```c
+size_t lv_gltf_model_get_node_count(const lv_gltf_model_t *model)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `model` | <ApiLink name="lv_gltf_model_t" display="const lv_gltf_model_t *" /> | Pointer to the glTF model data structure |
+
+**Returns:** `size_t` — Number of nodes in the model
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_get_local_position" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={218} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L218">
+
+### lv_gltf_model_node_get_local_position
+
+Get the local position of a glTF model node. Must be called from within an LV_EVENT_VALUE_CHANGED callback.
+
+Local position is relative to the node's parent.
+
+This function is only valid when called from an event callback registered. See <ApiLink name="lv_gltf_model_node_add_event_cb" display="lv_gltf_model_node_add_event_cb()" /> and <ApiLink name="lv_gltf_model_node_add_event_cb_with_world_position" display="lv_gltf_model_node_add_event_cb_with_world_position()" />
+
+```c
+lv_result_t lv_gltf_model_node_get_local_position(lv_event_t *e, lv_3dpoint_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `e` | <ApiLink name="lv_event_t" display="lv_event_t *" /> | Pointer to the event structure from the callback |
+| `result` | <ApiLink name="lv_3dpoint_t" display="lv_3dpoint_t *" /> | Pointer to <ApiLink name="lv_3dpoint_t" /> structure to store the position (x, y, z) |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if successful, LV_RESULT_INVALID if called outside event callback or if parameters are null
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_get_world_position" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={233} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L233">
+
+### lv_gltf_model_node_get_world_position
+
+Get the world position of a glTF model node. Must be called from within an LV_EVENT_VALUE_CHANGED callback registered with world position enabled.
+
+World position is the absolute position in global scene coordinates.
+
+This function requires the event callback to be registered with <ApiLink name="lv_gltf_model_node_add_event_cb_with_world_position" display="lv_gltf_model_node_add_event_cb_with_world_position()" /> as it involves complex matrix calculations that are computed on-demand.
+
+```c
+lv_result_t lv_gltf_model_node_get_world_position(lv_event_t *e, lv_3dpoint_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `e` | <ApiLink name="lv_event_t" display="lv_event_t *" /> | Pointer to the event structure from the callback |
+| `result` | <ApiLink name="lv_3dpoint_t" display="lv_3dpoint_t *" /> | Pointer to <ApiLink name="lv_3dpoint_t" /> structure to store the position (x, y, z) |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if successful, LV_RESULT_INVALID if called outside event callback, world position not enabled, or if parameters are null
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_get_scale" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={247} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L247">
+
+### lv_gltf_model_node_get_scale
+
+Get the scale of a glTF model node. Must be called from within an LV_EVENT_VALUE_CHANGED callback.
+
+Returns the scale factors for each axis.
+
+This function is only valid when called from an event callback registered. See <ApiLink name="lv_gltf_model_node_add_event_cb" display="lv_gltf_model_node_add_event_cb()" /> and <ApiLink name="lv_gltf_model_node_add_event_cb_with_world_position" display="lv_gltf_model_node_add_event_cb_with_world_position()" />
+
+```c
+lv_result_t lv_gltf_model_node_get_scale(lv_event_t *e, lv_3dpoint_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `e` | <ApiLink name="lv_event_t" display="lv_event_t *" /> | Pointer to the event structure from the callback |
+| `result` | <ApiLink name="lv_3dpoint_t" display="lv_3dpoint_t *" /> | Pointer to <ApiLink name="lv_3dpoint_t" /> structure to store the scale (x, y, z) |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if successful, LV_RESULT_INVALID if called outside event callback or if parameters are null
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_get_euler_rotation" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={261} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L261">
+
+### lv_gltf_model_node_get_euler_rotation
+
+Get the Euler rotation of a glTF model node. Must be called from within an LV_EVENT_VALUE_CHANGED callback.
+
+Returns rotation as Euler angles in radians (x, y, z).
+
+This function is only valid when called from an event callback registered. See <ApiLink name="lv_gltf_model_node_add_event_cb" display="lv_gltf_model_node_add_event_cb()" /> and <ApiLink name="lv_gltf_model_node_add_event_cb_with_world_position" display="lv_gltf_model_node_add_event_cb_with_world_position()" />
+
+```c
+lv_result_t lv_gltf_model_node_get_euler_rotation(lv_event_t *e, lv_3dpoint_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `e` | <ApiLink name="lv_event_t" display="lv_event_t *" /> | Pointer to the event structure from the callback |
+| `result` | <ApiLink name="lv_3dpoint_t" display="lv_3dpoint_t *" /> | Pointer to <ApiLink name="lv_3dpoint_t" /> structure to store the rotation in radians (x, y, z) |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if successful, LV_RESULT_INVALID if called outside event callback or if parameters are null
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_gltf_model_node_add_event_cb" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={98} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L98">
+
+### lv_gltf_model_node_add_event_cb
+
+Add an event callback to a glTF model node.
+
+```c
+lv_event_dsc_t * lv_gltf_model_node_add_event_cb(lv_gltf_model_node_t *node, lv_event_cb_t cb, lv_event_code_t filter_list, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+| `cb` | <ApiLink name="lv_event_cb_t" /> | The event callback function to add. Use <ApiLink name="lv_event_get_param" display="lv_event_get_param()" /> to retrieve lv_gltf_node_data_t with the node's data. |
+| `filter_list` | <ApiLink name="lv_event_code_t" /> | Event code filter for the callback |
+| `user_data` | `void *` | User data to pass to the callback |
+
+**Returns:** <ApiLink name="lv_event_dsc_t" display="lv_event_dsc_t *" /> — Pointer to the event descriptor, or NULL if allocation failed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_add_event_cb_with_world_position" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={111} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L111">
+
+### lv_gltf_model_node_add_event_cb_with_world_position
+
+Add an event callback to a glTF model node with world position computation enabled. Use this only when world position is needed, as computing it is an expensive operation.
+
+```c
+lv_event_dsc_t * lv_gltf_model_node_add_event_cb_with_world_position(lv_gltf_model_node_t *node, lv_event_cb_t cb, lv_event_code_t filter_list, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> | Pointer to the glTF model node structure |
+| `cb` | <ApiLink name="lv_event_cb_t" /> | The event callback function to add. Use <ApiLink name="lv_event_get_param" display="lv_event_get_param()" /> to retrieve lv_gltf_node_data_t with the node's data. |
+| `filter_list` | <ApiLink name="lv_event_code_t" /> | Event code filter for the callback |
+| `user_data` | `void *` | User data to pass to the callback |
+
+**Returns:** <ApiLink name="lv_event_dsc_t" display="lv_event_dsc_t *" /> — Pointer to the event descriptor, or NULL if allocation failed
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Macros
+
+<ApiMember kind="macro" name="LV_GLTF_ANIM_SPEED_TENTH" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={29} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L29">
+
+### LV_GLTF_ANIM_SPEED_TENTH
+
+```c
+#define LV_GLTF_ANIM_SPEED_TENTH 100
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_ANIM_SPEED_QUARTER" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={30} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L30">
+
+### LV_GLTF_ANIM_SPEED_QUARTER
+
+```c
+#define LV_GLTF_ANIM_SPEED_QUARTER 250
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_ANIM_SPEED_HALF" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={31} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L31">
+
+### LV_GLTF_ANIM_SPEED_HALF
+
+```c
+#define LV_GLTF_ANIM_SPEED_HALF 500
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_ANIM_SPEED_NORMAL" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={32} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L32">
+
+### LV_GLTF_ANIM_SPEED_NORMAL
+
+```c
+#define LV_GLTF_ANIM_SPEED_NORMAL 1000
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_ANIM_SPEED_2X" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={33} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L33">
+
+### LV_GLTF_ANIM_SPEED_2X
+
+```c
+#define LV_GLTF_ANIM_SPEED_2X 2000
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_ANIM_SPEED_3X" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={34} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L34">
+
+### LV_GLTF_ANIM_SPEED_3X
+
+```c
+#define LV_GLTF_ANIM_SPEED_3X 3000
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_ANIM_SPEED_4X" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={35} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L35">
+
+### LV_GLTF_ANIM_SPEED_4X
+
+```c
+#define LV_GLTF_ANIM_SPEED_4X 4000
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_DEFAULT_CAMERA" file="/home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h" line={36} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_model_node.h#L36">
+
+### LV_GLTF_DEFAULT_CAMERA
+
+```c
+#define LV_GLTF_DEFAULT_CAMERA 0
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h", "lv_3dmath.h", "lv_event.h"]}
+  includedBy={["lv_gltf_model.h", "lvgl.h"]}
+  transitiveIncludes={["lv_array.h", "lv_conf_kconfig.h"]}
+/>

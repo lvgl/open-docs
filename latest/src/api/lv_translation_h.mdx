@@ -1,0 +1,266 @@
+---
+title: lv_translation.h
+description: API reference for lv_translation.h
+api:
+  functions: [lv_translation_init, lv_translation_deinit, lv_translation_add_static, lv_translation_add_dynamic, lv_translation_set_language, lv_translation_get_language, lv_translation_get, lv_tr, lv_translation_add_language, lv_translation_get_language_index, lv_translation_add_tag, lv_translation_set_tag_translation]
+---
+
+<ApiSummary functions={12} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Getters (3)","Other (7)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_translation_set_language" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={71} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L71">
+
+### lv_translation_set_language
+
+Select the current language The `LV_EVENT_TRANSLATION_LANGUAGE_CHANGED` event will be sent to every widget
+
+```c
+void lv_translation_set_language(const char *lang)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `lang` | `const char *` | a string from the defined languages. E.g. "en" or "de" |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_translation_set_tag_translation" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={135} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L135">
+
+### lv_translation_set_tag_translation
+
+Add a translation to a tag in a dynamic translation pack
+
+```c
+lv_result_t lv_translation_set_tag_translation(lv_translation_pack_t *pack, lv_translation_tag_dsc_t *tag, uint32_t lang_idx, const char *trans)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pack` | <ApiLink name="lv_translation_pack_t" display="lv_translation_pack_t *" /> | pointer to a dynamic translation pack |
+| `tag` | <ApiLink name="lv_translation_tag_dsc_t" display="lv_translation_tag_dsc_t *" /> | return value of `lv_translation_add_tag` |
+| `lang_idx` | `uint32_t` | index of the language for which translation should be set |
+| `trans` | `const char *` | the translation on the given language |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success, LV_RESULT_INVALID: failed
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (3)">
+
+<ApiMember kind="function" name="lv_translation_get_language" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={77} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L77">
+
+### lv_translation_get_language
+
+Get the current selected language
+
+```c
+const char * lv_translation_get_language(void)
+```
+
+**Returns:** `const char *` — the current selected language
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_translation_get" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={88} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L88">
+
+### lv_translation_get
+
+Get the translated version of a tag on the selected language
+
+```c
+const char * lv_translation_get(const char *tag)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `tag` | `const char *` | the tag to translate |
+
+**Returns:** `const char *` — the translation
+
+<Callout type="info">
+fallback rules:
+- if the tag is found on the selected language return it
+- if the tag is not found on the selected language, use the fist language
+- if the tag is not found on the first language, return the tag
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_translation_get_language_index" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={115} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L115">
+
+### lv_translation_get_language_index
+
+Get the index of a language in a pack.
+
+```c
+int32_t lv_translation_get_language_index(lv_translation_pack_t *pack, const char *lang_name)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pack` | <ApiLink name="lv_translation_pack_t" display="lv_translation_pack_t *" /> | pointer to a static or dynamic language pack |
+| `lang_name` | `const char *` | name of the language to find |
+
+**Returns:** `int32_t` — index of the language or -1 if not found.
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (7)">
+
+<ApiMember kind="function" name="lv_translation_init" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={38} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L38">
+
+### lv_translation_init
+
+Initialize the translation module
+
+```c
+void lv_translation_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_translation_deinit" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={43} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L43">
+
+### lv_translation_deinit
+
+De-initialize the translation module and free all allocated translations
+
+```c
+void lv_translation_deinit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_translation_add_static" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={53} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L53">
+
+### lv_translation_add_static
+
+Register a translation pack from static arrays. All the pointers need to be static, that is to live while they are used
+
+```c
+lv_translation_pack_t * lv_translation_add_static(const char *const languages[], const char *const tags[], const char *const translations[])
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `languages` | `const char *const` | List of languages. E.g. `{"en", "de", NULL}` |
+| `tags` | `const char *const` | Tags that are using in the UI. E.g. `{"dog", "cat", NULL}` |
+| `translations` | `const char *const` | List of translations. E.g. `{"Dog", "Cat", "Hund", "Katze"}` |
+
+**Returns:** <ApiLink name="lv_translation_pack_t" display="lv_translation_pack_t *" /> — The created pack
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_translation_add_dynamic" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={64} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L64">
+
+### lv_translation_add_dynamic
+
+Add a pack to which translations can be added dynamically. `pack->languages` needs to be a malloc-ed array where each language is also malloc-ed as an element. `pack->translation_array` stores the translation having `lv_translation_tag_dsc_t` items In each array element `tag` is a malloced string, `translations` is a malloc-ed array with malloc-ed array for each element.
+
+```c
+lv_translation_pack_t * lv_translation_add_dynamic(void)
+```
+
+**Returns:** <ApiLink name="lv_translation_pack_t" display="lv_translation_pack_t *" /> — the created pack to which data can be added manually.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_tr" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={95} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L95">
+
+### lv_tr
+
+Shorthand of lv_translation_set_language
+
+```c
+static const char * lv_tr(const char *tag)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `tag` | `const char *` | the tag to translate |
+
+**Returns:** `const char *` — the translation
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_translation_add_language" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={107} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L107">
+
+### lv_translation_add_language
+
+Add a new language to a dynamic language pack. All languages should be added before adding tags
+
+```c
+lv_result_t lv_translation_add_language(lv_translation_pack_t *pack, const char *lang)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pack` | <ApiLink name="lv_translation_pack_t" display="lv_translation_pack_t *" /> | pointer to a dynamic translation pack |
+| `lang` | `const char *` | language to add, e.g. "en", or "de" |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success, LV_RESULT_INVALID: failed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_translation_add_tag" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h" line={125} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_translation.h#L125">
+
+### lv_translation_add_tag
+
+Add a new tag to a dynamic language pack. Once the tag is added the translations for each language can be added too by using `lv_translation_set_tag_translation`
+
+```c
+lv_translation_tag_dsc_t * lv_translation_add_tag(lv_translation_pack_t *pack, const char *tag_name)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pack` | <ApiLink name="lv_translation_pack_t" display="lv_translation_pack_t *" /> | pointer to a dynamic translation pack |
+| `tag_name` | `const char *` | name of the tag, e.g. "dog", or "house" |
+
+**Returns:** <ApiLink name="lv_translation_tag_dsc_t" display="lv_translation_tag_dsc_t *" /> — pointer to the allocated tag descriptor
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "stdint.h", "lv_types.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

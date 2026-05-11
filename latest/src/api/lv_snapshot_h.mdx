@@ -1,0 +1,153 @@
+---
+title: lv_snapshot.h
+description: API reference for lv_snapshot.h
+api:
+  functions: [lv_snapshot_take, lv_snapshot_create_draw_buf, lv_snapshot_reshape_draw_buf, lv_snapshot_take_to_draw_buf, lv_snapshot_free, lv_snapshot_take_to_buf]
+---
+
+<ApiSummary functions={6} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_snapshot_take" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h" line={41} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h#L41">
+
+### lv_snapshot_take
+
+Take snapshot for object with its children, create the draw buffer as needed.
+
+```c
+lv_draw_buf_t * lv_snapshot_take(lv_obj_t *obj, lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the object to generate snapshot. |
+| `cf` | <ApiLink name="lv_color_format_t" /> | color format for generated image. |
+
+**Returns:** <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> — a pointer to an draw buffer containing snapshot image, or NULL if failed.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_snapshot_create_draw_buf" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h" line={49} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h#L49">
+
+### lv_snapshot_create_draw_buf
+
+Create a draw buffer to store the snapshot image for object.
+
+```c
+lv_draw_buf_t * lv_snapshot_create_draw_buf(lv_obj_t *obj, lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the object to generate snapshot. |
+| `cf` | <ApiLink name="lv_color_format_t" /> | color format for generated image. |
+
+**Returns:** <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> — a pointer to an draw buffer ready for taking snapshot, or NULL if failed.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_snapshot_reshape_draw_buf" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h" line={58} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h#L58">
+
+### lv_snapshot_reshape_draw_buf
+
+Reshape the draw buffer to prepare for taking snapshot for obj. This is usually used to check if the existing draw buffer is enough for obj snapshot. If return LV_RESULT_INVALID, you should create a new one.
+
+```c
+lv_result_t lv_snapshot_reshape_draw_buf(lv_obj_t *obj, lv_draw_buf_t *draw_buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the object to generate snapshot. |
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | the draw buffer to reshape. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_snapshot_take_to_draw_buf" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h" line={68} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h#L68">
+
+### lv_snapshot_take_to_draw_buf
+
+Take snapshot for object with its children, save image info to provided buffer.
+
+```c
+lv_result_t lv_snapshot_take_to_draw_buf(lv_obj_t *obj, lv_color_format_t cf, lv_draw_buf_t *draw_buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the object to generate snapshot. |
+| `cf` | <ApiLink name="lv_color_format_t" /> | color format for new snapshot image. It could differ with cf of `draw_buf` as long as the new cf will fit in. |
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | the draw buffer to store the image result. It's reshaped automatically. |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK on success, LV_RESULT_INVALID on error.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_snapshot_free" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h" line={76} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h#L76">
+
+### lv_snapshot_free
+
+\> **Deprecated:** Use `lv_draw_buf_destroy` instead.
+
+Free the snapshot image returned by <ApiLink name="lv_snapshot_take" />
+
+```c
+void lv_snapshot_free(lv_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_image_dsc_t" display="lv_image_dsc_t *" /> | the image descriptor generated by lv_snapshot_take. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_snapshot_take_to_buf" file="/home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h" line={88} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_snapshot.h#L88">
+
+### lv_snapshot_take_to_buf
+
+Take snapshot for object with its children, save image info to provided buffer. 
+
+\> **Deprecated:** Use lv_snapshot_take_to_draw_buf instead.
+
+```c
+lv_result_t lv_snapshot_take_to_buf(lv_obj_t *obj, lv_color_format_t cf, lv_image_dsc_t *dsc, void *buf, uint32_t buf_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the object to generate snapshot. |
+| `cf` | <ApiLink name="lv_color_format_t" /> | color format for generated image. |
+| `dsc` | <ApiLink name="lv_image_dsc_t" display="lv_image_dsc_t *" /> | image descriptor to store the image result. |
+| `buf` | `void *` | the buffer to store image data. It must meet align requirement. |
+| `buf_size` | `uint32_t` | provided buffer size in bytes. |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK on success, LV_RESULT_INVALID on error.
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj.h", "stdint.h", "stddef.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_timer.h", "lv_types.h"]}
+/>

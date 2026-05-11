@@ -1,0 +1,529 @@
+---
+title: lv_obj_property.h
+description: API reference for lv_obj_property.h
+api:
+  functions: [lv_obj_set_property, lv_obj_set_properties, lv_obj_get_property, lv_obj_get_style_property, lv_obj_property_get_id, lv_obj_class_property_get_id, lv_style_property_get_id]
+  enums: [_lv_prop_id_range_boundary_t]
+  structs: [_lv_property_name_t, lv_property_t, lv_property_ops_t]
+  macros: [LV_PROPERTY_TYPE_INVALID, LV_PROPERTY_TYPE_INT, LV_PROPERTY_TYPE_PRECISE, LV_PROPERTY_TYPE_COLOR, LV_PROPERTY_TYPE_POINT, LV_PROPERTY_TYPE_POINTER, LV_PROPERTY_TYPE_IMGSRC, LV_PROPERTY_TYPE_TEXT, LV_PROPERTY_TYPE_OBJ, LV_PROPERTY_TYPE_DISPLAY, LV_PROPERTY_TYPE_FONT, LV_PROPERTY_TYPE_BOOL, LV_PROPERTY_TYPE_SHIFT, LV_PROPERTY_TYPE2_SHIFT, LV_PROPERTY_ID, LV_PROPERTY_ID2, LV_PROPERTY_ID_TYPE, LV_PROPERTY_ID_TYPE2, LV_PROPERTY_ID_INDEX, LV_OBJ_SET_PROPERTY_ARRAY, LV_PROPERTY_CLASS_FIELDS]
+---
+
+<ApiSummary functions={7} enums={1} structs={3} macros={21} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Getters (5)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_obj_set_property" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={209} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L209">
+
+### lv_obj_set_property
+
+Set Widget property.
+
+```c
+lv_result_t lv_obj_set_property(lv_obj_t *obj, const lv_property_t *value)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
+| `value` | <ApiLink name="lv_property_t" display="const lv_property_t *" /> | property value to set |
+
+**Returns:** <ApiLink name="lv_result_t" /> — return LV_RESULT_OK if call succeeded
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_properties" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={218} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L218">
+
+### lv_obj_set_properties
+
+Set multiple Widget properties. Helper `LV_OBJ_SET_PROPERTY_ARRAY` can be used for constant property array.
+
+```c
+lv_result_t lv_obj_set_properties(lv_obj_t *obj, const lv_property_t *value, uint32_t count)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
+| `value` | <ApiLink name="lv_property_t" display="const lv_property_t *" /> | property value array to set |
+| `count` | `uint32_t` | number of array elements |
+
+**Returns:** <ApiLink name="lv_result_t" /> — return LV_RESULT_OK if call succeeded
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (5)">
+
+<ApiMember kind="function" name="lv_obj_get_property" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={231} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L231">
+
+### lv_obj_get_property
+
+Read property value from Widget. If id is a style property, computes the style of PART_MAIN.
+
+```c
+lv_property_t lv_obj_get_property(lv_obj_t *obj, lv_prop_id_t id)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
+| `id` | <ApiLink name="lv_prop_id_t" /> | ID of property to read |
+
+**Returns:** <ApiLink name="lv_property_t" /> — return property value read. The returned property ID is set to `LV_PROPERTY_ID_INVALID` if read failed.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_style_property" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={240} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L240">
+
+### lv_obj_get_style_property
+
+Read style property value from Widget
+
+```c
+lv_property_t lv_obj_get_style_property(lv_obj_t *obj, lv_prop_id_t id, lv_part_t part)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
+| `id` | <ApiLink name="lv_prop_id_t" /> | ID of style property |
+| `part` | <ApiLink name="lv_part_t" /> | part for which the style property should be computed |
+
+**Returns:** <ApiLink name="lv_property_t" /> — return property value read. The returned property ID is set to `LV_PROPERTY_ID_INVALID` if read failed.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_property_get_id" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={250} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L250">
+
+### lv_obj_property_get_id
+
+Get property ID by recursively searching for name in Widget's class hierarchy, and if still not found, then search style properties. Requires to enabling `LV_USE_OBJ_PROPERTY_NAME`.
+
+```c
+lv_prop_id_t lv_obj_property_get_id(const lv_obj_t *obj, const char *name)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to Widget whose class and base-class hierarchy are to be searched. |
+| `name` | `const char *` | property name |
+
+**Returns:** <ApiLink name="lv_prop_id_t" /> — property ID found or `LV_PROPERTY_ID_INVALID` if not found.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_class_property_get_id" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={259} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L259">
+
+### lv_obj_class_property_get_id
+
+Get property ID by doing a non-recursive search for name directly in Widget class properties. Requires enabling `LV_USE_OBJ_PROPERTY_NAME`.
+
+```c
+lv_prop_id_t lv_obj_class_property_get_id(const lv_obj_class_t *clz, const char *name)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `clz` | <ApiLink name="lv_obj_class_t" display="const lv_obj_class_t *" /> | pointer to Widget class that has specified property. |
+| `name` | `const char *` | property name |
+
+**Returns:** <ApiLink name="lv_prop_id_t" /> — property ID found or `LV_PROPERTY_ID_INVALID` if not found.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_style_property_get_id" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={266} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L266">
+
+### lv_style_property_get_id
+
+Get style property ID by name. Requires enabling `LV_USE_OBJ_PROPERTY_NAME`.
+
+```c
+lv_prop_id_t lv_style_property_get_id(const char *name)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `name` | `const char *` | property name |
+
+**Returns:** <ApiLink name="lv_prop_id_t" /> — property ID found or `LV_PROPERTY_ID_INVALID` if not found.
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="_lv_prop_id_range_boundary_t" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={91} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L91">
+
+### _lv_prop_id_range_boundary_t
+
+Group of predefined widget ID start value.
+
+| Name | Value |
+|------|------|
+| `LV_PROPERTY_ID_INVALID` | `0` |
+| `LV_PROPERTY_STYLE_START` | `0x00` |
+| `LV_PROPERTY_ID_START` | `0x0100` |
+| `LV_PROPERTY_OBJ_START` | `0x0100` |
+| `LV_PROPERTY_IMAGE_START` | `0x0200` |
+| `LV_PROPERTY_LABEL_START` | `0x0300` |
+| `LV_PROPERTY_KEYBOARD_START` | `0x0400` |
+| `LV_PROPERTY_TEXTAREA_START` | `0x0500` |
+| `LV_PROPERTY_ROLLER_START` | `0x0600` |
+| `LV_PROPERTY_DROPDOWN_START` | `0x0700` |
+| `LV_PROPERTY_SLIDER_START` | `0x0800` |
+| `LV_PROPERTY_ANIMIMAGE_START` | `0x0900` |
+| `LV_PROPERTY_ARC_START` | `0x0a00` |
+| `LV_PROPERTY_BAR_START` | `0x0b00` |
+| `LV_PROPERTY_SWITCH_START` | `0x0c00` |
+| `LV_PROPERTY_CHECKBOX_START` | `0x0d00` |
+| `LV_PROPERTY_LED_START` | `0x0e00` |
+| `LV_PROPERTY_LINE_START` | `0x0f00` |
+| `LV_PROPERTY_SCALE_START` | `0x1000` |
+| `LV_PROPERTY_SPINBOX_START` | `0x1100` |
+| `LV_PROPERTY_SPINNER_START` | `0x1200` |
+| `LV_PROPERTY_TABLE_START` | `0x1300` |
+| `LV_PROPERTY_TABVIEW_START` | `0x1400` |
+| `LV_PROPERTY_BUTTONMATRIX_START` | `0x1500` |
+| `LV_PROPERTY_SPAN_START` | `0x1600` |
+| `LV_PROPERTY_MENU_START` | `0x1700` |
+| `LV_PROPERTY_CHART_START` | `0x1800` |
+| `LV_PROPERTY_ID_BUILTIN_LAST` | `0xffff` |
+| `LV_PROPERTY_ID_ANY` | `0x7ffffffe` |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_property_name_t">
+
+### _lv_property_name_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `name` | `const char *` |  |
+| `id` | <ApiLink name="lv_prop_id_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_property_t">
+
+### lv_property_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `id` | <ApiLink name="lv_prop_id_t" /> |  |
+| `num` | `int32_t` | Signed integer number (enums or "normal" numbers) |
+| `num_u` | `uint32_t` | Unsigned integer number (opacity, Booleans) \<br/\> |
+| `enable` | `bool` | Booleans |
+| `ptr` | `const void *` | Constant pointers (font, cone text, etc.) |
+| `color` | <ApiLink name="lv_color_t" /> | Colors |
+| `precise` | <ApiLink name="lv_value_precise_t" /> | float or int for precise value |
+| `point` | <ApiLink name="lv_point_t" /> | Point, contains two int32_t |
+| `style` | <ApiLink name="lv_style_value_t" /> | Note that place struct member `style` at first place is intended. `style` shares same memory with `num`, `ptr`, `color`. So we set the style value directly without using `prop.style.num`.<br/><br/>E.g.<br/><br/>static const <ApiLink name="lv_property_t" /> obj_pos_x = \{ .id = LV_PROPERTY_STYLE_X, .num = 123, .selector = LV_STATE_PRESSED, \}<br/><br/>instead of: static const <ApiLink name="lv_property_t" /> obj_pos_x = \{ .id = LV_PROPERTY_STYLE_X, .style.num = 123, // note this line. .selector = LV_STATE_PRESSED, \} Make sure it's the first element in struct. |
+| `selector` | `uint32_t` | Style selector, lv_part_t \| lv_state_t |
+| `arg1` | <ApiLink name="lv_property_t" display="union lv_property_t" /> |  |
+| `arg2` | <ApiLink name="lv_property_t" display="union lv_property_t" /> |  |
+| `` | <ApiLink name="lv_property_t" display="union lv_property_t" /> |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_property_t" count={2}>
+
+- `lv_obj_set_property` — param `value`
+- `lv_obj_set_properties` — param `value`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_property_ops_t">
+
+### lv_property_ops_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `id` | <ApiLink name="lv_prop_id_t" /> |  |
+| `setter` | `void *` | Callback used to set property. |
+| `getter` | `void *` | Callback used to get property. |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_INVALID" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={27} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L27">
+
+### LV_PROPERTY_TYPE_INVALID
+
+```c
+#define LV_PROPERTY_TYPE_INVALID 0   /*Use default 0 as invalid to detect program outliers*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_INT" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={28} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L28">
+
+### LV_PROPERTY_TYPE_INT
+
+```c
+#define LV_PROPERTY_TYPE_INT 1   /*int32_t type*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_PRECISE" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={29} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L29">
+
+### LV_PROPERTY_TYPE_PRECISE
+
+```c
+#define LV_PROPERTY_TYPE_PRECISE 2   /*lv_value_precise_t, int32_t or float depending on LV_USE_FLOAT*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_COLOR" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={30} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L30">
+
+### LV_PROPERTY_TYPE_COLOR
+
+```c
+#define LV_PROPERTY_TYPE_COLOR 3   /*ARGB8888 type*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_POINT" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={31} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L31">
+
+### LV_PROPERTY_TYPE_POINT
+
+```c
+#define LV_PROPERTY_TYPE_POINT 4   /*lv_point_t */
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_POINTER" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={32} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L32">
+
+### LV_PROPERTY_TYPE_POINTER
+
+```c
+#define LV_PROPERTY_TYPE_POINTER 5   /*void * pointer*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_IMGSRC" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={33} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L33">
+
+### LV_PROPERTY_TYPE_IMGSRC
+
+```c
+#define LV_PROPERTY_TYPE_IMGSRC 6   /*Special pointer for image*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_TEXT" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={34} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L34">
+
+### LV_PROPERTY_TYPE_TEXT
+
+```c
+#define LV_PROPERTY_TYPE_TEXT 7   /*Special pointer of char* */
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_OBJ" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={35} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L35">
+
+### LV_PROPERTY_TYPE_OBJ
+
+```c
+#define LV_PROPERTY_TYPE_OBJ 8   /*Special pointer of lv_obj_t* */
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_DISPLAY" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={36} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L36">
+
+### LV_PROPERTY_TYPE_DISPLAY
+
+```c
+#define LV_PROPERTY_TYPE_DISPLAY 9   /*Special pointer of lv_display_t* */
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_FONT" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={37} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L37">
+
+### LV_PROPERTY_TYPE_FONT
+
+```c
+#define LV_PROPERTY_TYPE_FONT 10  /*Special pointer of lv_font_t* */
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_BOOL" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={38} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L38">
+
+### LV_PROPERTY_TYPE_BOOL
+
+```c
+#define LV_PROPERTY_TYPE_BOOL 11  /*int32_t type*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE_SHIFT" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={40} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L40">
+
+### LV_PROPERTY_TYPE_SHIFT
+
+```c
+#define LV_PROPERTY_TYPE_SHIFT 28
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_TYPE2_SHIFT" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={41} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L41">
+
+### LV_PROPERTY_TYPE2_SHIFT
+
+```c
+#define LV_PROPERTY_TYPE2_SHIFT 24
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_ID" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={48} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L48">
+
+### LV_PROPERTY_ID
+
+```c
+#define LV_PROPERTY_ID(clz, name, type, index) \
+    LV_PROPERTY_## clz ##_##name = (LV_PROPERTY_## clz ##_START + ((int)index)) | ((type) << LV_PROPERTY_TYPE_SHIFT)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_ID2" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={55} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L55">
+
+### LV_PROPERTY_ID2
+
+```c
+#define LV_PROPERTY_ID2(clz, name, type, type2, index) \
+    LV_PROPERTY_ID(clz, name, type, index) | ((type2) << LV_PROPERTY_TYPE2_SHIFT)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_ID_TYPE" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={57} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L57">
+
+### LV_PROPERTY_ID_TYPE
+
+```c
+#define LV_PROPERTY_ID_TYPE(id) \
+    ((id) >> LV_PROPERTY_TYPE_SHIFT)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_ID_TYPE2" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={58} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L58">
+
+### LV_PROPERTY_ID_TYPE2
+
+```c
+#define LV_PROPERTY_ID_TYPE2(id) \
+    ((id) >> LV_PROPERTY_TYPE_SHIFT)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_ID_INDEX" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={59} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L59">
+
+### LV_PROPERTY_ID_INDEX
+
+```c
+#define LV_PROPERTY_ID_INDEX(id) \
+    ((id) & 0xfffffff)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_OBJ_SET_PROPERTY_ARRAY" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={62} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L62">
+
+### LV_OBJ_SET_PROPERTY_ARRAY
+
+```c
+#define LV_OBJ_SET_PROPERTY_ARRAY(obj, array) \
+    lv_obj_set_properties(obj, array, LV_ARRAYLEN(array))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_PROPERTY_CLASS_FIELDS" file="/home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h" line={67} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_property.h#L67">
+
+### LV_PROPERTY_CLASS_FIELDS
+
+```c
+#define LV_PROPERTY_CLASS_FIELDS(widget, uppercase) \
+    .prop_index_start = LV_PROPERTY_##uppercase##_START, \
+        .prop_index_end = LV_PROPERTY_##uppercase##_END, \
+        .properties = lv_##widget##_properties, \
+        .properties_count = LV_ARRAYLEN(lv_##widget##_properties), \
+        .property_names = lv_##widget##_property_names, \
+        .names_count = LV_ARRAYLEN(lv_##widget##_property_names)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h", "lv_style.h", "lv_obj_style.h"]}
+  includedBy={["lv_obj.h", "lv_obj_class.h", "lvgl.h", "lv_buttonmatrix.h", "lv_menu.h", "lv_span.h", "lv_spinner.h", "lv_table.h", "lv_tabview.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_grad.h", "lv_grid.h", "lv_image_dsc.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_obj_style_gen.h", "lv_palette.h", "lv_sprintf.h", "lv_string.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h"]}
+/>

@@ -1,0 +1,95 @@
+---
+title: lv_test_helpers.h
+description: API reference for lv_test_helpers.h
+api:
+  functions: [lv_test_wait, lv_test_fast_forward]
+  macros: [LV_HEAP_CHECK, lv_test_get_free_mem, LV_TEST_WIDTH_TO_STRIDE]
+---
+
+<ApiSummary functions={2} macros={3} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_test_wait" file="/home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_helpers.h" line={43} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_helpers.h#L43">
+
+### lv_test_wait
+
+Emulate a delay. It's not real delay, but it tricks LVGL to think that the required time has been elapsed. `lv_timer_handler` is called after each millisecond, meaning all the events will be fired inside this function. At the end the animations and display will be also updated.
+
+```c
+void lv_test_wait(uint32_t ms)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ms` | `uint32_t` | the number of milliseconds to pass |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_fast_forward" file="/home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_helpers.h" line={50} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_helpers.h#L50">
+
+### lv_test_fast_forward
+
+Emulates some time passing. Update the animations and the display only once at the end.
+
+```c
+void lv_test_fast_forward(uint32_t ms)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ms` | `uint32_t` | the number of milliseconds to pass |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_HEAP_CHECK" file="/home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_helpers.h" line={54} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_helpers.h#L54">
+
+### LV_HEAP_CHECK
+
+```c
+#define LV_HEAP_CHECK(x) \
+    do {} while(0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_test_get_free_mem" file="/home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_helpers.h" line={56} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_helpers.h#L56">
+
+### lv_test_get_free_mem
+
+```c
+#define lv_test_get_free_mem() \
+    (65536)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_TEST_WIDTH_TO_STRIDE" file="/home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_helpers.h" line={72} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_helpers.h#L72">
+
+### LV_TEST_WIDTH_TO_STRIDE
+
+```c
+#define LV_TEST_WIDTH_TO_STRIDE(w, px_size) \
+    ((((w) * (px_size) + (LV_DRAW_BUF_STRIDE_ALIGN - 1)) / LV_DRAW_BUF_STRIDE_ALIGN) * LV_DRAW_BUF_STRIDE_ALIGN)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h", "lv_mem.h"]}
+  includedBy={["lv_test.h", "lvgl.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

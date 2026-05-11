@@ -1,0 +1,304 @@
+---
+title: lv_gif.h
+description: API reference for lv_gif.h
+api:
+  functions: [lv_gif_create, lv_gif_set_color_format, lv_gif_set_src, lv_gif_restart, lv_gif_pause, lv_gif_resume, lv_gif_is_loaded, lv_gif_get_loop_count, lv_gif_set_loop_count, lv_gif_set_auto_pause_invisible, lv_gif_get_size, lv_gif_get_frame_count, lv_gif_get_current_frame_index]
+  variables: [lv_gif_class]
+---
+
+<ApiSummary functions={13} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (4)","Getters (4)","Other (5)"]}>
+<ApiTab value="Setters (4)">
+
+<ApiMember kind="function" name="lv_gif_set_color_format" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={51} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L51">
+
+### lv_gif_set_color_format
+
+Set the color format of the internally allocated framebuffer that the gif will be decoded to. The default is LV_COLOR_FORMAT_ARGB8888. Call this before `lv_gif_set_src` to avoid reallocating the framebuffer.
+
+```c
+void lv_gif_set_color_format(lv_obj_t *obj, lv_color_format_t color_format)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gif object |
+| `color_format` | <ApiLink name="lv_color_format_t" /> | the color format of the gif framebuffer |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gif_set_src" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={59} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L59">
+
+### lv_gif_set_src
+
+Set the gif data to display on the object
+
+```c
+void lv_gif_set_src(lv_obj_t *obj, const void *src)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gif object |
+| `src` | `const void *` | 1) pointer to an <ApiLink name="lv_image_dsc_t" /> descriptor (which contains gif raw data) or 2) path to a gif file (e.g. "S:/dir/anim.gif") |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gif_set_loop_count" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={96} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L96">
+
+### lv_gif_set_loop_count
+
+Set the loop count for the GIF.
+
+```c
+void lv_gif_set_loop_count(lv_obj_t *obj, int32_t count)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gif obj |
+| `count` | `int32_t` | the loop count to set |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gif_set_auto_pause_invisible" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={103} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L103">
+
+### lv_gif_set_auto_pause_invisible
+
+Set whether to decode invisible object.
+
+```c
+void lv_gif_set_auto_pause_invisible(lv_obj_t *obj, bool auto_pause)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gif object |
+| `auto_pause` | `bool` | true: auto pause when invisible, false: don't auto pause |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (4)">
+
+<ApiMember kind="function" name="lv_gif_get_loop_count" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={89} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L89">
+
+### lv_gif_get_loop_count
+
+Get the loop count for the GIF.
+
+```c
+int32_t lv_gif_get_loop_count(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gif obj |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gif_get_size" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={112} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L112">
+
+### lv_gif_get_size
+
+Get gif width & height
+
+```c
+bool lv_gif_get_size(const char *src, uint16_t *w, uint16_t *h)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `src` | `const char *` | pointer to a gif file |
+| `w` | `uint16_t *` | pointer to store width |
+| `h` | `uint16_t *` | pointer to store height |
+
+**Returns:** `bool` — true: success; false: failed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gif_get_frame_count" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={119} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L119">
+
+### lv_gif_get_frame_count
+
+Get frame count of the GIF.
+
+```c
+int32_t lv_gif_get_frame_count(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gif object |
+
+**Returns:** `int32_t` — frame count of the GIF
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gif_get_current_frame_index" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={126} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L126">
+
+### lv_gif_get_current_frame_index
+
+Get the current frame index of the GIF.
+
+```c
+int32_t lv_gif_get_current_frame_index(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gif object |
+
+**Returns:** `int32_t` — current frame index of the GIF
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (5)">
+
+<ApiMember kind="function" name="lv_gif_create" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={42} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L42">
+
+### lv_gif_create
+
+Create a gif object
+
+```c
+lv_obj_t * lv_gif_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new gif. |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the gif obj
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gif_restart" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={65} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L65">
+
+### lv_gif_restart
+
+Restart a gif animation.
+
+```c
+void lv_gif_restart(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gif obj |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gif_pause" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={71} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L71">
+
+### lv_gif_pause
+
+Pause a gif animation.
+
+```c
+void lv_gif_pause(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gif obj |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gif_resume" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={77} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L77">
+
+### lv_gif_resume
+
+Resume a gif animation.
+
+```c
+void lv_gif_resume(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gif obj |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gif_is_loaded" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={83} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L83">
+
+### lv_gif_is_loaded
+
+Checks if the GIF was loaded correctly.
+
+```c
+bool lv_gif_is_loaded(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a gif obj |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Variables
+
+<ApiMember kind="variable" name="lv_gif_class" file="/home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h" line={31} url="https://github.com/lvgl/lvgl/tree/5468796a0c150a66a122cdb81182a048a08d4030/src//home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gif.h#L31">
+
+### lv_gif_class
+
+```c
+const lv_obj_class_t lv_gif_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_color.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_assert.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_types.h"]}
+/>
