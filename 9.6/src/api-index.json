@@ -2,7 +2,7 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-05-11T16:15:52.728Z",
+    "generatedAt": "2026-05-12T07:41:43.890Z",
     "symbolCount": 6507
   },
   "symbols": {
@@ -26461,31 +26461,6 @@
       "anchor": "lv_strchr",
       "kind": "function"
     },
-    "lv_theme_default.h": {
-      "path": "lv_theme_default_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_theme_default_init": {
-      "path": "lv_theme_default_h",
-      "anchor": "lv_theme_default_init",
-      "kind": "function"
-    },
-    "lv_theme_default_is_inited": {
-      "path": "lv_theme_default_h",
-      "anchor": "lv_theme_default_is_inited",
-      "kind": "function"
-    },
-    "lv_theme_default_get": {
-      "path": "lv_theme_default_h",
-      "anchor": "lv_theme_default_get",
-      "kind": "function"
-    },
-    "lv_theme_default_deinit": {
-      "path": "lv_theme_default_h",
-      "anchor": "lv_theme_default_deinit",
-      "kind": "function"
-    },
     "lv_theme.h": {
       "path": "lv_theme_h",
       "anchor": "",
@@ -26560,6 +26535,31 @@
       "path": "lv_theme_h",
       "anchor": "lv_theme_apply_cb_t",
       "kind": "typedef"
+    },
+    "lv_theme_default.h": {
+      "path": "lv_theme_default_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_theme_default_init": {
+      "path": "lv_theme_default_h",
+      "anchor": "lv_theme_default_init",
+      "kind": "function"
+    },
+    "lv_theme_default_is_inited": {
+      "path": "lv_theme_default_h",
+      "anchor": "lv_theme_default_is_inited",
+      "kind": "function"
+    },
+    "lv_theme_default_get": {
+      "path": "lv_theme_default_h",
+      "anchor": "lv_theme_default_get",
+      "kind": "function"
+    },
+    "lv_theme_default_deinit": {
+      "path": "lv_theme_default_h",
+      "anchor": "lv_theme_default_deinit",
+      "kind": "function"
     },
     "lv_theme_mono.h": {
       "path": "lv_theme_mono_h",
