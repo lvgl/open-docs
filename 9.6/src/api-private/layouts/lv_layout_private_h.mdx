@@ -1,0 +1,102 @@
+---
+title: lv_layout_private.h
+description: API reference for lv_layout_private.h
+api:
+  functions: [lv_layout_init, lv_layout_deinit, lv_layout_get_min_size, lv_layout_apply]
+  structs: [lv_layout_dsc_t]
+---
+
+<RelatedHeaders name="lv_layout.h" isPrivate={true} />
+
+<ApiSummary functions={4} structs={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (3)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_layout_get_min_size" file="api-private/layouts/lv_layout_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/layouts/lv_layout_private.h#L44">
+
+### lv_layout_get_min_size
+
+```c
+bool lv_layout_get_min_size(lv_obj_t *obj, int32_t *size, bool width)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `size` | `int32_t *` |
+| `width` | `bool` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_layout_init" file="api-private/layouts/lv_layout_private.h" line={40} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/layouts/lv_layout_private.h#L40">
+
+### lv_layout_init
+
+```c
+void lv_layout_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_layout_deinit" file="api-private/layouts/lv_layout_private.h" line={42} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/layouts/lv_layout_private.h#L42">
+
+### lv_layout_deinit
+
+```c
+void lv_layout_deinit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_layout_apply" file="api-private/layouts/lv_layout_private.h" line={50} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/layouts/lv_layout_private.h#L50">
+
+### lv_layout_apply
+
+Update the layout of a widget
+
+```c
+void lv_layout_apply(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_layout_dsc_t">
+
+### lv_layout_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `callbacks` | <ApiLink name="lv_layout_callbacks_t" /> |  |
+| `user_data` | `void *` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lv_global.h", "lvgl_private.h"]}
+/>

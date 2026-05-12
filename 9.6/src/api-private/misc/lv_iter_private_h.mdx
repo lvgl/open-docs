@@ -1,0 +1,276 @@
+---
+title: lv_iter_private.h
+description: API reference for lv_iter_private.h
+api:
+  functions: [lv_iter_create, lv_iter_get_context, lv_iter_destroy, lv_iter_next, lv_iter_make_peekable, lv_iter_peek, lv_iter_peek_advance, lv_iter_peek_reset, lv_iter_inspect]
+  typedefs: [lv_iter_t, lv_iter_next_cb, lv_iter_inspect_cb]
+---
+
+<ApiSummary functions={9} typedefs={3} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (8)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_iter_get_context" file="api-private/misc/lv_iter_private.h" line={52} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L52">
+
+### lv_iter_get_context
+
+Get the context of the iterator. You can use it to store some temporary variables associated with current iterator..
+
+```c
+void * lv_iter_get_context(const lv_iter_t *iter)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `iter` | <ApiLink name="lv_iter_t" display="const lv_iter_t *" /> | `lv_iter_t` object create before |
+
+**Returns:** `void *` — the iter context
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (8)">
+
+<ApiMember kind="function" name="lv_iter_create" file="api-private/misc/lv_iter_private.h" line={45} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L45">
+
+### lv_iter_create
+
+Create an iterator based on an instance, and then the next element of the iterator can be obtained through lv_iter_next, In order to obtain the next operation in a unified and abstract way.
+
+```c
+lv_iter_t * lv_iter_create(void *instance, uint32_t elem_size, uint32_t context_size, lv_iter_next_cb next_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `instance` | `void *` | The instance to be iterated |
+| `elem_size` | `uint32_t` | The size of the element to be iterated in bytes |
+| `context_size` | `uint32_t` | The size of the context to be passed to the next_cb in bytes |
+| `next_cb` | <ApiLink name="lv_iter_next_cb" /> | The callback function to get the next element |
+
+**Returns:** <ApiLink name="lv_iter_t" display="lv_iter_t *" /> — The iterator object
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_iter_destroy" file="api-private/misc/lv_iter_private.h" line={59} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L59">
+
+### lv_iter_destroy
+
+Destroy the iterator object, and release the context. Other resources allocated by the user are not released. The user needs to release it by itself.
+
+```c
+void lv_iter_destroy(lv_iter_t *iter)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `iter` | <ApiLink name="lv_iter_t" display="lv_iter_t *" /> | `lv_iter_t` object create before |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_iter_next" file="api-private/misc/lv_iter_private.h" line={68} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L68">
+
+### lv_iter_next
+
+Get the next element of the iterator.
+
+```c
+lv_result_t lv_iter_next(lv_iter_t *iter, void *elem)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `iter` | <ApiLink name="lv_iter_t" display="lv_iter_t *" /> | `lv_iter_t` object create before |
+| `elem` | `void *` | The pointer to store the next element |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: Get the next element successfully LV_RESULT_INVALID: The next element is invalid
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_iter_make_peekable" file="api-private/misc/lv_iter_private.h" line={75} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L75">
+
+### lv_iter_make_peekable
+
+Make the iterator peekable, which means that the user can peek the next element without advancing the iterator.
+
+```c
+void lv_iter_make_peekable(lv_iter_t *iter, uint32_t capacity)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `iter` | <ApiLink name="lv_iter_t" display="lv_iter_t *" /> | `lv_iter_t` object create before |
+| `capacity` | `uint32_t` | The capacity of the peek buffer |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_iter_peek" file="api-private/misc/lv_iter_private.h" line={84} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L84">
+
+### lv_iter_peek
+
+Peek the next element of the iterator without advancing the iterator.
+
+```c
+lv_result_t lv_iter_peek(lv_iter_t *iter, void *elem)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `iter` | <ApiLink name="lv_iter_t" display="lv_iter_t *" /> | `lv_iter_t` object create before |
+| `elem` | `void *` | The pointer to store the next element |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: Peek the next element successfully LV_RESULT_INVALID: The next element is invalid
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_iter_peek_advance" file="api-private/misc/lv_iter_private.h" line={92} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L92">
+
+### lv_iter_peek_advance
+
+Only advance the iterator without getting the next element.
+
+```c
+lv_result_t lv_iter_peek_advance(lv_iter_t *iter)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `iter` | <ApiLink name="lv_iter_t" display="lv_iter_t *" /> | `lv_iter_t` object create before |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: Peek the next element successfully LV_RESULT_INVALID: The next element is invalid
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_iter_peek_reset" file="api-private/misc/lv_iter_private.h" line={100} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L100">
+
+### lv_iter_peek_reset
+
+Reset the peek cursor to the `next` cursor.
+
+```c
+lv_result_t lv_iter_peek_reset(lv_iter_t *iter)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `iter` | <ApiLink name="lv_iter_t" display="lv_iter_t *" /> | `lv_iter_t` object create before |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: Reset the peek buffer successfully LV_RESULT_INVALID: The peek buffer is invalid
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_iter_inspect" file="api-private/misc/lv_iter_private.h" line={107} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L107">
+
+### lv_iter_inspect
+
+Inspect the element of the iterator. The callback function will be called for each element of the iterator.
+
+```c
+void lv_iter_inspect(lv_iter_t *iter, lv_iter_inspect_cb inspect_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `iter` | <ApiLink name="lv_iter_t" display="lv_iter_t *" /> | `lv_iter_t` object create before |
+| `inspect_cb` | <ApiLink name="lv_iter_inspect_cb" /> | The callback function to inspect the element |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_iter_t" file="api-private/misc/lv_iter_private.h" line={28} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L28">
+
+### lv_iter_t
+
+```c
+typedef struct _lv_iter_t lv_iter_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_iter_t" count={8}>
+
+- `lv_iter_get_context` — param `iter`
+- `lv_iter_destroy` — param `iter`
+- `lv_iter_next` — param `iter`
+- `lv_iter_make_peekable` — param `iter`
+- `lv_iter_peek` — param `iter`
+- `lv_iter_peek_advance` — param `iter`
+- `lv_iter_peek_reset` — param `iter`
+- `lv_iter_inspect` — param `iter`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_iter_next_cb" file="api-private/misc/lv_iter_private.h" line={29} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L29">
+
+### lv_iter_next_cb
+
+```c
+typedef lv_result_t(* lv_iter_next_cb) (void *instance, void *context, void *elem)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_iter_next_cb" count={1}>
+
+- `lv_iter_create` — param `next_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_iter_inspect_cb" file="api-private/misc/lv_iter_private.h" line={30} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/misc/lv_iter_private.h#L30">
+
+### lv_iter_inspect_cb
+
+```c
+typedef void(* lv_iter_inspect_cb) (void *elem)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_iter_inspect_cb" count={1}>
+
+- `lv_iter_inspect` — param `inspect_cb`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lvgl_private.h", "lv_image_cache.h", "lv_cache.h", "lv_iter.h"]}
+/>

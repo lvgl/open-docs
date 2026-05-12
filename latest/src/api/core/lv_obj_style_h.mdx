@@ -1,0 +1,1311 @@
+---
+title: lv_obj_style.h
+description: API reference for lv_obj_style.h
+api:
+  functions: [lv_obj_add_style, lv_obj_replace_style, lv_obj_remove_style, lv_obj_remove_theme, lv_obj_remove_style_all, lv_obj_report_style_change, lv_obj_refresh_style, lv_obj_style_set_disabled, lv_obj_style_get_disabled, lv_obj_enable_style_refresh, lv_obj_get_style_prop, lv_obj_has_style_prop, lv_obj_set_local_style_prop, lv_obj_get_local_style_prop, lv_obj_remove_local_style_prop, lv_obj_style_apply_color_filter, lv_obj_fade_in, lv_obj_fade_out, lv_obj_style_get_selector_state, lv_obj_style_get_selector_part, lv_obj_set_style_pad_all, lv_obj_set_style_pad_hor, lv_obj_set_style_pad_ver, lv_obj_set_style_margin_all, lv_obj_set_style_margin_hor, lv_obj_set_style_margin_ver, lv_obj_set_style_pad_gap, lv_obj_set_style_size, lv_obj_set_style_transform_scale, lv_obj_get_style_space_left, lv_obj_get_style_space_right, lv_obj_get_style_space_top, lv_obj_get_style_space_bottom, lv_obj_calculate_style_text_align, lv_obj_get_style_transform_scale_x_safe, lv_obj_get_style_transform_scale_y_safe, lv_obj_get_style_opa_recursive, lv_obj_style_apply_recolor, lv_obj_get_style_recolor_recursive, lv_obj_bind_style, lv_obj_bind_style_prop]
+  enums: [lv_state_t, lv_part_t, lv_style_state_cmp_t]
+  typedefs: [lv_style_selector_t]
+---
+
+<RelatedHeaders name="lv_obj_style_private.h" isPrivate={false} />
+
+<ApiSummary functions={41} enums={3} typedefs={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (11)","Getters (13)","Other (17)"]}>
+<ApiTab value="Setters (11)">
+
+<ApiMember kind="function" name="lv_obj_style_set_disabled" file="api/core/lv_obj_style.h" line={182} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L182">
+
+### lv_obj_style_set_disabled
+
+Temporary disable a style for a selector. It will look like is the style wasn't added
+
+```c
+void lv_obj_style_set_disabled(lv_obj_t *obj, const lv_style_t *style, lv_style_selector_t selector, bool dis)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+| `style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> | pointer to a style |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | the selector of a style (e.g. LV_STATE_PRESSED \| LV_PART_KNOB) |
+| `dis` | `bool` | true: disable the style, false: enable the style |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_local_style_prop" file="api/core/lv_obj_style.h" line={228} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L228">
+
+### lv_obj_set_local_style_prop
+
+Set local style property on an object's part and state.
+
+```c
+void lv_obj_set_local_style_prop(lv_obj_t *obj, lv_style_prop_t prop, lv_style_value_t value, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+| `prop` | <ApiLink name="lv_style_prop_t" /> | the property |
+| `value` | <ApiLink name="lv_style_value_t" /> | value of the property. The correct element should be set according to the type of the property |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | OR-ed value of parts and state for which the style should be set |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_style_pad_all" file="api/core/lv_obj_style.h" line={276} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L276">
+
+### lv_obj_set_style_pad_all
+
+```c
+static void lv_obj_set_style_pad_all(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `value` | `int32_t` |
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_style_pad_hor" file="api/core/lv_obj_style.h" line={284} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L284">
+
+### lv_obj_set_style_pad_hor
+
+```c
+static void lv_obj_set_style_pad_hor(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `value` | `int32_t` |
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_style_pad_ver" file="api/core/lv_obj_style.h" line={290} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L290">
+
+### lv_obj_set_style_pad_ver
+
+```c
+static void lv_obj_set_style_pad_ver(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `value` | `int32_t` |
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_style_margin_all" file="api/core/lv_obj_style.h" line={296} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L296">
+
+### lv_obj_set_style_margin_all
+
+```c
+static void lv_obj_set_style_margin_all(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `value` | `int32_t` |
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_style_margin_hor" file="api/core/lv_obj_style.h" line={304} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L304">
+
+### lv_obj_set_style_margin_hor
+
+```c
+static void lv_obj_set_style_margin_hor(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `value` | `int32_t` |
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_style_margin_ver" file="api/core/lv_obj_style.h" line={310} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L310">
+
+### lv_obj_set_style_margin_ver
+
+```c
+static void lv_obj_set_style_margin_ver(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `value` | `int32_t` |
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_style_pad_gap" file="api/core/lv_obj_style.h" line={316} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L316">
+
+### lv_obj_set_style_pad_gap
+
+```c
+static void lv_obj_set_style_pad_gap(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `value` | `int32_t` |
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_style_size" file="api/core/lv_obj_style.h" line={322} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L322">
+
+### lv_obj_set_style_size
+
+```c
+static void lv_obj_set_style_size(lv_obj_t *obj, int32_t width, int32_t height, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `width` | `int32_t` |
+| `height` | `int32_t` |
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_style_transform_scale" file="api/core/lv_obj_style.h" line={329} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L329">
+
+### lv_obj_set_style_transform_scale
+
+```c
+static void lv_obj_set_style_transform_scale(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `value` | `int32_t` |
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (13)">
+
+<ApiMember kind="function" name="lv_obj_style_get_disabled" file="api/core/lv_obj_style.h" line={191} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L191">
+
+### lv_obj_style_get_disabled
+
+Get if a given style is disabled on an object.
+
+```c
+bool lv_obj_style_get_disabled(lv_obj_t *obj, const lv_style_t *style, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+| `style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> | pointer to a style |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | the selector of a style (e.g. LV_STATE_PRESSED \| LV_PART_KNOB) |
+
+**Returns:** `bool` — true: disable the style, false: enable the style
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_style_prop" file="api/core/lv_obj_style.h" line={210} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L210">
+
+### lv_obj_get_style_prop
+
+Get the value of a style property. The current state of the object will be considered. Inherited properties will be inherited. If a property is not set a default value will be returned.
+
+```c
+lv_style_value_t lv_obj_get_style_prop(const lv_obj_t *obj, lv_part_t part, lv_style_prop_t prop)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to an object |
+| `part` | <ApiLink name="lv_part_t" /> | a part from which the property should be get |
+| `prop` | <ApiLink name="lv_style_prop_t" /> | the property to get |
+
+**Returns:** <ApiLink name="lv_style_value_t" /> — the value of the property. Should be read from the correct field of the <ApiLink name="lv_style_value_t" /> according to the type of the property.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_local_style_prop" file="api/core/lv_obj_style.h" line={231} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L231">
+
+### lv_obj_get_local_style_prop
+
+```c
+lv_style_res_t lv_obj_get_local_style_prop(lv_obj_t *obj, lv_style_prop_t prop, lv_style_value_t *value, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `prop` | <ApiLink name="lv_style_prop_t" /> |
+| `value` | <ApiLink name="lv_style_value_t" display="lv_style_value_t *" /> |
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_style_get_selector_state" file="api/core/lv_obj_style.h" line={264} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L264">
+
+### lv_obj_style_get_selector_state
+
+```c
+static lv_state_t lv_obj_style_get_selector_state(lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_style_get_selector_part" file="api/core/lv_obj_style.h" line={269} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L269">
+
+### lv_obj_style_get_selector_part
+
+```c
+static lv_part_t lv_obj_style_get_selector_part(lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `selector` | <ApiLink name="lv_style_selector_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_style_space_left" file="api/core/lv_obj_style.h" line={336} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L336">
+
+### lv_obj_get_style_space_left
+
+```c
+static int32_t lv_obj_get_style_space_left(const lv_obj_t *obj, lv_part_t part)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
+| `part` | <ApiLink name="lv_part_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_style_space_right" file="api/core/lv_obj_style.h" line={344} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L344">
+
+### lv_obj_get_style_space_right
+
+```c
+static int32_t lv_obj_get_style_space_right(const lv_obj_t *obj, lv_part_t part)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
+| `part` | <ApiLink name="lv_part_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_style_space_top" file="api/core/lv_obj_style.h" line={352} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L352">
+
+### lv_obj_get_style_space_top
+
+```c
+static int32_t lv_obj_get_style_space_top(const lv_obj_t *obj, lv_part_t part)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
+| `part` | <ApiLink name="lv_part_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_style_space_bottom" file="api/core/lv_obj_style.h" line={360} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L360">
+
+### lv_obj_get_style_space_bottom
+
+```c
+static int32_t lv_obj_get_style_space_bottom(const lv_obj_t *obj, lv_part_t part)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
+| `part` | <ApiLink name="lv_part_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_style_transform_scale_x_safe" file="api/core/lv_obj_style.h" line={370} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L370">
+
+### lv_obj_get_style_transform_scale_x_safe
+
+```c
+static int32_t lv_obj_get_style_transform_scale_x_safe(const lv_obj_t *obj, lv_part_t part)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
+| `part` | <ApiLink name="lv_part_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_style_transform_scale_y_safe" file="api/core/lv_obj_style.h" line={376} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L376">
+
+### lv_obj_get_style_transform_scale_y_safe
+
+```c
+static int32_t lv_obj_get_style_transform_scale_y_safe(const lv_obj_t *obj, lv_part_t part)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
+| `part` | <ApiLink name="lv_part_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_style_opa_recursive" file="api/core/lv_obj_style.h" line={388} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L388">
+
+### lv_obj_get_style_opa_recursive
+
+Get the `opa` style property from all parents and multiply and `>> 8` them.
+
+```c
+lv_opa_t lv_obj_get_style_opa_recursive(const lv_obj_t *obj, lv_part_t part)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | the object whose opacity should be get |
+| `part` | <ApiLink name="lv_part_t" /> | the part whose opacity should be get. Non-MAIN parts will consider the `opa` of the MAIN part too |
+
+**Returns:** <ApiLink name="lv_opa_t" /> — the final opacity considering the parents' opacity too
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_style_recolor_recursive" file="api/core/lv_obj_style.h" line={407} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L407">
+
+### lv_obj_get_style_recolor_recursive
+
+Get the `recolor` style property from all parents and blend them recursively.
+
+```c
+lv_color32_t lv_obj_get_style_recolor_recursive(const lv_obj_t *obj, lv_part_t part)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | the object whose recolor value should be retrieved |
+| `part` | <ApiLink name="lv_part_t" /> | the target part to check. Non-MAIN parts will also consider the `recolor` value from the MAIN part during calculation |
+
+**Returns:** <ApiLink name="lv_color32_t" /> — the final blended recolor value combining all parent's recolor values
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (17)">
+
+<ApiMember kind="function" name="lv_obj_add_style" file="api/core/lv_obj_style.h" line={107} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L107">
+
+### lv_obj_add_style
+
+Add a style to an object. 
+Examples: 
+```c
+lv_obj_add_style(btn, &style_btn, 0); //Default button style
+
+lv_obj_add_style(btn, &btn_red, LV_STATE_PRESSED); //Overwrite only some colors to red when pressed
+```
+
+```c
+void lv_obj_add_style(lv_obj_t *obj, const lv_style_t *style, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+| `style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> | pointer to a style to add |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | OR-ed value of parts and state to which the style should be added |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_replace_style" file="api/core/lv_obj_style.h" line={123} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L123">
+
+### lv_obj_replace_style
+
+Replaces a style of an object, preserving the order of the style stack (local styles and transitions are ignored). 
+Examples: 
+```c
+lv_obj_replace_style(obj, &yellow_style, &blue_style, LV_PART_ANY | LV_STATE_ANY); //Replace a specific style
+
+lv_obj_replace_style(obj, &yellow_style, &blue_style, LV_PART_MAIN | LV_STATE_PRESSED); //Replace a specific style assigned to the main part when it is pressed
+```
+
+```c
+bool lv_obj_replace_style(lv_obj_t *obj, const lv_style_t *old_style, const lv_style_t *new_style, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+| `old_style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> | pointer to a style to replace. |
+| `new_style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> | pointer to a style to replace the old style with. |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | OR-ed values of states and a part to replace only styles with matching selectors. LV_STATE_ANY and LV_PART_ANY can be used |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_remove_style" file="api/core/lv_obj_style.h" line={141} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L141">
+
+### lv_obj_remove_style
+
+Remove a style from an object. 
+Examples: 
+```c
+lv_obj_remove_style(obj, &style, LV_PART_ANY | LV_STATE_ANY); //Remove a specific style
+
+lv_obj_remove_style(obj, NULL, LV_PART_MAIN | LV_STATE_ANY); //Remove all styles from the main part
+
+lv_obj_remove_style(obj, NULL, LV_PART_ANY | LV_STATE_ANY); //Remove all styles
+```
+
+```c
+void lv_obj_remove_style(lv_obj_t *obj, const lv_style_t *style, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+| `style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> | pointer to a style to remove. Can be NULL to check only the selector |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | OR-ed values of states and a part to remove only styles with matching selectors. LV_STATE_ANY and LV_PART_ANY can be used |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_remove_theme" file="api/core/lv_obj_style.h" line={150} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L150">
+
+### lv_obj_remove_theme
+
+Remove all styles added by a theme from a widget
+
+```c
+void lv_obj_remove_theme(lv_obj_t *obj, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | OR-ed values of states and a part to remove only styles with matching selectors. LV_STATE_ANY and LV_PART_ANY can be used |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_remove_style_all" file="api/core/lv_obj_style.h" line={156} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L156">
+
+### lv_obj_remove_style_all
+
+Remove all styles from an object
+
+```c
+void lv_obj_remove_style_all(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_report_style_change" file="api/core/lv_obj_style.h" line={163} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L163">
+
+### lv_obj_report_style_change
+
+Notify all object if a style is modified
+
+```c
+void lv_obj_report_style_change(lv_style_t *style)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `style` | <ApiLink name="lv_style_t" display="lv_style_t *" /> | pointer to a style. Only the objects with this style will be notified (NULL to notify all objects) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_refresh_style" file="api/core/lv_obj_style.h" line={173} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L173">
+
+### lv_obj_refresh_style
+
+Notify an object and its children about its style is modified.
+
+```c
+void lv_obj_refresh_style(lv_obj_t *obj, lv_part_t part, lv_style_prop_t prop)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+| `part` | <ApiLink name="lv_part_t" /> | the part whose style was changed. E.g. `LV_PART_ANY`, `LV_PART_MAIN` |
+| `prop` | <ApiLink name="lv_style_prop_t" /> | `LV_STYLE_PROP_ANY` or an `LV_STYLE_...` property. It is used to optimize what needs to be refreshed. `LV_STYLE_PROP_INV` to perform only a style cache update |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_enable_style_refresh" file="api/core/lv_obj_style.h" line={198} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L198">
+
+### lv_obj_enable_style_refresh
+
+Enable or disable automatic style refreshing when a new style is added/removed to/from an object or any other style change happens.
+
+```c
+void lv_obj_enable_style_refresh(bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `en` | `bool` | true: enable refreshing; false: disable refreshing |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_has_style_prop" file="api/core/lv_obj_style.h" line={219} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L219">
+
+### lv_obj_has_style_prop
+
+Check if an object has a specified style property for a given style selector.
+
+```c
+bool lv_obj_has_style_prop(const lv_obj_t *obj, lv_style_selector_t selector, lv_style_prop_t prop)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to an object |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | the style selector to be checked, defining the scope of the style to be examined. |
+| `prop` | <ApiLink name="lv_style_prop_t" /> | the property to be checked. |
+
+**Returns:** `bool` — true if the object has the specified selector and property, false otherwise.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_remove_local_style_prop" file="api/core/lv_obj_style.h" line={241} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L241">
+
+### lv_obj_remove_local_style_prop
+
+Remove a local style property from a part of an object with a given state.
+
+```c
+bool lv_obj_remove_local_style_prop(lv_obj_t *obj, lv_style_prop_t prop, lv_style_selector_t selector)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+| `prop` | <ApiLink name="lv_style_prop_t" /> | a style property to remove. |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | OR-ed value of parts and state for which the style should be removed |
+
+**Returns:** `bool` — true the property was found and removed; false: the property was not found
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_style_apply_color_filter" file="api/core/lv_obj_style.h" line={246} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L246">
+
+### lv_obj_style_apply_color_filter
+
+Used internally for color filtering
+
+```c
+lv_style_value_t lv_obj_style_apply_color_filter(const lv_obj_t *obj, lv_part_t part, lv_style_value_t v)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
+| `part` | <ApiLink name="lv_part_t" /> |
+| `v` | <ApiLink name="lv_style_value_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_fade_in" file="api/core/lv_obj_style.h" line={254} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L254">
+
+### lv_obj_fade_in
+
+Fade in an an object and all its children.
+
+```c
+void lv_obj_fade_in(lv_obj_t *obj, uint32_t time, uint32_t delay)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the object to fade in |
+| `time` | `uint32_t` | time of fade |
+| `delay` | `uint32_t` | delay to start the animation |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_fade_out" file="api/core/lv_obj_style.h" line={262} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L262">
+
+### lv_obj_fade_out
+
+Fade out an an object and all its children.
+
+```c
+void lv_obj_fade_out(lv_obj_t *obj, uint32_t time, uint32_t delay)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the object to fade out |
+| `time` | `uint32_t` | time of fade |
+| `delay` | `uint32_t` | delay to start the animation |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_calculate_style_text_align" file="api/core/lv_obj_style.h" line={368} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L368">
+
+### lv_obj_calculate_style_text_align
+
+```c
+lv_text_align_t lv_obj_calculate_style_text_align(const lv_obj_t *obj, lv_part_t part, const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
+| `part` | <ApiLink name="lv_part_t" /> |
+| `txt` | `const char *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_style_apply_recolor" file="api/core/lv_obj_style.h" line={398} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L398">
+
+### lv_obj_style_apply_recolor
+
+Apply recolor effect to the input color based on the object's style properties.
+
+```c
+lv_color32_t lv_obj_style_apply_recolor(const lv_obj_t *obj, lv_part_t part, lv_color32_t color)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | the target object containing recolor style properties |
+| `part` | <ApiLink name="lv_part_t" /> | the part to retrieve recolor styles. |
+| `color` | <ApiLink name="lv_color32_t" /> | the original color to be modified |
+
+**Returns:** <ApiLink name="lv_color32_t" /> — the blended color after applying recolor and opacity
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_bind_style" file="api/core/lv_obj_style.h" line={419} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L419">
+
+### lv_obj_bind_style
+
+Disable a style if a subject's value is not equal to a reference value
+
+```c
+lv_observer_t * lv_obj_bind_style(lv_obj_t *obj, const lv_style_t *style, lv_style_selector_t selector, lv_subject_t *subject, int32_t ref_value)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
+| `style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> | pointer to a style |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | pointer to a selector |
+| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
+| `ref_value` | `int32_t` | reference value to compare Subject's value with |
+
+**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_bind_style_prop" file="api/core/lv_obj_style.h" line={430} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L430">
+
+### lv_obj_bind_style_prop
+
+Connect a subject's value to a style property of a widget.
+
+```c
+lv_observer_t * lv_obj_bind_style_prop(lv_obj_t *obj, lv_style_prop_t prop, lv_style_selector_t selector, lv_subject_t *subject)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Widget |
+| `prop` | <ApiLink name="lv_style_prop_t" /> | a style property |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | a selector for which the property should be added, e.g. `LV_PART_KNOB | LV_STATE_PRESSED` |
+| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer a Subject to which value the property should be bound |
+
+**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_state_t" file="api/core/lv_obj_style.h" line={32} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L32">
+
+### lv_state_t
+
+Possible states of a widget. OR-ed values are possible
+
+| Name | Value | Description |
+|------|------|------|
+| `LV_STATE_DEFAULT` | `0` |  |
+| `LV_STATE_ALT` | `1 << 0` |  |
+| `LV_STATE_CHECKED` | `1 << 2` |  |
+| `LV_STATE_FOCUSED` | `1 << 3` |  |
+| `LV_STATE_FOCUS_KEY` | `1 << 4` |  |
+| `LV_STATE_EDITED` | `1 << 5` |  |
+| `LV_STATE_HOVERED` | `1 << 6` |  |
+| `LV_STATE_PRESSED` | `1 << 7` |  |
+| `LV_STATE_SCROLLED` | `1 << 8` |  |
+| `LV_STATE_DISABLED` | `1 << 9` |  |
+| `LV_STATE_USER_1` | `1 << 12` |  |
+| `LV_STATE_USER_2` | `1 << 13` |  |
+| `LV_STATE_USER_3` | `1 << 14` |  |
+| `LV_STATE_USER_4` | `1 << 15` |  |
+| `LV_STATE_ANY` | `0xFFFF` | Special value can be used in some functions to target all states |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_state_t" count={14}>
+
+- `lv_obj_add_state` — param `state`
+- `lv_obj_remove_state` — param `state`
+- `lv_obj_set_state` — param `state`
+- `lv_obj_has_state` — param `state`
+- `lv_obj_bind_state_if_eq` — param `state`
+- `lv_obj_bind_state_if_not_eq` — param `state`
+- `lv_obj_bind_state_if_gt` — param `state`
+- `lv_obj_bind_state_if_ge` — param `state`
+- `lv_obj_bind_state_if_lt` — param `state`
+- `lv_obj_bind_state_if_le` — param `state`
+- `lv_obj_style_create_transition` — param `prev_state`
+- `lv_obj_style_create_transition` — param `new_state`
+- `lv_obj_style_state_compare` — param `state1`
+- `lv_obj_style_state_compare` — param `state2`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="lv_part_t" file="api/core/lv_obj_style.h" line={60} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L60">
+
+### lv_part_t
+
+The possible parts of widgets. The parts can be considered as the internal building block of the widgets. E.g. slider = background + indicator + knob Not all parts are used by every widget
+
+| Name | Value | Description |
+|------|------|------|
+| `LV_PART_MAIN` | `0x000000` | A background like rectangle |
+| `LV_PART_SCROLLBAR` | `0x010000` | The scrollbar(s) |
+| `LV_PART_INDICATOR` | `0x020000` | Indicator, e.g. for slider, bar, switch, or the tick box of the checkbox |
+| `LV_PART_KNOB` | `0x030000` | Like handle to grab to adjust the value |
+| `LV_PART_SELECTED` | `0x040000` | Indicate the currently selected option or section |
+| `LV_PART_ITEMS` | `0x050000` | Used if the widget has multiple similar elements (e.g. table cells) |
+| `LV_PART_CURSOR` | `0x060000` | Mark a specific place e.g. for text area's cursor or on a chart |
+| `LV_PART_CUSTOM_FIRST` | `0x080000` | Extension point for custom widgets |
+| `LV_PART_ANY` | `0x0F0000` | Special value can be used in some functions to target all parts |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_part_t" count={164}>
+
+- `lv_obj_init_draw_rect_dsc` — param `part`
+- `lv_obj_init_draw_label_dsc` — param `part`
+- `lv_obj_init_draw_image_dsc` — param `part`
+- `lv_obj_init_draw_line_dsc` — param `part`
+- `lv_obj_init_draw_arc_dsc` — param `part`
+- `lv_obj_init_draw_blur_dsc` — param `part`
+- `lv_obj_calculate_ext_draw_size` — param `part`
+- `lv_obj_get_style_property` — param `part`
+- `lv_obj_refresh_style` — param `part`
+- `lv_obj_get_style_prop` — param `part`
+- `lv_obj_style_apply_color_filter` — param `part`
+- `lv_obj_get_style_space_left` — param `part`
+- `lv_obj_get_style_space_right` — param `part`
+- `lv_obj_get_style_space_top` — param `part`
+- `lv_obj_get_style_space_bottom` — param `part`
+- `lv_obj_calculate_style_text_align` — param `part`
+- `lv_obj_get_style_transform_scale_x_safe` — param `part`
+- `lv_obj_get_style_transform_scale_y_safe` — param `part`
+- `lv_obj_get_style_opa_recursive` — param `part`
+- `lv_obj_style_apply_recolor` — param `part`
+- `lv_obj_get_style_recolor_recursive` — param `part`
+- `lv_obj_get_style_width` — param `part`
+- `lv_obj_get_style_min_width` — param `part`
+- `lv_obj_get_style_max_width` — param `part`
+- `lv_obj_get_style_height` — param `part`
+- `lv_obj_get_style_min_height` — param `part`
+- `lv_obj_get_style_max_height` — param `part`
+- `lv_obj_get_style_length` — param `part`
+- `lv_obj_get_style_x` — param `part`
+- `lv_obj_get_style_y` — param `part`
+- `lv_obj_get_style_align` — param `part`
+- `lv_obj_get_style_transform_width` — param `part`
+- `lv_obj_get_style_transform_height` — param `part`
+- `lv_obj_get_style_translate_x` — param `part`
+- `lv_obj_get_style_translate_y` — param `part`
+- `lv_obj_get_style_translate_radial` — param `part`
+- `lv_obj_get_style_transform_scale_x` — param `part`
+- `lv_obj_get_style_transform_scale_y` — param `part`
+- `lv_obj_get_style_transform_rotation` — param `part`
+- `lv_obj_get_style_transform_pivot_x` — param `part`
+- `lv_obj_get_style_transform_pivot_y` — param `part`
+- `lv_obj_get_style_transform_skew_x` — param `part`
+- `lv_obj_get_style_transform_skew_y` — param `part`
+- `lv_obj_get_style_pad_top` — param `part`
+- `lv_obj_get_style_pad_bottom` — param `part`
+- `lv_obj_get_style_pad_left` — param `part`
+- `lv_obj_get_style_pad_right` — param `part`
+- `lv_obj_get_style_pad_row` — param `part`
+- `lv_obj_get_style_pad_column` — param `part`
+- `lv_obj_get_style_pad_radial` — param `part`
+- `lv_obj_get_style_margin_top` — param `part`
+- `lv_obj_get_style_margin_bottom` — param `part`
+- `lv_obj_get_style_margin_left` — param `part`
+- `lv_obj_get_style_margin_right` — param `part`
+- `lv_obj_get_style_bg_color` — param `part`
+- `lv_obj_get_style_bg_color_filtered` — param `part`
+- `lv_obj_get_style_bg_opa` — param `part`
+- `lv_obj_get_style_bg_grad_color` — param `part`
+- `lv_obj_get_style_bg_grad_color_filtered` — param `part`
+- `lv_obj_get_style_bg_grad_dir` — param `part`
+- `lv_obj_get_style_bg_main_stop` — param `part`
+- `lv_obj_get_style_bg_grad_stop` — param `part`
+- `lv_obj_get_style_bg_main_opa` — param `part`
+- `lv_obj_get_style_bg_grad_opa` — param `part`
+- `lv_obj_get_style_bg_grad` — param `part`
+- `lv_obj_get_style_bg_image_src` — param `part`
+- `lv_obj_get_style_bg_image_opa` — param `part`
+- `lv_obj_get_style_bg_image_recolor` — param `part`
+- `lv_obj_get_style_bg_image_recolor_filtered` — param `part`
+- `lv_obj_get_style_bg_image_recolor_opa` — param `part`
+- `lv_obj_get_style_bg_image_tiled` — param `part`
+- `lv_obj_get_style_border_color` — param `part`
+- `lv_obj_get_style_border_color_filtered` — param `part`
+- `lv_obj_get_style_border_opa` — param `part`
+- `lv_obj_get_style_border_width` — param `part`
+- `lv_obj_get_style_border_side` — param `part`
+- `lv_obj_get_style_border_post` — param `part`
+- `lv_obj_get_style_outline_width` — param `part`
+- `lv_obj_get_style_outline_color` — param `part`
+- `lv_obj_get_style_outline_color_filtered` — param `part`
+- `lv_obj_get_style_outline_opa` — param `part`
+- `lv_obj_get_style_outline_pad` — param `part`
+- `lv_obj_get_style_shadow_width` — param `part`
+- `lv_obj_get_style_shadow_offset_x` — param `part`
+- `lv_obj_get_style_shadow_offset_y` — param `part`
+- `lv_obj_get_style_shadow_spread` — param `part`
+- `lv_obj_get_style_shadow_color` — param `part`
+- `lv_obj_get_style_shadow_color_filtered` — param `part`
+- `lv_obj_get_style_shadow_opa` — param `part`
+- `lv_obj_get_style_image_opa` — param `part`
+- `lv_obj_get_style_image_recolor` — param `part`
+- `lv_obj_get_style_image_recolor_filtered` — param `part`
+- `lv_obj_get_style_image_recolor_opa` — param `part`
+- `lv_obj_get_style_image_colorkey` — param `part`
+- `lv_obj_get_style_line_width` — param `part`
+- `lv_obj_get_style_line_dash_width` — param `part`
+- `lv_obj_get_style_line_dash_gap` — param `part`
+- `lv_obj_get_style_line_rounded` — param `part`
+- `lv_obj_get_style_line_color` — param `part`
+- `lv_obj_get_style_line_color_filtered` — param `part`
+- `lv_obj_get_style_line_opa` — param `part`
+- `lv_obj_get_style_arc_width` — param `part`
+- `lv_obj_get_style_arc_rounded` — param `part`
+- `lv_obj_get_style_arc_color` — param `part`
+- `lv_obj_get_style_arc_color_filtered` — param `part`
+- `lv_obj_get_style_arc_opa` — param `part`
+- `lv_obj_get_style_arc_image_src` — param `part`
+- `lv_obj_get_style_text_color` — param `part`
+- `lv_obj_get_style_text_color_filtered` — param `part`
+- `lv_obj_get_style_text_opa` — param `part`
+- `lv_obj_get_style_text_font` — param `part`
+- `lv_obj_get_style_text_letter_space` — param `part`
+- `lv_obj_get_style_text_line_space` — param `part`
+- `lv_obj_get_style_text_decor` — param `part`
+- `lv_obj_get_style_text_align` — param `part`
+- `lv_obj_get_style_text_outline_stroke_color` — param `part`
+- `lv_obj_get_style_text_outline_stroke_color_filtered` — param `part`
+- `lv_obj_get_style_text_outline_stroke_width` — param `part`
+- `lv_obj_get_style_text_outline_stroke_opa` — param `part`
+- `lv_obj_get_style_text_leading_trim` — param `part`
+- `lv_obj_get_style_blur_radius` — param `part`
+- `lv_obj_get_style_blur_backdrop` — param `part`
+- `lv_obj_get_style_blur_quality` — param `part`
+- `lv_obj_get_style_drop_shadow_radius` — param `part`
+- `lv_obj_get_style_drop_shadow_offset_x` — param `part`
+- `lv_obj_get_style_drop_shadow_offset_y` — param `part`
+- `lv_obj_get_style_drop_shadow_color` — param `part`
+- `lv_obj_get_style_drop_shadow_color_filtered` — param `part`
+- `lv_obj_get_style_drop_shadow_opa` — param `part`
+- `lv_obj_get_style_drop_shadow_quality` — param `part`
+- `lv_obj_get_style_radius` — param `part`
+- `lv_obj_get_style_radial_offset` — param `part`
+- `lv_obj_get_style_clip_corner` — param `part`
+- `lv_obj_get_style_opa` — param `part`
+- `lv_obj_get_style_opa_layered` — param `part`
+- `lv_obj_get_style_color_filter_dsc` — param `part`
+- `lv_obj_get_style_color_filter_opa` — param `part`
+- `lv_obj_get_style_recolor` — param `part`
+- `lv_obj_get_style_recolor_opa` — param `part`
+- `lv_obj_get_style_anim` — param `part`
+- `lv_obj_get_style_anim_duration` — param `part`
+- `lv_obj_get_style_transition` — param `part`
+- `lv_obj_get_style_blend_mode` — param `part`
+- `lv_obj_get_style_layout` — param `part`
+- `lv_obj_get_style_base_dir` — param `part`
+- `lv_obj_get_style_bitmap_mask_src` — param `part`
+- `lv_obj_get_style_rotary_sensitivity` — param `part`
+- `lv_obj_get_style_flex_flow` — param `part`
+- `lv_obj_get_style_flex_main_place` — param `part`
+- `lv_obj_get_style_flex_cross_place` — param `part`
+- `lv_obj_get_style_flex_track_place` — param `part`
+- `lv_obj_get_style_flex_grow` — param `part`
+- `lv_obj_get_style_grid_column_dsc_array` — param `part`
+- `lv_obj_get_style_grid_column_align` — param `part`
+- `lv_obj_get_style_grid_row_dsc_array` — param `part`
+- `lv_obj_get_style_grid_row_align` — param `part`
+- `lv_obj_get_style_grid_cell_column_pos` — param `part`
+- `lv_obj_get_style_grid_cell_x_align` — param `part`
+- `lv_obj_get_style_grid_cell_column_span` — param `part`
+- `lv_obj_get_style_grid_cell_row_pos` — param `part`
+- `lv_obj_get_style_grid_cell_y_align` — param `part`
+- `lv_obj_get_style_grid_cell_row_span` — param `part`
+- `lv_scale_section_set_style` — param `part`
+- `lv_obj_style_create_transition` — param `part`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="lv_style_state_cmp_t" file="api/core/lv_obj_style.h" line={74} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L74">
+
+### lv_style_state_cmp_t
+
+| Name | Description |
+|------|------|
+| `LV_STYLE_STATE_CMP_SAME` | The style properties in the 2 states are identical |
+| `LV_STYLE_STATE_CMP_DIFF_REDRAW` | The differences can be shown with a simple redraw |
+| `LV_STYLE_STATE_CMP_DIFF_DRAW_PAD` | The differences can be shown with a simple redraw |
+| `LV_STYLE_STATE_CMP_DIFF_LAYOUT` | The differences can be shown with a simple redraw |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_style_selector_t" file="api/core/lv_obj_style.h" line={88} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/core/lv_obj_style.h#L88">
+
+### lv_style_selector_t
+
+```c
+typedef uint32_t lv_style_selector_t
+```
+
+A joint type for `lv_part_t` and `lv_state_t`. Example values
+- `0`: means `LV_PART_MAIN | LV_STATE_DEFAULT`
+- `LV_STATE_PRSSED`
+- `LV_PART_KNOB`
+- `LV_PART_KNOB | LV_STATE_PRESSED | LV_STATE_CHECKED`
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_style_selector_t" count={152}>
+
+- `lv_obj_add_style` — param `selector`
+- `lv_obj_replace_style` — param `selector`
+- `lv_obj_remove_style` — param `selector`
+- `lv_obj_remove_theme` — param `selector`
+- `lv_obj_style_set_disabled` — param `selector`
+- `lv_obj_style_get_disabled` — param `selector`
+- `lv_obj_has_style_prop` — param `selector`
+- `lv_obj_set_local_style_prop` — param `selector`
+- `lv_obj_get_local_style_prop` — param `selector`
+- `lv_obj_remove_local_style_prop` — param `selector`
+- `lv_obj_style_get_selector_state` — param `selector`
+- `lv_obj_style_get_selector_part` — param `selector`
+- `lv_obj_set_style_pad_all` — param `selector`
+- `lv_obj_set_style_pad_hor` — param `selector`
+- `lv_obj_set_style_pad_ver` — param `selector`
+- `lv_obj_set_style_margin_all` — param `selector`
+- `lv_obj_set_style_margin_hor` — param `selector`
+- `lv_obj_set_style_margin_ver` — param `selector`
+- `lv_obj_set_style_pad_gap` — param `selector`
+- `lv_obj_set_style_size` — param `selector`
+- `lv_obj_set_style_transform_scale` — param `selector`
+- `lv_obj_bind_style` — param `selector`
+- `lv_obj_bind_style_prop` — param `selector`
+- `lv_obj_set_style_width` — param `selector`
+- `lv_obj_set_style_min_width` — param `selector`
+- `lv_obj_set_style_max_width` — param `selector`
+- `lv_obj_set_style_height` — param `selector`
+- `lv_obj_set_style_min_height` — param `selector`
+- `lv_obj_set_style_max_height` — param `selector`
+- `lv_obj_set_style_length` — param `selector`
+- `lv_obj_set_style_x` — param `selector`
+- `lv_obj_set_style_y` — param `selector`
+- `lv_obj_set_style_align` — param `selector`
+- `lv_obj_set_style_transform_width` — param `selector`
+- `lv_obj_set_style_transform_height` — param `selector`
+- `lv_obj_set_style_translate_x` — param `selector`
+- `lv_obj_set_style_translate_y` — param `selector`
+- `lv_obj_set_style_translate_radial` — param `selector`
+- `lv_obj_set_style_transform_scale_x` — param `selector`
+- `lv_obj_set_style_transform_scale_y` — param `selector`
+- `lv_obj_set_style_transform_rotation` — param `selector`
+- `lv_obj_set_style_transform_pivot_x` — param `selector`
+- `lv_obj_set_style_transform_pivot_y` — param `selector`
+- `lv_obj_set_style_transform_skew_x` — param `selector`
+- `lv_obj_set_style_transform_skew_y` — param `selector`
+- `lv_obj_set_style_pad_top` — param `selector`
+- `lv_obj_set_style_pad_bottom` — param `selector`
+- `lv_obj_set_style_pad_left` — param `selector`
+- `lv_obj_set_style_pad_right` — param `selector`
+- `lv_obj_set_style_pad_row` — param `selector`
+- `lv_obj_set_style_pad_column` — param `selector`
+- `lv_obj_set_style_pad_radial` — param `selector`
+- `lv_obj_set_style_margin_top` — param `selector`
+- `lv_obj_set_style_margin_bottom` — param `selector`
+- `lv_obj_set_style_margin_left` — param `selector`
+- `lv_obj_set_style_margin_right` — param `selector`
+- `lv_obj_set_style_bg_color` — param `selector`
+- `lv_obj_set_style_bg_opa` — param `selector`
+- `lv_obj_set_style_bg_grad_color` — param `selector`
+- `lv_obj_set_style_bg_grad_dir` — param `selector`
+- `lv_obj_set_style_bg_main_stop` — param `selector`
+- `lv_obj_set_style_bg_grad_stop` — param `selector`
+- `lv_obj_set_style_bg_main_opa` — param `selector`
+- `lv_obj_set_style_bg_grad_opa` — param `selector`
+- `lv_obj_set_style_bg_grad` — param `selector`
+- `lv_obj_set_style_bg_image_src` — param `selector`
+- `lv_obj_set_style_bg_image_opa` — param `selector`
+- `lv_obj_set_style_bg_image_recolor` — param `selector`
+- `lv_obj_set_style_bg_image_recolor_opa` — param `selector`
+- `lv_obj_set_style_bg_image_tiled` — param `selector`
+- `lv_obj_set_style_border_color` — param `selector`
+- `lv_obj_set_style_border_opa` — param `selector`
+- `lv_obj_set_style_border_width` — param `selector`
+- `lv_obj_set_style_border_side` — param `selector`
+- `lv_obj_set_style_border_post` — param `selector`
+- `lv_obj_set_style_outline_width` — param `selector`
+- `lv_obj_set_style_outline_color` — param `selector`
+- `lv_obj_set_style_outline_opa` — param `selector`
+- `lv_obj_set_style_outline_pad` — param `selector`
+- `lv_obj_set_style_shadow_width` — param `selector`
+- `lv_obj_set_style_shadow_offset_x` — param `selector`
+- `lv_obj_set_style_shadow_offset_y` — param `selector`
+- `lv_obj_set_style_shadow_spread` — param `selector`
+- `lv_obj_set_style_shadow_color` — param `selector`
+- `lv_obj_set_style_shadow_opa` — param `selector`
+- `lv_obj_set_style_image_opa` — param `selector`
+- `lv_obj_set_style_image_recolor` — param `selector`
+- `lv_obj_set_style_image_recolor_opa` — param `selector`
+- `lv_obj_set_style_image_colorkey` — param `selector`
+- `lv_obj_set_style_line_width` — param `selector`
+- `lv_obj_set_style_line_dash_width` — param `selector`
+- `lv_obj_set_style_line_dash_gap` — param `selector`
+- `lv_obj_set_style_line_rounded` — param `selector`
+- `lv_obj_set_style_line_color` — param `selector`
+- `lv_obj_set_style_line_opa` — param `selector`
+- `lv_obj_set_style_arc_width` — param `selector`
+- `lv_obj_set_style_arc_rounded` — param `selector`
+- `lv_obj_set_style_arc_color` — param `selector`
+- `lv_obj_set_style_arc_opa` — param `selector`
+- `lv_obj_set_style_arc_image_src` — param `selector`
+- `lv_obj_set_style_text_color` — param `selector`
+- `lv_obj_set_style_text_opa` — param `selector`
+- `lv_obj_set_style_text_font` — param `selector`
+- `lv_obj_set_style_text_letter_space` — param `selector`
+- `lv_obj_set_style_text_line_space` — param `selector`
+- `lv_obj_set_style_text_decor` — param `selector`
+- `lv_obj_set_style_text_align` — param `selector`
+- `lv_obj_set_style_text_outline_stroke_color` — param `selector`
+- `lv_obj_set_style_text_outline_stroke_width` — param `selector`
+- `lv_obj_set_style_text_outline_stroke_opa` — param `selector`
+- `lv_obj_set_style_text_leading_trim` — param `selector`
+- `lv_obj_set_style_blur_radius` — param `selector`
+- `lv_obj_set_style_blur_backdrop` — param `selector`
+- `lv_obj_set_style_blur_quality` — param `selector`
+- `lv_obj_set_style_drop_shadow_radius` — param `selector`
+- `lv_obj_set_style_drop_shadow_offset_x` — param `selector`
+- `lv_obj_set_style_drop_shadow_offset_y` — param `selector`
+- `lv_obj_set_style_drop_shadow_color` — param `selector`
+- `lv_obj_set_style_drop_shadow_opa` — param `selector`
+- `lv_obj_set_style_drop_shadow_quality` — param `selector`
+- `lv_obj_set_style_radius` — param `selector`
+- `lv_obj_set_style_radial_offset` — param `selector`
+- `lv_obj_set_style_clip_corner` — param `selector`
+- `lv_obj_set_style_opa` — param `selector`
+- `lv_obj_set_style_opa_layered` — param `selector`
+- `lv_obj_set_style_color_filter_dsc` — param `selector`
+- `lv_obj_set_style_color_filter_opa` — param `selector`
+- `lv_obj_set_style_recolor` — param `selector`
+- `lv_obj_set_style_recolor_opa` — param `selector`
+- `lv_obj_set_style_anim` — param `selector`
+- `lv_obj_set_style_anim_duration` — param `selector`
+- `lv_obj_set_style_transition` — param `selector`
+- `lv_obj_set_style_blend_mode` — param `selector`
+- `lv_obj_set_style_layout` — param `selector`
+- `lv_obj_set_style_base_dir` — param `selector`
+- `lv_obj_set_style_bitmap_mask_src` — param `selector`
+- `lv_obj_set_style_rotary_sensitivity` — param `selector`
+- `lv_obj_set_style_flex_flow` — param `selector`
+- `lv_obj_set_style_flex_main_place` — param `selector`
+- `lv_obj_set_style_flex_cross_place` — param `selector`
+- `lv_obj_set_style_flex_track_place` — param `selector`
+- `lv_obj_set_style_flex_grow` — param `selector`
+- `lv_obj_set_style_grid_column_dsc_array` — param `selector`
+- `lv_obj_set_style_grid_column_align` — param `selector`
+- `lv_obj_set_style_grid_row_dsc_array` — param `selector`
+- `lv_obj_set_style_grid_row_align` — param `selector`
+- `lv_obj_set_style_grid_cell_column_pos` — param `selector`
+- `lv_obj_set_style_grid_cell_x_align` — param `selector`
+- `lv_obj_set_style_grid_cell_column_span` — param `selector`
+- `lv_obj_set_style_grid_cell_row_pos` — param `selector`
+- `lv_obj_set_style_grid_cell_y_align` — param `selector`
+- `lv_obj_set_style_grid_cell_row_span` — param `selector`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_bidi.h", "lv_style.h", "lv_types.h", "lv_obj_style_gen.h"]}
+  includedBy={["lv_obj.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_property.h", "lv_obj_style_gen.h", "lvgl.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_grad.h", "lv_grid.h", "lv_image_dsc.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_sprintf.h", "lv_string.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h"]}
+/>

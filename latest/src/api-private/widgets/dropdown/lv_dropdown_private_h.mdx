@@ -1,0 +1,54 @@
+---
+title: lv_dropdown_private.h
+description: API reference for lv_dropdown_private.h
+api:
+  structs: [_lv_dropdown_t, _lv_dropdown_list_t]
+---
+
+<RelatedHeaders name="lv_dropdown.h" isPrivate={true} />
+
+<ApiSummary structs={2} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_dropdown_t">
+
+### _lv_dropdown_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `list` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | The dropped down list |
+| `text` | `char *` | Text to display on the dropdown's button |
+| `symbol` | `const void *` | Arrow or other icon when the drop-down list is closed |
+| `options` | `char *` | Options in a '\<br/\><br/>' separated list |
+| `option_cnt` | `uint32_t` | Number of options |
+| `sel_opt_id` | `uint32_t` | Index of the currently selected option |
+| `sel_opt_id_orig` | `uint32_t` | Store the original index on focus |
+| `pr_opt_id` | `uint32_t` | Index of the currently pressed option |
+| `dir` | `uint8_t` | Direction in which the list should open |
+| `static_options` | `uint8_t` | 1: Only a pointer is saved in `options` |
+| `selected_highlight` | `uint8_t` | 1: Make the selected option highlighted in the list |
+| `static_text` | `uint8_t` | 1: Only a pointer is saved in `text` |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_dropdown_list_t">
+
+### _lv_dropdown_list_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `dropdown` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

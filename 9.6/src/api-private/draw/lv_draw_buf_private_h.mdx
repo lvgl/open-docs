@@ -1,0 +1,52 @@
+---
+title: lv_draw_buf_private.h
+description: API reference for lv_draw_buf_private.h
+api:
+  functions: [lv_draw_buf_init_handlers]
+  structs: [_lv_draw_buf_handlers_t]
+---
+
+<RelatedHeaders name="lv_draw_buf.h" isPrivate={true} />
+
+<ApiSummary functions={1} structs={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_buf_init_handlers" file="api-private/draw/lv_draw_buf_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/draw/lv_draw_buf_private.h#L44">
+
+### lv_draw_buf_init_handlers
+
+Called internally to initialize the draw_buf_handlers in lv_global
+
+```c
+void lv_draw_buf_init_handlers(void)
+```
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_draw_buf_handlers_t">
+
+### _lv_draw_buf_handlers_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `buf_malloc_cb` | <ApiLink name="lv_draw_buf_malloc_cb_t" /> |  |
+| `buf_free_cb` | <ApiLink name="lv_draw_buf_free_cb_t" /> |  |
+| `buf_copy_cb` | <ApiLink name="lv_draw_buf_copy_cb_t" /> |  |
+| `align_pointer_cb` | <ApiLink name="lv_draw_buf_align_cb_t" /> |  |
+| `invalidate_cache_cb` | <ApiLink name="lv_draw_buf_cache_operation_cb_t" /> |  |
+| `flush_cache_cb` | <ApiLink name="lv_draw_buf_cache_operation_cb_t" /> |  |
+| `width_to_stride_cb` | <ApiLink name="lv_draw_buf_width_to_stride_cb_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lv_global.h", "lv_draw_nema_gfx.h", "lvgl_private.h"]}
+/>

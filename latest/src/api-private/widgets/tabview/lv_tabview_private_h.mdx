@@ -1,0 +1,33 @@
+---
+title: lv_tabview_private.h
+description: API reference for lv_tabview_private.h
+api:
+  structs: [_lv_tabview_t]
+---
+
+<RelatedHeaders name="lv_tabview.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_tabview_t">
+
+### _lv_tabview_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `tab_cur` | `uint32_t` |  |
+| `tab_pos` | <ApiLink name="lv_dir_t" /> |  |
+| `tab_bar_size` | `int32_t` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

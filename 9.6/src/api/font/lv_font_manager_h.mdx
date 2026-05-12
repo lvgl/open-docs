@@ -1,0 +1,176 @@
+---
+title: lv_font_manager.h
+description: API reference for lv_font_manager.h
+api:
+  functions: [lv_font_manager_create, lv_font_manager_delete, lv_font_manager_add_src, lv_font_manager_add_src_static, lv_font_manager_remove_src, lv_font_manager_create_font, lv_font_manager_delete_font]
+---
+
+<ApiSummary functions={7} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_font_manager_create" file="api/font/lv_font_manager.h" line={37} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/font/lv_font_manager.h#L37">
+
+### lv_font_manager_create
+
+Create main font manager.
+
+```c
+lv_font_manager_t * lv_font_manager_create(uint32_t recycle_cache_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `recycle_cache_size` | `uint32_t` | number of fonts that were recently deleted from the cache. |
+
+**Returns:** <ApiLink name="lv_font_manager_t" display="lv_font_manager_t *" /> — pointer to main font manager.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_font_manager_delete" file="api/font/lv_font_manager.h" line={44} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/font/lv_font_manager.h#L44">
+
+### lv_font_manager_delete
+
+Delete main font manager.
+
+```c
+bool lv_font_manager_delete(lv_font_manager_t *manager)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `manager` | <ApiLink name="lv_font_manager_t" display="lv_font_manager_t *" /> | pointer to main font manager. |
+
+**Returns:** `bool` — return true if the deletion was successful.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_font_manager_add_src" file="api/font/lv_font_manager.h" line={54} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/font/lv_font_manager.h#L54">
+
+### lv_font_manager_add_src
+
+Add font resource.
+
+```c
+bool lv_font_manager_add_src(lv_font_manager_t *manager, const char *name, const void *src, const lv_font_class_t *class_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `manager` | <ApiLink name="lv_font_manager_t" display="lv_font_manager_t *" /> | pointer to main font manager. |
+| `name` | `const char *` | font name. |
+| `src` | `const void *` | font source. Need to strictly correspond to the font class. |
+| `class_p` | <ApiLink name="lv_font_class_t" display="const lv_font_class_t *" /> | font class. eg. lv_freetype_font_class, lv_builtin_font_class. |
+
+**Returns:** `bool` — return true if the add was successful.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_font_manager_add_src_static" file="api/font/lv_font_manager.h" line={67} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/font/lv_font_manager.h#L67">
+
+### lv_font_manager_add_src_static
+
+Add font resource with static memory.
+
+```c
+bool lv_font_manager_add_src_static(lv_font_manager_t *manager, const char *name, const void *src, const lv_font_class_t *class_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `manager` | <ApiLink name="lv_font_manager_t" display="lv_font_manager_t *" /> | pointer to main font manager. |
+| `name` | `const char *` | font name. It cannot be a local variable. |
+| `src` | `const void *` | font source. Need to strictly correspond to the font class. And it cannot be a local variable. |
+| `class_p` | <ApiLink name="lv_font_class_t" display="const lv_font_class_t *" /> | font class. E.g. lv_freetype_font_class, lv_builtin_font_class. |
+
+**Returns:** `bool` — return true if the add was successful.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_font_manager_remove_src" file="api/font/lv_font_manager.h" line={78} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/font/lv_font_manager.h#L78">
+
+### lv_font_manager_remove_src
+
+Remove font resource.
+
+```c
+bool lv_font_manager_remove_src(lv_font_manager_t *manager, const char *name)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `manager` | <ApiLink name="lv_font_manager_t" display="lv_font_manager_t *" /> | pointer to main font manager. |
+| `name` | `const char *` | font name. |
+
+**Returns:** `bool` — return true if the remove was successful.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_font_manager_create_font" file="api/font/lv_font_manager.h" line={90} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/font/lv_font_manager.h#L90">
+
+### lv_font_manager_create_font
+
+Create font.
+
+```c
+lv_font_t * lv_font_manager_create_font(lv_font_manager_t *manager, const char *font_family, uint32_t render_mode, uint32_t size, uint32_t style, lv_font_kerning_t kerning)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `manager` | <ApiLink name="lv_font_manager_t" display="lv_font_manager_t *" /> | pointer to main font manager. |
+| `font_family` | `const char *` | font family name. Matches the font resource name, using commas to separate different names. E.g. "my_font_1,my_font_2". |
+| `render_mode` | `uint32_t` | font render mode. see `lv_freetype_font_render_mode_t`. |
+| `size` | `uint32_t` | font size in pixel. |
+| `style` | `uint32_t` | font style. see `lv_freetype_font_style_t`. |
+| `kerning` | <ApiLink name="lv_font_kerning_t" /> | kerning mode. see `lv_font_kerning_t`. |
+
+**Returns:** <ApiLink name="lv_font_t" display="lv_font_t *" /> — point to the created font.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_font_manager_delete_font" file="api/font/lv_font_manager.h" line={103} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/font/lv_font_manager.h#L103">
+
+### lv_font_manager_delete_font
+
+Delete font.
+
+```c
+void lv_font_manager_delete_font(lv_font_manager_t *manager, lv_font_t *font)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `manager` | <ApiLink name="lv_font_manager_t" display="lv_font_manager_t *" /> | pointer to main font manager. |
+| `font` | <ApiLink name="lv_font_t" display="lv_font_t *" /> | point to the font. |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_font.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_draw_buf.h", "lv_image_dsc.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_symbol_def.h", "lv_types.h"]}
+/>

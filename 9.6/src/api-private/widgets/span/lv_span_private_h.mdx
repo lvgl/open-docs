@@ -1,0 +1,54 @@
+---
+title: lv_span_private.h
+description: API reference for lv_span_private.h
+api:
+  structs: [_lv_span_t, _lv_spangroup_t]
+---
+
+<RelatedHeaders name="lv_span.h" isPrivate={true} />
+
+<ApiSummary structs={2} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_span_t">
+
+### _lv_span_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `txt` | `char *` | a pointer to display text |
+| `style` | <ApiLink name="lv_style_t" /> | display text style |
+| `static_flag` | `uint32_t` | the text is static flag |
+| `trailing_pos` | <ApiLink name="lv_point_t" /> |  |
+| `trailing_height` | `int32_t` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_spangroup_t">
+
+### _lv_spangroup_t
+
+Data of label
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `lines` | `int32_t` |  |
+| `indent` | `int32_t` | first line indent |
+| `cache_w` | `int32_t` | the cache automatically calculates the width |
+| `cache_h` | `int32_t` | similar cache_w |
+| `child_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `overflow` | `uint32_t` | details see lv_span_overflow_t |
+| `refresh` | `uint32_t` | the spangroup need refresh cache_w and cache_h |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

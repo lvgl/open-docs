@@ -1,0 +1,644 @@
+---
+title: lv_menu.h
+description: API reference for lv_menu.h
+api:
+  functions: [lv_menu_create, lv_menu_page_create, lv_menu_cont_create, lv_menu_section_create, lv_menu_separator_create, lv_menu_set_page, lv_menu_set_page_title, lv_menu_set_page_title_static, lv_menu_set_sidebar_page, lv_menu_set_mode_header, lv_menu_set_mode_root_back_button, lv_menu_set_load_page_event, lv_menu_get_cur_main_page, lv_menu_get_cur_sidebar_page, lv_menu_get_main_header, lv_menu_get_main_header_back_button, lv_menu_get_sidebar_header, lv_menu_get_sidebar_header_back_button, lv_menu_back_button_is_root, lv_menu_get_mode_header, lv_menu_get_mode_root_back_button, lv_menu_clear_history]
+  enums: [lv_menu_mode_header_t, lv_menu_mode_root_back_button_t, __lv_property_menu_id_t]
+  variables: [lv_menu_class, lv_menu_page_class, lv_menu_cont_class, lv_menu_section_class, lv_menu_separator_class, lv_menu_sidebar_cont_class, lv_menu_main_cont_class, lv_menu_sidebar_header_cont_class, lv_menu_main_header_cont_class]
+---
+
+<RelatedHeaders name="lv_menu_private.h" isPrivate={false} />
+
+<ApiSummary functions={22} enums={3} variables={9} />
+
+## Functions
+
+<ApiTabs items={["Setters (7)","Getters (8)","Other (7)"]}>
+<ApiTab value="Setters (7)">
+
+<ApiMember kind="function" name="lv_menu_set_page" file="api/widgets/lv_menu.h" line={112} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L112">
+
+### lv_menu_set_page
+
+Set menu page to display in main
+
+```c
+void lv_menu_set_page(lv_obj_t *obj, lv_obj_t *page)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu |
+| `page` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu page to set (NULL to clear main and clear menu history) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_set_page_title" file="api/widgets/lv_menu.h" line={119} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L119">
+
+### lv_menu_set_page_title
+
+Set menu page title
+
+```c
+void lv_menu_set_page_title(lv_obj_t *page, char const *const title)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `page` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu page |
+| `title` | `char const *const` | pointer to text for title in header (NULL to not display title) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_set_page_title_static" file="api/widgets/lv_menu.h" line={127} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L127">
+
+### lv_menu_set_page_title_static
+
+Set menu page title with a static text. It will not be saved by the label so the 'text' variable has to be 'alive' while the page exists.
+
+```c
+void lv_menu_set_page_title_static(lv_obj_t *page, char const *const title)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `page` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu page |
+| `title` | `char const *const` | pointer to text for title in header (NULL to not display title) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_set_sidebar_page" file="api/widgets/lv_menu.h" line={134} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L134">
+
+### lv_menu_set_sidebar_page
+
+Set menu page to display in sidebar
+
+```c
+void lv_menu_set_sidebar_page(lv_obj_t *obj, lv_obj_t *page)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu |
+| `page` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu page to set (NULL to clear sidebar) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_set_mode_header" file="api/widgets/lv_menu.h" line={141} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L141">
+
+### lv_menu_set_mode_header
+
+Set the how the header should behave and its position
+
+```c
+void lv_menu_set_mode_header(lv_obj_t *obj, lv_menu_mode_header_t mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a menu |
+| `mode` | <ApiLink name="lv_menu_mode_header_t" /> | LV_MENU_HEADER_TOP_FIXED/TOP_UNFIXED/BOTTOM_FIXED |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_set_mode_root_back_button" file="api/widgets/lv_menu.h" line={148} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L148">
+
+### lv_menu_set_mode_root_back_button
+
+Set whether back button should appear at root
+
+```c
+void lv_menu_set_mode_root_back_button(lv_obj_t *obj, lv_menu_mode_root_back_button_t mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a menu |
+| `mode` | <ApiLink name="lv_menu_mode_root_back_button_t" /> | LV_MENU_ROOT_BACK_BUTTON_DISABLED/ENABLED |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_set_load_page_event" file="api/widgets/lv_menu.h" line={156} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L156">
+
+### lv_menu_set_load_page_event
+
+Add menu to the menu item
+
+```c
+void lv_menu_set_load_page_event(lv_obj_t *menu, lv_obj_t *obj, lv_obj_t *page)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `menu` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu |
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the obj |
+| `page` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the page to load when obj is clicked |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (8)">
+
+<ApiMember kind="function" name="lv_menu_get_cur_main_page" file="api/widgets/lv_menu.h" line={166} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L166">
+
+### lv_menu_get_cur_main_page
+
+Get a pointer to menu page that is currently displayed in main
+
+```c
+lv_obj_t * lv_menu_get_cur_main_page(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to current page
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_get_cur_sidebar_page" file="api/widgets/lv_menu.h" line={173} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L173">
+
+### lv_menu_get_cur_sidebar_page
+
+Get a pointer to menu page that is currently displayed in sidebar
+
+```c
+lv_obj_t * lv_menu_get_cur_sidebar_page(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to current page
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_get_main_header" file="api/widgets/lv_menu.h" line={180} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L180">
+
+### lv_menu_get_main_header
+
+Get a pointer to main header obj
+
+```c
+lv_obj_t * lv_menu_get_main_header(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to main header obj
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_get_main_header_back_button" file="api/widgets/lv_menu.h" line={187} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L187">
+
+### lv_menu_get_main_header_back_button
+
+Get a pointer to main header back btn obj
+
+```c
+lv_obj_t * lv_menu_get_main_header_back_button(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to main header back btn obj
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_get_sidebar_header" file="api/widgets/lv_menu.h" line={194} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L194">
+
+### lv_menu_get_sidebar_header
+
+Get a pointer to sidebar header obj
+
+```c
+lv_obj_t * lv_menu_get_sidebar_header(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to sidebar header obj
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_get_sidebar_header_back_button" file="api/widgets/lv_menu.h" line={201} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L201">
+
+### lv_menu_get_sidebar_header_back_button
+
+Get a pointer to sidebar header obj
+
+```c
+lv_obj_t * lv_menu_get_sidebar_header_back_button(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to sidebar header back btn obj
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_get_mode_header" file="api/widgets/lv_menu.h" line={216} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L216">
+
+### lv_menu_get_mode_header
+
+Get the header mode of the menu
+
+```c
+lv_menu_mode_header_t lv_menu_get_mode_header(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a menu |
+
+**Returns:** <ApiLink name="lv_menu_mode_header_t" /> — LV_MENU_HEADER_TOP_FIXED/TOP_UNFIXED/BOTTOM_FIXED
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_get_mode_root_back_button" file="api/widgets/lv_menu.h" line={223} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L223">
+
+### lv_menu_get_mode_root_back_button
+
+Get the root back button mode of the menu
+
+```c
+lv_menu_mode_root_back_button_t lv_menu_get_mode_root_back_button(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a menu |
+
+**Returns:** <ApiLink name="lv_menu_mode_root_back_button_t" /> — LV_MENU_ROOT_BACK_BUTTON_DISABLED/ENABLED
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (7)">
+
+<ApiMember kind="function" name="lv_menu_create" file="api/widgets/lv_menu.h" line={70} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L70">
+
+### lv_menu_create
+
+Create a menu object
+
+```c
+lv_obj_t * lv_menu_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new menu |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created menu
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_page_create" file="api/widgets/lv_menu.h" line={82} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L82">
+
+### lv_menu_page_create
+
+Create a menu page object.
+
+This call inserts the new page under menu-\>storage as its parent, which is itself a child of the menu, so the resulting object hierarchy is: menu =\> storage =\> new_page where `storage` is a Base Widget.
+
+```c
+lv_obj_t * lv_menu_page_create(lv_obj_t *menu, char const *const title)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `menu` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to menu object. |
+| `title` | `char const *const` | pointer to text for title in header (NULL to not display title) |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created menu page
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_cont_create" file="api/widgets/lv_menu.h" line={89} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L89">
+
+### lv_menu_cont_create
+
+Create a menu cont object
+
+```c
+lv_obj_t * lv_menu_cont_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a menu page or menu section object, it will be the parent of the new menu cont object |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created menu cont
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_section_create" file="api/widgets/lv_menu.h" line={96} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L96">
+
+### lv_menu_section_create
+
+Create a menu section object
+
+```c
+lv_obj_t * lv_menu_section_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a menu page object, it will be the parent of the new menu section object |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created menu section
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_separator_create" file="api/widgets/lv_menu.h" line={103} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L103">
+
+### lv_menu_separator_create
+
+Create a menu separator object
+
+```c
+lv_obj_t * lv_menu_separator_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a menu page object, it will be the parent of the new menu separator object |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created menu separator
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_back_button_is_root" file="api/widgets/lv_menu.h" line={209} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L209">
+
+### lv_menu_back_button_is_root
+
+Check if an obj is a root back btn
+
+```c
+bool lv_menu_back_button_is_root(lv_obj_t *menu, lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `menu` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu |
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the back button |
+
+**Returns:** `bool` — true if it is a root back btn
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_menu_clear_history" file="api/widgets/lv_menu.h" line={229} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L229">
+
+### lv_menu_clear_history
+
+Clear menu history
+
+```c
+void lv_menu_clear_history(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the menu |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_menu_mode_header_t" file="api/widgets/lv_menu.h" line={32} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L32">
+
+### lv_menu_mode_header_t
+
+| Name | Description |
+|------|------|
+| `LV_MENU_HEADER_TOP_FIXED` | Header is positioned at the top |
+| `LV_MENU_HEADER_TOP_UNFIXED` | Header is positioned at the top and can be scrolled out of view |
+| `LV_MENU_HEADER_BOTTOM_FIXED` | Header is positioned at the bottom |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_menu_mode_header_t" count={1}>
+
+- `lv_menu_set_mode_header` — param `mode`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="lv_menu_mode_root_back_button_t" file="api/widgets/lv_menu.h" line={38} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L38">
+
+### lv_menu_mode_root_back_button_t
+
+| Name |
+|------|
+| `LV_MENU_ROOT_BACK_BUTTON_DISABLED` |
+| `LV_MENU_ROOT_BACK_BUTTON_ENABLED` |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_menu_mode_root_back_button_t" count={1}>
+
+- `lv_menu_set_mode_root_back_button` — param `mode`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="__lv_property_menu_id_t" file="api/widgets/lv_menu.h" line={54} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L54">
+
+### __lv_property_menu_id_t
+
+| Name | Value |
+|------|------|
+| `LV_PROPERTY_MENU_MODE_HEADER` | `(LV_PROPERTY_MENU_START + ((int) 0 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_MENU_MODE_ROOT_BACK_BUTTON` | `(LV_PROPERTY_MENU_START + ((int) 1 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_MENU_END` |  |
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_menu_class" file="api/widgets/lv_menu.h" line={43} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L43">
+
+### lv_menu_class
+
+```c
+const lv_obj_class_t lv_menu_class
+```
+
+
+</ApiMember>
+
+<ApiMember kind="variable" name="lv_menu_page_class" file="api/widgets/lv_menu.h" line={44} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L44">
+
+### lv_menu_page_class
+
+```c
+const lv_obj_class_t lv_menu_page_class
+```
+
+
+</ApiMember>
+
+<ApiMember kind="variable" name="lv_menu_cont_class" file="api/widgets/lv_menu.h" line={45} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L45">
+
+### lv_menu_cont_class
+
+```c
+const lv_obj_class_t lv_menu_cont_class
+```
+
+
+</ApiMember>
+
+<ApiMember kind="variable" name="lv_menu_section_class" file="api/widgets/lv_menu.h" line={46} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L46">
+
+### lv_menu_section_class
+
+```c
+const lv_obj_class_t lv_menu_section_class
+```
+
+
+</ApiMember>
+
+<ApiMember kind="variable" name="lv_menu_separator_class" file="api/widgets/lv_menu.h" line={47} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L47">
+
+### lv_menu_separator_class
+
+```c
+const lv_obj_class_t lv_menu_separator_class
+```
+
+
+</ApiMember>
+
+<ApiMember kind="variable" name="lv_menu_sidebar_cont_class" file="api/widgets/lv_menu.h" line={48} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L48">
+
+### lv_menu_sidebar_cont_class
+
+```c
+const lv_obj_class_t lv_menu_sidebar_cont_class
+```
+
+
+</ApiMember>
+
+<ApiMember kind="variable" name="lv_menu_main_cont_class" file="api/widgets/lv_menu.h" line={49} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L49">
+
+### lv_menu_main_cont_class
+
+```c
+const lv_obj_class_t lv_menu_main_cont_class
+```
+
+
+</ApiMember>
+
+<ApiMember kind="variable" name="lv_menu_sidebar_header_cont_class" file="api/widgets/lv_menu.h" line={50} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L50">
+
+### lv_menu_sidebar_header_cont_class
+
+```c
+const lv_obj_class_t lv_menu_sidebar_header_cont_class
+```
+
+
+</ApiMember>
+
+<ApiMember kind="variable" name="lv_menu_main_header_cont_class" file="api/widgets/lv_menu.h" line={51} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/widgets/lv_menu.h#L51">
+
+### lv_menu_main_header_cont_class
+
+```c
+const lv_obj_class_t lv_menu_main_header_cont_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj.h", "lv_obj_property.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_timer.h", "lv_types.h"]}
+/>

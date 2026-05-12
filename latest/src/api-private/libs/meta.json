@@ -1,0 +1,12 @@
+{
+  "title": "Libs",
+  "pages": [
+    "barcode",
+    "ffmpeg",
+    "freetype",
+    "gltf",
+    "qrcode",
+    "rle",
+    "rlottie"
+  ]
+}

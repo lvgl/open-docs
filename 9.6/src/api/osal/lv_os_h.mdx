@@ -1,0 +1,80 @@
+---
+title: lv_os.h
+description: API reference for lv_os.h
+api:
+  functions: [lv_lock, lv_lock_isr, lv_unlock, lv_sleep_ms]
+---
+
+<RelatedHeaders name="lv_os_private.h" isPrivate={false} />
+
+<ApiSummary functions={4} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_lock" file="api/osal/lv_os.h" line={42} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/osal/lv_os.h#L42">
+
+### lv_lock
+
+Lock LVGL's general mutex. LVGL is not thread safe, so a mutex is used to avoid executing multiple LVGL functions at the same time from different threads. It shall be called when calling LVGL functions from threads different than lv_timer_handler's thread. It doesn't need to be called in LVGL events because they are called from <ApiLink name="lv_timer_handler" display="lv_timer_handler()" />. It is called internally in <ApiLink name="lv_timer_handler" display="lv_timer_handler()" />.
+
+```c
+void lv_lock(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_lock_isr" file="api/osal/lv_os.h" line={48} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/osal/lv_os.h#L48">
+
+### lv_lock_isr
+
+Same as <ApiLink name="lv_lock" display="lv_lock()" /> but can be called from an interrupt.
+
+```c
+lv_result_t lv_lock_isr(void)
+```
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: failure
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_unlock" file="api/osal/lv_os.h" line={55} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/osal/lv_os.h#L55">
+
+### lv_unlock
+
+The pair of <ApiLink name="lv_lock" display="lv_lock()" /> and <ApiLink name="lv_lock_isr" display="lv_lock_isr()" />. It unlocks LVGL general mutex. It is called internally in <ApiLink name="lv_timer_handler" display="lv_timer_handler()" />.
+
+```c
+void lv_unlock(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sleep_ms" file="api/osal/lv_os.h" line={61} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/osal/lv_os.h#L61">
+
+### lv_sleep_ms
+
+Sleeps the current thread by an amount of milliseconds.
+
+```c
+void lv_sleep_ms(uint32_t ms)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ms` | `uint32_t` | amount of milliseconds to sleep the current thread. |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_conf_kconfig.h"]}
+/>

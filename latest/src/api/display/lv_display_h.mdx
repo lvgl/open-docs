@@ -1,0 +1,1997 @@
+---
+title: lv_display.h
+description: API reference for lv_display.h
+api:
+  functions: [lv_display_create, lv_display_delete, lv_display_set_default, lv_display_get_default, lv_display_get_next, lv_display_set_resolution, lv_display_set_physical_resolution, lv_display_set_offset, lv_display_set_rotation, lv_display_set_matrix_rotation, lv_display_set_dpi, lv_display_get_horizontal_resolution, lv_display_get_vertical_resolution, lv_display_get_original_horizontal_resolution, lv_display_get_original_vertical_resolution, lv_display_get_physical_horizontal_resolution, lv_display_get_physical_vertical_resolution, lv_display_get_offset_x, lv_display_get_offset_y, lv_display_get_rotation, lv_display_get_matrix_rotation, lv_display_get_dpi, lv_display_set_buffers, lv_display_set_buffers_with_stride, lv_display_set_draw_buffers, lv_display_set_3rd_draw_buffer, lv_display_set_render_mode, lv_display_set_flush_cb, lv_display_set_flush_wait_cb, lv_display_set_sync_cb, lv_display_set_sync_wait_cb, lv_display_set_color_format, lv_display_get_color_format, lv_display_set_tile_cnt, lv_display_get_tile_cnt, lv_display_set_antialiasing, lv_display_get_antialiasing, lv_display_flush_ready, lv_display_flush_is_last, lv_display_sync_ready, lv_display_sync_is_last, lv_display_is_double_buffered, lv_display_get_render_mode, lv_display_get_screen_active, lv_display_get_screen_prev, lv_display_get_screen_loading, lv_display_get_layer_top, lv_display_get_layer_sys, lv_display_get_layer_bottom, lv_display_get_screen_by_name, lv_screen_load, lv_screen_load_anim, lv_screen_active, lv_layer_top, lv_layer_sys, lv_layer_bottom, lv_display_add_event_cb, lv_display_get_event_count, lv_display_get_event_dsc, lv_display_remove_event, lv_display_remove_event_cb_with_user_data, lv_display_send_event, lv_event_get_invalidated_area, lv_display_set_theme, lv_display_get_theme, lv_display_get_inactive_time, lv_display_trigger_activity, lv_display_enable_invalidation, lv_display_is_invalidation_enabled, lv_display_get_refr_timer, lv_display_delete_refr_timer, lv_display_register_vsync_event, lv_display_unregister_vsync_event, lv_display_send_vsync_event, lv_display_set_user_data, lv_display_set_driver_data, lv_display_get_user_data, lv_display_get_driver_data, lv_display_get_buf_active, lv_display_rotate_area, lv_display_rotate_point, lv_display_get_draw_buf_size, lv_display_get_invalidated_draw_buf_size, lv_dpx, lv_display_dpx, lv_display_set_external_data]
+  enums: [lv_display_rotation_t, lv_display_render_mode_t, lv_screen_load_anim_t]
+  typedefs: [lv_display_flush_cb_t, lv_display_flush_wait_cb_t, lv_display_sync_cb_t, lv_display_sync_wait_cb_t]
+  macros: [LV_HOR_RES, LV_VER_RES, LV_DPX_CALC, LV_DPX]
+---
+
+<RelatedHeaders name="lv_display_private.h" isPrivate={false} />
+
+<ApiSummary functions={86} enums={3} typedefs={4} macros={4} />
+
+## Functions
+
+<ApiTabs items={["Setters (23)","Getters (35)","Other (28)"]}>
+<ApiTab value="Setters (23)">
+
+<ApiMember kind="function" name="lv_display_set_default" file="api/display/lv_display.h" line={108} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L108">
+
+### lv_display_set_default
+
+Set a default display. The new screens will be created on it by default.
+
+```c
+void lv_display_set_default(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_resolution" file="api/display/lv_display.h" line={135} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L135">
+
+### lv_display_set_resolution
+
+Sets the resolution of a display. `LV_EVENT_RESOLUTION_CHANGED` event will be sent. Here the native resolution of the device should be set. If the display will be rotated later with `lv_display_set_rotation` LVGL will swap the hor. and ver. resolution automatically.
+
+```c
+void lv_display_set_resolution(lv_display_t *disp, int32_t hor_res, int32_t ver_res)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `hor_res` | `int32_t` | the new horizontal resolution |
+| `ver_res` | `int32_t` | the new vertical resolution |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_physical_resolution" file="api/display/lv_display.h" line={145} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L145">
+
+### lv_display_set_physical_resolution
+
+It's not mandatory to use the whole display for LVGL, however in some cases physical resolution is important. For example the touchpad still sees whole resolution and the values needs to be converted to the active LVGL display area.
+
+```c
+void lv_display_set_physical_resolution(lv_display_t *disp, int32_t hor_res, int32_t ver_res)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `hor_res` | `int32_t` | the new physical horizontal resolution, or -1 to assume it's the same as the normal hor. res. |
+| `ver_res` | `int32_t` | the new physical vertical resolution, or -1 to assume it's the same as the normal hor. res. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_offset" file="api/display/lv_display.h" line={154} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L154">
+
+### lv_display_set_offset
+
+If physical resolution is not the same as the normal resolution the offset of the active display area can be set here.
+
+```c
+void lv_display_set_offset(lv_display_t *disp, int32_t x, int32_t y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `x` | `int32_t` | X offset |
+| `y` | `int32_t` | Y offset |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_rotation" file="api/display/lv_display.h" line={161} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L161">
+
+### lv_display_set_rotation
+
+Set the rotation of this display. LVGL will swap the horizontal and vertical resolutions internally.
+
+```c
+void lv_display_set_rotation(lv_display_t *disp, lv_display_rotation_t rotation)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+| `rotation` | <ApiLink name="lv_display_rotation_t" /> | `LV_DISPLAY_ROTATION_0/90/180/270` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_matrix_rotation" file="api/display/lv_display.h" line={168} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L168">
+
+### lv_display_set_matrix_rotation
+
+Use matrix rotation for the display. This function is depended on `LV_DRAW_TRANSFORM_USE_MATRIX`
+
+```c
+void lv_display_set_matrix_rotation(lv_display_t *disp, bool enable)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+| `enable` | `bool` | true: enable matrix rotation, false: disable |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_dpi" file="api/display/lv_display.h" line={176} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L176">
+
+### lv_display_set_dpi
+
+Set the DPI (dot per inch) of the display. dpi = sqrt(hor_res^2 + ver_res^2) / diagonal"
+
+```c
+void lv_display_set_dpi(lv_display_t *disp, int32_t dpi)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `dpi` | `int32_t` | the new DPI |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_buffers" file="api/display/lv_display.h" line={269} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L269">
+
+### lv_display_set_buffers
+
+Set the buffers for a display, similarly to `lv_display_set_draw_buffers`, but accept the raw buffer pointers. For DIRECT/FULL rending modes, the buffer size must be at least `hor_res * ver_res * lv_color_format_get_size(lv_display_get_color_format(disp))`
+
+```c
+void lv_display_set_buffers(lv_display_t *disp, void *buf1, void *buf2, uint32_t buf_size, lv_display_render_mode_t render_mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `buf1` | `void *` | first buffer |
+| `buf2` | `void *` | second buffer (can be `NULL`) |
+| `buf_size` | `uint32_t` | buffer size in byte |
+| `render_mode` | <ApiLink name="lv_display_render_mode_t" /> | LV_DISPLAY_RENDER_MODE_PARTIAL/DIRECT/FULL |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_buffers_with_stride" file="api/display/lv_display.h" line={284} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L284">
+
+### lv_display_set_buffers_with_stride
+
+Set the frame buffers for a display, similarly to `lv_display_set_buffers`, but allow for a custom stride as required by a display controller. This allows the frame buffers to have a stride alignment different from the rest of the buffers` @param disp pointer to a display @param buf1 first buffer @param buf2 second buffer (can be`NULL`)
+
+```c
+void lv_display_set_buffers_with_stride(lv_display_t *disp, void *buf1, void *buf2, uint32_t buf_size, uint32_t stride, lv_display_render_mode_t render_mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |  |
+| `buf1` | `void *` |  |
+| `buf2` | `void *` |  |
+| `buf_size` | `uint32_t` | buffer size in byte |
+| `stride` | `uint32_t` | buffer stride in bytes |
+| `render_mode` | <ApiLink name="lv_display_render_mode_t" /> | LV_DISPLAY_RENDER_MODE_PARTIAL/DIRECT/FULL |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_draw_buffers" file="api/display/lv_display.h" line={295} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L295">
+
+### lv_display_set_draw_buffers
+
+Set the buffers for a display, accept a draw buffer pointer. Normally use `lv_display_set_buffers` is enough for most cases. Use this function when an existing lv_draw_buf_t is available.
+
+```c
+void lv_display_set_draw_buffers(lv_display_t *disp, lv_draw_buf_t *buf1, lv_draw_buf_t *buf2)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `buf1` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | first buffer |
+| `buf2` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | second buffer (can be `NULL`) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_3rd_draw_buffer" file="api/display/lv_display.h" line={302} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L302">
+
+### lv_display_set_3rd_draw_buffer
+
+Set the third draw buffer for a display.
+
+```c
+void lv_display_set_3rd_draw_buffer(lv_display_t *disp, lv_draw_buf_t *buf3)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `buf3` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | third buffer |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_render_mode" file="api/display/lv_display.h" line={309} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L309">
+
+### lv_display_set_render_mode
+
+Set display render mode
+
+```c
+void lv_display_set_render_mode(lv_display_t *disp, lv_display_render_mode_t render_mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `render_mode` | <ApiLink name="lv_display_render_mode_t" /> | LV_DISPLAY_RENDER_MODE_PARTIAL/DIRECT/FULL |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_flush_cb" file="api/display/lv_display.h" line={316} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L316">
+
+### lv_display_set_flush_cb
+
+Set the flush callback which will be called to copy the rendered image to the display.
+
+```c
+void lv_display_set_flush_cb(lv_display_t *disp, lv_display_flush_cb_t flush_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `flush_cb` | <ApiLink name="lv_display_flush_cb_t" /> | the flush callback (`px_map` contains the rendered image as raw pixel map and it should be copied to `area` on the display) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_flush_wait_cb" file="api/display/lv_display.h" line={326} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L326">
+
+### lv_display_set_flush_wait_cb
+
+Set a callback to be used while LVGL is waiting flushing to be finished. It can do any complex logic to wait, including semaphores, mutexes, polling flags, etc. If not set the `disp->flushing` flag is used which can be cleared with <ApiLink name="lv_display_flush_ready" display="lv_display_flush_ready()" />
+
+```c
+void lv_display_set_flush_wait_cb(lv_display_t *disp, lv_display_flush_wait_cb_t wait_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `wait_cb` | <ApiLink name="lv_display_flush_wait_cb_t" /> | a callback to call while LVGL is waiting for flush ready. If NULL <ApiLink name="lv_display_flush_ready" display="lv_display_flush_ready()" /> can be used to signal that flushing is ready. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_sync_cb" file="api/display/lv_display.h" line={333} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L333">
+
+### lv_display_set_sync_cb
+
+Set the sync callback which will be called to synchronize invalidated areas between frame buffers pre-render.
+
+```c
+void lv_display_set_sync_cb(lv_display_t *disp, lv_display_sync_cb_t sync_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `sync_cb` | <ApiLink name="lv_display_sync_cb_t" /> | the sync callback (pointer to `area` needing to be synchronized) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_sync_wait_cb" file="api/display/lv_display.h" line={343} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L343">
+
+### lv_display_set_sync_wait_cb
+
+Set a callback to be used while LVGL is waiting sync to be finished. It can do any complex logic to wait, including semaphores, mutexes, polling flags, etc. If not set the `disp->syncing` flag is used which can be cleared with <ApiLink name="lv_display_sync_ready" display="lv_display_sync_ready()" />
+
+```c
+void lv_display_set_sync_wait_cb(lv_display_t *disp, lv_display_sync_wait_cb_t wait_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `wait_cb` | <ApiLink name="lv_display_sync_wait_cb_t" /> | a callback to call while LVGL is waiting for sync ready. If NULL <ApiLink name="lv_display_sync_ready" display="lv_display_sync_ready()" /> can be used to signal that syncing is ready. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_color_format" file="api/display/lv_display.h" line={356} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L356">
+
+### lv_display_set_color_format
+
+Set the color format of the display.
+
+```c
+void lv_display_set_color_format(lv_display_t *disp, lv_color_format_t color_format)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `color_format` | <ApiLink name="lv_color_format_t" /> | Possible values are<br/>- LV_COLOR_FORMAT_RGB565<br/>- LV_COLOR_FORMAT_RGB888<br/>- LV_COLOR_FORMAT_XRGB888<br/>- LV_COLOR_FORMAT_ARGB888 |
+
+<Callout type="info">
+To change the endianness of the rendered image in case of RGB565 format (i.e. swap the 2 bytes) call `lv_draw_sw_rgb565_swap` in the flush_cb
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_tile_cnt" file="api/display/lv_display.h" line={370} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L370">
+
+### lv_display_set_tile_cnt
+
+Set the number of tiles for parallel rendering.
+
+```c
+void lv_display_set_tile_cnt(lv_display_t *disp, uint32_t tile_cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `tile_cnt` | `uint32_t` | number of tiles (1 =\< tile_cnt \< 256) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_antialiasing" file="api/display/lv_display.h" line={385} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L385">
+
+### lv_display_set_antialiasing
+
+Disabling anti-aliasing is not supported since v9. This function will be removed. Enable anti-aliasing for the render engine
+
+```c
+void lv_display_set_antialiasing(lv_display_t *disp, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `en` | `bool` | true/false |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_theme" file="api/display/lv_display.h" line={610} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L610">
+
+### lv_display_set_theme
+
+Set the theme of a display. If there are no user created widgets yet the screens' theme will be updated
+
+```c
+void lv_display_set_theme(lv_display_t *disp, lv_theme_t *th)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `th` | <ApiLink name="lv_theme_t" display="lv_theme_t *" /> | pointer to a theme |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_user_data" file="api/display/lv_display.h" line={687} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L687">
+
+### lv_display_set_user_data
+
+```c
+void lv_display_set_user_data(lv_display_t *disp, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `user_data` | `void *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_driver_data" file="api/display/lv_display.h" line={688} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L688">
+
+### lv_display_set_driver_data
+
+```c
+void lv_display_set_driver_data(lv_display_t *disp, void *driver_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `driver_data` | `void *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_set_external_data" file="api/display/lv_display.h" line={796} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L796">
+
+### lv_display_set_external_data
+
+Attaches external user data and destructor callback to a display.
+
+Associates custom user data with an LVGL display and specifies a destructor function that will be automatically invoked when the display is deleted to properly clean up the associated resources.
+
+```c
+void lv_display_set_external_data(lv_display_t *disp, void *data, void(*free_cb)(void *data))
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Pointer to a display |
+| `data` | `void *` | User-defined data pointer to associate with the display |
+| `free_cb` | `void(*)(void *data)` | Callback function for cleaning up data when display is deleted. Receives data as parameter. NULL means no cleanup required. |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (35)">
+
+<ApiMember kind="function" name="lv_display_get_default" file="api/display/lv_display.h" line={114} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L114">
+
+### lv_display_get_default
+
+Get the default display
+
+```c
+lv_display_t * lv_display_get_default(void)
+```
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — pointer to the default display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_next" file="api/display/lv_display.h" line={121} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L121">
+
+### lv_display_get_next
+
+Get the next display.
+
+```c
+lv_display_t * lv_display_get_next(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to the current display. NULL to initialize. |
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — the next display or NULL if no more. Gives the first display when the parameter is NULL.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_horizontal_resolution" file="api/display/lv_display.h" line={183} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L183">
+
+### lv_display_get_horizontal_resolution
+
+Get the horizontal resolution of a display.
+
+```c
+int32_t lv_display_get_horizontal_resolution(const lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `int32_t` — the horizontal resolution of the display.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_vertical_resolution" file="api/display/lv_display.h" line={190} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L190">
+
+### lv_display_get_vertical_resolution
+
+Get the vertical resolution of a display
+
+```c
+int32_t lv_display_get_vertical_resolution(const lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `int32_t` — the vertical resolution of the display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_original_horizontal_resolution" file="api/display/lv_display.h" line={197} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L197">
+
+### lv_display_get_original_horizontal_resolution
+
+Get the original horizontal resolution of a display without considering rotation
+
+```c
+int32_t lv_display_get_original_horizontal_resolution(const lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `int32_t` — the horizontal resolution of the display.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_original_vertical_resolution" file="api/display/lv_display.h" line={204} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L204">
+
+### lv_display_get_original_vertical_resolution
+
+Get the original vertical resolution of a display without considering rotation
+
+```c
+int32_t lv_display_get_original_vertical_resolution(const lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `int32_t` — the vertical resolution of the display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_physical_horizontal_resolution" file="api/display/lv_display.h" line={211} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L211">
+
+### lv_display_get_physical_horizontal_resolution
+
+Get the physical horizontal resolution of a display
+
+```c
+int32_t lv_display_get_physical_horizontal_resolution(const lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `int32_t` — the physical horizontal resolution of the display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_physical_vertical_resolution" file="api/display/lv_display.h" line={218} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L218">
+
+### lv_display_get_physical_vertical_resolution
+
+Get the physical vertical resolution of a display
+
+```c
+int32_t lv_display_get_physical_vertical_resolution(const lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `int32_t` — the physical vertical resolution of the display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_offset_x" file="api/display/lv_display.h" line={225} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L225">
+
+### lv_display_get_offset_x
+
+Get the horizontal offset from the full / physical display
+
+```c
+int32_t lv_display_get_offset_x(const lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `int32_t` — the horizontal offset from the physical display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_offset_y" file="api/display/lv_display.h" line={232} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L232">
+
+### lv_display_get_offset_y
+
+Get the vertical offset from the full / physical display
+
+```c
+int32_t lv_display_get_offset_y(const lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `int32_t` — the horizontal offset from the physical display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_rotation" file="api/display/lv_display.h" line={239} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L239">
+
+### lv_display_get_rotation
+
+Get the current rotation of this display.
+
+```c
+lv_display_rotation_t lv_display_get_rotation(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** <ApiLink name="lv_display_rotation_t" /> — the current rotation
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_matrix_rotation" file="api/display/lv_display.h" line={246} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L246">
+
+### lv_display_get_matrix_rotation
+
+Get if matrix rotation is enabled for a display or not
+
+```c
+bool lv_display_get_matrix_rotation(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `bool` — true: matrix rotation is enabled; false: disabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_dpi" file="api/display/lv_display.h" line={253} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L253">
+
+### lv_display_get_dpi
+
+Get the DPI of the display
+
+```c
+int32_t lv_display_get_dpi(const lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `int32_t` — dpi of the display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_color_format" file="api/display/lv_display.h" line={363} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L363">
+
+### lv_display_get_color_format
+
+Get the color format of the display
+
+```c
+lv_color_format_t lv_display_get_color_format(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+
+**Returns:** <ApiLink name="lv_color_format_t" /> — the color format
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_tile_cnt" file="api/display/lv_display.h" line={377} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L377">
+
+### lv_display_get_tile_cnt
+
+Get the number of tiles used for parallel rendering
+
+```c
+uint32_t lv_display_get_tile_cnt(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+
+**Returns:** `uint32_t` — number of tiles
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_antialiasing" file="api/display/lv_display.h" line={392} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L392">
+
+### lv_display_get_antialiasing
+
+Get if anti-aliasing is enabled for a display or not
+
+```c
+bool lv_display_get_antialiasing(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `bool` — true/false
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_render_mode" file="api/display/lv_display.h" line={436} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L436">
+
+### lv_display_get_render_mode
+
+Get display render mode
+
+```c
+lv_display_render_mode_t lv_display_get_render_mode(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+
+**Returns:** <ApiLink name="lv_display_render_mode_t" /> — display's render mode (LV_DISPLAY_RENDER_MODE_PARTIAL/DIRECT/FULL)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_screen_active" file="api/display/lv_display.h" line={448} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L448">
+
+### lv_display_get_screen_active
+
+Return a pointer to the active screen on a display
+
+```c
+lv_obj_t * lv_display_get_screen_active(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display which active screen should be get. (NULL to use the default screen) |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the active screen object (loaded by '<ApiLink name="lv_screen_load" display="lv_screen_load()" />')
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_screen_prev" file="api/display/lv_display.h" line={456} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L456">
+
+### lv_display_get_screen_prev
+
+Return with a pointer to the previous screen. Only used during screen transitions.
+
+```c
+lv_obj_t * lv_display_get_screen_prev(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display which previous screen should be get. (NULL to use the default screen) |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the previous screen object or NULL if not used now
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_screen_loading" file="api/display/lv_display.h" line={463} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L463">
+
+### lv_display_get_screen_loading
+
+Return the screen that is currently being loaded by the display
+
+```c
+lv_obj_t * lv_display_get_screen_loading(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display object (NULL to use the default screen) |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the screen being loaded or NULL if no screen is currently being loaded
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_layer_top" file="api/display/lv_display.h" line={470} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L470">
+
+### lv_display_get_layer_top
+
+Return the top layer. The top layer is the same on all screens and it is above the normal screen layer.
+
+```c
+lv_obj_t * lv_display_get_layer_top(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display which top layer should be get. (NULL to use the default screen) |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the top layer object
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_layer_sys" file="api/display/lv_display.h" line={477} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L477">
+
+### lv_display_get_layer_sys
+
+Return the sys. layer. The system layer is the same on all screen and it is above the normal screen and the top layer.
+
+```c
+lv_obj_t * lv_display_get_layer_sys(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display which sys. layer should be retrieved. (NULL to use the default screen) |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the sys layer object
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_layer_bottom" file="api/display/lv_display.h" line={485} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L485">
+
+### lv_display_get_layer_bottom
+
+Return the bottom layer. The bottom layer is the same on all screen and it is under the normal screen layer. It's visible only if the screen is transparent.
+
+```c
+lv_obj_t * lv_display_get_layer_bottom(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display (NULL to use the default screen) |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the bottom layer object
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_screen_by_name" file="api/display/lv_display.h" line={497} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L497">
+
+### lv_display_get_screen_by_name
+
+Get screen by its name on a display. The name should be set by <ApiLink name="lv_obj_set_name" display="lv_obj_set_name()" /> or <ApiLink name="lv_obj_set_name_static" display="lv_obj_set_name_static()" />.
+
+```c
+lv_obj_t * lv_display_get_screen_by_name(const lv_display_t *disp, const char *screen_name)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to a display or NULL to use default display |
+| `screen_name` | `const char *` | name of the screen to get |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the screen, or NULL if not found.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_event_count" file="api/display/lv_display.h" line={562} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L562">
+
+### lv_display_get_event_count
+
+Get the number of event attached to a display
+
+```c
+uint32_t lv_display_get_event_count(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+
+**Returns:** `uint32_t` — number of events
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_event_dsc" file="api/display/lv_display.h" line={570} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L570">
+
+### lv_display_get_event_dsc
+
+Get an event descriptor for an event
+
+```c
+lv_event_dsc_t * lv_display_get_event_dsc(lv_display_t *disp, uint32_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `index` | `uint32_t` | the index of the event |
+
+**Returns:** <ApiLink name="lv_event_dsc_t" display="lv_event_dsc_t *" /> — the event descriptor
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_event_get_invalidated_area" file="api/display/lv_display.h" line={603} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L603">
+
+### lv_event_get_invalidated_area
+
+Get the area to be invalidated. Can be used in `LV_EVENT_INVALIDATE_AREA`
+
+```c
+lv_area_t * lv_event_get_invalidated_area(lv_event_t *e)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `e` | <ApiLink name="lv_event_t" display="lv_event_t *" /> | pointer to an event |
+
+**Returns:** <ApiLink name="lv_area_t" display="lv_area_t *" /> — the area to invalidated (can be modified as required)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_theme" file="api/display/lv_display.h" line={617} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L617">
+
+### lv_display_get_theme
+
+Get the theme of a display
+
+```c
+lv_theme_t * lv_display_get_theme(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+
+**Returns:** <ApiLink name="lv_theme_t" display="lv_theme_t *" /> — the display's theme (can be NULL)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_inactive_time" file="api/display/lv_display.h" line={624} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L624">
+
+### lv_display_get_inactive_time
+
+Get elapsed time since last user activity on a display (e.g. click)
+
+```c
+uint32_t lv_display_get_inactive_time(const lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to a display (NULL to get the overall smallest inactivity) |
+
+**Returns:** `uint32_t` — elapsed ticks (milliseconds) since the last activity
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_refr_timer" file="api/display/lv_display.h" line={652} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L652">
+
+### lv_display_get_refr_timer
+
+Get a pointer to the screen refresher timer to modify its parameters with `lv_timer_...` functions.
+
+```c
+lv_timer_t * lv_display_get_refr_timer(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+
+**Returns:** <ApiLink name="lv_timer_t" display="lv_timer_t *" /> — pointer to the display refresher timer. (NULL on error)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_user_data" file="api/display/lv_display.h" line={689} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L689">
+
+### lv_display_get_user_data
+
+```c
+void * lv_display_get_user_data(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_driver_data" file="api/display/lv_display.h" line={690} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L690">
+
+### lv_display_get_driver_data
+
+```c
+void * lv_display_get_driver_data(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_buf_active" file="api/display/lv_display.h" line={691} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L691">
+
+### lv_display_get_buf_active
+
+```c
+lv_draw_buf_t * lv_display_get_buf_active(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_draw_buf_size" file="api/display/lv_display.h" line={712} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L712">
+
+### lv_display_get_draw_buf_size
+
+Get the size of the draw buffers
+
+```c
+uint32_t lv_display_get_draw_buf_size(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+
+**Returns:** `uint32_t` — the size of the draw buffer in bytes for valid display, 0 otherwise
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_get_invalidated_draw_buf_size" file="api/display/lv_display.h" line={723} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L723">
+
+### lv_display_get_invalidated_draw_buf_size
+
+Get the size of the invalidated draw buffer. Can be used in the flush callback to get the number of bytes used in the current render buffer.
+
+```c
+uint32_t lv_display_get_invalidated_draw_buf_size(lv_display_t *disp, uint32_t width, uint32_t height)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `width` | `uint32_t` | the width of the invalidated area |
+| `height` | `uint32_t` | the height of the invalidated area |
+
+**Returns:** `uint32_t` — the size of the invalidated draw buffer in bytes, not accounting for any preceding palette information for a valid display, 0 otherwise
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (28)">
+
+<ApiMember kind="function" name="lv_display_create" file="api/display/lv_display.h" line={96} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L96">
+
+### lv_display_create
+
+Create a new display with the given resolution
+
+```c
+lv_display_t * lv_display_create(int32_t hor_res, int32_t ver_res)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `hor_res` | `int32_t` | horizontal resolution in pixels |
+| `ver_res` | `int32_t` | vertical resolution in pixels |
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — pointer to a display object or `NULL` on error
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_delete" file="api/display/lv_display.h" line={102} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L102">
+
+### lv_display_delete
+
+Remove a display
+
+```c
+void lv_display_delete(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_flush_ready" file="api/display/lv_display.h" line={398} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L398">
+
+### lv_display_flush_ready
+
+Call from the display driver when the flushing is finished
+
+```c
+void lv_display_flush_ready(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display whose `flush_cb` was called |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_flush_is_last" file="api/display/lv_display.h" line={407} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L407">
+
+### lv_display_flush_is_last
+
+Tell if it's the last area of the refreshing process. Can be called from `flush_cb` to execute some special display refreshing if needed when all areas are flushed.
+
+```c
+bool lv_display_flush_is_last(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display |
+
+**Returns:** `bool` — true: it's the last area to flush; false: there are other areas too which will be refreshed soon
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_sync_ready" file="api/display/lv_display.h" line={413} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L413">
+
+### lv_display_sync_ready
+
+Call from the display driver when the syncing is finished
+
+```c
+void lv_display_sync_ready(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display whose `sync_cb` was called |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_sync_is_last" file="api/display/lv_display.h" line={422} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L422">
+
+### lv_display_sync_is_last
+
+Tell if it's the last area of the syncing process. Can be called from `sync_cb` to execute some special display refreshing if needed when all areas are synced.
+
+```c
+bool lv_display_sync_is_last(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display |
+
+**Returns:** `bool` — true: it's the last area to sync; false: there are other areas too which will be synced soon
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_is_double_buffered" file="api/display/lv_display.h" line={429} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L429">
+
+### lv_display_is_double_buffered
+
+Get display is double buffered.
+
+```c
+bool lv_display_is_double_buffered(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `bool` — return true if display is double buffered
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_screen_load" file="api/display/lv_display.h" line={505} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L505">
+
+### lv_screen_load
+
+Load a screen on the default display
+
+```c
+void lv_screen_load(struct _lv_obj_t *scr)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `scr` | <ApiLink name="_lv_obj_t" display="struct _lv_obj_t *" /> | pointer to a screen |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_screen_load_anim" file="api/display/lv_display.h" line={515} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L515">
+
+### lv_screen_load_anim
+
+Switch screen with animation
+
+```c
+void lv_screen_load_anim(lv_obj_t *scr, lv_screen_load_anim_t anim_type, uint32_t time, uint32_t delay, bool auto_del)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `scr` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the new screen to load |
+| `anim_type` | <ApiLink name="lv_screen_load_anim_t" /> | type of the animation from `lv_screen_load_anim_t`, e.g. `LV_SCREEN_LOAD_ANIM_MOVE_LEFT` |
+| `time` | `uint32_t` | time of the animation |
+| `delay` | `uint32_t` | delay before the transition |
+| `auto_del` | `bool` | true: automatically delete the old screen |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_screen_active" file="api/display/lv_display.h" line={522} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L522">
+
+### lv_screen_active
+
+Get the active screen of the default display
+
+```c
+lv_obj_t * lv_screen_active(void)
+```
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the active screen
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_layer_top" file="api/display/lv_display.h" line={528} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L528">
+
+### lv_layer_top
+
+Get the top layer of the default display
+
+```c
+lv_obj_t * lv_layer_top(void)
+```
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the top layer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_layer_sys" file="api/display/lv_display.h" line={534} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L534">
+
+### lv_layer_sys
+
+Get the system layer of the default display
+
+```c
+lv_obj_t * lv_layer_sys(void)
+```
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the sys layer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_layer_bottom" file="api/display/lv_display.h" line={540} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L540">
+
+### lv_layer_bottom
+
+Get the bottom layer of the default display
+
+```c
+lv_obj_t * lv_layer_bottom(void)
+```
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the bottom layer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_add_event_cb" file="api/display/lv_display.h" line={554} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L554">
+
+### lv_display_add_event_cb
+
+Add an event handler to the display
+
+```c
+lv_event_dsc_t * lv_display_add_event_cb(lv_display_t *disp, lv_event_cb_t event_cb, lv_event_code_t filter, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `event_cb` | <ApiLink name="lv_event_cb_t" /> | an event callback |
+| `filter` | <ApiLink name="lv_event_code_t" /> | event code to react or `LV_EVENT_ALL` |
+| `user_data` | `void *` | optional user_data |
+
+**Returns:** <ApiLink name="lv_event_dsc_t" display="lv_event_dsc_t *" /> — the event descriptor or NULL if the event couldn't be created
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_remove_event" file="api/display/lv_display.h" line={578} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L578">
+
+### lv_display_remove_event
+
+Remove an event
+
+```c
+bool lv_display_remove_event(lv_display_t *disp, uint32_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `index` | `uint32_t` | the index of the event to remove |
+
+**Returns:** `bool` — true: and event was removed; false: no event was removed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_remove_event_cb_with_user_data" file="api/display/lv_display.h" line={587} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L587">
+
+### lv_display_remove_event_cb_with_user_data
+
+Remove an event_cb with user_data
+
+```c
+uint32_t lv_display_remove_event_cb_with_user_data(lv_display_t *disp, lv_event_cb_t event_cb, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `event_cb` | <ApiLink name="lv_event_cb_t" /> | the event_cb of the event to remove |
+| `user_data` | `void *` | user_data |
+
+**Returns:** `uint32_t` — the count of the event removed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_send_event" file="api/display/lv_display.h" line={596} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L596">
+
+### lv_display_send_event
+
+Send an event to a display
+
+```c
+lv_result_t lv_display_send_event(lv_display_t *disp, lv_event_code_t code, void *param)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `code` | <ApiLink name="lv_event_code_t" /> | an event code. LV_EVENT_... |
+| `param` | `void *` | optional param |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: disp wasn't deleted in the event.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_trigger_activity" file="api/display/lv_display.h" line={630} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L630">
+
+### lv_display_trigger_activity
+
+Manually trigger an activity on a display
+
+```c
+void lv_display_trigger_activity(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_enable_invalidation" file="api/display/lv_display.h" line={637} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L637">
+
+### lv_display_enable_invalidation
+
+Temporarily enable and disable the invalidation of the display.
+
+```c
+void lv_display_enable_invalidation(lv_display_t *disp, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+| `en` | `bool` | true: enable invalidation; false: invalidation |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_is_invalidation_enabled" file="api/display/lv_display.h" line={644} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L644">
+
+### lv_display_is_invalidation_enabled
+
+Get display invalidation is enabled.
+
+```c
+bool lv_display_is_invalidation_enabled(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display (NULL to use the default display) |
+
+**Returns:** `bool` — return true if invalidation is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_delete_refr_timer" file="api/display/lv_display.h" line={658} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L658">
+
+### lv_display_delete_refr_timer
+
+Delete screen refresher timer
+
+```c
+void lv_display_delete_refr_timer(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_register_vsync_event" file="api/display/lv_display.h" line={668} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L668">
+
+### lv_display_register_vsync_event
+
+Register vsync event of a display. `LV_EVENT_VSYNC` event will be sent periodically. Please don't use it in display event listeners, as it may cause memory leaks and illegal access issues.
+
+```c
+bool lv_display_register_vsync_event(lv_display_t *disp, lv_event_cb_t event_cb, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `event_cb` | <ApiLink name="lv_event_cb_t" /> | an event callback |
+| `user_data` | `void *` | optional user_data |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_unregister_vsync_event" file="api/display/lv_display.h" line={677} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L677">
+
+### lv_display_unregister_vsync_event
+
+Unregister vsync event of a display. `LV_EVENT_VSYNC` event won't be sent periodically. Please don't use it in display event listeners, as it may cause memory leaks and illegal access issues.
+
+```c
+bool lv_display_unregister_vsync_event(lv_display_t *disp, lv_event_cb_t event_cb, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `event_cb` | <ApiLink name="lv_event_cb_t" /> | an event callback |
+| `user_data` | `void *` | optional user_data |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_send_vsync_event" file="api/display/lv_display.h" line={685} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L685">
+
+### lv_display_send_vsync_event
+
+Send an vsync event to a display
+
+```c
+lv_result_t lv_display_send_vsync_event(lv_display_t *disp, void *param)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `param` | `void *` | optional param |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: disp wasn't deleted in the event.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_rotate_area" file="api/display/lv_display.h" line={698} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L698">
+
+### lv_display_rotate_area
+
+Rotate an area in-place according to the display's rotation
+
+```c
+void lv_display_rotate_area(lv_display_t *disp, lv_area_t *area)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `area` | <ApiLink name="lv_area_t" display="lv_area_t *" /> | pointer to an area to rotate |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_rotate_point" file="api/display/lv_display.h" line={705} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L705">
+
+### lv_display_rotate_point
+
+Rotate a point in-place according to the display's rotation
+
+```c
+void lv_display_rotate_point(lv_display_t *disp, lv_point_t *point)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `point` | <ApiLink name="lv_point_t" display="lv_point_t *" /> | pointer to a point to rotate |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_dpx" file="api/display/lv_display.h" line={769} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L769">
+
+### lv_dpx
+
+For default display, computes the number of pixels (a distance or size) as if the display had 160 DPI. This allows you to specify 1/160-th fractions of an inch to get real distance on the display that will be consistent regardless of its current DPI. It ensures `lv_dpx(100)`, for example, will have the same physical size regardless to the DPI of the display.
+
+```c
+int32_t lv_dpx(int32_t n)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `n` | `int32_t` | number of 1/160-th-inch units to compute with |
+
+**Returns:** `int32_t` — number of pixels to use to make that distance
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_display_dpx" file="api/display/lv_display.h" line={781} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L781">
+
+### lv_display_dpx
+
+For specified display, computes the number of pixels (a distance or size) as if the display had 160 DPI. This allows you to specify 1/160-th fractions of an inch to get real distance on the display that will be consistent regardless of its current DPI. It ensures `lv_dpx(100)`, for example, will have the same physical size regardless to the DPI of the display.
+
+```c
+int32_t lv_display_dpx(const lv_display_t *disp, int32_t n)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="const lv_display_t *" /> | pointer to display whose dpi should be considered |
+| `n` | `int32_t` | number of 1/160-th-inch units to compute with |
+
+**Returns:** `int32_t` — number of pixels to use to make that distance
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_display_rotation_t" file="api/display/lv_display.h" line={34} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L34">
+
+### lv_display_rotation_t
+
+| Name | Value |
+|------|------|
+| `LV_DISPLAY_ROTATION_0` | `0` |
+| `LV_DISPLAY_ROTATION_90` |  |
+| `LV_DISPLAY_ROTATION_180` |  |
+| `LV_DISPLAY_ROTATION_270` |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_display_rotation_t" count={2}>
+
+- `lv_display_set_rotation` — param `rotation`
+- `lv_draw_sw_rotate` — param `rotation`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="lv_display_render_mode_t" file="api/display/lv_display.h" line={41} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L41">
+
+### lv_display_render_mode_t
+
+| Name | Description |
+|------|------|
+| `LV_DISPLAY_RENDER_MODE_PARTIAL` | Use the buffer(s) to render the screen is smaller parts. This way the buffers can be smaller then the display to save RAM. At least 1/10 screen size buffer(s) are recommended. |
+| `LV_DISPLAY_RENDER_MODE_DIRECT` | The buffer(s) has to be screen sized and LVGL will render into the correct location of the buffer. This way the buffer always contain the whole image. Only the changed ares will be updated. With 2 buffers the buffers' content are kept in sync automatically and in flush_cb only address change is required. |
+| `LV_DISPLAY_RENDER_MODE_FULL` | Always redraw the whole screen even if only one pixel has been changed. With 2 buffers in flush_cb only an address change is required. |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_display_render_mode_t" count={3}>
+
+- `lv_display_set_buffers` — param `render_mode`
+- `lv_display_set_buffers_with_stride` — param `render_mode`
+- `lv_display_set_render_mode` — param `render_mode`
+
+</TypeUsedBy>
+
+<ApiMember kind="enum" name="lv_screen_load_anim_t" file="api/display/lv_display.h" line={62} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L62">
+
+### lv_screen_load_anim_t
+
+| Name | Value |
+|------|------|
+| `LV_SCREEN_LOAD_ANIM_NONE` |  |
+| `LV_SCREEN_LOAD_ANIM_OVER_LEFT` |  |
+| `LV_SCREEN_LOAD_ANIM_OVER_RIGHT` |  |
+| `LV_SCREEN_LOAD_ANIM_OVER_TOP` |  |
+| `LV_SCREEN_LOAD_ANIM_OVER_BOTTOM` |  |
+| `LV_SCREEN_LOAD_ANIM_MOVE_LEFT` |  |
+| `LV_SCREEN_LOAD_ANIM_MOVE_RIGHT` |  |
+| `LV_SCREEN_LOAD_ANIM_MOVE_TOP` |  |
+| `LV_SCREEN_LOAD_ANIM_MOVE_BOTTOM` |  |
+| `LV_SCREEN_LOAD_ANIM_FADE_IN` |  |
+| `LV_SCREEN_LOAD_ANIM_FADE_ON` | `LV_SCREEN_LOAD_ANIM_FADE_IN` |
+| `LV_SCREEN_LOAD_ANIM_FADE_OUT` |  |
+| `LV_SCREEN_LOAD_ANIM_OUT_LEFT` |  |
+| `LV_SCREEN_LOAD_ANIM_OUT_RIGHT` |  |
+| `LV_SCREEN_LOAD_ANIM_OUT_TOP` |  |
+| `LV_SCREEN_LOAD_ANIM_OUT_BOTTOM` |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_screen_load_anim_t" count={3}>
+
+- `lv_obj_add_screen_load_event` — param `anim_type`
+- `lv_obj_add_screen_create_event` — param `anim_type`
+- `lv_screen_load_anim` — param `anim_type`
+
+</TypeUsedBy>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_display_flush_cb_t" file="api/display/lv_display.h" line={81} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L81">
+
+### lv_display_flush_cb_t
+
+```c
+typedef void(* lv_display_flush_cb_t) (lv_display_t *disp, const lv_area_t *area, uint8_t *px_map)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_display_flush_cb_t" count={1}>
+
+- `lv_display_set_flush_cb` — param `flush_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_display_flush_wait_cb_t" file="api/display/lv_display.h" line={82} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L82">
+
+### lv_display_flush_wait_cb_t
+
+```c
+typedef void(* lv_display_flush_wait_cb_t) (lv_display_t *disp)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_display_flush_wait_cb_t" count={1}>
+
+- `lv_display_set_flush_wait_cb` — param `wait_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_display_sync_cb_t" file="api/display/lv_display.h" line={83} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L83">
+
+### lv_display_sync_cb_t
+
+```c
+typedef void(* lv_display_sync_cb_t) (lv_display_t *disp, const lv_area_t *area)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_display_sync_cb_t" count={1}>
+
+- `lv_display_set_sync_cb` — param `sync_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_display_sync_wait_cb_t" file="api/display/lv_display.h" line={84} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L84">
+
+### lv_display_sync_wait_cb_t
+
+```c
+typedef void(* lv_display_sync_wait_cb_t) (lv_display_t *disp)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_display_sync_wait_cb_t" count={1}>
+
+- `lv_display_set_sync_wait_cb` — param `wait_cb`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_HOR_RES" file="api/display/lv_display.h" line={738} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L738">
+
+### LV_HOR_RES
+
+```c
+#define LV_HOR_RES lv_display_get_horizontal_resolution(lv_display_get_default())
+```
+
+The horizontal resolution of the currently active display.
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_VER_RES" file="api/display/lv_display.h" line={745} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L745">
+
+### LV_VER_RES
+
+```c
+#define LV_VER_RES lv_display_get_vertical_resolution(lv_display_get_default())
+```
+
+The vertical resolution of the currently active display.
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DPX_CALC" file="api/display/lv_display.h" line={757} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L757">
+
+### LV_DPX_CALC
+
+```c
+#define LV_DPX_CALC(dpi, n) \
+    ((n) == 0 ? 0 :LV_MAX((( (dpi) * (n) + 80) / 160), 1)) /*+80 for rounding*/
+```
+
+See <ApiLink name="lv_dpx" display="lv_dpx()" /> and <ApiLink name="lv_display_dpx" display="lv_display_dpx()" />. Same as Android's DIP. (Different name is chosen to avoid mistype between LV_DPI and LV_DIP)
+
+- 40 dip is 40 px on a 160 DPI screen (distance = 1/4 inch).
+- 40 dip is 80 px on a 320 DPI screen (distance still = 1/4 inch).
+
+**See also:** [https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp](https://stackoverflow.com/questions/2025282/what-is-the-difference-between-px-dip-dp-and-sp)
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DPX" file="api/display/lv_display.h" line={758} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/display/lv_display.h#L758">
+
+### LV_DPX
+
+```c
+#define LV_DPX(n) \
+    LV_DPX_CALC(lv_display_get_dpi(NULL), n)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h", "lv_timer.h", "lv_event.h", "lv_color.h", "lv_area.h"]}
+  includedBy={["lv_api_map_v8.h", "lv_obj_tree.h", "lv_refr.h", "lv_draw_sw_utils.h", "lv_ft81x.h", "lv_lcd_generic_mipi.h", "lv_linux_drm.h", "lv_linux_fbdev.h", "lv_lovyan_gfx.h", "lv_nxp_elcdif.h", "lv_renesas_glcdc.h", "lv_st_ltdc.h", "lv_tft_espi.h", "lv_nuttx_entry.h", "lv_nuttx_fbdev.h", "lv_nuttx_lcd.h", "lv_nuttx_libuv.h", "lv_opengles_texture.h", "lv_qnx.h", "lv_sdl_window.h", "lv_uefi_display.h", "lv_wayland_window.h", "lv_windows_display.h", "lv_windows_input.h", "lv_x11.h", "lvgl.h", "lv_theme_simple.h"]}
+  transitiveIncludes={["lv_array.h", "lv_assert.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h"]}
+/>

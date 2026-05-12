@@ -1,0 +1,33 @@
+---
+title: lv_3dtexture_private.h
+description: API reference for lv_3dtexture_private.h
+api:
+  structs: [_lv_3dtexture_t]
+---
+
+<RelatedHeaders name="lv_3dtexture.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_3dtexture_t">
+
+### _lv_3dtexture_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `id` | <ApiLink name="lv_3dtexture_id_t" /> |  |
+| `h_flip` | `bool` |  |
+| `v_flip` | `bool` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_obj_private.h"]}
+  includedBy={["lv_gltf_view_internal.h", "lvgl_private.h"]}
+/>

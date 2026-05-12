@@ -1,0 +1,112 @@
+---
+title: lv_windows_input.h
+description: API reference for lv_windows_input.h
+api:
+  functions: [lv_windows_get_indev_window_handle, lv_windows_acquire_pointer_indev, lv_windows_acquire_keypad_indev, lv_windows_acquire_encoder_indev]
+---
+
+<RelatedHeaders name="lv_windows_input_private.h" isPrivate={false} />
+
+<ApiSummary functions={4} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (3)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_windows_get_indev_window_handle" file="api/drivers/windows/lv_windows_input.h" line={40} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/drivers/windows/lv_windows_input.h#L40">
+
+### lv_windows_get_indev_window_handle
+
+Get the window handle from specific LVGL input device object.
+
+```c
+HWND lv_windows_get_indev_window_handle(lv_indev_t *indev)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | The specific LVGL input device object. |
+
+**Returns:** <ApiLink name="HWND" /> — The window handle from specific LVGL input device object.
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_windows_acquire_pointer_indev" file="api/drivers/windows/lv_windows_input.h" line={50} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/drivers/windows/lv_windows_input.h#L50">
+
+### lv_windows_acquire_pointer_indev
+
+Open a LVGL pointer input device object for the specific LVGL display object, or create it if the LVGL pointer input device object is not created or removed before.
+
+```c
+lv_indev_t * lv_windows_acquire_pointer_indev(lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | The specific LVGL display object. |
+
+**Returns:** <ApiLink name="lv_indev_t" display="lv_indev_t *" /> — The LVGL pointer input device object for the specific LVGL display object.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_windows_acquire_keypad_indev" file="api/drivers/windows/lv_windows_input.h" line={60} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/drivers/windows/lv_windows_input.h#L60">
+
+### lv_windows_acquire_keypad_indev
+
+Open a LVGL keypad input device object for the specific LVGL display object, or create it if the LVGL keypad input device object is not created or removed before.
+
+```c
+lv_indev_t * lv_windows_acquire_keypad_indev(lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | The specific LVGL display object. |
+
+**Returns:** <ApiLink name="lv_indev_t" display="lv_indev_t *" /> — The LVGL keypad input device object for the specific LVGL display object.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_windows_acquire_encoder_indev" file="api/drivers/windows/lv_windows_input.h" line={70} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/drivers/windows/lv_windows_input.h#L70">
+
+### lv_windows_acquire_encoder_indev
+
+Open a LVGL encoder input device object for the specific LVGL display object, or create it if the LVGL encoder input device object is not created or removed before.
+
+```c
+lv_indev_t * lv_windows_acquire_encoder_indev(lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | The specific LVGL display object. |
+
+**Returns:** <ApiLink name="lv_indev_t" display="lv_indev_t *" /> — The LVGL encoder input device object for the specific LVGL display object.
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_windows_display.h", "lv_display.h", "lv_indev.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_event.h", "lv_group.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_timer.h", "lv_types.h"]}
+/>

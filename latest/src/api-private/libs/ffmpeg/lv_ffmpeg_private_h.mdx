@@ -1,0 +1,36 @@
+---
+title: lv_ffmpeg_private.h
+description: API reference for lv_ffmpeg_private.h
+api:
+  structs: [_lv_ffmpeg_player_t]
+---
+
+<RelatedHeaders name="lv_ffmpeg.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_ffmpeg_player_t">
+
+### _lv_ffmpeg_player_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `img` | <ApiLink name="lv_image_t" /> |  |
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> |  |
+| `imgdsc` | <ApiLink name="lv_image_dsc_t" /> |  |
+| `auto_restart` | `bool` |  |
+| `ffmpeg_ctx` | `struct ffmpeg_context_s *` |  |
+| `decoder_name` | `const char *` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_image_private.h"]}
+  includedBy={["lvgl_private.h"]}
+  transitiveIncludes={["lv_obj_private.h"]}
+/>

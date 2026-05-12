@@ -1,0 +1,35 @@
+---
+title: lv_canvas_private.h
+description: API reference for lv_canvas_private.h
+api:
+  structs: [_lv_canvas_t]
+---
+
+<RelatedHeaders name="lv_canvas.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_canvas_t">
+
+### _lv_canvas_t
+
+Canvas data
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `img` | <ApiLink name="lv_image_t" /> |  |
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> |  |
+| `static_buf` | <ApiLink name="lv_draw_buf_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_image_private.h", "lvgl_public.h"]}
+  includedBy={["lv_barcode_private.h", "lv_qrcode_private.h", "lvgl_private.h", "lv_lottie_private.h"]}
+  transitiveIncludes={["lv_obj_private.h"]}
+/>

@@ -1,0 +1,390 @@
+---
+title: lv_image_decoder.h
+description: API reference for lv_image_decoder.h
+api:
+  functions: [lv_image_decoder_get_info, lv_image_decoder_open, lv_image_decoder_get_area, lv_image_decoder_close, lv_image_decoder_create, lv_image_decoder_delete, lv_image_decoder_get_next, lv_image_decoder_set_info_cb, lv_image_decoder_set_open_cb, lv_image_decoder_set_get_area_cb, lv_image_decoder_set_close_cb, lv_image_decoder_post_process]
+  enums: [lv_image_src_t]
+  typedefs: [lv_image_decoder_info_f_t, lv_image_decoder_open_f_t, lv_image_decoder_get_area_cb_t, lv_image_decoder_close_f_t, lv_image_decoder_custom_draw_t]
+---
+
+<RelatedHeaders name="lv_image_decoder_private.h" isPrivate={false} />
+
+<ApiSummary functions={12} enums={1} typedefs={5} />
+
+## Functions
+
+<ApiTabs items={["Setters (4)","Getters (3)","Other (5)"]}>
+<ApiTab value="Setters (4)">
+
+<ApiMember kind="function" name="lv_image_decoder_set_info_cb" file="api/image/lv_image_decoder.h" line={159} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L159">
+
+### lv_image_decoder_set_info_cb
+
+Set a callback to get information about the image
+
+```c
+void lv_image_decoder_set_info_cb(lv_image_decoder_t *decoder, lv_image_decoder_info_f_t info_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `decoder` | <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> | pointer to an image decoder |
+| `info_cb` | <ApiLink name="lv_image_decoder_info_f_t" /> | a function to collect info about an image (fill an <ApiLink name="lv_image_header_t" /> struct) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_decoder_set_open_cb" file="api/image/lv_image_decoder.h" line={166} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L166">
+
+### lv_image_decoder_set_open_cb
+
+Set a callback to open an image
+
+```c
+void lv_image_decoder_set_open_cb(lv_image_decoder_t *decoder, lv_image_decoder_open_f_t open_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `decoder` | <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> | pointer to an image decoder |
+| `open_cb` | <ApiLink name="lv_image_decoder_open_f_t" /> | a function to open an image |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_decoder_set_get_area_cb" file="api/image/lv_image_decoder.h" line={173} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L173">
+
+### lv_image_decoder_set_get_area_cb
+
+Set a callback to a decoded line of an image
+
+```c
+void lv_image_decoder_set_get_area_cb(lv_image_decoder_t *decoder, lv_image_decoder_get_area_cb_t get_area_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `decoder` | <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> | pointer to an image decoder |
+| `get_area_cb` | <ApiLink name="lv_image_decoder_get_area_cb_t" /> | a function to read a line of an image |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_decoder_set_close_cb" file="api/image/lv_image_decoder.h" line={180} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L180">
+
+### lv_image_decoder_set_close_cb
+
+Set a callback to close a decoding session. E.g. close files and free other resources.
+
+```c
+void lv_image_decoder_set_close_cb(lv_image_decoder_t *decoder, lv_image_decoder_close_f_t close_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `decoder` | <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> | pointer to an image decoder |
+| `close_cb` | <ApiLink name="lv_image_decoder_close_f_t" /> | a function to close a decoding session |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (3)">
+
+<ApiMember kind="function" name="lv_image_decoder_get_info" file="api/image/lv_image_decoder.h" line={102} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L102">
+
+### lv_image_decoder_get_info
+
+Get information about an image. Try the created image decoder one by one. Once one is able to get info that info will be used.
+
+```c
+lv_result_t lv_image_decoder_get_info(const void *src, lv_image_header_t *header)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `src` | `const void *` | the image source. Can be 1) File name: E.g. "S:folder/img1.png" (The drivers needs to registered via <ApiLink name="lv_fs_drv_register" display="lv_fs_drv_register()" />) 2) Variable: Pointer to an <ApiLink name="lv_image_dsc_t" /> variable 3) Symbol: E.g. `LV_SYMBOL_OK` |
+| `header` | <ApiLink name="lv_image_header_t" display="lv_image_header_t *" /> | the image info will be stored here |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: wasn't able to get info about the image
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_decoder_get_area" file="api/image/lv_image_decoder.h" line={126} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L126">
+
+### lv_image_decoder_get_area
+
+Decode `full_area` pixels incrementally by calling in a loop. Set `decoded_area` to `LV_COORD_MIN` on first call.
+
+```c
+lv_result_t lv_image_decoder_get_area(lv_image_decoder_dsc_t *dsc, const lv_area_t *full_area, lv_area_t *decoded_area)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_image_decoder_dsc_t" display="lv_image_decoder_dsc_t *" /> | image decoder descriptor |
+| `full_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | input parameter. the full area to decode after enough subsequent calls |
+| `decoded_area` | <ApiLink name="lv_area_t" display="lv_area_t *" /> | input+output parameter. set the values to `LV_COORD_MIN` for the first call and to reset decoding. the decoded area is stored here after each call. |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success; LV_RESULT_INVALID: an error occurred or there is nothing left to decode
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_decoder_get_next" file="api/image/lv_image_decoder.h" line={152} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L152">
+
+### lv_image_decoder_get_next
+
+Get the next image decoder in the linked list of image decoders
+
+```c
+lv_image_decoder_t * lv_image_decoder_get_next(lv_image_decoder_t *decoder)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `decoder` | <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> | pointer to an image decoder or NULL to get the first one |
+
+**Returns:** <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> — the next image decoder or NULL if no more image decoder exists
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (5)">
+
+<ApiMember kind="function" name="lv_image_decoder_open" file="api/image/lv_image_decoder.h" line={116} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L116">
+
+### lv_image_decoder_open
+
+Open an image. Try the created image decoders one by one. Once one is able to open the image that decoder is saved in `dsc`
+
+```c
+lv_result_t lv_image_decoder_open(lv_image_decoder_dsc_t *dsc, const void *src, const lv_image_decoder_args_t *args)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_image_decoder_dsc_t" display="lv_image_decoder_dsc_t *" /> | describes a decoding session. Simply a pointer to an `lv_image_decoder_dsc_t` variable. |
+| `src` | `const void *` | the image source. Can be 1) File name: E.g. "S:folder/img1.png" (The drivers needs to registered via <ApiLink name="lv_fs_drv_register" display="lv_fs_drv_register()" />`)`) 2) Variable: Pointer to an <ApiLink name="lv_image_dsc_t" /> variable 3) Symbol: E.g. `LV_SYMBOL_OK` |
+| `args` | <ApiLink name="lv_image_decoder_args_t" display="const lv_image_decoder_args_t *" /> | args about how the image should be opened. |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: opened the image. `dsc->decoded` and `dsc->header` are set. LV_RESULT_INVALID: none of the registered image decoders were able to open the image.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_decoder_close" file="api/image/lv_image_decoder.h" line={133} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L133">
+
+### lv_image_decoder_close
+
+Close a decoding session
+
+```c
+void lv_image_decoder_close(lv_image_decoder_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_image_decoder_dsc_t" display="lv_image_decoder_dsc_t *" /> | pointer to `lv_image_decoder_dsc_t` used in `lv_image_decoder_open` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_decoder_create" file="api/image/lv_image_decoder.h" line={139} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L139">
+
+### lv_image_decoder_create
+
+Create a new image decoder
+
+```c
+lv_image_decoder_t * lv_image_decoder_create(void)
+```
+
+**Returns:** <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> — pointer to the new image decoder
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_decoder_delete" file="api/image/lv_image_decoder.h" line={145} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L145">
+
+### lv_image_decoder_delete
+
+Delete an image decoder
+
+```c
+void lv_image_decoder_delete(lv_image_decoder_t *decoder)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `decoder` | <ApiLink name="lv_image_decoder_t" display="lv_image_decoder_t *" /> | pointer to an image decoder |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_decoder_post_process" file="api/image/lv_image_decoder.h" line={189} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L189">
+
+### lv_image_decoder_post_process
+
+Check the decoded image, make any modification if decoder `args` requires.
+
+```c
+lv_draw_buf_t * lv_image_decoder_post_process(lv_image_decoder_dsc_t *dsc, lv_draw_buf_t *decoded)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_image_decoder_dsc_t" display="lv_image_decoder_dsc_t *" /> | pointer to a decoder descriptor |
+| `decoded` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to a decoded image to post process to meet dsc-\>args requirement. |
+
+**Returns:** <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> — post processed draw buffer, when it differs with `decoded`, it's newly allocated.
+
+<Callout type="info">
+A new draw buf will be allocated if provided `decoded` is not modifiable or stride mismatch etc.
+</Callout>
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_image_src_t" file="api/image/lv_image_decoder.h" line={33} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L33">
+
+### lv_image_src_t
+
+Source of image.
+
+| Name | Description |
+|------|------|
+| `LV_IMAGE_SRC_VARIABLE` |  |
+| `LV_IMAGE_SRC_FILE` | Binary/C variable |
+| `LV_IMAGE_SRC_SYMBOL` | File in filesystem |
+| `LV_IMAGE_SRC_UNKNOWN` | Symbol (lv_symbol_def.h) |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_image_decoder_info_f_t" file="api/image/lv_image_decoder.h" line={47} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L47">
+
+### lv_image_decoder_info_f_t
+
+```c
+typedef lv_result_t(* lv_image_decoder_info_f_t) (lv_image_decoder_t *decoder, lv_image_decoder_dsc_t *dsc, lv_image_header_t *header)
+```
+
+Get info from an image and store in the `header`
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_image_decoder_info_f_t" count={1}>
+
+- `lv_image_decoder_set_info_cb` — param `info_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_image_decoder_open_f_t" file="api/image/lv_image_decoder.h" line={55} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L55">
+
+### lv_image_decoder_open_f_t
+
+```c
+typedef lv_result_t(* lv_image_decoder_open_f_t) (lv_image_decoder_t *decoder, lv_image_decoder_dsc_t *dsc)
+```
+
+Open an image for decoding. Prepare it as it is required to read it later
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_image_decoder_open_f_t" count={1}>
+
+- `lv_image_decoder_set_open_cb` — param `open_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_image_decoder_get_area_cb_t" file="api/image/lv_image_decoder.h" line={67} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L67">
+
+### lv_image_decoder_get_area_cb_t
+
+```c
+typedef lv_result_t(* lv_image_decoder_get_area_cb_t) (lv_image_decoder_t *decoder, lv_image_decoder_dsc_t *dsc, const lv_area_t *full_area, lv_area_t *decoded_area)
+```
+
+Decode `full_area` pixels incrementally by calling in a loop. Set `decoded_area` values to `LV_COORD_MIN` on first call. Required only if the "open" function can't return with the whole decoded pixel array.
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_image_decoder_get_area_cb_t" count={1}>
+
+- `lv_image_decoder_set_get_area_cb` — param `get_area_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_image_decoder_close_f_t" file="api/image/lv_image_decoder.h" line={76} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L76">
+
+### lv_image_decoder_close_f_t
+
+```c
+typedef void(* lv_image_decoder_close_f_t) (lv_image_decoder_t *decoder, lv_image_decoder_dsc_t *dsc)
+```
+
+Close the pending decoding. Free resources etc.
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_image_decoder_close_f_t" count={1}>
+
+- `lv_image_decoder_set_close_cb` — param `close_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_image_decoder_custom_draw_t" file="api/image/lv_image_decoder.h" line={86} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/image/lv_image_decoder.h#L86">
+
+### lv_image_decoder_custom_draw_t
+
+```c
+typedef void(* lv_image_decoder_custom_draw_t) (lv_layer_t *layer, const lv_image_decoder_dsc_t *dsc, const lv_area_t *coords, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *clip_area)
+```
+
+Custom drawing functions for special image formats.
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_draw_buf.h", "lv_fs.h", "lv_types.h", "lv_area.h"]}
+  includedBy={["lv_draw_image.h", "lv_bin_decoder.h", "lvgl.h"]}
+  transitiveIncludes={["lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_kconfig.h", "lv_image_dsc.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h"]}
+/>

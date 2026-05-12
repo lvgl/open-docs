@@ -1,0 +1,557 @@
+---
+title: lv_indev_gesture.h
+description: API reference for lv_indev_gesture.h
+api:
+  functions: [lv_indev_gesture_init, lv_indev_gesture_detect_pinch, lv_indev_gesture_detect_rotation, lv_indev_gesture_detect_two_fingers_swipe, lv_indev_set_pinch_up_threshold, lv_indev_set_pinch_down_threshold, lv_indev_set_rotation_rad_threshold, lv_event_get_pinch_scale, lv_event_get_rotation, lv_event_get_two_fingers_swipe_distance, lv_event_get_two_fingers_swipe_dir, lv_indev_set_gesture_data, lv_indev_get_gesture_center_point, lv_event_get_gesture_state, lv_event_get_gesture_type, lv_indev_get_gesture_primary_point, lv_indev_recognizer_is_active, lv_indev_gesture_recognizers_update, lv_indev_gesture_recognizers_set_data]
+  enums: [lv_indev_gesture_state_t]
+  structs: [lv_indev_touch_data, lv_indev_gesture_recognizer]
+  typedefs: [lv_indev_gesture_recognizer_t, lv_indev_touch_data_t, lv_indev_gesture_t, lv_indev_gesture_configuration_t, lv_recognizer_func_t]
+---
+
+<RelatedHeaders name="lv_indev_gesture_private.h" isPrivate={false} />
+
+<ApiSummary functions={19} enums={1} structs={2} typedefs={5} />
+
+## Functions
+
+<ApiTabs items={["Setters (5)","Getters (8)","Other (6)"]}>
+<ApiTab value="Setters (5)">
+
+<ApiMember kind="function" name="lv_indev_set_pinch_up_threshold" file="api/indev/lv_indev_gesture.h" line={132} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L132">
+
+### lv_indev_set_pinch_up_threshold
+
+Set the threshold for the pinch gesture scale up, when the scale factor of gesture reaches the threshold events get sent
+
+```c
+void lv_indev_set_pinch_up_threshold(lv_indev_t *indev, float threshold)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to the indev device containing the pinch recognizer |
+| `threshold` | `float` | threshold for a pinch up gesture to be recognized |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_set_pinch_down_threshold" file="api/indev/lv_indev_gesture.h" line={140} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L140">
+
+### lv_indev_set_pinch_down_threshold
+
+Set the threshold for the pinch gesture scale down, when the scale factor of gesture reaches the threshold events get sent
+
+```c
+void lv_indev_set_pinch_down_threshold(lv_indev_t *indev, float threshold)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to the indev device containing the pinch recognizer |
+| `threshold` | `float` | threshold for a pinch down gesture to be recognized |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_set_rotation_rad_threshold" file="api/indev/lv_indev_gesture.h" line={147} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L147">
+
+### lv_indev_set_rotation_rad_threshold
+
+Set the rotation threshold in radian for the rotation gesture
+
+```c
+void lv_indev_set_rotation_rad_threshold(lv_indev_t *indev, float threshold)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to the indev device containing the rotation recognizer |
+| `threshold` | `float` | threshold in radian for a rotation gesture to be recognized |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_set_gesture_data" file="api/indev/lv_indev_gesture.h" line={183} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L183">
+
+### lv_indev_set_gesture_data
+
+Sets the state of the recognizer to a indev data structure, it is usually called from the indev read callback
+
+```c
+void lv_indev_set_gesture_data(lv_indev_data_t *data, lv_indev_gesture_recognizer_t *recognizer, lv_indev_gesture_type_t type)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | <ApiLink name="lv_indev_data_t" display="lv_indev_data_t *" /> | the indev data |
+| `recognizer` | <ApiLink name="lv_indev_gesture_recognizer_t" display="lv_indev_gesture_recognizer_t *" /> | pointer to a gesture recognizer |
+| `type` | <ApiLink name="lv_indev_gesture_type_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_gesture_recognizers_set_data" file="api/indev/lv_indev_gesture.h" line={236} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L236">
+
+### lv_indev_gesture_recognizers_set_data
+
+Set the <ApiLink name="lv_indev_data_t" /> struct from the recognizer data. To be called in the indev read_cb.
+
+```c
+void lv_indev_gesture_recognizers_set_data(lv_indev_t *indev, lv_indev_data_t *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> |
+| `data` | <ApiLink name="lv_indev_data_t" display="lv_indev_data_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (8)">
+
+<ApiMember kind="function" name="lv_event_get_pinch_scale" file="api/indev/lv_indev_gesture.h" line={154} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L154">
+
+### lv_event_get_pinch_scale
+
+Obtains the current scale of a pinch gesture
+
+```c
+float lv_event_get_pinch_scale(lv_event_t *gesture_event)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `gesture_event` | <ApiLink name="lv_event_t" display="lv_event_t *" /> | pointer to a gesture event |
+
+**Returns:** `float` — the scale of the current gesture
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_event_get_rotation" file="api/indev/lv_indev_gesture.h" line={161} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L161">
+
+### lv_event_get_rotation
+
+Obtains the current angle in radian of a rotation gesture
+
+```c
+float lv_event_get_rotation(lv_event_t *gesture_event)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `gesture_event` | <ApiLink name="lv_event_t" display="lv_event_t *" /> | pointer to a gesture event |
+
+**Returns:** `float` — the rotation angle in radian of the current gesture
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_event_get_two_fingers_swipe_distance" file="api/indev/lv_indev_gesture.h" line={168} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L168">
+
+### lv_event_get_two_fingers_swipe_distance
+
+Obtains the current distance in pixels of a two fingers swipe gesture, from the starting center
+
+```c
+float lv_event_get_two_fingers_swipe_distance(lv_event_t *gesture_event)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `gesture_event` | <ApiLink name="lv_event_t" display="lv_event_t *" /> | pointer to a gesture event |
+
+**Returns:** `float` — the distance from the center, in pixels, of the current gesture
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_event_get_two_fingers_swipe_dir" file="api/indev/lv_indev_gesture.h" line={175} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L175">
+
+### lv_event_get_two_fingers_swipe_dir
+
+Obtains the current direction from the center of a two finger swipe
+
+```c
+lv_dir_t lv_event_get_two_fingers_swipe_dir(lv_event_t *gesture_event)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `gesture_event` | <ApiLink name="lv_event_t" display="lv_event_t *" /> | pointer to a gesture event |
+
+**Returns:** <ApiLink name="lv_dir_t" /> — the rotation angle in radian of the current gesture
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_get_gesture_center_point" file="api/indev/lv_indev_gesture.h" line={191} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L191">
+
+### lv_indev_get_gesture_center_point
+
+Obtains the center point of a gesture
+
+```c
+void lv_indev_get_gesture_center_point(lv_indev_gesture_recognizer_t *recognizer, lv_point_t *point)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `recognizer` | <ApiLink name="lv_indev_gesture_recognizer_t" display="lv_indev_gesture_recognizer_t *" /> |  |
+| `point` | <ApiLink name="lv_point_t" display="lv_point_t *" /> | pointer to a point |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_event_get_gesture_state" file="api/indev/lv_indev_gesture.h" line={198} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L198">
+
+### lv_event_get_gesture_state
+
+Obtains the current state of the gesture recognizer attached to an event
+
+```c
+lv_indev_gesture_state_t lv_event_get_gesture_state(lv_event_t *gesture_event, lv_indev_gesture_type_t type)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `gesture_event` | <ApiLink name="lv_event_t" display="lv_event_t *" /> | pointer to a gesture recognizer event |
+| `type` | <ApiLink name="lv_indev_gesture_type_t" /> |  |
+
+**Returns:** <ApiLink name="lv_indev_gesture_state_t" /> — current state of the gesture recognizer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_event_get_gesture_type" file="api/indev/lv_indev_gesture.h" line={205} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L205">
+
+### lv_event_get_gesture_type
+
+Obtains the current event type of the gesture recognizer attached to an event
+
+```c
+lv_indev_gesture_type_t lv_event_get_gesture_type(lv_event_t *gesture_event)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `gesture_event` | <ApiLink name="lv_event_t" display="lv_event_t *" /> | pointer to a gesture recognizer event |
+
+**Returns:** <ApiLink name="lv_indev_gesture_type_t" /> — current event type of the gesture recognizer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_get_gesture_primary_point" file="api/indev/lv_indev_gesture.h" line={212} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L212">
+
+### lv_indev_get_gesture_primary_point
+
+Obtains the coordinates of the current primary point
+
+```c
+void lv_indev_get_gesture_primary_point(lv_indev_gesture_recognizer_t *recognizer, lv_point_t *point)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `recognizer` | <ApiLink name="lv_indev_gesture_recognizer_t" display="lv_indev_gesture_recognizer_t *" /> | pointer to a gesture recognizer |
+| `point` | <ApiLink name="lv_point_t" display="lv_point_t *" /> | pointer to a point |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (6)">
+
+<ApiMember kind="function" name="lv_indev_gesture_init" file="api/indev/lv_indev_gesture.h" line={91} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L91">
+
+### lv_indev_gesture_init
+
+Initialize this indev's recognizers. It specifies their recognizer functions
+
+```c
+void lv_indev_gesture_init(lv_indev_t *indev)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to the indev containing the recognizers to initialize |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_gesture_detect_pinch" file="api/indev/lv_indev_gesture.h" line={102} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L102">
+
+### lv_indev_gesture_detect_pinch
+
+Pinch gesture recognizer function Will update the recognizer data
+
+```c
+void lv_indev_gesture_detect_pinch(lv_indev_gesture_recognizer_t *recognizer, lv_indev_touch_data_t *touches, uint16_t touch_cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `recognizer` | <ApiLink name="lv_indev_gesture_recognizer_t" display="lv_indev_gesture_recognizer_t *" /> | pointer to a gesture recognizer |
+| `touches` | <ApiLink name="lv_indev_touch_data_t" display="lv_indev_touch_data_t *" /> | pointer to the first element of the collected touch events |
+| `touch_cnt` | `uint16_t` | length of passed touch event array. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_gesture_detect_rotation" file="api/indev/lv_indev_gesture.h" line={112} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L112">
+
+### lv_indev_gesture_detect_rotation
+
+Rotation gesture recognizer function Will update the recognizer data
+
+```c
+void lv_indev_gesture_detect_rotation(lv_indev_gesture_recognizer_t *recognizer, lv_indev_touch_data_t *touches, uint16_t touch_cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `recognizer` | <ApiLink name="lv_indev_gesture_recognizer_t" display="lv_indev_gesture_recognizer_t *" /> | pointer to a gesture recognizer |
+| `touches` | <ApiLink name="lv_indev_touch_data_t" display="lv_indev_touch_data_t *" /> | pointer to the first element of the collected touch events |
+| `touch_cnt` | `uint16_t` | length of passed touch event array. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_gesture_detect_two_fingers_swipe" file="api/indev/lv_indev_gesture.h" line={122} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L122">
+
+### lv_indev_gesture_detect_two_fingers_swipe
+
+Two finger swipe gesture recognizer function Will update the recognizer data
+
+```c
+void lv_indev_gesture_detect_two_fingers_swipe(lv_indev_gesture_recognizer_t *recognizer, lv_indev_touch_data_t *touches, uint16_t touch_cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `recognizer` | <ApiLink name="lv_indev_gesture_recognizer_t" display="lv_indev_gesture_recognizer_t *" /> | pointer to a gesture recognizer |
+| `touches` | <ApiLink name="lv_indev_touch_data_t" display="lv_indev_touch_data_t *" /> | pointer to the first element of the collected touch events |
+| `touch_cnt` | `uint16_t` | length of passed touch event array. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_recognizer_is_active" file="api/indev/lv_indev_gesture.h" line={219} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L219">
+
+### lv_indev_recognizer_is_active
+
+Allows to determine if there is an are ongoing gesture
+
+```c
+bool lv_indev_recognizer_is_active(lv_indev_gesture_recognizer_t *recognizer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `recognizer` | <ApiLink name="lv_indev_gesture_recognizer_t" display="lv_indev_gesture_recognizer_t *" /> | pointer to a gesture recognizer |
+
+**Returns:** `bool` — false if there are no contact points, or the gesture has ended - true otherwise
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_gesture_recognizers_update" file="api/indev/lv_indev_gesture.h" line={230} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L230">
+
+### lv_indev_gesture_recognizers_update
+
+Update the recognizers. It execute the recognizers functions and checks for LV_GESTURE_STATE_RECOGNIZED or LV_GESTURE_STATE_ENDED gestures. To be called in the indev read_cb.
+
+```c
+void lv_indev_gesture_recognizers_update(lv_indev_t *indev, lv_indev_touch_data_t *touches, uint16_t touch_cnt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to the indev containing from which the recognizer need an update |
+| `touches` | <ApiLink name="lv_indev_touch_data_t" display="lv_indev_touch_data_t *" /> | indev touch data array, containing the last touch data from indev since the last recognizers update |
+| `touch_cnt` | `uint16_t` | number of indev touch data in touches |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_indev_gesture_state_t" file="api/indev/lv_indev_gesture.h" line={50} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L50">
+
+### lv_indev_gesture_state_t
+
+| Name | Value |
+|------|------|
+| `LV_INDEV_GESTURE_STATE_NONE` | `0` |
+| `LV_INDEV_GESTURE_STATE_ONGOING` |  |
+| `LV_INDEV_GESTURE_STATE_RECOGNIZED` |  |
+| `LV_INDEV_GESTURE_STATE_ENDED` |  |
+| `LV_INDEV_GESTURE_STATE_CANCELED` |  |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_indev_touch_data">
+
+### lv_indev_touch_data
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `point` | <ApiLink name="lv_point_t" /> |  |
+| `state` | <ApiLink name="lv_indev_state_t" /> |  |
+| `id` | `uint8_t` |  |
+| `timestamp` | `uint32_t` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_indev_gesture_recognizer">
+
+### lv_indev_gesture_recognizer
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `type` | <ApiLink name="lv_indev_gesture_type_t" /> |  |
+| `state` | <ApiLink name="lv_indev_gesture_state_t" /> |  |
+| `info` | <ApiLink name="lv_indev_gesture_t" display="lv_indev_gesture_t *" /> |  |
+| `scale` | `float` |  |
+| `rotation` | `float` |  |
+| `distance` | `float` |  |
+| `speed` | `float` |  |
+| `two_fingers_swipe_dir` | <ApiLink name="lv_dir_t" /> |  |
+| `config` | <ApiLink name="lv_indev_gesture_configuration_t" display="lv_indev_gesture_configuration_t *" /> |  |
+| `recog_fn` | <ApiLink name="lv_recognizer_func_t" /> |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_indev_gesture_recognizer_t" file="api/indev/lv_indev_gesture.h" line={41} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L41">
+
+### lv_indev_gesture_recognizer_t
+
+```c
+typedef struct lv_indev_gesture_recognizer lv_indev_gesture_recognizer_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_indev_gesture_recognizer_t" count={7}>
+
+- `lv_indev_gesture_detect_pinch` — param `recognizer`
+- `lv_indev_gesture_detect_rotation` — param `recognizer`
+- `lv_indev_gesture_detect_two_fingers_swipe` — param `recognizer`
+- `lv_indev_set_gesture_data` — param `recognizer`
+- `lv_indev_get_gesture_center_point` — param `recognizer`
+- `lv_indev_get_gesture_primary_point` — param `recognizer`
+- `lv_indev_recognizer_is_active` — param `recognizer`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_indev_touch_data_t" file="api/indev/lv_indev_gesture.h" line={42} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L42">
+
+### lv_indev_touch_data_t
+
+```c
+typedef struct lv_indev_touch_data lv_indev_touch_data_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_indev_touch_data_t" count={4}>
+
+- `lv_indev_gesture_detect_pinch` — param `touches`
+- `lv_indev_gesture_detect_rotation` — param `touches`
+- `lv_indev_gesture_detect_two_fingers_swipe` — param `touches`
+- `lv_indev_gesture_recognizers_update` — param `touches`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_indev_gesture_t" file="api/indev/lv_indev_gesture.h" line={44} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L44">
+
+### lv_indev_gesture_t
+
+```c
+typedef struct lv_indev_gesture lv_indev_gesture_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_indev_gesture_configuration_t" file="api/indev/lv_indev_gesture.h" line={45} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L45">
+
+### lv_indev_gesture_configuration_t
+
+```c
+typedef struct lv_indev_gesture_configuration lv_indev_gesture_configuration_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_recognizer_func_t" file="api/indev/lv_indev_gesture.h" line={47} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/indev/lv_indev_gesture.h#L47">
+
+### lv_recognizer_func_t
+
+```c
+typedef void(* lv_recognizer_func_t) (lv_indev_gesture_recognizer_t *, lv_indev_touch_data_t *, uint16_t)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj.h"]}
+  includedBy={["lv_wayland_keyboard.h", "lv_wayland_pointer.h", "lv_wayland_pointer_axis.h", "lv_wayland_touch.h", "lvgl.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_timer.h", "lv_types.h"]}
+/>

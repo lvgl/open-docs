@@ -1,0 +1,34 @@
+---
+title: lv_msgbox_private.h
+description: API reference for lv_msgbox_private.h
+api:
+  structs: [_lv_msgbox_t]
+---
+
+<RelatedHeaders name="lv_msgbox.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_msgbox_t">
+
+### _lv_msgbox_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `header` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `content` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `footer` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `title` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

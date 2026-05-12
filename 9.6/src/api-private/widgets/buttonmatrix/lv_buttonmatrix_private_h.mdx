@@ -1,0 +1,40 @@
+---
+title: lv_buttonmatrix_private.h
+description: API reference for lv_buttonmatrix_private.h
+api:
+  structs: [_lv_buttonmatrix_t]
+---
+
+<RelatedHeaders name="lv_buttonmatrix.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_buttonmatrix_t">
+
+### _lv_buttonmatrix_t
+
+Data of button matrix
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `map_p` | `const char *const  *` | Pointer to the current map |
+| `button_areas` | <ApiLink name="lv_area_t" display="lv_area_t *" /> | Array of areas of buttons |
+| `ctrl_bits` | <ApiLink name="lv_buttonmatrix_ctrl_t" display="lv_buttonmatrix_ctrl_t *" /> | Array of control bytes |
+| `btn_cnt` | `uint32_t` | Number of button in 'map_p'(Handled by the library) |
+| `row_cnt` | `uint32_t` | Number of rows in 'map_p'(Handled by the library) |
+| `btn_id_sel` | `uint32_t` | Index of the active button (being pressed/released etc) or LV_BUTTONMATRIX_BUTTON_NONE |
+| `one_check` | `uint32_t` | 1: Single button toggled at once |
+| `auto_free_map` | `uint32_t` | 1: Automatically free the map when the widget is deleted |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lvgl_private.h", "lv_keyboard_private.h"]}
+/>

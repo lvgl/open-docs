@@ -1,0 +1,144 @@
+---
+title: lv_test_indev_gesture.h
+description: API reference for lv_test_indev_gesture.h
+api:
+  functions: [lv_test_indev_gesture_create, lv_test_indev_gesture_delete, lv_test_indev_get_gesture_indev, lv_test_gesture_set_pinch_data, lv_test_gesture_pinch_press, lv_test_gesture_pinch_release, lv_test_gesture_pinch]
+---
+
+<ApiSummary functions={7} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Getters (1)","Other (5)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_test_gesture_set_pinch_data" file="api/debugging/lv_test_indev_gesture.h" line={57} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_test_indev_gesture.h#L57">
+
+### lv_test_gesture_set_pinch_data
+
+Set two touch points data for pinch gesture
+
+```c
+void lv_test_gesture_set_pinch_data(lv_point_t point_0, lv_point_t point_1)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `point_0` | <ApiLink name="lv_point_t" /> | First touch point coordinates |
+| `point_1` | <ApiLink name="lv_point_t" /> | Second touch point coordinates |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_test_indev_get_gesture_indev" file="api/debugging/lv_test_indev_gesture.h" line={50} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_test_indev_gesture.h#L50">
+
+### lv_test_indev_get_gesture_indev
+
+Get one of the indev created in `lv_test_indev_gesture_create`
+
+```c
+lv_indev_t * lv_test_indev_get_gesture_indev(lv_indev_type_t type)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `type` | <ApiLink name="lv_indev_type_t" /> | type of the indev to get |
+
+**Returns:** <ApiLink name="lv_indev_t" display="lv_indev_t *" /> — the indev
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (5)">
+
+<ApiMember kind="function" name="lv_test_indev_gesture_create" file="api/debugging/lv_test_indev_gesture.h" line={38} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_test_indev_gesture.h#L38">
+
+### lv_test_indev_gesture_create
+
+Create a touch (pointer) indevs. They can be controlled via function calls during the test
+
+```c
+void lv_test_indev_gesture_create(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_indev_gesture_delete" file="api/debugging/lv_test_indev_gesture.h" line={43} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_test_indev_gesture.h#L43">
+
+### lv_test_indev_gesture_delete
+
+Delete the touch (pointer) indevs.
+
+```c
+void lv_test_indev_gesture_delete(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_gesture_pinch_press" file="api/debugging/lv_test_indev_gesture.h" line={62} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_test_indev_gesture.h#L62">
+
+### lv_test_gesture_pinch_press
+
+Trigger press state of pinch gesture (both touch points pressed)
+
+```c
+void lv_test_gesture_pinch_press(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_gesture_pinch_release" file="api/debugging/lv_test_indev_gesture.h" line={67} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_test_indev_gesture.h#L67">
+
+### lv_test_gesture_pinch_release
+
+Trigger release state of pinch gesture (both touch points released)
+
+```c
+void lv_test_gesture_pinch_release(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_gesture_pinch" file="api/debugging/lv_test_indev_gesture.h" line={76} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_test_indev_gesture.h#L76">
+
+### lv_test_gesture_pinch
+
+Simulate a complete pinch gesture operation
+
+```c
+void lv_test_gesture_pinch(lv_point_t point_begin_0, lv_point_t point_begin_1, lv_point_t point_end_0, lv_point_t point_end_1)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `point_begin_0` | <ApiLink name="lv_point_t" /> | Starting coordinates of first touch point |
+| `point_begin_1` | <ApiLink name="lv_point_t" /> | Starting coordinates of second touch point |
+| `point_end_0` | <ApiLink name="lv_point_t" /> | Ending coordinates of first touch point |
+| `point_end_1` | <ApiLink name="lv_point_t" /> | Ending coordinates of second touch point |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h", "lv_indev.h"]}
+  includedBy={["lv_test.h", "lvgl.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_conf_kconfig.h", "lv_event.h", "lv_group.h", "lv_math.h", "lv_timer.h"]}
+/>

@@ -1,0 +1,34 @@
+---
+title: lv_led_private.h
+description: API reference for lv_led_private.h
+api:
+  structs: [_lv_led_t]
+---
+
+<RelatedHeaders name="lv_led.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_led_t">
+
+### _lv_led_t
+
+Data of led
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `color` | <ApiLink name="lv_color_t" /> |  |
+| `bright` | `uint8_t` | Current brightness of the LED (0..255) |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

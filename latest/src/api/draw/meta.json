@@ -1,0 +1,24 @@
+{
+  "title": "Draw",
+  "pages": [
+    "sw",
+    "lv_color_h",
+    "lv_color_op_h",
+    "lv_draw_3d_h",
+    "lv_draw_arc_h",
+    "lv_draw_blur_h",
+    "lv_draw_buf_h",
+    "lv_draw_h",
+    "lv_draw_image_h",
+    "lv_draw_label_h",
+    "lv_draw_line_h",
+    "lv_draw_mask_h",
+    "lv_draw_rect_h",
+    "lv_draw_triangle_h",
+    "lv_draw_vector_h",
+    "lv_grad_h",
+    "lv_image_dsc_h",
+    "lv_palette_h",
+    "lv_snapshot_h"
+  ]
+}

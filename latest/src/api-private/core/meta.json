@@ -1,0 +1,14 @@
+{
+  "title": "Core",
+  "pages": [
+    "lv_group_private_h",
+    "lv_obj_class_private_h",
+    "lv_obj_draw_private_h",
+    "lv_obj_event_private_h",
+    "lv_obj_private_h",
+    "lv_obj_scroll_private_h",
+    "lv_obj_style_private_h",
+    "lv_observer_private_h",
+    "lv_refr_private_h"
+  ]
+}

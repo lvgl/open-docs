@@ -1,0 +1,96 @@
+---
+title: lv_test_fs.h
+description: API reference for lv_test_fs.h
+api:
+  functions: [lv_test_fs_init, lv_test_fs_set_ready, lv_test_fs_clear_open_cb, lv_test_fs_clear_close_cb]
+---
+
+<ApiSummary functions={4} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Other (3)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_test_fs_set_ready" file="api/debugging/lv_test_fs.h" line={43} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_test_fs.h#L43">
+
+### lv_test_fs_set_ready
+
+Set whether the test file system is ready
+
+```c
+void lv_test_fs_set_ready(bool ready)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ready` | `bool` | true: ready, false: not ready |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_test_fs_init" file="api/debugging/lv_test_fs.h" line={37} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_test_fs.h#L37">
+
+### lv_test_fs_init
+
+Initialize the test file system driver
+
+```c
+void lv_test_fs_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_fs_clear_open_cb" file="api/debugging/lv_test_fs.h" line={49} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_test_fs.h#L49">
+
+### lv_test_fs_clear_open_cb
+
+Set whether the open callback of the test file system is cleared
+
+```c
+void lv_test_fs_clear_open_cb(bool is_clear)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `is_clear` | `bool` | true: clear, false: not clear |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_fs_clear_close_cb" file="api/debugging/lv_test_fs.h" line={55} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_test_fs.h#L55">
+
+### lv_test_fs_clear_close_cb
+
+Set whether the close callback of the test file system is cleared
+
+```c
+void lv_test_fs_clear_close_cb(bool is_clear)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `is_clear` | `bool` | true: clear, false: not clear |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includedBy={["lv_test.h", "lvgl.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

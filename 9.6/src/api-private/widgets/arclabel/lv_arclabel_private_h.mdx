@@ -1,0 +1,45 @@
+---
+title: lv_arclabel_private.h
+description: API reference for lv_arclabel_private.h
+api:
+  structs: [_lv_arclabel_t]
+---
+
+<RelatedHeaders name="lv_arclabel.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_arclabel_t">
+
+### _lv_arclabel_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `text` | `char *` |  |
+| `dot` | `char[3+1]` | Bytes that have been replaced with dots |
+| `dot_begin` | `uint32_t` | Offset where bytes have been replaced with dots |
+| `angle_start` | <ApiLink name="lv_value_precise_t" /> | The starting angle of the arc in degrees. |
+| `angle_size` | <ApiLink name="lv_value_precise_t" /> |  |
+| `offset` | `uint32_t` |  |
+| `radius` | `uint32_t` |  |
+| `center_offset` | <ApiLink name="lv_point_t" /> |  |
+| `dir` | <ApiLink name="lv_arclabel_dir_t" /> |  |
+| `text_align_v` | <ApiLink name="lv_arclabel_text_align_t" /> | Vertical text alignment |
+| `text_align_h` | <ApiLink name="lv_arclabel_text_align_t" /> | Horizontal text alignment |
+| `static_txt` | `uint8_t` | Flag to indicate the text is static |
+| `recolor` | `uint8_t` | Enable in-line letter re-coloring |
+| `overflow` | `uint8_t` | Overflow mode: 0=visible, 1=ellipsis, 2=clip |
+| `end_overlap` | `bool` | End overlap flag, false if prevent end overlap |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

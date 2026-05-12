@@ -1,0 +1,35 @@
+---
+title: lv_keyboard_private.h
+description: API reference for lv_keyboard_private.h
+api:
+  structs: [_lv_keyboard_t]
+---
+
+<RelatedHeaders name="lv_keyboard.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_keyboard_t">
+
+### _lv_keyboard_t
+
+Data of keyboard
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `btnm` | <ApiLink name="lv_buttonmatrix_t" /> |  |
+| `ta` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to the assigned text area |
+| `mode` | <ApiLink name="lv_keyboard_mode_t" /> | Key map type |
+| `popovers` | `uint8_t` | Show button titles in popovers on press |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h", "lv_buttonmatrix_private.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

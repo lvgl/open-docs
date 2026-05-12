@@ -1,0 +1,46 @@
+---
+title: lv_ime_pinyin_private.h
+description: API reference for lv_ime_pinyin_private.h
+api:
+  structs: [_lv_ime_pinyin_t]
+---
+
+<RelatedHeaders name="lv_ime_pinyin.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_ime_pinyin_t">
+
+### _lv_ime_pinyin_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `kb` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `cand_panel` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `dict` | <ApiLink name="lv_pinyin_dict_t" display="const lv_pinyin_dict_t *" /> |  |
+| `k9_legal_py_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `cand_str` | `char *` |  |
+| `input_char` | `char[16]` |  |
+| `k9_input_str` | `char[7+1]` |  |
+| `k9_py_ll_pos` | `uint16_t` |  |
+| `k9_legal_py_count` | `uint16_t` |  |
+| `k9_input_str_len` | `uint16_t` |  |
+| `ta_count` | `uint16_t` |  |
+| `cand_num` | `uint16_t` |  |
+| `py_page` | `uint16_t` |  |
+| `py_num` | `uint16_t[26]` |  |
+| `py_pos` | `uint16_t[26]` |  |
+| `mode` | <ApiLink name="lv_ime_pinyin_mode_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

@@ -1,0 +1,34 @@
+---
+title: lv_qrcode_private.h
+description: API reference for lv_qrcode_private.h
+api:
+  structs: [_lv_qrcode_t]
+---
+
+<RelatedHeaders name="lv_qrcode.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_qrcode_t">
+
+### _lv_qrcode_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `canvas` | <ApiLink name="lv_canvas_t" /> |  |
+| `dark_color` | <ApiLink name="lv_color_t" /> |  |
+| `light_color` | <ApiLink name="lv_color_t" /> |  |
+| `quiet_zone` | `int32_t` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_canvas_private.h"]}
+  includedBy={["lvgl_private.h"]}
+  transitiveIncludes={["lv_image_private.h", "lv_obj_private.h"]}
+/>

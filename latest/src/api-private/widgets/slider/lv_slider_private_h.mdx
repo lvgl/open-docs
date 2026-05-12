@@ -1,0 +1,36 @@
+---
+title: lv_slider_private.h
+description: API reference for lv_slider_private.h
+api:
+  structs: [_lv_slider_t]
+---
+
+<RelatedHeaders name="lv_slider.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_slider_t">
+
+### _lv_slider_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `bar` | <ApiLink name="lv_bar_t" /> | Add the ancestor's type first |
+| `left_knob_area` | <ApiLink name="lv_area_t" /> |  |
+| `right_knob_area` | <ApiLink name="lv_area_t" /> |  |
+| `pressed_point` | <ApiLink name="lv_point_t" /> |  |
+| `value_to_set` | `int32_t *` | Which bar value to set |
+| `dragging` | `uint8_t` | 1: the slider is being dragged |
+| `left_knob_focus` | `uint8_t` | 1: with encoder now the right knob can be adjusted |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h", "lv_bar_private.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

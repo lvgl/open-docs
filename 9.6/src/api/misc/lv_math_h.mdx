@@ -1,0 +1,557 @@
+---
+title: lv_math.h
+description: API reference for lv_math.h
+api:
+  functions: [lv_trigo_sin, lv_trigo_cos, lv_cubic_bezier, lv_bezier3, lv_atan2, lv_sqrt, lv_sqrt32, lv_sqr, lv_pow, lv_map, lv_rand_set_seed, lv_rand]
+  structs: [lv_sqrt_res_t]
+  macros: [LV_TRIGO_SIN_MAX, LV_TRIGO_SHIFT, LV_BEZIER_VAL_SHIFT, LV_BEZIER_VAL_MAX, LV_BEZIER_VAL_FLOAT, LV_ALIGN_UP, LV_ROUND_UP, LV_MIN, LV_MIN3, LV_MIN4, LV_MAX, LV_MAX3, LV_MAX4, LV_CLAMP, LV_ABS, LV_UDIV255, LV_IS_SIGNED, LV_UMAX_OF, LV_SMAX_OF, LV_MAX_OF]
+---
+
+<ApiSummary functions={12} structs={1} macros={20} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Other (11)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_rand_set_seed" file="api/misc/lv_math.h" line={139} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L139">
+
+### lv_rand_set_seed
+
+Set the seed of the pseudo random number generator
+
+```c
+void lv_rand_set_seed(uint32_t seed)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `seed` | `uint32_t` | a number to initialize the random generator |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (11)">
+
+<ApiMember kind="function" name="lv_trigo_sin" file="api/misc/lv_math.h" line={53} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L53">
+
+### lv_trigo_sin
+
+Return with sinus of an angle
+
+```c
+int32_t lv_trigo_sin(int16_t angle)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `angle` | `int16_t` |
+
+**Returns:** `int32_t` — sinus of 'angle'. sin(-90) = -32767, sin(90) = 32767
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_trigo_cos" file="api/misc/lv_math.h" line={55} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L55">
+
+### lv_trigo_cos
+
+```c
+int32_t lv_trigo_cos(int16_t angle)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `angle` | `int16_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_cubic_bezier" file="api/misc/lv_math.h" line={66} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L66">
+
+### lv_cubic_bezier
+
+Calculate the y value of cubic-bezier(x1, y1, x2, y2) function as specified x.
+
+```c
+int32_t lv_cubic_bezier(int32_t x, int32_t x1, int32_t y1, int32_t x2, int32_t y2)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `x` | `int32_t` | time in range of [0..LV_BEZIER_VAL_MAX] |
+| `x1` | `int32_t` | x of control point 1 in range of [0..LV_BEZIER_VAL_MAX] |
+| `y1` | `int32_t` | y of control point 1 in range of [0..LV_BEZIER_VAL_MAX] |
+| `x2` | `int32_t` | x of control point 2 in range of [0..LV_BEZIER_VAL_MAX] |
+| `y2` | `int32_t` | y of control point 2 in range of [0..LV_BEZIER_VAL_MAX] |
+
+**Returns:** `int32_t` — the value calculated
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_bezier3" file="api/misc/lv_math.h" line={77} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L77">
+
+### lv_bezier3
+
+Calculate a value of a Cubic Bezier function.
+
+```c
+int32_t lv_bezier3(int32_t t, int32_t u0, uint32_t u1, int32_t u2, int32_t u3)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `t` | `int32_t` | time in range of [0..LV_BEZIER_VAL_MAX] |
+| `u0` | `int32_t` | must be 0 |
+| `u1` | `uint32_t` | control value 1 values in range of [0..LV_BEZIER_VAL_MAX] |
+| `u2` | `int32_t` | control value 2 in range of [0..LV_BEZIER_VAL_MAX] |
+| `u3` | `int32_t` | must be LV_BEZIER_VAL_MAX |
+
+**Returns:** `int32_t` — the value calculated from the given parameters in range of [0..LV_BEZIER_VAL_MAX]
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_atan2" file="api/misc/lv_math.h" line={86} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L86">
+
+### lv_atan2
+
+Calculate the atan2 of a vector.
+
+```c
+uint16_t lv_atan2(int x, int y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `x` | `int` |
+| `y` | `int` |
+
+**Returns:** `uint16_t` — the angle in degree calculated from the given parameters in range of [0..360]
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sqrt" file="api/misc/lv_math.h" line={98} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L98">
+
+### lv_sqrt
+
+Get the square root of a number
+
+```c
+void lv_sqrt(uint32_t x, lv_sqrt_res_t *q, uint32_t mask)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `x` | `uint32_t` | integer which square root should be calculated |
+| `q` | <ApiLink name="lv_sqrt_res_t" display="lv_sqrt_res_t *" /> | store the result here. q-\>i: integer part, q-\>f: fractional part in 1/256 unit |
+| `mask` | `uint32_t` | optional to skip some iterations if the magnitude of the root is known. Set to 0x8000 by default. If root \< 16: mask = 0x80 If root \< 256: mask = 0x800 Else: mask = 0x8000 |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sqrt32" file="api/misc/lv_math.h" line={104} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L104">
+
+### lv_sqrt32
+
+Alternative (fast, approximate) implementation for getting the square root of an integer.
+
+```c
+int32_t lv_sqrt32(uint32_t x)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `x` | `uint32_t` | integer which square root should be calculated |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sqr" file="api/misc/lv_math.h" line={111} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L111">
+
+### lv_sqr
+
+Calculate the square of an integer (input range is 0..32767).
+
+```c
+static int32_t lv_sqr(int32_t x)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `x` | `int32_t` | input |
+
+**Returns:** `int32_t` — square
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_pow" file="api/misc/lv_math.h" line={122} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L122">
+
+### lv_pow
+
+Calculate the integer exponents.
+
+```c
+int64_t lv_pow(int64_t base, int8_t exp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `base` | `int64_t` |
+| `exp` | `int8_t` |
+
+**Returns:** `int64_t` — base raised to the power exponent
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_map" file="api/misc/lv_math.h" line={133} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L133">
+
+### lv_map
+
+Get the mapped of a number given an input and output range
+
+```c
+int32_t lv_map(int32_t x, int32_t min_in, int32_t max_in, int32_t min_out, int32_t max_out)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `x` | `int32_t` | integer which mapped value should be calculated |
+| `min_in` | `int32_t` | min input range |
+| `max_in` | `int32_t` | max input range |
+| `min_out` | `int32_t` | max output range |
+| `max_out` | `int32_t` | max output range |
+
+**Returns:** `int32_t` — the mapped number
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_rand" file="api/misc/lv_math.h" line={147} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L147">
+
+### lv_rand
+
+Get a pseudo random number in the given range
+
+```c
+uint32_t lv_rand(uint32_t min, uint32_t max)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `min` | `uint32_t` | the minimum value |
+| `max` | `uint32_t` | the maximum value |
+
+**Returns:** `uint32_t` — return the random number. min \<= return_value \<= max
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_sqrt_res_t">
+
+### lv_sqrt_res_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `i` | `uint16_t` |  |
+| `f` | `uint16_t` |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_sqrt_res_t" count={1}>
+
+- `lv_sqrt` — param `q`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_TRIGO_SIN_MAX" file="api/misc/lv_math.h" line={22} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L22">
+
+### LV_TRIGO_SIN_MAX
+
+```c
+#define LV_TRIGO_SIN_MAX 32768
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_TRIGO_SHIFT" file="api/misc/lv_math.h" line={23} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L23">
+
+### LV_TRIGO_SHIFT
+
+```c
+#define LV_TRIGO_SHIFT 15
+```
+
+\> \> ‍LV_TRIGO_SHIFT to normalize
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BEZIER_VAL_SHIFT" file="api/misc/lv_math.h" line={25} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L25">
+
+### LV_BEZIER_VAL_SHIFT
+
+```c
+#define LV_BEZIER_VAL_SHIFT 10
+```
+
+log2(LV_BEZIER_VAL_MAX): used to normalize up scaled values
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BEZIER_VAL_MAX" file="api/misc/lv_math.h" line={26} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L26">
+
+### LV_BEZIER_VAL_MAX
+
+```c
+#define LV_BEZIER_VAL_MAX (1L << LV_BEZIER_VAL_SHIFT)
+```
+
+Max time in Bezier functions (not [0..1] to use integers)
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_BEZIER_VAL_FLOAT" file="api/misc/lv_math.h" line={27} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L27">
+
+### LV_BEZIER_VAL_FLOAT
+
+```c
+#define LV_BEZIER_VAL_FLOAT(f) \
+    ((int32_t)((f) * LV_BEZIER_VAL_MAX))
+```
+
+Convert const float number cubic-bezier values to fix-point value
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ALIGN_UP" file="api/misc/lv_math.h" line={30} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L30">
+
+### LV_ALIGN_UP
+
+```c
+#define LV_ALIGN_UP(x, align) \
+    (((x) + ((align) - 1)) & ~((align) - 1))
+```
+
+Align up value x to align, align must be a power of two
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ROUND_UP" file="api/misc/lv_math.h" line={33} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L33">
+
+### LV_ROUND_UP
+
+```c
+#define LV_ROUND_UP(x, round) \
+    ((((x) + ((round) - 1)) / (round)) * (round))
+```
+
+Round up value x to round, round can be any integer number
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_MIN" file="api/misc/lv_math.h" line={152} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L152">
+
+### LV_MIN
+
+```c
+#define LV_MIN(a, b) \
+    ((a) < (b) ? (a) : (b))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_MIN3" file="api/misc/lv_math.h" line={153} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L153">
+
+### LV_MIN3
+
+```c
+#define LV_MIN3(a, b, c) \
+    (LV_MIN(LV_MIN(a,b), c))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_MIN4" file="api/misc/lv_math.h" line={154} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L154">
+
+### LV_MIN4
+
+```c
+#define LV_MIN4(a, b, c, d) \
+    (LV_MIN(LV_MIN(a,b), LV_MIN(c,d)))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_MAX" file="api/misc/lv_math.h" line={156} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L156">
+
+### LV_MAX
+
+```c
+#define LV_MAX(a, b) \
+    ((a) > (b) ? (a) : (b))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_MAX3" file="api/misc/lv_math.h" line={157} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L157">
+
+### LV_MAX3
+
+```c
+#define LV_MAX3(a, b, c) \
+    (LV_MAX(LV_MAX(a,b), c))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_MAX4" file="api/misc/lv_math.h" line={158} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L158">
+
+### LV_MAX4
+
+```c
+#define LV_MAX4(a, b, c, d) \
+    (LV_MAX(LV_MAX(a,b), LV_MAX(c,d)))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_CLAMP" file="api/misc/lv_math.h" line={160} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L160">
+
+### LV_CLAMP
+
+```c
+#define LV_CLAMP(min, val, max) \
+    (LV_MAX(min, (LV_MIN(val, max))))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ABS" file="api/misc/lv_math.h" line={162} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L162">
+
+### LV_ABS
+
+```c
+#define LV_ABS(x) \
+    ((x) > 0 ? (x) : (-(x)))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_UDIV255" file="api/misc/lv_math.h" line={163} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L163">
+
+### LV_UDIV255
+
+```c
+#define LV_UDIV255(x) \
+    (((x) * 0x8081U) >> 0x17)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_IS_SIGNED" file="api/misc/lv_math.h" line={165} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L165">
+
+### LV_IS_SIGNED
+
+```c
+#define LV_IS_SIGNED(t) \
+    (((t)(-1)) < ((t)0))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_UMAX_OF" file="api/misc/lv_math.h" line={166} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L166">
+
+### LV_UMAX_OF
+
+```c
+#define LV_UMAX_OF(t) \
+    (((0x1ULL << ((sizeof(t) * 8ULL) - 1ULL)) - 1ULL) | (0xFULL << ((sizeof(t) * 8ULL) - 4ULL)))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SMAX_OF" file="api/misc/lv_math.h" line={167} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L167">
+
+### LV_SMAX_OF
+
+```c
+#define LV_SMAX_OF(t) \
+    (((0x1ULL << ((sizeof(t) * 8ULL) - 1ULL)) - 1ULL) | (0x7ULL << ((sizeof(t) * 8ULL) - 4ULL)))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_MAX_OF" file="api/misc/lv_math.h" line={168} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/misc/lv_math.h#L168">
+
+### LV_MAX_OF
+
+```c
+#define LV_MAX_OF(t) \
+    ((unsigned long)(LV_IS_SIGNED(t) ? LV_SMAX_OF(t) : LV_UMAX_OF(t)))
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includedBy={["lv_anim.h", "lv_area.h", "lv_color.h", "lv_color_op.h", "lvgl.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h"]}
+/>

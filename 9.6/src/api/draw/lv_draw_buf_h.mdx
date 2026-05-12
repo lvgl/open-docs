@@ -1,0 +1,894 @@
+---
+title: lv_draw_buf.h
+description: API reference for lv_draw_buf.h
+api:
+  functions: [lv_draw_buf_init_with_default_handlers, lv_draw_buf_handlers_init, lv_draw_buf_get_handlers, lv_draw_buf_get_font_handlers, lv_draw_buf_get_image_handlers, lv_draw_buf_align, lv_draw_buf_align_ex, lv_draw_buf_invalidate_cache, lv_draw_buf_flush_cache, lv_draw_buf_width_to_stride, lv_draw_buf_width_to_stride_ex, lv_draw_buf_clear, lv_draw_buf_create, lv_draw_buf_create_ex, lv_draw_buf_dup, lv_draw_buf_dup_ex, lv_draw_buf_init, lv_draw_buf_reshape, lv_draw_buf_destroy, lv_draw_buf_copy, lv_draw_buf_goto_xy, lv_draw_buf_adjust_stride, lv_draw_buf_premultiply, lv_draw_buf_has_flag, lv_draw_buf_set_flag, lv_draw_buf_clear_flag, lv_draw_buf_from_image, lv_draw_buf_to_image, lv_draw_buf_set_palette, lv_image_buf_set_palette, lv_image_buf_free]
+  structs: [_lv_draw_buf_t]
+  typedefs: [lv_draw_buf_malloc_cb_t, lv_draw_buf_free_cb_t, lv_draw_buf_copy_cb_t, lv_draw_buf_align_cb_t, lv_draw_buf_cache_operation_cb_t, lv_draw_buf_width_to_stride_cb_t]
+  macros: [LV_STRIDE_AUTO, LV_DRAW_BUF_STRIDE, LV_DRAW_BUF_SIZE, LV_DRAW_BUF_DEFINE_STATIC, LV_DRAW_BUF_INIT_STATIC]
+---
+
+<RelatedHeaders name="lv_draw_buf_private.h" isPrivate={false} />
+
+<ApiSummary functions={31} structs={1} typedefs={6} macros={5} />
+
+## Functions
+
+<ApiTabs items={["Setters (3)","Getters (3)","Other (25)"]}>
+<ApiTab value="Setters (3)">
+
+<ApiMember kind="function" name="lv_draw_buf_set_flag" file="api/draw/lv_draw_buf.h" line={334} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L334">
+
+### lv_draw_buf_set_flag
+
+Set a flag to a draw buffer.
+
+```c
+static void lv_draw_buf_set_flag(lv_draw_buf_t *draw_buf, lv_image_flags_t flag)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to a draw buffer |
+| `flag` | <ApiLink name="lv_image_flags_t" /> | the flag to set |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_set_palette" file="api/draw/lv_draw_buf.h" line={368} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L368">
+
+### lv_draw_buf_set_palette
+
+Set the palette color of an indexed image. Valid only for `LV_COLOR_FORMAT_I1/2/4/8`
+
+```c
+void lv_draw_buf_set_palette(lv_draw_buf_t *draw_buf, uint8_t index, lv_color32_t color)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to an image descriptor |
+| `index` | `uint8_t` | the palette color to set:<br/>- for `LV_COLOR_FORMAT_I1`: 0..1<br/>- for `LV_COLOR_FORMAT_I2`: 0..3<br/>- for `LV_COLOR_FORMAT_I4`: 0..15<br/>- for `LV_COLOR_FORMAT_I8`: 0..255 |
+| `color` | <ApiLink name="lv_color32_t" /> | the color to set in <ApiLink name="lv_color32_t" /> format |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_buf_set_palette" file="api/draw/lv_draw_buf.h" line={373} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L373">
+
+### lv_image_buf_set_palette
+
+\> **Deprecated:** Use lv_draw_buf_set_palette instead.
+
+```c
+void lv_image_buf_set_palette(lv_image_dsc_t *dsc, uint8_t id, lv_color32_t c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_image_dsc_t" display="lv_image_dsc_t *" /> |
+| `id` | `uint8_t` |
+| `c` | <ApiLink name="lv_color32_t" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (3)">
+
+<ApiMember kind="function" name="lv_draw_buf_get_handlers" file="api/draw/lv_draw_buf.h" line={136} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L136">
+
+### lv_draw_buf_get_handlers
+
+Get the struct which holds the callbacks for draw buf management. Custom callback can be set on the returned value
+
+```c
+lv_draw_buf_handlers_t * lv_draw_buf_get_handlers(void)
+```
+
+**Returns:** <ApiLink name="lv_draw_buf_handlers_t" display="lv_draw_buf_handlers_t *" /> — pointer to the struct of handlers
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_get_font_handlers" file="api/draw/lv_draw_buf.h" line={137} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L137">
+
+### lv_draw_buf_get_font_handlers
+
+```c
+lv_draw_buf_handlers_t * lv_draw_buf_get_font_handlers(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_get_image_handlers" file="api/draw/lv_draw_buf.h" line={138} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L138">
+
+### lv_draw_buf_get_image_handlers
+
+```c
+lv_draw_buf_handlers_t * lv_draw_buf_get_image_handlers(void)
+```
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (25)">
+
+<ApiMember kind="function" name="lv_draw_buf_init_with_default_handlers" file="api/draw/lv_draw_buf.h" line={108} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L108">
+
+### lv_draw_buf_init_with_default_handlers
+
+Initialize the draw buffer with the default handlers.
+
+```c
+void lv_draw_buf_init_with_default_handlers(lv_draw_buf_handlers_t *handlers)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `handlers` | <ApiLink name="lv_draw_buf_handlers_t" display="lv_draw_buf_handlers_t *" /> | the draw buffer handlers to set |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_handlers_init" file="api/draw/lv_draw_buf.h" line={122} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L122">
+
+### lv_draw_buf_handlers_init
+
+Initialize the draw buffer with given handlers.
+
+```c
+void lv_draw_buf_handlers_init(lv_draw_buf_handlers_t *handlers, lv_draw_buf_malloc_cb_t buf_malloc_cb, lv_draw_buf_free_cb_t buf_free_cb, lv_draw_buf_copy_cb_t buf_copy_cb, lv_draw_buf_align_cb_t align_pointer_cb, lv_draw_buf_cache_operation_cb_t invalidate_cache_cb, lv_draw_buf_cache_operation_cb_t flush_cache_cb, lv_draw_buf_width_to_stride_cb_t width_to_stride_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `handlers` | <ApiLink name="lv_draw_buf_handlers_t" display="lv_draw_buf_handlers_t *" /> | the draw buffer handlers to set |
+| `buf_malloc_cb` | <ApiLink name="lv_draw_buf_malloc_cb_t" /> | the callback to allocate memory for the buffer |
+| `buf_free_cb` | <ApiLink name="lv_draw_buf_free_cb_t" /> | the callback to free memory of the buffer |
+| `buf_copy_cb` | <ApiLink name="lv_draw_buf_copy_cb_t" /> | the callback to copy a draw buffer to an other |
+| `align_pointer_cb` | <ApiLink name="lv_draw_buf_align_cb_t" /> | the callback to align the buffer |
+| `invalidate_cache_cb` | <ApiLink name="lv_draw_buf_cache_operation_cb_t" /> | the callback to invalidate the cache of the buffer |
+| `flush_cache_cb` | <ApiLink name="lv_draw_buf_cache_operation_cb_t" /> | the callback to flush buffer |
+| `width_to_stride_cb` | <ApiLink name="lv_draw_buf_width_to_stride_cb_t" /> | the callback to calculate the stride based on the width and color format |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_align" file="api/draw/lv_draw_buf.h" line={147} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L147">
+
+### lv_draw_buf_align
+
+Align the address of a buffer. The buffer needs to be large enough for the real data after alignment
+
+```c
+void * lv_draw_buf_align(void *buf, lv_color_format_t color_format)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `buf` | `void *` | the data to align |
+| `color_format` | <ApiLink name="lv_color_format_t" /> | the color format of the buffer |
+
+**Returns:** `void *` — the aligned buffer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_align_ex" file="api/draw/lv_draw_buf.h" line={157} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L157">
+
+### lv_draw_buf_align_ex
+
+Align the address of a buffer with custom draw buffer handlers. The buffer needs to be large enough for the real data after alignment
+
+```c
+void * lv_draw_buf_align_ex(const lv_draw_buf_handlers_t *handlers, void *buf, lv_color_format_t color_format)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `handlers` | <ApiLink name="lv_draw_buf_handlers_t" display="const lv_draw_buf_handlers_t *" /> | the draw buffer handlers |
+| `buf` | `void *` | the data to align |
+| `color_format` | <ApiLink name="lv_color_format_t" /> | the color format of the buffer |
+
+**Returns:** `void *` — the aligned buffer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_invalidate_cache" file="api/draw/lv_draw_buf.h" line={165} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L165">
+
+### lv_draw_buf_invalidate_cache
+
+Invalidate the cache of the buffer
+
+```c
+void lv_draw_buf_invalidate_cache(const lv_draw_buf_t *draw_buf, const lv_area_t *area)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="const lv_draw_buf_t *" /> | the draw buffer needs to be invalidated |
+| `area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area to invalidate in the buffer, use NULL to invalidate the whole draw buffer address range |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_flush_cache" file="api/draw/lv_draw_buf.h" line={173} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L173">
+
+### lv_draw_buf_flush_cache
+
+Flush the cache of the buffer
+
+```c
+void lv_draw_buf_flush_cache(const lv_draw_buf_t *draw_buf, const lv_area_t *area)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="const lv_draw_buf_t *" /> | the draw buffer needs to be flushed |
+| `area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area to flush in the buffer, use NULL to flush the whole draw buffer address range |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_width_to_stride" file="api/draw/lv_draw_buf.h" line={181} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L181">
+
+### lv_draw_buf_width_to_stride
+
+Calculate the stride in bytes based on a width and color format
+
+```c
+uint32_t lv_draw_buf_width_to_stride(uint32_t w, lv_color_format_t color_format)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `w` | `uint32_t` | the width in pixels |
+| `color_format` | <ApiLink name="lv_color_format_t" /> | the color format |
+
+**Returns:** `uint32_t` — the stride in bytes
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_width_to_stride_ex" file="api/draw/lv_draw_buf.h" line={190} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L190">
+
+### lv_draw_buf_width_to_stride_ex
+
+Calculate the stride in bytes based on a width and color format
+
+```c
+uint32_t lv_draw_buf_width_to_stride_ex(const lv_draw_buf_handlers_t *handlers, uint32_t w, lv_color_format_t color_format)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `handlers` | <ApiLink name="lv_draw_buf_handlers_t" display="const lv_draw_buf_handlers_t *" /> | the draw buffer handlers |
+| `w` | `uint32_t` | the width in pixels |
+| `color_format` | <ApiLink name="lv_color_format_t" /> | the color format |
+
+**Returns:** `uint32_t` — the stride in bytes
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_clear" file="api/draw/lv_draw_buf.h" line={198} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L198">
+
+### lv_draw_buf_clear
+
+Clear an area on the buffer
+
+```c
+void lv_draw_buf_clear(lv_draw_buf_t *draw_buf, const lv_area_t *a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to draw buffer |
+| `a` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area to clear, or NULL to clear the whole buffer |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_create" file="api/draw/lv_draw_buf.h" line={214} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L214">
+
+### lv_draw_buf_create
+
+Note: Eventually, lv_draw_buf_malloc/free will be kept as private. For now, we use `create` to distinguish with malloc.
+
+Create an draw buf by allocating struct for `lv_draw_buf_t` and allocating a buffer for it that meets specified requirements.
+
+```c
+lv_draw_buf_t * lv_draw_buf_create(uint32_t w, uint32_t h, lv_color_format_t cf, uint32_t stride)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `w` | `uint32_t` | the buffer width in pixels |
+| `h` | `uint32_t` | the buffer height in pixels |
+| `cf` | <ApiLink name="lv_color_format_t" /> | the color format for image |
+| `stride` | `uint32_t` | the stride in bytes for image. Use 0 for automatic calculation based on w, cf, and global stride alignment configuration. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_create_ex" file="api/draw/lv_draw_buf.h" line={230} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L230">
+
+### lv_draw_buf_create_ex
+
+Note: Eventually, lv_draw_buf_malloc/free will be kept as private. For now, we use `create` to distinguish with malloc.
+
+Create an draw buf by allocating struct for `lv_draw_buf_t` and allocating a buffer for it that meets specified requirements.
+
+```c
+lv_draw_buf_t * lv_draw_buf_create_ex(const lv_draw_buf_handlers_t *handlers, uint32_t w, uint32_t h, lv_color_format_t cf, uint32_t stride)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `handlers` | <ApiLink name="lv_draw_buf_handlers_t" display="const lv_draw_buf_handlers_t *" /> | the draw buffer handlers |
+| `w` | `uint32_t` | the buffer width in pixels |
+| `h` | `uint32_t` | the buffer height in pixels |
+| `cf` | <ApiLink name="lv_color_format_t" /> | the color format for image |
+| `stride` | `uint32_t` | the stride in bytes for image. Use 0 for automatic calculation based on w, cf, and global stride alignment configuration. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_dup" file="api/draw/lv_draw_buf.h" line={238} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L238">
+
+### lv_draw_buf_dup
+
+Duplicate a draw buf with same image size, stride and color format. Copy the image data too.
+
+```c
+lv_draw_buf_t * lv_draw_buf_dup(const lv_draw_buf_t *draw_buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="const lv_draw_buf_t *" /> | the draw buf to duplicate |
+
+**Returns:** <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> — the duplicated draw buf on success, NULL if failed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_dup_ex" file="api/draw/lv_draw_buf.h" line={246} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L246">
+
+### lv_draw_buf_dup_ex
+
+Duplicate a draw buf with same image size, stride and color format. Copy the image data too.
+
+```c
+lv_draw_buf_t * lv_draw_buf_dup_ex(const lv_draw_buf_handlers_t *handlers, const lv_draw_buf_t *draw_buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `handlers` | <ApiLink name="lv_draw_buf_handlers_t" display="const lv_draw_buf_handlers_t *" /> | the draw buffer handlers |
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="const lv_draw_buf_t *" /> | the draw buf to duplicate |
+
+**Returns:** <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> — the duplicated draw buf on success, NULL if failed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_init" file="api/draw/lv_draw_buf.h" line={259} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L259">
+
+### lv_draw_buf_init
+
+Initialize a draw buf with the given buffer and parameters. Clear draw buffer flag to zero.
+
+```c
+lv_result_t lv_draw_buf_init(lv_draw_buf_t *draw_buf, uint32_t w, uint32_t h, lv_color_format_t cf, uint32_t stride, void *data, uint32_t data_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | the draw buf to initialize |
+| `w` | `uint32_t` | the buffer width in pixels |
+| `h` | `uint32_t` | the buffer height in pixels |
+| `cf` | <ApiLink name="lv_color_format_t" /> | the color format |
+| `stride` | `uint32_t` | the stride in bytes. Use 0 for automatic calculation |
+| `data` | `void *` | the buffer used for drawing. Unaligned `data` will be aligned internally |
+| `data_size` | `uint32_t` | the size of the buffer in bytes |
+
+**Returns:** <ApiLink name="lv_result_t" /> — return LV_RESULT_OK on success, LV_RESULT_INVALID otherwise
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_reshape" file="api/draw/lv_draw_buf.h" line={271} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L271">
+
+### lv_draw_buf_reshape
+
+Keep using the existing memory, reshape the draw buffer to the given width and height. Return NULL if data_size is smaller than the required size.
+
+```c
+lv_draw_buf_t * lv_draw_buf_reshape(lv_draw_buf_t *draw_buf, lv_color_format_t cf, uint32_t w, uint32_t h, uint32_t stride)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to a draw buffer |
+| `cf` | <ApiLink name="lv_color_format_t" /> | the new color format, use 0 or LV_COLOR_FORMAT_UNKNOWN to keep using the original color format. |
+| `w` | `uint32_t` | the new width in pixels |
+| `h` | `uint32_t` | the new height in pixels |
+| `stride` | `uint32_t` | the stride in bytes for image. Use 0 for automatic calculation. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_destroy" file="api/draw/lv_draw_buf.h" line={280} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L280">
+
+### lv_draw_buf_destroy
+
+Destroy a draw buf by freeing the actual buffer if it's marked as LV_IMAGE_FLAGS_ALLOCATED in header. Then free the lv_draw_buf_t struct.
+
+```c
+void lv_draw_buf_destroy(lv_draw_buf_t *draw_buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | the draw buffer to destroy |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_copy" file="api/draw/lv_draw_buf.h" line={292} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L292">
+
+### lv_draw_buf_copy
+
+Copy an area from a buffer to another
+
+```c
+void lv_draw_buf_copy(lv_draw_buf_t *dest, const lv_area_t *dest_area, const lv_draw_buf_t *src, const lv_area_t *src_area)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dest` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to the destination draw buffer |
+| `dest_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area to copy from the destination buffer, if NULL, use the whole buffer |
+| `src` | <ApiLink name="lv_draw_buf_t" display="const lv_draw_buf_t *" /> | pointer to the source draw buffer |
+| `src_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area to copy from the destination buffer, if NULL, use the whole buffer |
+
+<Callout type="info">
+`dest_area` and `src_area` should have the same width and height
+</Callout>
+
+<Callout type="info">
+The default copy function required `dest` and `src` to have the same color format. Overwriting dest-\>handlers-\>buf_copy_cb can resolve this limitation.
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_goto_xy" file="api/draw/lv_draw_buf.h" line={298} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L298">
+
+### lv_draw_buf_goto_xy
+
+Return pointer to the buffer at the given coordinates
+
+```c
+void * lv_draw_buf_goto_xy(const lv_draw_buf_t *buf, uint32_t x, uint32_t y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `buf` | <ApiLink name="lv_draw_buf_t" display="const lv_draw_buf_t *" /> |
+| `x` | `uint32_t` |
+| `y` | `uint32_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_adjust_stride" file="api/draw/lv_draw_buf.h" line={306} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L306">
+
+### lv_draw_buf_adjust_stride
+
+Adjust the stride of a draw buf in place.
+
+```c
+lv_result_t lv_draw_buf_adjust_stride(lv_draw_buf_t *src, uint32_t stride)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `src` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to a draw buffer |
+| `stride` | `uint32_t` | the new stride in bytes for image. Use LV_STRIDE_AUTO for automatic calculation. |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: success or LV_RESULT_INVALID: failed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_premultiply" file="api/draw/lv_draw_buf.h" line={315} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L315">
+
+### lv_draw_buf_premultiply
+
+Premultiply draw buffer color with alpha channel. If it's already premultiplied, return directly. Only color formats with alpha channel will be processed.
+
+```c
+lv_result_t lv_draw_buf_premultiply(lv_draw_buf_t *draw_buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: premultiply success
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_has_flag" file="api/draw/lv_draw_buf.h" line={324} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L324">
+
+### lv_draw_buf_has_flag
+
+Check if a draw buffer has a given flag.
+
+```c
+static bool lv_draw_buf_has_flag(const lv_draw_buf_t *draw_buf, lv_image_flags_t flag)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="const lv_draw_buf_t *" /> | pointer to a draw buffer |
+| `flag` | <ApiLink name="lv_image_flags_t" /> | the flag to check |
+
+**Returns:** `bool` — true: the flag is set, false: the flag is not set
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_clear_flag" file="api/draw/lv_draw_buf.h" line={344} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L344">
+
+### lv_draw_buf_clear_flag
+
+Clear a flag from a draw buffer.
+
+```c
+static void lv_draw_buf_clear_flag(lv_draw_buf_t *draw_buf, lv_image_flags_t flag)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to a draw buffer |
+| `flag` | <ApiLink name="lv_image_flags_t" /> | the flag to clear |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_from_image" file="api/draw/lv_draw_buf.h" line={354} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L354">
+
+### lv_draw_buf_from_image
+
+As of now, draw buf share same definition as <ApiLink name="lv_image_dsc_t" />. And is interchangeable with <ApiLink name="lv_image_dsc_t" />.
+
+```c
+lv_result_t lv_draw_buf_from_image(lv_draw_buf_t *buf, const lv_image_dsc_t *img)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> |
+| `img` | <ApiLink name="lv_image_dsc_t" display="const lv_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_to_image" file="api/draw/lv_draw_buf.h" line={356} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L356">
+
+### lv_draw_buf_to_image
+
+```c
+void lv_draw_buf_to_image(const lv_draw_buf_t *buf, lv_image_dsc_t *img)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `buf` | <ApiLink name="lv_draw_buf_t" display="const lv_draw_buf_t *" /> |
+| `img` | <ApiLink name="lv_image_dsc_t" display="lv_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_buf_free" file="api/draw/lv_draw_buf.h" line={379} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L379">
+
+### lv_image_buf_free
+
+\> **Deprecated:** Use lv_draw_buffer_create/destroy instead. Free the data pointer and dsc struct of an image.
+
+```c
+void lv_image_buf_free(lv_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_image_dsc_t" display="lv_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="_lv_draw_buf_t">
+
+### _lv_draw_buf_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `header` | <ApiLink name="lv_image_header_t" /> |  |
+| `data_size` | `uint32_t` | Total buf size in bytes |
+| `data` | `uint8_t *` |  |
+| `unaligned_data` | `void *` | Unaligned address of `data`, used internally by lvgl |
+| `handlers` | <ApiLink name="lv_draw_buf_handlers_t" display="const lv_draw_buf_handlers_t *" /> | draw buffer alloc/free ops. |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_draw_buf_malloc_cb_t" file="api/draw/lv_draw_buf.h" line={78} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L78">
+
+### lv_draw_buf_malloc_cb_t
+
+```c
+typedef void *(* lv_draw_buf_malloc_cb_t) (size_t size, lv_color_format_t color_format)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_buf_malloc_cb_t" count={1}>
+
+- `lv_draw_buf_handlers_init` — param `buf_malloc_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_draw_buf_free_cb_t" file="api/draw/lv_draw_buf.h" line={80} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L80">
+
+### lv_draw_buf_free_cb_t
+
+```c
+typedef void(* lv_draw_buf_free_cb_t) (void *draw_buf)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_buf_free_cb_t" count={1}>
+
+- `lv_draw_buf_handlers_init` — param `buf_free_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_draw_buf_copy_cb_t" file="api/draw/lv_draw_buf.h" line={82} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L82">
+
+### lv_draw_buf_copy_cb_t
+
+```c
+typedef void(* lv_draw_buf_copy_cb_t) (lv_draw_buf_t *dest, const lv_area_t *dest_area, const lv_draw_buf_t *src, const lv_area_t *src_area)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_buf_copy_cb_t" count={1}>
+
+- `lv_draw_buf_handlers_init` — param `buf_copy_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_draw_buf_align_cb_t" file="api/draw/lv_draw_buf.h" line={85} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L85">
+
+### lv_draw_buf_align_cb_t
+
+```c
+typedef void *(* lv_draw_buf_align_cb_t) (void *buf, lv_color_format_t color_format)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_buf_align_cb_t" count={1}>
+
+- `lv_draw_buf_handlers_init` — param `align_pointer_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_draw_buf_cache_operation_cb_t" file="api/draw/lv_draw_buf.h" line={87} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L87">
+
+### lv_draw_buf_cache_operation_cb_t
+
+```c
+typedef void(* lv_draw_buf_cache_operation_cb_t) (const lv_draw_buf_t *draw_buf, const lv_area_t *area)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_buf_cache_operation_cb_t" count={2}>
+
+- `lv_draw_buf_handlers_init` — param `invalidate_cache_cb`
+- `lv_draw_buf_handlers_init` — param `flush_cache_cb`
+
+</TypeUsedBy>
+
+<ApiMember kind="typedef" name="lv_draw_buf_width_to_stride_cb_t" file="api/draw/lv_draw_buf.h" line={89} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L89">
+
+### lv_draw_buf_width_to_stride_cb_t
+
+```c
+typedef uint32_t(* lv_draw_buf_width_to_stride_cb_t) (uint32_t w, lv_color_format_t color_format)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_buf_width_to_stride_cb_t" count={1}>
+
+- `lv_draw_buf_handlers_init` — param `width_to_stride_cb`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_STRIDE_AUTO" file="api/draw/lv_draw_buf.h" line={27} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L27">
+
+### LV_STRIDE_AUTO
+
+```c
+#define LV_STRIDE_AUTO 0
+```
+
+Use this value to let LVGL calculate stride automatically
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_BUF_STRIDE" file="api/draw/lv_draw_buf.h" line={36} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L36">
+
+### LV_DRAW_BUF_STRIDE
+
+```c
+#define LV_DRAW_BUF_STRIDE(w, cf) \
+    LV_ROUND_UP(((w) * LV_COLOR_FORMAT_GET_BPP(cf) + 7) / 8, LV_DRAW_BUF_STRIDE_ALIGN)
+```
+
+Stride alignment for draw buffers. It may vary between different color formats and hardware. Refine it to suit your needs.
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_BUF_SIZE" file="api/draw/lv_draw_buf.h" line={40} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L40">
+
+### LV_DRAW_BUF_SIZE
+
+```c
+#define LV_DRAW_BUF_SIZE(w, h, cf) \
+    (LV_DRAW_BUF_STRIDE(w, cf) * (h) + LV_DRAW_BUF_ALIGN + \
+         LV_COLOR_INDEXED_PALETTE_SIZE(cf) * sizeof(lv_color32_t))
+```
+
+Allocate a slightly larger buffer, so we can adjust the start address to meet alignment
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_BUF_DEFINE_STATIC" file="api/draw/lv_draw_buf.h" line={50} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L50">
+
+### LV_DRAW_BUF_DEFINE_STATIC
+
+```c
+#define LV_DRAW_BUF_DEFINE_STATIC(name, _w, _h, _cf) \
+    static LV_ATTRIBUTE_MEM_ALIGN uint8_t buf_##name[LV_DRAW_BUF_SIZE(_w, _h, _cf)]; \
+        static lv_draw_buf_t name = { \
+                                      .header = { \
+                                                  .magic = LV_IMAGE_HEADER_MAGIC, \
+                                                  .cf = (_cf), \
+                                                  .flags = LV_IMAGE_FLAGS_MODIFIABLE, \
+                                                  .w = (_w), \
+                                                  .h = (_h), \
+                                                  .stride = LV_DRAW_BUF_STRIDE(_w, _cf), \
+                                                  .reserved_2 = 0, \
+                                                }, \
+                                      .data_size = sizeof(buf_##name), \
+                                      .data = buf_##name, \
+                                      .unaligned_data = buf_##name, \
+                                    }
+```
+
+Define a static draw buffer with the given width, height, and color format. Stride alignment is set to LV_DRAW_BUF_STRIDE_ALIGN.
+
+For platform that needs special buffer alignment, call LV_DRAW_BUF_INIT_STATIC.
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_BUF_INIT_STATIC" file="api/draw/lv_draw_buf.h" line={67} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_draw_buf.h#L67">
+
+### LV_DRAW_BUF_INIT_STATIC
+
+```c
+#define LV_DRAW_BUF_INIT_STATIC(name) \
+    do { \
+            lv_image_header_t * header = &name.header; \
+            lv_draw_buf_init(&name, header->w, header->h, (lv_color_format_t)header->cf, header->stride, buf_##name, sizeof(buf_##name)); \
+            lv_draw_buf_set_flag(&name, LV_IMAGE_FLAGS_MODIFIABLE); \
+        } while(0)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h", "lv_area.h", "lv_color.h", "lv_string.h", "lv_image_dsc.h"]}
+  includedBy={["lv_draw.h", "lv_draw_image.h", "lv_font.h", "lv_image_decoder.h", "lvgl.h", "lv_lottie.h"]}
+  transitiveIncludes={["lv_assert.h", "lv_color_op.h", "lv_conf_internal.h", "lv_conf_kconfig.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h"]}
+/>

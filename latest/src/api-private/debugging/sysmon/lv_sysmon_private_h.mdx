@@ -1,0 +1,94 @@
+---
+title: lv_sysmon_private.h
+description: API reference for lv_sysmon_private.h
+api:
+  functions: [lv_sysmon_builtin_init, lv_sysmon_builtin_deinit]
+  structs: [_lv_sysmon_backend_data_t, _lv_sysmon_perf_info_t]
+---
+
+<RelatedHeaders name="lv_sysmon.h" isPrivate={true} />
+
+<ApiSummary functions={2} structs={2} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_sysmon_builtin_init" file="api-private/debugging/sysmon/lv_sysmon_private.h" line={77} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/debugging/sysmon/lv_sysmon_private.h#L77">
+
+### lv_sysmon_builtin_init
+
+Initialize built-in system monitor, such as performance and memory monitor.
+
+```c
+void lv_sysmon_builtin_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sysmon_builtin_deinit" file="api-private/debugging/sysmon/lv_sysmon_private.h" line={82} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/debugging/sysmon/lv_sysmon_private.h#L82">
+
+### lv_sysmon_builtin_deinit
+
+DeInitialize built-in system monitor, such as performance and memory monitor.
+
+```c
+void lv_sysmon_builtin_deinit(void)
+```
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_sysmon_backend_data_t">
+
+### _lv_sysmon_backend_data_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `subject` | <ApiLink name="lv_subject_t" /> |  |
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_sysmon_perf_info_t">
+
+### _lv_sysmon_perf_info_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `inited` | `bool` |  |
+| `refr_start` | `uint32_t` |  |
+| `refr_interval_sum` | `uint32_t` |  |
+| `refr_elaps_sum` | `uint32_t` |  |
+| `refr_cnt` | `uint32_t` |  |
+| `render_start` | `uint32_t` |  |
+| `render_elaps_sum` | `uint32_t` |  |
+| `render_cnt` | `uint32_t` |  |
+| `flush_in_render_start` | `uint32_t` |  |
+| `flush_in_render_elaps_sum` | `uint32_t` |  |
+| `flush_not_in_render_start` | `uint32_t` |  |
+| `flush_not_in_render_elaps_sum` | `uint32_t` |  |
+| `last_report_timestamp` | `uint32_t` |  |
+| `render_in_progress` | `uint32_t` |  |
+| `measured` | <ApiLink name="_lv_sysmon_perf_info_t" display="struct _lv_sysmon_perf_info_t" /> |  |
+| `fps` | `uint32_t` |  |
+| `cpu` | `uint32_t` |  |
+| `refr_avg_time` | `uint32_t` |  |
+| `render_avg_time` | `uint32_t` | Pure rendering time without flush time |
+| `flush_avg_time` | `uint32_t` | Pure flushing time without rendering time |
+| `cpu_avg_total` | `uint32_t` |  |
+| `fps_avg_total` | `uint32_t` |  |
+| `run_cnt` | `uint32_t` |  |
+| `calculated` | <ApiLink name="_lv_sysmon_perf_info_t" display="struct _lv_sysmon_perf_info_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lv_global.h", "lv_display_private.h", "lvgl_private.h"]}
+/>

@@ -1,0 +1,46 @@
+---
+title: lv_image_private.h
+description: API reference for lv_image_private.h
+api:
+  structs: [_lv_image_t]
+---
+
+<RelatedHeaders name="lv_image.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_image_t">
+
+### _lv_image_t
+
+Data of image
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `src` | `const void *` | Image source: Pointer to an array or a file or a symbol |
+| `bitmap_mask_src` | <ApiLink name="lv_image_dsc_t" display="const lv_image_dsc_t *" /> | Pointer to an A8 bitmap mask |
+| `offset` | <ApiLink name="lv_point_t" /> |  |
+| `w` | `int32_t` | Width of the image (Handled by the library) |
+| `h` | `int32_t` | Height of the image (Handled by the library) |
+| `rotation` | `uint32_t` | Rotation angle of the image |
+| `scale_x` | `uint32_t` | 256 means no zoom, 512 double size, 128 half size |
+| `scale_y` | `uint32_t` | 256 means no zoom, 512 double size, 128 half size |
+| `pivot` | <ApiLink name="lv_point_t" /> | Rotation center of the image |
+| `src_type` | `uint32_t` | See: lv_image_src_t |
+| `cf` | `uint32_t` | Color format from `lv_color_format_t` |
+| `antialias` | `uint32_t` | Apply anti-aliasing in transformations (rotate, zoom) |
+| `align` | `uint32_t` | Image size mode when image size and object size is different. See lv_image_align_t |
+| `blend_mode` | `uint32_t` | Element of `lv_blend_mode_t` |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lv_ffmpeg_private.h", "lv_gstreamer_internal.h", "lv_rlottie_private.h", "lvgl_private.h", "lv_animimage_private.h", "lv_canvas_private.h"]}
+/>

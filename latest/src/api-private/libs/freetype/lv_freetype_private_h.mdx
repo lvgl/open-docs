@@ -1,0 +1,436 @@
+---
+title: lv_freetype_private.h
+description: API reference for lv_freetype_private.h
+api:
+  functions: [lv_freetype_get_context, lv_freetype_italic_transform, lv_freetype_italic_transform_on_pos, lv_freetype_create_glyph_cache, lv_freetype_set_cbs_glyph, lv_freetype_create_draw_data_image, lv_freetype_set_cbs_image_font, lv_freetype_create_draw_data_outline, lv_freetype_set_cbs_outline_font]
+  structs: [_lv_freetype_outline_vector_t, lv_freetype_outline_sizes_t, _lv_freetype_outline_event_param_t, _lv_freetype_cache_node_t, _lv_freetype_context_t, _lv_freetype_font_dsc_t]
+  typedefs: [lv_freetype_cache_node_t, lv_freetype_context_t, lv_freetype_font_dsc_t]
+  macros: [LV_FREETYPE_CACHE_FT_GLYPH_L1, FT_ERROR_MSG, LV_FREETYPE_FONT_DSC_MAGIC_NUM, LV_FREETYPE_FONT_DSC_HAS_MAGIC_NUM, LV_ASSERT_FREETYPE_FONT_DSC, FT_INT_TO_F26DOT6, FT_F26DOT6_TO_INT, FT_INT_TO_F16DOT16, FT_F16DOT16_TO_INT]
+---
+
+<RelatedHeaders name="lv_freetype.h" isPrivate={true} />
+
+<ApiSummary functions={9} structs={6} typedefs={3} macros={9} />
+
+## Functions
+
+<ApiTabs items={["Setters (3)","Getters (1)","Other (5)"]}>
+<ApiTab value="Setters (3)">
+
+<ApiMember kind="function" name="lv_freetype_set_cbs_glyph" file="api-private/libs/freetype/lv_freetype_private.h" line={152} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L152">
+
+### lv_freetype_set_cbs_glyph
+
+```c
+void lv_freetype_set_cbs_glyph(lv_freetype_font_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_freetype_font_dsc_t" display="lv_freetype_font_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_set_cbs_image_font" file="api-private/libs/freetype/lv_freetype_private.h" line={160} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L160">
+
+### lv_freetype_set_cbs_image_font
+
+```c
+void lv_freetype_set_cbs_image_font(lv_freetype_font_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_freetype_font_dsc_t" display="lv_freetype_font_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_set_cbs_outline_font" file="api-private/libs/freetype/lv_freetype_private.h" line={163} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L163">
+
+### lv_freetype_set_cbs_outline_font
+
+```c
+void lv_freetype_set_cbs_outline_font(lv_freetype_font_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_freetype_font_dsc_t" display="lv_freetype_font_dsc_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_freetype_get_context" file="api-private/libs/freetype/lv_freetype_private.h" line={146} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L146">
+
+### lv_freetype_get_context
+
+Get the FreeType context.
+
+```c
+lv_freetype_context_t * lv_freetype_get_context(void)
+```
+
+**Returns:** <ApiLink name="lv_freetype_context_t" display="lv_freetype_context_t *" /> — A pointer to the FreeType context used by LittlevGL.
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (5)">
+
+<ApiMember kind="function" name="lv_freetype_italic_transform" file="api-private/libs/freetype/lv_freetype_private.h" line={148} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L148">
+
+### lv_freetype_italic_transform
+
+```c
+void lv_freetype_italic_transform(FT_Face face)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `face` | `FT_Face` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_italic_transform_on_pos" file="api-private/libs/freetype/lv_freetype_private.h" line={149} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L149">
+
+### lv_freetype_italic_transform_on_pos
+
+```c
+int32_t lv_freetype_italic_transform_on_pos(lv_point_t point)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `point` | <ApiLink name="lv_point_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_create_glyph_cache" file="api-private/libs/freetype/lv_freetype_private.h" line={151} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L151">
+
+### lv_freetype_create_glyph_cache
+
+```c
+lv_cache_t * lv_freetype_create_glyph_cache(uint32_t cache_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cache_size` | `uint32_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_create_draw_data_image" file="api-private/libs/freetype/lv_freetype_private.h" line={159} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L159">
+
+### lv_freetype_create_draw_data_image
+
+```c
+lv_cache_t * lv_freetype_create_draw_data_image(uint32_t cache_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cache_size` | `uint32_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_freetype_create_draw_data_outline" file="api-private/libs/freetype/lv_freetype_private.h" line={162} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L162">
+
+### lv_freetype_create_draw_data_outline
+
+```c
+lv_cache_t * lv_freetype_create_draw_data_outline(uint32_t cache_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cache_size` | `uint32_t` |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="_lv_freetype_outline_vector_t">
+
+### _lv_freetype_outline_vector_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `x` | `int32_t` |  |
+| `y` | `int32_t` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_freetype_outline_sizes_t">
+
+### lv_freetype_outline_sizes_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `segments_size` | `int32_t` |  |
+| `data_size` | `int32_t` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_freetype_outline_event_param_t">
+
+### _lv_freetype_outline_event_param_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `outline` | <ApiLink name="lv_freetype_outline_t" /> |  |
+| `type` | <ApiLink name="lv_freetype_outline_type_t" /> |  |
+| `to` | <ApiLink name="lv_freetype_outline_vector_t" /> |  |
+| `control1` | <ApiLink name="lv_freetype_outline_vector_t" /> |  |
+| `control2` | <ApiLink name="lv_freetype_outline_vector_t" /> |  |
+| `sizes` | <ApiLink name="lv_freetype_outline_sizes_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_freetype_cache_node_t">
+
+### _lv_freetype_cache_node_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `pathname` | `const char *` |  |
+| `style` | <ApiLink name="lv_freetype_font_style_t" /> |  |
+| `render_mode` | <ApiLink name="lv_freetype_font_render_mode_t" /> |  |
+| `weight` | `int32_t` | Variable font weight (range 1-2000, 0 = default; values are clamped) |
+| `ref_size` | `uint32_t` | Reference size for calculating outline glyph's real size. |
+| `face` | `FT_Face` |  |
+| `face_lock` | `lv_mutex_t` |  |
+| `face_has_kerning` | `bool` |  |
+| `glyph_cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> |  |
+| `draw_data_cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_freetype_context_t">
+
+### _lv_freetype_context_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `library` | `FT_Library` |  |
+| `face_id_ll` | <ApiLink name="lv_ll_t" /> |  |
+| `event_cb` | <ApiLink name="lv_event_cb_t" /> |  |
+| `max_glyph_cnt` | `uint32_t` |  |
+| `cache_node_cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_freetype_font_dsc_t">
+
+### _lv_freetype_font_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `magic_num` | `uint32_t` |  |
+| `font` | <ApiLink name="lv_font_t" /> |  |
+| `size` | `uint32_t` |  |
+| `style` | <ApiLink name="lv_freetype_font_style_t" /> |  |
+| `render_mode` | <ApiLink name="lv_freetype_font_render_mode_t" /> |  |
+| `context` | <ApiLink name="lv_freetype_context_t" display="lv_freetype_context_t *" /> |  |
+| `cache_node` | <ApiLink name="lv_freetype_cache_node_t" display="lv_freetype_cache_node_t *" /> |  |
+| `cache_node_entry` | <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> |  |
+| `face_id` | `FTC_FaceID` |  |
+| `kerning` | <ApiLink name="lv_font_kerning_t" /> |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_freetype_cache_node_t" file="api-private/libs/freetype/lv_freetype_private.h" line={88} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L88">
+
+### lv_freetype_cache_node_t
+
+```c
+typedef struct _lv_freetype_cache_node_t lv_freetype_cache_node_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_freetype_context_t" file="api-private/libs/freetype/lv_freetype_private.h" line={122} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L122">
+
+### lv_freetype_context_t
+
+```c
+typedef struct _lv_freetype_context_t lv_freetype_context_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_freetype_font_dsc_t" file="api-private/libs/freetype/lv_freetype_private.h" line={135} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L135">
+
+### lv_freetype_font_dsc_t
+
+```c
+typedef struct _lv_freetype_font_dsc_t lv_freetype_font_dsc_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_freetype_font_dsc_t" count={3}>
+
+- `lv_freetype_set_cbs_glyph` — param `dsc`
+- `lv_freetype_set_cbs_image_font` — param `dsc`
+- `lv_freetype_set_cbs_outline_font` — param `dsc`
+
+</TypeUsedBy>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_FREETYPE_CACHE_FT_GLYPH_L1" file="api-private/libs/freetype/lv_freetype_private.h" line={39} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L39">
+
+### LV_FREETYPE_CACHE_FT_GLYPH_L1
+
+```c
+#define LV_FREETYPE_CACHE_FT_GLYPH_L1 0
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="FT_ERROR_MSG" file="api-private/libs/freetype/lv_freetype_private.h" line={46} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L46">
+
+### FT_ERROR_MSG
+
+```c
+#define FT_ERROR_MSG(msg, error_code) \
+    LV_LOG_ERROR(msg " error(0x%x)", (int)error_code)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_FREETYPE_FONT_DSC_MAGIC_NUM" file="api-private/libs/freetype/lv_freetype_private.h" line={50} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L50">
+
+### LV_FREETYPE_FONT_DSC_MAGIC_NUM
+
+```c
+#define LV_FREETYPE_FONT_DSC_MAGIC_NUM 0x5F5F4654 /* '__FT' */
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_FREETYPE_FONT_DSC_HAS_MAGIC_NUM" file="api-private/libs/freetype/lv_freetype_private.h" line={51} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L51">
+
+### LV_FREETYPE_FONT_DSC_HAS_MAGIC_NUM
+
+```c
+#define LV_FREETYPE_FONT_DSC_HAS_MAGIC_NUM(dsc) \
+    ((dsc)->magic_num == LV_FREETYPE_FONT_DSC_MAGIC_NUM)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ASSERT_FREETYPE_FONT_DSC" file="api-private/libs/freetype/lv_freetype_private.h" line={52} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L52">
+
+### LV_ASSERT_FREETYPE_FONT_DSC
+
+```c
+#define LV_ASSERT_FREETYPE_FONT_DSC(dsc) \
+    do { \
+            LV_ASSERT_NULL(dsc); \
+            LV_ASSERT_FORMAT_MSG(LV_FREETYPE_FONT_DSC_HAS_MAGIC_NUM(dsc), \
+                                 "Invalid font descriptor: 0x%" LV_PRIx32, (dsc)->magic_num); \
+        } while (0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="FT_INT_TO_F26DOT6" file="api-private/libs/freetype/lv_freetype_private.h" line={59} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L59">
+
+### FT_INT_TO_F26DOT6
+
+```c
+#define FT_INT_TO_F26DOT6(x) \
+    ((x) << 6)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="FT_F26DOT6_TO_INT" file="api-private/libs/freetype/lv_freetype_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L60">
+
+### FT_F26DOT6_TO_INT
+
+```c
+#define FT_F26DOT6_TO_INT(x) \
+    ((x) >> 6)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="FT_INT_TO_F16DOT16" file="api-private/libs/freetype/lv_freetype_private.h" line={62} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L62">
+
+### FT_INT_TO_F16DOT16
+
+```c
+#define FT_INT_TO_F16DOT16(x) \
+    ((x) << 16)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="FT_F16DOT16_TO_INT" file="api-private/libs/freetype/lv_freetype_private.h" line={63} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/libs/freetype/lv_freetype_private.h#L63">
+
+### FT_F16DOT16_TO_INT
+
+```c
+#define FT_F16DOT16_TO_INT(x) \
+    ((x) >> 16)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_cache.h", "ft2build.h", "FT_FREETYPE_H", "FT_GLYPH_H", "FT_CACHE_H", "FT_SIZES_H", "FT_IMAGE_H", "FT_OUTLINE_H", "FT_STROKER_H", "FT_MULTIPLE_MASTERS_H"]}
+  includedBy={["lvgl_private.h"]}
+/>

@@ -1,0 +1,47 @@
+---
+title: lv_imagebutton_private.h
+description: API reference for lv_imagebutton_private.h
+api:
+  structs: [_lv_imagebutton_src_info_t, _lv_imagebutton_t]
+---
+
+<RelatedHeaders name="lv_imagebutton.h" isPrivate={true} />
+
+<ApiSummary structs={2} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_imagebutton_src_info_t">
+
+### _lv_imagebutton_src_info_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `img_src` | `const void *` |  |
+| `header` | <ApiLink name="lv_image_header_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_imagebutton_t">
+
+### _lv_imagebutton_t
+
+Data of image button
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `src_mid` | `lv_imagebutton_src_info_t[LV_IMAGEBUTTON_STATE_NUM]` | Store center images to each state |
+| `src_left` | `lv_imagebutton_src_info_t[LV_IMAGEBUTTON_STATE_NUM]` | Store left side images to each state |
+| `src_right` | `lv_imagebutton_src_info_t[LV_IMAGEBUTTON_STATE_NUM]` | Store right side images to each state |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

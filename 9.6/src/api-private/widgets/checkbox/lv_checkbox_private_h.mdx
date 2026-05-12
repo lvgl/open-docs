@@ -1,0 +1,32 @@
+---
+title: lv_checkbox_private.h
+description: API reference for lv_checkbox_private.h
+api:
+  structs: [_lv_checkbox_t]
+---
+
+<RelatedHeaders name="lv_checkbox.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_checkbox_t">
+
+### _lv_checkbox_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `txt` | `char *` |  |
+| `static_txt` | `uint32_t` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

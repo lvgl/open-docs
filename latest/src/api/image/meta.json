@@ -1,0 +1,14 @@
+{
+  "title": "Image",
+  "pages": [
+    "lv_bin_decoder_h",
+    "lv_bmp_h",
+    "lv_image_decoder_h",
+    "lv_libjpeg_turbo_h",
+    "lv_libpng_h",
+    "lv_libwebp_h",
+    "lv_lodepng_h",
+    "lv_svg_h",
+    "lv_tjpgd_h"
+  ]
+}

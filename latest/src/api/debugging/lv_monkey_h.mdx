@@ -1,0 +1,258 @@
+---
+title: lv_monkey.h
+description: API reference for lv_monkey.h
+api:
+  functions: [lv_monkey_config_init, lv_monkey_create, lv_monkey_get_indev, lv_monkey_set_enable, lv_monkey_get_enable, lv_monkey_set_user_data, lv_monkey_get_user_data, lv_monkey_delete]
+  structs: [lv_range_t, lv_urange_t, _lv_monkey_config_t]
+  typedefs: [lv_monkey_t]
+---
+
+<RelatedHeaders name="lv_monkey_private.h" isPrivate={false} />
+
+<ApiSummary functions={8} structs={3} typedefs={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Getters (3)","Other (3)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_monkey_set_enable" file="api/debugging/lv_monkey.h" line={80} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_monkey.h#L80">
+
+### lv_monkey_set_enable
+
+Enable monkey
+
+```c
+void lv_monkey_set_enable(lv_monkey_t *monkey, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `monkey` | <ApiLink name="lv_monkey_t" display="lv_monkey_t *" /> | pointer to a monkey |
+| `en` | `bool` | set to true to enable |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_monkey_set_user_data" file="api/debugging/lv_monkey.h" line={94} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_monkey.h#L94">
+
+### lv_monkey_set_user_data
+
+Set the user_data field of the monkey
+
+```c
+void lv_monkey_set_user_data(lv_monkey_t *monkey, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `monkey` | <ApiLink name="lv_monkey_t" display="lv_monkey_t *" /> | pointer to a monkey |
+| `user_data` | `void *` | pointer to the new user_data. |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (3)">
+
+<ApiMember kind="function" name="lv_monkey_get_indev" file="api/debugging/lv_monkey.h" line={73} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_monkey.h#L73">
+
+### lv_monkey_get_indev
+
+Get monkey input device
+
+```c
+lv_indev_t * lv_monkey_get_indev(lv_monkey_t *monkey)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `monkey` | <ApiLink name="lv_monkey_t" display="lv_monkey_t *" /> | pointer to a monkey |
+
+**Returns:** <ApiLink name="lv_indev_t" display="lv_indev_t *" /> — pointer to the input device
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_monkey_get_enable" file="api/debugging/lv_monkey.h" line={87} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_monkey.h#L87">
+
+### lv_monkey_get_enable
+
+Get whether monkey is enabled
+
+```c
+bool lv_monkey_get_enable(lv_monkey_t *monkey)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `monkey` | <ApiLink name="lv_monkey_t" display="lv_monkey_t *" /> | pointer to a monkey |
+
+**Returns:** `bool` — return true if monkey enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_monkey_get_user_data" file="api/debugging/lv_monkey.h" line={101} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_monkey.h#L101">
+
+### lv_monkey_get_user_data
+
+Get the user_data field of the monkey
+
+```c
+void * lv_monkey_get_user_data(lv_monkey_t *monkey)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `monkey` | <ApiLink name="lv_monkey_t" display="lv_monkey_t *" /> | pointer to a monkey |
+
+**Returns:** `void *` — the pointer to the user_data of the monkey
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_monkey_config_init" file="api/debugging/lv_monkey.h" line={59} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_monkey.h#L59">
+
+### lv_monkey_config_init
+
+Initialize a monkey config with default values
+
+```c
+void lv_monkey_config_init(lv_monkey_config_t *config)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `config` | <ApiLink name="lv_monkey_config_t" display="lv_monkey_config_t *" /> | pointer to 'lv_monkey_config_t' variable to initialize |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_monkey_create" file="api/debugging/lv_monkey.h" line={66} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_monkey.h#L66">
+
+### lv_monkey_create
+
+Create monkey for test
+
+```c
+lv_monkey_t * lv_monkey_create(const lv_monkey_config_t *config)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `config` | <ApiLink name="lv_monkey_config_t" display="const lv_monkey_config_t *" /> | pointer to 'lv_monkey_config_t' variable |
+
+**Returns:** <ApiLink name="lv_monkey_t" display="lv_monkey_t *" /> — pointer to the created monkey
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_monkey_delete" file="api/debugging/lv_monkey.h" line={107} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_monkey.h#L107">
+
+### lv_monkey_delete
+
+Delete monkey
+
+```c
+void lv_monkey_delete(lv_monkey_t *monkey)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `monkey` | <ApiLink name="lv_monkey_t" display="lv_monkey_t *" /> | pointer to monkey |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_range_t">
+
+### lv_range_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `min` | `int32_t` |  |
+| `max` | `int32_t` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_urange_t">
+
+### lv_urange_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `min` | `uint32_t` |  |
+| `max` | `uint32_t` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_monkey_config_t">
+
+### _lv_monkey_config_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `type` | <ApiLink name="lv_indev_type_t" /> | Input device type |
+| `period_range` | <ApiLink name="lv_urange_t" /> | Monkey execution period |
+| `input_range` | <ApiLink name="lv_range_t" /> | The range of input value |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_monkey_t" file="api/debugging/lv_monkey.h" line={28} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/debugging/lv_monkey.h#L28">
+
+### lv_monkey_t
+
+```c
+typedef struct _lv_monkey_t lv_monkey_t
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_monkey_t" count={6}>
+
+- `lv_monkey_get_indev` — param `monkey`
+- `lv_monkey_set_enable` — param `monkey`
+- `lv_monkey_get_enable` — param `monkey`
+- `lv_monkey_set_user_data` — param `monkey`
+- `lv_monkey_get_user_data` — param `monkey`
+- `lv_monkey_delete` — param `monkey`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_indev.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_conf_kconfig.h", "lv_event.h", "lv_group.h", "lv_math.h", "lv_timer.h", "lv_types.h"]}
+/>

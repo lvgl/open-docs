@@ -1,0 +1,18 @@
+{
+  "title": "Misc",
+  "pages": [
+    "cache",
+    "lv_anim_private_h",
+    "lv_anim_timeline_private_h",
+    "lv_area_private_h",
+    "lv_bidi_private_h",
+    "lv_circle_buf_private_h",
+    "lv_event_private_h",
+    "lv_fs_private_h",
+    "lv_iter_private_h",
+    "lv_profiler_builtin_private_h",
+    "lv_rb_private_h",
+    "lv_text_private_h",
+    "lv_timer_private_h"
+  ]
+}

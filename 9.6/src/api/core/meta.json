@@ -1,0 +1,31 @@
+{
+  "title": "Core",
+  "pages": [
+    "lv_anim_h",
+    "lv_anim_timeline_h",
+    "lv_area_h",
+    "lv_event_h",
+    "lv_ext_data_h",
+    "lv_group_h",
+    "lv_init_h",
+    "lv_matrix_h",
+    "lv_obj_class_h",
+    "lv_obj_draw_h",
+    "lv_obj_event_h",
+    "lv_obj_h",
+    "lv_obj_pos_h",
+    "lv_obj_property_h",
+    "lv_obj_property_names_h",
+    "lv_obj_scroll_h",
+    "lv_obj_style_gen_h",
+    "lv_obj_style_h",
+    "lv_obj_tree_h",
+    "lv_observer_h",
+    "lv_refr_h",
+    "lv_style_gen_h",
+    "lv_style_h",
+    "lv_style_properties_h",
+    "lv_timer_h",
+    "lv_translation_h"
+  ]
+}

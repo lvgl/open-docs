@@ -1,0 +1,46 @@
+---
+title: lv_arc_private.h
+description: API reference for lv_arc_private.h
+api:
+  structs: [_lv_arc_t]
+---
+
+<RelatedHeaders name="lv_arc.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_arc_t">
+
+### _lv_arc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" /> |  |
+| `rotation` | `int32_t` |  |
+| `indic_angle_start` | <ApiLink name="lv_value_precise_t" /> |  |
+| `indic_angle_end` | <ApiLink name="lv_value_precise_t" /> |  |
+| `bg_angle_start` | <ApiLink name="lv_value_precise_t" /> |  |
+| `bg_angle_end` | <ApiLink name="lv_value_precise_t" /> |  |
+| `value` | `int32_t` | Current value of the arc |
+| `min_value` | `int32_t` | Minimum value of the arc |
+| `max_value` | `int32_t` | Maximum value of the arc |
+| `dragging` | `uint32_t` |  |
+| `type` | `uint32_t` |  |
+| `min_close` | `uint32_t` | 1: the last pressed angle was closer to minimum end |
+| `in_out` | `uint32_t` | 1: The click was within the background arc angles. 0: Click outside |
+| `chg_rate` | `uint32_t` | Drag angle rate of change of the arc (degrees/sec) |
+| `last_tick` | `uint32_t` | Last dragging event timestamp of the arc |
+| `last_angle` | <ApiLink name="lv_value_precise_t" /> | Last dragging angle of the arc |
+| `knob_offset` | `int16_t` | knob offset from the main arc |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj_private.h", "lvgl_public.h"]}
+  includedBy={["lvgl_private.h", "lv_spinner_private.h"]}
+/>

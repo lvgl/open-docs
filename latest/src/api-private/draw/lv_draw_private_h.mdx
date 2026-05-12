@@ -1,0 +1,89 @@
+---
+title: lv_draw_private.h
+description: API reference for lv_draw_private.h
+api:
+  structs: [_lv_draw_task_t, _lv_draw_mask_t, _lv_draw_unit_t, lv_draw_global_info_t]
+---
+
+<RelatedHeaders name="lv_draw.h" isPrivate={true} />
+
+<ApiSummary structs={4} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_draw_task_t">
+
+### _lv_draw_task_t
+
+Modified by NXP in 2024
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `next` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |  |
+| `type` | <ApiLink name="lv_draw_task_type_t" /> |  |
+| `area` | <ApiLink name="lv_area_t" /> | The area where to draw |
+| `_real_area` | <ApiLink name="lv_area_t" /> | The real draw area. E.g. for shadow, outline, or transformed images it's different from `area` |
+| `clip_area_original` | <ApiLink name="lv_area_t" /> | The original area which is updated |
+| `clip_area` | <ApiLink name="lv_area_t" /> | The clip area of the layer is saved here when the draw task is created. As the clip area of the layer can be changed as new draw tasks are added its current value needs to be saved. Therefore during drawing the layer's clip area shouldn't be used as it might be already changed for other draw tasks. |
+| `target_layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> |  |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> |  |
+| `state` | `volatile int` |  |
+| `draw_dsc` | `void *` | int instead of lv_draw_task_state_t to be sure its atomic |
+| `opa` | <ApiLink name="lv_opa_t" /> | Opacity of the layer |
+| `preferred_draw_unit_id` | `uint8_t` | The ID of the draw_unit which should take this task |
+| `preference_score` | `uint8_t` | Set to which extent `preferred_draw_unit_id` is good at this task. 80: means 20% better (faster) than software rendering 100: the default value 110: means 10% worse (slower) than software rendering |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_draw_mask_t">
+
+### _lv_draw_mask_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `user_data` | `void *` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_draw_unit_t">
+
+### _lv_draw_unit_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `next` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> |  |
+| `name` | `const char *` | Name and ID of the draw unit, for debugging purposes only. |
+| `idx` | `int32_t` |  |
+| `dispatch_cb` | `int32_t(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer)` | Called to try to assign a draw task to itself. `lv_draw_get_next_available_task` can be used to get an independent draw task. A draw task should be assign only if the draw unit can draw it too |
+| `evaluate_cb` | `int32_t(*)(lv_draw_unit_t *draw_unit, lv_draw_task_t *task)` |  |
+| `wait_for_finish_cb` | `int32_t(*)(lv_draw_unit_t *draw_unit)` | Called to signal the unit to complete all tasks in order to return their ready status. This callback can be implemented in case of asynchronous task processing. Below is an example to show the difference between synchronous and asynchronous:<br/><br/>Synchronous: LVGL thread DRAW thread HW<br/><br/>task1 --\> submit --\> Receive task1 wait_for_finish() \<– task1-\>state = READY \<– Complete task1 task2 --\> submit --\> Receive task2 wait_for_finish() task2-\>state = READY \<– Complete task2 task3 --\> submit --\> Receive task3 wait_for_finish() \<– task3-\>state = READY \<– Complete task3 task4 --\> submit --\> Receive task4 wait_for_finish() \<– task4-\>state = READY \<– Complete task4 NO MORE TASKS<br/><br/>Asynchronous: LVGL thread DRAW thread HW is IDLE task1 --\> queue task1 submit --\> Receive task1 task2 --\> queue task2 is BUSY (with task1) task3 --\> queue task3 still BUSY (with task1) task4 --\> queue task4 becomes IDLE \<– task1-\>state = READY \<– Complete task1 submit --\> Receive task2, task3, task4 NO MORE TASKS wait_for_finish_cb() wait_for_finish() \<– Complete task2, task3, task4 \<– task2-\>state = READY \<– \<– task3-\>state = READY \<– \<– task4-\>state = READY \<– |
+| `delete_cb` | `int32_t(*)(lv_draw_unit_t *draw_unit)` | Called to delete draw unit. |
+| `event_cb` | `void(*)(lv_event_t *event)` | Called when an event is sent to the draw unit. |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_draw_global_info_t">
+
+### lv_draw_global_info_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `unit_head` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> |  |
+| `unit_cnt` | `uint32_t` |  |
+| `used_memory_for_layers` | `uint32_t` |  |
+| `sync` | `lv_thread_sync_t` |  |
+| `circle_cache_mutex` | `lv_mutex_t` |  |
+| `task_running` | `bool` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_os_private.h", "lv_cache.h", "lv_cache_entry.h"]}
+  includedBy={["lv_global.h", "lv_draw_dma2d_private.h", "lv_draw_ppa.h", "lv_draw_ppa_private.h", "lv_draw_eve_private.h", "lv_draw_vector_private.h", "lv_draw_nanovg_private.h", "lv_draw_nema_gfx.h", "lv_draw_pxp.h", "lv_draw_dave2d.h", "lv_draw_sw_arm2d.h", "lv_draw_sw.h", "lv_draw_sw_private.h", "lv_draw_vg_lite_type.h", "lvgl_private.h"]}
+/>

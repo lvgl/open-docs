@@ -1,0 +1,57 @@
+---
+title: lv_draw_label_private.h
+description: API reference for lv_draw_label_private.h
+api:
+  structs: [_lv_draw_label_hint_t, _lv_draw_glyph_dsc_t]
+---
+
+<RelatedHeaders name="lv_draw_label.h" isPrivate={true} />
+
+<ApiSummary structs={2} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_draw_label_hint_t">
+
+### _lv_draw_label_hint_t
+
+Store some info to speed up drawing of very large texts It takes a lot of time to get the first visible character because all the previous characters needs to be checked to calculate the positions. This structure stores an earlier (e.g. at -1000 px) coordinate and the index of that line. Therefore the calculations can start from here.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `line_start` | `int32_t` | Index of the line at `y` coordinate |
+| `y` | `int32_t` | Give the `y` coordinate of the first letter at `line start` index. Relative to the label's coordinates |
+| `coord_y` | `int32_t` | The 'y1' coordinate of the label when the hint was saved. Used to invalidate the hint if the label has moved too much. |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_draw_glyph_dsc_t">
+
+### _lv_draw_glyph_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `glyph_data` | `const void *` | Depends on `format` field, it could be image source or draw buf of bitmap or vector data. |
+| `format` | <ApiLink name="lv_font_glyph_format_t" /> |  |
+| `letter_coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |  |
+| `bg_coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |  |
+| `g` | <ApiLink name="lv_font_glyph_dsc_t" display="lv_font_glyph_dsc_t *" /> |  |
+| `color` | <ApiLink name="lv_color_t" /> |  |
+| `opa` | <ApiLink name="lv_opa_t" /> |  |
+| `outline_stroke_color` | <ApiLink name="lv_color_t" /> |  |
+| `outline_stroke_opa` | <ApiLink name="lv_opa_t" /> |  |
+| `outline_stroke_width` | `int32_t` |  |
+| `rotation` | `int32_t` |  |
+| `pivot` | <ApiLink name="lv_point_t" /> | Rotation pivot point associated with total glyph including line_height |
+| `_draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | a shared draw buf for get_bitmap, do not use it directly, use glyph_data instead |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lv_draw_nema_gfx.h", "lvgl_private.h", "lv_label_private.h"]}
+/>

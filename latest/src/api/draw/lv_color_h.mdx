@@ -1,0 +1,1125 @@
+---
+title: lv_color.h
+description: API reference for lv_color.h
+api:
+  functions: [lv_color_format_get_bpp, lv_color_format_get_size, lv_color_format_has_alpha, lv_color_to_32, lv_color_to_int, lv_color_eq, lv_color32_eq, lv_color_hex, lv_color_make, lv_color32_make, lv_color_hex3, lv_color_is_in_range, lv_color16_to_color, lv_color_to_u16, lv_color_to_u32, lv_color_16_16_mix, lv_color_lighten, lv_color_darken, lv_color_hsv_to_rgb, lv_color_rgb_to_hsv, lv_color_to_hsv, lv_color_white, lv_color_black, lv_color_premultiply, lv_color16_premultiply, lv_color_luminance, lv_color16_luminance, lv_color24_luminance, lv_color32_luminance, lv_color_swap_16]
+  enums: [_lv_opacity_level_t, lv_color_format_t]
+  structs: [lv_color_t, lv_color16_t, lv_color32_t, lv_color_hsv_t, lv_color16a_t]
+  macros: [LV_COLOR_NATIVE_WITH_ALPHA_SIZE, LV_OPA_MIN, LV_OPA_MAX, LV_COLOR_FORMAT_GET_BPP, LV_COLOR_FORMAT_GET_SIZE, LV_COLOR_FORMAT_IS_ALPHA_ONLY, LV_COLOR_FORMAT_IS_INDEXED, LV_COLOR_FORMAT_IS_YUV, LV_COLOR_INDEXED_PALETTE_SIZE, LV_COLOR_MAKE, LV_OPA_MIX2, LV_OPA_MIX3]
+  variables: [lv_color_filter_shade]
+---
+
+<ApiSummary functions={30} enums={2} structs={5} macros={12} variables={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (2)","Other (28)"]}>
+<ApiTab value="Getters (2)">
+
+<ApiMember kind="function" name="lv_color_format_get_bpp" file="api/draw/lv_color.h" line={250} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L250">
+
+### lv_color_format_get_bpp
+
+Get the pixel size of a color format in bits, bpp
+
+```c
+uint8_t lv_color_format_get_bpp(lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `cf` | <ApiLink name="lv_color_format_t" /> | a color format (`LV_COLOR_FORMAT_...`) |
+
+**Returns:** `uint8_t` — the pixel size in bits
+
+**See also:** <ApiLink name="LV_COLOR_FORMAT_GET_BPP" />
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_format_get_size" file="api/draw/lv_color.h" line={258} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L258">
+
+### lv_color_format_get_size
+
+Get the pixel size of a color format in bytes
+
+```c
+uint8_t lv_color_format_get_size(lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `cf` | <ApiLink name="lv_color_format_t" /> | a color format (`LV_COLOR_FORMAT_...`) |
+
+**Returns:** `uint8_t` — the pixel size in bytes
+
+**See also:** <ApiLink name="LV_COLOR_FORMAT_GET_SIZE" />
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (28)">
+
+<ApiMember kind="function" name="lv_color_format_has_alpha" file="api/draw/lv_color.h" line={265} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L265">
+
+### lv_color_format_has_alpha
+
+Check if a color format has alpha channel or not
+
+```c
+bool lv_color_format_has_alpha(lv_color_format_t src_cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `src_cf` | <ApiLink name="lv_color_format_t" /> | a color format (`LV_COLOR_FORMAT_...`) |
+
+**Returns:** `bool` — true: has alpha channel; false: doesn't have alpha channel
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_to_32" file="api/draw/lv_color.h" line={273} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L273">
+
+### lv_color_to_32
+
+Create an ARGB8888 color from RGB888 + alpha
+
+```c
+lv_color32_t lv_color_to_32(lv_color_t color, lv_opa_t opa)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `color` | <ApiLink name="lv_color_t" /> | an RGB888 color |
+| `opa` | <ApiLink name="lv_opa_t" /> | the alpha value |
+
+**Returns:** <ApiLink name="lv_color32_t" /> — the ARGB8888 color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_to_int" file="api/draw/lv_color.h" line={280} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L280">
+
+### lv_color_to_int
+
+Convert an RGB888 color to an integer
+
+```c
+uint32_t lv_color_to_int(lv_color_t c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | <ApiLink name="lv_color_t" /> | an RGB888 color |
+
+**Returns:** `uint32_t` — `c` as an integer
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_eq" file="api/draw/lv_color.h" line={288} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L288">
+
+### lv_color_eq
+
+Check if two RGB888 color are equal
+
+```c
+bool lv_color_eq(lv_color_t c1, lv_color_t c2)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c1` | <ApiLink name="lv_color_t" /> | the first color |
+| `c2` | <ApiLink name="lv_color_t" /> | the second color |
+
+**Returns:** `bool` — true: equal
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color32_eq" file="api/draw/lv_color.h" line={296} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L296">
+
+### lv_color32_eq
+
+Check if two ARGB8888 color are equal
+
+```c
+bool lv_color32_eq(lv_color32_t c1, lv_color32_t c2)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c1` | <ApiLink name="lv_color32_t" /> | the first color |
+| `c2` | <ApiLink name="lv_color32_t" /> | the second color |
+
+**Returns:** `bool` — true: equal
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_hex" file="api/draw/lv_color.h" line={303} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L303">
+
+### lv_color_hex
+
+Create a color from 0x000000..0xffffff input
+
+```c
+lv_color_t lv_color_hex(uint32_t c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | `uint32_t` | the hex input |
+
+**Returns:** <ApiLink name="lv_color_t" /> — the color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_make" file="api/draw/lv_color.h" line={312} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L312">
+
+### lv_color_make
+
+Create an RGB888 color
+
+```c
+lv_color_t lv_color_make(uint8_t r, uint8_t g, uint8_t b)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `r` | `uint8_t` | the red channel (0..255) |
+| `g` | `uint8_t` | the green channel (0..255) |
+| `b` | `uint8_t` | the blue channel (0..255) |
+
+**Returns:** <ApiLink name="lv_color_t" /> — the color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color32_make" file="api/draw/lv_color.h" line={322} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L322">
+
+### lv_color32_make
+
+Create an ARGB8888 color
+
+```c
+lv_color32_t lv_color32_make(uint8_t r, uint8_t g, uint8_t b, uint8_t a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `r` | `uint8_t` | the red channel (0..255) |
+| `g` | `uint8_t` | the green channel (0..255) |
+| `b` | `uint8_t` | the blue channel (0..255) |
+| `a` | `uint8_t` | the alpha channel (0..255) |
+
+**Returns:** <ApiLink name="lv_color32_t" /> — the color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_hex3" file="api/draw/lv_color.h" line={329} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L329">
+
+### lv_color_hex3
+
+Create a color from 0x000..0xfff input
+
+```c
+lv_color_t lv_color_hex3(uint32_t c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | `uint32_t` | the hex input (e.g. 0x123 will be 0x112233) |
+
+**Returns:** <ApiLink name="lv_color_t" /> — the color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_is_in_range" file="api/draw/lv_color.h" line={338} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L338">
+
+### lv_color_is_in_range
+
+Check if a color with an RGB888 color is within the color range defined by l_color and h_color.
+
+```c
+static bool lv_color_is_in_range(lv_color_t color, lv_color_t l_color, lv_color_t h_color)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `color` | <ApiLink name="lv_color_t" /> | the color to check |
+| `l_color` | <ApiLink name="lv_color_t" /> | the lower bound color |
+| `h_color` | <ApiLink name="lv_color_t" /> | the upper bound color |
+
+**Returns:** `bool` — true: pixel is within the color range
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color16_to_color" file="api/draw/lv_color.h" line={353} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L353">
+
+### lv_color16_to_color
+
+Convert a RGB565 color to RGB888
+
+```c
+static lv_color_t lv_color16_to_color(lv_color16_t c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | <ApiLink name="lv_color16_t" /> | a RGB565 color on <ApiLink name="lv_color16_t" /> |
+
+**Returns:** <ApiLink name="lv_color_t" /> — the color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_to_u16" file="api/draw/lv_color.h" line={363} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L363">
+
+### lv_color_to_u16
+
+Convert am RGB888 color to RGB565 stored in `uint16_t`
+
+```c
+uint16_t lv_color_to_u16(lv_color_t color)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `color` | <ApiLink name="lv_color_t" /> | and RGB888 color |
+
+**Returns:** `uint16_t` — `color` as RGB565 on `uin16_t`
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_to_u32" file="api/draw/lv_color.h" line={370} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L370">
+
+### lv_color_to_u32
+
+Convert am RGB888 color to XRGB8888 stored in `uint32_t`
+
+```c
+uint32_t lv_color_to_u32(lv_color_t color)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `color` | <ApiLink name="lv_color_t" /> | and RGB888 color |
+
+**Returns:** `uint32_t` — `color` as XRGB8888 on `uin32_t` (the alpha channel is always set to 0xFF)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_16_16_mix" file="api/draw/lv_color.h" line={381} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L381">
+
+### lv_color_16_16_mix
+
+Mix two RGB565 colors
+
+```c
+uint16_t lv_color_16_16_mix(uint16_t c1, uint16_t c2, uint8_t mix)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c1` | `uint16_t` | the first color (typically the foreground color) |
+| `c2` | `uint16_t` | the second color (typically the background color) |
+| `mix` | `uint8_t` | 0..255, or LV_OPA_0/10/20... |
+
+**Returns:** `uint16_t` — mix == 0: c2 mix == 255: c1 mix == 128: 0.5 x c1 + 0.5 x c2
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_lighten" file="api/draw/lv_color.h" line={389} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L389">
+
+### lv_color_lighten
+
+Mix white to a color
+
+```c
+lv_color_t lv_color_lighten(lv_color_t c, lv_opa_t lvl)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | <ApiLink name="lv_color_t" /> | the base color |
+| `lvl` | <ApiLink name="lv_opa_t" /> | the intensity of white (0: no change, 255: fully white) |
+
+**Returns:** <ApiLink name="lv_color_t" /> — the mixed color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_darken" file="api/draw/lv_color.h" line={397} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L397">
+
+### lv_color_darken
+
+Mix black to a color
+
+```c
+lv_color_t lv_color_darken(lv_color_t c, lv_opa_t lvl)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | <ApiLink name="lv_color_t" /> | the base color |
+| `lvl` | <ApiLink name="lv_opa_t" /> | the intensity of black (0: no change, 255: fully black) |
+
+**Returns:** <ApiLink name="lv_color_t" /> — the mixed color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_hsv_to_rgb" file="api/draw/lv_color.h" line={406} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L406">
+
+### lv_color_hsv_to_rgb
+
+Convert a HSV color to RGB
+
+```c
+lv_color_t lv_color_hsv_to_rgb(uint16_t h, uint8_t s, uint8_t v)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `h` | `uint16_t` | hue [0..359] |
+| `s` | `uint8_t` | saturation [0..100] |
+| `v` | `uint8_t` | value [0..100] |
+
+**Returns:** <ApiLink name="lv_color_t" /> — the given RGB color in RGB (with LV_COLOR_DEPTH depth)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_rgb_to_hsv" file="api/draw/lv_color.h" line={415} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L415">
+
+### lv_color_rgb_to_hsv
+
+Convert a 32-bit RGB color to HSV
+
+```c
+lv_color_hsv_t lv_color_rgb_to_hsv(uint8_t r8, uint8_t g8, uint8_t b8)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `r8` | `uint8_t` | 8-bit red |
+| `g8` | `uint8_t` | 8-bit green |
+| `b8` | `uint8_t` | 8-bit blue |
+
+**Returns:** <ApiLink name="lv_color_hsv_t" /> — the given RGB color in HSV
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_to_hsv" file="api/draw/lv_color.h" line={422} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L422">
+
+### lv_color_to_hsv
+
+Convert a color to HSV
+
+```c
+lv_color_hsv_t lv_color_to_hsv(lv_color_t color)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `color` | <ApiLink name="lv_color_t" /> | color |
+
+**Returns:** <ApiLink name="lv_color_hsv_t" /> — the given color in HSV
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_white" file="api/draw/lv_color.h" line={430} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L430">
+
+### lv_color_white
+
+A helper for white color
+
+```c
+lv_color_t lv_color_white(void)
+```
+
+**Returns:** <ApiLink name="lv_color_t" /> — a white color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_black" file="api/draw/lv_color.h" line={436} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L436">
+
+### lv_color_black
+
+A helper for black color
+
+```c
+lv_color_t lv_color_black(void)
+```
+
+**Returns:** <ApiLink name="lv_color_t" /> — a black color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_premultiply" file="api/draw/lv_color.h" line={438} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L438">
+
+### lv_color_premultiply
+
+```c
+void lv_color_premultiply(lv_color32_t *c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `c` | <ApiLink name="lv_color32_t" display="lv_color32_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color16_premultiply" file="api/draw/lv_color.h" line={440} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L440">
+
+### lv_color16_premultiply
+
+```c
+void lv_color16_premultiply(lv_color16_t *c, lv_opa_t a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `c` | <ApiLink name="lv_color16_t" display="lv_color16_t *" /> |
+| `a` | <ApiLink name="lv_opa_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_luminance" file="api/draw/lv_color.h" line={447} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L447">
+
+### lv_color_luminance
+
+Get the luminance of a color: luminance = 0.3 R + 0.59 G + 0.11 B
+
+```c
+uint8_t lv_color_luminance(lv_color_t c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | <ApiLink name="lv_color_t" /> | a color |
+
+**Returns:** `uint8_t` — the brightness [0..255]
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color16_luminance" file="api/draw/lv_color.h" line={454} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L454">
+
+### lv_color16_luminance
+
+Get the luminance of a color16: luminance = 0.3 R + 0.59 G + 0.11 B
+
+```c
+uint8_t lv_color16_luminance(const lv_color16_t c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | <ApiLink name="lv_color16_t" display="const lv_color16_t" /> | a color |
+
+**Returns:** `uint8_t` — the brightness [0..255]
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color24_luminance" file="api/draw/lv_color.h" line={461} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L461">
+
+### lv_color24_luminance
+
+Get the luminance of a color24: luminance = 0.3 R + 0.59 G + 0.11 B
+
+```c
+uint8_t lv_color24_luminance(const uint8_t *c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | `const uint8_t *` | a color |
+
+**Returns:** `uint8_t` — the brightness [0..255]
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color32_luminance" file="api/draw/lv_color.h" line={468} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L468">
+
+### lv_color32_luminance
+
+Get the luminance of a color32: luminance = 0.3 R + 0.59 G + 0.11 B
+
+```c
+uint8_t lv_color32_luminance(lv_color32_t c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | <ApiLink name="lv_color32_t" /> | a color |
+
+**Returns:** `uint8_t` — the brightness [0..255]
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_swap_16" file="api/draw/lv_color.h" line={476} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L476">
+
+### lv_color_swap_16
+
+Swap the endianness of an rgb565 color
+
+```c
+static uint16_t lv_color_swap_16(uint16_t c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | `uint16_t` | a color |
+
+**Returns:** `uint16_t` — the swapped color
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="_lv_opacity_level_t" file="api/draw/lv_color.h" line={40} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L40">
+
+### _lv_opacity_level_t
+
+Opacity percentages.
+
+| Name | Value |
+|------|------|
+| `LV_OPA_TRANSP` | `0` |
+| `LV_OPA_0` | `0` |
+| `LV_OPA_10` | `25` |
+| `LV_OPA_20` | `51` |
+| `LV_OPA_30` | `76` |
+| `LV_OPA_40` | `102` |
+| `LV_OPA_50` | `127` |
+| `LV_OPA_60` | `153` |
+| `LV_OPA_70` | `178` |
+| `LV_OPA_80` | `204` |
+| `LV_OPA_90` | `229` |
+| `LV_OPA_100` | `255` |
+| `LV_OPA_COVER` | `255` |
+
+
+</ApiMember>
+
+<ApiMember kind="enum" name="lv_color_format_t" file="api/draw/lv_color.h" line={139} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L139">
+
+### lv_color_format_t
+
+| Name | Value | Description |
+|------|------|------|
+| `LV_COLOR_FORMAT_UNKNOWN` | `0` |  |
+| `LV_COLOR_FORMAT_RAW` | `0x01` |  |
+| `LV_COLOR_FORMAT_RAW_ALPHA` | `0x02` |  |
+| `LV_COLOR_FORMAT_L8` | `0x06` |  |
+| `LV_COLOR_FORMAT_I1` | `0x07` |  |
+| `LV_COLOR_FORMAT_I2` | `0x08` |  |
+| `LV_COLOR_FORMAT_I4` | `0x09` |  |
+| `LV_COLOR_FORMAT_I8` | `0x0A` |  |
+| `LV_COLOR_FORMAT_A8` | `0x0E` |  |
+| `LV_COLOR_FORMAT_RGB565` | `0x12` |  |
+| `LV_COLOR_FORMAT_ARGB8565` | `0x13` | Not supported by sw renderer yet. |
+| `LV_COLOR_FORMAT_RGB565A8` | `0x14` | Color array followed by Alpha array |
+| `LV_COLOR_FORMAT_AL88` | `0x15` | L8 with alpha \> |
+| `LV_COLOR_FORMAT_RGB565_SWAPPED` | `0x1B` |  |
+| `LV_COLOR_FORMAT_RGB888` | `0x0F` |  |
+| `LV_COLOR_FORMAT_ARGB8888` | `0x10` |  |
+| `LV_COLOR_FORMAT_XRGB8888` | `0x11` |  |
+| `LV_COLOR_FORMAT_ARGB8888_PREMULTIPLIED` | `0x1A` |  |
+| `LV_COLOR_FORMAT_A1` | `0x0B` |  |
+| `LV_COLOR_FORMAT_A2` | `0x0C` |  |
+| `LV_COLOR_FORMAT_A4` | `0x0D` |  |
+| `LV_COLOR_FORMAT_ARGB1555` | `0x16` |  |
+| `LV_COLOR_FORMAT_ARGB4444` | `0x17` |  |
+| `LV_COLOR_FORMAT_ARGB2222` | `0X18` |  |
+| `LV_COLOR_FORMAT_YUV_START` | `0x20` |  |
+| `LV_COLOR_FORMAT_I420` | `LV_COLOR_FORMAT_YUV_START` |  |
+| `LV_COLOR_FORMAT_I422` | `0x21` |  |
+| `LV_COLOR_FORMAT_I444` | `0x22` |  |
+| `LV_COLOR_FORMAT_I400` | `0x23` |  |
+| `LV_COLOR_FORMAT_NV21` | `0x24` |  |
+| `LV_COLOR_FORMAT_NV12` | `0x25` |  |
+| `LV_COLOR_FORMAT_YUY2` | `0x26` |  |
+| `LV_COLOR_FORMAT_UYVY` | `0x27` |  |
+| `LV_COLOR_FORMAT_YUV_END` | `LV_COLOR_FORMAT_UYVY` |  |
+| `LV_COLOR_FORMAT_PROPRIETARY_START` | `0x30` |  |
+| `LV_COLOR_FORMAT_NEMA_TSC_START` | `LV_COLOR_FORMAT_PROPRIETARY_START` |  |
+| `LV_COLOR_FORMAT_NEMA_TSC4` | `LV_COLOR_FORMAT_NEMA_TSC_START` |  |
+| `LV_COLOR_FORMAT_NEMA_TSC6` | `0x31` |  |
+| `LV_COLOR_FORMAT_NEMA_TSC6A` | `0x32` |  |
+| `LV_COLOR_FORMAT_NEMA_TSC6AP` | `0x33` |  |
+| `LV_COLOR_FORMAT_NEMA_TSC12` | `0x34` |  |
+| `LV_COLOR_FORMAT_NEMA_TSC12A` | `0x35` |  |
+| `LV_COLOR_FORMAT_NEMA_TSC_END` | `LV_COLOR_FORMAT_NEMA_TSC12A` |  |
+| `LV_COLOR_FORMAT_NATIVE` | `LV_COLOR_FORMAT_RGB565` |  |
+| `LV_COLOR_FORMAT_NATIVE_WITH_ALPHA` | `LV_COLOR_FORMAT_RGB565A8` |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_color_format_t" count={27}>
+
+- `lv_display_set_color_format` — param `color_format`
+- `lv_color_format_get_bpp` — param `cf`
+- `lv_color_format_get_size` — param `cf`
+- `lv_color_format_has_alpha` — param `src_cf`
+- `lv_draw_layer_create` — param `color_format`
+- `lv_draw_layer_init` — param `color_format`
+- `lv_draw_buf_align` — param `color_format`
+- `lv_draw_buf_align_ex` — param `color_format`
+- `lv_draw_buf_width_to_stride` — param `color_format`
+- `lv_draw_buf_width_to_stride_ex` — param `color_format`
+- `lv_draw_buf_create` — param `cf`
+- `lv_draw_buf_create_ex` — param `cf`
+- `lv_draw_buf_init` — param `cf`
+- `lv_draw_buf_reshape` — param `cf`
+- `lv_snapshot_take` — param `cf`
+- `lv_snapshot_create_draw_buf` — param `cf`
+- `lv_snapshot_take_to_draw_buf` — param `cf`
+- `lv_snapshot_take_to_buf` — param `cf`
+- `lv_draw_sw_rotate` — param `color_format`
+- `lv_canvas_set_buffer` — param `cf`
+- `lv_gif_set_color_format` — param `color_format`
+- `lv_draw_dma2d_cf_to_dma2d_output_cf` — param `cf`
+- `ppa_src_cf_supported` — param `cf`
+- `ppa_dest_cf_supported` — param `cf`
+- `lv_color_format_to_ppa_fill` — param `lv_fmt`
+- `lv_color_format_to_ppa_blend` — param `lv_fmt`
+- `lv_color_format_to_ppa_srm` — param `lv_fmt`
+
+</TypeUsedBy>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_color_t">
+
+### lv_color_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `blue` | `uint8_t` |  |
+| `green` | `uint8_t` |  |
+| `red` | `uint8_t` |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_color_t" count={61}>
+
+- `lv_obj_set_style_bg_color` — param `value`
+- `lv_obj_set_style_bg_grad_color` — param `value`
+- `lv_obj_set_style_bg_image_recolor` — param `value`
+- `lv_obj_set_style_border_color` — param `value`
+- `lv_obj_set_style_outline_color` — param `value`
+- `lv_obj_set_style_shadow_color` — param `value`
+- `lv_obj_set_style_image_recolor` — param `value`
+- `lv_obj_set_style_line_color` — param `value`
+- `lv_obj_set_style_arc_color` — param `value`
+- `lv_obj_set_style_text_color` — param `value`
+- `lv_obj_set_style_text_outline_stroke_color` — param `value`
+- `lv_obj_set_style_drop_shadow_color` — param `value`
+- `lv_obj_set_style_recolor` — param `value`
+- `lv_subject_init_color` — param `color`
+- `lv_subject_set_color` — param `color`
+- `lv_style_set_bg_color` — param `value`
+- `lv_style_set_bg_grad_color` — param `value`
+- `lv_style_set_bg_image_recolor` — param `value`
+- `lv_style_set_border_color` — param `value`
+- `lv_style_set_outline_color` — param `value`
+- `lv_style_set_shadow_color` — param `value`
+- `lv_style_set_image_recolor` — param `value`
+- `lv_style_set_line_color` — param `value`
+- `lv_style_set_arc_color` — param `value`
+- `lv_style_set_text_color` — param `value`
+- `lv_style_set_text_outline_stroke_color` — param `value`
+- `lv_style_set_drop_shadow_color` — param `value`
+- `lv_style_set_recolor` — param `value`
+- `lv_color_to_32` — param `color`
+- `lv_color_to_int` — param `c`
+- `lv_color_eq` — param `c1`
+- `lv_color_eq` — param `c2`
+- `lv_color_is_in_range` — param `color`
+- `lv_color_is_in_range` — param `l_color`
+- `lv_color_is_in_range` — param `h_color`
+- `lv_color_to_u16` — param `color`
+- `lv_color_to_u32` — param `color`
+- `lv_color_lighten` — param `c`
+- `lv_color_darken` — param `c`
+- `lv_color_to_hsv` — param `color`
+- `lv_color_luminance` — param `c`
+- `lv_color_mix` — param `c1`
+- `lv_color_mix` — param `c2`
+- `lv_color_brightness` — param `c`
+- `lv_draw_vector_dsc_set_fill_color` — param `color`
+- `lv_draw_vector_dsc_set_stroke_color` — param `color`
+- `lv_grad_init_stops` — param `colors`
+- `lv_opengles_render_fill` — param `color`
+- `lv_theme_default_init` — param `color_primary`
+- `lv_theme_default_init` — param `color_secondary`
+- `lv_barcode_set_dark_color` — param `color`
+- `lv_barcode_set_light_color` — param `color`
+- `lv_canvas_set_px` — param `color`
+- `lv_canvas_fill_bg` — param `color`
+- `lv_chart_add_series` — param `color`
+- `lv_chart_set_series_color` — param `color`
+- `lv_chart_add_cursor` — param `color`
+- `lv_led_set_color` — param `color`
+- `lv_qrcode_set_dark_color` — param `color`
+- `lv_qrcode_set_light_color` — param `color`
+- `lv_draw_dma2d_color_to_dma2d_color` — param `color`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_color16_t">
+
+### lv_color16_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `blue` | `uint16_t` |  |
+| `green` | `uint16_t` |  |
+| `red` | `uint16_t` |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_color16_t" count={3}>
+
+- `lv_color16_to_color` — param `c`
+- `lv_color16_premultiply` — param `c`
+- `lv_color16_luminance` — param `c`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_color32_t">
+
+### lv_color32_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `blue` | `uint8_t` |  |
+| `green` | `uint8_t` |  |
+| `red` | `uint8_t` |  |
+| `alpha` | `uint8_t` |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_color32_t" count={16}>
+
+- `lv_obj_style_apply_recolor` — param `color`
+- `lv_color32_eq` — param `c1`
+- `lv_color32_eq` — param `c2`
+- `lv_color_premultiply` — param `c`
+- `lv_color32_luminance` — param `c`
+- `lv_color_mix32` — param `fg`
+- `lv_color_mix32` — param `bg`
+- `lv_color_mix32_premultiplied` — param `fg`
+- `lv_color_mix32_premultiplied` — param `bg`
+- `lv_color_over32` — param `fg`
+- `lv_color_over32` — param `bg`
+- `lv_draw_buf_set_palette` — param `color`
+- `lv_image_buf_set_palette` — param `c`
+- `lv_draw_vector_dsc_set_fill_color32` — param `color`
+- `lv_draw_vector_dsc_set_stroke_color32` — param `color`
+- `lv_canvas_set_palette` — param `color`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_color_hsv_t">
+
+### lv_color_hsv_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `h` | `uint16_t` |  |
+| `s` | `uint8_t` |  |
+| `v` | `uint8_t` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_color16a_t">
+
+### lv_color16a_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `lumi` | `uint8_t` |  |
+| `alpha` | `uint8_t` |  |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_COLOR_NATIVE_WITH_ALPHA_SIZE" file="api/draw/lv_color.h" line={29} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L29">
+
+### LV_COLOR_NATIVE_WITH_ALPHA_SIZE
+
+```c
+#define LV_COLOR_NATIVE_WITH_ALPHA_SIZE 3
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_OPA_MIN" file="api/draw/lv_color.h" line={56} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L56">
+
+### LV_OPA_MIN
+
+```c
+#define LV_OPA_MIN 2
+```
+
+Fully transparent if opa \<= LV_OPA_MIN
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_OPA_MAX" file="api/draw/lv_color.h" line={57} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L57">
+
+### LV_OPA_MAX
+
+```c
+#define LV_OPA_MAX 253
+```
+
+Fully cover if opa \>= LV_OPA_MAX
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_COLOR_FORMAT_GET_BPP" file="api/draw/lv_color.h" line={65} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L65">
+
+### LV_COLOR_FORMAT_GET_BPP
+
+```c
+#define LV_COLOR_FORMAT_GET_BPP(cf)
+```
+
+Get the pixel size of a color format in bits, bpp
+
+<span className="sr-only">Parameters</span>
+
+| Name | Description |
+|------|-------------|
+| `cf` | a color format (`LV_COLOR_FORMAT_...`) |
+
+**Returns:** the pixel size in bits
+
+**See also:** <ApiLink name="lv_color_format_get_bpp" />
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_COLOR_FORMAT_GET_SIZE" file="api/draw/lv_color.h" line={103} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L103">
+
+### LV_COLOR_FORMAT_GET_SIZE
+
+```c
+#define LV_COLOR_FORMAT_GET_SIZE(cf) \
+    ((LV_COLOR_FORMAT_GET_BPP(cf) + 7) >> 3)
+```
+
+Get the pixel size of a color format in bytes
+
+<span className="sr-only">Parameters</span>
+
+| Name | Description |
+|------|-------------|
+| `cf` | a color format (`LV_COLOR_FORMAT_...`) |
+
+**Returns:** the pixel size in bytes
+
+**See also:** <ApiLink name="lv_color_format_get_size" />
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_COLOR_FORMAT_IS_ALPHA_ONLY" file="api/draw/lv_color.h" line={223} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L223">
+
+### LV_COLOR_FORMAT_IS_ALPHA_ONLY
+
+```c
+#define LV_COLOR_FORMAT_IS_ALPHA_ONLY(cf) \
+    ((cf) >= LV_COLOR_FORMAT_A1 && (cf) <= LV_COLOR_FORMAT_A8)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_COLOR_FORMAT_IS_INDEXED" file="api/draw/lv_color.h" line={224} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L224">
+
+### LV_COLOR_FORMAT_IS_INDEXED
+
+```c
+#define LV_COLOR_FORMAT_IS_INDEXED(cf) \
+    ((cf) >= LV_COLOR_FORMAT_I1 && (cf) <= LV_COLOR_FORMAT_I8)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_COLOR_FORMAT_IS_YUV" file="api/draw/lv_color.h" line={225} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L225">
+
+### LV_COLOR_FORMAT_IS_YUV
+
+```c
+#define LV_COLOR_FORMAT_IS_YUV(cf) \
+    ((cf) >= LV_COLOR_FORMAT_YUV_START && (cf) <= LV_COLOR_FORMAT_YUV_END)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_COLOR_INDEXED_PALETTE_SIZE" file="api/draw/lv_color.h" line={226} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L226">
+
+### LV_COLOR_INDEXED_PALETTE_SIZE
+
+```c
+#define LV_COLOR_INDEXED_PALETTE_SIZE(cf) \
+    ((cf) == LV_COLOR_FORMAT_I1 ? 2 : \
+                                               (cf) == LV_COLOR_FORMAT_I2 ? 4 : \
+                                               (cf) == LV_COLOR_FORMAT_I4 ? 16 : \
+                                               (cf) == LV_COLOR_FORMAT_I8 ? 256 : 0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_COLOR_MAKE" file="api/draw/lv_color.h" line={235} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L235">
+
+### LV_COLOR_MAKE
+
+```c
+#define LV_COLOR_MAKE(r8, g8, b8) \
+    {b8, g8, r8}
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_OPA_MIX2" file="api/draw/lv_color.h" line={237} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L237">
+
+### LV_OPA_MIX2
+
+```c
+#define LV_OPA_MIX2(a1, a2) \
+    ((lv_opa_t)(((int32_t)(a1) * (a2)) >> 8))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_OPA_MIX3" file="api/draw/lv_color.h" line={238} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L238">
+
+### LV_OPA_MIX3
+
+```c
+#define LV_OPA_MIX3(a1, a2, a3) \
+    ((lv_opa_t)(((int32_t)(a1) * (a2) * (a3)) >> 16))
+```
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_color_filter_shade" file="api/draw/lv_color.h" line={488} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_color.h#L488">
+
+### lv_color_filter_shade
+
+```c
+const lv_color_filter_dsc_t lv_color_filter_shade
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_assert.h", "lv_math.h", "lv_types.h", "lv_palette.h", "lv_color_op.h"]}
+  includedBy={["lv_obj.h", "lv_style.h", "lv_display.h", "lv_color_op.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_mask.h", "lv_draw_rect.h", "lv_grad.h", "lv_palette.h", "lv_opengles_driver.h", "lv_freetype.h", "lvgl.h", "lv_barcode.h", "lv_gif.h", "lv_qrcode.h"]}
+  transitiveIncludes={["lv_conf_kconfig.h", "lv_log.h", "lv_mem.h"]}
+/>

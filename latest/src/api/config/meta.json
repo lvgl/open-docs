@@ -1,0 +1,7 @@
+{
+  "title": "Config",
+  "pages": [
+    "lv_conf_internal_h",
+    "lv_conf_kconfig_h"
+  ]
+}
