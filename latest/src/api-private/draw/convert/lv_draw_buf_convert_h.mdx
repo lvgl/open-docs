@@ -1,0 +1,36 @@
+---
+title: lv_draw_buf_convert.h
+description: API reference for lv_draw_buf_convert.h
+api:
+  functions: [lv_draw_buf_convert_premultiply]
+---
+
+<ApiSummary functions={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_buf_convert_premultiply" file="api-private/draw/convert/lv_draw_buf_convert.h" line={31} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/convert/lv_draw_buf_convert.h#L31">
+
+### lv_draw_buf_convert_premultiply
+
+Convert draw_buf to premultiplied format
+
+```c
+lv_result_t lv_draw_buf_convert_premultiply(lv_draw_buf_t *buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to a draw buf |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

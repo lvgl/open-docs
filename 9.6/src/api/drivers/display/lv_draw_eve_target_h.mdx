@@ -11,7 +11,7 @@ api:
 
 ## Enums
 
-<ApiMember kind="enum" name="lv_draw_eve_operation_t" file="api/drivers/display/lv_draw_eve_target.h" line={45} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/drivers/display/lv_draw_eve_target.h#L45">
+<ApiMember kind="enum" name="lv_draw_eve_operation_t" file="api/drivers/display/lv_draw_eve_target.h" line={45} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/include/lvgl/drivers/display/lv_draw_eve_target.h#L45">
 
 ### lv_draw_eve_operation_t
 
@@ -57,15 +57,16 @@ api:
 
 </ApiMember>
 
-<TypeUsedBy name="lv_draw_eve_parameters_t" count={1}>
+<TypeUsedBy name="lv_draw_eve_parameters_t" count={2}>
 
 - `lv_draw_eve_display_create` — param `params`
+- `lv_draw_eve_set_display_data` — param `params`
 
 </TypeUsedBy>
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_draw_eve_operation_cb_t" file="api/drivers/display/lv_draw_eve_target.h" line={54} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/drivers/display/lv_draw_eve_target.h#L54">
+<ApiMember kind="typedef" name="lv_draw_eve_operation_cb_t" file="api/drivers/display/lv_draw_eve_target.h" line={54} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/include/lvgl/drivers/display/lv_draw_eve_target.h#L54">
 
 ### lv_draw_eve_operation_cb_t
 
@@ -76,9 +77,10 @@ typedef void(* lv_draw_eve_operation_cb_t) (lv_display_t *disp, lv_draw_eve_oper
 
 </ApiMember>
 
-<TypeUsedBy name="lv_draw_eve_operation_cb_t" count={1}>
+<TypeUsedBy name="lv_draw_eve_operation_cb_t" count={2}>
 
 - `lv_draw_eve_display_create` — param `op_cb`
+- `lv_draw_eve_set_display_data` — param `op_cb`
 
 </TypeUsedBy>
 
@@ -87,5 +89,4 @@ typedef void(* lv_draw_eve_operation_cb_t) (lv_display_t *disp, lv_draw_eve_oper
 <FileIncludes
   includes={["lv_conf_internal.h", "lv_types.h", "stdbool.h", "stdint.h"]}
   includedBy={["lv_draw_eve_display.h", "lvgl.h"]}
-  transitiveIncludes={["lv_conf_kconfig.h"]}
 />

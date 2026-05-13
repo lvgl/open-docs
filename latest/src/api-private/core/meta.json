@@ -1,6 +1,7 @@
 {
   "title": "Core",
   "pages": [
+    "lv_global_h",
     "lv_group_private_h",
     "lv_obj_class_private_h",
     "lv_obj_draw_private_h",

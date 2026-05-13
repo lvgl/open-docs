@@ -12,7 +12,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_image_decoder_init" file="api-private/draw/lv_image_decoder_private.h" line={129} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/draw/lv_image_decoder_private.h#L129">
+<ApiMember kind="function" name="lv_image_decoder_init" file="api-private/draw/lv_image_decoder_private.h" line={129} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/lv_image_decoder_private.h#L129">
 
 ### lv_image_decoder_init
 
@@ -32,7 +32,7 @@ void lv_image_decoder_init(uint32_t image_cache_size, uint32_t image_header_coun
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_decoder_deinit" file="api-private/draw/lv_image_decoder_private.h" line={134} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/draw/lv_image_decoder_private.h#L134">
+<ApiMember kind="function" name="lv_image_decoder_deinit" file="api-private/draw/lv_image_decoder_private.h" line={134} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/lv_image_decoder_private.h#L134">
 
 ### lv_image_decoder_deinit
 
@@ -45,7 +45,7 @@ void lv_image_decoder_deinit(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_decoder_add_to_cache" file="api-private/draw/lv_image_decoder_private.h" line={136} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/draw/lv_image_decoder_private.h#L136">
+<ApiMember kind="function" name="lv_image_decoder_add_to_cache" file="api-private/draw/lv_image_decoder_private.h" line={136} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/lv_image_decoder_private.h#L136">
 
 ### lv_image_decoder_add_to_cache
 
@@ -164,4 +164,5 @@ Describe an image decoding session. Stores data about the decoding
 <FileIncludes
   includes={["lv_cache.h"]}
   includedBy={["lv_draw_nema_gfx.h", "lvgl_private.h"]}
+  transitiveIncludes={["lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h"]}
 />

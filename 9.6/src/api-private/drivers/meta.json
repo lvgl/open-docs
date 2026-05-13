@@ -4,6 +4,7 @@
     "display",
     "evdev",
     "libinput",
+    "nuttx",
     "opengles",
     "sdl",
     "uefi",

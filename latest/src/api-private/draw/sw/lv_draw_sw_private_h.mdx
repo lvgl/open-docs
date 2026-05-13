@@ -5,6 +5,8 @@ api:
   structs: [lv_draw_sw_thread_dsc_t, _lv_draw_sw_unit_t]
 ---
 
+<RelatedHeaders name="lv_draw_sw.h" isPrivate={true} />
+
 <ApiSummary structs={2} />
 
 ## Structs
@@ -43,5 +45,5 @@ api:
 <FileIncludes
   includes={["lv_draw_sw.h", "lv_draw_private.h"]}
   includedBy={["lv_global.h", "lv_draw_g2d.h", "lv_g2d_utils.h", "lvgl_private.h"]}
-  transitiveIncludes={["lv_os_private.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_entry.h", "lv_draw_sw_blend.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h"]}
 />

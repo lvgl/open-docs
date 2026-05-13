@@ -13,10 +13,8 @@
     "misc",
     "osal",
     "others",
-    "stdlib",
     "themes",
     "tick",
-    "widgets",
-    "lvgl_private_h"
+    "widgets"
   ]
 }

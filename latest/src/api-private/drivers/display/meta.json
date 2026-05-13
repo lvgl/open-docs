@@ -1,6 +1,8 @@
 {
   "title": "Display",
   "pages": [
-    "drm"
+    "drm",
+    "ft81x",
+    "lovyan_gfx"
   ]
 }

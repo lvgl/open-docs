@@ -6,6 +6,8 @@ api:
   typedefs: [lv_egl_init_display_t, lv_egl_get_display_t, lv_create_window_t, lv_destroy_window_t, lv_egl_set_visible_t, lv_egl_flip_t, lv_egl_native_state_deinit_t, lv_egl_select_config_t]
 ---
 
+<RelatedHeaders name="lv_opengles_egl.h" isPrivate={true} />
+
 <ApiSummary structs={4} typedefs={8} />
 
 ## Structs
@@ -84,7 +86,7 @@ api:
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_egl_init_display_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={52} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/drivers/opengles/lv_opengles_egl_private.h#L52">
+<ApiMember kind="typedef" name="lv_egl_init_display_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={52} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/opengles/lv_opengles_egl_private.h#L52">
 
 ### lv_egl_init_display_t
 
@@ -95,7 +97,7 @@ typedef void *(* lv_egl_init_display_t) (void *driver_data, int32_t width, int32
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_egl_get_display_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={53} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/drivers/opengles/lv_opengles_egl_private.h#L53">
+<ApiMember kind="typedef" name="lv_egl_get_display_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={53} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/opengles/lv_opengles_egl_private.h#L53">
 
 ### lv_egl_get_display_t
 
@@ -106,7 +108,7 @@ typedef void *(* lv_egl_get_display_t) (void *driver_data)
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_create_window_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={54} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/drivers/opengles/lv_opengles_egl_private.h#L54">
+<ApiMember kind="typedef" name="lv_create_window_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={54} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/opengles/lv_opengles_egl_private.h#L54">
 
 ### lv_create_window_t
 
@@ -117,7 +119,7 @@ typedef void *(* lv_create_window_t) (void *driver_data, const lv_egl_native_win
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_destroy_window_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={55} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/drivers/opengles/lv_opengles_egl_private.h#L55">
+<ApiMember kind="typedef" name="lv_destroy_window_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={55} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/opengles/lv_opengles_egl_private.h#L55">
 
 ### lv_destroy_window_t
 
@@ -128,7 +130,7 @@ typedef void(* lv_destroy_window_t) (void *driver_data, void *native_window)
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_egl_set_visible_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={57} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/drivers/opengles/lv_opengles_egl_private.h#L57">
+<ApiMember kind="typedef" name="lv_egl_set_visible_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={57} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/opengles/lv_opengles_egl_private.h#L57">
 
 ### lv_egl_set_visible_t
 
@@ -139,7 +141,7 @@ typedef void(* lv_egl_set_visible_t) (void *driver_data, bool v)
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_egl_flip_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={58} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/drivers/opengles/lv_opengles_egl_private.h#L58">
+<ApiMember kind="typedef" name="lv_egl_flip_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={58} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/opengles/lv_opengles_egl_private.h#L58">
 
 ### lv_egl_flip_t
 
@@ -150,7 +152,7 @@ typedef void(* lv_egl_flip_t) (void *driver_data, bool vsync)
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_egl_native_state_deinit_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={59} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/drivers/opengles/lv_opengles_egl_private.h#L59">
+<ApiMember kind="typedef" name="lv_egl_native_state_deinit_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={59} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/opengles/lv_opengles_egl_private.h#L59">
 
 ### lv_egl_native_state_deinit_t
 
@@ -161,7 +163,7 @@ typedef void(* lv_egl_native_state_deinit_t) (void **driver_data)
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_egl_select_config_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/src/drivers/opengles/lv_opengles_egl_private.h#L60">
+<ApiMember kind="typedef" name="lv_egl_select_config_t" file="api-private/drivers/opengles/lv_opengles_egl_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/opengles/lv_opengles_egl_private.h#L60">
 
 ### lv_egl_select_config_t
 

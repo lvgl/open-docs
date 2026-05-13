@@ -1,0 +1,122 @@
+---
+title: lv_draw_g2d.h
+description: API reference for lv_draw_g2d.h
+api:
+  functions: [lv_draw_g2d_init, lv_draw_g2d_deinit, lv_draw_buf_g2d_init_handlers, lv_draw_g2d_fill, lv_draw_g2d_img]
+  structs: [lv_draw_g2d_unit]
+  typedefs: [lv_draw_g2d_unit_t]
+---
+
+<ApiSummary functions={5} structs={1} typedefs={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_g2d_init" file="api-private/draw/nxp/g2d/lv_draw_g2d.h" line={50} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/nxp/g2d/lv_draw_g2d.h#L50">
+
+### lv_draw_g2d_init
+
+```c
+void lv_draw_g2d_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_g2d_deinit" file="api-private/draw/nxp/g2d/lv_draw_g2d.h" line={52} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/nxp/g2d/lv_draw_g2d.h#L52">
+
+### lv_draw_g2d_deinit
+
+```c
+void lv_draw_g2d_deinit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_g2d_init_handlers" file="api-private/draw/nxp/g2d/lv_draw_g2d.h" line={54} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/nxp/g2d/lv_draw_g2d.h#L54">
+
+### lv_draw_buf_g2d_init_handlers
+
+```c
+void lv_draw_buf_g2d_init_handlers(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_g2d_fill" file="api-private/draw/nxp/g2d/lv_draw_g2d.h" line={56} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/nxp/g2d/lv_draw_g2d.h#L56">
+
+### lv_draw_g2d_fill
+
+```c
+void lv_draw_g2d_fill(lv_draw_task_t *t)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_g2d_img" file="api-private/draw/nxp/g2d/lv_draw_g2d.h" line={58} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/nxp/g2d/lv_draw_g2d.h#L58">
+
+### lv_draw_g2d_img
+
+```c
+void lv_draw_g2d_img(lv_draw_task_t *t)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_g2d_unit">
+
+### lv_draw_g2d_unit
+
+Copyright 2024 NXP
+
+SPDX-License-Identifier: MIT
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base_unit` | <ApiLink name="lv_draw_unit_t" /> |  |
+| `thread_dsc` | <ApiLink name="lv_draw_sw_thread_dsc_t" /> |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_draw_g2d_unit_t" file="api-private/draw/nxp/g2d/lv_draw_g2d.h" line={44} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/nxp/g2d/lv_draw_g2d.h#L44">
+
+### lv_draw_g2d_unit_t
+
+```c
+typedef struct lv_draw_g2d_unit lv_draw_g2d_unit_t
+```
+
+Copyright 2024 NXP
+
+SPDX-License-Identifier: MIT
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_draw_sw_private.h"]}
+  includedBy={["lvgl_private.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_entry.h", "lv_draw_private.h", "lv_draw_sw.h", "lv_draw_sw_blend.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h"]}
+/>

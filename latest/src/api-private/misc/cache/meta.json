@@ -1,6 +1,10 @@
 {
   "title": "Cache",
   "pages": [
-    "lv_cache_entry_private_h"
+    "class",
+    "instance",
+    "lv_cache_entry_h",
+    "lv_cache_entry_private_h",
+    "lv_cache_h"
   ]
 }

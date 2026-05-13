@@ -1,0 +1,70 @@
+---
+title: lv_opengles_shader.h
+description: API reference for lv_opengles_shader.h
+api:
+  functions: [lv_opengles_shader_get_vertex, lv_opengles_shader_get_fragment, lv_opengles_shader_get_source]
+---
+
+<ApiSummary functions={3} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_opengles_shader_get_vertex" file="api-private/drivers/opengles/assets/lv_opengles_shader.h" line={24} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/opengles/assets/lv_opengles_shader.h#L24">
+
+### lv_opengles_shader_get_vertex
+
+```c
+char * lv_opengles_shader_get_vertex(lv_opengl_glsl_version_t version)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `version` | <ApiLink name="lv_opengl_glsl_version_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_shader_get_fragment" file="api-private/drivers/opengles/assets/lv_opengles_shader.h" line={25} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/opengles/assets/lv_opengles_shader.h#L25">
+
+### lv_opengles_shader_get_fragment
+
+```c
+char * lv_opengles_shader_get_fragment(lv_opengl_glsl_version_t version)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `version` | <ApiLink name="lv_opengl_glsl_version_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_shader_get_source" file="api-private/drivers/opengles/assets/lv_opengles_shader.h" line={26} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/opengles/assets/lv_opengles_shader.h#L26">
+
+### lv_opengles_shader_get_source
+
+```c
+void lv_opengles_shader_get_source(lv_opengl_shader_portions_t *portions, lv_opengl_glsl_version_t version)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `portions` | <ApiLink name="lv_opengl_shader_portions_t" display="lv_opengl_shader_portions_t *" /> |
+| `version` | <ApiLink name="lv_opengl_glsl_version_t" /> |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_opengl_shader_internal.h"]}
+  includedBy={["lvgl_private.h"]}
+  transitiveIncludes={["lv_opengles_debug.h", "lv_opengles_private.h", "lv_rb_private.h"]}
+/>

@@ -1,0 +1,102 @@
+---
+title: lv_text_ap.h
+description: API reference for lv_text_ap.h
+api:
+  functions: [lv_text_ap_strlen, lv_text_ap_proc]
+  macros: [LV_UNDEF_ARABIC_PERSIAN_CHARS, LV_AP_ALPHABET_BASE_CODE, LV_AP_END_CHARS_LIST]
+---
+
+<ApiSummary functions={2} macros={3} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_text_ap_strlen" file="api-private/misc/lv_text_ap.h" line={46} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/misc/lv_text_ap.h#L46">
+
+### lv_text_ap_strlen
+
+Calculate the number of bytes required to store the Arabic/Persian processed version of a UTF-8 string, excluding the null terminator. Analogous to strlen() but accounts for character form substitutions (e.g. initial, medial, final, isolated forms).
+
+```c
+size_t lv_text_ap_strlen(const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `txt` | `const char *` | Null-terminated UTF-8 input string. Must not be NULL. |
+
+**Returns:** `size_t` — Number of bytes in the processed output, excluding '\0'. Allocate (lv_text_ap_strlen(txt) + 1) bytes for the output buffer.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_text_ap_proc" file="api-private/misc/lv_text_ap.h" line={64} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/misc/lv_text_ap.h#L64">
+
+### lv_text_ap_proc
+
+Process a UTF-8 string and replace Arabic/Persian characters with their correct contextual forms (isolated, initial, medial, final) based on their position within each word.
+
+The output buffer must be pre-allocated with at least (lv_text_ap_strlen(txt) + 1) bytes.
+
+Returns early if `txt` or `txt_out` are null
+
+```c
+void lv_text_ap_proc(const char *txt, char *txt_out)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `txt` | `const char *` | Null-terminated UTF-8 input string. |
+| `txt_out` | `char *` | Output buffer to write the processed UTF-8 string into. Must not overlap with `txt`. |
+
+<Callout type="info">
+Non-Arabic/Persian characters are copied to the output unchanged.
+</Callout>
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_UNDEF_ARABIC_PERSIAN_CHARS" file="api-private/misc/lv_text_ap.h" line={25} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/misc/lv_text_ap.h#L25">
+
+### LV_UNDEF_ARABIC_PERSIAN_CHARS
+
+```c
+#define LV_UNDEF_ARABIC_PERSIAN_CHARS (UINT32_MAX)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_AP_ALPHABET_BASE_CODE" file="api-private/misc/lv_text_ap.h" line={26} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/misc/lv_text_ap.h#L26">
+
+### LV_AP_ALPHABET_BASE_CODE
+
+```c
+#define LV_AP_ALPHABET_BASE_CODE 0x0622
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_AP_END_CHARS_LIST" file="api-private/misc/lv_text_ap.h" line={27} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/misc/lv_text_ap.h#L27">
+
+### LV_AP_END_CHARS_LIST
+
+```c
+#define LV_AP_END_CHARS_LIST {0,0,0,0,0,{0,0}}
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

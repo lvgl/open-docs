@@ -1,6 +1,9 @@
 {
   "title": "Eve",
   "pages": [
-    "lv_draw_eve_private_h"
+    "lv_draw_eve_h",
+    "lv_draw_eve_private_h",
+    "lv_draw_eve_ram_g_h",
+    "lv_eve_h"
   ]
 }

@@ -2,6 +2,7 @@
   "title": "Font",
   "pages": [
     "fmt_txt",
+    "font_manager",
     "lv_font_private_h"
   ]
 }

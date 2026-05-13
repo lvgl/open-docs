@@ -1,0 +1,388 @@
+---
+title: lv_draw_dave2d.h
+description: API reference for lv_draw_dave2d.h
+api:
+  functions: [lv_draw_dave2d_init, lv_draw_dave2d_image, lv_draw_dave2d_fill, lv_draw_dave2d_border, lv_draw_dave2d_box_shadow, lv_draw_dave2d_label, lv_draw_dave2d_arc, lv_draw_dave2d_line, lv_draw_dave2d_layer, lv_draw_dave2d_triangle, lv_draw_dave2d_mask_rect, lv_draw_dave2d_transform]
+  structs: [lv_draw_dave2d_unit_t]
+  macros: [D2_FIX4, D2_INT4, D2_FLOOR4, D2_CEIL4, D2_FRAC4, D2_FIX16, D2_INT16, D2_FLOOR16, D2_CEIL16, D2_FRAC16]
+---
+
+<ApiSummary functions={12} structs={1} macros={10} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_dave2d_init" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={82} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L82">
+
+### lv_draw_dave2d_init
+
+```c
+void lv_draw_dave2d_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_dave2d_image" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={84} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L84">
+
+### lv_draw_dave2d_image
+
+```c
+void lv_draw_dave2d_image(lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_dave2d_fill" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={87} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L87">
+
+### lv_draw_dave2d_fill
+
+```c
+void lv_draw_dave2d_fill(lv_draw_task_t *t, const lv_draw_fill_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_fill_dsc_t" display="const lv_draw_fill_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_dave2d_border" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={89} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L89">
+
+### lv_draw_dave2d_border
+
+```c
+void lv_draw_dave2d_border(lv_draw_task_t *t, const lv_draw_border_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_border_dsc_t" display="const lv_draw_border_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_dave2d_box_shadow" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={92} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L92">
+
+### lv_draw_dave2d_box_shadow
+
+```c
+void lv_draw_dave2d_box_shadow(lv_draw_task_t *t, const lv_draw_box_shadow_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_box_shadow_dsc_t" display="const lv_draw_box_shadow_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_dave2d_label" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={95} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L95">
+
+### lv_draw_dave2d_label
+
+```c
+void lv_draw_dave2d_label(lv_draw_task_t *t, const lv_draw_label_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_label_dsc_t" display="const lv_draw_label_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_dave2d_arc" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={97} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L97">
+
+### lv_draw_dave2d_arc
+
+```c
+void lv_draw_dave2d_arc(lv_draw_task_t *t, const lv_draw_arc_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_arc_dsc_t" display="const lv_draw_arc_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_dave2d_line" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={99} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L99">
+
+### lv_draw_dave2d_line
+
+```c
+void lv_draw_dave2d_line(lv_draw_task_t *t, const lv_draw_line_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_line_dsc_t" display="const lv_draw_line_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_dave2d_layer" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={101} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L101">
+
+### lv_draw_dave2d_layer
+
+```c
+void lv_draw_dave2d_layer(lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_dave2d_triangle" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={104} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L104">
+
+### lv_draw_dave2d_triangle
+
+```c
+void lv_draw_dave2d_triangle(lv_draw_task_t *t, const lv_draw_triangle_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_triangle_dsc_t" display="const lv_draw_triangle_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_dave2d_mask_rect" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={106} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L106">
+
+### lv_draw_dave2d_mask_rect
+
+```c
+void lv_draw_dave2d_mask_rect(lv_draw_task_t *t, const lv_draw_mask_rect_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_mask_rect_dsc_t" display="const lv_draw_mask_rect_dsc_t *" /> |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_dave2d_transform" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={109} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L109">
+
+### lv_draw_dave2d_transform
+
+```c
+void lv_draw_dave2d_transform(lv_draw_task_t *t, const lv_area_t *dest_area, const void *src_buf, int32_t src_w, int32_t src_h, int32_t src_stride, const lv_draw_image_dsc_t *draw_dsc, const lv_draw_image_sup_t *sup, lv_color_format_t cf, void *dest_buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dest_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+| `src_buf` | `const void *` |
+| `src_w` | `int32_t` |
+| `src_h` | `int32_t` |
+| `src_stride` | `int32_t` |
+| `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> |
+| `sup` | <ApiLink name="lv_draw_image_sup_t" display="const lv_draw_image_sup_t *" /> |
+| `cf` | <ApiLink name="lv_color_format_t" /> |
+| `dest_buf` | `void *` |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_dave2d_unit_t">
+
+### lv_draw_dave2d_unit_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base_unit` | <ApiLink name="lv_draw_unit_t" /> |  |
+| `task_act` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |  |
+| `sync` | `lv_thread_sync_t` |  |
+| `thread` | `lv_thread_t` |  |
+| `idx` | `uint32_t` |  |
+| `d2_handle` | `d2_device *` |  |
+| `renderbuffer` | `d2_renderbuffer *` |  |
+| `label_renderbuffer` | `d2_renderbuffer *` |  |
+| `pd2Mutex` | `lv_mutex_t *` |  |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="D2_FIX4" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={36} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L36">
+
+### D2_FIX4
+
+```c
+#define D2_FIX4(x) \
+    (((int32_t)(x)) << 4)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="D2_INT4" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={37} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L37">
+
+### D2_INT4
+
+```c
+#define D2_INT4(x) \
+    (((int32_t)(x))(x) >> 4)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="D2_FLOOR4" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={38} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L38">
+
+### D2_FLOOR4
+
+```c
+#define D2_FLOOR4(x) \
+    (((int32_t)(x))((d2_u32)(x)) & ~15u)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="D2_CEIL4" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={39} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L39">
+
+### D2_CEIL4
+
+```c
+#define D2_CEIL4(x) \
+    ((((d2_u32)(x)) + 15u) & ~15u)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="D2_FRAC4" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={40} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L40">
+
+### D2_FRAC4
+
+```c
+#define D2_FRAC4(x) \
+    (((d2_u32)(x)) & 15u)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="D2_FIX16" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={41} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L41">
+
+### D2_FIX16
+
+```c
+#define D2_FIX16(x) \
+    (((int32_t)(x)) << 16)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="D2_INT16" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={42} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L42">
+
+### D2_INT16
+
+```c
+#define D2_INT16(x) \
+    (((int32_t)(x)) >> 16)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="D2_FLOOR16" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={43} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L43">
+
+### D2_FLOOR16
+
+```c
+#define D2_FLOOR16(x) \
+    (((d2_u32)(x)) & ~65535u)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="D2_CEIL16" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={44} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L44">
+
+### D2_CEIL16
+
+```c
+#define D2_CEIL16(x) \
+    ((((d2_u32)(x)) + 65535u) & ~65535u)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="D2_FRAC16" file="api-private/draw/renesas/dave2d/lv_draw_dave2d.h" line={45} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/renesas/dave2d/lv_draw_dave2d.h#L45">
+
+### D2_FRAC16
+
+```c
+#define D2_FRAC16(x) \
+    (((d2_u32)(x)) & 65535u)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_draw_private.h", "bsp_api.h", "dave_driver.h", "lv_draw_dave2d_utils.h"]}
+  includedBy={["lv_draw_dave2d_utils.h", "lvgl_private.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_entry.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h"]}
+/>

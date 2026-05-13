@@ -1,6 +1,7 @@
 {
   "title": "Ppa",
   "pages": [
+    "lv_draw_ppa_h",
     "lv_draw_ppa_private_h"
   ]
 }

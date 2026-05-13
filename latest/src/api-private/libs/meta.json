@@ -5,8 +5,10 @@
     "ffmpeg",
     "freetype",
     "gltf",
+    "gstreamer",
     "qrcode",
     "rle",
-    "rlottie"
+    "rlottie",
+    "svg"
   ]
 }

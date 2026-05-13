@@ -2,6 +2,7 @@
   "title": "Indev",
   "pages": [
     "lv_indev_gesture_private_h",
-    "lv_indev_private_h"
+    "lv_indev_private_h",
+    "lv_indev_scroll_h"
   ]
 }

@@ -1,0 +1,64 @@
+---
+title: lv_nuttx_profiler.h
+description: API reference for lv_nuttx_profiler.h
+api:
+  functions: [lv_nuttx_profiler_init, lv_nuttx_profiler_set_file, lv_nuttx_profiler_deinit]
+---
+
+<ApiSummary functions={3} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Other (2)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_nuttx_profiler_set_file" file="api-private/drivers/nuttx/lv_nuttx_profiler.h" line={34} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/nuttx/lv_nuttx_profiler.h#L34">
+
+### lv_nuttx_profiler_set_file
+
+```c
+void lv_nuttx_profiler_set_file(const char *file)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `file` | `const char *` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_nuttx_profiler_init" file="api-private/drivers/nuttx/lv_nuttx_profiler.h" line={33} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/nuttx/lv_nuttx_profiler.h#L33">
+
+### lv_nuttx_profiler_init
+
+```c
+void lv_nuttx_profiler_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_nuttx_profiler_deinit" file="api-private/drivers/nuttx/lv_nuttx_profiler.h" line={35} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/drivers/nuttx/lv_nuttx_profiler.h#L35">
+
+### lv_nuttx_profiler_deinit
+
+```c
+void lv_nuttx_profiler_deinit(void)
+```
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

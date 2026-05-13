@@ -1,0 +1,67 @@
+---
+title: lv_objx_templ.h
+description: API reference for lv_objx_templ.h
+api:
+  functions: [lv_templ_create]
+  structs: [lv_templ_t]
+  variables: [lv_templ_class]
+---
+
+<ApiSummary functions={1} structs={1} variables={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_templ_create" file="api-private/widgets/objx_templ/lv_objx_templ.h" line={53} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/widgets/objx_templ/lv_objx_templ.h#L53">
+
+### lv_templ_create
+
+Create a templ object
+
+```c
+lv_obj_t * lv_templ_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new templ |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created bar
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_templ_t">
+
+### lv_templ_t
+
+TODO Remove these instructions Search and replace: templ -\> object short name with lower case(e.g. btn, label etc) TEMPL -\> object short name with upper case (e.g. BTN, LABEL etc.)
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `ancestor` | `lv_ANCESTOR_t` |  |
+
+
+</ApiMember>
+
+## Variables
+
+<ApiMember kind="variable" name="lv_templ_class" file="api-private/widgets/objx_templ/lv_objx_templ.h" line={42} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/widgets/objx_templ/lv_objx_templ.h#L42">
+
+### lv_templ_class
+
+```c
+const lv_obj_class_t lv_templ_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+/>

@@ -1,6 +1,9 @@
 {
   "title": "Gltf",
   "pages": [
-    "gltf_environment"
+    "gltf_data",
+    "gltf_environment",
+    "gltf_view",
+    "math"
   ]
 }

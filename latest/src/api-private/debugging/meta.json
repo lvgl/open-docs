@@ -1,7 +1,6 @@
 {
   "title": "Debugging",
   "pages": [
-    "monkey",
     "sysmon",
     "test"
   ]

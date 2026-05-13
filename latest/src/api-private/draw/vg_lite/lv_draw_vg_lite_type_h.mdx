@@ -1,0 +1,81 @@
+---
+title: lv_draw_vg_lite_type.h
+description: API reference for lv_draw_vg_lite_type.h
+api:
+  structs: [_lv_draw_vg_lite_unit_t]
+  typedefs: [lv_draw_vg_lite_unit_t]
+---
+
+<ApiSummary structs={1} typedefs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_draw_vg_lite_unit_t">
+
+### _lv_draw_vg_lite_unit_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base_unit` | <ApiLink name="lv_draw_unit_t" /> |  |
+| `task_act` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |  |
+| `current_scissor_area` | <ApiLink name="lv_area_t" /> |  |
+| `image_dsc_pending` | `struct _lv_vg_lite_pending_t *` |  |
+| `grad_ctx` | `struct _lv_vg_lite_grad_ctx_t *` |  |
+| `stroke_cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> |  |
+| `bitmap_font_cache` | <ApiLink name="lv_cache_t" display="lv_cache_t *" /> |  |
+| `bitmap_font_pending` | `struct _lv_vg_lite_pending_t *` |  |
+| `letter_pending` | `struct _lv_vg_lite_pending_t *` |  |
+| `flush_count` | `uint16_t` |  |
+| `letter_count` | `uint16_t` |  |
+| `target_buffer` | `vg_lite_buffer_t` |  |
+| `global_matrix` | `vg_lite_matrix_t` |  |
+| `global_path` | `struct _lv_vg_lite_path_t *` |  |
+| `path_in_use` | `bool` |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="_lv_draw_vg_lite_unit_t" count={19}>
+
+- `lv_draw_vg_lite_label_init` — param `u`
+- `lv_draw_vg_lite_label_deinit` — param `u`
+- `lv_vg_lite_bitmap_font_cache_init` — param `unit`
+- `lv_vg_lite_bitmap_font_cache_deinit` — param `unit`
+- `lv_vg_lite_bitmap_font_cache_get` — param `unit`
+- `lv_vg_lite_grad_ctx_create` — param `unit`
+- `lv_vg_lite_path_init` — param `unit`
+- `lv_vg_lite_path_deinit` — param `unit`
+- `lv_vg_lite_path_get` — param `unit`
+- `lv_vg_lite_path_drop` — param `unit`
+- `lv_vg_lite_stroke_init` — param `unit`
+- `lv_vg_lite_stroke_deinit` — param `unit`
+- `lv_vg_lite_stroke_get` — param `unit`
+- `lv_vg_lite_stroke_drop` — param `unit`
+- `lv_vg_lite_image_dsc_init` — param `unit`
+- `lv_vg_lite_image_dsc_deinit` — param `unit`
+- `lv_vg_lite_set_scissor_area` — param `u`
+- `lv_vg_lite_flush` — param `u`
+- `lv_vg_lite_finish` — param `u`
+
+</TypeUsedBy>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_draw_vg_lite_unit_t" file="api-private/draw/vg_lite/lv_draw_vg_lite_type.h" line={65} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/draw/vg_lite/lv_draw_vg_lite_type.h#L65">
+
+### lv_draw_vg_lite_unit_t
+
+```c
+typedef struct _lv_draw_vg_lite_unit_t lv_draw_vg_lite_unit_t
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_draw_private.h", "vg_lite.h"]}
+  includedBy={["lvgl_private.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_entry.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h"]}
+/>

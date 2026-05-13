@@ -1,0 +1,105 @@
+---
+title: lv_indev_scroll.h
+description: API reference for lv_indev_scroll.h
+api:
+  functions: [lv_indev_scroll_handler, lv_indev_scroll_throw_handler, lv_indev_scroll_throw_predict, lv_indev_scroll_get_snap_dist]
+---
+
+<ApiSummary functions={4} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (3)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_indev_scroll_get_snap_dist" file="api-private/indev/lv_indev_scroll.h" line={55} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/indev/lv_indev_scroll.h#L55">
+
+### lv_indev_scroll_get_snap_dist
+
+Get the distance of the nearest snap point
+
+```c
+void lv_indev_scroll_get_snap_dist(lv_obj_t *obj, lv_point_t *p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the object on which snap points should be found |
+| `p` | <ApiLink name="lv_point_t" display="lv_point_t *" /> | save the distance of the found snap point there |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_indev_scroll_handler" file="api-private/indev/lv_indev_scroll.h" line={34} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/indev/lv_indev_scroll.h#L34">
+
+### lv_indev_scroll_handler
+
+Handle scrolling. Called by LVGL during input device processing
+
+```c
+void lv_indev_scroll_handler(lv_indev_t *indev)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to an input device |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_scroll_throw_handler" file="api-private/indev/lv_indev_scroll.h" line={40} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/indev/lv_indev_scroll.h#L40">
+
+### lv_indev_scroll_throw_handler
+
+Handle throwing after scrolling. Called by LVGL during input device processing
+
+```c
+void lv_indev_scroll_throw_handler(lv_indev_t *indev)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to an input device |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_indev_scroll_throw_predict" file="api-private/indev/lv_indev_scroll.h" line={48} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/src/indev/lv_indev_scroll.h#L48">
+
+### lv_indev_scroll_throw_predict
+
+Predict where would a scroll throw end
+
+```c
+int32_t lv_indev_scroll_throw_predict(lv_indev_t *indev, lv_dir_t dir)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to an input device |
+| `dir` | <ApiLink name="lv_dir_t" /> | `LV_DIR_VER` or `LV_DIR_HOR` |
+
+**Returns:** `int32_t` — the difference compared to the current position when the throw would be finished
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lv_indev_private.h", "lvgl_private.h"]}
+/>

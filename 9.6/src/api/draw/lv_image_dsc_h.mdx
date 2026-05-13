@@ -12,7 +12,7 @@ api:
 
 ## Enums
 
-<ApiMember kind="enum" name="_lvimage_flags_t" file="api/draw/lv_image_dsc.h" line={37} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_image_dsc.h#L37">
+<ApiMember kind="enum" name="_lvimage_flags_t" file="api/draw/lv_image_dsc.h" line={37} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/include/lvgl/draw/lv_image_dsc.h#L37">
 
 ### _lvimage_flags_t
 
@@ -35,7 +35,7 @@ api:
 
 </ApiMember>
 
-<ApiMember kind="enum" name="lv_image_compress_t" file="api/draw/lv_image_dsc.h" line={81} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_image_dsc.h#L81">
+<ApiMember kind="enum" name="lv_image_compress_t" file="api/draw/lv_image_dsc.h" line={81} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/include/lvgl/draw/lv_image_dsc.h#L81">
 
 ### lv_image_compress_t
 
@@ -67,10 +67,11 @@ api:
 
 </ApiMember>
 
-<TypeUsedBy name="lv_image_header_t" count={2}>
+<TypeUsedBy name="lv_image_header_t" count={3}>
 
 - `lv_bin_decoder_info` — param `header`
 - `lv_image_decoder_get_info` — param `header`
+- `lv_nanovg_image_cache_get_handle` — param `header`
 
 </TypeUsedBy>
 
@@ -136,7 +137,7 @@ Struct to describe a constant image resource. It's similar to lv_draw_buf_t, but
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_image_flags_t" file="api/draw/lv_image_dsc.h" line={79} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_image_dsc.h#L79">
+<ApiMember kind="typedef" name="lv_image_flags_t" file="api/draw/lv_image_dsc.h" line={79} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/include/lvgl/draw/lv_image_dsc.h#L79">
 
 ### lv_image_flags_t
 
@@ -157,7 +158,7 @@ typedef enum _lvimage_flags_t lv_image_flags_t
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_IMAGE_HEADER_MAGIC" file="api/draw/lv_image_dsc.h" line={25} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_image_dsc.h#L25">
+<ApiMember kind="macro" name="LV_IMAGE_HEADER_MAGIC" file="api/draw/lv_image_dsc.h" line={25} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/include/lvgl/draw/lv_image_dsc.h#L25">
 
 ### LV_IMAGE_HEADER_MAGIC
 
@@ -170,7 +171,7 @@ Magic number for lvgl image, 9 means lvgl version 9 It must be neither a valid A
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_IMAGE_FLAGS_USER_MASK" file="api/draw/lv_image_dsc.h" line={31} url="https://github.com/lvgl/lvgl/tree/4a253d4f1d17971cf320405ffef17d986bdc6fd9/include/lvgl/draw/lv_image_dsc.h#L31">
+<ApiMember kind="macro" name="LV_IMAGE_FLAGS_USER_MASK" file="api/draw/lv_image_dsc.h" line={31} url="https://github.com/lvgl/lvgl/tree/9240371d457a0e4e9c8d319dd049b7f15d9492d1/include/lvgl/draw/lv_image_dsc.h#L31">
 
 ### LV_IMAGE_FLAGS_USER_MASK
 
@@ -188,5 +189,4 @@ Flags reserved for user, lvgl won't use these bits.
 <FileIncludes
   includes={["lv_conf_internal.h"]}
   includedBy={["lv_api_map_v8.h", "lv_draw_buf.h", "lv_x11.h", "lvgl.h"]}
-  transitiveIncludes={["lv_conf_kconfig.h"]}
 />
