@@ -15,6 +15,7 @@
     "others",
     "themes",
     "tick",
-    "widgets"
+    "widgets",
+    "lvgl_private_h"
   ]
 }
