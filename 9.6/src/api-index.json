@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-05-19T07:10:22.472Z",
-    "symbolCount": 8604
+    "generatedAt": "2026-05-19T09:55:06.233Z",
+    "symbolCount": 8607
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -19446,6 +19446,11 @@
       "anchor": "lv_linux_drm_mode_is_preferred",
       "kind": "function"
     },
+    "lv_linux_drm_mode_get_raw": {
+      "path": "api/drivers/display/lv_linux_drm_h",
+      "anchor": "lv_linux_drm_mode_get_raw",
+      "kind": "function"
+    },
     "lv_linux_drm_mode_t": {
       "path": "api/drivers/display/lv_linux_drm_h",
       "anchor": "lv_linux_drm_mode_t",
@@ -36714,6 +36719,16 @@
     "lv_drm_ctx_t": {
       "path": "api-private/drivers/display/drm/lv_linux_drm_egl_private_h",
       "anchor": "lv_drm_ctx_t",
+      "kind": "struct"
+    },
+    "lv_linux_drm_private.h": {
+      "path": "api-private/drivers/display/drm/lv_linux_drm_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "_lv_linux_drm_mode_t": {
+      "path": "api-private/drivers/display/drm/lv_linux_drm_private_h",
+      "anchor": "_lv_linux_drm_mode_t",
       "kind": "struct"
     },
     "lv_ft81x_defines.h": {

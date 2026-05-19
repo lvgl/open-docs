@@ -1,0 +1,30 @@
+---
+title: lv_linux_drm_private.h
+description: API reference for lv_linux_drm_private.h
+api:
+  structs: [_lv_linux_drm_mode_t]
+---
+
+<RelatedHeaders name="lv_linux_drm.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_linux_drm_mode_t">
+
+### _lv_linux_drm_mode_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `mode_info` | `drmModeModeInfo *` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "xf86drmMode.h"]}
+  includedBy={["lv_linux_drm_egl_private.h", "lvgl_private.h"]}
+/>

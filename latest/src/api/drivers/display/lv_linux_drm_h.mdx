@@ -2,18 +2,20 @@
 title: lv_linux_drm.h
 description: API reference for lv_linux_drm.h
 api:
-  functions: [lv_linux_drm_create, lv_linux_drm_set_file, lv_linux_drm_find_device_path, lv_linux_drm_set_mode_cb, lv_linux_drm_mode_get_horizontal_resolution, lv_linux_drm_mode_get_vertical_resolution, lv_linux_drm_mode_get_refresh_rate, lv_linux_drm_mode_is_preferred]
+  functions: [lv_linux_drm_create, lv_linux_drm_set_file, lv_linux_drm_find_device_path, lv_linux_drm_set_mode_cb, lv_linux_drm_mode_get_horizontal_resolution, lv_linux_drm_mode_get_vertical_resolution, lv_linux_drm_mode_get_refresh_rate, lv_linux_drm_mode_is_preferred, lv_linux_drm_mode_get_raw]
   typedefs: [lv_linux_drm_mode_t, lv_linux_drm_select_mode_cb_t]
 ---
 
-<ApiSummary functions={8} typedefs={2} />
+<RelatedHeaders name="lv_linux_drm_private.h" isPrivate={false} />
+
+<ApiSummary functions={9} typedefs={2} />
 
 ## Functions
 
-<ApiTabs items={["Setters (2)","Getters (3)","Other (3)"]}>
+<ApiTabs items={["Setters (2)","Getters (4)","Other (3)"]}>
 <ApiTab value="Setters (2)">
 
-<ApiMember kind="function" name="lv_linux_drm_set_file" file="api/drivers/display/lv_linux_drm.h" line={69} url="https://github.com/lvgl/lvgl/tree/2621eaa4f8d4bb7daa36755cd400dfe9111beda4/include/lvgl/drivers/display/lv_linux_drm.h#L69">
+<ApiMember kind="function" name="lv_linux_drm_set_file" file="api/drivers/display/lv_linux_drm.h" line={72} url="https://github.com/lvgl/lvgl/tree/5dc652237a6780f0e24c44089e6c5f87fa7f2ff2/include/lvgl/drivers/display/lv_linux_drm.h#L72">
 
 ### lv_linux_drm_set_file
 
@@ -38,7 +40,7 @@ lv_result_t lv_linux_drm_set_file(lv_display_t *disp, const char *file, int64_t 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_linux_drm_set_mode_cb" file="api/drivers/display/lv_linux_drm.h" line={91} url="https://github.com/lvgl/lvgl/tree/2621eaa4f8d4bb7daa36755cd400dfe9111beda4/include/lvgl/drivers/display/lv_linux_drm.h#L91">
+<ApiMember kind="function" name="lv_linux_drm_set_mode_cb" file="api/drivers/display/lv_linux_drm.h" line={94} url="https://github.com/lvgl/lvgl/tree/5dc652237a6780f0e24c44089e6c5f87fa7f2ff2/include/lvgl/drivers/display/lv_linux_drm.h#L94">
 
 ### lv_linux_drm_set_mode_cb
 
@@ -61,9 +63,9 @@ void lv_linux_drm_set_mode_cb(lv_display_t *disp, lv_linux_drm_select_mode_cb_t 
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Getters (3)">
+<ApiTab value="Getters (4)">
 
-<ApiMember kind="function" name="lv_linux_drm_mode_get_horizontal_resolution" file="api/drivers/display/lv_linux_drm.h" line={98} url="https://github.com/lvgl/lvgl/tree/2621eaa4f8d4bb7daa36755cd400dfe9111beda4/include/lvgl/drivers/display/lv_linux_drm.h#L98">
+<ApiMember kind="function" name="lv_linux_drm_mode_get_horizontal_resolution" file="api/drivers/display/lv_linux_drm.h" line={101} url="https://github.com/lvgl/lvgl/tree/5dc652237a6780f0e24c44089e6c5f87fa7f2ff2/include/lvgl/drivers/display/lv_linux_drm.h#L101">
 
 ### lv_linux_drm_mode_get_horizontal_resolution
 
@@ -84,7 +86,7 @@ int32_t lv_linux_drm_mode_get_horizontal_resolution(const lv_linux_drm_mode_t *m
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_linux_drm_mode_get_vertical_resolution" file="api/drivers/display/lv_linux_drm.h" line={105} url="https://github.com/lvgl/lvgl/tree/2621eaa4f8d4bb7daa36755cd400dfe9111beda4/include/lvgl/drivers/display/lv_linux_drm.h#L105">
+<ApiMember kind="function" name="lv_linux_drm_mode_get_vertical_resolution" file="api/drivers/display/lv_linux_drm.h" line={108} url="https://github.com/lvgl/lvgl/tree/5dc652237a6780f0e24c44089e6c5f87fa7f2ff2/include/lvgl/drivers/display/lv_linux_drm.h#L108">
 
 ### lv_linux_drm_mode_get_vertical_resolution
 
@@ -105,7 +107,7 @@ int32_t lv_linux_drm_mode_get_vertical_resolution(const lv_linux_drm_mode_t *mod
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_linux_drm_mode_get_refresh_rate" file="api/drivers/display/lv_linux_drm.h" line={112} url="https://github.com/lvgl/lvgl/tree/2621eaa4f8d4bb7daa36755cd400dfe9111beda4/include/lvgl/drivers/display/lv_linux_drm.h#L112">
+<ApiMember kind="function" name="lv_linux_drm_mode_get_refresh_rate" file="api/drivers/display/lv_linux_drm.h" line={115} url="https://github.com/lvgl/lvgl/tree/5dc652237a6780f0e24c44089e6c5f87fa7f2ff2/include/lvgl/drivers/display/lv_linux_drm.h#L115">
 
 ### lv_linux_drm_mode_get_refresh_rate
 
@@ -126,10 +128,31 @@ int32_t lv_linux_drm_mode_get_refresh_rate(const lv_linux_drm_mode_t *mode)
 
 </ApiMember>
 
+<ApiMember kind="function" name="lv_linux_drm_mode_get_raw" file="api/drivers/display/lv_linux_drm.h" line={130} url="https://github.com/lvgl/lvgl/tree/5dc652237a6780f0e24c44089e6c5f87fa7f2ff2/include/lvgl/drivers/display/lv_linux_drm.h#L130">
+
+### lv_linux_drm_mode_get_raw
+
+Get the underlying DRM mode object.
+
+```c
+void * lv_linux_drm_mode_get_raw(const lv_linux_drm_mode_t *mode)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `mode` | <ApiLink name="lv_linux_drm_mode_t" display="const lv_linux_drm_mode_t *" /> | pointer to the DRM mode object |
+
+**Returns:** `void *` — pointer to the underlying drmModeModeInfo, or NULL if mode is invalid. Requires including \<xf86drmMode.h\> to dereference.
+
+
+</ApiMember>
+
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_linux_drm_create" file="api/drivers/display/lv_linux_drm.h" line={55} url="https://github.com/lvgl/lvgl/tree/2621eaa4f8d4bb7daa36755cd400dfe9111beda4/include/lvgl/drivers/display/lv_linux_drm.h#L55">
+<ApiMember kind="function" name="lv_linux_drm_create" file="api/drivers/display/lv_linux_drm.h" line={58} url="https://github.com/lvgl/lvgl/tree/5dc652237a6780f0e24c44089e6c5f87fa7f2ff2/include/lvgl/drivers/display/lv_linux_drm.h#L58">
 
 ### lv_linux_drm_create
 
@@ -146,7 +169,7 @@ lv_display_t * lv_linux_drm_create(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_linux_drm_find_device_path" file="api/drivers/display/lv_linux_drm.h" line={80} url="https://github.com/lvgl/lvgl/tree/2621eaa4f8d4bb7daa36755cd400dfe9111beda4/include/lvgl/drivers/display/lv_linux_drm.h#L80">
+<ApiMember kind="function" name="lv_linux_drm_find_device_path" file="api/drivers/display/lv_linux_drm.h" line={83} url="https://github.com/lvgl/lvgl/tree/5dc652237a6780f0e24c44089e6c5f87fa7f2ff2/include/lvgl/drivers/display/lv_linux_drm.h#L83">
 
 ### lv_linux_drm_find_device_path
 
@@ -163,7 +186,7 @@ char * lv_linux_drm_find_device_path(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_linux_drm_mode_is_preferred" file="api/drivers/display/lv_linux_drm.h" line={119} url="https://github.com/lvgl/lvgl/tree/2621eaa4f8d4bb7daa36755cd400dfe9111beda4/include/lvgl/drivers/display/lv_linux_drm.h#L119">
+<ApiMember kind="function" name="lv_linux_drm_mode_is_preferred" file="api/drivers/display/lv_linux_drm.h" line={122} url="https://github.com/lvgl/lvgl/tree/5dc652237a6780f0e24c44089e6c5f87fa7f2ff2/include/lvgl/drivers/display/lv_linux_drm.h#L122">
 
 ### lv_linux_drm_mode_is_preferred
 
@@ -188,27 +211,30 @@ bool lv_linux_drm_mode_is_preferred(const lv_linux_drm_mode_t *mode)
 </ApiTabs>
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_linux_drm_mode_t" file="api/drivers/display/lv_linux_drm.h" line={30} url="https://github.com/lvgl/lvgl/tree/2621eaa4f8d4bb7daa36755cd400dfe9111beda4/include/lvgl/drivers/display/lv_linux_drm.h#L30">
+<ApiMember kind="typedef" name="lv_linux_drm_mode_t" file="api/drivers/display/lv_linux_drm.h" line={33} url="https://github.com/lvgl/lvgl/tree/5dc652237a6780f0e24c44089e6c5f87fa7f2ff2/include/lvgl/drivers/display/lv_linux_drm.h#L33">
 
 ### lv_linux_drm_mode_t
 
 ```c
-typedef drmModeModeInfo lv_linux_drm_mode_t
+typedef struct _lv_linux_drm_mode_t lv_linux_drm_mode_t
 ```
+
+DRM display mode information. Contains the essential display parameters for mode selection.
 
 
 </ApiMember>
 
-<TypeUsedBy name="lv_linux_drm_mode_t" count={4}>
+<TypeUsedBy name="lv_linux_drm_mode_t" count={5}>
 
 - `lv_linux_drm_mode_get_horizontal_resolution` — param `mode`
 - `lv_linux_drm_mode_get_vertical_resolution` — param `mode`
 - `lv_linux_drm_mode_get_refresh_rate` — param `mode`
 - `lv_linux_drm_mode_is_preferred` — param `mode`
+- `lv_linux_drm_mode_get_raw` — param `mode`
 
 </TypeUsedBy>
 
-<ApiMember kind="typedef" name="lv_linux_drm_select_mode_cb_t" file="api/drivers/display/lv_linux_drm.h" line={39} url="https://github.com/lvgl/lvgl/tree/2621eaa4f8d4bb7daa36755cd400dfe9111beda4/include/lvgl/drivers/display/lv_linux_drm.h#L39">
+<ApiMember kind="typedef" name="lv_linux_drm_select_mode_cb_t" file="api/drivers/display/lv_linux_drm.h" line={42} url="https://github.com/lvgl/lvgl/tree/5dc652237a6780f0e24c44089e6c5f87fa7f2ff2/include/lvgl/drivers/display/lv_linux_drm.h#L42">
 
 ### lv_linux_drm_select_mode_cb_t
 
@@ -230,7 +256,7 @@ Callback function type for selecting a DRM display mode
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_display.h", "xf86drmMode.h"]}
+  includes={["lv_display.h"]}
   includedBy={["lvgl.h"]}
   transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_event.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_timer.h", "lv_types.h"]}
 />
