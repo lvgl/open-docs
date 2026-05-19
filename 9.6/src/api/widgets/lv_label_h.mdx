@@ -2,7 +2,7 @@
 title: lv_label.h
 description: API reference for lv_label.h
 api:
-  functions: [lv_label_create, lv_label_set_text, lv_label_set_text_fmt, lv_label_set_text_vfmt, lv_label_set_text_static, lv_label_set_long_mode, lv_label_set_text_selection_start, lv_label_set_text_selection_end, lv_label_set_recolor, lv_label_set_translation_tag, lv_label_get_text, lv_label_get_long_mode, lv_label_get_letter_pos, lv_label_get_letter_on, lv_label_is_char_under_pos, lv_label_get_text_selection_start, lv_label_get_text_selection_end, lv_label_get_recolor, lv_label_bind_text, lv_label_ins_text, lv_label_cut_text]
+  functions: [lv_label_create, lv_label_set_text, lv_label_set_text_fmt, lv_label_set_text_vfmt, lv_label_set_text_static, lv_label_set_long_mode, lv_label_set_max_lines, lv_label_set_text_selection_start, lv_label_set_text_selection_end, lv_label_set_recolor, lv_label_set_translation_tag, lv_label_get_text, lv_label_get_long_mode, lv_label_get_max_lines, lv_label_get_letter_pos, lv_label_get_letter_on, lv_label_is_char_under_pos, lv_label_get_text_selection_start, lv_label_get_text_selection_end, lv_label_get_recolor, lv_label_bind_text, lv_label_ins_text, lv_label_cut_text]
   enums: [lv_label_long_mode_t, _lv_property_label_id_t]
   macros: [LV_LABEL_DOT_NUM, LV_LABEL_POS_LAST, LV_LABEL_TEXT_SELECTION_OFF, LV_LABEL_DEFAULT_TEXT]
   variables: [lv_label_class]
@@ -10,14 +10,14 @@ api:
 
 <RelatedHeaders name="lv_label_private.h" isPrivate={false} />
 
-<ApiSummary functions={21} enums={2} macros={4} variables={1} />
+<ApiSummary functions={23} enums={2} macros={4} variables={1} />
 
 ## Functions
 
-<ApiTabs items={["Setters (9)","Getters (7)","Other (5)"]}>
-<ApiTab value="Setters (9)">
+<ApiTabs items={["Setters (10)","Getters (8)","Other (5)"]}>
+<ApiTab value="Setters (10)">
 
-<ApiMember kind="function" name="lv_label_set_text" file="api/widgets/lv_label.h" line={91} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L91">
+<ApiMember kind="function" name="lv_label_set_text" file="api/widgets/lv_label.h" line={92} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L92">
 
 ### lv_label_set_text
 
@@ -41,7 +41,7 @@ If `LV_USE_ARABIC_PERSIAN_CHARS` is enabled the text will be modified to have th
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_set_text_fmt" file="api/widgets/lv_label.h" line={103} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L103">
+<ApiMember kind="function" name="lv_label_set_text_fmt" file="api/widgets/lv_label.h" line={104} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L104">
 
 ### lv_label_set_text_fmt
 
@@ -66,7 +66,7 @@ If `LV_USE_ARABIC_PERSIAN_CHARS` is enabled the text will be modified to have th
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_set_text_vfmt" file="api/widgets/lv_label.h" line={120} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L120">
+<ApiMember kind="function" name="lv_label_set_text_vfmt" file="api/widgets/lv_label.h" line={121} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L121">
 
 ### lv_label_set_text_vfmt
 
@@ -98,7 +98,7 @@ It ignores `LV_USE_ARABIC_PERSIAN_CHARS`
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_set_text_static" file="api/widgets/lv_label.h" line={129} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L129">
+<ApiMember kind="function" name="lv_label_set_text_static" file="api/widgets/lv_label.h" line={130} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L130">
 
 ### lv_label_set_text_static
 
@@ -122,7 +122,7 @@ It ignores `LV_USE_ARABIC_PERSIAN_CHARS`
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_set_long_mode" file="api/widgets/lv_label.h" line={137} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L137">
+<ApiMember kind="function" name="lv_label_set_long_mode" file="api/widgets/lv_label.h" line={138} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L138">
 
 ### lv_label_set_long_mode
 
@@ -142,7 +142,27 @@ void lv_label_set_long_mode(lv_obj_t *obj, lv_label_long_mode_t long_mode)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_set_text_selection_start" file="api/widgets/lv_label.h" line={144} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L144">
+<ApiMember kind="function" name="lv_label_set_max_lines" file="api/widgets/lv_label.h" line={146} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L146">
+
+### lv_label_set_max_lines
+
+Set the maximum number of lines that the label should display in `LV_LABEL_LONG_MODE_WRAP` and `LV_LABEL_LONG_MODE_DOTS` mode.
+
+```c
+void lv_label_set_max_lines(lv_obj_t *obj, int32_t lines)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a label object |
+| `lines` | `int32_t` | number of lines to display (unlimited if not positive) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_set_text_selection_start" file="api/widgets/lv_label.h" line={153} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L153">
 
 ### lv_label_set_text_selection_start
 
@@ -162,7 +182,7 @@ void lv_label_set_text_selection_start(lv_obj_t *obj, uint32_t index)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_set_text_selection_end" file="api/widgets/lv_label.h" line={151} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L151">
+<ApiMember kind="function" name="lv_label_set_text_selection_end" file="api/widgets/lv_label.h" line={160} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L160">
 
 ### lv_label_set_text_selection_end
 
@@ -182,7 +202,7 @@ void lv_label_set_text_selection_end(lv_obj_t *obj, uint32_t index)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_set_recolor" file="api/widgets/lv_label.h" line={159} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L159">
+<ApiMember kind="function" name="lv_label_set_recolor" file="api/widgets/lv_label.h" line={168} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L168">
 
 ### lv_label_set_recolor
 
@@ -202,7 +222,7 @@ void lv_label_set_recolor(lv_obj_t *obj, bool en)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_set_translation_tag" file="api/widgets/lv_label.h" line={169} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L169">
+<ApiMember kind="function" name="lv_label_set_translation_tag" file="api/widgets/lv_label.h" line={178} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L178">
 
 ### lv_label_set_translation_tag
 
@@ -223,9 +243,9 @@ void lv_label_set_translation_tag(lv_obj_t *obj, const char *tag)
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Getters (7)">
+<ApiTab value="Getters (8)">
 
-<ApiMember kind="function" name="lv_label_get_text" file="api/widgets/lv_label.h" line={183} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L183">
+<ApiMember kind="function" name="lv_label_get_text" file="api/widgets/lv_label.h" line={192} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L192">
 
 ### lv_label_get_text
 
@@ -246,7 +266,7 @@ char * lv_label_get_text(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_get_long_mode" file="api/widgets/lv_label.h" line={190} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L190">
+<ApiMember kind="function" name="lv_label_get_long_mode" file="api/widgets/lv_label.h" line={199} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L199">
 
 ### lv_label_get_long_mode
 
@@ -267,7 +287,28 @@ lv_label_long_mode_t lv_label_get_long_mode(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_get_letter_pos" file="api/widgets/lv_label.h" line={199} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L199">
+<ApiMember kind="function" name="lv_label_get_max_lines" file="api/widgets/lv_label.h" line={206} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L206">
+
+### lv_label_get_max_lines
+
+Get the maximum number of lines that a label should display
+
+```c
+int32_t lv_label_get_max_lines(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a label object |
+
+**Returns:** `int32_t` — the maximum number of lines, if positive
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_label_get_letter_pos" file="api/widgets/lv_label.h" line={215} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L215">
 
 ### lv_label_get_letter_pos
 
@@ -288,7 +329,7 @@ void lv_label_get_letter_pos(const lv_obj_t *obj, uint32_t char_id, lv_point_t *
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_get_letter_on" file="api/widgets/lv_label.h" line={209} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L209">
+<ApiMember kind="function" name="lv_label_get_letter_on" file="api/widgets/lv_label.h" line={225} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L225">
 
 ### lv_label_get_letter_on
 
@@ -311,7 +352,7 @@ uint32_t lv_label_get_letter_on(const lv_obj_t *obj, lv_point_t *pos_in, bool bi
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_get_text_selection_start" file="api/widgets/lv_label.h" line={224} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L224">
+<ApiMember kind="function" name="lv_label_get_text_selection_start" file="api/widgets/lv_label.h" line={240} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L240">
 
 ### lv_label_get_text_selection_start
 
@@ -332,7 +373,7 @@ uint32_t lv_label_get_text_selection_start(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_get_text_selection_end" file="api/widgets/lv_label.h" line={231} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L231">
+<ApiMember kind="function" name="lv_label_get_text_selection_end" file="api/widgets/lv_label.h" line={247} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L247">
 
 ### lv_label_get_text_selection_end
 
@@ -353,7 +394,7 @@ uint32_t lv_label_get_text_selection_end(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_get_recolor" file="api/widgets/lv_label.h" line={238} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L238">
+<ApiMember kind="function" name="lv_label_get_recolor" file="api/widgets/lv_label.h" line={254} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L254">
 
 ### lv_label_get_recolor
 
@@ -377,7 +418,7 @@ bool lv_label_get_recolor(const lv_obj_t *obj)
 </ApiTab>
 <ApiTab value="Other (5)">
 
-<ApiMember kind="function" name="lv_label_create" file="api/widgets/lv_label.h" line={78} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L78">
+<ApiMember kind="function" name="lv_label_create" file="api/widgets/lv_label.h" line={79} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L79">
 
 ### lv_label_create
 
@@ -398,7 +439,7 @@ lv_obj_t * lv_label_create(lv_obj_t *parent)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_is_char_under_pos" file="api/widgets/lv_label.h" line={217} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L217">
+<ApiMember kind="function" name="lv_label_is_char_under_pos" file="api/widgets/lv_label.h" line={233} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L233">
 
 ### lv_label_is_char_under_pos
 
@@ -420,7 +461,7 @@ bool lv_label_is_char_under_pos(const lv_obj_t *obj, lv_point_t *pos)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_bind_text" file="api/widgets/lv_label.h" line={255} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L255">
+<ApiMember kind="function" name="lv_label_bind_text" file="api/widgets/lv_label.h" line={271} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L271">
 
 ### lv_label_bind_text
 
@@ -447,7 +488,7 @@ If `fmt == NULL` strings and pointers (`\0` terminated string) will be shown as 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_ins_text" file="api/widgets/lv_label.h" line={266} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L266">
+<ApiMember kind="function" name="lv_label_ins_text" file="api/widgets/lv_label.h" line={282} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L282">
 
 ### lv_label_ins_text
 
@@ -468,7 +509,7 @@ void lv_label_ins_text(lv_obj_t *obj, uint32_t pos, const char *txt)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_label_cut_text" file="api/widgets/lv_label.h" line={275} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L275">
+<ApiMember kind="function" name="lv_label_cut_text" file="api/widgets/lv_label.h" line={291} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L291">
 
 ### lv_label_cut_text
 
@@ -493,7 +534,7 @@ void lv_label_cut_text(lv_obj_t *obj, uint32_t pos, uint32_t cnt)
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_label_long_mode_t" file="api/widgets/lv_label.h" line={49} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L49">
+<ApiMember kind="enum" name="lv_label_long_mode_t" file="api/widgets/lv_label.h" line={49} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L49">
 
 ### lv_label_long_mode_t
 
@@ -516,7 +557,7 @@ Long mode behaviors. Used in 'lv_label_ext_t'
 
 </TypeUsedBy>
 
-<ApiMember kind="enum" name="_lv_property_label_id_t" file="api/widgets/lv_label.h" line={58} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L58">
+<ApiMember kind="enum" name="_lv_property_label_id_t" file="api/widgets/lv_label.h" line={58} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L58">
 
 ### _lv_property_label_id_t
 
@@ -524,8 +565,9 @@ Long mode behaviors. Used in 'lv_label_ext_t'
 |------|------|
 | `LV_PROPERTY_LABEL_TEXT` | `(LV_PROPERTY_LABEL_START + ((int) 0 )) \| ((  7   ) <<  28 )` |
 | `LV_PROPERTY_LABEL_LONG_MODE` | `(LV_PROPERTY_LABEL_START + ((int) 1 )) \| ((  1   ) <<  28 )` |
-| `LV_PROPERTY_LABEL_TEXT_SELECTION_START` | `(LV_PROPERTY_LABEL_START + ((int) 2 )) \| ((  1   ) <<  28 )` |
-| `LV_PROPERTY_LABEL_TEXT_SELECTION_END` | `(LV_PROPERTY_LABEL_START + ((int) 3 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_LABEL_MAX_LINES` | `(LV_PROPERTY_LABEL_START + ((int) 2 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_LABEL_TEXT_SELECTION_START` | `(LV_PROPERTY_LABEL_START + ((int) 3 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_LABEL_TEXT_SELECTION_END` | `(LV_PROPERTY_LABEL_START + ((int) 4 )) \| ((  1   ) <<  28 )` |
 | `LV_PROPERTY_LABEL_END` |  |
 
 
@@ -533,7 +575,7 @@ Long mode behaviors. Used in 'lv_label_ext_t'
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_LABEL_DOT_NUM" file="api/widgets/lv_label.h" line={31} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L31">
+<ApiMember kind="macro" name="LV_LABEL_DOT_NUM" file="api/widgets/lv_label.h" line={31} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L31">
 
 ### LV_LABEL_DOT_NUM
 
@@ -544,7 +586,7 @@ Long mode behaviors. Used in 'lv_label_ext_t'
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LABEL_POS_LAST" file="api/widgets/lv_label.h" line={32} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L32">
+<ApiMember kind="macro" name="LV_LABEL_POS_LAST" file="api/widgets/lv_label.h" line={32} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L32">
 
 ### LV_LABEL_POS_LAST
 
@@ -555,7 +597,7 @@ Long mode behaviors. Used in 'lv_label_ext_t'
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LABEL_TEXT_SELECTION_OFF" file="api/widgets/lv_label.h" line={33} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L33">
+<ApiMember kind="macro" name="LV_LABEL_TEXT_SELECTION_OFF" file="api/widgets/lv_label.h" line={33} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L33">
 
 ### LV_LABEL_TEXT_SELECTION_OFF
 
@@ -566,7 +608,7 @@ Long mode behaviors. Used in 'lv_label_ext_t'
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LABEL_DEFAULT_TEXT" file="api/widgets/lv_label.h" line={35} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L35">
+<ApiMember kind="macro" name="LV_LABEL_DEFAULT_TEXT" file="api/widgets/lv_label.h" line={35} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L35">
 
 ### LV_LABEL_DEFAULT_TEXT
 
@@ -579,7 +621,7 @@ Long mode behaviors. Used in 'lv_label_ext_t'
 
 ## Variables
 
-<ApiMember kind="variable" name="lv_label_class" file="api/widgets/lv_label.h" line={67} url="https://github.com/lvgl/lvgl/tree/18b5601616fd348932a1673015479fabc98b97e6/include/lvgl/widgets/lv_label.h#L67">
+<ApiMember kind="variable" name="lv_label_class" file="api/widgets/lv_label.h" line={68} url="https://github.com/lvgl/lvgl/tree/fe76cc23cfbf843f8e89f4c6dce8fba8631d0b2a/include/lvgl/widgets/lv_label.h#L68">
 
 ### lv_label_class
 

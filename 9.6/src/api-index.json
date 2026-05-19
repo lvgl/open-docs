@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-05-19T17:53:13.437Z",
-    "symbolCount": 8607
+    "generatedAt": "2026-05-19T18:52:38.658Z",
+    "symbolCount": 8611
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -13059,6 +13059,11 @@
     "lv_display_set_flush_cb": {
       "path": "api/display/lv_display_h",
       "anchor": "lv_display_set_flush_cb",
+      "kind": "function"
+    },
+    "lv_display_get_flush_cb": {
+      "path": "api/display/lv_display_h",
+      "anchor": "lv_display_get_flush_cb",
       "kind": "function"
     },
     "lv_display_set_flush_wait_cb": {
@@ -29901,6 +29906,11 @@
       "anchor": "lv_label_set_long_mode",
       "kind": "function"
     },
+    "lv_label_set_max_lines": {
+      "path": "api/widgets/lv_label_h",
+      "anchor": "lv_label_set_max_lines",
+      "kind": "function"
+    },
     "lv_label_set_text_selection_start": {
       "path": "api/widgets/lv_label_h",
       "anchor": "lv_label_set_text_selection_start",
@@ -29929,6 +29939,11 @@
     "lv_label_get_long_mode": {
       "path": "api/widgets/lv_label_h",
       "anchor": "lv_label_get_long_mode",
+      "kind": "function"
+    },
+    "lv_label_get_max_lines": {
+      "path": "api/widgets/lv_label_h",
+      "anchor": "lv_label_get_max_lines",
       "kind": "function"
     },
     "lv_label_get_letter_pos": {
@@ -30017,6 +30032,11 @@
       "kind": "enumvalue"
     },
     "LV_PROPERTY_LABEL_LONG_MODE": {
+      "path": "api/widgets/lv_label_h",
+      "anchor": "_lv_property_label_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_LABEL_MAX_LINES": {
       "path": "api/widgets/lv_label_h",
       "anchor": "_lv_property_label_id_t",
       "kind": "enumvalue"
