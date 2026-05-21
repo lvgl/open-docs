@@ -5,14 +5,39 @@ order: 85
 
 A rendered indicator drawn as a glowing rectangle, controlled via `lv_led_on`, `lv_led_off`, and `lv_led_set_brightness`. Not tied to hardware.
 
-## Three LEDs at different brightness
+## Led Brightness
 
-<LvglExampleBrief>One LED off, one dimmed red at mid brightness, and one fully on.</LvglExampleBrief>
+### LED brightness
 
-Three `lv_led` objects are placed left of centre, at centre, and
-right of centre. The first is turned off with `lv_led_off`, the
-second is tinted red via `lv_led_set_color` and dimmed to
-brightness 150 with `lv_led_set_brightness`, and the third is
-switched on with `lv_led_on`.
+<LvglExampleBrief>Same hue, three different brightness values.</LvglExampleBrief>
 
-<LvglExample name="lv_example_led_1" path="widgets/led/lv_example_led_1" />
+The brightness attribute scales how lit each LED appears, in the 0..255 range. With
+lower brightness the color darkens; with 255 it reaches the configured peak. The
+three LEDs share one color so the effect of brightness alone is visible.
+
+<LvglExample name="lv_example_led_brightness" path="widgets/led/led_brightness/lv_example_led_brightness" />
+
+## Led Color
+
+### LED color
+
+<LvglExampleBrief>Three LEDs lit in different hues via the color attribute.</LvglExampleBrief>
+
+The color attribute sets the LED's background, border, and shadow color together, so
+a single value drives the whole lit-bulb look. Brightness stays at the default here
+to isolate the effect of changing the color alone.
+
+<LvglExample name="lv_example_led_color" path="widgets/led/led_color/lv_example_led_color" />
+
+## Led Styling
+
+### LED styling
+
+<LvglExampleBrief>Push the LED past its color attribute with border, outline, shadow, and shape.</LvglExampleBrief>
+
+The color attribute drives the base lit look, but the LED is still a base widget so
+the border / outline / shadow / radius stack all apply. The first LED keeps the round
+default with a ring outline + glow; the second uses a small radius to render as a
+square indicator with a hard border instead.
+
+<LvglExample name="lv_example_led_styling" path="widgets/led/led_styling/lv_example_led_styling" />

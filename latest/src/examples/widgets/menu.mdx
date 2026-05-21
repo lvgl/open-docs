@@ -3,34 +3,6 @@ title: "Menu"
 order: 105
 ---
 
-## Basic menu with sub page
-
-<LvglExampleBrief>A three-item main page whose third entry opens a hidden sub page.</LvglExampleBrief>
-
-A display-sized `lv_menu` holds a main page with three
-`lv_menu_cont` items labeled `Item 1`, `Item 2`, and
-`Item 3 (Click me!)`. A separate sub page created with
-`lv_menu_page_create` carries a greeting label, and
-`lv_menu_set_load_page_event` wires the third item to load that sub
-page when clicked. `lv_menu_set_page` opens the main page.
-
-<LvglExample name="lv_example_menu_1" path="widgets/menu/lv_example_menu_1" />
-
-## Menu with root back button
-
-<LvglExampleBrief>A menu whose always-visible root back button pops a message box when tapped.</LvglExampleBrief>
-
-`lv_menu_set_mode_root_back_button` turns on
-`LV_MENU_ROOT_BACK_BUTTON_ENABLED` so the back button remains on
-the header at the top of the navigation stack. The main page holds
-three items and the third opens a sub page through
-`lv_menu_set_load_page_event`. A `LV_EVENT_CLICKED` handler calls
-`lv_menu_back_button_is_root` and, when true, creates an
-`lv_msgbox` with title `Hello`, text `Root back btn click.`, and a
-close button.
-
-<LvglExample name="lv_example_menu_2" path="widgets/menu/lv_example_menu_2" />
-
 ## Customized back button header
 
 <LvglExampleBrief>A menu with a labeled "Back" button in the header and three titled sub pages.</LvglExampleBrief>
@@ -41,7 +13,7 @@ icon. The main page lists three items, each wired with
 `lv_menu_set_load_page_event` to sub pages titled `Page 1` through
 `Page 3` created via `lv_menu_page_create`.
 
-<LvglExample name="lv_example_menu_3" path="widgets/menu/lv_example_menu_3" />
+<LvglExample name="lv_example_menu_custom_back_button" path="widgets/menu/lv_example_menu_custom_back_button" />
 
 ## Menu with floating add button
 
@@ -56,7 +28,22 @@ page and a new main-page row labeled `Item N`, links them with
 `lv_menu_set_load_page_event`, and calls
 `lv_obj_scroll_to_view_recursive` so the fresh row stays visible.
 
-<LvglExample name="lv_example_menu_4" path="widgets/menu/lv_example_menu_4" />
+<LvglExample name="lv_example_menu_floating_button" path="widgets/menu/lv_example_menu_floating_button" />
+
+## Menu with root back button
+
+<LvglExampleBrief>A menu whose always-visible root back button pops a message box when tapped.</LvglExampleBrief>
+
+`lv_menu_set_mode_root_back_button` turns on
+`LV_MENU_ROOT_BACK_BUTTON_ENABLED` so the back button remains on
+the header at the top of the navigation stack. The main page holds
+three items and the third opens a sub page through
+`lv_menu_set_load_page_event`. A `LV_EVENT_CLICKED` handler calls
+`lv_menu_back_button_is_root` and, when true, creates an
+`lv_msgbox` with title `Hello`, text `Root back btn click.`, and a
+close button.
+
+<LvglExample name="lv_example_menu_root_back_button" path="widgets/menu/lv_example_menu_root_back_button" />
 
 ## Settings menu with sidebar mode
 
@@ -73,4 +60,17 @@ back button is enabled and a `LV_EVENT_CLICKED` handler on the menu
 pops an `lv_msgbox` saying `Root back btn click.` when the root
 back arrow is used.
 
-<LvglExample name="lv_example_menu_5" path="widgets/menu/lv_example_menu_5" />
+<LvglExample name="lv_example_menu_sidebar" path="widgets/menu/lv_example_menu_sidebar" />
+
+## Basic menu with sub page
+
+<LvglExampleBrief>A three-item main page whose third entry opens a hidden sub page.</LvglExampleBrief>
+
+A display-sized `lv_menu` holds a main page with three
+`lv_menu_cont` items labeled `Item 1`, `Item 2`, and
+`Item 3 (Click me!)`. A separate sub page created with
+`lv_menu_page_create` carries a greeting label, and
+`lv_menu_set_load_page_event` wires the third item to load that sub
+page when clicked. `lv_menu_set_page` opens the main page.
+
+<LvglExample name="lv_example_menu_sub_page" path="widgets/menu/lv_example_menu_sub_page" />

@@ -3,30 +3,70 @@ title: "Tabview"
 order: 155
 ---
 
-## Horizontal tab view with three tabs
+## Tabview Active Tab
 
-<LvglExampleBrief>Three tabs across the top with a scrollable long label in the first.</LvglExampleBrief>
+### Tab view active tab on creation
 
-`lv_tabview_create` fills the active screen and
-`lv_tabview_add_tab` adds `Tab 1`, `Tab 2`, and `Tab 3`. Tab 1 holds
-a tall multi-line label that exceeds the tab height so it becomes
-scrollable, while Tab 2 and Tab 3 carry short labels. A final
-`lv_obj_scroll_to_view_recursive` on the third-tab label scrolls it
-into view with `LV_ANIM_ON`.
+<LvglExampleBrief>Open a specific tab on first display via the `active` prop.</LvglExampleBrief>
 
-<LvglExample name="lv_example_tabview_1" path="widgets/tabview/lv_example_tabview_1" />
+`active` takes a 0-based tab index. Setting `active="2"` makes the third tab
+("C") open when the screen first appears, so the user lands directly on a
+specific tab without having to tap or swipe.
 
-## Left-side vertical tab view
+<LvglExample name="lv_example_tabview_active_tab" path="widgets/tabview/tabview_active_tab/lv_example_tabview_active_tab" />
 
-<LvglExampleBrief>Five tabs arranged along the left edge with custom colors and swipe scrolling disabled.</LvglExampleBrief>
+## Tabview Basic
 
-`lv_tabview_set_tab_bar_position` sets `LV_DIR_LEFT` and
-`lv_tabview_set_tab_bar_size` reserves 80 px for the tab bar. The
-tab bar is painted dark grey over a red-tinted view body, and each
-tab button gets a right border on `LV_STATE_CHECKED` through
-`lv_obj_set_style_border_side`. Five tabs labeled `Tab 1` to
-`Tab 5` each carry a small label, the second tab is tinted amber,
-and `LV_OBJ_FLAG_SCROLLABLE` is removed from the content so swipes
-no longer pan between tabs.
+### Tab view basic structure
 
-<LvglExample name="lv_example_tabview_2" path="widgets/tabview/lv_example_tabview_2" />
+<LvglExampleBrief>Three tabs hosting plain labels, demonstrating the minimal markup.</LvglExampleBrief>
+
+An `lv_tabview` carries three `lv_tabview-tab` children. The `text` arg sets
+each tab's button caption and the children of a tab become its content. No
+`tab_bar_position` or `active` is set, so the bar sits on the top edge and
+the first tab opens.
+
+<LvglExample name="lv_example_tabview_basic" path="widgets/tabview/tabview_basic/lv_example_tabview_basic" />
+
+## Tabview Tab Bar Position
+
+### Tab view tab bar position
+
+<LvglExampleBrief>Place the tab bar on any of the four sides.</LvglExampleBrief>
+
+Four mini tab views lay out a 2×2 grid covering every `tab_bar_position` value:
+`top`, `bottom`, `left`, `right`. Each carries a distinct `style_bg_color` so
+the four widgets are easy to tell apart at a glance; only `tab_bar_position`
+changes the layout itself.
+
+<LvglExample name="lv_example_tabview_tab_bar_position" path="widgets/tabview/tabview_tab_bar_position/lv_example_tabview_tab_bar_position" />
+
+## Tabview Tab Bar Style
+
+### Tab view styling spots
+
+<LvglExampleBrief>Three independent style targets: tab view body, tab bar, and a single tab.</LvglExampleBrief>
+
+The tab view body gets a dark `style_bg_color` (with `style_bg_opa="100%"` so
+it actually paints). The `<lv_tabview-tab_bar>` element overrides the bar's
+width, background, and text color. One `<lv_tabview-tab>` then sets its own
+`bg_color` + `bg_opa` to override only that tab's content area; the others
+stay transparent and let the tab view body show through. `active="1"` opens
+the styled tab first so the per-tab override is immediately visible.
+
+<LvglExample name="lv_example_tabview_tab_bar_style" path="widgets/tabview/tabview_tab_bar_style/lv_example_tabview_tab_bar_style" />
+
+## Tabview Tab Button Content
+
+### Tab view tab-button content
+
+<LvglExampleBrief>Attach a child widget to a specific tab button via `<lv_tabview-tab_button>`.</LvglExampleBrief>
+
+`<lv_tabview-tab_button index="N">` selects the implicit tab button at the
+given index so additional children can be parented to it after the tab has
+been created. Both tab buttons here pick up a small `lv_switch` beside the
+caption — handy for inline toggles or status indicators without having to
+build a custom tab bar from scratch. The tab elements come first so the
+buttons exist by the time the `_button` references attach to them.
+
+<LvglExample name="lv_example_tabview_tab_button_content" path="widgets/tabview/tabview_tab_button_content/lv_example_tabview_tab_button_content" />

@@ -3,21 +3,6 @@ title: "Table"
 order: 150
 ---
 
-## Styled table with header and zebra rows
-
-<LvglExampleBrief>Two-column fruits-and-prices table with custom header, right-aligned first column, and alternating rows.</LvglExampleBrief>
-
-A `lv_table` is filled with fruit names in column 0 and dollar prices
-in column 1. The table height is capped at 200 px so the body
-scrolls. With `LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS` set, an
-`LV_EVENT_DRAW_TASK_ADDED` callback tints the header row blue and
-center-aligns its text, right-aligns the first column's labels, and
-adds a grey wash on every other body row by editing the
-`lv_draw_fill_dsc_t` and `lv_draw_label_dsc_t` of each
-`LV_PART_ITEMS` task.
-
-<LvglExample name="lv_example_table_1" path="widgets/table/lv_example_table_1" />
-
 ## 200-row list with custom switch cell
 
 <LvglExampleBrief>Scrollable 200-item table that draws a toggle switch per row and reports build cost.</LvglExampleBrief>
@@ -31,4 +16,95 @@ track and knob whose position and color reflect the row's
 handler toggles that flag on the selected row. A bottom label reports
 the row count along with elapsed time and bytes used.
 
-<LvglExample name="lv_example_table_2" path="widgets/table/lv_example_table_2" />
+<LvglExample name="lv_example_table_scrollable_list" path="widgets/table/lv_example_table_scrollable_list" />
+
+## Table Cells
+
+### Table cell values
+
+<LvglExampleBrief>Populate a grid of cells with text using `<lv_table-cell>` children.</LvglExampleBrief>
+
+Each cell is declared with its `row`/`column` (zero-based) and a `value`
+string. Cells default to empty, so only the populated coordinates have
+visible text. `row_count`/`column_count` size the grid up front so the
+cells render in the right slots even if their declaration order doesn't
+walk row-major.
+
+<LvglExample name="lv_example_table_cells" path="widgets/table/table_cells/lv_example_table_cells" />
+
+## Table Merge Cells
+
+### Table merge cells
+
+<LvglExampleBrief>Span a cell across two columns by setting the `merge_right` control flag.</LvglExampleBrief>
+
+The `ctrl` attribute on `<lv_table-cell>` takes one or more flags joined
+with `|`. `merge_right` extends the cell into the column immediately to
+its right, hiding that neighbour's content — the header row here merges
+column 0 into column 1 so the title spans both quarters. To span more
+than two columns, chain `merge_right` on each adjacent cell except the
+last. `text_crop` is a useful companion flag when a long value would
+overflow the merged cell.
+
+<LvglExample name="lv_example_table_merge_cells" path="widgets/table/table_merge_cells/lv_example_table_merge_cells" />
+
+## Table Rows Columns
+
+### Table rows and columns
+
+<LvglExampleBrief>Set the table dimensions explicitly so the grid is sized before cells are placed.</LvglExampleBrief>
+
+`row_count` and `column_count` give the table its shape. Cells without
+declared values still occupy a slot in the grid, so the visible empty
+rows in the example are part of the layout, not leftover space. Here a
+10×2 grid is declared and only a handful of cells are populated — the
+gaps between them stay rendered as empty cells. Resizing the row/column
+counts grows or shrinks the grid; cells outside the new bounds simply
+don't render. When the row count is tall enough that the grid no longer
+fits the widget's height, the table becomes scrollable.
+
+<LvglExample name="lv_example_table_rows_columns" path="widgets/table/table_rows_columns/lv_example_table_rows_columns" />
+
+## Table Scroll
+
+### Table scrolling
+
+<LvglExampleBrief>A table whose content grid is taller than its explicit height becomes scrollable.</LvglExampleBrief>
+
+The table itself handles scrolling — when its `height` is smaller than
+the height needed to draw all rows, the rest are reachable by dragging.
+With `height="LV_SIZE_CONTENT"` (the default), the table grows to fit
+every row and the parent decides if it scrolls. Here we fix the height
+so the bottom rows are off-screen and the user has to scroll the table
+itself.
+
+<LvglExample name="lv_example_table_scroll" path="widgets/table/table_scroll/lv_example_table_scroll" />
+
+## Table Styling
+
+### Table styling
+
+<LvglExampleBrief>Style the table background and the per-cell appearance.</LvglExampleBrief>
+
+Table has two relevant parts: `MAIN` (the background and overall frame)
+and `ITEMS` (each cell — borders, padding, text). Attaching a named
+`style_items` style covers every cell uniformly. To make the header row
+stand out, attach a second style with `selector="items"` and the
+row-specific state — but XML doesn't yet have a per-row selector; instead
+set the header row's cell `ctrl` flags or restyle in code.
+
+<LvglExample name="lv_example_table_styling" path="widgets/table/table_styling/lv_example_table_styling" />
+
+## Table Width
+
+### Table column widths
+
+<LvglExampleBrief>Set per-column pixel widths through `<lv_table-column>` children.</LvglExampleBrief>
+
+By default every column gets the same width (the table's content area
+divided by `column_count`). A `<lv_table-column>` child overrides that for
+a single column: pick a column index and give it a `width` in pixels.
+Mixing default-width and explicit-width columns is fine — only the ones
+you address change.
+
+<LvglExample name="lv_example_table_width" path="widgets/table/table_width/lv_example_table_width" />

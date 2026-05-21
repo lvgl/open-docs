@@ -3,57 +3,6 @@ title: "Image"
 order: 65
 ---
 
-## Image from C array and symbol text
-
-<LvglExampleBrief>Show a compiled-in cogwheel bitmap next to a text label rendered from a symbol font.</LvglExampleBrief>
-
-Two `lv_image` widgets are placed on the active screen. The first
-calls `lv_image_set_src` with the `img_cogwheel_argb` descriptor
-declared through `LV_IMAGE_DECLARE` and is centered. The second
-points at the string `LV_SYMBOL_OK "Accept"` and is aligned below
-the first with `LV_ALIGN_OUT_BOTTOM_MID` and a 20 px offset.
-
-<LvglExample name="lv_example_image_1" path="widgets/image/lv_example_image_1" />
-
-## Image recolor with RGB sliders
-
-<LvglExampleBrief>Four sliders drive the recolor tint and intensity of a cogwheel image.</LvglExampleBrief>
-
-Red, green, blue, and intensity sliders (range 0 to 255) sit along
-the left half of the screen while the `img_cogwheel_argb` image sits
-on the right. A shared `LV_EVENT_VALUE_CHANGED` callback reads each
-slider and applies `lv_obj_set_style_image_recolor` and
-`lv_obj_set_style_image_recolor_opa` so the image retints live as
-the sliders move.
-
-<LvglExample name="lv_example_image_2" path="widgets/image/lv_example_image_2" />
-
-## Rotate and zoom around a pivot
-
-<LvglExampleBrief>Spin and scale a cogwheel image continuously around its top-left corner.</LvglExampleBrief>
-
-`lv_image_set_pivot` moves the transform origin to (0, 0) so the
-image rotates around its top-left corner. One `lv_anim_t` drives
-`lv_image_set_rotation` from 0 to 3600 over 5000 ms and repeats
-forever with `LV_ANIM_REPEAT_INFINITE`. A second animation drives
-`lv_image_set_scale` from 128 to 256 with a 3000 ms reverse phase
-so the image pulses while spinning.
-
-<LvglExample name="lv_example_image_3" path="widgets/image/lv_example_image_3" />
-
-## Image styling and vertical offset
-
-<LvglExampleBrief>Scroll the pixels of a recolored, yellow-backed strip image vertically.</LvglExampleBrief>
-
-An `lv_style_t` with a yellow background and a black recolor at
-`LV_OPA_COVER` is applied to an image that uses the
-`img_skew_strip` source and is clipped to 150x100. An infinite
-`lv_anim_t` drives `lv_image_set_offset_y` from 0 to 100 over
-3000 ms with a 500 ms reverse phase, so the visible pixels scroll
-up and back down inside the fixed frame.
-
-<LvglExample name="lv_example_image_4" path="widgets/image/lv_example_image_4" />
-
 ## SVG image with transform style
 
 <LvglExampleBrief>Display an SVG source scaled and rotated via both widget and style APIs.</LvglExampleBrief>
@@ -66,4 +15,63 @@ to 450 (45 degrees) and scale to 128 twice, once through
 `lv_image_set_rotation` and `lv_image_set_scale`, then the image is
 centered.
 
-<LvglExample name="lv_example_image_5" path="widgets/image/lv_example_image_5" />
+<LvglExample name="lv_example_image_svg" path="widgets/image/lv_example_image_svg" />
+
+## Image Inner Align
+
+### Image inner align
+
+<LvglExampleBrief>When the widget is larger than the image, `inner_align` chooses where it sits.</LvglExampleBrief>
+
+Each image widget here has a fixed 140x100 size while `img_example_lvgl_logo` is
+smaller, so the source occupies a fraction of the widget. `inner_align`
+picks how the image is positioned inside the widget box — `top_left`,
+`center`, `bottom_right` for fixed placement; `contain`, `cover`, `stretch`,
+`tile` for fit modes. A coloured background makes the unused area visible.
+
+<LvglExample name="lv_example_image_inner_align" path="widgets/image/image_inner_align/lv_example_image_inner_align" />
+
+## Image Recolor
+
+### Image recolor
+
+<LvglExampleBrief>Mix a tint into an image; a slider drives the recolor intensity live via `bind_style_prop`.</LvglExampleBrief>
+
+The image's MAIN part exposes `image_recolor` (the colour to mix in) and
+`image_recolor_opa` (the intensity, 0..255). Here `image_recolor` is set
+statically and `image_recolor_opa` is bound to `subject_opa` through
+`<bind_style_prop>`. Dragging the slider — which is also bound to
+`subject_opa` — rewrites the subject and the binding pushes the new
+intensity into the style, so the image retints in real time without any
+event callback.
+
+<LvglExample name="lv_example_image_recolor" path="widgets/image/image_recolor/lv_example_image_recolor" />
+
+## Image Src
+
+### Image source
+
+<LvglExampleBrief>Display an image registered globally for the project.</LvglExampleBrief>
+
+`lv_image` paints whatever is set as its `src`. In XML the value must
+resolve through `lv_xml_get_image`, so `src` references a name that was
+registered via `<file>` or `<data>` in `<images>` — here `img_example_lvgl_logo`
+declared in `examples/xml_project/globals.xml`. The C API also accepts
+a symbol string or a raw image variable pointer; those alternatives are
+documented in this page but cannot appear in XML.
+
+<LvglExample name="lv_example_image_src" path="widgets/image/image_src/lv_example_image_src" />
+
+## Image Transformations
+
+### Image transformations
+
+<LvglExampleBrief>Rotate and scale a single image source by setting widget attributes.</LvglExampleBrief>
+
+`rotation` is in *tenths of a degree*, so `450` means 45°. `scale_x`/
+`scale_y` use 100 = original (so `160` is 1.6×). `pivot_x`/`pivot_y` move
+the rotation/scale anchor; defaults centre on the image. All three copies
+share the same registered `img_example_lvgl_logo` source — the transforms happen
+at render time, no extra image variants needed.
+
+<LvglExample name="lv_example_image_transformations" path="widgets/image/image_transformations/lv_example_image_transformations" />

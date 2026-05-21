@@ -14,19 +14,7 @@ holds digits `0..9` plus `LV_SYMBOL_BACKSPACE` and `LV_SYMBOL_NEW_LINE`. Its
 backspace, or sends `LV_EVENT_READY` to the textarea on new line. The matrix
 drops `LV_OBJ_FLAG_CLICK_FOCUSABLE` so focus stays with the textarea.
 
-<LvglExample name="lv_example_textarea_1" path="widgets/textarea/lv_example_textarea_1" />
-
-## Password and text fields with keyboard
-
-<LvglExampleBrief>Two one-line textareas share a keyboard, one masked for password entry.</LvglExampleBrief>
-
-A left textarea has `lv_textarea_set_password_mode` enabled so input is
-masked, a right textarea keeps plain text, and each is labelled `Password:`
-or `Text:` above it. An `lv_keyboard` occupies the bottom half. A shared
-`LV_EVENT_ALL` handler retargets the keyboard on `LV_EVENT_CLICKED` or
-`LV_EVENT_FOCUSED`, and logs the text on `LV_EVENT_READY`.
-
-<LvglExample name="lv_example_textarea_2" path="widgets/textarea/lv_example_textarea_2" />
+<LvglExample name="lv_example_textarea_buttonmatrix" path="widgets/textarea/lv_example_textarea_buttonmatrix" />
 
 ## Auto-format HH:MM clock input
 
@@ -39,17 +27,40 @@ both are digits with no colon in position 2, moves the cursor and calls
 `lv_textarea_add_char(':')`. A numeric `lv_keyboard` in
 `LV_KEYBOARD_MODE_NUMBER` feeds the textarea.
 
-<LvglExample name="lv_example_textarea_3" path="widgets/textarea/lv_example_textarea_3" />
+<LvglExample name="lv_example_textarea_format" path="widgets/textarea/lv_example_textarea_format" />
 
-## Custom textarea cursor styles
+## Password text area
 
-<LvglExampleBrief>Apply three different cursor styles to three one-line textareas.</LvglExampleBrief>
+<LvglExampleBrief>Mask typed characters with password mode.</LvglExampleBrief>
 
-Three `lv_style_t` values are built for `LV_PART_CURSOR | LV_STATE_FOCUSED`.
-The simple style draws only a red border, the underline style disables the
-background and uses `LV_BORDER_SIDE_BOTTOM` with a blue 3 px border, and the
-block style fills with an orange-to-yellow vertical gradient, a red border,
-and a 4 px radius. A helper creates each textarea, forces `LV_STATE_FOCUSED`,
-and attaches one style so the cursor shape matches its label.
+A one-line textarea has `lv_textarea_set_password_mode` enabled, so each
+typed character shows briefly and then turns into a bullet. An
+`lv_keyboard` docked at the bottom is bound to the textarea so the masking
+can be tried interactively.
 
-<LvglExample name="lv_example_textarea_4" path="widgets/textarea/lv_example_textarea_4" />
+<LvglExample name="lv_example_textarea_password" path="widgets/textarea/lv_example_textarea_password" />
+
+## Textarea Cursor
+
+### Text area cursor styling
+
+<LvglExampleBrief>Style the cursor part as a solid block or a thin bar.</LvglExampleBrief>
+
+Both text areas style the `cursor` part with a named style. The first fills
+the cell with an opaque background for a block cursor; the second leaves the
+background transparent and draws only a left border for a bar cursor — the
+same part, two looks.
+
+<LvglExample name="lv_example_textarea_cursor" path="widgets/textarea/textarea_cursor/lv_example_textarea_cursor" />
+
+## Textarea Placeholder
+
+### Text area placeholder
+
+<LvglExampleBrief>Show a hint while the text area is empty.</LvglExampleBrief>
+
+Both text areas carry the same `placeholder_text`. The first is left empty
+so the grey hint is visible; the second has `text` set, which hides the
+placeholder — the contrast shows exactly when the hint appears.
+
+<LvglExample name="lv_example_textarea_placeholder" path="widgets/textarea/textarea_placeholder/lv_example_textarea_placeholder" />

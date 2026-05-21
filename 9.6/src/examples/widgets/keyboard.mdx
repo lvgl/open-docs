@@ -3,30 +3,6 @@ title: "Keyboard"
 order: 75
 ---
 
-## Keyboard shown on textarea focus
-
-<LvglExampleBrief>Hide the keyboard unless one of two textareas is focused.</LvglExampleBrief>
-
-Two textareas are placed at the top-left and top-right, one with placeholder
-text `Hello`. A shared callback watches `LV_EVENT_FOCUSED` and
-`LV_EVENT_DEFOCUSED`: on focus it retargets the keyboard with
-`lv_keyboard_set_textarea` and clears `LV_OBJ_FLAG_HIDDEN`, and on defocus it
-clears the target and hides the keyboard again.
-
-<LvglExample name="lv_example_keyboard_1" path="widgets/keyboard/lv_example_keyboard_1" />
-
-## AZERTY layout as USER_1 mode
-
-<LvglExampleBrief>Register a custom AZERTY button map on the keyboard.</LvglExampleBrief>
-
-A `kb_map` and matching `lv_buttonmatrix_ctrl_t` control array describe an
-AZERTY layout with `LV_SYMBOL_BACKSPACE`, `LV_SYMBOL_NEW_LINE`,
-`LV_SYMBOL_CLOSE`, and `LV_SYMBOL_OK`. `lv_keyboard_set_map` installs the
-layout under `LV_KEYBOARD_MODE_USER_1` and `lv_keyboard_set_mode` activates
-it. A focused textarea above the keyboard receives the typed characters.
-
-<LvglExample name="lv_example_keyboard_2" path="widgets/keyboard/lv_example_keyboard_2" />
-
 ## Per-button colors via draw task hook
 
 <LvglExampleBrief>Recolor each keyboard key and swap the OK symbol for a star image.</LvglExampleBrief>
@@ -38,4 +14,59 @@ the button is in `LV_STATE_PRESSED`, and lightens the label text. When the
 task is drawing `LV_SYMBOL_OK` the label is hidden and `img_star` is drawn in
 its place.
 
-<LvglExample name="lv_example_keyboard_3" path="widgets/keyboard/lv_example_keyboard_3" />
+<LvglExample name="lv_example_keyboard_custom_draw" path="widgets/keyboard/lv_example_keyboard_custom_draw" />
+
+## AZERTY layout as USER_1 mode
+
+<LvglExampleBrief>Register a custom AZERTY button map on the keyboard.</LvglExampleBrief>
+
+A `kb_map` and matching `lv_buttonmatrix_ctrl_t` control array describe an
+AZERTY layout with `LV_SYMBOL_BACKSPACE`, `LV_SYMBOL_NEW_LINE`,
+`LV_SYMBOL_CLOSE`, and `LV_SYMBOL_OK`. `lv_keyboard_set_map` installs the
+layout under `LV_KEYBOARD_MODE_USER_1` and `lv_keyboard_set_mode` activates
+it. A focused textarea above the keyboard receives the typed characters.
+
+<LvglExample name="lv_example_keyboard_custom_map" path="widgets/keyboard/lv_example_keyboard_custom_map" />
+
+## Keyboard Modes
+
+### Keyboard modes
+
+<LvglExampleBrief>Switch between text and number layouts via the `mode` attribute.</LvglExampleBrief>
+
+`mode` selects the keymap LVGL shows. `text_lower`/`text_upper` give the
+letter layouts with case shift keys; `special` swaps in punctuation;
+`number` shows the calculator-style numeric pad. The mode persists until
+changed — pressing the in-layout `ABC`/`abc`/`1#` keys switches the keymap
+at runtime, while this attribute pins the initial layout.
+
+<LvglExample name="lv_example_keyboard_modes" path="widgets/keyboard/keyboard_modes/lv_example_keyboard_modes" />
+
+## Keyboard Popovers
+
+### Keyboard pop-overs
+
+<LvglExampleBrief>Enlarged preview balloons appear above the pressed key while held.</LvglExampleBrief>
+
+With `popovers="true"` LVGL renders a larger preview of the active key
+above the keyboard while it's pressed, the same way mobile OS keyboards do.
+The preview only renders for keys that produce a symbol (so space and
+modifier keys stay quiet). Pop-overs in the top row can extend outside the
+keyboard's bounds — leave free space above it (here the textarea provides
+that headroom).
+
+<LvglExample name="lv_example_keyboard_popovers" path="widgets/keyboard/keyboard_popovers/lv_example_keyboard_popovers" />
+
+## Keyboard Textarea
+
+### Keyboard with text area
+
+<LvglExampleBrief>Pair a keyboard with a textarea so typed keys land in the field.</LvglExampleBrief>
+
+The keyboard and the textarea sit on the same screen; LVGL's default focus
+group routes key presses to whichever input widget currently holds focus
+(here the textarea is the only one). In runtime code you'd usually call
+`lv_keyboard_set_textarea(kb, ta)` to pin the link explicitly, but for a
+single textarea on a screen the default group is sufficient.
+
+<LvglExample name="lv_example_keyboard_textarea" path="widgets/keyboard/keyboard_textarea/lv_example_keyboard_textarea" />

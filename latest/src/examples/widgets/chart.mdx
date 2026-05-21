@@ -3,58 +3,6 @@ title: "Chart"
 order: 50
 ---
 
-## Basic line chart with two series
-
-<LvglExampleBrief>Line chart plotting one primary and one secondary Y-axis series with point drop shadows.</LvglExampleBrief>
-
-A 200x150 chart is centered on the active screen with `LV_CHART_TYPE_LINE`.
-Two series are added: a green series bound to `LV_CHART_AXIS_PRIMARY_Y`
-filled with `lv_chart_set_next_value`, and a red series bound to
-`LV_CHART_AXIS_SECONDARY_Y` filled by writing directly into the Y array.
-Drop shadow styles on `LV_PART_ITEMS` give each point a glow and
-`lv_chart_refresh` commits the direct writes.
-
-<LvglExample name="lv_example_chart_1" path="widgets/chart/lv_example_chart_1" />
-
-## Scrollable bar chart with month scale
-
-<LvglExampleBrief>Bar chart inside a scrollable wrapper paired with a horizontal month scale.</LvglExampleBrief>
-
-A 200x150 container holds a transparent flex-column wrapper sized to
-300% width so the chart scrolls horizontally. The wrapper contains a
-`LV_CHART_TYPE_BAR` chart with 12 points and two green series, plus a
-`lv_scale` in `LV_SCALE_MODE_HORIZONTAL_BOTTOM` labeled with month
-abbreviations. The scale's horizontal padding is aligned to the first
-bar using `lv_chart_get_first_point_center_offset`.
-
-<LvglExample name="lv_example_chart_2" path="widgets/chart/lv_example_chart_2" />
-
-## Pressed point tooltip on stacked chart
-
-<LvglExampleBrief>Stacked bar chart that draws a value tooltip above the pressed point.</LvglExampleBrief>
-
-A 280x180 `LV_CHART_TYPE_STACKED` chart holds three series (red, green,
-blue), each with 10 points. The chart subscribes to `LV_EVENT_ALL`:
-`LV_EVENT_REFR_EXT_DRAW_SIZE` reserves 20 px of external draw space,
-and `LV_EVENT_DRAW_POST_END` reads the pressed point via
-`lv_chart_get_pressed_point` and uses `lv_draw_rect` plus
-`lv_draw_label` to draw an accumulated dollar value above the stack.
-`LV_EVENT_VALUE_CHANGED` and `LV_EVENT_RELEASED` invalidate the chart.
-
-<LvglExample name="lv_example_chart_3" path="widgets/chart/lv_example_chart_3" />
-
-## Value-based bar colors
-
-<LvglExampleBrief>Bar chart that tints each bar between green and red based on its value.</LvglExampleBrief>
-
-A 260x160 `LV_CHART_TYPE_BAR` chart holds 24 points on one series. The
-chart sets `LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS` and subscribes to
-`LV_EVENT_DRAW_TASK_ADDED`. For each `LV_PART_ITEMS` fill task the
-callback reads the underlying Y value and replaces the fill color
-with an `lv_color_mix` of green and red proportional to the value.
-
-<LvglExample name="lv_example_chart_4" path="widgets/chart/lv_example_chart_4" />
-
 ## Faded area under line chart
 
 <LvglExampleBrief>Line chart with a vertical gradient fill beneath the line and styled division lines.</LvglExampleBrief>
@@ -68,20 +16,45 @@ tasks and fills each segment below the polyline with an
 in the series color. `LV_PART_MAIN` line tasks are recolored and
 dashed to highlight specific grid indices.
 
-<LvglExample name="lv_example_chart_5" path="widgets/chart/lv_example_chart_5" />
+<LvglExample name="lv_example_chart_area_gradient" path="widgets/chart/lv_example_chart_area_gradient" />
 
-## Cursor follows clicked point
+## Circular update mode with gap
 
-<LvglExampleBrief>Line chart whose cursor snaps to the pressed data point.</LvglExampleBrief>
+<LvglExampleBrief>Line chart that scrolls with `LV_CHART_UPDATE_MODE_CIRCULAR` and leaves a moving gap.</LvglExampleBrief>
 
-A 200x150 chart sits centered with one red series of 10 points and a
-blue cursor added via `lv_chart_add_cursor` with direction
-`LV_DIR_LEFT | LV_DIR_BOTTOM`. The `LV_EVENT_VALUE_CHANGED` callback
-reads `lv_chart_get_pressed_point` and moves the cursor with
-`lv_chart_set_cursor_point`. A prompt label reading "Click on a
-point" is aligned above the chart.
+A 280x150 line chart with 80 points and one red series is prefilled
+with random values, then a 300 ms `lv_timer` appends a new value via
+`lv_chart_set_next_value` and writes `LV_CHART_POINT_NONE` into the
+two slots ahead of the write cursor. The point indicator size is set
+to zero, producing a circular plot with a visible moving gap.
 
-<LvglExample name="lv_example_chart_6" path="widgets/chart/lv_example_chart_6" />
+<LvglExample name="lv_example_chart_circular_gap" path="widgets/chart/lv_example_chart_circular_gap" />
+
+## Pressed point tooltip on stacked chart
+
+<LvglExampleBrief>Stacked bar chart that draws a value tooltip above the pressed point.</LvglExampleBrief>
+
+A 280x180 `LV_CHART_TYPE_STACKED` chart holds three series (red, green,
+blue), each with 10 points. The chart subscribes to `LV_EVENT_ALL`:
+`LV_EVENT_REFR_EXT_DRAW_SIZE` reserves 20 px of external draw space,
+and `LV_EVENT_DRAW_POST_END` reads the pressed point via
+`lv_chart_get_pressed_point` and uses `lv_draw_rect` plus
+`lv_draw_label` to draw an accumulated dollar value above the stack.
+`LV_EVENT_VALUE_CHANGED` and `LV_EVENT_RELEASED` invalidate the chart.
+
+<LvglExample name="lv_example_chart_pressed_tooltip" path="widgets/chart/lv_example_chart_pressed_tooltip" />
+
+## Value-based bar colors
+
+<LvglExampleBrief>Bar chart that tints each bar between green and red based on its value.</LvglExampleBrief>
+
+A 260x160 `LV_CHART_TYPE_BAR` chart holds 24 points on one series. The
+chart sets `LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS` and subscribes to
+`LV_EVENT_DRAW_TASK_ADDED`. For each `LV_PART_ITEMS` fill task the
+callback reads the underlying Y value and replaces the fill color
+with an `lv_color_mix` of green and red proportional to the value.
+
+<LvglExample name="lv_example_chart_recolor_bars" path="widgets/chart/lv_example_chart_recolor_bars" />
 
 ## Scatter chart with fading points
 
@@ -96,16 +69,77 @@ opacity and recolors each `LV_PART_INDICATOR` fill between red and
 blue using the point's X and Y arrays. A 100 ms `lv_timer` pushes a
 new random point via `lv_chart_set_next_value2`.
 
-<LvglExample name="lv_example_chart_7" path="widgets/chart/lv_example_chart_7" />
+<LvglExample name="lv_example_chart_scatter" path="widgets/chart/lv_example_chart_scatter" />
 
-## Circular update mode with gap
+## Chart Cursor
 
-<LvglExampleBrief>Line chart that scrolls with `LV_CHART_UPDATE_MODE_CIRCULAR` and leaves a moving gap.</LvglExampleBrief>
+### Chart cursor
 
-A 280x150 line chart with 80 points and one red series is prefilled
-with random values, then a 300 ms `lv_timer` appends a new value via
-`lv_chart_set_next_value` and writes `LV_CHART_POINT_NONE` into the
-two slots ahead of the write cursor. The point indicator size is set
-to zero, producing a circular plot with a visible moving gap.
+<LvglExampleBrief>A cross-hair cursor pinned to a specific (X, Y) location on the chart.</LvglExampleBrief>
 
-<LvglExample name="lv_example_chart_8" path="widgets/chart/lv_example_chart_8" />
+`<lv_chart-cursor>` adds a cursor overlay to a chart. `dir` chooses which
+lines extend from the cursor point (`all` draws a full cross-hair; `hor`,
+`ver`, `left`, `right`, `top`, `bottom` for partial guides). `pos_x`/`pos_y`
+place it in chart value coordinates, so a position of `60, 70` lines up
+with the 60th X step and the 70-on-the-Y-axis grid line. A typical use is
+highlighting "today" on a time-series, or marking a threshold without
+baking the line into the series.
+
+<LvglExample name="lv_example_chart_cursor" path="widgets/chart/chart_cursor/lv_example_chart_cursor" />
+
+## Chart Scrollable
+
+### Scrollable chart
+
+<LvglExampleBrief>A chart wider than its container scrolls horizontally as the user drags it.</LvglExampleBrief>
+
+LVGL doesn't expose a chart-specific zoom: to let a chart grow beyond the
+visible width, wrap it in a parent that *is* the viewport, then size the
+chart's width to a percentage larger than 100%. The parent's default
+`scrollable` behaviour kicks in. A horizontal `lv_scale` sits inside the
+same wrapper so its labels scroll in lockstep with the bars.
+
+<LvglExample name="lv_example_chart_scrollable" path="widgets/chart/chart_scrollable/lv_example_chart_scrollable" />
+
+## Chart Series
+
+### Chart data series
+
+<LvglExampleBrief>Two series on the same chart, each bound to its own Y axis.</LvglExampleBrief>
+
+Two `<lv_chart-series>` children sit on one chart but reference different
+axes via `axis="primary_y"` and `axis="secondary_y"`. Each axis gets its
+own `<lv_chart-axis>` range, so a 0..100 temperature series and a 0..2000
+pressure series share the plot without one squashing the other. The series
+colour matches the conceptual reading, not the axis.
+
+<LvglExample name="lv_example_chart_series" path="widgets/chart/chart_series/lv_example_chart_series" />
+
+## Chart Ticks Labels
+
+### Chart ticks and labels
+
+<LvglExampleBrief>Pair a chart with an `lv_scale` to get a labelled X axis.</LvglExampleBrief>
+
+A chart has no built-in tick or label rendering for its X axis — the
+convention is to stack a horizontal `lv_scale` directly below, sized to the
+chart's width and with `total_tick_count` matching the chart's `point_count`.
+`text_src` is a space-separated list of single-quoted labels (one per major
+tick), the same syntax button matrix maps use. For the Y axis you can place
+a vertical scale on either side of the chart with the same technique.
+
+<LvglExample name="lv_example_chart_ticks_labels" path="widgets/chart/chart_ticks_labels/lv_example_chart_ticks_labels" />
+
+## Chart Types
+
+### Chart types
+
+<LvglExampleBrief>Same data rendered as bar and scatter to highlight the type difference.</LvglExampleBrief>
+
+The `type` attribute controls how a chart draws its series. `bar` paints one
+column per slot; `scatter` plots (X, Y) pairs as dots. A scatter series binds
+to *both* a Y axis and an X axis — that's what the OR-flavoured
+`axis="primary_y|primary_x"` token encodes. Compare against
+`chart_basic` (a `line` chart) to complete the family.
+
+<LvglExample name="lv_example_chart_types" path="widgets/chart/chart_types/lv_example_chart_types" />

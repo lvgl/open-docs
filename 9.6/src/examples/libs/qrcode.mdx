@@ -5,14 +5,15 @@ order: 35
 
 Generates QR codes as LVGL canvas images. Enable with `LV_USE_QRCODE` in `lv_conf.h`.
 
-## QR code with palette colors
+## Qrcode Basic
 
-<LvglExampleBrief>Render a 150 px QR code encoding an LVGL URL with custom dark and light colors.</LvglExampleBrief>
+### QR code colors and quiet zone
 
-A QR code widget is centered on the active screen and sized to 150 px.
-`lv_qrcode_set_dark_color` and `lv_qrcode_set_light_color` use
-darkened and lightened entries from `LV_PALETTE_BLUE` and
-`LV_PALETTE_LIGHT_BLUE`, `lv_qrcode_update` encodes `https://lvgl.io`,
-and a matching 5 px border is applied via local style properties.
+<LvglExampleBrief>Encode a URL with custom dark/light colors and a padded quiet zone.</LvglExampleBrief>
 
-<LvglExample name="lv_example_qrcode_1" path="libs/qrcode/lv_example_qrcode_1" />
+The QR code is fixed at 150 px and recolored: a dark blue `dark_color` on a
+light blue `light_color` instead of the default black-on-white. `quiet_zone`
+adds the standard light margin so scanners lock on, and a matching border
+frames it against the screen.
+
+<LvglExample name="lv_example_qrcode_basic" path="libs/qrcode/qrcode_basic/lv_example_qrcode_basic" />

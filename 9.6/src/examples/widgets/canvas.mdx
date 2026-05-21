@@ -3,19 +3,6 @@ title: "Canvas"
 order: 45
 ---
 
-## Rotated RGB565 canvas onto ARGB8888
-
-<LvglExampleBrief>Render a rounded rectangle and label on an RGB565 canvas, then rotate the result onto an ARGB8888 canvas.</LvglExampleBrief>
-
-Two 200x150 canvases are centered on the active screen. The first uses
-`LV_COLOR_FORMAT_RGB565` and draws a gradient rounded rectangle with
-`lv_draw_rect` and orange text with `lv_draw_label`. The second uses
-`LV_COLOR_FORMAT_ARGB8888`, takes the first canvas as an image via
-`lv_draw_buf_to_image`, and blits it with `lv_draw_image` rotated by
-120 degrees around the canvas center.
-
-<LvglExample name="lv_example_canvas_1" path="widgets/canvas/lv_example_canvas_1" />
-
 ## Per-pixel alpha bands on ARGB8888
 
 <LvglExampleBrief>Fade horizontal blue bands from 50% to 20% to 0% opacity using `lv_canvas_set_px`.</LvglExampleBrief>
@@ -26,31 +13,7 @@ solid blue, then three row bands are overwritten pixel by pixel with
 `lv_canvas_set_px` at `LV_OPA_50`, `LV_OPA_20`, and `LV_OPA_0`, so
 the underlying screen color shows through progressively.
 
-<LvglExample name="lv_example_canvas_2" path="widgets/canvas/lv_example_canvas_2" />
-
-## Rectangle with border and outline
-
-<LvglExampleBrief>Draw a red rounded rectangle with a blue border and a green outline onto a canvas.</LvglExampleBrief>
-
-A 50x50 `LV_COLOR_FORMAT_ARGB8888` canvas is centered and filled with
-a light grey background. An `lv_draw_rect_dsc_t` is populated with a
-red fill, radius 5, a 3 px blue border, and a 2 px green outline at
-`LV_OPA_50`, then painted into area {10,10,40,30} via `lv_draw_rect`
-on a layer opened with `lv_canvas_init_layer`.
-
-<LvglExample name="lv_example_canvas_3" path="widgets/canvas/lv_example_canvas_3" />
-
-## Underlined label on canvas
-
-<LvglExampleBrief>Paint a red "Hello" string in Montserrat 18 with an underline decoration onto a canvas.</LvglExampleBrief>
-
-A 50x50 `LV_COLOR_FORMAT_ARGB8888` canvas is centered on the active
-screen and filled with a light grey background. An
-`lv_draw_label_dsc_t` is configured with `lv_font_montserrat_18`,
-`LV_TEXT_DECOR_UNDERLINE`, and red text, then rendered via
-`lv_draw_label` inside a canvas layer.
-
-<LvglExample name="lv_example_canvas_4" path="widgets/canvas/lv_example_canvas_4" />
+<LvglExample name="lv_example_canvas_alpha" path="widgets/canvas/lv_example_canvas_alpha" />
 
 ## Arc primitive on canvas
 
@@ -62,7 +25,20 @@ radius 15, width 10, and `start_angle`/`end_angle` of 0 and 220, then
 rendered with `lv_draw_arc` into a layer opened via
 `lv_canvas_init_layer`.
 
-<LvglExample name="lv_example_canvas_5" path="widgets/canvas/lv_example_canvas_5" />
+<LvglExample name="lv_example_canvas_arc" path="widgets/canvas/lv_example_canvas_arc" />
+
+## Frosted glass blur region
+
+<LvglExampleBrief>Blur a rounded rectangle area of a canvas and overlay a tinted label on it.</LvglExampleBrief>
+
+A 100x100 `LV_COLOR_FORMAT_RGB565` canvas is centered and filled with
+light grey. An underlined red background label is painted across the
+canvas. `lv_draw_blur` is then called over area {20,30,80,70} with an
+`lv_draw_blur_dsc_t` whose `blur_radius` is 8 and `corner_radius` is
+10. A 30% opacity blue rounded fill and a black centered "Hello
+world" label are layered on top of the blurred region.
+
+<LvglExample name="lv_example_canvas_blur" path="widgets/canvas/lv_example_canvas_blur" />
 
 ## Image blit via raw buffer
 
@@ -74,7 +50,19 @@ A 50x50 canvas is backed by a static byte buffer sized with
 declared `img_star` image is drawn at offset (10,10) using
 `lv_draw_image` on a canvas layer.
 
-<LvglExample name="lv_example_canvas_6" path="widgets/canvas/lv_example_canvas_6" />
+<LvglExample name="lv_example_canvas_image" path="widgets/canvas/lv_example_canvas_image" />
+
+## Underlined label on canvas
+
+<LvglExampleBrief>Paint a red "Hello" string in Montserrat 18 with an underline decoration onto a canvas.</LvglExampleBrief>
+
+A 50x50 `LV_COLOR_FORMAT_ARGB8888` canvas is centered on the active
+screen and filled with a light grey background. An
+`lv_draw_label_dsc_t` is configured with `lv_font_montserrat_18`,
+`LV_TEXT_DECOR_UNDERLINE`, and red text, then rendered via
+`lv_draw_label` inside a canvas layer.
+
+<LvglExample name="lv_example_canvas_label" path="widgets/canvas/lv_example_canvas_label" />
 
 ## Rounded-end line on canvas
 
@@ -85,7 +73,44 @@ light grey. An `lv_draw_line_dsc_t` is configured with width 4,
 `round_start` and `round_end` set, and endpoints at (15,15) and
 (35,10), then rendered via `lv_draw_line` on a canvas layer.
 
-<LvglExample name="lv_example_canvas_7" path="widgets/canvas/lv_example_canvas_7" />
+<LvglExample name="lv_example_canvas_line" path="widgets/canvas/lv_example_canvas_line" />
+
+## Rectangle with border and outline
+
+<LvglExampleBrief>Draw a red rounded rectangle with a blue border and a green outline onto a canvas.</LvglExampleBrief>
+
+A 50x50 `LV_COLOR_FORMAT_ARGB8888` canvas is centered and filled with
+a light grey background. An `lv_draw_rect_dsc_t` is populated with a
+red fill, radius 5, a 3 px blue border, and a 2 px green outline at
+`LV_OPA_50`, then painted into area {10,10,40,30} via `lv_draw_rect`
+on a layer opened with `lv_canvas_init_layer`.
+
+<LvglExample name="lv_example_canvas_rectangle" path="widgets/canvas/lv_example_canvas_rectangle" />
+
+## Rotated RGB565 canvas onto ARGB8888
+
+<LvglExampleBrief>Render a rounded rectangle and label on an RGB565 canvas, then rotate the result onto an ARGB8888 canvas.</LvglExampleBrief>
+
+Two 200x150 canvases are centered on the active screen. The first uses
+`LV_COLOR_FORMAT_RGB565` and draws a gradient rounded rectangle with
+`lv_draw_rect` and orange text with `lv_draw_label`. The second uses
+`LV_COLOR_FORMAT_ARGB8888`, takes the first canvas as an image via
+`lv_draw_buf_to_image`, and blits it with `lv_draw_image` rotated by
+120 degrees around the canvas center.
+
+<LvglExample name="lv_example_canvas_rotate" path="widgets/canvas/lv_example_canvas_rotate" />
+
+## Gradient triangle on canvas
+
+<LvglExampleBrief>Draw a triangle filled with a vertical red-to-transparent-blue gradient at 50% opacity.</LvglExampleBrief>
+
+A 150x150 `LV_COLOR_FORMAT_ARGB8888` canvas is centered with a light
+grey background. An `lv_draw_triangle_dsc_t` is built with vertices
+at (10,10), (100,30), and (50,100), a `LV_GRAD_DIR_VER` gradient from
+red at `frac=64` to transparent blue at `frac=192`, and a top-level
+`opa` of 128, then rendered via `lv_draw_triangle` on a canvas layer.
+
+<LvglExample name="lv_example_canvas_triangle" path="widgets/canvas/lv_example_canvas_triangle" />
 
 ## Vector path filled triangle
 
@@ -100,32 +125,7 @@ with a blue fill color is attached to the path and rendered via
 `lv_draw_vector`. When vector graphics are disabled the example
 falls back to a centered "not enabled" label.
 
-<LvglExample name="lv_example_canvas_8" path="widgets/canvas/lv_example_canvas_8" />
-
-## Gradient triangle on canvas
-
-<LvglExampleBrief>Draw a triangle filled with a vertical red-to-transparent-blue gradient at 50% opacity.</LvglExampleBrief>
-
-A 150x150 `LV_COLOR_FORMAT_ARGB8888` canvas is centered with a light
-grey background. An `lv_draw_triangle_dsc_t` is built with vertices
-at (10,10), (100,30), and (50,100), a `LV_GRAD_DIR_VER` gradient from
-red at `frac=64` to transparent blue at `frac=192`, and a top-level
-`opa` of 128, then rendered via `lv_draw_triangle` on a canvas layer.
-
-<LvglExample name="lv_example_canvas_9" path="widgets/canvas/lv_example_canvas_9" />
-
-## Frosted glass blur region
-
-<LvglExampleBrief>Blur a rounded rectangle area of a canvas and overlay a tinted label on it.</LvglExampleBrief>
-
-A 100x100 `LV_COLOR_FORMAT_RGB565` canvas is centered and filled with
-light grey. An underlined red background label is painted across the
-canvas. `lv_draw_blur` is then called over area {20,30,80,70} with an
-`lv_draw_blur_dsc_t` whose `blur_radius` is 8 and `corner_radius` is
-10. A 30% opacity blue rounded fill and a black centered "Hello
-world" label are layered on top of the blurred region.
-
-<LvglExample name="lv_example_canvas_10" path="widgets/canvas/lv_example_canvas_10" />
+<LvglExample name="lv_example_canvas_vector" path="widgets/canvas/lv_example_canvas_vector" />
 
 ## Animated wave text on canvas
 
@@ -137,7 +137,7 @@ characters of a fixed string along `y = sin(x) * 40`, offset by a
 counter. Each letter is rendered with `lv_draw_letter` using its
 tangent as `rotation` and an HSV-derived color.
 
-<LvglExample name="lv_example_canvas_11" path="widgets/canvas/lv_example_canvas_11" />
+<LvglExample name="lv_example_canvas_wave_text" path="widgets/canvas/lv_example_canvas_wave_text" />
 
 ## Windstorm text along a curve
 
@@ -150,4 +150,4 @@ blends index-scaled `sin` with the counter, producing a spreading
 windstorm shape. Letters are drawn with `lv_draw_letter`, rotated by
 the tangent and colored via `lv_color_hsv_to_rgb`.
 
-<LvglExample name="lv_example_canvas_12" path="widgets/canvas/lv_example_canvas_12" />
+<LvglExample name="lv_example_canvas_windstorm_text" path="widgets/canvas/lv_example_canvas_windstorm_text" />

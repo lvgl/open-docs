@@ -5,31 +5,15 @@ order: 115
 
 Scrollable cylindrical selector for picking one option from a fixed list, configured via `lv_roller_set_options`.
 
-## Infinite month roller
+## Roller value-changed event
 
-<LvglExampleBrief>Pick a month from a wrap-around roller and log the selection.</LvglExampleBrief>
+<LvglExampleBrief>Mirror the settled selection into a sibling label.</LvglExampleBrief>
 
-A centered `lv_roller` is populated with the twelve English month names in
-`LV_ROLLER_MODE_INFINITE`, so scrolling past December wraps back to January.
-Four rows are visible at once via `lv_roller_set_visible_row_count`. An
-`LV_EVENT_ALL` handler prints the current selection string on
-`LV_EVENT_VALUE_CHANGED`.
+`LV_EVENT_VALUE_CHANGED` fires once the roller has settled on a new
+option (not while it's still scrolling). Read the option text with
+`lv_roller_get_selected_str` and push it into a label from the handler.
 
-<LvglExample name="lv_example_roller_1" path="widgets/roller/lv_example_roller_1" />
-
-## Rollers sharing a selected-row style
-
-<LvglExampleBrief>One `LV_PART_SELECTED` style is reused across three number rollers of different widths.</LvglExampleBrief>
-
-A shared style for `LV_PART_SELECTED` swaps in `lv_font_montserrat_22` with a
-pink fill and red border. Three `LV_ROLLER_MODE_NORMAL` rollers list numbers
-`1..10`: a 100 px left-aligned roller with a green vertical gradient
-background and two visible rows, a default-width center roller with three
-visible rows, and an 80 px right-aligned roller with four visible rows. Each
-roller starts on a different selection (2, 5, 8) with `LV_ANIM_OFF` and logs
-on `LV_EVENT_VALUE_CHANGED`.
-
-<LvglExample name="lv_example_roller_2" path="widgets/roller/lv_example_roller_2" />
+<LvglExample name="lv_example_roller_event" path="widgets/roller/lv_example_roller_event" />
 
 ## Roller with top and bottom fade
 
@@ -43,4 +27,62 @@ white-to-black on bottom), leaving the middle opaque. The resulting buffer is
 attached through `lv_obj_set_style_bitmap_mask_src` so the first and last
 rows fade out.
 
-<LvglExample name="lv_example_roller_3" path="widgets/roller/lv_example_roller_3" />
+<LvglExample name="lv_example_roller_fade_mask" path="widgets/roller/lv_example_roller_fade_mask" />
+
+## Roller Bind Value
+
+### Roller bind value
+
+<LvglExampleBrief>Roller bound to a subject; a button jumps it programmatically.</LvglExampleBrief>
+
+The roller's `bind_value` is wired to `subject_index`. A "Wednesday" button uses
+`subject_set_int_event` to write `3` into the subject on click — the roller
+picks up the change and animates to that option without any direct call into
+the roller widget.
+
+<LvglExample name="lv_example_roller_bind_value" path="widgets/roller/roller_bind_value/lv_example_roller_bind_value" />
+
+## Roller Options
+
+### Roller options and mode
+
+<LvglExampleBrief>Define the option list and choose between normal and infinite scrolling.</LvglExampleBrief>
+
+`options` is a newline-separated list of items, written with `&#10;` between
+entries because raw `\n` inside an attribute survives as the literal two
+characters. `options-mode` controls scroll behaviour: `normal` stops at the
+first/last entry; `infinite` wraps around so the user can keep scrolling in
+either direction. `selected` picks the initially focused index.
+
+<LvglExample name="lv_example_roller_options" path="widgets/roller/roller_options/lv_example_roller_options" />
+
+## Roller Styling
+
+### Roller styling
+
+<LvglExampleBrief>Style the main listbox and the selected item; use `text_line_space` to set the selected band's height.</LvglExampleBrief>
+
+Roller has two relevant parts: `MAIN` (the whole listbox, where unselected
+items are drawn) and `SELECTED` (the highlighted row in the middle). Name a
+style for each and attach them with `selector="main"` and
+`selector="selected"`.
+
+`text_line_space` on MAIN does more than space the text rows: because the
+selected indicator always sits in the gap between two list items, growing
+`text_line_space` directly grows the height of the highlighted band — so
+the selected row gets visually taller without a separate height setting.
+
+<LvglExample name="lv_example_roller_styling" path="widgets/roller/roller_styling/lv_example_roller_styling" />
+
+## Roller Visible Rows
+
+### Roller visible row count
+
+<LvglExampleBrief>Tune how many list items the roller shows at once.</LvglExampleBrief>
+
+`visible_row_count` determines the height of the roller in *items*, not
+pixels — the widget computes its own pixel height from the current font and
+line spacing. A short roller (3 rows) feels compact for a yes/no pick;
+a tall one (7 rows) shows more context but takes more screen real estate.
+
+<LvglExample name="lv_example_roller_visible_rows" path="widgets/roller/roller_visible_rows/lv_example_roller_visible_rows" />

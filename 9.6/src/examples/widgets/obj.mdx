@@ -5,18 +5,6 @@ order: 5
 
 The `lv_obj_t` base class that every other widget inherits from, usable directly as a container or styling surface.
 
-## Base objects with and without shadow
-
-<LvglExampleBrief>Two base objects showing default styling next to a custom blue shadow.</LvglExampleBrief>
-
-Two `lv_obj` base objects are placed on the active screen. The
-first, sized 100 by 50, uses the default theme. The second keeps
-the default size and picks up a shared `lv_style_t` with a blue
-10 px shadow spread by 5 px. Both are offset from center so the
-shadow difference is visible side by side.
-
-<LvglExample name="lv_example_obj_1" path="widgets/obj/lv_example_obj_1" />
-
 ## Draggable base object
 
 <LvglExampleBrief>Move a `Drag me` object under the pointer using `LV_EVENT_PRESSING`.</LvglExampleBrief>
@@ -27,7 +15,7 @@ vector with `lv_indev_get_vect`, adds it to the object's current
 aligned position, and calls `lv_obj_set_pos` so the object follows
 the pointer as long as it is held down.
 
-<LvglExample name="lv_example_obj_2" path="widgets/obj/lv_example_obj_2" />
+<LvglExample name="lv_example_obj_draggable" path="widgets/obj/lv_example_obj_draggable" />
 
 ## Animated matrix transform on a base object
 
@@ -40,4 +28,18 @@ builds an identity `lv_matrix_t`, scales its x axis, rotates it by
 0.01 steps; once it exceeds 2.0 the object is reset with
 `lv_obj_reset_transform` and the loop restarts.
 
-<LvglExample name="lv_example_obj_3" path="widgets/obj/lv_example_obj_3" />
+<LvglExample name="lv_example_obj_transform" path="widgets/obj/lv_example_obj_transform" />
+
+## Obj Bind Style
+
+### Obj bind style (theme toggle)
+
+<LvglExampleBrief>Apply a named style only when a subject equals a reference value.</LvglExampleBrief>
+
+The "dark" style is attached to the panel via `<bind_style>` with
+`subject="subject_flag"` and `ref_value="1"`: it's applied whenever
+`subject_flag` is 1 and removed otherwise. The toggle button flips
+`subject_flag` through `subject_toggle_event`. This is the canonical
+"binding-driven theme switch" pattern — no event callback in user code.
+
+<LvglExample name="lv_example_obj_bind_style" path="widgets/obj/obj_bind_style/lv_example_obj_bind_style" />

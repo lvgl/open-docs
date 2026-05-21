@@ -3,29 +3,63 @@ title: "Checkbox"
 order: 55
 ---
 
-## Checkbox states stacked vertically
+## Checkbox value-changed event
 
-<LvglExampleBrief>Four labelled checkboxes covering default, checked, disabled, and multi-line variants.</LvglExampleBrief>
+<LvglExampleBrief>Mirror the toggle state into a sibling label.</LvglExampleBrief>
 
-The active screen uses `LV_FLEX_FLOW_COLUMN` with start alignment and holds
-four checkboxes: `Apple` in the default state, `Banana` with
-`LV_STATE_CHECKED`, `Lemon` with `LV_STATE_DISABLED`, and
-`Melon\nand a new line` with both checked and disabled states and a
-two-line label. A shared `LV_EVENT_ALL` callback logs the checkbox text
-and its current checked state on `LV_EVENT_VALUE_CHANGED`.
+`LV_EVENT_VALUE_CHANGED` fires when the user toggles the checkbox. The
+state isn't in the payload — read it with
+`lv_obj_has_state(cb, LV_STATE_CHECKED)` and use any LVGL call inside
+the handler (here, `lv_label_set_text` on a sibling).
 
-<LvglExample name="lv_example_checkbox_1" path="widgets/checkbox/lv_example_checkbox_1" />
+<LvglExample name="lv_example_checkbox_event" path="widgets/checkbox/lv_example_checkbox_event" />
 
-## Checkboxes as radio buttons
+## Checkbox Bind Checked
 
-<LvglExampleBrief>A group of five checkboxes where only one can be checked at a time.</LvglExampleBrief>
+### Checkbox bind checked + bind flag
 
-A centered flex-column container holds five checkboxes labelled
-`Radio button 1` through `Radio button 5`. Each one calls
-`lv_obj_set_radio_button(obj, true)` so checking one clears the others,
-and two `LV_PART_INDICATOR` styles round the indicator with
-`LV_RADIUS_CIRCLE` and clear the default checkmark image in
-`LV_STATE_CHECKED`. Each checkbox logs its label and selection state on
-`LV_EVENT_VALUE_CHANGED`.
+<LvglExampleBrief>A checkbox drives an int subject; a sibling label hides when the subject is zero.</LvglExampleBrief>
 
-<LvglExample name="lv_example_checkbox_2" path="widgets/checkbox/lv_example_checkbox_2" />
+`bind_checked` connects the checkbox's checked state to `subject_flag` (0 or 1).
+The note label uses `bind_flag_if_eq` to enable the `hidden` flag while
+`subject_flag` equals 0 — so the label only shows once the box is ticked.
+
+<LvglExample name="lv_example_checkbox_bind_checked" path="widgets/checkbox/checkbox_bind_checked/lv_example_checkbox_bind_checked" />
+
+## Checkbox States
+
+### Checkbox states
+
+<LvglExampleBrief>Show unchecked, checked, and disabled tick boxes side by side.</LvglExampleBrief>
+
+Each checkbox carries the same text but advertises a different state. State is
+toggled at runtime with `lv_obj_add_state(cb, LV_STATE_CHECKED)` and friends; in
+XML the same effect is achieved by setting the state attribute directly.
+
+<LvglExample name="lv_example_checkbox_states" path="widgets/checkbox/checkbox_states/lv_example_checkbox_states" />
+
+## Checkbox Styling
+
+### Checkbox styling
+
+<LvglExampleBrief>Style the tick box (INDICATOR) and its checked state separately.</LvglExampleBrief>
+
+Checkbox exposes MAIN (label text area) and INDICATOR (tick box). The named styles
+target INDICATOR in both default and `checked` states so the tick box has a soft,
+rounded look unchecked and switches to an accent color with a tinted halo when
+checked. MAIN is styled with local `style_*` props to recolor the label area.
+
+<LvglExample name="lv_example_checkbox_styling" path="widgets/checkbox/checkbox_styling/lv_example_checkbox_styling" />
+
+## Checkbox Text
+
+### Checkbox text
+
+<LvglExampleBrief>Set the label that appears next to the tick box.</LvglExampleBrief>
+
+Three checkboxes share a layout but each carries a different text: a short word, a
+longer single-line sentence, and a multi-line label using `&#10;` for the line break.
+The text attribute is what `lv_checkbox_set_text` would set in code, and the gap
+between tick box and label is controlled by `pad_column` on the main part.
+
+<LvglExample name="lv_example_checkbox_text" path="widgets/checkbox/checkbox_text/lv_example_checkbox_text" />

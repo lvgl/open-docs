@@ -3,21 +3,6 @@ title: "Calendar"
 order: 40
 ---
 
-## Calendar with highlighted days
-
-<LvglExampleBrief>Show February 2021 with three highlighted dates and log the tapped day.</LvglExampleBrief>
-
-A 185x230 `lv_calendar` is placed below screen center with today set
-to 2021-02-23 via `lv_calendar_set_today_date` and the shown month
-fixed by `lv_calendar_set_month_shown`. A static array of three
-`lv_calendar_date_t` entries is registered through
-`lv_calendar_set_highlighted_dates`. The `LV_EVENT_VALUE_CHANGED`
-callback reads `lv_calendar_get_pressed_date` and logs the tapped
-day. If `LV_USE_CALENDAR_HEADER_DROPDOWN` or `_ARROW` is available
-the matching header is attached.
-
-<LvglExample name="lv_example_calendar_1" path="widgets/calendar/lv_example_calendar_1" />
-
 ## Chinese calendar mode
 
 <LvglExampleBrief>Render a calendar with Chinese lunar annotations for March 2024.</LvglExampleBrief>
@@ -31,4 +16,34 @@ or dropdown header is attached when available.
 When the Chinese calendar is disabled the example falls back to a
 centered "not enabled" label.
 
-<LvglExample name="lv_example_calendar_2" path="widgets/calendar/lv_example_calendar_2" />
+<LvglExample name="lv_example_calendar_chinese" path="widgets/calendar/lv_example_calendar_chinese" />
+
+## Calendar with highlighted days
+
+<LvglExampleBrief>Show February 2021 with three highlighted dates and log the tapped day.</LvglExampleBrief>
+
+A 185x230 `lv_calendar` is placed below screen center with today set
+to 2021-02-23 via `lv_calendar_set_today_date` and the shown month
+fixed by `lv_calendar_set_month_shown`. A static array of three
+`lv_calendar_date_t` entries is registered through
+`lv_calendar_set_highlighted_dates`. The `LV_EVENT_VALUE_CHANGED`
+callback reads `lv_calendar_get_pressed_date` and logs the tapped
+day. If `LV_USE_CALENDAR_HEADER_DROPDOWN` or `_ARROW` is available
+the matching header is attached.
+
+<LvglExample name="lv_example_calendar_highlighted_days" path="widgets/calendar/lv_example_calendar_highlighted_days" />
+
+## Calendar Basic
+
+### Calendar basics
+
+<LvglExampleBrief>Month view with an arrow header for navigation.</LvglExampleBrief>
+
+`today_*` marks the current date (rendered with the today highlight). `shown_*`
+controls which month the calendar opens on — here we start a month behind
+today so the user immediately sees that the today indicator only fires when
+the shown month matches. A `<header_arrow/>` child adds prev/next arrows to
+the top of the calendar; swap it for `<header_dropdown/>` to get the
+month/year selector variant.
+
+<LvglExample name="lv_example_calendar_basic" path="widgets/calendar/calendar_basic/lv_example_calendar_basic" />

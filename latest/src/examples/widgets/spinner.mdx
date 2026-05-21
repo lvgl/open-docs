@@ -3,12 +3,32 @@ title: "Spinner"
 order: 140
 ---
 
-## Centered busy spinner
+## Spinner Basic
 
-<LvglExampleBrief>Place a 100 by 100 spinner on the active screen with custom timing.</LvglExampleBrief>
+### Spinner basics
 
-A spinner is created on the active screen, sized to 100 by 100,
-centered, and tuned with `lv_spinner_set_anim_params` to a
-10000 ms loop time and a 200 degree arc length.
+<LvglExampleBrief>A loading indicator that rotates a configurable arc segment.</LvglExampleBrief>
 
-<LvglExample name="lv_example_spinner_1" path="widgets/spinner/lv_example_spinner_1" />
+A spinner is a self-animating widget: nothing has to drive its value from
+outside. `anim_duration` is the number of milliseconds it takes to complete
+one full rotation (lower = faster). `arc_sweep` is the angular length of
+the moving segment in degrees — common values are 270° (a long C shape) or
+90° (a short dash). Width and height set the diameter; the spinner sizes
+the arc to fill the widget.
+
+<LvglExample name="lv_example_spinner_basic" path="widgets/spinner/spinner_basic/lv_example_spinner_basic" />
+
+## Spinner Styling
+
+### Table styling
+
+<LvglExampleBrief>Style the table background and the per-cell appearance.</LvglExampleBrief>
+
+Table has two relevant parts: `MAIN` (the background and overall frame)
+and `ITEMS` (each cell — borders, padding, text). Attaching a named
+`style_items` style covers every cell uniformly. To make the header row
+stand out, attach a second style with `selector="items"` and the
+row-specific state — but XML doesn't yet have a per-row selector; instead
+set the header row's cell `ctrl` flags or restyle in code.
+
+<LvglExample name="lv_example_spinner_styling" path="widgets/spinner/spinner_styling/lv_example_spinner_styling" />

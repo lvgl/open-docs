@@ -3,86 +3,89 @@ title: "Label"
 order: 80
 ---
 
-## Wrapping and circular scrolling labels
+## Label with translation tag
 
-<LvglExampleBrief>Two labels share a width, one wraps with inline recolor and one scrolls in a loop.</LvglExampleBrief>
+<LvglExampleBrief>Bind a label to a translation tag so its text follows the active language.</LvglExampleBrief>
 
-The top label sets `LV_LABEL_LONG_MODE_WRAP`, enables recolor so `#RRGGBB text#`
-markers change color per word, fixes the width to 150 px, and center-aligns text
-with `LV_TEXT_ALIGN_CENTER`. The bottom label uses
-`LV_LABEL_LONG_MODE_SCROLL_CIRCULAR` with the same width so its text cycles
-through continuously.
+`lv_label_set_translation_tag` ties the label to a key in the
+translation table. After `lv_translation_set_language` is called with
+a new language code, every label bound to a tag re-renders with the
+translated string. Translations themselves are registered in a CSV
+(or XML) through `lv_translation_add_static`/`lv_translation_load`.
 
-<LvglExample name="lv_example_label_1" path="widgets/label/lv_example_label_1" />
+<LvglExample name="lv_example_label_translation" path="widgets/label/lv_example_label_translation" />
 
-## Faux text shadow from two labels
+## Label Bind Text
 
-<LvglExampleBrief>Layer two labels with the same text to fake a drop shadow.</LvglExampleBrief>
+### Label bind text
 
-A background label receives a style that sets `text_opa` to `LV_OPA_30` and a
-black `text_color`, then the same text is placed on a foreground label centered
-on the screen. The shadow label is aligned to the main label's top-left with a
-2 px x/y offset via `lv_obj_align_to`.
+<LvglExampleBrief>Bind a label to a string subject; buttons rewrite the subject on click.</LvglExampleBrief>
 
-<LvglExample name="lv_example_label_2" path="widgets/label/lv_example_label_2" />
+`subject_text` is a string subject from `examples/xml_project/globals.xml`. The
+label uses `bind_text` to listen for changes. Each button carries a
+`<subject_set_string_event>` child that, on click, writes a fixed value into
+`subject_text` — and the label re-renders automatically.
 
-## LTR, RTL, and CJK labels
+<LvglExample name="lv_example_label_bind_text" path="widgets/label/label_bind_text/lv_example_label_bind_text" />
 
-<LvglExampleBrief>Three labels rendered with scripts that need different fonts and base directions.</LvglExampleBrief>
+## Label Long Mode
 
-An English label at the top-left uses `lv_font_montserrat_16`. A Hebrew label
-in the middle sets `base_dir` to `LV_BASE_DIR_RTL` and renders with
-`lv_font_dejavu_16_persian_hebrew`. A Simplified Chinese label at the
-bottom-left renders with `lv_font_source_han_sans_sc_16_cjk`. All three wrap at
-310 px.
+### Label long modes
 
-<LvglExample name="lv_example_label_3" path="widgets/label/lv_example_label_3" />
+<LvglExampleBrief>Show every long_mode behavior side by side.</LvglExampleBrief>
 
-## Gradient-filled text via bitmap mask
+Five labels share the same width but use different long_mode values: wrap, dots, scroll,
+scroll_circular, and clip. Each label is colored differently and contains text that does
+not fit on a single line, so the mode-specific behavior is immediately visible.
 
-<LvglExampleBrief>Render text with a gradient fill by masking a gradient rectangle.</LvglExampleBrief>
+<LvglExample name="lv_example_label_long_mode" path="widgets/label/label_long_mode/lv_example_label_long_mode" />
 
-A canvas in `LV_COLOR_FORMAT_L8` is used as an alpha mask: a centered label is
-drawn onto it with `lv_draw_label` using `lv_font_montserrat_24`. A plain
-object sized 150x60 is created, given a horizontal red-to-blue background
-gradient with `LV_GRAD_DIR_HOR`, and the mask is applied through
-`lv_obj_set_style_bitmap_mask_src` so only the text shape shows through.
+## Label Recolor
 
-<LvglExample name="lv_example_label_4" path="widgets/label/lv_example_label_4" />
+### Label text recolor
 
-## Customized circular scroll timing
+<LvglExampleBrief>Recolor individual words via inline color tags.</LvglExampleBrief>
 
-<LvglExampleBrief>Set delays and infinite repeats on a label's circular scroll animation.</LvglExampleBrief>
+With recolor="true", segments wrapped as "#RRGGBB ... #" render in the given color. This
+lets a single label mix multiple colors in one string without splitting it into separate
+label widgets.
 
-An `lv_anim_t` template is configured with a 1000 ms initial delay, a 3000 ms
-repeat delay, and `LV_ANIM_REPEAT_INFINITE`. A style stores the template via
-`lv_style_set_anim` and is attached to a 150 px wide label running in
-`LV_LABEL_LONG_MODE_SCROLL_CIRCULAR`, which applies the timing whenever the
-scroll animation fires.
+<LvglExample name="lv_example_label_recolor" path="widgets/label/label_recolor/lv_example_label_recolor" />
 
-<LvglExample name="lv_example_label_5" path="widgets/label/lv_example_label_5" />
+## Label Set Text Newline
 
-## Monospace font via glyph override
+### Label set text with newlines
 
-<LvglExampleBrief>Clone a proportional font and force fixed advance width on each glyph.</LvglExampleBrief>
+<LvglExampleBrief>Insert explicit line breaks into a label's text.</LvglExampleBrief>
 
-A copy of `lv_font_montserrat_20` is made and its `get_glyph_dsc` callback is
-replaced with a helper that sets `adv_w` to 20 and recenters `ofs_x` for every
-glyph. Two labels render the string `0123.Wabc`: the first with the original
-proportional font, the second with the patched monospace clone so column
-alignment becomes visible.
+In XML attributes the &#10; entity produces a newline; using two of them in a row leaves
+a blank line between paragraphs. The second label demonstrates that the text attribute
+also accepts plain text with no escaping for normal characters.
 
-<LvglExample name="lv_example_label_6" path="widgets/label/lv_example_label_6" />
+<LvglExample name="lv_example_label_set_text_newline" path="widgets/label/label_set_text_newline/lv_example_label_set_text_newline" />
 
-## Label translation tags with dropdown
+## Label Styling
 
-<LvglExampleBrief>Switch label text between English, German, and Spanish from a dropdown.</LvglExampleBrief>
+### Label styling
 
-A static translation table keyed by the tags `tiger`, `lion`, `rabbit`, and
-`elephant` is registered with `lv_translation_add_static`. A dropdown lists
-the three languages and its `LV_EVENT_VALUE_CHANGED` handler calls
-`lv_translation_set_language` with the selected string. One label per tag is
-created with `lv_label_set_translation_tag`, and all labels refresh to the
-chosen language.
+<LvglExampleBrief>Decorate labels with background, padding, border, outline, and shadow.</LvglExampleBrief>
 
-<LvglExample name="lv_example_label_7" path="widgets/label/lv_example_label_7" />
+A label is just text, but it inherits the full background/border/outline/shadow stack
+from the base widget. The named "badge" style turns a label into a pill via radius +
+padding + bg color; the second label demonstrates the same effect built purely from
+local `style_*` attributes for a one-off look.
+
+<LvglExample name="lv_example_label_styling" path="widgets/label/label_styling/lv_example_label_styling" />
+
+## Label Text Align
+
+### Label text alignment
+
+<LvglExampleBrief>Align multi-line text inside a fixed-width label.</LvglExampleBrief>
+
+Three labels of equal width hold the same two-line text but use different
+style_text_align values: left, center, and right. Alignment only changes anything when
+the label is wider than its text or contains line breaks, so each label is given an
+explicit width that exceeds the longest line.
+
+<LvglExample name="lv_example_label_text_align" path="widgets/label/label_text_align/lv_example_label_text_align" />

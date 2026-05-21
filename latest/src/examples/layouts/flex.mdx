@@ -5,72 +5,86 @@ order: 5
 
 A 1D layout that arranges children in a row or column, analogous to CSS Flexbox. Useful for toolbars, lists, and any stack where one axis drives placement.
 
-## Flex row and column basics
+## Flex Align
 
-<LvglExampleBrief>A row container and a column container, each filled with buttons.</LvglExampleBrief>
+### Flex align
 
-Two containers are created on the active screen: one with
-`LV_FLEX_FLOW_ROW` and one with `LV_FLEX_FLOW_COLUMN`. Each is populated
-with ten buttons. Row items use a fixed 100 px width and full container
-height; column items use full container width with `LV_SIZE_CONTENT` height.
+<LvglExampleBrief>Place items along the main and cross axes.</LvglExampleBrief>
 
-<LvglExample name="lv_example_flex_1" path="layouts/flex/lv_example_flex_1" />
+style_flex_main_place distributes items along the row direction, while
+style_flex_cross_place aligns items of different heights on the cross axis. The mix of a
+tall button, a switch, and a checkbox makes cross-axis alignment easy to see.
 
-## Row wrap with even spacing
+<LvglExample name="lv_example_flex_align" path="layouts/flex/flex_align/lv_example_flex_align" />
 
-<LvglExampleBrief>A 300x220 container lays out eight checkable tiles in wrapping rows with even spacing.</LvglExampleBrief>
+## Flex Flow
 
-A reusable `lv_style_t` sets `LV_LAYOUT_FLEX`, `LV_FLEX_FLOW_ROW_WRAP`, and
-`LV_FLEX_ALIGN_SPACE_EVENLY` on the main axis. The style is applied to a
-centered container holding eight 70 px-wide tiles with `LV_SIZE_CONTENT`
-height. Each tile carries `LV_OBJ_FLAG_CHECKABLE` so it toggles between
-default and `LV_STATE_CHECKED` when clicked.
+### Flex flow
 
-<LvglExample name="lv_example_flex_2" path="layouts/flex/lv_example_flex_2" />
+<LvglExampleBrief>Arrange children with a flex flow direction.</LvglExampleBrief>
 
-## Flex grow between fixed items
+A single row_wrap container holds enough buttons to overflow one line, so wrapping kicks
+in. Try other flex_flow values (row, column, row_reverse, column_wrap_reverse) to see
+how item order and wrap direction change with the same set of children.
 
-<LvglExampleBrief>Distribute leftover row space between two grow items bracketed by fixed-size items.</LvglExampleBrief>
+<LvglExample name="lv_example_flex_flow" path="layouts/flex/flex_flow/lv_example_flex_flow" />
 
-A 300x220 row container holds four children. The first and last are fixed
-40x40 squares. The two middle children have a fixed height of 40 and take
-`lv_obj_set_flex_grow` weights of 1 and 2, splitting the remaining
-horizontal space in that proportion while the trailing fixed item is pushed
-against the right edge.
+## Flex Grow
 
-<LvglExample name="lv_example_flex_3" path="layouts/flex/lv_example_flex_3" />
+### Flex grow
 
-## Reversed column flex order
+<LvglExampleBrief>Distribute leftover row space by weight.</LvglExampleBrief>
 
-<LvglExampleBrief>Stack six items bottom-up inside a centered container.</LvglExampleBrief>
+Three buttons share a row: the first has a fixed width and the other two use flex_grow.
+The free space left in the row is split in proportion to the grow weights, so the
+grow=2 item receives twice as much extra width as the grow=1 item.
 
-A 300x220 container uses `LV_FLEX_FLOW_COLUMN_REVERSE`, so items added later
-in the loop appear higher on screen. Six 100x50 children numbered 0 through
-5 are added in ascending order but rendered in reverse, with "Item: 0"
-sitting at the bottom of the container.
+<LvglExample name="lv_example_flex_grow" path="layouts/flex/flex_grow/lv_example_flex_grow" />
 
-<LvglExample name="lv_example_flex_4" path="layouts/flex/lv_example_flex_4" />
+## Flex Ignore Layout
 
-## Animated row and column gaps
+### Flex ignore layout
 
-<LvglExampleBrief>Drive row and column padding of a wrap container with two looping animations.</LvglExampleBrief>
+<LvglExampleBrief>Opt one item out of the flex flow.</LvglExampleBrief>
 
-A 300x220 container uses `LV_FLEX_FLOW_ROW_WRAP` to arrange nine 70 px
-tiles. Two `lv_anim_t` instances animate `pad_row` and `pad_column`
-between 0 and 10 with `LV_ANIM_REPEAT_INFINITE`: the row gap cycles every
-500 ms in each direction while the column gap cycles every 3000 ms, so the
-tile spacing shifts on two independent time scales.
+With ignore_layout="true", Flex skips the item entirely: it keeps its manual x/y
+position and does not occupy a slot. The remaining items lay out as if it were not
+there, which is useful for overlays, floating badges, or absolutely positioned helpers.
 
-<LvglExample name="lv_example_flex_5" path="layouts/flex/lv_example_flex_5" />
+<LvglExample name="lv_example_flex_ignore_layout" path="layouts/flex/flex_ignore_layout/lv_example_flex_ignore_layout" />
 
-## RTL flex wrap and scrolling
+## Flex Internal Padding
 
-<LvglExampleBrief>Lay out twenty tiles in a right-to-left wrapping flex container.</LvglExampleBrief>
+### Flex internal padding
 
-A 300x220 container has `LV_BASE_DIR_RTL` set on its main part, then
-switches to `LV_FLEX_FLOW_ROW_WRAP`. Twenty 70 px tiles are placed in
-ascending order; the RTL base direction flips the main axis so item 0 sits
-at the top-right and rows fill leftward, and horizontal scrolling follows
-the same reversed direction.
+<LvglExampleBrief>Set horizontal and vertical gaps between flex items.</LvglExampleBrief>
 
-<LvglExample name="lv_example_flex_6" path="layouts/flex/lv_example_flex_6" />
+style_pad_column controls the gap between items on a row, and style_pad_row controls the
+gap between wrapped rows. The container uses row_wrap so both gaps are visible at once
+— the chips spread out horizontally and rows are pushed apart vertically.
+
+<LvglExample name="lv_example_flex_internal_padding" path="layouts/flex/flex_internal_padding/lv_example_flex_internal_padding" />
+
+## Flex New Track
+
+### Flex new track
+
+<LvglExampleBrief>Force an item to start a new wrap row.</LvglExampleBrief>
+
+In a row_wrap container an item with flex_in_new_track="true" begins a fresh track
+instead of continuing the previous one. Here the weekend labels are pushed onto their
+own row regardless of how much horizontal space remains on the first row.
+
+<LvglExample name="lv_example_flex_new_track" path="layouts/flex/flex_new_track/lv_example_flex_new_track" />
+
+## Flex Rtl
+
+### Flex RTL
+
+<LvglExampleBrief>Reverse the main axis direction with style_base_dir.</LvglExampleBrief>
+
+The same three children appear in two identical row containers. Setting style_base_dir
+to rtl on the second container reverses item ordering on the main axis without changing
+the order of children in XML — handy for right-to-left languages or mirrored layouts.
+
+<LvglExample name="lv_example_flex_rtl" path="layouts/flex/flex_rtl/lv_example_flex_rtl" />

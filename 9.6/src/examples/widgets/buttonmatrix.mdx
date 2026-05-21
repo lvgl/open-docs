@@ -5,45 +5,111 @@ order: 35
 
 A grid of buttons defined from a single string map, emitting `LV_EVENT_VALUE_CHANGED` with the pressed button's index.
 
-## Numeric keypad with action row
+## Button matrix value-changed event
 
-<LvglExampleBrief>A 3-row button matrix with a checkable Action1 button and a checked Action2 button.</LvglExampleBrief>
+<LvglExampleBrief>Show which virtual button was pressed in a sibling label.</LvglExampleBrief>
 
-`lv_buttonmatrix_set_map` lays out digits `1` through `0` on two rows and
-`Action1`/`Action2` on a third, where the newline strings split the rows.
-`Action1` is made twice as wide as `Action2` via
-`lv_buttonmatrix_set_button_width` and marked
-`LV_BUTTONMATRIX_CTRL_CHECKABLE`; `Action2` starts in the
-`LV_BUTTONMATRIX_CTRL_CHECKED` state. The callback subscribes to
-`LV_EVENT_ALL` and logs the text of the button that fired
-`LV_EVENT_VALUE_CHANGED`.
+`LV_EVENT_VALUE_CHANGED` fires on every press.
+`lv_buttonmatrix_get_selected_button` returns the zero-based id;
+`_get_button_text` resolves it to the label string. The handler writes
+that string into a sibling label via `lv_label_set_text_fmt`.
 
-<LvglExample name="lv_example_buttonmatrix_1" path="widgets/buttonmatrix/lv_example_buttonmatrix_1" />
+<LvglExample name="lv_example_buttonmatrix_event" path="widgets/buttonmatrix/lv_example_buttonmatrix_event" />
 
-## Per-button custom drawing
+## Buttonmatrix Button Ctrl
 
-<LvglExampleBrief>Rewrite individual button draw descriptors through `LV_EVENT_DRAW_TASK_ADDED`.</LvglExampleBrief>
+### Button matrix per-button control flags
 
-A centered button matrix is flagged with `LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS`
-and subscribes to `LV_EVENT_DRAW_TASK_ADDED`. For each `LV_PART_ITEMS` draw
-task the callback inspects `base_dsc->id1`. Button index 1 becomes a blue
-rectangular button with an offset shadow and a white label. Button 2
-becomes a red `LV_RADIUS_CIRCLE` button that darkens on press. Button 3
-hides its label and draws the `img_star` image centered in the fill area
-with a 30% black recolor while pressed.
+<LvglExampleBrief>Apply checkable, checked, disabled, and hidden flags via `ctrl_map`.</LvglExampleBrief>
 
-<LvglExample name="lv_example_buttonmatrix_2" path="widgets/buttonmatrix/lv_example_buttonmatrix_2" />
+Each token in `ctrl_map` is a `|`-separated list of flag names that applies to
+the matching button in `map`. The four buttons here show a plain button, a
+checkable button that starts checked (`checkable|checked`), a `disabled` button,
+and a `hidden` button which still reserves its slot in the layout.
 
-## Pagination button group
+<LvglExample name="lv_example_buttonmatrix_button_ctrl" path="widgets/buttonmatrix/buttonmatrix_button_ctrl/lv_example_buttonmatrix_button_ctrl" />
 
-<LvglExampleBrief>A pill-shaped matrix with arrow buttons that step through numbered pages.</LvglExampleBrief>
+## Buttonmatrix Button Width
 
-A 225 x 35 button matrix holds `LV_SYMBOL_LEFT`, the digits `1` to `5`, and
-`LV_SYMBOL_RIGHT`. A background style with `LV_RADIUS_CIRCLE` and
-`clip_corner` gives the pill shape, and an `LV_PART_ITEMS` style draws a
-50% grey `LV_BORDER_SIDE_INTERNAL` divider between buttons. Only the number
-buttons are `LV_BUTTONMATRIX_CTRL_CHECKABLE` and `lv_buttonmatrix_set_one_checked`
-enforces a single selection; the `LV_EVENT_VALUE_CHANGED` callback moves
-the checked state one slot left or right when the arrow buttons fire.
+### Button matrix button widths
 
-<LvglExample name="lv_example_buttonmatrix_3" path="widgets/buttonmatrix/lv_example_buttonmatrix_3" />
+<LvglExampleBrief>Set per-button relative widths through `ctrl_map`.</LvglExampleBrief>
+
+Each token in `ctrl_map` corresponds to one button in `map` (row-break tokens are
+skipped). Tokens like `width_1`..`width_15` give the button a relative width that
+acts like CSS flex-grow within its row. Here the second row uses `width_1`,
+`width_2`, `width_3`, splitting the row into a 1/6, 2/6, 3/6 ratio.
+
+The row break itself is written as `'&#10;'` — the XML numeric character entity
+for a newline (U+000A) — because a raw `\n` inside an attribute would stay as
+the literal backslash-n.
+
+<LvglExample name="lv_example_buttonmatrix_button_width" path="widgets/buttonmatrix/buttonmatrix_button_width/lv_example_buttonmatrix_button_width" />
+
+## Buttonmatrix Map
+
+### Button matrix map
+
+<LvglExampleBrief>Lay out buttons in rows using the `map` attribute.</LvglExampleBrief>
+
+The `map` attribute is a space-separated list of single-quoted button labels. A
+quoted newline token starts a new row, so the 3x3 keypad shown here is written
+as nine labels split by two row breaks. The newline is written as the XML entity
+`&#10;` (numeric character reference for line feed, U+000A) because a raw `\n`
+inside an attribute would be kept as the literal two characters `\` and `n`.
+Within a row the matrix shares the available width equally between buttons by
+default.
+
+<LvglExample name="lv_example_buttonmatrix_map" path="widgets/buttonmatrix/buttonmatrix_map/lv_example_buttonmatrix_map" />
+
+## Buttonmatrix One Checked
+
+### Button matrix one-checked mode
+
+<LvglExampleBrief>Make the matrix behave like a radio group with a single checked button.</LvglExampleBrief>
+
+With `one_checked="true"`, the buttons that carry `checkable` in `ctrl_map` form
+a mutually exclusive group: pressing one un-checks the previously checked button.
+Every weekday here is `checkable`, and Tue starts as `checkable|checked` so the
+example doubles as a small weekday selector.
+
+<LvglExample name="lv_example_buttonmatrix_one_checked" path="widgets/buttonmatrix/buttonmatrix_one_checked/lv_example_buttonmatrix_one_checked" />
+
+## Buttonmatrix Popover
+
+### Button matrix popover preview
+
+<LvglExampleBrief>Show a magnified label above a button while it is pressed.</LvglExampleBrief>
+
+The `popover` flag mirrors the on-screen keyboard convention: while a button is
+held down, its text floats up in a small popover above the finger so the user
+can still read what they are pressing. The entire top row carries `popover` in
+`ctrl_map`, which is how a keyboard layer typically enables the feature.
+
+<LvglExample name="lv_example_buttonmatrix_popover" path="widgets/buttonmatrix/buttonmatrix_popover/lv_example_buttonmatrix_popover" />
+
+## Buttonmatrix Recolor
+
+### Button matrix per-button text recolor
+
+<LvglExampleBrief>Color parts of a button label inline with `#RRGGBB ... #` tags.</LvglExampleBrief>
+
+With the `recolor` flag set in `ctrl_map`, the same `#RRGGBB ... #` syntax used
+by `lv_label` recoloring becomes active in that button's `map` text. The three
+buttons share a layout but each colors a different word, so a single buttonmatrix
+can mix severity colors, badges, or status markers without per-button styles.
+
+<LvglExample name="lv_example_buttonmatrix_recolor" path="widgets/buttonmatrix/buttonmatrix_recolor/lv_example_buttonmatrix_recolor" />
+
+## Buttonmatrix Styling
+
+### Button matrix styling
+
+<LvglExampleBrief>Style the MAIN container, the ITEMS, and the checked-state items separately.</LvglExampleBrief>
+
+Button matrix has two parts: MAIN (the container) and ITEMS (each virtual button).
+The named styles target ITEMS in the default state and in the `checked` state via
+`selector="items|checked"`, so the highlighted day picks up an accent fill. The
+container gets a flat, padded look via local `style_*` props on the matrix tag.
+
+<LvglExample name="lv_example_buttonmatrix_styling" path="widgets/buttonmatrix/buttonmatrix_styling/lv_example_buttonmatrix_styling" />

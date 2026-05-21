@@ -16,4 +16,80 @@ using `LV_SYMBOL_PLUS` and `LV_SYMBOL_MINUS` as background images. Their
 `LV_EVENT_ALL` handlers call `lv_spinbox_increment` or `lv_spinbox_decrement`
 on `LV_EVENT_SHORT_CLICKED` and `LV_EVENT_LONG_PRESSED_REPEAT`.
 
-<LvglExample name="lv_example_spinbox_1" path="widgets/spinbox/lv_example_spinbox_1" />
+<LvglExample name="lv_example_spinbox_with_buttons" path="widgets/spinbox/lv_example_spinbox_with_buttons" />
+
+## Spinbox Bind Value
+
+### Spinbox bind value
+
+<LvglExampleBrief>Spinbox edits a subject; a bound arc visualises the same number.</LvglExampleBrief>
+
+The spinbox lets the user nudge `subject_value` with precision. The arc reads
+the same subject through `bind_value`, so the visualisation tracks every step
+without any explicit redraw call. Use this pattern whenever a numeric editor
+and a graphical indicator both refer to the same underlying quantity.
+
+<LvglExample name="lv_example_spinbox_bind_value" path="widgets/spinbox/spinbox_bind_value/lv_example_spinbox_bind_value" />
+
+## Spinbox Format
+
+### Spinbox digit count and decimal point
+
+<LvglExampleBrief>Control how the number is displayed: how many digits, and where the dot goes.</LvglExampleBrief>
+
+`digit_count` is the *total* number of digits drawn (the spinbox left-pads
+with zeros when the value is shorter). `dec_point_pos` inserts a decimal
+point that many positions from the right — `0` means no decimal point, `2`
+puts it two digits from the right. The stored value is the same integer in
+both spinboxes (`123`); only the rendering differs.
+
+<LvglExample name="lv_example_spinbox_format" path="widgets/spinbox/spinbox_format/lv_example_spinbox_format" />
+
+## Spinbox Rollover
+
+### Spinbox rollover
+
+<LvglExampleBrief>Wrap the value around when it hits a bound instead of sticking.</LvglExampleBrief>
+
+`rollover="true"` makes the spinbox treat its range as circular: pressing
+past `max_value` jumps to `min_value` and vice versa. This is convenient
+for cyclic quantities like hours (0..23) or angles (0..359), where the user
+should be able to step from 23 → 0 without re-entering the value.
+
+<LvglExample name="lv_example_spinbox_rollover" path="widgets/spinbox/spinbox_rollover/lv_example_spinbox_rollover" />
+
+## Spinbox Styling
+
+### Spinbox styling
+
+<LvglExampleBrief>Style the main box and the editing cursor as separate parts.</LvglExampleBrief>
+
+Spinbox inherits its drawable surface from the base widget, so `MAIN`
+accepts the full background style stack — backgrounds, borders, radii,
+padding, and text. `text_letter_space` on MAIN spreads the digits apart
+so the cursor's frame visually sits around a single digit rather than
+hugging two together.
+
+The `CURSOR` selector targets the highlight that marks the currently
+editable digit. A clean pattern is to leave the cursor background
+transparent (`bg_opa="0"`) and draw only a coloured border — the active
+digit then reads as framed. Set `text_opa="0"` on the cursor so it
+doesn't re-paint the digit on top of MAIN's render (avoids subtle
+double-drawing), and use `pad_ver` to let the frame breathe vertically
+around the glyph.
+
+<LvglExample name="lv_example_spinbox_styling" path="widgets/spinbox/spinbox_styling/lv_example_spinbox_styling" />
+
+## Spinbox Value
+
+### Spinbox value, range, and step
+
+<LvglExampleBrief>Pin the initial value, clamp it to a numeric range, and set the per-step delta.</LvglExampleBrief>
+
+`value` is the starting number shown in the spinbox. `min_value`/`max_value`
+clamp every adjustment — pressing the increment past the maximum stays at
+the maximum. `step` is how much each key/press changes the value. With
+`rollover="false"` (the default) the value sticks at the bounds; see
+`spinbox_rollover` for the wraparound variant.
+
+<LvglExample name="lv_example_spinbox_value" path="widgets/spinbox/spinbox_value/lv_example_spinbox_value" />

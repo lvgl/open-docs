@@ -3,86 +3,80 @@ title: "Bar"
 order: 25
 ---
 
-## Simple bar at 70 percent
+## Bar Bind Value
 
-<LvglExampleBrief>A default 200 x 20 bar centered on the screen with its value set to 70.</LvglExampleBrief>
+### Bar bind value with increment buttons
 
-`lv_bar_create` produces a themed progress bar that is sized to
-200 x 20 px and centered on the active screen. `lv_bar_set_value` with
-`LV_ANIM_OFF` snaps the indicator to 70 on the default 0 to 100 range
-without animating.
+<LvglExampleBrief>Mutate a bound int subject via `subject_increment_event` instead of dragging.</LvglExampleBrief>
 
-<LvglExample name="lv_example_bar_1" path="widgets/bar/lv_example_bar_1" />
+The bar listens to `subject_value`. Each +/- button carries two
+`<subject_increment_event>` children — one on `clicked` and one on
+`long_pressed_repeat` — so a tap nudges by `step` and a hold keeps repeating.
+`min_value`/`max_value` clamp the result and `rollover="true"` wraps around
+once the bound is hit; hold past 100 to see it wrap back to 0.
 
-## Custom background and indicator styles
+<LvglExample name="lv_example_bar_bind_value" path="widgets/bar/bar_bind_value/lv_example_bar_bind_value" />
 
-<LvglExampleBrief>Restyle the bar background and indicator, then fill it to 100 with animation.</LvglExampleBrief>
+## Bar Img Indicator
 
-The theme styles are removed and two local styles are applied: a background
-style with a 2 px `LV_PALETTE_BLUE` border, 6 px padding to shrink the
-indicator inset, and a 1000 ms `anim_duration`, plus an
-`LV_PART_INDICATOR` style with a solid blue fill and 3 px radius.
-`lv_bar_set_value(bar, 100, LV_ANIM_ON)` drives the indicator up to full
-using the configured duration.
+### Bar image indicator
 
-<LvglExample name="lv_example_bar_2" path="widgets/bar/lv_example_bar_2" />
+<LvglExampleBrief>Use bitmaps as the bar track and indicator — the bar clips each image to its part.</LvglExampleBrief>
 
-## Vertical gradient temperature meter
+`bg_image_src` replaces the solid background fill with pixels sampled from a
+bitmap. Set it on `selector="main"` for the background track and on
+`selector="indicator"` for the filled portion. As the value rises, the indicator
+image is revealed left-to-right, showing cyan segments that transition to yellow
+then red at the high end. Both images are 280×30, matching the bar widget size.
 
-<LvglExampleBrief>A tall bar ranged from -20 to 40 that animates endlessly between the extremes.</LvglExampleBrief>
+<LvglExample name="lv_example_bar_img_indicator" path="widgets/bar/bar_img_indicator/lv_example_bar_img_indicator" />
 
-A 20 x 200 vertical bar is centered on the active screen and given an
-`LV_PART_INDICATOR` style with a red-to-blue `LV_GRAD_DIR_VER` gradient.
-`lv_bar_set_range` maps the values to -20 through 40, and an `lv_anim_t`
-sweeps `lv_bar_set_value` from -20 to 40 over 3000 ms with a matching
-reverse duration, repeating with `LV_ANIM_REPEAT_INFINITE`.
+## Bar Modes
 
-<LvglExample name="lv_example_bar_3" path="widgets/bar/lv_example_bar_3" />
+### Bar modes
 
-## Ranged bar with tiled stripe pattern
+<LvglExampleBrief>Compare normal, symmetrical, and range modes.</LvglExampleBrief>
 
-<LvglExampleBrief>A 260 x 20 bar filled between 20 and 90 with a tiled skewed-stripe overlay.</LvglExampleBrief>
+Normal fills from min_value to value. Symmetrical needs a range that crosses zero and
+fills outward from the middle, so positive and negative values pull the indicator in
+opposite directions. Range mode draws a band between start_value and value, useful for
+picking an interval rather than a single number.
 
-`LV_IMAGE_DECLARE(img_skew_strip)` provides the stripe asset, and an
-`LV_PART_INDICATOR` style sets it as a tiled `bg_image_src` at 30% opacity.
-`lv_bar_set_mode(bar, LV_BAR_MODE_RANGE)` unlocks a configurable start
-value; `lv_bar_set_start_value` and `lv_bar_set_value` fill only the 20
-to 90 portion of the track with the stripes on top of the theme color.
+<LvglExample name="lv_example_bar_modes" path="widgets/bar/bar_modes/lv_example_bar_modes" />
 
-<LvglExample name="lv_example_bar_4" path="widgets/bar/lv_example_bar_4" />
+## Bar Orientation
 
-## LTR and RTL base direction
+### Bar orientation and size
 
-<LvglExampleBrief>Two 200 x 20 bars at value 70, one filling from the left, one from the right.</LvglExampleBrief>
+<LvglExampleBrief>Compare horizontal and explicit vertical bars.</LvglExampleBrief>
 
-The first bar uses the default base direction and fills left-to-right; the
-second sets `LV_BASE_DIR_RTL` through `lv_obj_set_style_base_dir` so the
-indicator grows from the right edge. Each bar has an explanatory label
-aligned above it with `LV_ALIGN_OUT_TOP_MID` to make the direction obvious.
+The horizontal bar uses the default orientation derived from a wide-and-short size. The
+vertical one sets orientation="vertical" explicitly and uses a tall, narrow size so the
+indicator grows upward instead of left-to-right.
 
-<LvglExample name="lv_example_bar_5" path="widgets/bar/lv_example_bar_5" />
+<LvglExample name="lv_example_bar_orientation" path="widgets/bar/bar_orientation/lv_example_bar_orientation" />
 
-## Animated bar with custom value label
+## Bar Styling
 
-<LvglExampleBrief>Draw the live value inside or beside the indicator via `LV_EVENT_DRAW_MAIN_END`.</LvglExampleBrief>
+### Bar styling
 
-A 200 x 20 bar with range 0 to 100 is animated by `lv_anim_t` from 0 to
-100 over 4000 ms with a matching reverse duration and
-`LV_ANIM_REPEAT_INFINITE`. On each `LV_EVENT_DRAW_MAIN_END` the callback
-measures the indicator width: when it is wider than the text plus 20 px
-the value is drawn in white inside the indicator at `LV_ALIGN_RIGHT_MID`,
-otherwise it is drawn in black outside the indicator with
-`LV_ALIGN_OUT_RIGHT_MID`.
+<LvglExampleBrief>Style the MAIN track and the INDICATOR independently, with a gradient fill.</LvglExampleBrief>
 
-<LvglExample name="lv_example_bar_6" path="widgets/bar/lv_example_bar_6" />
+Bar exposes two parts: MAIN (the background track) and INDICATOR (the filled portion).
+Each is styled separately via `selector="main"` and `selector="indicator"`. The
+indicator style adds a horizontal gradient and a darker inner shadow so the fill
+reads as a glossy progress strip on top of the recessed track.
 
-## Vertical bar filling top to bottom
+<LvglExample name="lv_example_bar_styling" path="widgets/bar/bar_styling/lv_example_bar_styling" />
 
-<LvglExampleBrief>A 20 x 180 vertical bar with a reversed 100-to-0 range at value 70.</LvglExampleBrief>
+## Bar Value Range
 
-`lv_bar_set_range(bar_tob, 100, 0)` flips the indicator so it grows from
-the top edge downward instead of bottom-up. `lv_bar_set_value` pins the
-value at 70, and a label placed with `LV_ALIGN_OUT_TOP_MID` names the
-direction above the bar.
+### Bar value and custom range
 
-<LvglExample name="lv_example_bar_7" path="widgets/bar/lv_example_bar_7" />
+<LvglExampleBrief>Drive the indicator with a custom min/max range.</LvglExampleBrief>
+
+The first bar uses the default 0..100 range with value 30. The second bar shifts the
+range to -20..80 with value 35 to demonstrate that ranges need not start at zero — the
+indicator length is computed relative to wherever the range begins.
+
+<LvglExample name="lv_example_bar_value_range" path="widgets/bar/bar_value_range/lv_example_bar_value_range" />
