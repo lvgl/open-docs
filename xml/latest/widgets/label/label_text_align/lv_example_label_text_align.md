@@ -1,4 +1,4 @@
-```xml title="examples/widgets/label/label_text_align/lv_example_label_text_align.xml" source="https://github.com/lvgl/lvgl/blob/406fe8cb912436be179698d9603cef5948692dbc/examples/widgets/label/label_text_align/lv_example_label_text_align.xml"
+```xml title="examples/widgets/label/label_text_align/lv_example_label_text_align.xml" source="https://github.com/lvgl/lvgl/blob/99df9b9ac7b096ca30802f8d3a12452b78bc9110/examples/widgets/label/label_text_align/lv_example_label_text_align.xml"
 <!--
  @title Label text alignment
  @brief Align multi-line text inside a fixed-width label.

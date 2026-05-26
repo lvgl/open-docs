@@ -1,4 +1,4 @@
-```xml title="examples/widgets/switch/switch_state/lv_example_switch_state.xml" source="https://github.com/lvgl/lvgl/blob/406fe8cb912436be179698d9603cef5948692dbc/examples/widgets/switch/switch_state/lv_example_switch_state.xml"
+```xml title="examples/widgets/switch/switch_state/lv_example_switch_state.xml" source="https://github.com/lvgl/lvgl/blob/99df9b9ac7b096ca30802f8d3a12452b78bc9110/examples/widgets/switch/switch_state/lv_example_switch_state.xml"
 <!--
  @title Switch states
  @brief Pre-set the on/off state, and show what `disabled` looks like.

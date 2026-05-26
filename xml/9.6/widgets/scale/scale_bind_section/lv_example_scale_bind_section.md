@@ -1,4 +1,4 @@
-```xml title="examples/widgets/scale/scale_bind_section/lv_example_scale_bind_section.xml" source="https://github.com/lvgl/lvgl/blob/406fe8cb912436be179698d9603cef5948692dbc/examples/widgets/scale/scale_bind_section/lv_example_scale_bind_section.xml"
+```xml title="examples/widgets/scale/scale_bind_section/lv_example_scale_bind_section.xml" source="https://github.com/lvgl/lvgl/blob/99df9b9ac7b096ca30802f8d3a12452b78bc9110/examples/widgets/scale/scale_bind_section/lv_example_scale_bind_section.xml"
 <!--
  @title Scale section bind min/max
  @brief Drive a scale section's range live from two subjects.

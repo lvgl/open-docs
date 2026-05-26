@@ -1,4 +1,4 @@
-```xml title="examples/widgets/scale/scale_round_modes/lv_example_scale_round_modes.xml" source="https://github.com/lvgl/lvgl/blob/406fe8cb912436be179698d9603cef5948692dbc/examples/widgets/scale/scale_round_modes/lv_example_scale_round_modes.xml"
+```xml title="examples/widgets/scale/scale_round_modes/lv_example_scale_round_modes.xml" source="https://github.com/lvgl/lvgl/blob/99df9b9ac7b096ca30802f8d3a12452b78bc9110/examples/widgets/scale/scale_round_modes/lv_example_scale_round_modes.xml"
 <!--
  @title Scale round modes
  @brief Two round scales: ticks pointing inward and outward.

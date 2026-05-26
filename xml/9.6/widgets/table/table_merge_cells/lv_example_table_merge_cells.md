@@ -1,4 +1,4 @@
-```xml title="examples/widgets/table/table_merge_cells/lv_example_table_merge_cells.xml" source="https://github.com/lvgl/lvgl/blob/406fe8cb912436be179698d9603cef5948692dbc/examples/widgets/table/table_merge_cells/lv_example_table_merge_cells.xml"
+```xml title="examples/widgets/table/table_merge_cells/lv_example_table_merge_cells.xml" source="https://github.com/lvgl/lvgl/blob/99df9b9ac7b096ca30802f8d3a12452b78bc9110/examples/widgets/table/table_merge_cells/lv_example_table_merge_cells.xml"
 <!--
  @title Table merge cells
  @brief Span a cell across two columns by setting the `merge_right` control flag.

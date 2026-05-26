@@ -7,11 +7,7 @@ flatten: true
 
 Bringing LVGL to a new platform means supplying a tick source, a display flush callback that pushes rendered pixels to the panel, and input read callbacks for touch, keypad, or encoder devices. If you run under an RTOS, you also wire the OS primitives (threads, mutexes) through the abstraction layer. The examples here show each hook in isolation so you can port them one at a time.
 
-## OS Abstraction Layer (OSAL)
-
-Portable wrappers for OS primitives: threads, mutexes, semaphores, and timers.
-
-### Thread-safe counter with OSAL sync
+## Thread-safe counter with OSAL sync
 
 <LvglExampleBrief>Count button clicks from a worker thread using `lv_thread_sync_t`.</LvglExampleBrief>
 

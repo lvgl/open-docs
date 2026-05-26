@@ -1,4 +1,4 @@
-```xml title="examples/styles/style_text/lv_example_style_text.xml" source="https://github.com/lvgl/lvgl/blob/406fe8cb912436be179698d9603cef5948692dbc/examples/styles/style_text/lv_example_style_text.xml"
+```xml title="examples/styles/style_text/lv_example_style_text.xml" source="https://github.com/lvgl/lvgl/blob/99df9b9ac7b096ca30802f8d3a12452b78bc9110/examples/styles/style_text/lv_example_style_text.xml"
 <!--
  @title Text styling
  @brief Color text, widen letter/line spacing, and underline it.
