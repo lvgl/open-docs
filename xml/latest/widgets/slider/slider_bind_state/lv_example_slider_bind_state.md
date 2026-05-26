@@ -1,4 +1,4 @@
-```xml title="examples/widgets/slider/slider_bind_state/lv_example_slider_bind_state.xml" source="https://github.com/lvgl/lvgl/blob/99df9b9ac7b096ca30802f8d3a12452b78bc9110/examples/widgets/slider/slider_bind_state/lv_example_slider_bind_state.xml"
+```xml title="examples/widgets/slider/slider_bind_state/lv_example_slider_bind_state.xml" source="https://github.com/lvgl/lvgl/blob/77b321d3ae1a7d239ce373f77d08a144cc8b3f2f/examples/widgets/slider/slider_bind_state/lv_example_slider_bind_state.xml"
 <!--
  @title Slider drives another widget's state
  @brief Bind a button's `disabled` state to a subject driven by a slider's value.

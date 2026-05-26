@@ -1,4 +1,4 @@
-```xml title="examples/widgets/led/led_brightness/lv_example_led_brightness.xml" source="https://github.com/lvgl/lvgl/blob/99df9b9ac7b096ca30802f8d3a12452b78bc9110/examples/widgets/led/led_brightness/lv_example_led_brightness.xml"
+```xml title="examples/widgets/led/led_brightness/lv_example_led_brightness.xml" source="https://github.com/lvgl/lvgl/blob/77b321d3ae1a7d239ce373f77d08a144cc8b3f2f/examples/widgets/led/led_brightness/lv_example_led_brightness.xml"
 <!--
  @title LED brightness
  @brief Same hue, three different brightness values.

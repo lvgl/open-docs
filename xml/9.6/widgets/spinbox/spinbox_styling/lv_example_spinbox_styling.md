@@ -1,4 +1,4 @@
-```xml title="examples/widgets/spinbox/spinbox_styling/lv_example_spinbox_styling.xml" source="https://github.com/lvgl/lvgl/blob/99df9b9ac7b096ca30802f8d3a12452b78bc9110/examples/widgets/spinbox/spinbox_styling/lv_example_spinbox_styling.xml"
+```xml title="examples/widgets/spinbox/spinbox_styling/lv_example_spinbox_styling.xml" source="https://github.com/lvgl/lvgl/blob/77b321d3ae1a7d239ce373f77d08a144cc8b3f2f/examples/widgets/spinbox/spinbox_styling/lv_example_spinbox_styling.xml"
 <!--
  @title Spinbox styling
  @brief Style the main box and the editing cursor as separate parts.

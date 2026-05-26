@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-05-26T13:04:14.541Z",
-    "symbolCount": 8611
+    "generatedAt": "2026-05-26T21:50:27.103Z",
+    "symbolCount": 8609
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -32896,19 +32896,9 @@
       "anchor": "",
       "kind": "header"
     },
-    "lv_draw_dma2d_opaque_fill": {
-      "path": "api-private/draw/dma2d/lv_draw_dma2d_private_h",
-      "anchor": "lv_draw_dma2d_opaque_fill",
-      "kind": "function"
-    },
     "lv_draw_dma2d_fill": {
       "path": "api-private/draw/dma2d/lv_draw_dma2d_private_h",
       "anchor": "lv_draw_dma2d_fill",
-      "kind": "function"
-    },
-    "lv_draw_dma2d_opaque_image": {
-      "path": "api-private/draw/dma2d/lv_draw_dma2d_private_h",
-      "anchor": "lv_draw_dma2d_opaque_image",
       "kind": "function"
     },
     "lv_draw_dma2d_image": {
