@@ -1,4 +1,4 @@
-```xml title="examples/scroll/scroll_rtl/lv_example_scroll_rtl.xml" source="https://github.com/lvgl/lvgl/blob/77b321d3ae1a7d239ce373f77d08a144cc8b3f2f/examples/scroll/scroll_rtl/lv_example_scroll_rtl.xml"
+```xml title="examples/scroll/scroll_rtl/lv_example_scroll_rtl.xml" source="https://github.com/lvgl/lvgl/blob/18760b7f0312f8a7e13147f2ca83cd10710438c1/examples/scroll/scroll_rtl/lv_example_scroll_rtl.xml"
 <!--
  @title Right-to-left scrolling
  @brief An RTL base direction moves the vertical scrollbar to the left side.

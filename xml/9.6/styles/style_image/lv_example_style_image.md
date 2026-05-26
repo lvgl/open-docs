@@ -1,4 +1,4 @@
-```xml title="examples/styles/style_image/lv_example_style_image.xml" source="https://github.com/lvgl/lvgl/blob/77b321d3ae1a7d239ce373f77d08a144cc8b3f2f/examples/styles/style_image/lv_example_style_image.xml"
+```xml title="examples/styles/style_image/lv_example_style_image.xml" source="https://github.com/lvgl/lvgl/blob/18760b7f0312f8a7e13147f2ca83cd10710438c1/examples/styles/style_image/lv_example_style_image.xml"
 <!--
  @title Image recolor and rotation
  @brief Tint and rotate an image purely through style properties.
