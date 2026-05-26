@@ -1,0 +1,24 @@
+```xml title="examples/widgets/buttonmatrix/buttonmatrix_recolor/lv_example_buttonmatrix_recolor.xml" source="https://github.com/lvgl/lvgl/blob/406fe8cb912436be179698d9603cef5948692dbc/examples/widgets/buttonmatrix/buttonmatrix_recolor/lv_example_buttonmatrix_recolor.xml"
+<!--
+ @title Button matrix per-button text recolor
+ @brief Color parts of a button label inline with `#RRGGBB ... #` tags.
+
+ With the `recolor` flag set in `ctrl_map`, the same `#RRGGBB ... #` syntax used
+ by `lv_label` recoloring becomes active in that button's `map` text. The three
+ buttons share a layout but each colors a different word, so a single buttonmatrix
+ can mix severity colors, badges, or status markers without per-button styles.
+-->
+<screen>
+	<view>
+		<!-- 💡 Edit the `#RRGGBB ... #` segments in any `map` entry to recolor different parts of the button label. -->
+		<!-- Three buttons, each highlighting a different word with recolor -->
+		<lv_buttonmatrix name="buttonmatrix"
+			align="center"
+			width="90%"
+			height="60"
+			map="'#ff0000 Stop#' '#e08800 Warn#' '#00a000 Go#'"
+			ctrl_map="recolor recolor recolor"
+		/>
+	</view>
+</screen>
+```

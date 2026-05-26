@@ -1,0 +1,19 @@
+```xml title="examples/widgets/image/image_src/lv_example_image_src.xml" source="https://github.com/lvgl/lvgl/blob/406fe8cb912436be179698d9603cef5948692dbc/examples/widgets/image/image_src/lv_example_image_src.xml"
+<!--
+ @title Image source
+ @brief Display an image registered globally for the project.
+
+ `lv_image` paints whatever is set as its `src`. In XML the value must
+ resolve through `lv_xml_get_image`, so `src` references a name that was
+ registered via `<file>` or `<data>` in `<images>` — here `img_example_lvgl_logo`
+ declared in `examples/xml_project/globals.xml`. The C API also accepts
+ a symbol string or a raw image variable pointer; those alternatives are
+ documented in this page but cannot appear in XML.
+-->
+<screen>
+	<view flex_flow="column" style_flex_main_place="center" style_flex_cross_place="center" style_flex_track_place="center" style_pad_row="16">
+		<!-- 💡 Register another image in `globals.xml` and swap `src` to its name to see a different bitmap. -->
+		<lv_image name="image" src="img_example_lvgl_logo" />
+	</view>
+</screen>
+```
