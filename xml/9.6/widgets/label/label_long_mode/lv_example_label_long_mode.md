@@ -1,4 +1,4 @@
-```xml title="examples/widgets/label/label_long_mode/lv_example_label_long_mode.xml" source="https://github.com/lvgl/lvgl/blob/180adf91d757e1a895170564fddd15d4a891c86c/examples/widgets/label/label_long_mode/lv_example_label_long_mode.xml"
+```xml title="examples/widgets/label/label_long_mode/lv_example_label_long_mode.xml" source="https://github.com/lvgl/lvgl/blob/ba59aa52c687d701587d915acca606ad3606570e/examples/widgets/label/label_long_mode/lv_example_label_long_mode.xml"
 <!--
  @title Label long modes
  @brief Show every long_mode behavior side by side.

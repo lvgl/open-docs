@@ -1,4 +1,4 @@
-```xml title="examples/layouts/grid/grid_align/lv_example_grid_align.xml" source="https://github.com/lvgl/lvgl/blob/180adf91d757e1a895170564fddd15d4a891c86c/examples/layouts/grid/grid_align/lv_example_grid_align.xml"
+```xml title="examples/layouts/grid/grid_align/lv_example_grid_align.xml" source="https://github.com/lvgl/lvgl/blob/ba59aa52c687d701587d915acca606ad3606570e/examples/layouts/grid/grid_align/lv_example_grid_align.xml"
 <!--
  @title Grid alignment of tracks
  @brief Place column and row tracks within free space.

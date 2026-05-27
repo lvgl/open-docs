@@ -1,4 +1,4 @@
-```xml title="examples/widgets/button/button_basic/lv_example_button_basic.xml" source="https://github.com/lvgl/lvgl/blob/180adf91d757e1a895170564fddd15d4a891c86c/examples/widgets/button/button_basic/lv_example_button_basic.xml"
+```xml title="examples/widgets/button/button_basic/lv_example_button_basic.xml" source="https://github.com/lvgl/lvgl/blob/ba59aa52c687d701587d915acca606ad3606570e/examples/widgets/button/button_basic/lv_example_button_basic.xml"
 <!--
  @title Button basics
  @brief Two buttons showing default content-sized sizing and an explicit width.

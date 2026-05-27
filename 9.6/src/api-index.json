@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-05-27T08:06:48.097Z",
-    "symbolCount": 8609
+    "generatedAt": "2026-05-27T08:57:48.752Z",
+    "symbolCount": 8615
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2674,6 +2674,16 @@
     "LV_CHECK_ARG_LOG_MODE": {
       "path": "api/config/lv_conf_internal_h",
       "anchor": "LV_CHECK_ARG_LOG_MODE",
+      "kind": "macro"
+    },
+    "LV_USE_CHECK_OBJ_CLASSTYPE": {
+      "path": "api/config/lv_conf_internal_h",
+      "anchor": "LV_USE_CHECK_OBJ_CLASSTYPE",
+      "kind": "macro"
+    },
+    "LV_USE_CHECK_OBJ_VALIDITY": {
+      "path": "api/config/lv_conf_internal_h",
+      "anchor": "LV_USE_CHECK_OBJ_VALIDITY",
       "kind": "macro"
     },
     "LV_ENABLE_GLOBAL_CUSTOM": {
@@ -12289,6 +12299,26 @@
     "LV_CHECK_ARG": {
       "path": "api/debugging/lv_check_arg_h",
       "anchor": "LV_CHECK_ARG",
+      "kind": "macro"
+    },
+    "lv_check_obj.h": {
+      "path": "api/debugging/lv_check_obj_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "LV_CHECK_OBJ_CLASS": {
+      "path": "api/debugging/lv_check_obj_h",
+      "anchor": "LV_CHECK_OBJ_CLASS",
+      "kind": "macro"
+    },
+    "LV_CHECK_OBJ_VALID": {
+      "path": "api/debugging/lv_check_obj_h",
+      "anchor": "LV_CHECK_OBJ_VALID",
+      "kind": "macro"
+    },
+    "LV_CHECK_OBJ": {
+      "path": "api/debugging/lv_check_obj_h",
+      "anchor": "LV_CHECK_OBJ",
       "kind": "macro"
     },
     "lv_monkey.h": {

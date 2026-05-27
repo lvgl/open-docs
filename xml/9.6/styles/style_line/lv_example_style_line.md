@@ -1,4 +1,4 @@
-```xml title="examples/styles/style_line/lv_example_style_line.xml" source="https://github.com/lvgl/lvgl/blob/180adf91d757e1a895170564fddd15d4a891c86c/examples/styles/style_line/lv_example_style_line.xml"
+```xml title="examples/styles/style_line/lv_example_style_line.xml" source="https://github.com/lvgl/lvgl/blob/ba59aa52c687d701587d915acca606ad3606570e/examples/styles/style_line/lv_example_style_line.xml"
 <!--
  @title Line stroke
  @brief Style a polyline's color, thickness, and rounded end caps.

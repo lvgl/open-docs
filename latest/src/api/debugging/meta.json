@@ -5,6 +5,7 @@
     "test",
     "lv_assert_h",
     "lv_check_arg_h",
+    "lv_check_obj_h",
     "lv_monkey_h",
     "lv_sysmon_h"
   ]

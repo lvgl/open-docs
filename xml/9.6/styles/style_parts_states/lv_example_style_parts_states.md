@@ -1,4 +1,4 @@
-```xml title="examples/styles/style_parts_states/lv_example_style_parts_states.xml" source="https://github.com/lvgl/lvgl/blob/180adf91d757e1a895170564fddd15d4a891c86c/examples/styles/style_parts_states/lv_example_style_parts_states.xml"
+```xml title="examples/styles/style_parts_states/lv_example_style_parts_states.xml" source="https://github.com/lvgl/lvgl/blob/ba59aa52c687d701587d915acca606ad3606570e/examples/styles/style_parts_states/lv_example_style_parts_states.xml"
 <!--
  @title Parts and states
  @brief Style one part normally and again for a state with `selector`.

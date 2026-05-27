@@ -95,12 +95,12 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/indev/lv_indev_gesture.h:187: 
   parameter 'recognizer'
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/indev/lv_indev_gesture.h:178: warning: The following parameter of lv_indev_set_gesture_data(lv_indev_data_t *data, lv_indev_gesture_recognizer_t *recognizer, lv_indev_gesture_type_t type) is not documented:
   parameter 'type'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:228: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:230: warning: explicit link request to 'endif' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:234: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:236: warning: explicit link request to 'endif' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:240: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:242: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:229: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:231: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:235: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:237: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:241: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:243: warning: explicit link request to 'endif' could not be resolved
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:410: warning: argument 'lv_point_t' of command @param is not found in the argument list of lv_gltf_world_to_screen(lv_obj_t *obj, const lv_3dpoint_t world_pos, lv_point_t *screen_pos)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:410: warning: The following parameter of lv_gltf_world_to_screen(lv_obj_t *obj, const lv_3dpoint_t world_pos, lv_point_t *screen_pos) is not documented:
   parameter 'screen_pos'
@@ -254,12 +254,12 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/indev/lv_indev_gesture.h:187: 
   parameter 'recognizer'
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/indev/lv_indev_gesture.h:194: warning: The following parameter of lv_event_get_gesture_state(lv_event_t *gesture_event, lv_indev_gesture_type_t type) is not documented:
   parameter 'type'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:228: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:230: warning: explicit link request to 'endif' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:234: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:236: warning: explicit link request to 'endif' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:240: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:242: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:229: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:231: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:235: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:237: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:241: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:243: warning: explicit link request to 'endif' could not be resolved
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:383: warning: argument 'screen_y' of command @param is not found in the argument list of lv_intersect_ray_with_plane(const lv_3dray_t *ray, const lv_3dplane_t *plane, lv_3dpoint_t *collision_point)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:383: warning: The following parameter of lv_intersect_ray_with_plane(const lv_3dray_t *ray, const lv_3dplane_t *plane, lv_3dpoint_t *collision_point) is not documented:
   parameter 'plane'

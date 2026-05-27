@@ -3,17 +3,20 @@ title: Deprecated List
 description: Deprecated List
 ---
 
+**Global <ApiLink name="LV_ASSERT_OBJ" />  (obj_p, obj_class)**
+: <span id="deprecated_1_deprecated000001" />Use <ApiLink name="LV_CHECK_OBJ" display="LV_CHECK_OBJ(obj, cls, return)" /> instead. `LV_ASSERT_OBJ` aborts on failure; `LV_CHECK_OBJ` logs a warning and executes the supplied action, which is safer in production.
+
 **Global <ApiLink name="lv_image_buf_free" />  (<ApiLink name="lv_image_dsc_t" /> *dsc)**
-: <span id="deprecated_1_deprecated000002" />Use lv_draw_buffer_create/destroy instead. Free the data pointer and dsc struct of an image.
+: <span id="deprecated_1_deprecated000003" />Use lv_draw_buffer_create/destroy instead. Free the data pointer and dsc struct of an image.
 
 **Global <ApiLink name="lv_image_buf_set_palette" />  (<ApiLink name="lv_image_dsc_t" /> *dsc, uint8_t id, <ApiLink name="lv_color32_t" /> c)**
-: <span id="deprecated_1_deprecated000001" />Use lv_draw_buf_set_palette instead.
+: <span id="deprecated_1_deprecated000002" />Use lv_draw_buf_set_palette instead.
 
 **Global <ApiLink name="lv_snapshot_free" />  (<ApiLink name="lv_image_dsc_t" /> *dsc)**
-: <span id="deprecated_1_deprecated000003" />Use `lv_draw_buf_destroy` instead.
+: <span id="deprecated_1_deprecated000004" />Use `lv_draw_buf_destroy` instead.
 
 **Global <ApiLink name="lv_snapshot_take_to_buf" />  (lv_obj_t *obj, lv_color_format_t cf, <ApiLink name="lv_image_dsc_t" /> *dsc, void *buf, uint32_t buf_size)**
-: <span id="deprecated_1_deprecated000004" />Use lv_snapshot_take_to_draw_buf instead.
+: <span id="deprecated_1_deprecated000005" />Use lv_snapshot_take_to_draw_buf instead.
 
 **Global <ApiLink name="lv_textarea_set_align" />  (lv_obj_t *obj, lv_text_align_t align)**
-: <span id="deprecated_1_deprecated000005" />Use the normal text_align style property instead Set the label's alignment. It sets where the label is aligned (in one line mode it can be smaller than the text area) and how the lines of the area align in case of multiline text area
+: <span id="deprecated_1_deprecated000006" />Use the normal text_align style property instead Set the label's alignment. It sets where the label is aligned (in one line mode it can be smaller than the text area) and how the lines of the area align in case of multiline text area

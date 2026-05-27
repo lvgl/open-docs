@@ -1,4 +1,4 @@
-```xml title="examples/widgets/scale/scale_styling/lv_example_scale_styling.xml" source="https://github.com/lvgl/lvgl/blob/180adf91d757e1a895170564fddd15d4a891c86c/examples/widgets/scale/scale_styling/lv_example_scale_styling.xml"
+```xml title="examples/widgets/scale/scale_styling/lv_example_scale_styling.xml" source="https://github.com/lvgl/lvgl/blob/ba59aa52c687d701587d915acca606ad3606570e/examples/widgets/scale/scale_styling/lv_example_scale_styling.xml"
 <!--
  @title Scale styling
  @brief Style the main rail, minor ticks, and major ticks (with labels) independently.
