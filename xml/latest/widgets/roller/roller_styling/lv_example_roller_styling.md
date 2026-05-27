@@ -1,4 +1,4 @@
-```xml title="examples/widgets/roller/roller_styling/lv_example_roller_styling.xml" source="https://github.com/lvgl/lvgl/blob/18760b7f0312f8a7e13147f2ca83cd10710438c1/examples/widgets/roller/roller_styling/lv_example_roller_styling.xml"
+```xml title="examples/widgets/roller/roller_styling/lv_example_roller_styling.xml" source="https://github.com/lvgl/lvgl/blob/180adf91d757e1a895170564fddd15d4a891c86c/examples/widgets/roller/roller_styling/lv_example_roller_styling.xml"
 <!--
  @title Roller styling
  @brief Style the main listbox and the selected item; use `text_line_space` to set the selected band's height.

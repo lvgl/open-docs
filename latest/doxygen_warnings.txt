@@ -18,7 +18,7 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_tree.h:265: warnin
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/core/lv_timer.h:201: warning: argument 'destructor' of command @param is not found in the argument list of lv_timer_set_external_data(lv_timer_t *timer, void *data, void(*free_cb)(void *data))
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/core/lv_timer.h:201: warning: The following parameter of lv_timer_set_external_data(lv_timer_t *timer, void *data, void(*free_cb)(void *data)) is not documented:
   parameter 'free_cb'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_indev.h:105: warning: argument 'k' of command @param is not found in the argument list of lv_test_key_release(void)
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/debugging/test/lv_test_indev.h:105: warning: argument 'k' of command @param is not found in the argument list of lv_test_key_release(void)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/display/lv_display.h:273: warning: The following parameters of lv_display_set_buffers_with_stride(lv_display_t *disp, void *buf1, void *buf2, uint32_t buf_size, uint32_t stride, lv_display_render_mode_t render_mode) are not documented:
   parameter 'disp'
   parameter 'buf1'
@@ -180,7 +180,7 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/core/lv_obj_tree.h:265: warnin
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/core/lv_timer.h:201: warning: argument 'destructor' of command @param is not found in the argument list of lv_timer_set_external_data(lv_timer_t *timer, void *data, void(*free_cb)(void *data))
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/core/lv_timer.h:201: warning: The following parameter of lv_timer_set_external_data(lv_timer_t *timer, void *data, void(*free_cb)(void *data)) is not documented:
   parameter 'free_cb'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/debugging/lv_test_indev.h:105: warning: argument 'k' of command @param is not found in the argument list of lv_test_key_release(void)
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/debugging/test/lv_test_indev.h:105: warning: argument 'k' of command @param is not found in the argument list of lv_test_key_release(void)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/display/lv_display.h:273: warning: The following parameters of lv_display_set_buffers_with_stride(lv_display_t *disp, void *buf1, void *buf2, uint32_t buf_size, uint32_t stride, lv_display_render_mode_t render_mode) are not documented:
   parameter 'disp'
   parameter 'buf1'

@@ -2,7 +2,7 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-05-26T21:53:45.375Z",
+    "generatedAt": "2026-05-27T08:06:48.097Z",
     "symbolCount": 8609
   },
   "symbols": {
@@ -12356,286 +12356,6 @@
       "anchor": "lv_monkey_t",
       "kind": "typedef"
     },
-    "lv_profiler.h": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "LV_PROFILER_LAYOUT_BEGIN": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_LAYOUT_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_LAYOUT_END": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_LAYOUT_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_LAYOUT_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_LAYOUT_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_LAYOUT_END_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_LAYOUT_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_STYLE_BEGIN": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_STYLE_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_STYLE_END": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_STYLE_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_STYLE_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_STYLE_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_STYLE_END_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_STYLE_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_DRAW_BEGIN": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_DRAW_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_DRAW_END": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_DRAW_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_DRAW_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_DRAW_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_DRAW_END_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_DRAW_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_DECODER_BEGIN": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_DECODER_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_DECODER_END": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_DECODER_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_DECODER_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_DECODER_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_DECODER_END_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_DECODER_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_REFR_BEGIN": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_REFR_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_REFR_END": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_REFR_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_REFR_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_REFR_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_REFR_END_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_REFR_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_INDEV_BEGIN": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_INDEV_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_INDEV_END": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_INDEV_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_INDEV_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_INDEV_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_INDEV_END_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_INDEV_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_FONT_BEGIN": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_FONT_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_FONT_END": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_FONT_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_FONT_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_FONT_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_FONT_END_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_FONT_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_CACHE_BEGIN": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_CACHE_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_CACHE_END": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_CACHE_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_CACHE_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_CACHE_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_CACHE_END_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_CACHE_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_FS_BEGIN": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_FS_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_FS_END": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_FS_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_FS_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_FS_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_FS_END_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_FS_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_TIMER_BEGIN": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_TIMER_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_TIMER_END": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_TIMER_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_TIMER_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_TIMER_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_TIMER_END_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_TIMER_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_EVENT_BEGIN": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_EVENT_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_EVENT_END": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_EVENT_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_EVENT_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_EVENT_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_EVENT_END_TAG": {
-      "path": "api/debugging/lv_profiler_h",
-      "anchor": "LV_PROFILER_EVENT_END_TAG",
-      "kind": "macro"
-    },
-    "lv_profiler_builtin.h": {
-      "path": "api/debugging/lv_profiler_builtin_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_profiler_builtin_config_init": {
-      "path": "api/debugging/lv_profiler_builtin_h",
-      "anchor": "lv_profiler_builtin_config_init",
-      "kind": "function"
-    },
-    "lv_profiler_builtin_init": {
-      "path": "api/debugging/lv_profiler_builtin_h",
-      "anchor": "lv_profiler_builtin_init",
-      "kind": "function"
-    },
-    "lv_profiler_builtin_uninit": {
-      "path": "api/debugging/lv_profiler_builtin_h",
-      "anchor": "lv_profiler_builtin_uninit",
-      "kind": "function"
-    },
-    "lv_profiler_builtin_set_enable": {
-      "path": "api/debugging/lv_profiler_builtin_h",
-      "anchor": "lv_profiler_builtin_set_enable",
-      "kind": "function"
-    },
-    "lv_profiler_builtin_flush": {
-      "path": "api/debugging/lv_profiler_builtin_h",
-      "anchor": "lv_profiler_builtin_flush",
-      "kind": "function"
-    },
-    "lv_profiler_builtin_write": {
-      "path": "api/debugging/lv_profiler_builtin_h",
-      "anchor": "lv_profiler_builtin_write",
-      "kind": "function"
-    },
-    "LV_PROFILER_BUILTIN_BEGIN_TAG": {
-      "path": "api/debugging/lv_profiler_builtin_h",
-      "anchor": "LV_PROFILER_BUILTIN_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_BUILTIN_END_TAG": {
-      "path": "api/debugging/lv_profiler_builtin_h",
-      "anchor": "LV_PROFILER_BUILTIN_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_BUILTIN_BEGIN": {
-      "path": "api/debugging/lv_profiler_builtin_h",
-      "anchor": "LV_PROFILER_BUILTIN_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_BUILTIN_END": {
-      "path": "api/debugging/lv_profiler_builtin_h",
-      "anchor": "LV_PROFILER_BUILTIN_END",
-      "kind": "macro"
-    },
     "lv_sysmon.h": {
       "path": "api/debugging/lv_sysmon_h",
       "anchor": "",
@@ -12681,238 +12401,518 @@
       "anchor": "lv_sysmon_hide_memory",
       "kind": "function"
     },
+    "lv_profiler.h": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "LV_PROFILER_LAYOUT_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_LAYOUT_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_LAYOUT_END": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_LAYOUT_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_LAYOUT_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_LAYOUT_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_LAYOUT_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_LAYOUT_END_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_STYLE_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_STYLE_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_STYLE_END": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_STYLE_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_STYLE_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_STYLE_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_STYLE_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_STYLE_END_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_DRAW_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_DRAW_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_DRAW_END": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_DRAW_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_DRAW_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_DRAW_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_DRAW_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_DRAW_END_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_DECODER_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_DECODER_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_DECODER_END": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_DECODER_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_DECODER_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_DECODER_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_DECODER_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_DECODER_END_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_REFR_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_REFR_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_REFR_END": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_REFR_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_REFR_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_REFR_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_REFR_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_REFR_END_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_INDEV_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_INDEV_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_INDEV_END": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_INDEV_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_INDEV_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_INDEV_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_INDEV_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_INDEV_END_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_FONT_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_FONT_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_FONT_END": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_FONT_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_FONT_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_FONT_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_FONT_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_FONT_END_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_CACHE_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_CACHE_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_CACHE_END": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_CACHE_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_CACHE_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_CACHE_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_CACHE_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_CACHE_END_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_FS_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_FS_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_FS_END": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_FS_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_FS_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_FS_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_FS_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_FS_END_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_TIMER_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_TIMER_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_TIMER_END": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_TIMER_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_TIMER_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_TIMER_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_TIMER_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_TIMER_END_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_EVENT_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_EVENT_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_EVENT_END": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_EVENT_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_EVENT_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_EVENT_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_EVENT_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_h",
+      "anchor": "LV_PROFILER_EVENT_END_TAG",
+      "kind": "macro"
+    },
+    "lv_profiler_builtin.h": {
+      "path": "api/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_profiler_builtin_config_init": {
+      "path": "api/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "lv_profiler_builtin_config_init",
+      "kind": "function"
+    },
+    "lv_profiler_builtin_init": {
+      "path": "api/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "lv_profiler_builtin_init",
+      "kind": "function"
+    },
+    "lv_profiler_builtin_uninit": {
+      "path": "api/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "lv_profiler_builtin_uninit",
+      "kind": "function"
+    },
+    "lv_profiler_builtin_set_enable": {
+      "path": "api/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "lv_profiler_builtin_set_enable",
+      "kind": "function"
+    },
+    "lv_profiler_builtin_flush": {
+      "path": "api/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "lv_profiler_builtin_flush",
+      "kind": "function"
+    },
+    "lv_profiler_builtin_write": {
+      "path": "api/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "lv_profiler_builtin_write",
+      "kind": "function"
+    },
+    "LV_PROFILER_BUILTIN_BEGIN_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "LV_PROFILER_BUILTIN_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_BUILTIN_END_TAG": {
+      "path": "api/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "LV_PROFILER_BUILTIN_END_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_BUILTIN_BEGIN": {
+      "path": "api/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "LV_PROFILER_BUILTIN_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_BUILTIN_END": {
+      "path": "api/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "LV_PROFILER_BUILTIN_END",
+      "kind": "macro"
+    },
     "lv_test.h": {
-      "path": "api/debugging/lv_test_h",
+      "path": "api/debugging/test/lv_test_h",
       "anchor": "",
       "kind": "header"
     },
     "lv_test_display.h": {
-      "path": "api/debugging/lv_test_display_h",
+      "path": "api/debugging/test/lv_test_display_h",
       "anchor": "",
       "kind": "header"
     },
     "lv_test_display_create": {
-      "path": "api/debugging/lv_test_display_h",
+      "path": "api/debugging/test/lv_test_display_h",
       "anchor": "lv_test_display_create",
       "kind": "function"
     },
     "lv_test_fs.h": {
-      "path": "api/debugging/lv_test_fs_h",
+      "path": "api/debugging/test/lv_test_fs_h",
       "anchor": "",
       "kind": "header"
     },
     "lv_test_fs_init": {
-      "path": "api/debugging/lv_test_fs_h",
+      "path": "api/debugging/test/lv_test_fs_h",
       "anchor": "lv_test_fs_init",
       "kind": "function"
     },
     "lv_test_fs_set_ready": {
-      "path": "api/debugging/lv_test_fs_h",
+      "path": "api/debugging/test/lv_test_fs_h",
       "anchor": "lv_test_fs_set_ready",
       "kind": "function"
     },
     "lv_test_fs_clear_open_cb": {
-      "path": "api/debugging/lv_test_fs_h",
+      "path": "api/debugging/test/lv_test_fs_h",
       "anchor": "lv_test_fs_clear_open_cb",
       "kind": "function"
     },
     "lv_test_fs_clear_close_cb": {
-      "path": "api/debugging/lv_test_fs_h",
+      "path": "api/debugging/test/lv_test_fs_h",
       "anchor": "lv_test_fs_clear_close_cb",
       "kind": "function"
     },
     "lv_test_helpers.h": {
-      "path": "api/debugging/lv_test_helpers_h",
+      "path": "api/debugging/test/lv_test_helpers_h",
       "anchor": "",
       "kind": "header"
     },
     "lv_test_wait": {
-      "path": "api/debugging/lv_test_helpers_h",
+      "path": "api/debugging/test/lv_test_helpers_h",
       "anchor": "lv_test_wait",
       "kind": "function"
     },
     "lv_test_fast_forward": {
-      "path": "api/debugging/lv_test_helpers_h",
+      "path": "api/debugging/test/lv_test_helpers_h",
       "anchor": "lv_test_fast_forward",
       "kind": "function"
     },
     "LV_HEAP_CHECK": {
-      "path": "api/debugging/lv_test_helpers_h",
+      "path": "api/debugging/test/lv_test_helpers_h",
       "anchor": "LV_HEAP_CHECK",
       "kind": "macro"
     },
     "lv_test_get_free_mem": {
-      "path": "api/debugging/lv_test_helpers_h",
+      "path": "api/debugging/test/lv_test_helpers_h",
       "anchor": "lv_test_get_free_mem",
       "kind": "macro"
     },
     "LV_TEST_WIDTH_TO_STRIDE": {
-      "path": "api/debugging/lv_test_helpers_h",
+      "path": "api/debugging/test/lv_test_helpers_h",
       "anchor": "LV_TEST_WIDTH_TO_STRIDE",
       "kind": "macro"
     },
     "lv_test_indev.h": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "",
       "kind": "header"
     },
     "lv_test_indev_create_all": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_indev_create_all",
       "kind": "function"
     },
     "lv_test_indev_delete_all": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_indev_delete_all",
       "kind": "function"
     },
     "lv_test_indev_get_indev": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_indev_get_indev",
       "kind": "function"
     },
     "lv_test_mouse_move_to": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_mouse_move_to",
       "kind": "function"
     },
     "lv_test_mouse_move_to_obj": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_mouse_move_to_obj",
       "kind": "function"
     },
     "lv_test_mouse_move_by": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_mouse_move_by",
       "kind": "function"
     },
     "lv_test_mouse_press": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_mouse_press",
       "kind": "function"
     },
     "lv_test_mouse_release": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_mouse_release",
       "kind": "function"
     },
     "lv_test_mouse_click_at": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_mouse_click_at",
       "kind": "function"
     },
     "lv_test_key_press": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_key_press",
       "kind": "function"
     },
     "lv_test_key_release": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_key_release",
       "kind": "function"
     },
     "lv_test_key_hit": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_key_hit",
       "kind": "function"
     },
     "lv_test_encoder_add_diff": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_encoder_add_diff",
       "kind": "function"
     },
     "lv_test_encoder_turn": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_encoder_turn",
       "kind": "function"
     },
     "lv_test_encoder_press": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_encoder_press",
       "kind": "function"
     },
     "lv_test_encoder_release": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_encoder_release",
       "kind": "function"
     },
     "lv_test_encoder_click": {
-      "path": "api/debugging/lv_test_indev_h",
+      "path": "api/debugging/test/lv_test_indev_h",
       "anchor": "lv_test_encoder_click",
       "kind": "function"
     },
     "lv_test_indev_gesture.h": {
-      "path": "api/debugging/lv_test_indev_gesture_h",
+      "path": "api/debugging/test/lv_test_indev_gesture_h",
       "anchor": "",
       "kind": "header"
     },
     "lv_test_indev_gesture_create": {
-      "path": "api/debugging/lv_test_indev_gesture_h",
+      "path": "api/debugging/test/lv_test_indev_gesture_h",
       "anchor": "lv_test_indev_gesture_create",
       "kind": "function"
     },
     "lv_test_indev_gesture_delete": {
-      "path": "api/debugging/lv_test_indev_gesture_h",
+      "path": "api/debugging/test/lv_test_indev_gesture_h",
       "anchor": "lv_test_indev_gesture_delete",
       "kind": "function"
     },
     "lv_test_indev_get_gesture_indev": {
-      "path": "api/debugging/lv_test_indev_gesture_h",
+      "path": "api/debugging/test/lv_test_indev_gesture_h",
       "anchor": "lv_test_indev_get_gesture_indev",
       "kind": "function"
     },
     "lv_test_gesture_set_pinch_data": {
-      "path": "api/debugging/lv_test_indev_gesture_h",
+      "path": "api/debugging/test/lv_test_indev_gesture_h",
       "anchor": "lv_test_gesture_set_pinch_data",
       "kind": "function"
     },
     "lv_test_gesture_pinch_press": {
-      "path": "api/debugging/lv_test_indev_gesture_h",
+      "path": "api/debugging/test/lv_test_indev_gesture_h",
       "anchor": "lv_test_gesture_pinch_press",
       "kind": "function"
     },
     "lv_test_gesture_pinch_release": {
-      "path": "api/debugging/lv_test_indev_gesture_h",
+      "path": "api/debugging/test/lv_test_indev_gesture_h",
       "anchor": "lv_test_gesture_pinch_release",
       "kind": "function"
     },
     "lv_test_gesture_pinch": {
-      "path": "api/debugging/lv_test_indev_gesture_h",
+      "path": "api/debugging/test/lv_test_indev_gesture_h",
       "anchor": "lv_test_gesture_pinch",
       "kind": "function"
     },
     "lv_test_screenshot_compare.h": {
-      "path": "api/debugging/lv_test_screenshot_compare_h",
+      "path": "api/debugging/test/lv_test_screenshot_compare_h",
       "anchor": "",
       "kind": "header"
     },
     "lv_test_screenshot_compare": {
-      "path": "api/debugging/lv_test_screenshot_compare_h",
+      "path": "api/debugging/test/lv_test_screenshot_compare_h",
       "anchor": "lv_test_screenshot_compare",
       "kind": "function"
     },
     "lv_test_screenshot_compare_core": {
-      "path": "api/debugging/lv_test_screenshot_compare_h",
+      "path": "api/debugging/test/lv_test_screenshot_compare_h",
       "anchor": "lv_test_screenshot_compare_core",
       "kind": "function"
     },
     "lv_test_screenshot_result_t": {
-      "path": "api/debugging/lv_test_screenshot_compare_h",
+      "path": "api/debugging/test/lv_test_screenshot_compare_h",
       "anchor": "lv_test_screenshot_result_t",
       "kind": "enum"
     },
     "LV_TEST_SCREENSHOT_RESULT_FAILED": {
-      "path": "api/debugging/lv_test_screenshot_compare_h",
+      "path": "api/debugging/test/lv_test_screenshot_compare_h",
       "anchor": "lv_test_screenshot_result_t",
       "kind": "enumvalue"
     },
     "LV_TEST_SCREENSHOT_RESULT_PASSED": {
-      "path": "api/debugging/lv_test_screenshot_compare_h",
+      "path": "api/debugging/test/lv_test_screenshot_compare_h",
       "anchor": "lv_test_screenshot_result_t",
       "kind": "enumvalue"
     },
     "LV_TEST_SCREENSHOT_RESULT_NO_REFERENCE_IMAGE": {
-      "path": "api/debugging/lv_test_screenshot_compare_h",
+      "path": "api/debugging/test/lv_test_screenshot_compare_h",
       "anchor": "lv_test_screenshot_result_t",
       "kind": "enumvalue"
     },

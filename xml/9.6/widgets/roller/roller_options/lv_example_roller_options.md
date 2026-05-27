@@ -1,4 +1,4 @@
-```xml title="examples/widgets/roller/roller_options/lv_example_roller_options.xml" source="https://github.com/lvgl/lvgl/blob/18760b7f0312f8a7e13147f2ca83cd10710438c1/examples/widgets/roller/roller_options/lv_example_roller_options.xml"
+```xml title="examples/widgets/roller/roller_options/lv_example_roller_options.xml" source="https://github.com/lvgl/lvgl/blob/180adf91d757e1a895170564fddd15d4a891c86c/examples/widgets/roller/roller_options/lv_example_roller_options.xml"
 <!--
  @title Roller options and mode
  @brief Define the option list and choose between normal and infinite scrolling.

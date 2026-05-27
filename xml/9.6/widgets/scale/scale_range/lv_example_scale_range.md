@@ -1,4 +1,4 @@
-```xml title="examples/widgets/scale/scale_range/lv_example_scale_range.xml" source="https://github.com/lvgl/lvgl/blob/18760b7f0312f8a7e13147f2ca83cd10710438c1/examples/widgets/scale/scale_range/lv_example_scale_range.xml"
+```xml title="examples/widgets/scale/scale_range/lv_example_scale_range.xml" source="https://github.com/lvgl/lvgl/blob/180adf91d757e1a895170564fddd15d4a891c86c/examples/widgets/scale/scale_range/lv_example_scale_range.xml"
 <!--
  @title Scale value range
  @brief `min_value` / `max_value` control the numeric domain the scale spans.

@@ -1,18 +1,11 @@
 {
   "title": "Debugging",
   "pages": [
+    "profiler",
+    "test",
     "lv_assert_h",
     "lv_check_arg_h",
     "lv_monkey_h",
-    "lv_profiler_builtin_h",
-    "lv_profiler_h",
-    "lv_sysmon_h",
-    "lv_test_display_h",
-    "lv_test_fs_h",
-    "lv_test_h",
-    "lv_test_helpers_h",
-    "lv_test_indev_gesture_h",
-    "lv_test_indev_h",
-    "lv_test_screenshot_compare_h"
+    "lv_sysmon_h"
   ]
 }
