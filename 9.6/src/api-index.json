@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-05-27T08:57:48.752Z",
-    "symbolCount": 8615
+    "generatedAt": "2026-05-27T11:13:34.784Z",
+    "symbolCount": 8618
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -33769,6 +33769,21 @@
     "lv_nanovg_fb_get_image_handle": {
       "path": "api-private/draw/nanovg/lv_draw_nanovg_private_h",
       "anchor": "lv_nanovg_fb_get_image_handle",
+      "kind": "function"
+    },
+    "lv_draw_nanovg_blur_init": {
+      "path": "api-private/draw/nanovg/lv_draw_nanovg_private_h",
+      "anchor": "lv_draw_nanovg_blur_init",
+      "kind": "function"
+    },
+    "lv_draw_nanovg_blur_deinit": {
+      "path": "api-private/draw/nanovg/lv_draw_nanovg_private_h",
+      "anchor": "lv_draw_nanovg_blur_deinit",
+      "kind": "function"
+    },
+    "lv_draw_nanovg_blur": {
+      "path": "api-private/draw/nanovg/lv_draw_nanovg_private_h",
+      "anchor": "lv_draw_nanovg_blur",
       "kind": "function"
     },
     "lv_draw_nanovg_vector": {

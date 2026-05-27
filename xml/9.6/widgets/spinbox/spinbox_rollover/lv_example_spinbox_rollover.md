@@ -1,4 +1,4 @@
-```xml title="examples/widgets/spinbox/spinbox_rollover/lv_example_spinbox_rollover.xml" source="https://github.com/lvgl/lvgl/blob/ba59aa52c687d701587d915acca606ad3606570e/examples/widgets/spinbox/spinbox_rollover/lv_example_spinbox_rollover.xml"
+```xml title="examples/widgets/spinbox/spinbox_rollover/lv_example_spinbox_rollover.xml" source="https://github.com/lvgl/lvgl/blob/f92d9d2829dd66417588a4e4199bc46060d4e67b/examples/widgets/spinbox/spinbox_rollover/lv_example_spinbox_rollover.xml"
 <!--
  @title Spinbox rollover
  @brief Wrap the value around when it hits a bound instead of sticking.

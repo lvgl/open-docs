@@ -1,4 +1,4 @@
-```xml title="examples/widgets/spinner/spinner_styling/lv_example_spinner_styling.xml" source="https://github.com/lvgl/lvgl/blob/ba59aa52c687d701587d915acca606ad3606570e/examples/widgets/spinner/spinner_styling/lv_example_spinner_styling.xml"
+```xml title="examples/widgets/spinner/spinner_styling/lv_example_spinner_styling.xml" source="https://github.com/lvgl/lvgl/blob/f92d9d2829dd66417588a4e4199bc46060d4e67b/examples/widgets/spinner/spinner_styling/lv_example_spinner_styling.xml"
 <!--
  @title Table styling
  @brief Style the table background and the per-cell appearance.

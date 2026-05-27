@@ -1,4 +1,4 @@
-```xml title="examples/styles/style_border/lv_example_style_border.xml" source="https://github.com/lvgl/lvgl/blob/ba59aa52c687d701587d915acca606ad3606570e/examples/styles/style_border/lv_example_style_border.xml"
+```xml title="examples/styles/style_border/lv_example_style_border.xml" source="https://github.com/lvgl/lvgl/blob/f92d9d2829dd66417588a4e4199bc46060d4e67b/examples/styles/style_border/lv_example_style_border.xml"
 <!--
  @title Border
  @brief Frame a card with a colored, partially transparent border.

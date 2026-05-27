@@ -1,4 +1,4 @@
-```xml title="examples/scroll/scroll_overview/lv_example_scroll_overview.xml" source="https://github.com/lvgl/lvgl/blob/ba59aa52c687d701587d915acca606ad3606570e/examples/scroll/scroll_overview/lv_example_scroll_overview.xml"
+```xml title="examples/scroll/scroll_overview/lv_example_scroll_overview.xml" source="https://github.com/lvgl/lvgl/blob/f92d9d2829dd66417588a4e4199bc46060d4e67b/examples/scroll/scroll_overview/lv_example_scroll_overview.xml"
 <!--
  @title Scroll basics
  @brief A panel becomes scrollable on its own when its children overflow it.

@@ -1,4 +1,4 @@
-```xml title="examples/scroll/scroll_floating/lv_example_scroll_floating.xml" source="https://github.com/lvgl/lvgl/blob/ba59aa52c687d701587d915acca606ad3606570e/examples/scroll/scroll_floating/lv_example_scroll_floating.xml"
+```xml title="examples/scroll/scroll_floating/lv_example_scroll_floating.xml" source="https://github.com/lvgl/lvgl/blob/f92d9d2829dd66417588a4e4199bc46060d4e67b/examples/scroll/scroll_floating/lv_example_scroll_floating.xml"
 <!--
  @title Floating button over a list
  @brief A floating child stays pinned while the list behind it scrolls.
