@@ -6,6 +6,18 @@ order: 70
 
 Any `lv_obj_t` whose content exceeds its bounds can scroll, with per-axis control and optional snap points that lock motion to child boundaries. Scrollbars are themeable through the `LV_PART_SCROLLBAR` style part, and event callbacks let you translate, fade, or scale children as they move through the viewport. The examples cover scrollbar mode and styling, RTL placement, the scrollable/chain/snap/scroll-one/floating behaviors, scroll events, programmatic scrolling, and the infinite and circular scroll patterns.
 
+## Scroll chaining
+
+<LvglExampleBrief>A nested scrollable can stop scrolling from propagating to its parent.</LvglExampleBrief>
+
+The outer panel scrolls, and it contains an inner scrollable box that
+also overflows. By default, reaching the inner box's edge would "chain"
+the remaining scroll to the outer panel. Setting `scroll_chain="false"`
+on the inner box breaks that link, so scrolling stops at the box and
+the outer panel does not move.
+
+<LvglExample name="lv_example_scroll_chain" path="scroll/lv_example_scroll_chain" />
+
 ## Endless circular scrolling
 
 <LvglExampleBrief>Wrap items from one edge to the other so a strip scrolls without limits.</LvglExampleBrief>
@@ -30,6 +42,17 @@ dragged — the typical way to drive UI from the scroll position.
 
 <LvglExample name="lv_example_scroll_events" path="scroll/lv_example_scroll_events" />
 
+## Floating button over a list
+
+<LvglExampleBrief>A floating child stays pinned while the list behind it scrolls.</LvglExampleBrief>
+
+The panel is a scrollable list of buttons. The round "+" button sets
+`floating="true"`: a floating child is ignored by the layout and is not
+moved when its parent scrolls, so it stays anchored to the bottom-right
+corner while the list slides underneath it.
+
+<LvglExample name="lv_example_scroll_floating" path="scroll/lv_example_scroll_floating" />
+
 ## Infinite (virtualized) scrolling
 
 <LvglExampleBrief>Create rows on demand and delete far-off ones while a column scrolls.</LvglExampleBrief>
@@ -43,6 +66,29 @@ how far the user scrolls.
 
 <LvglExample name="lv_example_scroll_infinite" path="scroll/lv_example_scroll_infinite" />
 
+## Scroll one at a time
+
+<LvglExampleBrief>Restrict each scroll gesture to a single snappable child.</LvglExampleBrief>
+
+The panel combines centre snapping with `scroll_one="true"`. Snapping
+alone lets a fast fling cross several panels before settling; with
+"scroll one" enabled every gesture advances by exactly one panel, no
+matter how hard it is thrown. It requires snappable children and a
+snap mode other than `none`.
+
+<LvglExample name="lv_example_scroll_one" path="scroll/lv_example_scroll_one" />
+
+## Scroll basics
+
+<LvglExampleBrief>A panel becomes scrollable on its own when its children overflow it.</LvglExampleBrief>
+
+The panel is only 140 px tall but stacks six full-width buttons, so the
+content is taller than the panel. LVGL makes the panel scrollable and
+shows a vertical scrollbar automatically — no scroll-specific API is
+used here, only content that exceeds the bounds.
+
+<LvglExample name="lv_example_scroll_overview" path="scroll/lv_example_scroll_overview" />
+
 ## Toggling scroll behaviour flags
 
 <LvglExampleBrief>Switch SCROLLABLE, SCROLL_CHAIN, SCROLL_ELASTIC and SCROLL_MOMENTUM on live.</LvglExampleBrief>
@@ -54,6 +100,64 @@ its flag on the list with `lv_obj_set_flag`, so the change can be felt
 immediately by dragging the list.
 
 <LvglExample name="lv_example_scroll_properties" path="scroll/lv_example_scroll_properties" />
+
+## Right-to-left scrolling
+
+<LvglExampleBrief>An RTL base direction moves the vertical scrollbar to the left side.</LvglExampleBrief>
+
+`style_base_dir="rtl"` flips the panel's base direction. The vertical
+scrollbar is then drawn on the left edge instead of the right, and the
+property is inherited, so setting it once on the panel is enough. The
+content itself is ordinary so the placement change is the only visible
+difference.
+
+<LvglExample name="lv_example_scroll_rtl" path="scroll/lv_example_scroll_rtl" />
+
+## Disabling scrolling
+
+<LvglExampleBrief>Clearing the SCROLLABLE flag clips overflowing content instead of scrolling it.</LvglExampleBrief>
+
+Both panels hold the same overflowing column of buttons. The left one
+keeps the default behaviour and scrolls. The right one sets
+`scrollable="false"`, so the flag is cleared: the extra content is
+simply clipped and the panel cannot be scrolled at all.
+
+<LvglExample name="lv_example_scroll_scrollable" path="scroll/lv_example_scroll_scrollable" />
+
+## Scrollbar mode
+
+<LvglExampleBrief>Compare an always-hidden scrollbar with an always-visible one.</LvglExampleBrief>
+
+Two identical overflowing panels differ only in `scrollbar_mode`: the
+left one is `off` (scrollable, but the bar is never drawn), the right
+one is `on` (the bar is always drawn even when idle). The other modes
+are `auto` (bar only while scrollable) and `active` (bar only while
+actively scrolling).
+
+<LvglExample name="lv_example_scroll_scrollbar_mode" path="scroll/lv_example_scroll_scrollbar_mode" />
+
+## Styling the scrollbar
+
+<LvglExampleBrief>Restyle the SCROLLBAR part into a thick, rounded, coloured bar.</LvglExampleBrief>
+
+The scrollbar is the `scrollbar` part of any scrollable Widget. A named
+style attached with `selector="scrollbar"` overrides its `width`
+(thickness), `radius`, fill colour/opacity and `pad_right` (gap from
+the edge). `scrollbar_mode="on"` keeps it visible so the styling is
+always seen.
+
+<LvglExample name="lv_example_scroll_scrollbar_style" path="scroll/lv_example_scroll_scrollbar_style" />
+
+## Scroll snapping
+
+<LvglExampleBrief>Snap children to the centre, and opt one child out of snapping.</LvglExampleBrief>
+
+The row panel sets `scroll_snap_x="center"`, so when a drag is released
+the nearest panel animates to the centre. The third button sets
+`snappable="false"`, removing it from the snap candidates: scrolling
+glides over it and lands on a neighbouring, snappable panel instead.
+
+<LvglExample name="lv_example_scroll_snap" path="scroll/lv_example_scroll_snap" />
 
 ## Scrolling programmatically
 
@@ -77,107 +181,3 @@ result to `translate_x`, and fades distant items toward
 `LV_OPA_TRANSP` — a parallax effect XML styling cannot express.
 
 <LvglExample name="lv_example_scroll_translate" path="scroll/lv_example_scroll_translate" />
-
-## Scroll chaining
-
-<LvglExampleBrief>A nested scrollable can stop scrolling from propagating to its parent.</LvglExampleBrief>
-
-The outer panel scrolls, and it contains an inner scrollable box that
-also overflows. By default, reaching the inner box's edge would "chain"
-the remaining scroll to the outer panel. Setting `scroll_chain="false"`
-on the inner box breaks that link, so scrolling stops at the box and
-the outer panel does not move.
-
-<LvglExample name="lv_example_scroll_chain" path="scroll/scroll_chain/lv_example_scroll_chain" />
-
-## Floating button over a list
-
-<LvglExampleBrief>A floating child stays pinned while the list behind it scrolls.</LvglExampleBrief>
-
-The panel is a scrollable list of buttons. The round "+" button sets
-`floating="true"`: a floating child is ignored by the layout and is not
-moved when its parent scrolls, so it stays anchored to the bottom-right
-corner while the list slides underneath it.
-
-<LvglExample name="lv_example_scroll_floating" path="scroll/scroll_floating/lv_example_scroll_floating" />
-
-## Scroll one at a time
-
-<LvglExampleBrief>Restrict each scroll gesture to a single snappable child.</LvglExampleBrief>
-
-The panel combines centre snapping with `scroll_one="true"`. Snapping
-alone lets a fast fling cross several panels before settling; with
-"scroll one" enabled every gesture advances by exactly one panel, no
-matter how hard it is thrown. It requires snappable children and a
-snap mode other than `none`.
-
-<LvglExample name="lv_example_scroll_one" path="scroll/scroll_one/lv_example_scroll_one" />
-
-## Scroll basics
-
-<LvglExampleBrief>A panel becomes scrollable on its own when its children overflow it.</LvglExampleBrief>
-
-The panel is only 140 px tall but stacks six full-width buttons, so the
-content is taller than the panel. LVGL makes the panel scrollable and
-shows a vertical scrollbar automatically — no scroll-specific API is
-used here, only content that exceeds the bounds.
-
-<LvglExample name="lv_example_scroll_overview" path="scroll/scroll_overview/lv_example_scroll_overview" />
-
-## Right-to-left scrolling
-
-<LvglExampleBrief>An RTL base direction moves the vertical scrollbar to the left side.</LvglExampleBrief>
-
-`style_base_dir="rtl"` flips the panel's base direction. The vertical
-scrollbar is then drawn on the left edge instead of the right, and the
-property is inherited, so setting it once on the panel is enough. The
-content itself is ordinary so the placement change is the only visible
-difference.
-
-<LvglExample name="lv_example_scroll_rtl" path="scroll/scroll_rtl/lv_example_scroll_rtl" />
-
-## Disabling scrolling
-
-<LvglExampleBrief>Clearing the SCROLLABLE flag clips overflowing content instead of scrolling it.</LvglExampleBrief>
-
-Both panels hold the same overflowing column of buttons. The left one
-keeps the default behaviour and scrolls. The right one sets
-`scrollable="false"`, so the flag is cleared: the extra content is
-simply clipped and the panel cannot be scrolled at all.
-
-<LvglExample name="lv_example_scroll_scrollable" path="scroll/scroll_scrollable/lv_example_scroll_scrollable" />
-
-## Scrollbar mode
-
-<LvglExampleBrief>Compare an always-hidden scrollbar with an always-visible one.</LvglExampleBrief>
-
-Two identical overflowing panels differ only in `scrollbar_mode`: the
-left one is `off` (scrollable, but the bar is never drawn), the right
-one is `on` (the bar is always drawn even when idle). The other modes
-are `auto` (bar only while scrollable) and `active` (bar only while
-actively scrolling).
-
-<LvglExample name="lv_example_scroll_scrollbar_mode" path="scroll/scroll_scrollbar_mode/lv_example_scroll_scrollbar_mode" />
-
-## Styling the scrollbar
-
-<LvglExampleBrief>Restyle the SCROLLBAR part into a thick, rounded, coloured bar.</LvglExampleBrief>
-
-The scrollbar is the `scrollbar` part of any scrollable Widget. A named
-style attached with `selector="scrollbar"` overrides its `width`
-(thickness), `radius`, fill colour/opacity and `pad_right` (gap from
-the edge). `scrollbar_mode="on"` keeps it visible so the styling is
-always seen.
-
-<LvglExample name="lv_example_scroll_scrollbar_style" path="scroll/scroll_scrollbar_style/lv_example_scroll_scrollbar_style" />
-
-## Scroll snapping
-
-<LvglExampleBrief>Snap children to the centre, and opt one child out of snapping.</LvglExampleBrief>
-
-The row panel sets `scroll_snap_x="center"`, so when a drag is released
-the nearest panel animates to the centre. The third button sets
-`snappable="false"`, removing it from the snap candidates: scrolling
-glides over it and lands on a neighbouring, snappable panel instead.
-
-<LvglExample name="lv_example_scroll_snap" path="scroll/scroll_snap/lv_example_scroll_snap" />

@@ -5,6 +5,18 @@ order: 5
 
 The `lv_obj_t` base class that every other widget inherits from, usable directly as a container or styling surface.
 
+## Obj bind style (theme toggle)
+
+<LvglExampleBrief>Apply a named style only when a subject equals a reference value.</LvglExampleBrief>
+
+The "dark" style is attached to the panel via `<bind_style>` with
+`subject="subject_flag"` and `ref_value="1"`: it's applied whenever
+`subject_flag` is 1 and removed otherwise. The toggle button flips
+`subject_flag` through `subject_toggle_event`. This is the canonical
+"binding-driven theme switch" pattern — no event callback in user code.
+
+<LvglExample name="lv_example_obj_bind_style" path="widgets/obj/lv_example_obj_bind_style" />
+
 ## Draggable base object
 
 <LvglExampleBrief>Move a `Drag me` object under the pointer using `LV_EVENT_PRESSING`.</LvglExampleBrief>
@@ -29,15 +41,3 @@ builds an identity `lv_matrix_t`, scales its x axis, rotates it by
 `lv_obj_reset_transform` and the loop restarts.
 
 <LvglExample name="lv_example_obj_transform" path="widgets/obj/lv_example_obj_transform" />
-
-## Obj bind style (theme toggle)
-
-<LvglExampleBrief>Apply a named style only when a subject equals a reference value.</LvglExampleBrief>
-
-The "dark" style is attached to the panel via `<bind_style>` with
-`subject="subject_flag"` and `ref_value="1"`: it's applied whenever
-`subject_flag` is 1 and removed otherwise. The toggle button flips
-`subject_flag` through `subject_toggle_event`. This is the canonical
-"binding-driven theme switch" pattern — no event callback in user code.
-
-<LvglExample name="lv_example_obj_bind_style" path="widgets/obj/obj_bind_style/lv_example_obj_bind_style" />

@@ -3,6 +3,27 @@ title: "Arc"
 order: 15
 ---
 
+## Arc bind value
+
+<LvglExampleBrief>An arc and a slider co-bound to one subject; moving the slider rotates the arc.</LvglExampleBrief>
+
+Both widgets target `subject_value` via `bind_value`. The slider is the editor;
+the arc is a read-only visualizer. Because the binding is two-way at the widget
+level, the arc would also push updates back if it were interactive — but here
+we lock it with `clickable="false"` so it stays purely indicative.
+
+<LvglExample name="lv_example_arc_bind_value" path="widgets/arc/lv_example_arc_bind_value" />
+
+## Arc change rate
+
+<LvglExampleBrief>Limit how fast the value can change while dragging.</LvglExampleBrief>
+
+change_rate caps the maximum value change per second triggered by user input. The lower
+setting responds sluggishly to fast pointer gestures, while the higher setting tracks
+the pointer almost instantly — useful for fine-tuning versus quick-jump knobs.
+
+<LvglExample name="lv_example_arc_change_rate" path="widgets/arc/lv_example_arc_change_rate" />
+
 ## Arc value-changed event
 
 <LvglExampleBrief>React to drag updates by logging and refreshing a sibling label.</LvglExampleBrief>
@@ -13,6 +34,18 @@ logs it, and updates a label with `lv_label_set_text_fmt` — any LVGL
 function may be called from the event callback.
 
 <LvglExample name="lv_example_arc_event" path="widgets/arc/lv_example_arc_event" />
+
+## Arc image indicator
+
+<LvglExampleBrief>Use bitmaps as the arc background and indicator — the arc shape is cut from each image.</LvglExampleBrief>
+
+`arc_image_src` replaces the solid `arc_color` with pixels sampled from a bitmap,
+centred on the arc's centre point. Here the MAIN part uses a dark segmented-ring
+bitmap so the background track shows individual tiles, and the INDICATOR part uses
+a glowing-cyan version of the same ring so the filled portion lights up. Both images
+are 224×224 and match the 180×180 widget with `arc_width="23"`.
+
+<LvglExample name="lv_example_arc_img_indicator" path="widgets/arc/lv_example_arc_img_indicator" />
 
 ## Place a Widget on the arc's knob
 
@@ -28,39 +61,6 @@ the widget to point along the angle.
 
 <LvglExample name="lv_example_arc_knob_widget" path="widgets/arc/lv_example_arc_knob_widget" />
 
-## Arc bind value
-
-<LvglExampleBrief>An arc and a slider co-bound to one subject; moving the slider rotates the arc.</LvglExampleBrief>
-
-Both widgets target `subject_value` via `bind_value`. The slider is the editor;
-the arc is a read-only visualizer. Because the binding is two-way at the widget
-level, the arc would also push updates back if it were interactive — but here
-we lock it with `clickable="false"` so it stays purely indicative.
-
-<LvglExample name="lv_example_arc_bind_value" path="widgets/arc/arc_bind_value/lv_example_arc_bind_value" />
-
-## Arc change rate
-
-<LvglExampleBrief>Limit how fast the value can change while dragging.</LvglExampleBrief>
-
-change_rate caps the maximum value change per second triggered by user input. The lower
-setting responds sluggishly to fast pointer gestures, while the higher setting tracks
-the pointer almost instantly — useful for fine-tuning versus quick-jump knobs.
-
-<LvglExample name="lv_example_arc_change_rate" path="widgets/arc/arc_change_rate/lv_example_arc_change_rate" />
-
-## Arc image indicator
-
-<LvglExampleBrief>Use bitmaps as the arc background and indicator — the arc shape is cut from each image.</LvglExampleBrief>
-
-`arc_image_src` replaces the solid `arc_color` with pixels sampled from a bitmap,
-centred on the arc's centre point. Here the MAIN part uses a dark segmented-ring
-bitmap so the background track shows individual tiles, and the INDICATOR part uses
-a glowing-cyan version of the same ring so the filled portion lights up. Both images
-are 224×224 and match the 180×180 widget with `arc_width="23"`.
-
-<LvglExample name="lv_example_arc_img_indicator" path="widgets/arc/arc_img_indicator/lv_example_arc_img_indicator" />
-
 ## Arc indicator modes
 
 <LvglExampleBrief>Compare normal, reverse, and symmetrical mode side by side.</LvglExampleBrief>
@@ -70,7 +70,7 @@ Normal grows clockwise from min_value, reverse grows counter-clockwise from max_
 and symmetrical grows outward from the middle of the range — making it obvious where
 each mode anchors the indicator.
 
-<LvglExample name="lv_example_arc_mode" path="widgets/arc/arc_mode/lv_example_arc_mode" />
+<LvglExample name="lv_example_arc_mode" path="widgets/arc/lv_example_arc_mode" />
 
 ## Arc as pie-chart slices
 
@@ -91,7 +91,7 @@ are style properties too, the `style_pie_main` style also pins
 `width`/`height`/`align` — so each `<lv_arc>` only carries its slice
 angles and its colour.
 
-<LvglExample name="lv_example_arc_pie_chart" path="widgets/arc/arc_pie_chart/lv_example_arc_pie_chart" />
+<LvglExample name="lv_example_arc_pie_chart" path="widgets/arc/lv_example_arc_pie_chart" />
 
 ## Arc rotation offset
 
@@ -101,7 +101,7 @@ The rotation attribute shifts both background and indicator angles by the same a
 keeping their relative span. The two arcs share the same bg_start_angle, bg_end_angle,
 and value, so only the rotation offset distinguishes them visually.
 
-<LvglExample name="lv_example_arc_rotation" path="widgets/arc/arc_rotation/lv_example_arc_rotation" />
+<LvglExample name="lv_example_arc_rotation" path="widgets/arc/lv_example_arc_rotation" />
 
 ## Arc with explicit indicator angles
 
@@ -112,7 +112,7 @@ arc sets start_angle and end_angle explicitly, which overrides the value-based d
 This is handy for static graphics or custom dial layouts where the indicator span is
 not tied to a numeric value.
 
-<LvglExample name="lv_example_arc_set_angles" path="widgets/arc/arc_set_angles/lv_example_arc_set_angles" />
+<LvglExample name="lv_example_arc_set_angles" path="widgets/arc/lv_example_arc_set_angles" />
 
 ## Arc styling
 
@@ -123,7 +123,7 @@ and KNOB. Each is styled with a named style block via `selector="main|indicator|
 `arc_color`, `arc_width`, and `arc_rounded` are the line-style equivalents for ring
 segments; the knob uses the regular background properties since it's drawn as a fill.
 
-<LvglExample name="lv_example_arc_styling" path="widgets/arc/arc_styling/lv_example_arc_styling" />
+<LvglExample name="lv_example_arc_styling" path="widgets/arc/lv_example_arc_styling" />
 
 ## Arc value and range
 
@@ -133,4 +133,4 @@ Two arcs with different numeric ranges share the same visible background span. T
 indicator length depends on (value - min_value) / (max_value - min_value), so any range
 — including one crossing zero — produces the same relative fill.
 
-<LvglExample name="lv_example_arc_value_range" path="widgets/arc/arc_value_range/lv_example_arc_value_range" />
+<LvglExample name="lv_example_arc_value_range" path="widgets/arc/lv_example_arc_value_range" />

@@ -5,19 +5,6 @@ order: 135
 
 Numeric input field with increment and decrement controls, configured through `lv_spinbox_set_range` and `lv_spinbox_set_digit_format`.
 
-## Spinbox with plus and minus buttons
-
-<LvglExampleBrief>Step a fixed-point spinbox with two side buttons that repeat on hold.</LvglExampleBrief>
-
-A centered spinbox is set to five digits with a decimal point at position 2
-and a range of `-1000..25000`. `lv_spinbox_step_prev` shifts the active
-digit. Two square buttons sized to the spinbox height sit on either side
-using `LV_SYMBOL_PLUS` and `LV_SYMBOL_MINUS` as background images. Their
-`LV_EVENT_ALL` handlers call `lv_spinbox_increment` or `lv_spinbox_decrement`
-on `LV_EVENT_SHORT_CLICKED` and `LV_EVENT_LONG_PRESSED_REPEAT`.
-
-<LvglExample name="lv_example_spinbox_with_buttons" path="widgets/spinbox/lv_example_spinbox_with_buttons" />
-
 ## Spinbox bind value
 
 <LvglExampleBrief>Spinbox edits a subject; a bound arc visualises the same number.</LvglExampleBrief>
@@ -27,7 +14,7 @@ the same subject through `bind_value`, so the visualisation tracks every step
 without any explicit redraw call. Use this pattern whenever a numeric editor
 and a graphical indicator both refer to the same underlying quantity.
 
-<LvglExample name="lv_example_spinbox_bind_value" path="widgets/spinbox/spinbox_bind_value/lv_example_spinbox_bind_value" />
+<LvglExample name="lv_example_spinbox_bind_value" path="widgets/spinbox/lv_example_spinbox_bind_value" />
 
 ## Spinbox digit count and decimal point
 
@@ -39,7 +26,7 @@ point that many positions from the right — `0` means no decimal point, `2`
 puts it two digits from the right. The stored value is the same integer in
 both spinboxes (`123`); only the rendering differs.
 
-<LvglExample name="lv_example_spinbox_format" path="widgets/spinbox/spinbox_format/lv_example_spinbox_format" />
+<LvglExample name="lv_example_spinbox_format" path="widgets/spinbox/lv_example_spinbox_format" />
 
 ## Spinbox rollover
 
@@ -50,7 +37,7 @@ past `max_value` jumps to `min_value` and vice versa. This is convenient
 for cyclic quantities like hours (0..23) or angles (0..359), where the user
 should be able to step from 23 → 0 without re-entering the value.
 
-<LvglExample name="lv_example_spinbox_rollover" path="widgets/spinbox/spinbox_rollover/lv_example_spinbox_rollover" />
+<LvglExample name="lv_example_spinbox_rollover" path="widgets/spinbox/lv_example_spinbox_rollover" />
 
 ## Spinbox styling
 
@@ -70,7 +57,7 @@ doesn't re-paint the digit on top of MAIN's render (avoids subtle
 double-drawing), and use `pad_ver` to let the frame breathe vertically
 around the glyph.
 
-<LvglExample name="lv_example_spinbox_styling" path="widgets/spinbox/spinbox_styling/lv_example_spinbox_styling" />
+<LvglExample name="lv_example_spinbox_styling" path="widgets/spinbox/lv_example_spinbox_styling" />
 
 ## Spinbox value, range, and step
 
@@ -82,4 +69,17 @@ the maximum. `step` is how much each key/press changes the value. With
 `rollover="false"` (the default) the value sticks at the bounds; see
 `spinbox_rollover` for the wraparound variant.
 
-<LvglExample name="lv_example_spinbox_value" path="widgets/spinbox/spinbox_value/lv_example_spinbox_value" />
+<LvglExample name="lv_example_spinbox_value" path="widgets/spinbox/lv_example_spinbox_value" />
+
+## Spinbox with plus and minus buttons
+
+<LvglExampleBrief>Step a fixed-point spinbox with two side buttons that repeat on hold.</LvglExampleBrief>
+
+A centered spinbox is set to five digits with a decimal point at position 2
+and a range of `-1000..25000`. `lv_spinbox_step_prev` shifts the active
+digit. Two square buttons sized to the spinbox height sit on either side
+using `LV_SYMBOL_PLUS` and `LV_SYMBOL_MINUS` as background images. Their
+`LV_EVENT_ALL` handlers call `lv_spinbox_increment` or `lv_spinbox_decrement`
+on `LV_EVENT_SHORT_CLICKED` and `LV_EVENT_LONG_PRESSED_REPEAT`.
+
+<LvglExample name="lv_example_spinbox_with_buttons" path="widgets/spinbox/lv_example_spinbox_with_buttons" />

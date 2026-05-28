@@ -3,6 +3,29 @@ title: "Slider"
 order: 125
 ---
 
+## Slider drives another widget's state
+
+<LvglExampleBrief>Bind a button's `disabled` state to a subject driven by a slider's value.</LvglExampleBrief>
+
+The slider edits `subject_value` (0..100). The "Submit" button uses
+`bind_state_if_gt` to apply `disabled` whenever `subject_value > 80` — modelling
+a guard like "block submit when the value is out of range". Slide past 80 to
+watch the button grey out.
+
+<LvglExample name="lv_example_slider_bind_state" path="widgets/slider/lv_example_slider_bind_state" />
+
+## Slider bind value
+
+<LvglExampleBrief>Two-way bind a slider to a shared int subject; a label mirrors the live value.</LvglExampleBrief>
+
+`subject_value` lives in `examples/xml_project/globals.xml` (range 0..100, default 50).
+The slider's `bind_value` reads and writes the subject: dragging it pushes the new
+value out so anything else bound to `subject_value` (here, the label) updates
+immediately. `bind_text-fmt` lets a label render a numeric subject through a
+printf-style format.
+
+<LvglExample name="lv_example_slider_bind_value" path="widgets/slider/lv_example_slider_bind_value" />
+
 ## Slider value-changed and released events
 
 <LvglExampleBrief>Show drag updates and the final value via a sibling label.</LvglExampleBrief>
@@ -15,29 +38,6 @@ to branch and writes the value into a sibling label.
 
 <LvglExample name="lv_example_slider_event" path="widgets/slider/lv_example_slider_event" />
 
-## Slider drives another widget's state
-
-<LvglExampleBrief>Bind a button's `disabled` state to a subject driven by a slider's value.</LvglExampleBrief>
-
-The slider edits `subject_value` (0..100). The "Submit" button uses
-`bind_state_if_gt` to apply `disabled` whenever `subject_value > 80` — modelling
-a guard like "block submit when the value is out of range". Slide past 80 to
-watch the button grey out.
-
-<LvglExample name="lv_example_slider_bind_state" path="widgets/slider/slider_bind_state/lv_example_slider_bind_state" />
-
-## Slider bind value
-
-<LvglExampleBrief>Two-way bind a slider to a shared int subject; a label mirrors the live value.</LvglExampleBrief>
-
-`subject_value` lives in `examples/xml_project/globals.xml` (range 0..100, default 50).
-The slider's `bind_value` reads and writes the subject: dragging it pushes the new
-value out so anything else bound to `subject_value` (here, the label) updates
-immediately. `bind_text-fmt` lets a label render a numeric subject through a
-printf-style format.
-
-<LvglExample name="lv_example_slider_bind_value" path="widgets/slider/slider_bind_value/lv_example_slider_bind_value" />
-
 ## Slider image indicator
 
 <LvglExampleBrief>Use bitmaps as the slider track and indicator — the slider clips each image to its part.</LvglExampleBrief>
@@ -48,7 +48,7 @@ indicator image is revealed left-to-right, showing cyan segments that transition
 to yellow then red at the high end. Both images are 280×30, matching the slider
 width.
 
-<LvglExample name="lv_example_slider_img_indicator" path="widgets/slider/slider_img_indicator/lv_example_slider_img_indicator" />
+<LvglExample name="lv_example_slider_img_indicator" path="widgets/slider/lv_example_slider_img_indicator" />
 
 ## Slider modes
 
@@ -59,7 +59,7 @@ fills outward from the middle, so positive and negative values pull the indicato
 opposite directions. Range mode draws a band between left_value and value, useful for
 picking an interval rather than a single number.
 
-<LvglExample name="lv_example_slider_modes" path="widgets/slider/slider_modes/lv_example_slider_modes" />
+<LvglExample name="lv_example_slider_modes" path="widgets/slider/lv_example_slider_modes" />
 
 ## Slider reversed direction
 
@@ -69,7 +69,7 @@ The two sliders are identical except that the second one declares min_value grea
 than max_value. Swapping the two reverses the fill direction and the sign of motion
 without touching orientation, styling, or layout.
 
-<LvglExample name="lv_example_slider_reversed_direction" path="widgets/slider/slider_reversed_direction/lv_example_slider_reversed_direction" />
+<LvglExample name="lv_example_slider_reversed_direction" path="widgets/slider/lv_example_slider_reversed_direction" />
 
 ## Slider styling
 
@@ -80,7 +80,7 @@ example targets each with a named style. The knob also gets a second style with
 `selector="pressed|knob"` so it picks up an outline halo and a brighter fill only
 while being dragged, demonstrating combined part+state selectors.
 
-<LvglExample name="lv_example_slider_styling" path="widgets/slider/slider_styling/lv_example_slider_styling" />
+<LvglExample name="lv_example_slider_styling" path="widgets/slider/lv_example_slider_styling" />
 
 ## Slider value, range, and orientation
 
@@ -90,4 +90,4 @@ The horizontal slider uses min_value=-20 and max_value=80 to show that ranges ne
 start at zero. The vertical slider sets orientation="vertical" explicitly and uses a
 tall, narrow size so the knob travels upward instead of left-to-right.
 
-<LvglExample name="lv_example_slider_value_range_orientation" path="widgets/slider/slider_value_range_orientation/lv_example_slider_value_range_orientation" />
+<LvglExample name="lv_example_slider_value_range_orientation" path="widgets/slider/lv_example_slider_value_range_orientation" />

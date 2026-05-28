@@ -30,6 +30,20 @@ to zero, producing a circular plot with a visible moving gap.
 
 <LvglExample name="lv_example_chart_circular_gap" path="widgets/chart/lv_example_chart_circular_gap" />
 
+## Chart cursor
+
+<LvglExampleBrief>A cross-hair cursor pinned to a specific (X, Y) location on the chart.</LvglExampleBrief>
+
+`<lv_chart-cursor>` adds a cursor overlay to a chart. `dir` chooses which
+lines extend from the cursor point (`all` draws a full cross-hair; `hor`,
+`ver`, `left`, `right`, `top`, `bottom` for partial guides). `pos_x`/`pos_y`
+place it in chart value coordinates, so a position of `60, 70` lines up
+with the 60th X step and the 70-on-the-Y-axis grid line. A typical use is
+highlighting "today" on a time-series, or marking a threshold without
+baking the line into the series.
+
+<LvglExample name="lv_example_chart_cursor" path="widgets/chart/lv_example_chart_cursor" />
+
 ## Pressed point tooltip on stacked chart
 
 <LvglExampleBrief>Stacked bar chart that draws a value tooltip above the pressed point.</LvglExampleBrief>
@@ -71,20 +85,6 @@ new random point via `lv_chart_set_next_value2`.
 
 <LvglExample name="lv_example_chart_scatter" path="widgets/chart/lv_example_chart_scatter" />
 
-## Chart cursor
-
-<LvglExampleBrief>A cross-hair cursor pinned to a specific (X, Y) location on the chart.</LvglExampleBrief>
-
-`<lv_chart-cursor>` adds a cursor overlay to a chart. `dir` chooses which
-lines extend from the cursor point (`all` draws a full cross-hair; `hor`,
-`ver`, `left`, `right`, `top`, `bottom` for partial guides). `pos_x`/`pos_y`
-place it in chart value coordinates, so a position of `60, 70` lines up
-with the 60th X step and the 70-on-the-Y-axis grid line. A typical use is
-highlighting "today" on a time-series, or marking a threshold without
-baking the line into the series.
-
-<LvglExample name="lv_example_chart_cursor" path="widgets/chart/chart_cursor/lv_example_chart_cursor" />
-
 ## Scrollable chart
 
 <LvglExampleBrief>A chart wider than its container scrolls horizontally as the user drags it.</LvglExampleBrief>
@@ -95,7 +95,7 @@ chart's width to a percentage larger than 100%. The parent's default
 `scrollable` behaviour kicks in. A horizontal `lv_scale` sits inside the
 same wrapper so its labels scroll in lockstep with the bars.
 
-<LvglExample name="lv_example_chart_scrollable" path="widgets/chart/chart_scrollable/lv_example_chart_scrollable" />
+<LvglExample name="lv_example_chart_scrollable" path="widgets/chart/lv_example_chart_scrollable" />
 
 ## Chart data series
 
@@ -107,7 +107,7 @@ own `<lv_chart-axis>` range, so a 0..100 temperature series and a 0..2000
 pressure series share the plot without one squashing the other. The series
 colour matches the conceptual reading, not the axis.
 
-<LvglExample name="lv_example_chart_series" path="widgets/chart/chart_series/lv_example_chart_series" />
+<LvglExample name="lv_example_chart_series" path="widgets/chart/lv_example_chart_series" />
 
 ## Chart ticks and labels
 
@@ -120,7 +120,7 @@ chart's width and with `total_tick_count` matching the chart's `point_count`.
 tick), the same syntax button matrix maps use. For the Y axis you can place
 a vertical scale on either side of the chart with the same technique.
 
-<LvglExample name="lv_example_chart_ticks_labels" path="widgets/chart/chart_ticks_labels/lv_example_chart_ticks_labels" />
+<LvglExample name="lv_example_chart_ticks_labels" path="widgets/chart/lv_example_chart_ticks_labels" />
 
 ## Chart types
 
@@ -132,4 +132,4 @@ to *both* a Y axis and an X axis — that's what the OR-flavoured
 `axis="primary_y|primary_x"` token encodes. Compare against
 `chart_basic` (a `line` chart) to complete the family.
 
-<LvglExample name="lv_example_chart_types" path="widgets/chart/chart_types/lv_example_chart_types" />
+<LvglExample name="lv_example_chart_types" path="widgets/chart/lv_example_chart_types" />

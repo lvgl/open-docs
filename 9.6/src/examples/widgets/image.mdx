@@ -3,6 +3,45 @@ title: "Image"
 order: 65
 ---
 
+## Image inner align
+
+<LvglExampleBrief>When the widget is larger than the image, `inner_align` chooses where it sits.</LvglExampleBrief>
+
+Each image widget here has a fixed 140x100 size while `img_example_lvgl_logo` is
+smaller, so the source occupies a fraction of the widget. `inner_align`
+picks how the image is positioned inside the widget box — `top_left`,
+`center`, `bottom_right` for fixed placement; `contain`, `cover`, `stretch`,
+`tile` for fit modes. A coloured background makes the unused area visible.
+
+<LvglExample name="lv_example_image_inner_align" path="widgets/image/lv_example_image_inner_align" />
+
+## Image recolor
+
+<LvglExampleBrief>Mix a tint into an image; a slider drives the recolor intensity live via `bind_style_prop`.</LvglExampleBrief>
+
+The image's MAIN part exposes `image_recolor` (the colour to mix in) and
+`image_recolor_opa` (the intensity, 0..255). Here `image_recolor` is set
+statically and `image_recolor_opa` is bound to `subject_opa` through
+`<bind_style_prop>`. Dragging the slider — which is also bound to
+`subject_opa` — rewrites the subject and the binding pushes the new
+intensity into the style, so the image retints in real time without any
+event callback.
+
+<LvglExample name="lv_example_image_recolor" path="widgets/image/lv_example_image_recolor" />
+
+## Image source
+
+<LvglExampleBrief>Display an image registered globally for the project.</LvglExampleBrief>
+
+`lv_image` paints whatever is set as its `src`. In XML the value must
+resolve through `lv_xml_get_image`, so `src` references a name that was
+registered via `<file>` or `<data>` in `<images>` — here `img_example_lvgl_logo`
+declared in `examples/xml_project/globals.xml`. The C API also accepts
+a symbol string or a raw image variable pointer; those alternatives are
+documented in this page but cannot appear in XML.
+
+<LvglExample name="lv_example_image_src" path="widgets/image/lv_example_image_src" />
+
 ## SVG image with transform style
 
 <LvglExampleBrief>Display an SVG source scaled and rotated via both widget and style APIs.</LvglExampleBrief>
@@ -17,45 +56,6 @@ centered.
 
 <LvglExample name="lv_example_image_svg" path="widgets/image/lv_example_image_svg" />
 
-## Image inner align
-
-<LvglExampleBrief>When the widget is larger than the image, `inner_align` chooses where it sits.</LvglExampleBrief>
-
-Each image widget here has a fixed 140x100 size while `img_example_lvgl_logo` is
-smaller, so the source occupies a fraction of the widget. `inner_align`
-picks how the image is positioned inside the widget box — `top_left`,
-`center`, `bottom_right` for fixed placement; `contain`, `cover`, `stretch`,
-`tile` for fit modes. A coloured background makes the unused area visible.
-
-<LvglExample name="lv_example_image_inner_align" path="widgets/image/image_inner_align/lv_example_image_inner_align" />
-
-## Image recolor
-
-<LvglExampleBrief>Mix a tint into an image; a slider drives the recolor intensity live via `bind_style_prop`.</LvglExampleBrief>
-
-The image's MAIN part exposes `image_recolor` (the colour to mix in) and
-`image_recolor_opa` (the intensity, 0..255). Here `image_recolor` is set
-statically and `image_recolor_opa` is bound to `subject_opa` through
-`<bind_style_prop>`. Dragging the slider — which is also bound to
-`subject_opa` — rewrites the subject and the binding pushes the new
-intensity into the style, so the image retints in real time without any
-event callback.
-
-<LvglExample name="lv_example_image_recolor" path="widgets/image/image_recolor/lv_example_image_recolor" />
-
-## Image source
-
-<LvglExampleBrief>Display an image registered globally for the project.</LvglExampleBrief>
-
-`lv_image` paints whatever is set as its `src`. In XML the value must
-resolve through `lv_xml_get_image`, so `src` references a name that was
-registered via `<file>` or `<data>` in `<images>` — here `img_example_lvgl_logo`
-declared in `examples/xml_project/globals.xml`. The C API also accepts
-a symbol string or a raw image variable pointer; those alternatives are
-documented in this page but cannot appear in XML.
-
-<LvglExample name="lv_example_image_src" path="widgets/image/image_src/lv_example_image_src" />
-
 ## Image transformations
 
 <LvglExampleBrief>Rotate and scale a single image source by setting widget attributes.</LvglExampleBrief>
@@ -66,4 +66,4 @@ the rotation/scale anchor; defaults centre on the image. All three copies
 share the same registered `img_example_lvgl_logo` source — the transforms happen
 at render time, no extra image variants needed.
 
-<LvglExample name="lv_example_image_transformations" path="widgets/image/image_transformations/lv_example_image_transformations" />
+<LvglExample name="lv_example_image_transformations" path="widgets/image/lv_example_image_transformations" />

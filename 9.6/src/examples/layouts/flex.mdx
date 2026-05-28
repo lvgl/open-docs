@@ -13,7 +13,7 @@ style_flex_main_place distributes items along the row direction, while
 style_flex_cross_place aligns items of different heights on the cross axis. The mix of a
 tall button, a switch, and a checkbox makes cross-axis alignment easy to see.
 
-<LvglExample name="lv_example_flex_align" path="layouts/flex/flex_align/lv_example_flex_align" />
+<LvglExample name="lv_example_flex_align" path="layouts/flex/lv_example_flex_align" />
 
 ## Flex flow
 
@@ -23,7 +23,7 @@ A single row_wrap container holds enough buttons to overflow one line, so wrappi
 in. Try other flex_flow values (row, column, row_reverse, column_wrap_reverse) to see
 how item order and wrap direction change with the same set of children.
 
-<LvglExample name="lv_example_flex_flow" path="layouts/flex/flex_flow/lv_example_flex_flow" />
+<LvglExample name="lv_example_flex_flow" path="layouts/flex/lv_example_flex_flow" />
 
 ## Flex grow
 
@@ -33,7 +33,7 @@ Three buttons share a row: the first has a fixed width and the other two use fle
 The free space left in the row is split in proportion to the grow weights, so the
 grow=2 item receives twice as much extra width as the grow=1 item.
 
-<LvglExample name="lv_example_flex_grow" path="layouts/flex/flex_grow/lv_example_flex_grow" />
+<LvglExample name="lv_example_flex_grow" path="layouts/flex/lv_example_flex_grow" />
 
 ## Flex ignore layout
 
@@ -43,7 +43,7 @@ With ignore_layout="true", Flex skips the item entirely: it keeps its manual x/y
 position and does not occupy a slot. The remaining items lay out as if it were not
 there, which is useful for overlays, floating badges, or absolutely positioned helpers.
 
-<LvglExample name="lv_example_flex_ignore_layout" path="layouts/flex/flex_ignore_layout/lv_example_flex_ignore_layout" />
+<LvglExample name="lv_example_flex_ignore_layout" path="layouts/flex/lv_example_flex_ignore_layout" />
 
 ## Flex internal padding
 
@@ -53,7 +53,7 @@ style_pad_column controls the gap between items on a row, and style_pad_row cont
 gap between wrapped rows. The container uses row_wrap so both gaps are visible at once
 — the chips spread out horizontally and rows are pushed apart vertically.
 
-<LvglExample name="lv_example_flex_internal_padding" path="layouts/flex/flex_internal_padding/lv_example_flex_internal_padding" />
+<LvglExample name="lv_example_flex_internal_padding" path="layouts/flex/lv_example_flex_internal_padding" />
 
 ## Flex new track
 
@@ -63,7 +63,7 @@ In a row_wrap container an item with flex_in_new_track="true" begins a fresh tra
 instead of continuing the previous one. Here the weekend labels are pushed onto their
 own row regardless of how much horizontal space remains on the first row.
 
-<LvglExample name="lv_example_flex_new_track" path="layouts/flex/flex_new_track/lv_example_flex_new_track" />
+<LvglExample name="lv_example_flex_new_track" path="layouts/flex/lv_example_flex_new_track" />
 
 ## Flex RTL
 
@@ -73,4 +73,4 @@ The same three children appear in two identical row containers. Setting style_ba
 to rtl on the second container reverses item ordering on the main axis without changing
 the order of children in XML — handy for right-to-left languages or mirrored layouts.
 
-<LvglExample name="lv_example_flex_rtl" path="layouts/flex/flex_rtl/lv_example_flex_rtl" />
+<LvglExample name="lv_example_flex_rtl" path="layouts/flex/lv_example_flex_rtl" />

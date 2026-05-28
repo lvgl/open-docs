@@ -13,7 +13,7 @@ The bar listens to `subject_value`. Each +/- button carries two
 `min_value`/`max_value` clamp the result and `rollover="true"` wraps around
 once the bound is hit; hold past 100 to see it wrap back to 0.
 
-<LvglExample name="lv_example_bar_bind_value" path="widgets/bar/bar_bind_value/lv_example_bar_bind_value" />
+<LvglExample name="lv_example_bar_bind_value" path="widgets/bar/lv_example_bar_bind_value" />
 
 ## Bar image indicator
 
@@ -25,7 +25,7 @@ bitmap. Set it on `selector="main"` for the background track and on
 image is revealed left-to-right, showing cyan segments that transition to yellow
 then red at the high end. Both images are 280×30, matching the bar widget size.
 
-<LvglExample name="lv_example_bar_img_indicator" path="widgets/bar/bar_img_indicator/lv_example_bar_img_indicator" />
+<LvglExample name="lv_example_bar_img_indicator" path="widgets/bar/lv_example_bar_img_indicator" />
 
 ## Bar modes
 
@@ -36,7 +36,7 @@ fills outward from the middle, so positive and negative values pull the indicato
 opposite directions. Range mode draws a band between start_value and value, useful for
 picking an interval rather than a single number.
 
-<LvglExample name="lv_example_bar_modes" path="widgets/bar/bar_modes/lv_example_bar_modes" />
+<LvglExample name="lv_example_bar_modes" path="widgets/bar/lv_example_bar_modes" />
 
 ## Bar orientation and size
 
@@ -46,7 +46,7 @@ The horizontal bar uses the default orientation derived from a wide-and-short si
 vertical one sets orientation="vertical" explicitly and uses a tall, narrow size so the
 indicator grows upward instead of left-to-right.
 
-<LvglExample name="lv_example_bar_orientation" path="widgets/bar/bar_orientation/lv_example_bar_orientation" />
+<LvglExample name="lv_example_bar_orientation" path="widgets/bar/lv_example_bar_orientation" />
 
 ## Bar styling
 
@@ -57,7 +57,7 @@ Each is styled separately via `selector="main"` and `selector="indicator"`. The
 indicator style adds a horizontal gradient and a darker inner shadow so the fill
 reads as a glossy progress strip on top of the recessed track.
 
-<LvglExample name="lv_example_bar_styling" path="widgets/bar/bar_styling/lv_example_bar_styling" />
+<LvglExample name="lv_example_bar_styling" path="widgets/bar/lv_example_bar_styling" />
 
 ## Bar value and custom range
 
@@ -67,4 +67,4 @@ The first bar uses the default 0..100 range with value 30. The second bar shifts
 range to -20..80 with value 35 to demonstrate that ranges need not start at zero — the
 indicator length is computed relative to wherever the range begins.
 
-<LvglExample name="lv_example_bar_value_range" path="widgets/bar/bar_value_range/lv_example_bar_value_range" />
+<LvglExample name="lv_example_bar_value_range" path="widgets/bar/lv_example_bar_value_range" />

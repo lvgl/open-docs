@@ -3,6 +3,69 @@ title: "Label"
 order: 80
 ---
 
+## Label bind text
+
+<LvglExampleBrief>Bind a label to a string subject; buttons rewrite the subject on click.</LvglExampleBrief>
+
+`subject_text` is a string subject from `examples/xml_project/globals.xml`. The
+label uses `bind_text` to listen for changes. Each button carries a
+`<subject_set_string_event>` child that, on click, writes a fixed value into
+`subject_text` — and the label re-renders automatically.
+
+<LvglExample name="lv_example_label_bind_text" path="widgets/label/lv_example_label_bind_text" />
+
+## Label long modes
+
+<LvglExampleBrief>Show every long_mode behavior side by side.</LvglExampleBrief>
+
+Five labels share the same width but use different long_mode values: wrap, dots, scroll,
+scroll_circular, and clip. Each label is colored differently and contains text that does
+not fit on a single line, so the mode-specific behavior is immediately visible.
+
+<LvglExample name="lv_example_label_long_mode" path="widgets/label/lv_example_label_long_mode" />
+
+## Label text recolor
+
+<LvglExampleBrief>Recolor individual words via inline color tags.</LvglExampleBrief>
+
+With recolor="true", segments wrapped as "#RRGGBB ... #" render in the given color. This
+lets a single label mix multiple colors in one string without splitting it into separate
+label widgets.
+
+<LvglExample name="lv_example_label_recolor" path="widgets/label/lv_example_label_recolor" />
+
+## Label set text with newlines
+
+<LvglExampleBrief>Insert explicit line breaks into a label's text.</LvglExampleBrief>
+
+In XML attributes the &#10; entity produces a newline; using two of them in a row leaves
+a blank line between paragraphs. The second label demonstrates that the text attribute
+also accepts plain text with no escaping for normal characters.
+
+<LvglExample name="lv_example_label_set_text_newline" path="widgets/label/lv_example_label_set_text_newline" />
+
+## Label styling
+
+<LvglExampleBrief>Decorate labels with background, padding, border, outline, and shadow.</LvglExampleBrief>
+
+A label is just text, but it inherits the full background/border/outline/shadow stack
+from the base widget. The named "badge" style turns a label into a pill via radius +
+padding + bg color; the second label demonstrates the same effect built purely from
+local `style_*` attributes for a one-off look.
+
+<LvglExample name="lv_example_label_styling" path="widgets/label/lv_example_label_styling" />
+
+## Label text alignment
+
+<LvglExampleBrief>Align multi-line text inside a fixed-width label.</LvglExampleBrief>
+
+Three labels of equal width hold the same two-line text but use different
+style_text_align values: left, center, and right. Alignment only changes anything when
+the label is wider than its text or contains line breaks, so each label is given an
+explicit width that exceeds the longest line.
+
+<LvglExample name="lv_example_label_text_align" path="widgets/label/lv_example_label_text_align" />
+
 ## Label with translation tag
 
 <LvglExampleBrief>Bind a label to a translation tag so its text follows the active language.</LvglExampleBrief>
@@ -14,66 +77,3 @@ translated string. Translations themselves are registered in a CSV
 (or XML) through `lv_translation_add_static`/`lv_translation_load`.
 
 <LvglExample name="lv_example_label_translation" path="widgets/label/lv_example_label_translation" />
-
-## Label bind text
-
-<LvglExampleBrief>Bind a label to a string subject; buttons rewrite the subject on click.</LvglExampleBrief>
-
-`subject_text` is a string subject from `examples/xml_project/globals.xml`. The
-label uses `bind_text` to listen for changes. Each button carries a
-`<subject_set_string_event>` child that, on click, writes a fixed value into
-`subject_text` — and the label re-renders automatically.
-
-<LvglExample name="lv_example_label_bind_text" path="widgets/label/label_bind_text/lv_example_label_bind_text" />
-
-## Label long modes
-
-<LvglExampleBrief>Show every long_mode behavior side by side.</LvglExampleBrief>
-
-Five labels share the same width but use different long_mode values: wrap, dots, scroll,
-scroll_circular, and clip. Each label is colored differently and contains text that does
-not fit on a single line, so the mode-specific behavior is immediately visible.
-
-<LvglExample name="lv_example_label_long_mode" path="widgets/label/label_long_mode/lv_example_label_long_mode" />
-
-## Label text recolor
-
-<LvglExampleBrief>Recolor individual words via inline color tags.</LvglExampleBrief>
-
-With recolor="true", segments wrapped as "#RRGGBB ... #" render in the given color. This
-lets a single label mix multiple colors in one string without splitting it into separate
-label widgets.
-
-<LvglExample name="lv_example_label_recolor" path="widgets/label/label_recolor/lv_example_label_recolor" />
-
-## Label set text with newlines
-
-<LvglExampleBrief>Insert explicit line breaks into a label's text.</LvglExampleBrief>
-
-In XML attributes the &#10; entity produces a newline; using two of them in a row leaves
-a blank line between paragraphs. The second label demonstrates that the text attribute
-also accepts plain text with no escaping for normal characters.
-
-<LvglExample name="lv_example_label_set_text_newline" path="widgets/label/label_set_text_newline/lv_example_label_set_text_newline" />
-
-## Label styling
-
-<LvglExampleBrief>Decorate labels with background, padding, border, outline, and shadow.</LvglExampleBrief>
-
-A label is just text, but it inherits the full background/border/outline/shadow stack
-from the base widget. The named "badge" style turns a label into a pill via radius +
-padding + bg color; the second label demonstrates the same effect built purely from
-local `style_*` attributes for a one-off look.
-
-<LvglExample name="lv_example_label_styling" path="widgets/label/label_styling/lv_example_label_styling" />
-
-## Label text alignment
-
-<LvglExampleBrief>Align multi-line text inside a fixed-width label.</LvglExampleBrief>
-
-Three labels of equal width hold the same two-line text but use different
-style_text_align values: left, center, and right. Alignment only changes anything when
-the label is wider than its text or contains line breaks, so each label is given an
-explicit width that exceeds the longest line.
-
-<LvglExample name="lv_example_label_text_align" path="widgets/label/label_text_align/lv_example_label_text_align" />

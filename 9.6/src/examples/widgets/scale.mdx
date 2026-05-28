@@ -5,6 +5,17 @@ order: 120
 
 Linear or circular axis with tick marks and labels, used as a standalone ruler or as a base for gauges.
 
+## Scale section bind min/max
+
+<LvglExampleBrief>Drive a scale section's range live from two subjects.</LvglExampleBrief>
+
+The scale has a single styled section whose `bind_min_value`/`bind_max_value`
+are wired to `subject_value2` and `subject_value` respectively. Two sliders
+edit those subjects, so dragging them moves the start and end of the
+highlighted band on the scale — useful for "safe range" indicators on gauges.
+
+<LvglExample name="lv_example_scale_bind_section" path="widgets/scale/lv_example_scale_bind_section" />
+
 ## Rotating compass with cardinal labels
 
 <LvglExampleBrief>Round scale rotates under a fixed arrow as its heading sweeps 0 to 360.</LvglExampleBrief>
@@ -51,6 +62,17 @@ text width.
 
 <LvglExample name="lv_example_scale_label_recolor" path="widgets/scale/lv_example_scale_label_recolor" />
 
+## Scale linear modes
+
+<LvglExampleBrief>Horizontal and vertical scales, ticks on either side of the rail.</LvglExampleBrief>
+
+Linear scales come in four flavours: `horizontal_top` / `horizontal_bottom`
+lay the rail across and put ticks above or below it; `vertical_left` /
+`vertical_right` rotate the same idea 90°. The four scales below share the
+same tick count and value range so the only visible difference is layout.
+
+<LvglExample name="lv_example_scale_modes" path="widgets/scale/lv_example_scale_modes" />
+
 ## Round scales with animated needles
 
 <LvglExampleBrief>Two round inner scales driven by looping line and image needles.</LvglExampleBrief>
@@ -65,45 +87,6 @@ and 40 on an infinite 1000 ms forward and 1000 ms reverse loop.
 
 <LvglExample name="lv_example_scale_needles" path="widgets/scale/lv_example_scale_needles" />
 
-## 24-hour day and night dial
-
-<LvglExampleBrief>Round outer scale split into coloured day and night arcs with sunrise and sunset text.</LvglExampleBrief>
-
-A 210 by 210 dark grey container hosts a 150 by 150
-`LV_SCALE_MODE_ROUND_OUTER` scale over the range 0 to 24 with a
-full 360 degree sweep rotated to 105 degrees and 25 hourly ticks in
-`lv_font_montserrat_12`. Labels `01` through `24` rotate to follow
-the ticks while staying upright, and an `LV_EVENT_DRAW_TASK_ADDED`
-callback whitens the `06`, `12`, `18`, and `24` labels while
-greying the rest. Two sections colour the arc blue for 17 to 5
-(night) and dark yellow for 5 to 17 (day). Inside the container,
-a top `TODAY` heading sits above `SUNRISE 6:43` on the left and
-`SUNSET 17:37` on the right, using `lv_font_montserrat_14` through `_20`.
-
-<LvglExample name="lv_example_scale_sunset_sunrise" path="widgets/scale/lv_example_scale_sunset_sunrise" />
-
-## Scale section bind min/max
-
-<LvglExampleBrief>Drive a scale section's range live from two subjects.</LvglExampleBrief>
-
-The scale has a single styled section whose `bind_min_value`/`bind_max_value`
-are wired to `subject_value2` and `subject_value` respectively. Two sliders
-edit those subjects, so dragging them moves the start and end of the
-highlighted band on the scale — useful for "safe range" indicators on gauges.
-
-<LvglExample name="lv_example_scale_bind_section" path="widgets/scale/scale_bind_section/lv_example_scale_bind_section" />
-
-## Scale linear modes
-
-<LvglExampleBrief>Horizontal and vertical scales, ticks on either side of the rail.</LvglExampleBrief>
-
-Linear scales come in four flavours: `horizontal_top` / `horizontal_bottom`
-lay the rail across and put ticks above or below it; `vertical_left` /
-`vertical_right` rotate the same idea 90°. The four scales below share the
-same tick count and value range so the only visible difference is layout.
-
-<LvglExample name="lv_example_scale_modes" path="widgets/scale/scale_modes/lv_example_scale_modes" />
-
 ## Scale value range
 
 <LvglExampleBrief>`min_value` / `max_value` control the numeric domain the scale spans.</LvglExampleBrief>
@@ -114,19 +97,7 @@ different numeric ranges. The major tick labels are computed from
 inverted range (min > max) flips the label direction without changing the
 layout.
 
-<LvglExample name="lv_example_scale_range" path="widgets/scale/scale_range/lv_example_scale_range" />
-
-## Scale round modes
-
-<LvglExampleBrief>Two round scales: ticks pointing inward and outward.</LvglExampleBrief>
-
-`round_inner` places the ticks on the inside of the arc — useful when the
-scale wraps content like a gauge needle. `round_outer` puts the ticks on
-the outside — typical for dials and clocks. Both modes pick up
-`angle_range` (the arc's angular sweep) and `rotation` (where the first
-tick sits, measured clockwise from 3 o'clock).
-
-<LvglExample name="lv_example_scale_round_modes" path="widgets/scale/scale_round_modes/lv_example_scale_round_modes" />
+<LvglExample name="lv_example_scale_range" path="widgets/scale/lv_example_scale_range" />
 
 ## Scale styling
 
@@ -145,7 +116,24 @@ The major-tick labels can also be rotated by the indicator's
 (units of 0.1°, so 300 = 30°) tilts every label by 30°. Use this when
 dense labels would otherwise overlap.
 
-<LvglExample name="lv_example_scale_styling" path="widgets/scale/scale_styling/lv_example_scale_styling" />
+<LvglExample name="lv_example_scale_styling" path="widgets/scale/lv_example_scale_styling" />
+
+## 24-hour day and night dial
+
+<LvglExampleBrief>Round outer scale split into coloured day and night arcs with sunrise and sunset text.</LvglExampleBrief>
+
+A 210 by 210 dark grey container hosts a 150 by 150
+`LV_SCALE_MODE_ROUND_OUTER` scale over the range 0 to 24 with a
+full 360 degree sweep rotated to 105 degrees and 25 hourly ticks in
+`lv_font_montserrat_12`. Labels `01` through `24` rotate to follow
+the ticks while staying upright, and an `LV_EVENT_DRAW_TASK_ADDED`
+callback whitens the `06`, `12`, `18`, and `24` labels while
+greying the rest. Two sections colour the arc blue for 17 to 5
+(night) and dark yellow for 5 to 17 (day). Inside the container,
+a top `TODAY` heading sits above `SUNRISE 6:43` on the left and
+`SUNSET 17:37` on the right, using `lv_font_montserrat_14` through `_20`.
+
+<LvglExample name="lv_example_scale_sunset_sunrise" path="widgets/scale/lv_example_scale_sunset_sunrise" />
 
 ## Scale tick configuration
 
@@ -156,4 +144,4 @@ major. `major_tick_every` picks every Nth tick to be drawn longer and
 (when `label_show="true"`) carry a numeric label. The three scales below
 share the same physical width but vary their tick density.
 
-<LvglExample name="lv_example_scale_ticks" path="widgets/scale/scale_ticks/lv_example_scale_ticks" />
+<LvglExample name="lv_example_scale_ticks" path="widgets/scale/lv_example_scale_ticks" />

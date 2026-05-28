@@ -3,6 +3,16 @@ title: "Checkbox"
 order: 55
 ---
 
+## Checkbox bind checked + bind flag
+
+<LvglExampleBrief>A checkbox drives an int subject; a sibling label hides when the subject is zero.</LvglExampleBrief>
+
+`bind_checked` connects the checkbox's checked state to `subject_flag` (0 or 1).
+The note label uses `bind_flag_if_eq` to enable the `hidden` flag while
+`subject_flag` equals 0 — so the label only shows once the box is ticked.
+
+<LvglExample name="lv_example_checkbox_bind_checked" path="widgets/checkbox/lv_example_checkbox_bind_checked" />
+
 ## Checkbox value-changed event
 
 <LvglExampleBrief>Mirror the toggle state into a sibling label.</LvglExampleBrief>
@@ -14,16 +24,6 @@ the handler (here, `lv_label_set_text` on a sibling).
 
 <LvglExample name="lv_example_checkbox_event" path="widgets/checkbox/lv_example_checkbox_event" />
 
-## Checkbox bind checked + bind flag
-
-<LvglExampleBrief>A checkbox drives an int subject; a sibling label hides when the subject is zero.</LvglExampleBrief>
-
-`bind_checked` connects the checkbox's checked state to `subject_flag` (0 or 1).
-The note label uses `bind_flag_if_eq` to enable the `hidden` flag while
-`subject_flag` equals 0 — so the label only shows once the box is ticked.
-
-<LvglExample name="lv_example_checkbox_bind_checked" path="widgets/checkbox/checkbox_bind_checked/lv_example_checkbox_bind_checked" />
-
 ## Checkbox states
 
 <LvglExampleBrief>Show unchecked, checked, and disabled tick boxes side by side.</LvglExampleBrief>
@@ -32,7 +32,7 @@ Each checkbox carries the same text but advertises a different state. State is
 toggled at runtime with `lv_obj_add_state(cb, LV_STATE_CHECKED)` and friends; in
 XML the same effect is achieved by setting the state attribute directly.
 
-<LvglExample name="lv_example_checkbox_states" path="widgets/checkbox/checkbox_states/lv_example_checkbox_states" />
+<LvglExample name="lv_example_checkbox_states" path="widgets/checkbox/lv_example_checkbox_states" />
 
 ## Checkbox styling
 
@@ -43,7 +43,7 @@ target INDICATOR in both default and `checked` states so the tick box has a soft
 rounded look unchecked and switches to an accent color with a tinted halo when
 checked. MAIN is styled with local `style_*` props to recolor the label area.
 
-<LvglExample name="lv_example_checkbox_styling" path="widgets/checkbox/checkbox_styling/lv_example_checkbox_styling" />
+<LvglExample name="lv_example_checkbox_styling" path="widgets/checkbox/lv_example_checkbox_styling" />
 
 ## Checkbox text
 
@@ -54,4 +54,4 @@ longer single-line sentence, and a multi-line label using `&#10;` for the line b
 The text attribute is what `lv_checkbox_set_text` would set in code, and the gap
 between tick box and label is controlled by `pad_column` on the main part.
 
-<LvglExample name="lv_example_checkbox_text" path="widgets/checkbox/checkbox_text/lv_example_checkbox_text" />
+<LvglExample name="lv_example_checkbox_text" path="widgets/checkbox/lv_example_checkbox_text" />

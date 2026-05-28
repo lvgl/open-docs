@@ -5,6 +5,17 @@ order: 115
 
 Scrollable cylindrical selector for picking one option from a fixed list, configured via `lv_roller_set_options`.
 
+## Roller bind value
+
+<LvglExampleBrief>Roller bound to a subject; a button jumps it programmatically.</LvglExampleBrief>
+
+The roller's `bind_value` is wired to `subject_index`. A "Wednesday" button uses
+`subject_set_int_event` to write `3` into the subject on click — the roller
+picks up the change and animates to that option without any direct call into
+the roller widget.
+
+<LvglExample name="lv_example_roller_bind_value" path="widgets/roller/lv_example_roller_bind_value" />
+
 ## Roller value-changed event
 
 <LvglExampleBrief>Mirror the settled selection into a sibling label.</LvglExampleBrief>
@@ -29,17 +40,6 @@ rows fade out.
 
 <LvglExample name="lv_example_roller_fade_mask" path="widgets/roller/lv_example_roller_fade_mask" />
 
-## Roller bind value
-
-<LvglExampleBrief>Roller bound to a subject; a button jumps it programmatically.</LvglExampleBrief>
-
-The roller's `bind_value` is wired to `subject_index`. A "Wednesday" button uses
-`subject_set_int_event` to write `3` into the subject on click — the roller
-picks up the change and animates to that option without any direct call into
-the roller widget.
-
-<LvglExample name="lv_example_roller_bind_value" path="widgets/roller/roller_bind_value/lv_example_roller_bind_value" />
-
 ## Roller options and mode
 
 <LvglExampleBrief>Define the option list and choose between normal and infinite scrolling.</LvglExampleBrief>
@@ -50,7 +50,7 @@ characters. `options-mode` controls scroll behaviour: `normal` stops at the
 first/last entry; `infinite` wraps around so the user can keep scrolling in
 either direction. `selected` picks the initially focused index.
 
-<LvglExample name="lv_example_roller_options" path="widgets/roller/roller_options/lv_example_roller_options" />
+<LvglExample name="lv_example_roller_options" path="widgets/roller/lv_example_roller_options" />
 
 ## Roller styling
 
@@ -66,7 +66,7 @@ selected indicator always sits in the gap between two list items, growing
 `text_line_space` directly grows the height of the highlighted band — so
 the selected row gets visually taller without a separate height setting.
 
-<LvglExample name="lv_example_roller_styling" path="widgets/roller/roller_styling/lv_example_roller_styling" />
+<LvglExample name="lv_example_roller_styling" path="widgets/roller/lv_example_roller_styling" />
 
 ## Roller visible row count
 
@@ -77,4 +77,4 @@ pixels — the widget computes its own pixel height from the current font and
 line spacing. A short roller (3 rows) feels compact for a yes/no pick;
 a tall one (7 rows) shows more context but takes more screen real estate.
 
-<LvglExample name="lv_example_roller_visible_rows" path="widgets/roller/roller_visible_rows/lv_example_roller_visible_rows" />
+<LvglExample name="lv_example_roller_visible_rows" path="widgets/roller/lv_example_roller_visible_rows" />

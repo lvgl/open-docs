@@ -6,6 +6,59 @@ order: 20
 
 An `lv_style_t` holds a set of property values (color, padding, border, font, and so on) that you attach to a widget, a specific part of a widget, and a state such as `LV_STATE_PRESSED` or `LV_STATE_FOCUSED`. Styles cascade through the parent/child tree, and transitions let property changes animate between states. This section covers property groups, state handling, and common composition patterns.
 
+## Arc stroke
+
+<LvglExampleBrief>Style the arc's ring and indicator into a modern progress dial.</LvglExampleBrief>
+
+`arc_width` and `arc_rounded="true"` give both parts a thick, round-capped
+stroke. On `selector="main"` `arc_color` is a light neutral track; on
+`selector="indicator"` it is the accent, so the same three properties
+produce a clean circular-progress look.
+
+<LvglExample name="lv_example_style_arc" path="styles/lv_example_style_arc" />
+
+## Background gradient
+
+<LvglExampleBrief>Blend two colors vertically and shift where the blend happens.</LvglExampleBrief>
+
+`bg_color` and `bg_grad_color` are the two stops; `bg_grad_dir="ver"`
+blends top-to-bottom. `bg_main_stop="80"` keeps the indigo solid only
+briefly and `bg_grad_stop="220"` stretches the blend almost to the
+bottom, so most of the card is transition rather than flat color.
+
+<LvglExample name="lv_example_style_background" path="styles/lv_example_style_background" />
+
+## Backdrop blur
+
+<LvglExampleBrief>Frost the text sitting behind a translucent card.</LvglExampleBrief>
+
+A paragraph fills the screen and the glass card is centered over its
+middle. The card's `blur_backdrop="true"` with `blur_radius="14"` blurs
+only what is behind it, and `bg_opa="40%"` keeps the card translucent so
+the blurred text shows through — sharp text around it, soft text under it.
+
+<LvglExample name="lv_example_style_blur" path="styles/lv_example_style_blur" />
+
+## Border
+
+<LvglExampleBrief>Frame a card with a colored, partially transparent border.</LvglExampleBrief>
+
+`border_width="4"` and `border_color` draw the frame and
+`border_opa="60%"` lets the surface show through it, so the border reads
+as a soft accent instead of a hard line. `radius="20"` rounds the corners
+and the border follows them.
+
+<LvglExample name="lv_example_style_border" path="styles/lv_example_style_border" />
+
+## Drop shadow
+
+Unlike `shadow_*` (always a rectangle), `drop_shadow_*` blurs the actual
+shape of the part. Added to `LV_PART_INDICATOR`, the active arc gets a
+red shadow with `drop_shadow_radius = 16` and an offset of (5, 10) that
+follows the curve. `drop_shadow_*` has no XML attribute yet, so this is C.
+
+<LvglExample name="lv_example_style_drop_shadow" path="styles/lv_example_style_drop_shadow" />
+
 ## Four gradient button backgrounds
 
 <LvglExampleBrief>Stack four buttons using horizontal, vertical, linear, and radial gradients.</LvglExampleBrief>
@@ -49,6 +102,49 @@ reports the missing feature instead.
 
 <LvglExample name="lv_example_style_gradient_radial" path="styles/lv_example_style_gradient_radial" />
 
+## Image recolor and rotation
+
+<LvglExampleBrief>Tint and rotate an image purely through style properties.</LvglExampleBrief>
+
+`image_recolor` with `image_recolor_opa="50%"` mixes a blue tint into the
+bitmap without touching the source, and `transform_rotation="300"` turns
+the widget 30° (the unit is 0.1°). The `radius`, `bg_color`, and `border_*`
+on the same style transform together with the image.
+
+<LvglExample name="lv_example_style_image" path="styles/lv_example_style_image" />
+
+## Line stroke
+
+`line_color` and `line_width` set the stroke and `line_rounded` rounds
+the end caps and vertices so the bends look smooth instead of mitred.
+The point array is fixed; only the stroke style changes the look. Line
+points are a C `lv_point_precise_t` array, which is why this is C.
+
+<LvglExample name="lv_example_style_line" path="styles/lv_example_style_line" />
+
+## Local style override
+
+<LvglExampleBrief>Local properties — including state selectors — beat the shared style.</LvglExampleBrief>
+
+All three buttons share `style_shared` (indigo, dark border, radius).
+"Override" adds a plain local `style_bg_color`, so it is always pink.
+"On press" adds a state-scoped local `style_bg_color-pressed`, so it
+turns green only while held. Both keep the shared border, showing local
+styles — and local *state* selectors — have the highest precedence.
+
+<LvglExample name="lv_example_style_local" path="styles/lv_example_style_local" />
+
+## Margin
+
+<LvglExampleBrief>Reserve space around one item on top of the layout's own gaps.</LvglExampleBrief>
+
+The row sets `style_pad_column="8"` between chips. The middle chip adds
+`style_margin_left="24"` and `style_margin_right="24"`, so it sits
+visibly further from its neighbors than the 8 px flex gap — margin
+reserves space around a Widget without changing the Widget's size.
+
+<LvglExample name="lv_example_style_margin" path="styles/lv_example_style_margin" />
+
 ## Modal overlay timing
 
 <LvglExampleBrief>Compare a full-screen dim layer against a recolor overlay for modal dialogs.</LvglExampleBrief>
@@ -62,6 +158,96 @@ instead. A slider is added to `lv_layer_top()` and centered, then
 approach through `LV_LOG_USER`.
 
 <LvglExample name="lv_example_style_modal" path="styles/lv_example_style_modal" />
+
+## Cascading styles
+
+<LvglExampleBrief>Stack a second style that overrides only a few properties of a shared base.</LvglExampleBrief>
+
+`style_base` defines the whole card — fill, border, shadow, radius,
+padding, text color. `style_warning` sets only `bg_color`,
+`border_color`, and `text_color`. The right card has both: the later
+style wins for the properties it sets, the base shows through for the
+rest, so one small style re-themes the card without redefining it.
+
+<LvglExample name="lv_example_style_multiple" path="styles/lv_example_style_multiple" />
+
+## Opacity and transform
+
+<LvglExampleBrief>Fade and geometrically transform a Widget via style properties.</LvglExampleBrief>
+
+Three identical buttons: the first is untouched, the second sets
+`style_opa="128"` (50%), the third also rotates 15° with
+`style_transform_rotation="150"` and scales to 1.25× with
+`style_transform_scale_x/y="320"`. `opa` and the transforms render the
+button to a layer first, so its label fades and transforms with it.
+
+<LvglExample name="lv_example_style_opacity_transform" path="styles/lv_example_style_opacity_transform" />
+
+## Outline
+
+<LvglExampleBrief>Add a focus-style ring that sits outside the card and ignores layout.</LvglExampleBrief>
+
+An outline is painted outside the box, so unlike a border it never
+resizes the Widget. `outline_color` + `outline_width="3"` draw the ring
+and `outline_pad="6"` is the gap between the card edge and the ring —
+the look of a modern keyboard-focus halo.
+
+<LvglExample name="lv_example_style_outline" path="styles/lv_example_style_outline" />
+
+## Padding
+
+<LvglExampleBrief>Inset a Widget's content per side with the directional pad_* properties.</LvglExampleBrief>
+
+Padding shrinks the content area. The left card pads only top and left
+(`style_pad_top`/`style_pad_left` = 26, the opposite sides 8); the right
+card pads every side by 18. An accent block fills each card at
+100% × 100%, so the offset makes asymmetric vs uniform inset obvious.
+
+<LvglExample name="lv_example_style_padding" path="styles/lv_example_style_padding" />
+
+## Parts and states
+
+<LvglExampleBrief>Style one part normally and again for a state with `selector`.</LvglExampleBrief>
+
+`selector="indicator"` gives the slider's filled part a violet→pink
+gradient. `selector="pressed|indicator"` adds a glow that applies only
+while the indicator is pressed, so the same part carries one base look
+plus a state-specific overlay — the core of LVGL's part/state model.
+
+<LvglExample name="lv_example_style_parts_states" path="styles/lv_example_style_parts_states" />
+
+## Box shadow
+
+<LvglExampleBrief>Lift a card off the page with a soft, offset shadow.</LvglExampleBrief>
+
+`shadow_width="30"` sets the blur and `shadow_color` tints it.
+`shadow_offset_y="12"` drops the shadow below the card so it reads as
+elevation, and `shadow_opa="80"` keeps it soft. With both offsets at 0
+the same blur becomes an even glow instead.
+
+<LvglExample name="lv_example_style_shadow" path="styles/lv_example_style_shadow" />
+
+## Size and padding
+
+<LvglExampleBrief>Set a Widget's width and padding; its height follows the content.</LvglExampleBrief>
+
+Both cards share one style but set a different `width` (140 vs 240) and
+`style_pad_all` (12 vs 28). `height="content"` lets each grow to exactly
+fit its label plus that padding, so the same style yields a tight chip
+and a roomy panel — size comes only from these properties.
+
+<LvglExample name="lv_example_style_size_position" path="styles/lv_example_style_size_position" />
+
+## Text styling
+
+<LvglExampleBrief>Color text, widen letter/line spacing, and underline it.</LvglExampleBrief>
+
+`text_color` recolors the glyphs, `text_letter_space="4"` and
+`text_line_space="14"` open up tracking and leading, and
+`text_decor="underline"` underlines every line — the spacing makes the
+two lines read as a styled heading rather than body text.
+
+<LvglExample name="lv_example_style_text" path="styles/lv_example_style_text" />
 
 ## Extending the current theme
 
@@ -106,189 +292,3 @@ attached to `LV_STATE_PRESSED` on a centered base object, so pressing
 it eases to red and releasing eases back.
 
 <LvglExample name="lv_example_style_transition" path="styles/lv_example_style_transition" />
-
-## Arc stroke
-
-<LvglExampleBrief>Style the arc's ring and indicator into a modern progress dial.</LvglExampleBrief>
-
-`arc_width` and `arc_rounded="true"` give both parts a thick, round-capped
-stroke. On `selector="main"` `arc_color` is a light neutral track; on
-`selector="indicator"` it is the accent, so the same three properties
-produce a clean circular-progress look.
-
-<LvglExample name="lv_example_style_arc" path="styles/style_arc/lv_example_style_arc" />
-
-## Background gradient
-
-<LvglExampleBrief>Blend two colors vertically and shift where the blend happens.</LvglExampleBrief>
-
-`bg_color` and `bg_grad_color` are the two stops; `bg_grad_dir="ver"`
-blends top-to-bottom. `bg_main_stop="80"` keeps the indigo solid only
-briefly and `bg_grad_stop="220"` stretches the blend almost to the
-bottom, so most of the card is transition rather than flat color.
-
-<LvglExample name="lv_example_style_background" path="styles/style_background/lv_example_style_background" />
-
-## Backdrop blur
-
-<LvglExampleBrief>Frost the text sitting behind a translucent card.</LvglExampleBrief>
-
-A paragraph fills the screen and the glass card is centered over its
-middle. The card's `blur_backdrop="true"` with `blur_radius="14"` blurs
-only what is behind it, and `bg_opa="40%"` keeps the card translucent so
-the blurred text shows through — sharp text around it, soft text under it.
-
-<LvglExample name="lv_example_style_blur" path="styles/style_blur/lv_example_style_blur" />
-
-## Border
-
-<LvglExampleBrief>Frame a card with a colored, partially transparent border.</LvglExampleBrief>
-
-`border_width="4"` and `border_color` draw the frame and
-`border_opa="60%"` lets the surface show through it, so the border reads
-as a soft accent instead of a hard line. `radius="20"` rounds the corners
-and the border follows them.
-
-<LvglExample name="lv_example_style_border" path="styles/style_border/lv_example_style_border" />
-
-## Drop shadow
-
-Unlike `shadow_*` (always a rectangle), `drop_shadow_*` blurs the actual
-shape of the part. Added to `LV_PART_INDICATOR`, the active arc gets a
-red shadow with `drop_shadow_radius = 16` and an offset of (5, 10) that
-follows the curve. `drop_shadow_*` has no XML attribute yet, so this is C.
-
-<LvglExample name="lv_example_style_drop_shadow" path="styles/style_drop_shadow/lv_example_style_drop_shadow" />
-
-## Image recolor and rotation
-
-<LvglExampleBrief>Tint and rotate an image purely through style properties.</LvglExampleBrief>
-
-`image_recolor` with `image_recolor_opa="50%"` mixes a blue tint into the
-bitmap without touching the source, and `transform_rotation="300"` turns
-the widget 30° (the unit is 0.1°). The `radius`, `bg_color`, and `border_*`
-on the same style transform together with the image.
-
-<LvglExample name="lv_example_style_image" path="styles/style_image/lv_example_style_image" />
-
-## Line stroke
-
-`line_color` and `line_width` set the stroke and `line_rounded` rounds
-the end caps and vertices so the bends look smooth instead of mitred.
-The point array is fixed; only the stroke style changes the look. Line
-points are a C `lv_point_precise_t` array, which is why this is C.
-
-<LvglExample name="lv_example_style_line" path="styles/style_line/lv_example_style_line" />
-
-## Local style override
-
-<LvglExampleBrief>Local properties — including state selectors — beat the shared style.</LvglExampleBrief>
-
-All three buttons share `style_shared` (indigo, dark border, radius).
-"Override" adds a plain local `style_bg_color`, so it is always pink.
-"On press" adds a state-scoped local `style_bg_color-pressed`, so it
-turns green only while held. Both keep the shared border, showing local
-styles — and local *state* selectors — have the highest precedence.
-
-<LvglExample name="lv_example_style_local" path="styles/style_local/lv_example_style_local" />
-
-## Margin
-
-<LvglExampleBrief>Reserve space around one item on top of the layout's own gaps.</LvglExampleBrief>
-
-The row sets `style_pad_column="8"` between chips. The middle chip adds
-`style_margin_left="24"` and `style_margin_right="24"`, so it sits
-visibly further from its neighbors than the 8 px flex gap — margin
-reserves space around a Widget without changing the Widget's size.
-
-<LvglExample name="lv_example_style_margin" path="styles/style_margin/lv_example_style_margin" />
-
-## Cascading styles
-
-<LvglExampleBrief>Stack a second style that overrides only a few properties of a shared base.</LvglExampleBrief>
-
-`style_base` defines the whole card — fill, border, shadow, radius,
-padding, text color. `style_warning` sets only `bg_color`,
-`border_color`, and `text_color`. The right card has both: the later
-style wins for the properties it sets, the base shows through for the
-rest, so one small style re-themes the card without redefining it.
-
-<LvglExample name="lv_example_style_multiple" path="styles/style_multiple/lv_example_style_multiple" />
-
-## Opacity and transform
-
-<LvglExampleBrief>Fade and geometrically transform a Widget via style properties.</LvglExampleBrief>
-
-Three identical buttons: the first is untouched, the second sets
-`style_opa="128"` (50%), the third also rotates 15° with
-`style_transform_rotation="150"` and scales to 1.25× with
-`style_transform_scale_x/y="320"`. `opa` and the transforms render the
-button to a layer first, so its label fades and transforms with it.
-
-<LvglExample name="lv_example_style_opacity_transform" path="styles/style_opacity_transform/lv_example_style_opacity_transform" />
-
-## Outline
-
-<LvglExampleBrief>Add a focus-style ring that sits outside the card and ignores layout.</LvglExampleBrief>
-
-An outline is painted outside the box, so unlike a border it never
-resizes the Widget. `outline_color` + `outline_width="3"` draw the ring
-and `outline_pad="6"` is the gap between the card edge and the ring —
-the look of a modern keyboard-focus halo.
-
-<LvglExample name="lv_example_style_outline" path="styles/style_outline/lv_example_style_outline" />
-
-## Padding
-
-<LvglExampleBrief>Inset a Widget's content per side with the directional pad_* properties.</LvglExampleBrief>
-
-Padding shrinks the content area. The left card pads only top and left
-(`style_pad_top`/`style_pad_left` = 26, the opposite sides 8); the right
-card pads every side by 18. An accent block fills each card at
-100% × 100%, so the offset makes asymmetric vs uniform inset obvious.
-
-<LvglExample name="lv_example_style_padding" path="styles/style_padding/lv_example_style_padding" />
-
-## Parts and states
-
-<LvglExampleBrief>Style one part normally and again for a state with `selector`.</LvglExampleBrief>
-
-`selector="indicator"` gives the slider's filled part a violet→pink
-gradient. `selector="pressed|indicator"` adds a glow that applies only
-while the indicator is pressed, so the same part carries one base look
-plus a state-specific overlay — the core of LVGL's part/state model.
-
-<LvglExample name="lv_example_style_parts_states" path="styles/style_parts_states/lv_example_style_parts_states" />
-
-## Box shadow
-
-<LvglExampleBrief>Lift a card off the page with a soft, offset shadow.</LvglExampleBrief>
-
-`shadow_width="30"` sets the blur and `shadow_color` tints it.
-`shadow_offset_y="12"` drops the shadow below the card so it reads as
-elevation, and `shadow_opa="80"` keeps it soft. With both offsets at 0
-the same blur becomes an even glow instead.
-
-<LvglExample name="lv_example_style_shadow" path="styles/style_shadow/lv_example_style_shadow" />
-
-## Size and padding
-
-<LvglExampleBrief>Set a Widget's width and padding; its height follows the content.</LvglExampleBrief>
-
-Both cards share one style but set a different `width` (140 vs 240) and
-`style_pad_all` (12 vs 28). `height="content"` lets each grow to exactly
-fit its label plus that padding, so the same style yields a tight chip
-and a roomy panel — size comes only from these properties.
-
-<LvglExample name="lv_example_style_size_position" path="styles/style_size_position/lv_example_style_size_position" />
-
-## Text styling
-
-<LvglExampleBrief>Color text, widen letter/line spacing, and underline it.</LvglExampleBrief>
-
-`text_color` recolors the glyphs, `text_letter_space="4"` and
-`text_line_space="14"` open up tracking and leading, and
-`text_decor="underline"` underlines every line — the spacing makes the
-two lines read as a styled heading rather than body text.
-
-<LvglExample name="lv_example_style_text" path="styles/style_text/lv_example_style_text" />

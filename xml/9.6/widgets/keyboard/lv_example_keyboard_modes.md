@@ -1,0 +1,27 @@
+```xml title="examples/widgets/keyboard/lv_example_keyboard_modes.xml" source="https://github.com/lvgl/lvgl/blob/02814ddb90d38a8a46794579a126154bb2b9f473/examples/widgets/keyboard/lv_example_keyboard_modes.xml"
+<!--
+ @title Keyboard modes
+ @brief Switch between text and number layouts via the `mode` attribute.
+
+ `mode` selects the keymap LVGL shows. `text_lower`/`text_upper` give the
+ letter layouts with case shift keys; `special` swaps in punctuation;
+ `number` shows the calculator-style numeric pad. The mode persists until
+ changed — pressing the in-layout `ABC`/`abc`/`1#` keys switches the keymap
+ at runtime, while this attribute pins the initial layout.
+-->
+<screen>
+	<view>
+		<!-- 💡 Change `mode` from `number` to `text_lower`, `text_upper`, or `special` to see each keymap. -->
+		<lv_textarea
+			name="textarea"
+			align="top_mid"
+			y="10"
+			width="90%"
+			one_line="true"
+			placeholder_text="Type some numbers"
+		/>
+
+		<lv_keyboard name="keyboard" align="bottom_mid" width="100%" height="60%" mode="number" />
+	</view>
+</screen>
+```

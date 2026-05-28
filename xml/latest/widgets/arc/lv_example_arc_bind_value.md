@@ -1,0 +1,27 @@
+```xml title="examples/widgets/arc/lv_example_arc_bind_value.xml" source="https://github.com/lvgl/lvgl/blob/02814ddb90d38a8a46794579a126154bb2b9f473/examples/widgets/arc/lv_example_arc_bind_value.xml"
+<!--
+ @title Arc bind value
+ @brief An arc and a slider co-bound to one subject; moving the slider rotates the arc.
+
+ Both widgets target `subject_value` via `bind_value`. The slider is the editor;
+ the arc is a read-only visualizer. Because the binding is two-way at the widget
+ level, the arc would also push updates back if it were interactive — but here
+ we lock it with `clickable="false"` so it stays purely indicative.
+-->
+<screen>
+	<view
+		flex_flow="column"
+		style_flex_main_place="center"
+		style_flex_cross_place="center"
+		style_flex_track_place="center"
+		style_pad_row="16"
+	>
+		<!-- 💡 Slide to change `subject_value`; the arc follows because both bind to it. -->
+		<lv_arc name="arc" width="160" height="160" bind_value="subject_value" clickable="false" style_bg_opa-knob="0%">
+			<lv_label align="center" bind_text="subject_value" bind_text-fmt="%d %%" />
+		</lv_arc>
+
+		<lv_slider name="slider" width="220" bind_value="subject_value" />
+	</view>
+</screen>
+```

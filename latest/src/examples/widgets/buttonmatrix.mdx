@@ -5,17 +5,6 @@ order: 35
 
 A grid of buttons defined from a single string map, emitting `LV_EVENT_VALUE_CHANGED` with the pressed button's index.
 
-## Button matrix value-changed event
-
-<LvglExampleBrief>Show which virtual button was pressed in a sibling label.</LvglExampleBrief>
-
-`LV_EVENT_VALUE_CHANGED` fires on every press.
-`lv_buttonmatrix_get_selected_button` returns the zero-based id;
-`_get_button_text` resolves it to the label string. The handler writes
-that string into a sibling label via `lv_label_set_text_fmt`.
-
-<LvglExample name="lv_example_buttonmatrix_event" path="widgets/buttonmatrix/lv_example_buttonmatrix_event" />
-
 ## Button matrix per-button control flags
 
 <LvglExampleBrief>Apply checkable, checked, disabled, and hidden flags via `ctrl_map`.</LvglExampleBrief>
@@ -25,7 +14,7 @@ the matching button in `map`. The four buttons here show a plain button, a
 checkable button that starts checked (`checkable|checked`), a `disabled` button,
 and a `hidden` button which still reserves its slot in the layout.
 
-<LvglExample name="lv_example_buttonmatrix_button_ctrl" path="widgets/buttonmatrix/buttonmatrix_button_ctrl/lv_example_buttonmatrix_button_ctrl" />
+<LvglExample name="lv_example_buttonmatrix_button_ctrl" path="widgets/buttonmatrix/lv_example_buttonmatrix_button_ctrl" />
 
 ## Button matrix button widths
 
@@ -40,7 +29,18 @@ The row break itself is written as `'&#10;'` — the XML numeric character entit
 for a newline (U+000A) — because a raw `\n` inside an attribute would stay as
 the literal backslash-n.
 
-<LvglExample name="lv_example_buttonmatrix_button_width" path="widgets/buttonmatrix/buttonmatrix_button_width/lv_example_buttonmatrix_button_width" />
+<LvglExample name="lv_example_buttonmatrix_button_width" path="widgets/buttonmatrix/lv_example_buttonmatrix_button_width" />
+
+## Button matrix value-changed event
+
+<LvglExampleBrief>Show which virtual button was pressed in a sibling label.</LvglExampleBrief>
+
+`LV_EVENT_VALUE_CHANGED` fires on every press.
+`lv_buttonmatrix_get_selected_button` returns the zero-based id;
+`_get_button_text` resolves it to the label string. The handler writes
+that string into a sibling label via `lv_label_set_text_fmt`.
+
+<LvglExample name="lv_example_buttonmatrix_event" path="widgets/buttonmatrix/lv_example_buttonmatrix_event" />
 
 ## Button matrix map
 
@@ -54,7 +54,7 @@ inside an attribute would be kept as the literal two characters `\` and `n`.
 Within a row the matrix shares the available width equally between buttons by
 default.
 
-<LvglExample name="lv_example_buttonmatrix_map" path="widgets/buttonmatrix/buttonmatrix_map/lv_example_buttonmatrix_map" />
+<LvglExample name="lv_example_buttonmatrix_map" path="widgets/buttonmatrix/lv_example_buttonmatrix_map" />
 
 ## Button matrix one-checked mode
 
@@ -65,7 +65,7 @@ a mutually exclusive group: pressing one un-checks the previously checked button
 Every weekday here is `checkable`, and Tue starts as `checkable|checked` so the
 example doubles as a small weekday selector.
 
-<LvglExample name="lv_example_buttonmatrix_one_checked" path="widgets/buttonmatrix/buttonmatrix_one_checked/lv_example_buttonmatrix_one_checked" />
+<LvglExample name="lv_example_buttonmatrix_one_checked" path="widgets/buttonmatrix/lv_example_buttonmatrix_one_checked" />
 
 ## Button matrix popover preview
 
@@ -76,7 +76,7 @@ held down, its text floats up in a small popover above the finger so the user
 can still read what they are pressing. The entire top row carries `popover` in
 `ctrl_map`, which is how a keyboard layer typically enables the feature.
 
-<LvglExample name="lv_example_buttonmatrix_popover" path="widgets/buttonmatrix/buttonmatrix_popover/lv_example_buttonmatrix_popover" />
+<LvglExample name="lv_example_buttonmatrix_popover" path="widgets/buttonmatrix/lv_example_buttonmatrix_popover" />
 
 ## Button matrix per-button text recolor
 
@@ -87,7 +87,7 @@ by `lv_label` recoloring becomes active in that button's `map` text. The three
 buttons share a layout but each colors a different word, so a single buttonmatrix
 can mix severity colors, badges, or status markers without per-button styles.
 
-<LvglExample name="lv_example_buttonmatrix_recolor" path="widgets/buttonmatrix/buttonmatrix_recolor/lv_example_buttonmatrix_recolor" />
+<LvglExample name="lv_example_buttonmatrix_recolor" path="widgets/buttonmatrix/lv_example_buttonmatrix_recolor" />
 
 ## Button matrix styling
 
@@ -98,4 +98,4 @@ The named styles target ITEMS in the default state and in the `checked` state vi
 `selector="items|checked"`, so the highlighted day picks up an accent fill. The
 container gets a flat, padded look via local `style_*` props on the matrix tag.
 
-<LvglExample name="lv_example_buttonmatrix_styling" path="widgets/buttonmatrix/buttonmatrix_styling/lv_example_buttonmatrix_styling" />
+<LvglExample name="lv_example_buttonmatrix_styling" path="widgets/buttonmatrix/lv_example_buttonmatrix_styling" />
