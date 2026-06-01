@@ -3,14 +3,14 @@ title: "Dropdown"
 order: 60
 ---
 
-## Roller bind value
+## Dropdown bind value
 
-<LvglExampleBrief>Roller bound to a subject; a button jumps it programmatically.</LvglExampleBrief>
+<LvglExampleBrief>Dropdown bound to a subject; a button jumps it programmatically.</LvglExampleBrief>
 
-The roller's `bind_value` is wired to `subject_index`. A "Wednesday" button uses
-`subject_set_int_event` to write `3` into the subject on click — the roller
-picks up the change and animates to that option without any direct call into
-the roller widget.
+The dropdown's `bind_value` is wired to `subject_index`. A "Pick Cherry" button uses
+`subject_set_int_event` to write `2` into the subject on click — the dropdown
+picks up the change and updates the selection without any direct call into
+the dropdown widget.
 
 <LvglExample name="lv_example_dropdown_bind_value" path="widgets/dropdown/lv_example_dropdown_bind_value" />
 

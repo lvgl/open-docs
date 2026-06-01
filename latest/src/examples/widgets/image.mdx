@@ -33,12 +33,9 @@ event callback.
 
 <LvglExampleBrief>Display an image registered globally for the project.</LvglExampleBrief>
 
-`lv_image` paints whatever is set as its `src`. In XML the value must
-resolve through `lv_xml_get_image`, so `src` references a name that was
-registered via `<file>` or `<data>` in `<images>` — here `img_example_lvgl_logo`
-declared in `examples/xml_project/globals.xml`. The C API also accepts
-a symbol string or a raw image variable pointer; those alternatives are
-documented in this page but cannot appear in XML.
+`lv_image` paints whatever is set as its `src`.
+In C the image can be a file or a C array.
+In XML the source needs to b set in globals.xml.
 
 <LvglExample name="lv_example_image_src" path="widgets/image/lv_example_image_src" />
 
