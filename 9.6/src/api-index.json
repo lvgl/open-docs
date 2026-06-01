@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-06-01T10:15:08.867Z",
-    "symbolCount": 8618
+    "generatedAt": "2026-06-01T12:55:37.936Z",
+    "symbolCount": 8620
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -15739,6 +15739,16 @@
     "LV_IMAGE_HEADER_MAGIC": {
       "path": "api/draw/lv_image_dsc_h",
       "anchor": "LV_IMAGE_HEADER_MAGIC",
+      "kind": "macro"
+    },
+    "LV_IMAGE_HEADER_LEGACY": {
+      "path": "api/draw/lv_image_dsc_h",
+      "anchor": "LV_IMAGE_HEADER_LEGACY",
+      "kind": "macro"
+    },
+    "LV_IMAGE_HEADER_DEADBEEF": {
+      "path": "api/draw/lv_image_dsc_h",
+      "anchor": "LV_IMAGE_HEADER_DEADBEEF",
       "kind": "macro"
     },
     "LV_IMAGE_FLAGS_USER_MASK": {
