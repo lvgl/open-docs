@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-06-03T12:20:27.265Z",
-    "symbolCount": 8620
+    "generatedAt": "2026-06-03T21:09:38.580Z",
+    "symbolCount": 8619
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -33114,11 +33114,6 @@
     "lv_draw_dma2d_configuration_t": {
       "path": "api-private/draw/dma2d/lv_draw_dma2d_private_h",
       "anchor": "lv_draw_dma2d_configuration_t",
-      "kind": "struct"
-    },
-    "lv_draw_dma2d_cache_area_t": {
-      "path": "api-private/draw/dma2d/lv_draw_dma2d_private_h",
-      "anchor": "lv_draw_dma2d_cache_area_t",
       "kind": "struct"
     },
     "lv_draw_dma2d_unit_t": {
