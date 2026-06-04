@@ -14,7 +14,7 @@ api:
 <ApiTabs items={["Getters (2)","Other (3)"]}>
 <ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_bidi_get_logical_pos" file="api-private/misc/lv_bidi_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/a07926ab0fa2dd689feaa00eaa8f5130bb3e6b61/src/misc/lv_bidi_private.h#L60">
+<ApiMember kind="function" name="lv_bidi_get_logical_pos" file="api-private/misc/lv_bidi_private.h" line={64} url="https://github.com/lvgl/lvgl/tree/5b8ae4b1c3efc6c3c4dc3aa40ec73a85d284b726/src/misc/lv_bidi_private.h#L64">
 
 ### lv_bidi_get_logical_pos
 
@@ -40,7 +40,7 @@ uint16_t lv_bidi_get_logical_pos(const char *str_in, char **bidi_txt, uint32_t l
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_bidi_get_visual_pos" file="api-private/misc/lv_bidi_private.h" line={75} url="https://github.com/lvgl/lvgl/tree/a07926ab0fa2dd689feaa00eaa8f5130bb3e6b61/src/misc/lv_bidi_private.h#L75">
+<ApiMember kind="function" name="lv_bidi_get_visual_pos" file="api-private/misc/lv_bidi_private.h" line={79} url="https://github.com/lvgl/lvgl/tree/5b8ae4b1c3efc6c3c4dc3aa40ec73a85d284b726/src/misc/lv_bidi_private.h#L79">
 
 ### lv_bidi_get_visual_pos
 
@@ -69,7 +69,7 @@ uint16_t lv_bidi_get_visual_pos(const char *str_in, char **bidi_txt, uint16_t le
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_bidi_process" file="api-private/misc/lv_bidi_private.h" line={39} url="https://github.com/lvgl/lvgl/tree/a07926ab0fa2dd689feaa00eaa8f5130bb3e6b61/src/misc/lv_bidi_private.h#L39">
+<ApiMember kind="function" name="lv_bidi_process" file="api-private/misc/lv_bidi_private.h" line={39} url="https://github.com/lvgl/lvgl/tree/5b8ae4b1c3efc6c3c4dc3aa40ec73a85d284b726/src/misc/lv_bidi_private.h#L39">
 
 ### lv_bidi_process
 
@@ -90,11 +90,11 @@ void lv_bidi_process(const char *str_in, char *str_out, lv_base_dir_t base_dir)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_bidi_detect_base_dir" file="api-private/misc/lv_bidi_private.h" line={46} url="https://github.com/lvgl/lvgl/tree/a07926ab0fa2dd689feaa00eaa8f5130bb3e6b61/src/misc/lv_bidi_private.h#L46">
+<ApiMember kind="function" name="lv_bidi_detect_base_dir" file="api-private/misc/lv_bidi_private.h" line={50} url="https://github.com/lvgl/lvgl/tree/5b8ae4b1c3efc6c3c4dc3aa40ec73a85d284b726/src/misc/lv_bidi_private.h#L50">
 
 ### lv_bidi_detect_base_dir
 
-Auto-detect the direction of a text based on the first strong character
+Auto-detect the base direction of a text by scanning all strong characters. RTL takes priority: if any RTL strong character is found, `LV_BASE_DIR_RTL` is returned immediately. Otherwise, `LV_BASE_DIR_LTR` is returned if any LTR strong character is found. If no strong character is present, falls back to `LV_BIDI_BASE_DIR_DEF`. When `LV_BIDI_BASE_DIR_DEF` is `LV_BASE_DIR_AUTO`, this function returns `LV_BASE_DIR_LTR`.
 
 ```c
 lv_base_dir_t lv_bidi_detect_base_dir(const char *txt)
@@ -111,7 +111,7 @@ lv_base_dir_t lv_bidi_detect_base_dir(const char *txt)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_bidi_process_paragraph" file="api-private/misc/lv_bidi_private.h" line={88} url="https://github.com/lvgl/lvgl/tree/a07926ab0fa2dd689feaa00eaa8f5130bb3e6b61/src/misc/lv_bidi_private.h#L88">
+<ApiMember kind="function" name="lv_bidi_process_paragraph" file="api-private/misc/lv_bidi_private.h" line={92} url="https://github.com/lvgl/lvgl/tree/5b8ae4b1c3efc6c3c4dc3aa40ec73a85d284b726/src/misc/lv_bidi_private.h#L92">
 
 ### lv_bidi_process_paragraph
 
