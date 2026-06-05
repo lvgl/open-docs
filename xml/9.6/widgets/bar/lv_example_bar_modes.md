@@ -1,4 +1,4 @@
-```xml title="examples/widgets/bar/lv_example_bar_modes.xml" source="https://github.com/lvgl/lvgl/blob/40a64b3dfc84fe4003f2b46cc2f0d342a4061e01/examples/widgets/bar/lv_example_bar_modes.xml"
+```xml title="examples/widgets/bar/lv_example_bar_modes.xml" source="https://github.com/lvgl/lvgl/blob/2e1dedafedce02f619d849226870a47da20c2fbb/examples/widgets/bar/lv_example_bar_modes.xml"
 <!--
  @title Bar modes
  @brief Compare normal, symmetrical, and range modes.

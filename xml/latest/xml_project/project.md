@@ -1,4 +1,4 @@
-```xml title="examples/xml_project/project.xml" source="https://github.com/lvgl/lvgl/blob/40a64b3dfc84fe4003f2b46cc2f0d342a4061e01/examples/xml_project/project.xml"
+```xml title="examples/xml_project/project.xml" source="https://github.com/lvgl/lvgl/blob/2e1dedafedce02f619d849226870a47da20c2fbb/examples/xml_project/project.xml"
 <project lvgl_version="9.5.0">
 	<targets>
 		<target name="target1">

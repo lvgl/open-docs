@@ -1,4 +1,4 @@
-```xml title="examples/layouts/flex/lv_example_flex_align.xml" source="https://github.com/lvgl/lvgl/blob/40a64b3dfc84fe4003f2b46cc2f0d342a4061e01/examples/layouts/flex/lv_example_flex_align.xml"
+```xml title="examples/layouts/flex/lv_example_flex_align.xml" source="https://github.com/lvgl/lvgl/blob/2e1dedafedce02f619d849226870a47da20c2fbb/examples/layouts/flex/lv_example_flex_align.xml"
 <!--
  @title Flex align
  @brief Place items along the main and cross axes.
