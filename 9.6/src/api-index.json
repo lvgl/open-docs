@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-06-08T15:22:55.673Z",
-    "symbolCount": 8619
+    "generatedAt": "2026-06-08T17:10:20.614Z",
+    "symbolCount": 8621
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2404,6 +2404,16 @@
     "LV_DRAW_SW_CIRCLE_CACHE_SIZE": {
       "path": "api/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_SW_CIRCLE_CACHE_SIZE",
+      "kind": "macro"
+    },
+    "LV_NEMA_USE_CACHE": {
+      "path": "api/config/lv_conf_internal_h",
+      "anchor": "LV_NEMA_USE_CACHE",
+      "kind": "macro"
+    },
+    "LV_NEMA_CACHE_HAL_INCLUDE": {
+      "path": "api/config/lv_conf_internal_h",
+      "anchor": "LV_NEMA_CACHE_HAL_INCLUDE",
       "kind": "macro"
     },
     "LV_USE_NEMA_HAL": {
