@@ -266,8 +266,8 @@ EMSCRIPTEN_FORCE_COMPILERS:BOOL=ON
 // If disabled (default), UNIX ar archives (.a) are generated.
 EMSCRIPTEN_GENERATE_BITCODE_STATIC_LIBRARIES:BOOL=OFF
 
-//Directory for fetched dependencies
-FETCHCONTENT_BASE_DIR:PATH=/home/runner/work/lvgl/emscripten_builder/.deps
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=/home/runner/work/lvgl/emscripten_builder/cmbuild/_deps
 
 //Disables all attempts to download or update content and assumes
 // source dirs already exist

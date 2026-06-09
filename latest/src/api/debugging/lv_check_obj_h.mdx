@@ -9,53 +9,31 @@ api:
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_CHECK_OBJ_CLASS" file="api/debugging/lv_check_obj.h" line={48} url="https://github.com/lvgl/lvgl/tree/dc9e9dee5eebe7251dbe36b5e1731ad7a5166fe5/include/lvgl/debugging/lv_check_obj.h#L48">
+<ApiMember kind="macro" name="LV_CHECK_OBJ_CLASS" file="api/debugging/lv_check_obj.h" line={52} url="https://github.com/lvgl/lvgl/tree/a80a3f479d675c745e31f7ded72131a40195475d/include/lvgl/debugging/lv_check_obj.h#L52">
 
 ### LV_CHECK_OBJ_CLASS
 
 ```c
 #define LV_CHECK_OBJ_CLASS(obj, cls, action) \
-    LV_CHECK_ARG(obj != NULL, action); \
-            LV_CHECK_ARG(lv_obj_has_class(obj, cls), action);
+    LV_CHECK_ARG(obj != NULL, action);
 ```
-
-Check that `obj` is a descendant of the given class `cls`. Logs a warning and executes `action` if the check fails. Enabled when `LV_USE_CHECK_OBJ_CLASSTYPE = 1`; expands to a NULL check otherwise.
-
-<span className="sr-only">Parameters</span>
-
-| Name | Description |
-|------|-------------|
-| `obj` | Pointer to the object to check. |
-| `cls` | Pointer to the expected `lv_obj_class_t` (e.g. `&lv_label_class`). |
-| `action` | Statement to execute on failure (e.g. `return false`). |
 
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_CHECK_OBJ_VALID" file="api/debugging/lv_check_obj.h" line={64} url="https://github.com/lvgl/lvgl/tree/dc9e9dee5eebe7251dbe36b5e1731ad7a5166fe5/include/lvgl/debugging/lv_check_obj.h#L64">
+<ApiMember kind="macro" name="LV_CHECK_OBJ_VALID" file="api/debugging/lv_check_obj.h" line={68} url="https://github.com/lvgl/lvgl/tree/a80a3f479d675c745e31f7ded72131a40195475d/include/lvgl/debugging/lv_check_obj.h#L68">
 
 ### LV_CHECK_OBJ_VALID
 
 ```c
 #define LV_CHECK_OBJ_VALID(obj, cls, action) \
-    LV_CHECK_OBJ_CLASS(obj, cls, action); \
-          LV_CHECK_ARG(lv_obj_is_valid(obj), action);
+    LV_CHECK_OBJ_CLASS(obj, cls, action);
 ```
-
-Check that `obj` is a live, reachable widget (i.e. part of the widget tree). Logs a warning and executes `action` if the check fails. Enabled when `LV_USE_CHECK_OBJ_VALIDITY = 1`; expands to nothing otherwise.
-
-<span className="sr-only">Parameters</span>
-
-| Name | Description |
-|------|-------------|
-| `obj` | Pointer to the object to validate. Must not be NULL. |
-| `cls` |  |
-| `action` | Statement to execute on failure (e.g. `return false`). |
 
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_CHECK_OBJ" file="api/debugging/lv_check_obj.h" line={71} url="https://github.com/lvgl/lvgl/tree/dc9e9dee5eebe7251dbe36b5e1731ad7a5166fe5/include/lvgl/debugging/lv_check_obj.h#L71">
+<ApiMember kind="macro" name="LV_CHECK_OBJ" file="api/debugging/lv_check_obj.h" line={71} url="https://github.com/lvgl/lvgl/tree/a80a3f479d675c745e31f7ded72131a40195475d/include/lvgl/debugging/lv_check_obj.h#L71">
 
 ### LV_CHECK_OBJ
 
