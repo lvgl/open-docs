@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-06-09T12:27:35.342Z",
-    "symbolCount": 8621
+    "generatedAt": "2026-06-10T05:38:03.602Z",
+    "symbolCount": 8623
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -19879,6 +19879,16 @@
     "lv_evdev_set_calibration": {
       "path": "api/drivers/indev/lv_evdev_h",
       "anchor": "lv_evdev_set_calibration",
+      "kind": "function"
+    },
+    "lv_evdev_is_raw_key": {
+      "path": "api/drivers/indev/lv_evdev_h",
+      "anchor": "lv_evdev_is_raw_key",
+      "kind": "function"
+    },
+    "lv_evdev_get_raw_key": {
+      "path": "api/drivers/indev/lv_evdev_h",
+      "anchor": "lv_evdev_get_raw_key",
       "kind": "function"
     },
     "lv_evdev_delete": {
