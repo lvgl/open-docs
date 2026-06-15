@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-06-15T12:25:55.711Z",
-    "symbolCount": 8623
+    "generatedAt": "2026-06-15T16:00:42.922Z",
+    "symbolCount": 8624
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -10724,6 +10724,11 @@
     "LV_GRAD_CENTER": {
       "path": "api/core/lv_style_h",
       "anchor": "LV_GRAD_CENTER",
+      "kind": "macro"
+    },
+    "LV_STYLE_SENTINEL_OK": {
+      "path": "api/core/lv_style_h",
+      "anchor": "LV_STYLE_SENTINEL_OK",
       "kind": "macro"
     },
     "LV_ASSERT_STYLE": {
