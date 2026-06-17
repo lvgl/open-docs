@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-06-16T08:54:28.465Z",
-    "symbolCount": 8624
+    "generatedAt": "2026-06-17T04:50:02.601Z",
+    "symbolCount": 8625
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -6269,6 +6269,11 @@
     "lv_obj_init_draw_blur_dsc": {
       "path": "api/core/lv_obj_draw_h",
       "anchor": "lv_obj_init_draw_blur_dsc",
+      "kind": "function"
+    },
+    "lv_obj_set_ext_draw_size": {
+      "path": "api/core/lv_obj_draw_h",
+      "anchor": "lv_obj_set_ext_draw_size",
       "kind": "function"
     },
     "lv_obj_calculate_ext_draw_size": {
