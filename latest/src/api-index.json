@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-06-22T07:30:35.817Z",
-    "symbolCount": 8732
+    "generatedAt": "2026-06-22T07:38:04.131Z",
+    "symbolCount": 8736
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -24661,6 +24661,16 @@
       "anchor": "LV_LOG_WARN",
       "kind": "macro"
     },
+    "LV_LOG_WARN_ONCE": {
+      "path": "api/logging/lv_log_h",
+      "anchor": "LV_LOG_WARN_ONCE",
+      "kind": "macro"
+    },
+    "LV_LOG_DEPRECATED": {
+      "path": "api/logging/lv_log_h",
+      "anchor": "LV_LOG_DEPRECATED",
+      "kind": "macro"
+    },
     "LV_LOG_ERROR": {
       "path": "api/logging/lv_log_h",
       "anchor": "LV_LOG_ERROR",
@@ -25464,6 +25474,16 @@
     "LV_DEPRECATED": {
       "path": "api/lv_types_h",
       "anchor": "LV_DEPRECATED",
+      "kind": "macro"
+    },
+    "LV_DEPRECATIONS_IGNORE_BEGIN": {
+      "path": "api/lv_types_h",
+      "anchor": "LV_DEPRECATIONS_IGNORE_BEGIN",
+      "kind": "macro"
+    },
+    "LV_DEPRECATIONS_IGNORE_END": {
+      "path": "api/lv_types_h",
+      "anchor": "LV_DEPRECATIONS_IGNORE_END",
       "kind": "macro"
     },
     "LV_DEPRECATED_MACRO_WARN": {
