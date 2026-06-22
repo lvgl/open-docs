@@ -44,6 +44,7 @@ api:
 | `worker_thread` | `pthread_t` |  |
 | `libinput_context` | `struct libinput *` |  |
 | `libinput_device` | `struct libinput_device *` |  |
+| `xkb` | <ApiLink name="lv_xkb_t" /> |  |
 
 
 </ApiMember>
@@ -51,6 +52,6 @@ api:
 ## Dependencies
 
 <FileIncludes
-  includes={["lvgl_public.h"]}
+  includes={["lvgl_public.h", "lv_xkb_private.h"]}
   includedBy={["lvgl_private.h"]}
 />

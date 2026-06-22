@@ -1,6 +1,7 @@
 {
   "title": "Libinput",
   "pages": [
-    "lv_libinput_private_h"
+    "lv_libinput_private_h",
+    "lv_xkb_private_h"
   ]
 }

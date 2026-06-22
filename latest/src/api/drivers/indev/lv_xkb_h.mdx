@@ -1,0 +1,83 @@
+---
+title: lv_xkb.h
+description: API reference for lv_xkb.h
+api:
+  functions: [lv_xkb_init, lv_xkb_deinit, lv_xkb_process_key]
+---
+
+<RelatedHeaders name="lv_xkb_private.h" isPrivate={false} />
+
+<ApiSummary functions={3} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_xkb_init" file="api/drivers/indev/lv_xkb.h" line={37} url="https://github.com/lvgl/lvgl/tree/e97ca14b69d7821f709d8b9212c5e9ebf89dd116/include/lvgl/drivers/indev/lv_xkb.h#L37">
+
+### lv_xkb_init
+
+Initialise an XKB descriptor.
+
+```c
+bool lv_xkb_init(lv_xkb_t *dsc, struct xkb_rule_names names)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_xkb_t" display="lv_xkb_t *" /> |
+| `names` | `struct xkb_rule_names` |
+
+**Returns:** `bool` — true if the initialisation was successful
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_xkb_deinit" file="api/drivers/indev/lv_xkb.h" line={43} url="https://github.com/lvgl/lvgl/tree/e97ca14b69d7821f709d8b9212c5e9ebf89dd116/include/lvgl/drivers/indev/lv_xkb.h#L43">
+
+### lv_xkb_deinit
+
+De-initialise an XKB descriptor.
+
+```c
+void lv_xkb_deinit(lv_xkb_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_xkb_t" display="lv_xkb_t *" /> | Pointer to descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_xkb_process_key" file="api/drivers/indev/lv_xkb.h" line={52} url="https://github.com/lvgl/lvgl/tree/e97ca14b69d7821f709d8b9212c5e9ebf89dd116/include/lvgl/drivers/indev/lv_xkb.h#L52">
+
+### lv_xkb_process_key
+
+Process an evdev scancode using a specific XKB descriptor.
+
+```c
+uint32_t lv_xkb_process_key(lv_xkb_t *dsc, uint32_t scancode, bool down)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_xkb_t" display="lv_xkb_t *" /> |  |
+| `scancode` | `uint32_t` | evdev scancode to process |
+| `down` | `bool` | true if the key was pressed, false if it was releases |
+
+**Returns:** `uint32_t` — the (first) UTF-8 character produced by the event or 0 if no output was produced
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_types.h", "stdbool.h", "xkbcommon.h"]}
+  includedBy={["lv_libinput.h", "lvgl.h"]}
+/>

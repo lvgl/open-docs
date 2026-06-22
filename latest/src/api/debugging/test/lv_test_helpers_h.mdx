@@ -2,15 +2,32 @@
 title: lv_test_helpers.h
 description: API reference for lv_test_helpers.h
 api:
-  functions: [lv_test_wait, lv_test_fast_forward]
-  macros: [LV_HEAP_CHECK, lv_test_get_free_mem, LV_TEST_WIDTH_TO_STRIDE]
+  functions: [lv_test_wait, lv_test_fast_forward, lv_test_get_free_mem]
+  macros: [LV_HEAP_CHECK, LV_TEST_WIDTH_TO_STRIDE]
 ---
 
-<ApiSummary functions={2} macros={3} />
+<ApiSummary functions={3} macros={2} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_test_wait" file="api/debugging/test/lv_test_helpers.h" line={43} url="https://github.com/lvgl/lvgl/tree/11bb2fa1a9fd10046d3c2941aad286da05ebb757/include/lvgl/debugging/test/lv_test_helpers.h#L43">
+<ApiTabs items={["Getters (1)","Other (2)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_test_get_free_mem" file="api/debugging/test/lv_test_helpers.h" line={60} url="https://github.com/lvgl/lvgl/tree/e97ca14b69d7821f709d8b9212c5e9ebf89dd116/include/lvgl/debugging/test/lv_test_helpers.h#L60">
+
+### lv_test_get_free_mem
+
+```c
+static size_t lv_test_get_free_mem(void)
+```
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_test_wait" file="api/debugging/test/lv_test_helpers.h" line={43} url="https://github.com/lvgl/lvgl/tree/e97ca14b69d7821f709d8b9212c5e9ebf89dd116/include/lvgl/debugging/test/lv_test_helpers.h#L43">
 
 ### lv_test_wait
 
@@ -29,7 +46,7 @@ void lv_test_wait(uint32_t ms)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_test_fast_forward" file="api/debugging/test/lv_test_helpers.h" line={50} url="https://github.com/lvgl/lvgl/tree/11bb2fa1a9fd10046d3c2941aad286da05ebb757/include/lvgl/debugging/test/lv_test_helpers.h#L50">
+<ApiMember kind="function" name="lv_test_fast_forward" file="api/debugging/test/lv_test_helpers.h" line={50} url="https://github.com/lvgl/lvgl/tree/e97ca14b69d7821f709d8b9212c5e9ebf89dd116/include/lvgl/debugging/test/lv_test_helpers.h#L50">
 
 ### lv_test_fast_forward
 
@@ -48,33 +65,23 @@ void lv_test_fast_forward(uint32_t ms)
 
 </ApiMember>
 
+</ApiTab>
+</ApiTabs>
 ## Macros
 
-<ApiMember kind="macro" name="LV_HEAP_CHECK" file="api/debugging/test/lv_test_helpers.h" line={54} url="https://github.com/lvgl/lvgl/tree/11bb2fa1a9fd10046d3c2941aad286da05ebb757/include/lvgl/debugging/test/lv_test_helpers.h#L54">
+<ApiMember kind="macro" name="LV_HEAP_CHECK" file="api/debugging/test/lv_test_helpers.h" line={58} url="https://github.com/lvgl/lvgl/tree/e97ca14b69d7821f709d8b9212c5e9ebf89dd116/include/lvgl/debugging/test/lv_test_helpers.h#L58">
 
 ### LV_HEAP_CHECK
 
 ```c
 #define LV_HEAP_CHECK(x) \
-    do {} while(0)
+    x
 ```
 
 
 </ApiMember>
 
-<ApiMember kind="macro" name="lv_test_get_free_mem" file="api/debugging/test/lv_test_helpers.h" line={56} url="https://github.com/lvgl/lvgl/tree/11bb2fa1a9fd10046d3c2941aad286da05ebb757/include/lvgl/debugging/test/lv_test_helpers.h#L56">
-
-### lv_test_get_free_mem
-
-```c
-#define lv_test_get_free_mem() \
-    (65536)
-```
-
-
-</ApiMember>
-
-<ApiMember kind="macro" name="LV_TEST_WIDTH_TO_STRIDE" file="api/debugging/test/lv_test_helpers.h" line={72} url="https://github.com/lvgl/lvgl/tree/11bb2fa1a9fd10046d3c2941aad286da05ebb757/include/lvgl/debugging/test/lv_test_helpers.h#L72">
+<ApiMember kind="macro" name="LV_TEST_WIDTH_TO_STRIDE" file="api/debugging/test/lv_test_helpers.h" line={72} url="https://github.com/lvgl/lvgl/tree/e97ca14b69d7821f709d8b9212c5e9ebf89dd116/include/lvgl/debugging/test/lv_test_helpers.h#L72">
 
 ### LV_TEST_WIDTH_TO_STRIDE
 

@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-06-22T06:58:31.070Z",
-    "symbolCount": 8625
+    "generatedAt": "2026-06-22T07:30:35.817Z",
+    "symbolCount": 8732
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2281,6 +2281,21 @@
       "anchor": "LV_STDARG_INCLUDE",
       "kind": "macro"
     },
+    "LV_MEM_SIZE": {
+      "path": "api/config/lv_conf_internal_h",
+      "anchor": "LV_MEM_SIZE",
+      "kind": "macro"
+    },
+    "LV_MEM_POOL_EXPAND_SIZE": {
+      "path": "api/config/lv_conf_internal_h",
+      "anchor": "LV_MEM_POOL_EXPAND_SIZE",
+      "kind": "macro"
+    },
+    "LV_MEM_ADR": {
+      "path": "api/config/lv_conf_internal_h",
+      "anchor": "LV_MEM_ADR",
+      "kind": "macro"
+    },
     "LV_DEF_REFR_PERIOD": {
       "path": "api/config/lv_conf_internal_h",
       "anchor": "LV_DEF_REFR_PERIOD",
@@ -3451,9 +3466,9 @@
       "anchor": "LV_LIBINPUT_BSD",
       "kind": "macro"
     },
-    "LV_LIBINPUT_XKB": {
+    "LV_LIBINPUT_XKB_KEY_MAP": {
       "path": "api/config/lv_conf_internal_h",
-      "anchor": "LV_LIBINPUT_XKB",
+      "anchor": "LV_LIBINPUT_XKB_KEY_MAP",
       "kind": "macro"
     },
     "LV_ST_LTDC_USE_DMA2D_FLUSH": {
@@ -12786,14 +12801,14 @@
       "anchor": "lv_test_fast_forward",
       "kind": "function"
     },
-    "LV_HEAP_CHECK": {
-      "path": "api/debugging/test/lv_test_helpers_h",
-      "anchor": "LV_HEAP_CHECK",
-      "kind": "macro"
-    },
     "lv_test_get_free_mem": {
       "path": "api/debugging/test/lv_test_helpers_h",
       "anchor": "lv_test_get_free_mem",
+      "kind": "function"
+    },
+    "LV_HEAP_CHECK": {
+      "path": "api/debugging/test/lv_test_helpers_h",
+      "anchor": "LV_HEAP_CHECK",
       "kind": "macro"
     },
     "LV_TEST_WIDTH_TO_STRIDE": {
@@ -19990,6 +20005,26 @@
       "path": "api/drivers/indev/lv_libinput_h",
       "anchor": "LV_LIBINPUT_MAX_EVENTS",
       "kind": "macro"
+    },
+    "lv_xkb.h": {
+      "path": "api/drivers/indev/lv_xkb_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_xkb_init": {
+      "path": "api/drivers/indev/lv_xkb_h",
+      "anchor": "lv_xkb_init",
+      "kind": "function"
+    },
+    "lv_xkb_deinit": {
+      "path": "api/drivers/indev/lv_xkb_h",
+      "anchor": "lv_xkb_deinit",
+      "kind": "function"
+    },
+    "lv_xkb_process_key": {
+      "path": "api/drivers/indev/lv_xkb_h",
+      "anchor": "lv_xkb_process_key",
+      "kind": "function"
     },
     "lv_nuttx_entry.h": {
       "path": "api/drivers/nuttx/lv_nuttx_entry_h",
@@ -39236,6 +39271,16 @@
       "anchor": "_lv_libinput_t",
       "kind": "struct"
     },
+    "lv_xkb_private.h": {
+      "path": "api-private/drivers/libinput/lv_xkb_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "_lv_xkb_t": {
+      "path": "api-private/drivers/libinput/lv_xkb_private_h",
+      "anchor": "_lv_xkb_t",
+      "kind": "struct"
+    },
     "lv_nuttx_cache.h": {
       "path": "api-private/drivers/nuttx/lv_nuttx_cache_h",
       "anchor": "",
@@ -40641,6 +40686,346 @@
       "anchor": "",
       "kind": "header"
     },
+    "lv_gltf_data_get_texture": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_texture",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_bounds_min": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_bounds_min",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_bounds_max": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_bounds_max",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_center": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_center",
+      "kind": "function"
+    },
+    "lv_gltf_get_filename": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_get_filename",
+      "kind": "function"
+    },
+    "lv_gltf_data_centerpoint_cache_contains": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_centerpoint_cache_contains",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_primitive_from_mesh": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_primitive_from_mesh",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_asset": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_asset",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_mesh": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_mesh",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_skin_texture_at": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_skin_texture_at",
+      "kind": "function"
+    },
+    "lv_gltf_data_validated_skins_contains": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_validated_skins_contains",
+      "kind": "function"
+    },
+    "lv_gltf_data_validate_skin": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_validate_skin",
+      "kind": "function"
+    },
+    "lv_gltf_data_add_opaque_node_primitive": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_add_opaque_node_primitive",
+      "kind": "function"
+    },
+    "lv_gltf_data_add_blended_node_primitive": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_add_blended_node_primitive",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_skins_size": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_skins_size",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_skin": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_skin",
+      "kind": "function"
+    },
+    "lv_gltf_data_injest_discover_defines": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_injest_discover_defines",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_centerpoint": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_centerpoint",
+      "kind": "function"
+    },
+    "lv_gltf_get_new_meshdata": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_get_new_meshdata",
+      "kind": "function"
+    },
+    "lv_gltf_data_create_internal": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_create_internal",
+      "kind": "function"
+    },
+    "lv_gltf_data_load_internal": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_load_internal",
+      "kind": "function"
+    },
+    "lv_gltf_get_primitive_centerpoint": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_get_primitive_centerpoint",
+      "kind": "function"
+    },
+    "get_cached_centerpoint": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "get_cached_centerpoint",
+      "kind": "function"
+    },
+    "lv_gltf_data_delete_textures": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_delete_textures",
+      "kind": "function"
+    },
+    "lv_gltf_data_create_texture": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_create_texture",
+      "kind": "function"
+    },
+    "lv_gltf_model_node_init": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_model_node_init",
+      "kind": "function"
+    },
+    "lv_gltf_model_node_deinit": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_model_node_deinit",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_texture_pixels": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_texture_pixels",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_animation_total_time": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_animation_total_time",
+      "kind": "function"
+    },
+    "lv_gltf_data_animation_get_channel_set": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_animation_get_channel_set",
+      "kind": "function"
+    },
+    "lv_gltf_data_animation_matrix_apply": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_animation_matrix_apply",
+      "kind": "function"
+    },
+    "lv_gltf_model_node_get_by_internal_node": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_model_node_get_by_internal_node",
+      "kind": "function"
+    },
+    "lv_gltf_model_send_new_values": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_model_send_new_values",
+      "kind": "function"
+    },
+    "lv_gltf_model_set_transforms": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_model_set_transforms",
+      "kind": "function"
+    },
+    "lv_gltf_model_clear_transforms": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_model_clear_transforms",
+      "kind": "function"
+    },
+    "lv_gltf_data_get_node_transform": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_get_node_transform",
+      "kind": "function"
+    },
+    "lv_gltf_model_has_node_transform": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_model_has_node_transform",
+      "kind": "function"
+    },
+    "lv_gltf_model_needs_transforms": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_model_needs_transforms",
+      "kind": "function"
+    },
+    "lv_gltf_node_prop_t": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_node_prop_t",
+      "kind": "enum"
+    },
+    "LV_GLTF_NODE_PROP_POSITION": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_node_prop_t",
+      "kind": "enumvalue"
+    },
+    "LV_GLTF_NODE_PROP_ROTATION": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_node_prop_t",
+      "kind": "enumvalue"
+    },
+    "LV_GLTF_NODE_PROP_SCALE": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_node_prop_t",
+      "kind": "enumvalue"
+    },
+    "lv_gltf_model_node_data_t": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_model_node_data_t",
+      "kind": "struct"
+    },
+    "lv_gltf_write_op_t": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_write_op_t",
+      "kind": "struct"
+    },
+    "lv_gltf_mesh_data_t": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_mesh_data_t",
+      "kind": "struct"
+    },
+    "lv_gltf_model_node_attr_t": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_model_node_attr_t",
+      "kind": "struct"
+    },
+    "_lv_gltf_model_node_t": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "_lv_gltf_model_node_t",
+      "kind": "struct"
+    },
+    "_lv_gltf_model_t": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "_lv_gltf_model_t",
+      "kind": "struct"
+    },
+    "UintVector": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "UintVector",
+      "kind": "typedef"
+    },
+    "IntVector": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "IntVector",
+      "kind": "typedef"
+    },
+    "LongVector": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "LongVector",
+      "kind": "typedef"
+    },
+    "NodePtr": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "NodePtr",
+      "kind": "typedef"
+    },
+    "Transform": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "Transform",
+      "kind": "typedef"
+    },
+    "NodeIndexPair": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "NodeIndexPair",
+      "kind": "typedef"
+    },
+    "NodeIndexDistancePair": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "NodeIndexDistancePair",
+      "kind": "typedef"
+    },
+    "NodePairVector": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "NodePairVector",
+      "kind": "typedef"
+    },
+    "NodeDistanceVector": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "NodeDistanceVector",
+      "kind": "typedef"
+    },
+    "MaterialIndexMap": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "MaterialIndexMap",
+      "kind": "typedef"
+    },
+    "StringNodeMap": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "StringNodeMap",
+      "kind": "typedef"
+    },
+    "NodeIntMap": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "NodeIntMap",
+      "kind": "typedef"
+    },
+    "NodeVector": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "NodeVector",
+      "kind": "typedef"
+    },
+    "NodePrimCenterMap": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "NodePrimCenterMap",
+      "kind": "typedef"
+    },
+    "NodeTransformMap": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "NodeTransformMap",
+      "kind": "typedef"
+    },
+    "IbmBySkinThenNodeMap": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "IbmBySkinThenNodeMap",
+      "kind": "typedef"
+    },
+    "LV_GLTF_NODE_CHANNEL_X": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "LV_GLTF_NODE_CHANNEL_X",
+      "kind": "macro"
+    },
+    "LV_GLTF_NODE_CHANNEL_Y": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "LV_GLTF_NODE_CHANNEL_Y",
+      "kind": "macro"
+    },
+    "LV_GLTF_NODE_CHANNEL_Z": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "LV_GLTF_NODE_CHANNEL_Z",
+      "kind": "macro"
+    },
+    "LV_GLTF_NODE_CHANNEL_W": {
+      "path": "api-private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "LV_GLTF_NODE_CHANNEL_W",
+      "kind": "macro"
+    },
     "lv_gltf_environment_private.h": {
       "path": "api-private/libs/gltf/gltf_environment/lv_gltf_environment_private_h",
       "anchor": "",
@@ -40696,6 +41081,16 @@
       "anchor": "",
       "kind": "header"
     },
+    "lv_gltf_view_render": {
+      "path": "api-private/libs/gltf/gltf_view/lv_gltf_view_internal_h",
+      "anchor": "lv_gltf_view_render",
+      "kind": "function"
+    },
+    "lv_gltf_view_shader_injest_discover_defines": {
+      "path": "api-private/libs/gltf/gltf_view/lv_gltf_view_internal_h",
+      "anchor": "lv_gltf_view_shader_injest_discover_defines",
+      "kind": "function"
+    },
     "lv_gltf_renwin_state_t": {
       "path": "api-private/libs/gltf/gltf_view/lv_gltf_view_internal_h",
       "anchor": "lv_gltf_renwin_state_t",
@@ -40714,6 +41109,16 @@
     "lv_opengl_state_t": {
       "path": "api-private/libs/gltf/gltf_view/lv_gltf_view_internal_h",
       "anchor": "lv_opengl_state_t",
+      "kind": "struct"
+    },
+    "lv_gltf_model_data_t": {
+      "path": "api-private/libs/gltf/gltf_view/lv_gltf_view_internal_h",
+      "anchor": "lv_gltf_model_data_t",
+      "kind": "struct"
+    },
+    "_lv_gltf_t": {
+      "path": "api-private/libs/gltf/gltf_view/lv_gltf_view_internal_h",
+      "anchor": "_lv_gltf_t",
       "kind": "struct"
     },
     "LV_GLTF_GAMMA_BRIGHTEST": {
@@ -42554,6 +42959,136 @@
     "_lv_translation_pack_t": {
       "path": "api-private/others/translation/lv_translation_private_h",
       "anchor": "_lv_translation_pack_t",
+      "kind": "struct"
+    },
+    "lv_tlsf.h": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_tlsf_create": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_create",
+      "kind": "function"
+    },
+    "lv_tlsf_create_with_pool": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_create_with_pool",
+      "kind": "function"
+    },
+    "lv_tlsf_destroy": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_destroy",
+      "kind": "function"
+    },
+    "lv_tlsf_get_pool": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_get_pool",
+      "kind": "function"
+    },
+    "lv_tlsf_add_pool": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_add_pool",
+      "kind": "function"
+    },
+    "lv_tlsf_remove_pool": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_remove_pool",
+      "kind": "function"
+    },
+    "lv_tlsf_malloc": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_malloc",
+      "kind": "function"
+    },
+    "lv_tlsf_memalign": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_memalign",
+      "kind": "function"
+    },
+    "lv_tlsf_realloc": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_realloc",
+      "kind": "function"
+    },
+    "lv_tlsf_free": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_free",
+      "kind": "function"
+    },
+    "lv_tlsf_block_size": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_block_size",
+      "kind": "function"
+    },
+    "lv_tlsf_size": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_size",
+      "kind": "function"
+    },
+    "lv_tlsf_align_size": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_align_size",
+      "kind": "function"
+    },
+    "lv_tlsf_block_size_min": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_block_size_min",
+      "kind": "function"
+    },
+    "lv_tlsf_block_size_max": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_block_size_max",
+      "kind": "function"
+    },
+    "lv_tlsf_pool_overhead": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_pool_overhead",
+      "kind": "function"
+    },
+    "lv_tlsf_alloc_overhead": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_alloc_overhead",
+      "kind": "function"
+    },
+    "lv_tlsf_walk_pool": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_walk_pool",
+      "kind": "function"
+    },
+    "lv_tlsf_check": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_check",
+      "kind": "function"
+    },
+    "lv_tlsf_check_pool": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_check_pool",
+      "kind": "function"
+    },
+    "lv_tlsf_t": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_t",
+      "kind": "typedef"
+    },
+    "lv_pool_t": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_pool_t",
+      "kind": "typedef"
+    },
+    "lv_tlsf_walker": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_h",
+      "anchor": "lv_tlsf_walker",
+      "kind": "typedef"
+    },
+    "lv_tlsf_private.h": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_tlsf_state_t": {
+      "path": "api-private/stdlib/builtin/lv_tlsf_private_h",
+      "anchor": "lv_tlsf_state_t",
       "kind": "struct"
     },
     "lv_theme_private.h": {
