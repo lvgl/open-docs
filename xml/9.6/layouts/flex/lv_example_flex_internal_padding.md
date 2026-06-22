@@ -1,4 +1,4 @@
-```xml title="examples/layouts/flex/lv_example_flex_internal_padding.xml" source="https://github.com/lvgl/lvgl/blob/e4673fb1214b50615184e832a0ed9865f23f2155/examples/layouts/flex/lv_example_flex_internal_padding.xml"
+```xml title="examples/layouts/flex/lv_example_flex_internal_padding.xml" source="https://github.com/lvgl/lvgl/blob/97a99a8affe966617f048830a007bbf8bea63da6/examples/layouts/flex/lv_example_flex_internal_padding.xml"
 <!--
  @title Flex internal padding
  @brief Set horizontal and vertical gaps between flex items.
