@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-06-22T15:23:26.633Z",
-    "symbolCount": 8736
+    "generatedAt": "2026-06-24T09:14:47.028Z",
+    "symbolCount": 8738
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -3124,6 +3124,16 @@
     "LV_GIF_CACHE_DECODE_DATA": {
       "path": "api/config/lv_conf_internal_h",
       "anchor": "LV_GIF_CACHE_DECODE_DATA",
+      "kind": "macro"
+    },
+    "LV_GIF_MAX_WIDTH": {
+      "path": "api/config/lv_conf_internal_h",
+      "anchor": "LV_GIF_MAX_WIDTH",
+      "kind": "macro"
+    },
+    "LV_GIF_MAX_HEIGHT": {
+      "path": "api/config/lv_conf_internal_h",
+      "anchor": "LV_GIF_MAX_HEIGHT",
       "kind": "macro"
     },
     "LV_BIN_DECODER_RAM_LOAD": {
