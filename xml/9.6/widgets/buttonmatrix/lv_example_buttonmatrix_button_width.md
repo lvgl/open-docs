@@ -1,4 +1,4 @@
-```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_button_width.xml" source="https://github.com/lvgl/lvgl/blob/de0c90d05dfe6a81741e8a81c6a8d1c6df45f895/examples/widgets/buttonmatrix/lv_example_buttonmatrix_button_width.xml"
+```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_button_width.xml" source="https://github.com/lvgl/lvgl/blob/782aa617128866e36d41de5a5a6256c87a010ba2/examples/widgets/buttonmatrix/lv_example_buttonmatrix_button_width.xml"
 <!--
  @title Button matrix button widths
  @brief Set per-button relative widths through `ctrl_map`.
