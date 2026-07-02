@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-07-02T07:18:41.900Z",
-    "symbolCount": 8738
+    "generatedAt": "2026-07-02T08:47:43.677Z",
+    "symbolCount": 8813
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -5441,6 +5441,136 @@
       "anchor": "lv_obj_set_flag",
       "kind": "function"
     },
+    "lv_obj_set_hidden": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_hidden",
+      "kind": "function"
+    },
+    "lv_obj_set_clickable": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_clickable",
+      "kind": "function"
+    },
+    "lv_obj_set_click_focusable": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_click_focusable",
+      "kind": "function"
+    },
+    "lv_obj_set_checkable": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_checkable",
+      "kind": "function"
+    },
+    "lv_obj_set_scrollable": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_scrollable",
+      "kind": "function"
+    },
+    "lv_obj_set_scroll_elastic": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_scroll_elastic",
+      "kind": "function"
+    },
+    "lv_obj_set_scroll_momentum": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_scroll_momentum",
+      "kind": "function"
+    },
+    "lv_obj_set_scroll_one": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_scroll_one",
+      "kind": "function"
+    },
+    "lv_obj_set_scroll_chain": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_scroll_chain",
+      "kind": "function"
+    },
+    "lv_obj_set_scroll_chain_hor": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_scroll_chain_hor",
+      "kind": "function"
+    },
+    "lv_obj_set_scroll_chain_ver": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_scroll_chain_ver",
+      "kind": "function"
+    },
+    "lv_obj_set_scroll_on_focus": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_scroll_on_focus",
+      "kind": "function"
+    },
+    "lv_obj_set_scroll_with_arrow": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_scroll_with_arrow",
+      "kind": "function"
+    },
+    "lv_obj_set_snappable": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_snappable",
+      "kind": "function"
+    },
+    "lv_obj_set_press_lock": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_press_lock",
+      "kind": "function"
+    },
+    "lv_obj_set_event_bubble": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_event_bubble",
+      "kind": "function"
+    },
+    "lv_obj_set_gesture_bubble": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_gesture_bubble",
+      "kind": "function"
+    },
+    "lv_obj_set_adv_hittest": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_adv_hittest",
+      "kind": "function"
+    },
+    "lv_obj_set_ignore_layout": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_ignore_layout",
+      "kind": "function"
+    },
+    "lv_obj_set_floating": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_floating",
+      "kind": "function"
+    },
+    "lv_obj_set_send_draw_task_events": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_send_draw_task_events",
+      "kind": "function"
+    },
+    "lv_obj_set_overflow_visible": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_overflow_visible",
+      "kind": "function"
+    },
+    "lv_obj_set_event_trickle": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_event_trickle",
+      "kind": "function"
+    },
+    "lv_obj_set_state_trickle": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_state_trickle",
+      "kind": "function"
+    },
+    "lv_obj_set_radio_button": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_radio_button",
+      "kind": "function"
+    },
+    "lv_obj_set_flex_in_new_track": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_set_flex_in_new_track",
+      "kind": "function"
+    },
     "lv_obj_add_state": {
       "path": "api/core/lv_obj_h",
       "anchor": "lv_obj_add_state",
@@ -5461,9 +5591,9 @@
       "anchor": "lv_obj_set_user_data",
       "kind": "function"
     },
-    "lv_obj_set_radio_button": {
+    "lv_obj_set_user_flag": {
       "path": "api/core/lv_obj_h",
-      "anchor": "lv_obj_set_radio_button",
+      "anchor": "lv_obj_set_user_flag",
       "kind": "function"
     },
     "lv_obj_has_flag": {
@@ -5476,6 +5606,131 @@
       "anchor": "lv_obj_has_flag_any",
       "kind": "function"
     },
+    "lv_obj_is_hidden": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_hidden",
+      "kind": "function"
+    },
+    "lv_obj_is_clickable": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_clickable",
+      "kind": "function"
+    },
+    "lv_obj_is_click_focusable": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_click_focusable",
+      "kind": "function"
+    },
+    "lv_obj_is_checkable": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_checkable",
+      "kind": "function"
+    },
+    "lv_obj_is_scrollable": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_scrollable",
+      "kind": "function"
+    },
+    "lv_obj_is_scroll_elastic": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_scroll_elastic",
+      "kind": "function"
+    },
+    "lv_obj_is_scroll_momentum": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_scroll_momentum",
+      "kind": "function"
+    },
+    "lv_obj_is_scroll_one": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_scroll_one",
+      "kind": "function"
+    },
+    "lv_obj_is_scroll_chain_hor": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_scroll_chain_hor",
+      "kind": "function"
+    },
+    "lv_obj_is_scroll_chain_ver": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_scroll_chain_ver",
+      "kind": "function"
+    },
+    "lv_obj_is_scroll_on_focus": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_scroll_on_focus",
+      "kind": "function"
+    },
+    "lv_obj_is_scroll_with_arrow": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_scroll_with_arrow",
+      "kind": "function"
+    },
+    "lv_obj_is_snappable": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_snappable",
+      "kind": "function"
+    },
+    "lv_obj_is_press_lock": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_press_lock",
+      "kind": "function"
+    },
+    "lv_obj_is_event_bubble": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_event_bubble",
+      "kind": "function"
+    },
+    "lv_obj_is_gesture_bubble": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_gesture_bubble",
+      "kind": "function"
+    },
+    "lv_obj_is_adv_hittest": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_adv_hittest",
+      "kind": "function"
+    },
+    "lv_obj_is_ignore_layout": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_ignore_layout",
+      "kind": "function"
+    },
+    "lv_obj_is_floating": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_floating",
+      "kind": "function"
+    },
+    "lv_obj_is_send_draw_task_events": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_send_draw_task_events",
+      "kind": "function"
+    },
+    "lv_obj_is_overflow_visible": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_overflow_visible",
+      "kind": "function"
+    },
+    "lv_obj_is_event_trickle": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_event_trickle",
+      "kind": "function"
+    },
+    "lv_obj_is_state_trickle": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_state_trickle",
+      "kind": "function"
+    },
+    "lv_obj_is_radio_button": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_radio_button",
+      "kind": "function"
+    },
+    "lv_obj_is_flex_in_new_track": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_is_flex_in_new_track",
+      "kind": "function"
+    },
     "lv_obj_get_state": {
       "path": "api/core/lv_obj_h",
       "anchor": "lv_obj_get_state",
@@ -5486,11 +5741,6 @@
       "anchor": "lv_obj_has_state",
       "kind": "function"
     },
-    "lv_obj_is_radio_button": {
-      "path": "api/core/lv_obj_h",
-      "anchor": "lv_obj_is_radio_button",
-      "kind": "function"
-    },
     "lv_obj_get_group": {
       "path": "api/core/lv_obj_h",
       "anchor": "lv_obj_get_group",
@@ -5499,6 +5749,11 @@
     "lv_obj_get_user_data": {
       "path": "api/core/lv_obj_h",
       "anchor": "lv_obj_get_user_data",
+      "kind": "function"
+    },
+    "lv_obj_get_user_flag": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "lv_obj_get_user_flag",
       "kind": "function"
     },
     "lv_obj_check_type": {
@@ -6142,6 +6397,126 @@
       "kind": "enumvalue"
     },
     "LV_PROPERTY_OBJ_INDEX": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_HIDDEN": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_CLICKABLE": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_CLICK_FOCUSABLE": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_CHECKABLE": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_SCROLLABLE": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_SCROLL_ELASTIC": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_SCROLL_MOMENTUM": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_SCROLL_ONE": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_SCROLL_CHAIN_HOR": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_SCROLL_CHAIN_VER": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_SCROLL_ON_FOCUS": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_SCROLL_WITH_ARROW": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_SNAPPABLE": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_PRESS_LOCK": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_EVENT_BUBBLE": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_GESTURE_BUBBLE": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_ADV_HITTEST": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_IGNORE_LAYOUT": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_FLOATING": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_SEND_DRAW_TASK_EVENTS": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_OVERFLOW_VISIBLE": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_EVENT_TRICKLE": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_STATE_TRICKLE": {
+      "path": "api/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_FLEX_IN_NEW_TRACK": {
       "path": "api/core/lv_obj_h",
       "anchor": "_lv_signed_prop_id_t",
       "kind": "enumvalue"

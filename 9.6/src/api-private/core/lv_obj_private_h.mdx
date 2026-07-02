@@ -13,7 +13,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_obj_allocate_spec_attr" file="api-private/core/lv_obj_private.h" line={102} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/src/core/lv_obj_private.h#L102">
+<ApiMember kind="function" name="lv_obj_allocate_spec_attr" file="api-private/core/lv_obj_private.h" line={172} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/src/core/lv_obj_private.h#L172">
 
 ### lv_obj_allocate_spec_attr
 
@@ -34,7 +34,7 @@ lv_obj_spec_attr_t * lv_obj_allocate_spec_attr(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_child" file="api-private/core/lv_obj_private.h" line={104} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/src/core/lv_obj_private.h#L104">
+<ApiMember kind="function" name="lv_obj_add_child" file="api-private/core/lv_obj_private.h" line={174} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/src/core/lv_obj_private.h#L174">
 
 ### lv_obj_add_child
 
@@ -52,7 +52,7 @@ lv_result_t lv_obj_add_child(lv_obj_t *parent, lv_obj_t *child)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_child" file="api-private/core/lv_obj_private.h" line={105} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/src/core/lv_obj_private.h#L105">
+<ApiMember kind="function" name="lv_obj_remove_child" file="api-private/core/lv_obj_private.h" line={175} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/src/core/lv_obj_private.h#L175">
 
 ### lv_obj_remove_child
 
@@ -94,6 +94,7 @@ Special, rarely used attributes. They are allocated automatically if any element
 | `scroll_dir` | `uint16_t` | The allowed scroll direction(s), see `lv_dir_t` |
 | `layer_type` | `uint16_t` | Cache the layer type here. Element of lv_intermediate_layer_type_t |
 | `name_static` | `uint16_t` | 1: `name` was not dynamically allocated |
+| `user_flags` | `uint16_t` | Store custom flags |
 
 
 </ApiMember>
@@ -112,7 +113,30 @@ Special, rarely used attributes. They are allocated automatically if any element
 | `user_data` | `void *` |  |
 | `id` | `void *` |  |
 | `coords` | <ApiLink name="lv_area_t" /> |  |
-| `flags` | <ApiLink name="lv_obj_flag_t" /> |  |
+| `hidden` | `uint32_t` | Make the object hidden. (Like it wasn't there at all) |
+| `clickable` | `uint32_t` | Make the object clickable by the input devices |
+| `click_focusable` | `uint32_t` | Add focused state to the object when clicked |
+| `checkable` | `uint32_t` | Toggle checked state when the object is clicked |
+| `scrollable` | `uint32_t` | Make the object scrollable |
+| `scroll_elastic` | `uint32_t` | Allow scrolling inside but with slower speed |
+| `scroll_momentum` | `uint32_t` | Make the object scroll further when "thrown" |
+| `scroll_one` | `uint32_t` | Allow scrolling only one snappable child |
+| `scroll_chain_hor` | `uint32_t` | Allow propagating the horizontal scroll to a parent |
+| `scroll_chain_ver` | `uint32_t` | Allow propagating the vertical scroll to a parent |
+| `scroll_on_focus` | `uint32_t` | Automatically scroll object to make it visible when focused |
+| `scroll_with_arrow` | `uint32_t` | Allow scrolling the focused object with arrow keys |
+| `snappable` | `uint32_t` | If scroll snap is enabled on the parent it can snap to this object |
+| `press_lock` | `uint32_t` | Keep the object pressed even if the press slid from the object |
+| `event_bubble` | `uint32_t` | Propagate the events to the parent too |
+| `gesture_bubble` | `uint32_t` | Propagate the gestures to the parent |
+| `adv_hittest` | `uint32_t` | Allow performing more accurate hit (click) test |
+| `ignore_layout` | `uint32_t` | Make the object not positioned by the layouts |
+| `floating` | `uint32_t` | Do not scroll the object when the parent scrolls and ignore layout |
+| `send_draw_task_events` | `uint32_t` | Send LV_EVENT_DRAW_TASK_ADDED events |
+| `overflow_visible` | `uint32_t` | Do not clip the children to the parent's ext draw size |
+| `event_trickle` | `uint32_t` | Propagate the events to the children too |
+| `state_trickle` | `uint32_t` | Propagate the states to the children too |
+| `radio_button` | `uint32_t` | Allow only one RADIO_BUTTON sibling to be checked |
 | `state` | `uint16_t` |  |
 | `layout_inv` | `uint16_t` |  |
 | `readjust_scroll_after_layout` | `uint16_t` |  |
@@ -124,7 +148,6 @@ Special, rarely used attributes. They are allocated automatically if any element
 | `h_ignore_size` | `uint16_t` |  |
 | `w_ignore_size` | `uint16_t` |  |
 | `is_deleting` | `uint16_t` |  |
-| `radio_button` | `uint16_t` | Allow only one RADIO_BUTTON sibling to be checked |
 | `rendered` | `uint16_t` | The widget is rendered at least once already. It's used to skip initial animations and transitions. |
 
 
@@ -138,7 +161,7 @@ Special, rarely used attributes. They are allocated automatically if any element
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_obj_spec_attr_t" file="api-private/core/lv_obj_private.h" line={53} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/src/core/lv_obj_private.h#L53">
+<ApiMember kind="typedef" name="lv_obj_spec_attr_t" file="api-private/core/lv_obj_private.h" line={54} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/src/core/lv_obj_private.h#L54">
 
 ### lv_obj_spec_attr_t
 

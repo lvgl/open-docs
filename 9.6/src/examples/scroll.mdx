@@ -95,9 +95,10 @@ used here, only content that exceeds the bounds.
 
 These four flags change how a Widget reacts to scrolling but only show
 their effect through interaction, so one example covers them together.
-A scrollable list sits above four switches; each switch adds or removes
-its flag on the list with `lv_obj_set_flag`, so the change can be felt
-immediately by dragging the list.
+A scrollable list sits above four switches; each switch toggles the
+corresponding behaviour on the list with its dedicated setter (e.g.
+`lv_obj_set_scrollable`), so the change can be felt immediately by dragging
+the list.
 
 <LvglExample name="lv_example_scroll_properties" path="scroll/lv_example_scroll_properties" />
 

@@ -2,7 +2,7 @@
 title: lv_obj.h
 description: API reference for lv_obj.h
 api:
-  functions: [lv_obj_create, lv_obj_add_flag, lv_obj_remove_flag, lv_obj_set_flag, lv_obj_add_state, lv_obj_remove_state, lv_obj_set_state, lv_obj_set_user_data, lv_obj_set_radio_button, lv_obj_has_flag, lv_obj_has_flag_any, lv_obj_get_state, lv_obj_has_state, lv_obj_is_radio_button, lv_obj_get_group, lv_obj_get_user_data, lv_obj_check_type, lv_obj_has_class, lv_obj_get_class, lv_obj_is_valid, lv_obj_null_on_delete, lv_obj_add_delete_cb, lv_obj_remove_delete_cb, lv_obj_add_screen_load_event, lv_obj_add_screen_create_event, lv_obj_add_play_timeline_event, lv_obj_set_id, lv_obj_get_id, lv_obj_find_by_id, lv_obj_assign_id, lv_obj_free_id, lv_obj_id_compare, lv_obj_stringify_id, lv_objid_builtin_destroy]
+  functions: [lv_obj_create, lv_obj_add_flag, lv_obj_remove_flag, lv_obj_set_flag, lv_obj_set_hidden, lv_obj_set_clickable, lv_obj_set_click_focusable, lv_obj_set_checkable, lv_obj_set_scrollable, lv_obj_set_scroll_elastic, lv_obj_set_scroll_momentum, lv_obj_set_scroll_one, lv_obj_set_scroll_chain, lv_obj_set_scroll_chain_hor, lv_obj_set_scroll_chain_ver, lv_obj_set_scroll_on_focus, lv_obj_set_scroll_with_arrow, lv_obj_set_snappable, lv_obj_set_press_lock, lv_obj_set_event_bubble, lv_obj_set_gesture_bubble, lv_obj_set_adv_hittest, lv_obj_set_ignore_layout, lv_obj_set_floating, lv_obj_set_send_draw_task_events, lv_obj_set_overflow_visible, lv_obj_set_event_trickle, lv_obj_set_state_trickle, lv_obj_set_radio_button, lv_obj_set_flex_in_new_track, lv_obj_add_state, lv_obj_remove_state, lv_obj_set_state, lv_obj_set_user_data, lv_obj_set_user_flag, lv_obj_has_flag, lv_obj_has_flag_any, lv_obj_is_hidden, lv_obj_is_clickable, lv_obj_is_click_focusable, lv_obj_is_checkable, lv_obj_is_scrollable, lv_obj_is_scroll_elastic, lv_obj_is_scroll_momentum, lv_obj_is_scroll_one, lv_obj_is_scroll_chain_hor, lv_obj_is_scroll_chain_ver, lv_obj_is_scroll_on_focus, lv_obj_is_scroll_with_arrow, lv_obj_is_snappable, lv_obj_is_press_lock, lv_obj_is_event_bubble, lv_obj_is_gesture_bubble, lv_obj_is_adv_hittest, lv_obj_is_ignore_layout, lv_obj_is_floating, lv_obj_is_send_draw_task_events, lv_obj_is_overflow_visible, lv_obj_is_event_trickle, lv_obj_is_state_trickle, lv_obj_is_radio_button, lv_obj_is_flex_in_new_track, lv_obj_get_state, lv_obj_has_state, lv_obj_get_group, lv_obj_get_user_data, lv_obj_get_user_flag, lv_obj_check_type, lv_obj_has_class, lv_obj_get_class, lv_obj_is_valid, lv_obj_null_on_delete, lv_obj_add_delete_cb, lv_obj_remove_delete_cb, lv_obj_add_screen_load_event, lv_obj_add_screen_create_event, lv_obj_add_play_timeline_event, lv_obj_set_id, lv_obj_get_id, lv_obj_find_by_id, lv_obj_assign_id, lv_obj_free_id, lv_obj_id_compare, lv_obj_stringify_id, lv_objid_builtin_destroy]
   enums: [lv_obj_flag_t, _lv_signed_prop_id_t]
   typedefs: [lv_delete_cb_t]
   macros: [LV_ASSERT_OBJ, LV_TRACE_OBJ_CREATE]
@@ -11,18 +11,20 @@ api:
 
 <RelatedHeaders name="lv_obj_private.h" isPrivate={false} />
 
-<ApiSummary functions={34} enums={2} typedefs={1} macros={2} variables={1} />
+<ApiSummary functions={85} enums={2} typedefs={1} macros={2} variables={1} />
 
 ## Functions
 
-<ApiTabs items={["Setters (5)","Getters (5)","Other (24)"]}>
-<ApiTab value="Setters (5)">
+<ApiTabs items={["Setters (31)","Getters (6)","Other (48)"]}>
+<ApiTab value="Setters (31)">
 
-<ApiMember kind="function" name="lv_obj_set_flag" file="api/core/lv_obj.h" line={220} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L220">
+<ApiMember kind="function" name="lv_obj_set_flag" file="api/core/lv_obj.h" line={253} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L253">
 
 ### lv_obj_set_flag
 
-Set add or remove one or more flags.
+Set add or remove one or more flags. 
+
+\> **Deprecated:** Use the dedicated per-flag setter instead, e.g. `lv_obj_set_hidden(obj, en)`.
 
 ```c
 void lv_obj_set_flag(lv_obj_t *obj, lv_obj_flag_t f, bool v)
@@ -39,7 +41,527 @@ void lv_obj_set_flag(lv_obj_t *obj, lv_obj_flag_t f, bool v)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_state" file="api/core/lv_obj.h" line={244} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L244">
+<ApiMember kind="function" name="lv_obj_set_hidden" file="api/core/lv_obj.h" line={259} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L259">
+
+### lv_obj_set_hidden
+
+Make the object hidden. (Like it wasn't there at all)
+
+```c
+void lv_obj_set_hidden(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable the hidden property |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_clickable" file="api/core/lv_obj.h" line={265} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L265">
+
+### lv_obj_set_clickable
+
+Make the object clickable by the input devices
+
+```c
+void lv_obj_set_clickable(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable the clickable property |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_click_focusable" file="api/core/lv_obj.h" line={271} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L271">
+
+### lv_obj_set_click_focusable
+
+Add focused state to the object when clicked
+
+```c
+void lv_obj_set_click_focusable(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable the click focusable property |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_checkable" file="api/core/lv_obj.h" line={277} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L277">
+
+### lv_obj_set_checkable
+
+Toggle checked state when the object is clicked
+
+```c
+void lv_obj_set_checkable(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable the checkable property |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_scrollable" file="api/core/lv_obj.h" line={283} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L283">
+
+### lv_obj_set_scrollable
+
+Make the object scrollable
+
+```c
+void lv_obj_set_scrollable(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable the scrollable property |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_scroll_elastic" file="api/core/lv_obj.h" line={289} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L289">
+
+### lv_obj_set_scroll_elastic
+
+Allow scrolling inside but with slower speed
+
+```c
+void lv_obj_set_scroll_elastic(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable the scroll elastic property |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_scroll_momentum" file="api/core/lv_obj.h" line={295} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L295">
+
+### lv_obj_set_scroll_momentum
+
+Make the object scroll further when "thrown"
+
+```c
+void lv_obj_set_scroll_momentum(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable the scroll momentum property |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_scroll_one" file="api/core/lv_obj.h" line={301} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L301">
+
+### lv_obj_set_scroll_one
+
+Allow scrolling only one snappable child
+
+```c
+void lv_obj_set_scroll_one(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable the scroll one property |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_scroll_chain" file="api/core/lv_obj.h" line={307} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L307">
+
+### lv_obj_set_scroll_chain
+
+Allow propagating the scrolling in any directions to a parent
+
+```c
+void lv_obj_set_scroll_chain(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable scroll chaining |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_scroll_chain_hor" file="api/core/lv_obj.h" line={313} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L313">
+
+### lv_obj_set_scroll_chain_hor
+
+Allow propagating the horizontal scroll to a parent
+
+```c
+void lv_obj_set_scroll_chain_hor(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable horizontal scroll chaining |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_scroll_chain_ver" file="api/core/lv_obj.h" line={319} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L319">
+
+### lv_obj_set_scroll_chain_ver
+
+Allow propagating the vertical scroll to a parent
+
+```c
+void lv_obj_set_scroll_chain_ver(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable vertical scroll chaining |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_scroll_on_focus" file="api/core/lv_obj.h" line={325} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L325">
+
+### lv_obj_set_scroll_on_focus
+
+Automatically scroll object to make it visible when focused
+
+```c
+void lv_obj_set_scroll_on_focus(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable scroll on focus |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_scroll_with_arrow" file="api/core/lv_obj.h" line={331} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L331">
+
+### lv_obj_set_scroll_with_arrow
+
+Allow scrolling the focused object with arrow keys
+
+```c
+void lv_obj_set_scroll_with_arrow(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable scroll with arrow keys |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_snappable" file="api/core/lv_obj.h" line={337} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L337">
+
+### lv_obj_set_snappable
+
+Allow snapping to this object if scroll snap is enabled on the parent
+
+```c
+void lv_obj_set_snappable(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable the snappable property |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_press_lock" file="api/core/lv_obj.h" line={343} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L343">
+
+### lv_obj_set_press_lock
+
+Keep the object pressed even if the press slid from the object
+
+```c
+void lv_obj_set_press_lock(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable the press lock property |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_event_bubble" file="api/core/lv_obj.h" line={349} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L349">
+
+### lv_obj_set_event_bubble
+
+Propagate the events to the parent too
+
+```c
+void lv_obj_set_event_bubble(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable event bubbling |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_gesture_bubble" file="api/core/lv_obj.h" line={355} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L355">
+
+### lv_obj_set_gesture_bubble
+
+Propagate the gestures to the parent
+
+```c
+void lv_obj_set_gesture_bubble(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable gesture bubbling |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_adv_hittest" file="api/core/lv_obj.h" line={361} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L361">
+
+### lv_obj_set_adv_hittest
+
+Allow performing more accurate hit test
+
+```c
+void lv_obj_set_adv_hittest(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable advanced hit testing |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_ignore_layout" file="api/core/lv_obj.h" line={367} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L367">
+
+### lv_obj_set_ignore_layout
+
+Make the object not positioned by layouts
+
+```c
+void lv_obj_set_ignore_layout(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable ignoring layout |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_floating" file="api/core/lv_obj.h" line={373} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L373">
+
+### lv_obj_set_floating
+
+Do not scroll the object when the parent scrolls and ignore layout
+
+```c
+void lv_obj_set_floating(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable floating mode |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_send_draw_task_events" file="api/core/lv_obj.h" line={379} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L379">
+
+### lv_obj_set_send_draw_task_events
+
+Send LV_EVENT_DRAW_TASK_ADDED events
+
+```c
+void lv_obj_set_send_draw_task_events(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable draw task events |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_overflow_visible" file="api/core/lv_obj.h" line={385} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L385">
+
+### lv_obj_set_overflow_visible
+
+Do not clip the children to the parent's extended draw size
+
+```c
+void lv_obj_set_overflow_visible(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable overflow visibility |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_event_trickle" file="api/core/lv_obj.h" line={391} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L391">
+
+### lv_obj_set_event_trickle
+
+Propagate the events to the children too
+
+```c
+void lv_obj_set_event_trickle(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable event trickling |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_state_trickle" file="api/core/lv_obj.h" line={397} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L397">
+
+### lv_obj_set_state_trickle
+
+Propagate the states to the children too
+
+```c
+void lv_obj_set_state_trickle(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable state trickling |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_radio_button" file="api/core/lv_obj.h" line={403} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L403">
+
+### lv_obj_set_radio_button
+
+Allow only one RADIO_BUTTON sibling to be checked
+
+```c
+void lv_obj_set_radio_button(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable radio button behavior |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_flex_in_new_track" file="api/core/lv_obj.h" line={409} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L409">
+
+### lv_obj_set_flex_in_new_track
+
+Start a new flex track on this item
+
+```c
+void lv_obj_set_flex_in_new_track(lv_obj_t *obj, bool en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `en` | `bool` | enable or disable new flex track |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_set_state" file="api/core/lv_obj.h" line={433} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L433">
 
 ### lv_obj_set_state
 
@@ -60,7 +582,7 @@ void lv_obj_set_state(lv_obj_t *obj, lv_state_t state, bool v)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_user_data" file="api/core/lv_obj.h" line={251} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L251">
+<ApiMember kind="function" name="lv_obj_set_user_data" file="api/core/lv_obj.h" line={440} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L440">
 
 ### lv_obj_set_user_data
 
@@ -80,27 +602,28 @@ void lv_obj_set_user_data(lv_obj_t *obj, void *user_data)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_radio_button" file="api/core/lv_obj.h" line={258} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L258">
+<ApiMember kind="function" name="lv_obj_set_user_flag" file="api/core/lv_obj.h" line={448} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L448">
 
-### lv_obj_set_radio_button
+### lv_obj_set_user_flag
 
-Allow only one RADIO_BUTTON sibling to be checked
+Set one of the 4 flags available for the user
 
 ```c
-void lv_obj_set_radio_button(lv_obj_t *obj, bool en)
+void lv_obj_set_user_flag(lv_obj_t *obj, uint32_t bit, bool v)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
-| `en` | `bool` | enable or disable radio button behavior |
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+| `bit` | `uint32_t` | the index of the bit (0..3) |
+| `v` | `bool` | the value of the bit, true or false |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_id" file="api/core/lv_obj.h" line={432} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L432">
+<ApiMember kind="function" name="lv_obj_set_id" file="api/core/lv_obj.h" line={779} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L779">
 
 ### lv_obj_set_id
 
@@ -121,9 +644,9 @@ void lv_obj_set_id(lv_obj_t *obj, void *id)
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Getters (5)">
+<ApiTab value="Getters (6)">
 
-<ApiMember kind="function" name="lv_obj_get_state" file="api/core/lv_obj.h" line={285} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L285">
+<ApiMember kind="function" name="lv_obj_get_state" file="api/core/lv_obj.h" line={630} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L630">
 
 ### lv_obj_get_state
 
@@ -144,7 +667,7 @@ lv_state_t lv_obj_get_state(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_group" file="api/core/lv_obj.h" line={306} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L306">
+<ApiMember kind="function" name="lv_obj_get_group" file="api/core/lv_obj.h" line={645} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L645">
 
 ### lv_obj_get_group
 
@@ -165,7 +688,7 @@ lv_group_t * lv_obj_get_group(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_user_data" file="api/core/lv_obj.h" line={313} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L313">
+<ApiMember kind="function" name="lv_obj_get_user_data" file="api/core/lv_obj.h" line={652} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L652">
 
 ### lv_obj_get_user_data
 
@@ -186,7 +709,29 @@ void * lv_obj_get_user_data(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_class" file="api/core/lv_obj.h" line={341} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L341">
+<ApiMember kind="function" name="lv_obj_get_user_flag" file="api/core/lv_obj.h" line={660} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L660">
+
+### lv_obj_get_user_flag
+
+Get the value of one of the 4 flags available for the user
+
+```c
+bool lv_obj_get_user_flag(lv_obj_t *obj, uint32_t bit)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+| `bit` | `uint32_t` | the index of the bit (0..3) |
+
+**Returns:** `bool` — the value of the bit, true or false
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_get_class" file="api/core/lv_obj.h" line={688} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L688">
 
 ### lv_obj_get_class
 
@@ -207,7 +752,7 @@ const lv_obj_class_t * lv_obj_get_class(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_id" file="api/core/lv_obj.h" line={439} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L439">
+<ApiMember kind="function" name="lv_obj_get_id" file="api/core/lv_obj.h" line={786} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L786">
 
 ### lv_obj_get_id
 
@@ -229,9 +774,9 @@ void * lv_obj_get_id(const lv_obj_t *obj)
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Other (24)">
+<ApiTab value="Other (48)">
 
-<ApiMember kind="function" name="lv_obj_create" file="api/core/lv_obj.h" line={194} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L194">
+<ApiMember kind="function" name="lv_obj_create" file="api/core/lv_obj.h" line={221} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L221">
 
 ### lv_obj_create
 
@@ -252,11 +797,13 @@ lv_obj_t * lv_obj_create(lv_obj_t *parent)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_flag" file="api/core/lv_obj.h" line={205} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L205">
+<ApiMember kind="function" name="lv_obj_add_flag" file="api/core/lv_obj.h" line={234} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L234">
 
 ### lv_obj_add_flag
 
-Set one or more flags
+Set one or more flags 
+
+\> **Deprecated:** Use the dedicated per-flag setter instead, e.g. `lv_obj_set_hidden(obj, true)`.
 
 ```c
 void lv_obj_add_flag(lv_obj_t *obj, lv_obj_flag_t f)
@@ -272,11 +819,13 @@ void lv_obj_add_flag(lv_obj_t *obj, lv_obj_flag_t f)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_flag" file="api/core/lv_obj.h" line={212} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L212">
+<ApiMember kind="function" name="lv_obj_remove_flag" file="api/core/lv_obj.h" line={243} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L243">
 
 ### lv_obj_remove_flag
 
-Remove one or more flags
+Remove one or more flags 
+
+\> **Deprecated:** Use the dedicated per-flag setter instead, e.g. `lv_obj_set_hidden(obj, false)`.
 
 ```c
 void lv_obj_remove_flag(lv_obj_t *obj, lv_obj_flag_t f)
@@ -292,7 +841,7 @@ void lv_obj_remove_flag(lv_obj_t *obj, lv_obj_flag_t f)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_state" file="api/core/lv_obj.h" line={228} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L228">
+<ApiMember kind="function" name="lv_obj_add_state" file="api/core/lv_obj.h" line={417} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L417">
 
 ### lv_obj_add_state
 
@@ -312,7 +861,7 @@ void lv_obj_add_state(lv_obj_t *obj, lv_state_t state)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_state" file="api/core/lv_obj.h" line={236} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L236">
+<ApiMember kind="function" name="lv_obj_remove_state" file="api/core/lv_obj.h" line={425} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L425">
 
 ### lv_obj_remove_state
 
@@ -332,11 +881,13 @@ void lv_obj_remove_state(lv_obj_t *obj, lv_state_t state)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_has_flag" file="api/core/lv_obj.h" line={270} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L270">
+<ApiMember kind="function" name="lv_obj_has_flag" file="api/core/lv_obj.h" line={462} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L462">
 
 ### lv_obj_has_flag
 
-Check if a given flag or all the given flags are set on an object.
+Check if a given flag or all the given flags are set on an object. 
+
+\> **Deprecated:** Use the dedicated per-flag setter instead, e.g. `lv_obj_is_hidden(obj)`.
 
 ```c
 bool lv_obj_has_flag(const lv_obj_t *obj, lv_obj_flag_t f)
@@ -354,11 +905,13 @@ bool lv_obj_has_flag(const lv_obj_t *obj, lv_obj_flag_t f)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_has_flag_any" file="api/core/lv_obj.h" line={278} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L278">
+<ApiMember kind="function" name="lv_obj_has_flag_any" file="api/core/lv_obj.h" line={472} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L472">
 
 ### lv_obj_has_flag_any
 
-Check if a given flag or any of the flags are set on an object.
+Check if a given flag or any of the flags are set on an object. 
+
+\> **Deprecated:** Use the dedicated per-flag setter instead, e.g. `lv_obj_set_hidden(obj)`.
 
 ```c
 bool lv_obj_has_flag_any(const lv_obj_t *obj, lv_obj_flag_t f)
@@ -376,7 +929,532 @@ bool lv_obj_has_flag_any(const lv_obj_t *obj, lv_obj_flag_t f)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_has_state" file="api/core/lv_obj.h" line={293} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L293">
+<ApiMember kind="function" name="lv_obj_is_hidden" file="api/core/lv_obj.h" line={478} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L478">
+
+### lv_obj_is_hidden
+
+Get whether the object is hidden
+
+```c
+bool lv_obj_is_hidden(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if the object is hidden, false otherwise
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_clickable" file="api/core/lv_obj.h" line={484} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L484">
+
+### lv_obj_is_clickable
+
+Get whether the object is clickable by input devices
+
+```c
+bool lv_obj_is_clickable(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if the object is clickable
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_click_focusable" file="api/core/lv_obj.h" line={490} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L490">
+
+### lv_obj_is_click_focusable
+
+Get whether the object gets focused when clicked
+
+```c
+bool lv_obj_is_click_focusable(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if click focusable is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_checkable" file="api/core/lv_obj.h" line={496} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L496">
+
+### lv_obj_is_checkable
+
+Get whether the object toggles checked state when clicked
+
+```c
+bool lv_obj_is_checkable(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if the object is checkable
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_scrollable" file="api/core/lv_obj.h" line={502} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L502">
+
+### lv_obj_is_scrollable
+
+Get whether the object is scrollable
+
+```c
+bool lv_obj_is_scrollable(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if the object is scrollable
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_scroll_elastic" file="api/core/lv_obj.h" line={508} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L508">
+
+### lv_obj_is_scroll_elastic
+
+Get whether elastic scrolling is enabled
+
+```c
+bool lv_obj_is_scroll_elastic(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if scroll elastic is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_scroll_momentum" file="api/core/lv_obj.h" line={514} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L514">
+
+### lv_obj_is_scroll_momentum
+
+Get whether scroll momentum is enabled
+
+```c
+bool lv_obj_is_scroll_momentum(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if scroll momentum is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_scroll_one" file="api/core/lv_obj.h" line={520} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L520">
+
+### lv_obj_is_scroll_one
+
+Get whether only one snappable child can be scrolled
+
+```c
+bool lv_obj_is_scroll_one(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if scroll one is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_scroll_chain_hor" file="api/core/lv_obj.h" line={526} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L526">
+
+### lv_obj_is_scroll_chain_hor
+
+Get whether horizontal scroll chaining is enabled
+
+```c
+bool lv_obj_is_scroll_chain_hor(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if horizontal scroll chaining is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_scroll_chain_ver" file="api/core/lv_obj.h" line={532} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L532">
+
+### lv_obj_is_scroll_chain_ver
+
+Get whether vertical scroll chaining is enabled
+
+```c
+bool lv_obj_is_scroll_chain_ver(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if vertical scroll chaining is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_scroll_on_focus" file="api/core/lv_obj.h" line={538} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L538">
+
+### lv_obj_is_scroll_on_focus
+
+Get whether the object auto-scrolls into view when focused
+
+```c
+bool lv_obj_is_scroll_on_focus(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if scroll on focus is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_scroll_with_arrow" file="api/core/lv_obj.h" line={544} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L544">
+
+### lv_obj_is_scroll_with_arrow
+
+Get whether the focused object can be scrolled with arrow keys
+
+```c
+bool lv_obj_is_scroll_with_arrow(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if scroll with arrow keys is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_snappable" file="api/core/lv_obj.h" line={550} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L550">
+
+### lv_obj_is_snappable
+
+Get whether the object is snappable by a scrolling parent
+
+```c
+bool lv_obj_is_snappable(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if the object is snappable
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_press_lock" file="api/core/lv_obj.h" line={556} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L556">
+
+### lv_obj_is_press_lock
+
+Get whether press lock is enabled
+
+```c
+bool lv_obj_is_press_lock(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if press lock is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_event_bubble" file="api/core/lv_obj.h" line={562} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L562">
+
+### lv_obj_is_event_bubble
+
+Get whether events bubble to the parent
+
+```c
+bool lv_obj_is_event_bubble(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if event bubbling is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_gesture_bubble" file="api/core/lv_obj.h" line={568} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L568">
+
+### lv_obj_is_gesture_bubble
+
+Get whether gestures bubble to the parent
+
+```c
+bool lv_obj_is_gesture_bubble(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if gesture bubbling is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_adv_hittest" file="api/core/lv_obj.h" line={574} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L574">
+
+### lv_obj_is_adv_hittest
+
+Get whether advanced hit testing is enabled
+
+```c
+bool lv_obj_is_adv_hittest(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if advanced hit testing is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_ignore_layout" file="api/core/lv_obj.h" line={580} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L580">
+
+### lv_obj_is_ignore_layout
+
+Get whether the object ignores layout positioning
+
+```c
+bool lv_obj_is_ignore_layout(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if ignore layout is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_floating" file="api/core/lv_obj.h" line={586} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L586">
+
+### lv_obj_is_floating
+
+Get whether the object is floating
+
+```c
+bool lv_obj_is_floating(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if floating mode is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_send_draw_task_events" file="api/core/lv_obj.h" line={592} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L592">
+
+### lv_obj_is_send_draw_task_events
+
+Get whether draw task events are sent
+
+```c
+bool lv_obj_is_send_draw_task_events(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if draw task events are enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_overflow_visible" file="api/core/lv_obj.h" line={598} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L598">
+
+### lv_obj_is_overflow_visible
+
+Get whether overflow is visible outside the parent
+
+```c
+bool lv_obj_is_overflow_visible(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if overflow is visible
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_event_trickle" file="api/core/lv_obj.h" line={604} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L604">
+
+### lv_obj_is_event_trickle
+
+Get whether events trickle to the children
+
+```c
+bool lv_obj_is_event_trickle(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if event trickling is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_state_trickle" file="api/core/lv_obj.h" line={610} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L610">
+
+### lv_obj_is_state_trickle
+
+Get whether states trickle to the children
+
+```c
+bool lv_obj_is_state_trickle(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if state trickling is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_radio_button" file="api/core/lv_obj.h" line={616} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L616">
+
+### lv_obj_is_radio_button
+
+Get whether the object is a radio button
+
+```c
+bool lv_obj_is_radio_button(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if radio button behavior is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_is_flex_in_new_track" file="api/core/lv_obj.h" line={623} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L623">
+
+### lv_obj_is_flex_in_new_track
+
+Get whether the widget should be placed in a new flex track
+
+```c
+bool lv_obj_is_flex_in_new_track(const lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
+
+**Returns:** `bool` — true if flex in new track is enabled
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_has_state" file="api/core/lv_obj.h" line={638} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L638">
 
 ### lv_obj_has_state
 
@@ -398,28 +1476,7 @@ bool lv_obj_has_state(const lv_obj_t *obj, lv_state_t state)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_is_radio_button" file="api/core/lv_obj.h" line={299} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L299">
-
-### lv_obj_is_radio_button
-
-Get whether the object is a radio button
-
-```c
-bool lv_obj_is_radio_button(const lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a widget |
-
-**Returns:** `bool` — true if radio button behavior is enabled
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_check_type" file="api/core/lv_obj.h" line={325} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L325">
+<ApiMember kind="function" name="lv_obj_check_type" file="api/core/lv_obj.h" line={672} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L672">
 
 ### lv_obj_check_type
 
@@ -441,7 +1498,7 @@ bool lv_obj_check_type(const lv_obj_t *obj, const lv_obj_class_t *class_p)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_has_class" file="api/core/lv_obj.h" line={334} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L334">
+<ApiMember kind="function" name="lv_obj_has_class" file="api/core/lv_obj.h" line={681} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L681">
 
 ### lv_obj_has_class
 
@@ -463,7 +1520,7 @@ bool lv_obj_has_class(const lv_obj_t *obj, const lv_obj_class_t *class_p)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_is_valid" file="api/core/lv_obj.h" line={348} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L348">
+<ApiMember kind="function" name="lv_obj_is_valid" file="api/core/lv_obj.h" line={695} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L695">
 
 ### lv_obj_is_valid
 
@@ -484,7 +1541,7 @@ bool lv_obj_is_valid(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_null_on_delete" file="api/core/lv_obj.h" line={356} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L356">
+<ApiMember kind="function" name="lv_obj_null_on_delete" file="api/core/lv_obj.h" line={703} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L703">
 
 ### lv_obj_null_on_delete
 
@@ -503,7 +1560,7 @@ void lv_obj_null_on_delete(lv_obj_t **obj_ptr)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_delete_cb" file="api/core/lv_obj.h" line={378} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L378">
+<ApiMember kind="function" name="lv_obj_add_delete_cb" file="api/core/lv_obj.h" line={725} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L725">
 
 ### lv_obj_add_delete_cb
 
@@ -532,7 +1589,7 @@ lv_delete_dsc_t * lv_obj_add_delete_cb(lv_obj_t *obj, lv_delete_cb_t cb, void *u
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_delete_cb" file="api/core/lv_obj.h" line={387} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L387">
+<ApiMember kind="function" name="lv_obj_remove_delete_cb" file="api/core/lv_obj.h" line={734} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L734">
 
 ### lv_obj_remove_delete_cb
 
@@ -553,7 +1610,7 @@ void lv_obj_remove_delete_cb(lv_delete_dsc_t *dsc)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_screen_load_event" file="api/core/lv_obj.h" line={398} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L398">
+<ApiMember kind="function" name="lv_obj_add_screen_load_event" file="api/core/lv_obj.h" line={745} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L745">
 
 ### lv_obj_add_screen_load_event
 
@@ -577,7 +1634,7 @@ void lv_obj_add_screen_load_event(lv_obj_t *obj, lv_event_code_t trigger, lv_obj
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_screen_create_event" file="api/core/lv_obj.h" line={411} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L411">
+<ApiMember kind="function" name="lv_obj_add_screen_create_event" file="api/core/lv_obj.h" line={758} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L758">
 
 ### lv_obj_add_screen_create_event
 
@@ -601,7 +1658,7 @@ void lv_obj_add_screen_create_event(lv_obj_t *obj, lv_event_code_t trigger, lv_s
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_play_timeline_event" file="api/core/lv_obj.h" line={423} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L423">
+<ApiMember kind="function" name="lv_obj_add_play_timeline_event" file="api/core/lv_obj.h" line={770} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L770">
 
 ### lv_obj_add_play_timeline_event
 
@@ -624,7 +1681,7 @@ void lv_obj_add_play_timeline_event(lv_obj_t *obj, lv_event_code_t trigger, lv_a
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_find_by_id" file="api/core/lv_obj.h" line={454} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L454">
+<ApiMember kind="function" name="lv_obj_find_by_id" file="api/core/lv_obj.h" line={801} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L801">
 
 ### lv_obj_find_by_id
 
@@ -648,7 +1705,7 @@ lv_obj_t * lv_obj_find_by_id(const lv_obj_t *obj, const void *id)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_assign_id" file="api/core/lv_obj.h" line={467} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L467">
+<ApiMember kind="function" name="lv_obj_assign_id" file="api/core/lv_obj.h" line={814} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L814">
 
 ### lv_obj_assign_id
 
@@ -670,7 +1727,7 @@ void lv_obj_assign_id(const lv_obj_class_t *class_p, lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_free_id" file="api/core/lv_obj.h" line={474} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L474">
+<ApiMember kind="function" name="lv_obj_free_id" file="api/core/lv_obj.h" line={821} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L821">
 
 ### lv_obj_free_id
 
@@ -689,7 +1746,7 @@ void lv_obj_free_id(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_id_compare" file="api/core/lv_obj.h" line={486} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L486">
+<ApiMember kind="function" name="lv_obj_id_compare" file="api/core/lv_obj.h" line={833} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L833">
 
 ### lv_obj_id_compare
 
@@ -713,7 +1770,7 @@ int lv_obj_id_compare(const void *id1, const void *id2)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_stringify_id" file="api/core/lv_obj.h" line={494} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L494">
+<ApiMember kind="function" name="lv_obj_stringify_id" file="api/core/lv_obj.h" line={841} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L841">
 
 ### lv_obj_stringify_id
 
@@ -734,7 +1791,7 @@ const char * lv_obj_stringify_id(lv_obj_t *obj, char *buf, uint32_t len)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_objid_builtin_destroy" file="api/core/lv_obj.h" line={500} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L500">
+<ApiMember kind="function" name="lv_objid_builtin_destroy" file="api/core/lv_obj.h" line={847} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L847">
 
 ### lv_objid_builtin_destroy
 
@@ -751,7 +1808,7 @@ void lv_objid_builtin_destroy(void)
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_obj_flag_t" file="api/core/lv_obj.h" line={51} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L51">
+<ApiMember kind="enum" name="lv_obj_flag_t" file="api/core/lv_obj.h" line={51} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L51">
 
 ### lv_obj_flag_t
 
@@ -814,7 +1871,7 @@ Note: update obj flags corresponding properties below whenever add/remove flags 
 
 </TypeUsedBy>
 
-<ApiMember kind="enum" name="_lv_signed_prop_id_t" file="api/core/lv_obj.h" line={92} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L92">
+<ApiMember kind="enum" name="_lv_signed_prop_id_t" file="api/core/lv_obj.h" line={92} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L92">
 
 ### _lv_signed_prop_id_t
 
@@ -896,6 +1953,30 @@ Note: update obj flags corresponding properties below whenever add/remove flags 
 | `LV_PROPERTY_OBJ_DISPLAY` | `(LV_PROPERTY_OBJ_START + ((int) 71 )) \| ((  5   ) <<  28 )` |
 | `LV_PROPERTY_OBJ_CHILD_COUNT` | `(LV_PROPERTY_OBJ_START + ((int) 72 )) \| ((  1   ) <<  28 )` |
 | `LV_PROPERTY_OBJ_INDEX` | `(LV_PROPERTY_OBJ_START + ((int) 73 )) \| ((  1   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_HIDDEN` | `(LV_PROPERTY_OBJ_START + ((int) 74 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_CLICKABLE` | `(LV_PROPERTY_OBJ_START + ((int) 75 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_CLICK_FOCUSABLE` | `(LV_PROPERTY_OBJ_START + ((int) 76 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_CHECKABLE` | `(LV_PROPERTY_OBJ_START + ((int) 77 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_SCROLLABLE` | `(LV_PROPERTY_OBJ_START + ((int) 78 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_SCROLL_ELASTIC` | `(LV_PROPERTY_OBJ_START + ((int) 79 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_SCROLL_MOMENTUM` | `(LV_PROPERTY_OBJ_START + ((int) 80 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_SCROLL_ONE` | `(LV_PROPERTY_OBJ_START + ((int) 81 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_SCROLL_CHAIN_HOR` | `(LV_PROPERTY_OBJ_START + ((int) 82 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_SCROLL_CHAIN_VER` | `(LV_PROPERTY_OBJ_START + ((int) 83 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_SCROLL_ON_FOCUS` | `(LV_PROPERTY_OBJ_START + ((int) 84 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_SCROLL_WITH_ARROW` | `(LV_PROPERTY_OBJ_START + ((int) 85 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_SNAPPABLE` | `(LV_PROPERTY_OBJ_START + ((int) 86 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_PRESS_LOCK` | `(LV_PROPERTY_OBJ_START + ((int) 87 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_EVENT_BUBBLE` | `(LV_PROPERTY_OBJ_START + ((int) 88 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_GESTURE_BUBBLE` | `(LV_PROPERTY_OBJ_START + ((int) 89 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_ADV_HITTEST` | `(LV_PROPERTY_OBJ_START + ((int) 90 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_IGNORE_LAYOUT` | `(LV_PROPERTY_OBJ_START + ((int) 91 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_FLOATING` | `(LV_PROPERTY_OBJ_START + ((int) 92 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_SEND_DRAW_TASK_EVENTS` | `(LV_PROPERTY_OBJ_START + ((int) 93 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_OVERFLOW_VISIBLE` | `(LV_PROPERTY_OBJ_START + ((int) 94 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_EVENT_TRICKLE` | `(LV_PROPERTY_OBJ_START + ((int) 95 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_STATE_TRICKLE` | `(LV_PROPERTY_OBJ_START + ((int) 96 )) \| ((  11   ) <<  28 )` |
+| `LV_PROPERTY_OBJ_FLEX_IN_NEW_TRACK` | `(LV_PROPERTY_OBJ_START + ((int) 97 )) \| ((  11   ) <<  28 )` |
 | `LV_PROPERTY_OBJ_END` |  |
 
 
@@ -903,7 +1984,7 @@ Note: update obj flags corresponding properties below whenever add/remove flags 
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_delete_cb_t" file="api/core/lv_obj.h" line={42} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L42">
+<ApiMember kind="typedef" name="lv_delete_cb_t" file="api/core/lv_obj.h" line={42} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L42">
 
 ### lv_delete_cb_t
 
@@ -922,7 +2003,7 @@ typedef void(* lv_delete_cb_t) (void *user_data)
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_ASSERT_OBJ" file="api/core/lv_obj.h" line={515} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L515">
+<ApiMember kind="macro" name="LV_ASSERT_OBJ" file="api/core/lv_obj.h" line={862} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L862">
 
 ### LV_ASSERT_OBJ
 
@@ -941,7 +2022,7 @@ typedef void(* lv_delete_cb_t) (void *user_data)
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_TRACE_OBJ_CREATE" file="api/core/lv_obj.h" line={534} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L534">
+<ApiMember kind="macro" name="LV_TRACE_OBJ_CREATE" file="api/core/lv_obj.h" line={881} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L881">
 
 ### LV_TRACE_OBJ_CREATE
 
@@ -955,7 +2036,7 @@ typedef void(* lv_delete_cb_t) (void *user_data)
 
 ## Variables
 
-<ApiMember kind="variable" name="lv_obj_class" file="api/core/lv_obj.h" line={183} url="https://github.com/lvgl/lvgl/tree/8274446cecf5135e86d8dfe18f5c02d020715d63/include/lvgl/core/lv_obj.h#L183">
+<ApiMember kind="variable" name="lv_obj_class" file="api/core/lv_obj.h" line={210} url="https://github.com/lvgl/lvgl/tree/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/include/lvgl/core/lv_obj.h#L210">
 
 ### lv_obj_class
 
