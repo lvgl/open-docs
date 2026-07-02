@@ -1,0 +1,80 @@
+---
+title: lv_anim_private.h
+description: API reference for lv_anim_private.h
+api:
+  functions: [lv_anim_core_init, lv_anim_core_deinit, lv_anim_enable_vsync_mode]
+  structs: [lv_anim_state_t]
+---
+
+<RelatedHeaders name="lv_anim.h" isPrivate={true} />
+
+<ApiSummary functions={3} structs={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_anim_core_init" file="private/misc/lv_anim_private.h" line={42} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/misc/lv_anim_private.h#L42">
+
+### lv_anim_core_init
+
+Init the animation module
+
+```c
+void lv_anim_core_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_core_deinit" file="private/misc/lv_anim_private.h" line={47} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/misc/lv_anim_private.h#L47">
+
+### lv_anim_core_deinit
+
+Deinit the animation module
+
+```c
+void lv_anim_core_deinit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_anim_enable_vsync_mode" file="private/misc/lv_anim_private.h" line={53} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/misc/lv_anim_private.h#L53">
+
+### lv_anim_enable_vsync_mode
+
+```c
+void lv_anim_enable_vsync_mode(bool enable)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `enable` | `bool` |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_anim_state_t">
+
+### lv_anim_state_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `anim_list_changed` | `bool` |  |
+| `anim_run_round` | `bool` |  |
+| `anim_vsync_registered` | `bool` |  |
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> |  |
+| `anim_ll` | <ApiLink name="lv_ll_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lv_global.h", "lvgl_private.h", "lv_animimage_private.h"]}
+/>

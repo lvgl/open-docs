@@ -1,0 +1,300 @@
+---
+title: lv_draw_sw_grad.h
+description: API reference for lv_draw_sw_grad.h
+api:
+  functions: [lv_draw_sw_grad_color_calculate, lv_draw_sw_grad_get, lv_draw_sw_grad_cleanup, lv_draw_sw_grad_linear_setup, lv_draw_sw_grad_linear_cleanup, lv_draw_sw_grad_linear_get_line, lv_draw_sw_grad_radial_setup, lv_draw_sw_grad_radial_cleanup, lv_draw_sw_grad_radial_get_line, lv_draw_sw_grad_conical_setup, lv_draw_sw_grad_conical_cleanup, lv_draw_sw_grad_conical_get_line]
+  structs: [lv_draw_sw_grad_calc_t]
+---
+
+<ApiSummary functions={12} structs={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (4)","Other (8)"]}>
+<ApiTab value="Getters (4)">
+
+<ApiMember kind="function" name="lv_draw_sw_grad_get" file="private/draw/sw/lv_draw_sw_grad.h" line={52} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L52">
+
+### lv_draw_sw_grad_get
+
+Get a gradient cache from the given parameters
+
+```c
+lv_draw_sw_grad_calc_t * lv_draw_sw_grad_get(const lv_grad_dsc_t *gradient, int32_t w, int32_t h)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `gradient` | <ApiLink name="lv_grad_dsc_t" display="const lv_grad_dsc_t *" /> |
+| `w` | `int32_t` |
+| `h` | `int32_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_grad_linear_get_line" file="private/draw/sw/lv_draw_sw_grad.h" line={84} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L84">
+
+### lv_draw_sw_grad_linear_get_line
+
+Calculate a line segment of a linear gradient
+
+```c
+void lv_draw_sw_grad_linear_get_line(lv_grad_dsc_t *dsc, int32_t xp, int32_t yp, int32_t width, lv_draw_sw_grad_calc_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_grad_dsc_t" display="lv_grad_dsc_t *" /> | gradient descriptor |
+| `xp` | `int32_t` | starting point x coordinate in gradient space |
+| `yp` | `int32_t` | starting point y coordinate in gradient space |
+| `width` | `int32_t` | width of the line segment in pixels |
+| `result` | <ApiLink name="lv_draw_sw_grad_calc_t" display="lv_draw_sw_grad_calc_t *" /> | color buffer for the resulting line segment |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_grad_radial_get_line" file="private/draw/sw/lv_draw_sw_grad.h" line={109} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L109">
+
+### lv_draw_sw_grad_radial_get_line
+
+Calculate a line segment of a radial gradient
+
+```c
+void lv_draw_sw_grad_radial_get_line(lv_grad_dsc_t *dsc, int32_t xp, int32_t yp, int32_t width, lv_draw_sw_grad_calc_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_grad_dsc_t" display="lv_grad_dsc_t *" /> | gradient descriptor |
+| `xp` | `int32_t` | starting point x coordinate in gradient space |
+| `yp` | `int32_t` | starting point y coordinate in gradient space |
+| `width` | `int32_t` | width of the line segment in pixels |
+| `result` | <ApiLink name="lv_draw_sw_grad_calc_t" display="lv_draw_sw_grad_calc_t *" /> | color buffer for the resulting line segment |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_grad_conical_get_line" file="private/draw/sw/lv_draw_sw_grad.h" line={134} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L134">
+
+### lv_draw_sw_grad_conical_get_line
+
+Calculate a line segment of a conical gradient
+
+```c
+void lv_draw_sw_grad_conical_get_line(lv_grad_dsc_t *dsc, int32_t xp, int32_t yp, int32_t width, lv_draw_sw_grad_calc_t *result)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_grad_dsc_t" display="lv_grad_dsc_t *" /> | gradient descriptor |
+| `xp` | `int32_t` | starting point x coordinate in gradient space |
+| `yp` | `int32_t` | starting point y coordinate in gradient space |
+| `width` | `int32_t` | width of the line segment in pixels |
+| `result` | <ApiLink name="lv_draw_sw_grad_calc_t" display="lv_draw_sw_grad_calc_t *" /> | color buffer for the resulting line segment |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (8)">
+
+<ApiMember kind="function" name="lv_draw_sw_grad_color_calculate" file="private/draw/sw/lv_draw_sw_grad.h" line={48} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L48">
+
+### lv_draw_sw_grad_color_calculate
+
+Compute the color in the given gradient and fraction Gradient are specified in a virtual [0-255] range, so this function scales the virtual range to the given range
+
+```c
+void lv_draw_sw_grad_color_calculate(const lv_grad_dsc_t *dsc, int32_t range, int32_t frac, lv_color_t *color_out, lv_opa_t *opa_out)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_grad_dsc_t" display="const lv_grad_dsc_t *" /> | The gradient descriptor to use |
+| `range` | `int32_t` | The range to use in computation. |
+| `frac` | `int32_t` | The current part used in the range. frac is in [0; range] |
+| `color_out` | <ApiLink name="lv_color_t" display="lv_color_t *" /> | Calculated gradient color |
+| `opa_out` | <ApiLink name="lv_opa_t" display="lv_opa_t *" /> | Calculated opacity |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_grad_cleanup" file="private/draw/sw/lv_draw_sw_grad.h" line={58} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L58">
+
+### lv_draw_sw_grad_cleanup
+
+Clean up the gradient item after it was get with `lv_grad_get_from_cache`.
+
+```c
+void lv_draw_sw_grad_cleanup(lv_draw_sw_grad_calc_t *grad)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `grad` | <ApiLink name="lv_draw_sw_grad_calc_t" display="lv_draw_sw_grad_calc_t *" /> | pointer to a gradient |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_grad_linear_setup" file="private/draw/sw/lv_draw_sw_grad.h" line={68} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L68">
+
+### lv_draw_sw_grad_linear_setup
+
+Calculate constants from the given parameters that are used during rendering
+
+```c
+void lv_draw_sw_grad_linear_setup(lv_grad_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_grad_dsc_t" display="lv_grad_dsc_t *" /> | gradient descriptor |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area where to draw the gradient |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_grad_linear_cleanup" file="private/draw/sw/lv_draw_sw_grad.h" line={74} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L74">
+
+### lv_draw_sw_grad_linear_cleanup
+
+Free up the allocated memory for the gradient calculation
+
+```c
+void lv_draw_sw_grad_linear_cleanup(lv_grad_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_grad_dsc_t" display="lv_grad_dsc_t *" /> | gradient descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_grad_radial_setup" file="private/draw/sw/lv_draw_sw_grad.h" line={93} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L93">
+
+### lv_draw_sw_grad_radial_setup
+
+Calculate constants from the given parameters that are used during rendering
+
+```c
+void lv_draw_sw_grad_radial_setup(lv_grad_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_grad_dsc_t" display="lv_grad_dsc_t *" /> | gradient descriptor |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area where to draw the gradient |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_grad_radial_cleanup" file="private/draw/sw/lv_draw_sw_grad.h" line={99} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L99">
+
+### lv_draw_sw_grad_radial_cleanup
+
+Free up the allocated memory for the gradient calculation
+
+```c
+void lv_draw_sw_grad_radial_cleanup(lv_grad_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_grad_dsc_t" display="lv_grad_dsc_t *" /> | gradient descriptor |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_grad_conical_setup" file="private/draw/sw/lv_draw_sw_grad.h" line={118} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L118">
+
+### lv_draw_sw_grad_conical_setup
+
+Calculate constants from the given parameters that are used during rendering
+
+```c
+void lv_draw_sw_grad_conical_setup(lv_grad_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_grad_dsc_t" display="lv_grad_dsc_t *" /> | gradient descriptor |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area where to draw the gradient |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_grad_conical_cleanup" file="private/draw/sw/lv_draw_sw_grad.h" line={124} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/lv_draw_sw_grad.h#L124">
+
+### lv_draw_sw_grad_conical_cleanup
+
+Free up the allocated memory for the gradient calculation
+
+```c
+void lv_draw_sw_grad_conical_cleanup(lv_grad_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_grad_dsc_t" display="lv_grad_dsc_t *" /> | gradient descriptor |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_sw_grad_calc_t">
+
+### lv_draw_sw_grad_calc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `color_map` | <ApiLink name="lv_color_t" display="lv_color_t *" /> |  |
+| `opa_map` | <ApiLink name="lv_opa_t" display="lv_opa_t *" /> |  |
+| `size` | `uint32_t` |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_draw_sw_grad_calc_t" count={4}>
+
+- `lv_draw_sw_grad_cleanup` — param `grad`
+- `lv_draw_sw_grad_linear_get_line` — param `result`
+- `lv_draw_sw_grad_radial_get_line` — param `result`
+- `lv_draw_sw_grad_conical_get_line` — param `result`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw_sw.h"]}
+  includedBy={["lvgl_private.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_draw_private.h", "lv_draw_sw_blend.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h"]}
+/>

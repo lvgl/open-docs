@@ -1,0 +1,258 @@
+---
+title: lv_windows_context.h
+description: API reference for lv_windows_context.h
+api:
+  functions: [lv_windows_platform_init, lv_windows_get_window_context]
+  structs: [_lv_windows_pointer_context_t, _lv_windows_keypad_queue_item_t, _lv_windows_keypad_context_t, _lv_windows_encoder_context_t, _lv_windows_window_context_t, _lv_windows_create_display_data_t]
+  typedefs: [lv_windows_pointer_context_t, lv_windows_keypad_queue_item_t, lv_windows_keypad_context_t, lv_windows_encoder_context_t, lv_windows_window_context_t, lv_windows_create_display_data_t]
+  macros: [CREATE_WAITABLE_TIMER_MANUAL_RESET, CREATE_WAITABLE_TIMER_HIGH_RESOLUTION]
+---
+
+<ApiSummary functions={2} structs={6} typedefs={6} macros={2} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (1)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_windows_get_window_context" file="private/drivers/windows/lv_windows_context.h" line={120} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_context.h#L120">
+
+### lv_windows_get_window_context
+
+Get the window context from specific LVGL display window.
+
+```c
+lv_windows_window_context_t * lv_windows_get_window_context(HWND window_handle)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `window_handle` | <ApiLink name="HWND" /> | The window handle of specific LVGL display window. |
+
+**Returns:** <ApiLink name="lv_windows_window_context_t" display="lv_windows_window_context_t *" /> — The window context from specific LVGL display window.
+
+<Callout type="info">
+**Remark:** This is a private API which is used for LVGL Windows backend implementation. LVGL users shouldn't use that because the maintainer doesn't promise the application binary interface compatibility for this API.
+</Callout>
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="lv_windows_platform_init" file="private/drivers/windows/lv_windows_context.h" line={109} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_context.h#L109">
+
+### lv_windows_platform_init
+
+Initialize the LVGL Windows backend.
+
+```c
+void lv_windows_platform_init(void)
+```
+
+<Callout type="info">
+**Remark:** This is a private API which is used for LVGL Windows backend implementation. LVGL users shouldn't use that because the LVGL has already used it in lv_init.
+</Callout>
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="_lv_windows_pointer_context_t">
+
+### _lv_windows_pointer_context_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `state` | <ApiLink name="lv_indev_state_t" /> |  |
+| `point` | <ApiLink name="lv_point_t" /> |  |
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_windows_keypad_queue_item_t">
+
+### _lv_windows_keypad_queue_item_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `key` | `uint32_t` |  |
+| `state` | <ApiLink name="lv_indev_state_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_windows_keypad_context_t">
+
+### _lv_windows_keypad_context_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `queue` | <ApiLink name="lv_ll_t" /> |  |
+| `utf16_high_surrogate` | `uint16_t` |  |
+| `utf16_low_surrogate` | `uint16_t` |  |
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_windows_encoder_context_t">
+
+### _lv_windows_encoder_context_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `state` | <ApiLink name="lv_indev_state_t" /> |  |
+| `enc_diff` | `int16_t` |  |
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_windows_window_context_t">
+
+### _lv_windows_window_context_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `display_device_object` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |  |
+| `display_timer_object` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> |  |
+| `window_dpi` | `int32_t` |  |
+| `zoom_level` | `int32_t` |  |
+| `allow_dpi_override` | `bool` |  |
+| `simulator_mode` | `bool` |  |
+| `display_resolution_changed` | `bool` |  |
+| `requested_display_resolution` | <ApiLink name="lv_point_t" /> |  |
+| `display_framebuffer_context_handle` | `HDC` |  |
+| `display_framebuffer_base` | `uint32_t *` |  |
+| `display_framebuffer_size` | `size_t` |  |
+| `pointer` | <ApiLink name="lv_windows_pointer_context_t" /> |  |
+| `keypad` | <ApiLink name="lv_windows_keypad_context_t" /> |  |
+| `encoder` | <ApiLink name="lv_windows_encoder_context_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_windows_create_display_data_t">
+
+### _lv_windows_create_display_data_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `title` | `const wchar_t *` |  |
+| `hor_res` | `int32_t` |  |
+| `ver_res` | `int32_t` |  |
+| `zoom_level` | `int32_t` |  |
+| `allow_dpi_override` | `bool` |  |
+| `simulator_mode` | `bool` |  |
+| `mutex` | `HANDLE` |  |
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_windows_pointer_context_t" file="private/drivers/windows/lv_windows_context.h" line={47} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_context.h#L47">
+
+### lv_windows_pointer_context_t
+
+```c
+typedef struct _lv_windows_pointer_context_t lv_windows_pointer_context_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_windows_keypad_queue_item_t" file="private/drivers/windows/lv_windows_context.h" line={52} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_context.h#L52">
+
+### lv_windows_keypad_queue_item_t
+
+```c
+typedef struct _lv_windows_keypad_queue_item_t lv_windows_keypad_queue_item_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_windows_keypad_context_t" file="private/drivers/windows/lv_windows_context.h" line={59} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_context.h#L59">
+
+### lv_windows_keypad_context_t
+
+```c
+typedef struct _lv_windows_keypad_context_t lv_windows_keypad_context_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_windows_encoder_context_t" file="private/drivers/windows/lv_windows_context.h" line={65} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_context.h#L65">
+
+### lv_windows_encoder_context_t
+
+```c
+typedef struct _lv_windows_encoder_context_t lv_windows_encoder_context_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_windows_window_context_t" file="private/drivers/windows/lv_windows_context.h" line={86} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_context.h#L86">
+
+### lv_windows_window_context_t
+
+```c
+typedef struct _lv_windows_window_context_t lv_windows_window_context_t
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="lv_windows_create_display_data_t" file="private/drivers/windows/lv_windows_context.h" line={97} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_context.h#L97">
+
+### lv_windows_create_display_data_t
+
+```c
+typedef struct _lv_windows_create_display_data_t lv_windows_create_display_data_t
+```
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="CREATE_WAITABLE_TIMER_MANUAL_RESET" file="private/drivers/windows/lv_windows_context.h" line={28} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_context.h#L28">
+
+### CREATE_WAITABLE_TIMER_MANUAL_RESET
+
+```c
+#define CREATE_WAITABLE_TIMER_MANUAL_RESET 0x00000001
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="CREATE_WAITABLE_TIMER_HIGH_RESOLUTION" file="private/drivers/windows/lv_windows_context.h" line={32} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_context.h#L32">
+
+### CREATE_WAITABLE_TIMER_HIGH_RESOLUTION
+
+```c
+#define CREATE_WAITABLE_TIMER_HIGH_RESOLUTION 0x00000002
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "windows.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

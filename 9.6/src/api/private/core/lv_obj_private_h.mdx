@@ -1,0 +1,182 @@
+---
+title: lv_obj_private.h
+description: API reference for lv_obj_private.h
+api:
+  functions: [lv_obj_allocate_spec_attr, lv_obj_add_child, lv_obj_remove_child]
+  structs: [_lv_obj_spec_attr_t, _lv_obj_t]
+  typedefs: [lv_obj_spec_attr_t]
+---
+
+<RelatedHeaders name="lv_obj.h" isPrivate={true} />
+
+<ApiSummary functions={3} structs={2} typedefs={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_obj_allocate_spec_attr" file="private/core/lv_obj_private.h" line={172} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/core/lv_obj_private.h#L172">
+
+### lv_obj_allocate_spec_attr
+
+Allocate special data for an object if not allocated yet.
+
+```c
+lv_obj_spec_attr_t * lv_obj_allocate_spec_attr(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+
+**Returns:** <ApiLink name="lv_obj_spec_attr_t" display="lv_obj_spec_attr_t *" /> — the spec_attr created or NULL if something went wrong
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_add_child" file="private/core/lv_obj_private.h" line={174} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/core/lv_obj_private.h#L174">
+
+### lv_obj_add_child
+
+```c
+lv_result_t lv_obj_add_child(lv_obj_t *parent, lv_obj_t *child)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `child` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_remove_child" file="private/core/lv_obj_private.h" line={175} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/core/lv_obj_private.h#L175">
+
+### lv_obj_remove_child
+
+```c
+void lv_obj_remove_child(lv_obj_t *parent, lv_obj_t *child)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| `child` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_obj_spec_attr_t">
+
+### _lv_obj_spec_attr_t
+
+Special, rarely used attributes. They are allocated automatically if any elements is set.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `children` | <ApiLink name="lv_obj_t" display="lv_obj_t **" /> | Store the pointer of the children in an array. |
+| `group_p` | <ApiLink name="lv_group_t" display="lv_group_t *" /> |  |
+| `event_list` | <ApiLink name="lv_event_list_t" /> |  |
+| `name` | `const char *` | Pointer to the name |
+| `scroll` | <ApiLink name="lv_point_t" /> | The current X/Y scroll offset |
+| `ext_click_pad` | `int32_t` | Extra click padding in all direction |
+| `ext_draw_size` | `int32_t` | EXTend the size in every direction for drawing. |
+| `child_cnt` | `uint16_t` | Number of children |
+| `scrollbar_mode` | `uint16_t` | How to display scrollbars, see `lv_scrollbar_mode_t` |
+| `scroll_snap_x` | `uint16_t` | Where to align the snappable children horizontally, see `lv_scroll_snap_t` |
+| `scroll_snap_y` | `uint16_t` | Where to align the snappable children vertically |
+| `scroll_dir` | `uint16_t` | The allowed scroll direction(s), see `lv_dir_t` |
+| `layer_type` | `uint16_t` | Cache the layer type here. Element of lv_intermediate_layer_type_t |
+| `name_static` | `uint16_t` | 1: `name` was not dynamically allocated |
+| `user_flags` | `uint16_t` | Store custom flags |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_obj_t">
+
+### _lv_obj_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `ext_data` | <ApiLink name="lv_ext_data_t" /> |  |
+| `class_p` | <ApiLink name="lv_obj_class_t" display="const lv_obj_class_t *" /> |  |
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `spec_attr` | <ApiLink name="lv_obj_spec_attr_t" display="lv_obj_spec_attr_t *" /> |  |
+| `styles` | <ApiLink name="lv_obj_style_t" display="lv_obj_style_t *" /> |  |
+| `user_data` | `void *` |  |
+| `id` | `void *` |  |
+| `coords` | <ApiLink name="lv_area_t" /> |  |
+| `hidden` | `uint32_t` | Make the object hidden. (Like it wasn't there at all) |
+| `clickable` | `uint32_t` | Make the object clickable by the input devices |
+| `click_focusable` | `uint32_t` | Add focused state to the object when clicked |
+| `checkable` | `uint32_t` | Toggle checked state when the object is clicked |
+| `scrollable` | `uint32_t` | Make the object scrollable |
+| `scroll_elastic` | `uint32_t` | Allow scrolling inside but with slower speed |
+| `scroll_momentum` | `uint32_t` | Make the object scroll further when "thrown" |
+| `scroll_one` | `uint32_t` | Allow scrolling only one snappable child |
+| `scroll_chain_hor` | `uint32_t` | Allow propagating the horizontal scroll to a parent |
+| `scroll_chain_ver` | `uint32_t` | Allow propagating the vertical scroll to a parent |
+| `scroll_on_focus` | `uint32_t` | Automatically scroll object to make it visible when focused |
+| `scroll_with_arrow` | `uint32_t` | Allow scrolling the focused object with arrow keys |
+| `snappable` | `uint32_t` | If scroll snap is enabled on the parent it can snap to this object |
+| `press_lock` | `uint32_t` | Keep the object pressed even if the press slid from the object |
+| `event_bubble` | `uint32_t` | Propagate the events to the parent too |
+| `gesture_bubble` | `uint32_t` | Propagate the gestures to the parent |
+| `adv_hittest` | `uint32_t` | Allow performing more accurate hit (click) test |
+| `ignore_layout` | `uint32_t` | Make the object not positioned by the layouts |
+| `floating` | `uint32_t` | Do not scroll the object when the parent scrolls and ignore layout |
+| `send_draw_task_events` | `uint32_t` | Send LV_EVENT_DRAW_TASK_ADDED events |
+| `overflow_visible` | `uint32_t` | Do not clip the children to the parent's ext draw size |
+| `event_trickle` | `uint32_t` | Propagate the events to the children too |
+| `state_trickle` | `uint32_t` | Propagate the states to the children too |
+| `radio_button` | `uint32_t` | Allow only one RADIO_BUTTON sibling to be checked |
+| `state` | `uint16_t` |  |
+| `layout_inv` | `uint16_t` |  |
+| `readjust_scroll_after_layout` | `uint16_t` |  |
+| `scr_layout_inv` | `uint16_t` |  |
+| `skip_trans` | `uint16_t` |  |
+| `style_cnt` | `uint16_t` |  |
+| `h_layout` | `uint16_t` |  |
+| `w_layout` | `uint16_t` |  |
+| `h_ignore_size` | `uint16_t` |  |
+| `w_ignore_size` | `uint16_t` |  |
+| `is_deleting` | `uint16_t` |  |
+| `rendered` | `uint16_t` | The widget is rendered at least once already. It's used to skip initial animations and transitions. |
+
+
+</ApiMember>
+
+<TypeUsedBy name="_lv_obj_t" count={1}>
+
+- `lv_screen_load` — param `scr`
+
+</TypeUsedBy>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_obj_spec_attr_t" file="private/core/lv_obj_private.h" line={54} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/core/lv_obj_private.h#L54">
+
+### lv_obj_spec_attr_t
+
+```c
+typedef struct _lv_obj_spec_attr_t lv_obj_spec_attr_t
+```
+
+Special, rarely used attributes. They are allocated automatically if any elements is set.
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lvgl_private.h", "lv_file_explorer_private.h", "lv_3dtexture_private.h", "lv_arc_private.h", "lv_arclabel_private.h", "lv_bar_private.h", "lv_button_private.h", "lv_buttonmatrix_private.h", "lv_calendar_private.h", "lv_chart_private.h", "lv_checkbox_private.h", "lv_dropdown_private.h", "lv_image_private.h", "lv_imagebutton_private.h", "lv_ime_pinyin_private.h", "lv_keyboard_private.h", "lv_label_private.h", "lv_led_private.h", "lv_line_private.h", "lv_lottie_private.h", "lv_menu_private.h", "lv_msgbox_private.h", "lv_roller_private.h", "lv_scale_private.h", "lv_slider_private.h", "lv_span_private.h", "lv_spinbox_private.h", "lv_spinner_private.h", "lv_switch_private.h", "lv_table_private.h", "lv_tabview_private.h", "lv_textarea_private.h", "lv_tileview_private.h", "lv_win_private.h"]}
+/>

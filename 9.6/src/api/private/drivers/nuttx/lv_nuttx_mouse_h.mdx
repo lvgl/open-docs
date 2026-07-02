@@ -1,0 +1,36 @@
+---
+title: lv_nuttx_mouse.h
+description: API reference for lv_nuttx_mouse.h
+api:
+  functions: [lv_nuttx_mouse_create]
+---
+
+<ApiSummary functions={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_nuttx_mouse_create" file="private/drivers/nuttx/lv_nuttx_mouse.h" line={43} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/nuttx/lv_nuttx_mouse.h#L43">
+
+### lv_nuttx_mouse_create
+
+Initialize indev with specified input device.
+
+```c
+lv_indev_t * lv_nuttx_mouse_create(const char *dev_path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dev_path` | `const char *` | path of input device |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

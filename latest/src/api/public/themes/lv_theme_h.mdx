@@ -1,0 +1,313 @@
+---
+title: lv_theme.h
+description: API reference for lv_theme.h
+api:
+  functions: [lv_theme_create, lv_theme_copy, lv_theme_get_from_obj, lv_theme_apply, lv_theme_set_parent, lv_theme_set_apply_cb, lv_theme_get_font_small, lv_theme_get_font_normal, lv_theme_get_font_large, lv_theme_get_color_primary, lv_theme_get_color_secondary, lv_theme_delete, lv_theme_set_external_data]
+  typedefs: [lv_theme_apply_cb_t]
+---
+
+<RelatedHeaders name="lv_theme_private.h" isPrivate={false} />
+
+<ApiSummary functions={13} typedefs={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (3)","Getters (6)","Other (4)"]}>
+<ApiTab value="Setters (3)">
+
+<ApiMember kind="function" name="lv_theme_set_parent" file="public/themes/lv_theme.h" line={65} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L65">
+
+### lv_theme_set_parent
+
+Set a base theme for a theme. The styles from the base them will be added before the styles of the current theme. Arbitrary long chain of themes can be created by setting base themes.
+
+```c
+void lv_theme_set_parent(lv_theme_t *theme, lv_theme_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `theme` | <ApiLink name="lv_theme_t" display="lv_theme_t *" /> | pointer to theme which base should be set |
+| `parent` | <ApiLink name="lv_theme_t" display="lv_theme_t *" /> | pointer to the base theme |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_set_apply_cb" file="public/themes/lv_theme.h" line={73} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L73">
+
+### lv_theme_set_apply_cb
+
+Set an apply callback for a theme. The apply callback is used to add styles to different objects
+
+```c
+void lv_theme_set_apply_cb(lv_theme_t *theme, lv_theme_apply_cb_t apply_cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `theme` | <ApiLink name="lv_theme_t" display="lv_theme_t *" /> | pointer to theme which callback should be set |
+| `apply_cb` | <ApiLink name="lv_theme_apply_cb_t" /> | pointer to the callback |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_set_external_data" file="public/themes/lv_theme.h" line={129} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L129">
+
+### lv_theme_set_external_data
+
+Attaches external user data and destructor callback to the theme.
+
+Associates custom user data with an LVGL theme and specifies a destructor function that will be automatically invoked when the theme is deleted to properly clean up the associated resources.
+
+```c
+void lv_theme_set_external_data(lv_theme_t *theme, void *data, void(*free_cb)(void *data))
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `theme` | <ApiLink name="lv_theme_t" display="lv_theme_t *" /> | Pointer to theme which callback should be set |
+| `data` | `void *` | User-defined data pointer to associate with the theme |
+| `free_cb` | `void(*)(void *data)` | Callback function for cleaning up ext_data when theme is deleted. Receives ext_data as parameter. NULL means no cleanup required. |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (6)">
+
+<ApiMember kind="function" name="lv_theme_get_from_obj" file="public/themes/lv_theme.h" line={50} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L50">
+
+### lv_theme_get_from_obj
+
+Get the theme assigned to the display of the object
+
+```c
+lv_theme_t * lv_theme_get_from_obj(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a theme object |
+
+**Returns:** <ApiLink name="lv_theme_t" display="lv_theme_t *" /> — the theme of the object's display (can be NULL)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_get_font_small" file="public/themes/lv_theme.h" line={80} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L80">
+
+### lv_theme_get_font_small
+
+Get the small font of the theme
+
+```c
+const lv_font_t * lv_theme_get_font_small(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+
+**Returns:** <ApiLink name="lv_font_t" display="const lv_font_t *" /> — pointer to the font
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_get_font_normal" file="public/themes/lv_theme.h" line={86} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L86">
+
+### lv_theme_get_font_normal
+
+Get the normal font of the theme
+
+```c
+const lv_font_t * lv_theme_get_font_normal(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+
+**Returns:** <ApiLink name="lv_font_t" display="const lv_font_t *" /> — pointer to the font
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_get_font_large" file="public/themes/lv_theme.h" line={93} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L93">
+
+### lv_theme_get_font_large
+
+Get the subtitle font of the theme
+
+```c
+const lv_font_t * lv_theme_get_font_large(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+
+**Returns:** <ApiLink name="lv_font_t" display="const lv_font_t *" /> — pointer to the font
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_get_color_primary" file="public/themes/lv_theme.h" line={100} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L100">
+
+### lv_theme_get_color_primary
+
+Get the primary color of the theme
+
+```c
+lv_color_t lv_theme_get_color_primary(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+
+**Returns:** <ApiLink name="lv_color_t" /> — the color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_get_color_secondary" file="public/themes/lv_theme.h" line={107} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L107">
+
+### lv_theme_get_color_secondary
+
+Get the secondary color of the theme
+
+```c
+lv_color_t lv_theme_get_color_secondary(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+
+**Returns:** <ApiLink name="lv_color_t" /> — the color
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (4)">
+
+<ApiMember kind="function" name="lv_theme_create" file="public/themes/lv_theme.h" line={36} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L36">
+
+### lv_theme_create
+
+Creates a new theme
+
+```c
+lv_theme_t * lv_theme_create(void)
+```
+
+**Returns:** <ApiLink name="lv_theme_t" display="lv_theme_t *" /> — the new theme or NULL if allocation failed
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_copy" file="public/themes/lv_theme.h" line={43} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L43">
+
+### lv_theme_copy
+
+Copy 'src' theme into 'dst'
+
+```c
+void lv_theme_copy(lv_theme_t *dst, const lv_theme_t *src)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dst` | <ApiLink name="lv_theme_t" display="lv_theme_t *" /> | pointer to the destination theme |
+| `src` | <ApiLink name="lv_theme_t" display="const lv_theme_t *" /> | pointer to the source theme |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_apply" file="public/themes/lv_theme.h" line={56} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L56">
+
+### lv_theme_apply
+
+Apply the active theme on an object
+
+```c
+void lv_theme_apply(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_delete" file="public/themes/lv_theme.h" line={114} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L114">
+
+### lv_theme_delete
+
+Delete a theme
+
+```c
+void lv_theme_delete(lv_theme_t *theme)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `theme` | <ApiLink name="lv_theme_t" display="lv_theme_t *" /> | the theme to destroy |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_theme_apply_cb_t" file="public/themes/lv_theme.h" line={26} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme.h#L26">
+
+### lv_theme_apply_cb_t
+
+```c
+typedef void(* lv_theme_apply_cb_t) (lv_theme_t *, lv_obj_t *)
+```
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_theme_apply_cb_t" count={1}>
+
+- `lv_theme_set_apply_cb` — param `apply_cb`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj.h", "lv_theme_default.h", "lv_theme_mono.h", "lv_theme_simple.h"]}
+  includedBy={["lvgl.h", "lv_theme_default.h", "lv_theme_mono.h", "lv_theme_simple.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_timer.h", "lv_types.h"]}
+/>

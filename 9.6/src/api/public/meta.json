@@ -1,0 +1,29 @@
+{
+  "title": "Public API",
+  "pages": [
+    "3d",
+    "api_map",
+    "config",
+    "core",
+    "debugging",
+    "display",
+    "draw",
+    "drivers",
+    "font",
+    "fs",
+    "image",
+    "indev",
+    "layouts",
+    "logging",
+    "misc",
+    "osal",
+    "others",
+    "stdlib",
+    "themes",
+    "tick",
+    "widgets",
+    "lv_types_h",
+    "lv_version_h",
+    "lvgl_h"
+  ]
+}

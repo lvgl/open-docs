@@ -1,0 +1,90 @@
+---
+title: lv_theme_simple.h
+description: API reference for lv_theme_simple.h
+api:
+  functions: [lv_theme_simple_init, lv_theme_simple_is_inited, lv_theme_simple_get, lv_theme_simple_deinit]
+---
+
+<ApiSummary functions={4} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (3)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_theme_simple_get" file="public/themes/lv_theme_simple.h" line={50} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme_simple.h#L50">
+
+### lv_theme_simple_get
+
+Get simple theme
+
+```c
+lv_theme_t * lv_theme_simple_get(void)
+```
+
+**Returns:** <ApiLink name="lv_theme_t" display="lv_theme_t *" /> — a pointer to simple theme, or NULL if this is not initialized
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_theme_simple_init" file="public/themes/lv_theme_simple.h" line={38} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme_simple.h#L38">
+
+### lv_theme_simple_init
+
+Initialize the theme
+
+```c
+lv_theme_t * lv_theme_simple_init(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display |
+
+**Returns:** <ApiLink name="lv_theme_t" display="lv_theme_t *" /> — a pointer to reference this theme later
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_simple_is_inited" file="public/themes/lv_theme_simple.h" line={44} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme_simple.h#L44">
+
+### lv_theme_simple_is_inited
+
+Check if the theme is initialized
+
+```c
+bool lv_theme_simple_is_inited(void)
+```
+
+**Returns:** `bool` — true if default theme is initialized, false otherwise
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_theme_simple_deinit" file="public/themes/lv_theme_simple.h" line={55} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/themes/lv_theme_simple.h#L55">
+
+### lv_theme_simple_deinit
+
+Deinitialize the simple theme
+
+```c
+void lv_theme_simple_deinit(void)
+```
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lv_theme.h", "lv_display.h"]}
+  includedBy={["lvgl.h", "lv_theme.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_theme_default.h", "lv_theme_mono.h", "lv_timer.h", "lv_types.h"]}
+/>

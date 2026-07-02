@@ -1,0 +1,54 @@
+---
+title: lv_check_obj.h
+description: API reference for lv_check_obj.h
+api:
+  macros: [LV_CHECK_OBJ_CLASS, LV_CHECK_OBJ_VALID, LV_CHECK_OBJ]
+---
+
+<ApiSummary macros={3} />
+
+## Macros
+
+<ApiMember kind="macro" name="LV_CHECK_OBJ_CLASS" file="public/debugging/lv_check_obj.h" line={52} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/debugging/lv_check_obj.h#L52">
+
+### LV_CHECK_OBJ_CLASS
+
+```c
+#define LV_CHECK_OBJ_CLASS(obj, cls, action) \
+    LV_CHECK_ARG(obj != NULL, action);
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_CHECK_OBJ_VALID" file="public/debugging/lv_check_obj.h" line={68} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/debugging/lv_check_obj.h#L68">
+
+### LV_CHECK_OBJ_VALID
+
+```c
+#define LV_CHECK_OBJ_VALID(obj, cls, action) \
+    LV_CHECK_OBJ_CLASS(obj, cls, action);
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_CHECK_OBJ" file="public/debugging/lv_check_obj.h" line={71} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/debugging/lv_check_obj.h#L71">
+
+### LV_CHECK_OBJ
+
+```c
+#define LV_CHECK_OBJ(obj, cls, action) \
+    LV_CHECK_OBJ_VALID(obj, cls, action)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lv_log.h", "lv_check_arg.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_assert.h", "lv_mem.h", "lv_types.h"]}
+/>

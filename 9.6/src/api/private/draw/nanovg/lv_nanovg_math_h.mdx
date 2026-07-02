@@ -1,0 +1,247 @@
+---
+title: lv_nanovg_math.h
+description: API reference for lv_nanovg_math.h
+api:
+  functions: [nvg_math_is_zero, nvg_math_is_equal, nvg_math_inv_sqrtf]
+  macros: [NVG_MATH_PI, NVG_MATH_HALF_PI, NVG_MATH_TWO_PI, NVG_DEG_TO_RAD, NVG_RAD_TO_DEG, NVG_MATH_TANF, NVG_MATH_SINF, NVG_MATH_COSF, NVG_MATH_ASINF, NVG_MATH_ACOSF, NVG_MATH_FABSF, NVG_MATH_SQRTF, NVG_MATH_RADIANS, NVG_MATH_DEGREES]
+---
+
+<ApiSummary functions={3} macros={14} />
+
+## Functions
+
+<ApiMember kind="function" name="nvg_math_is_zero" file="private/draw/nanovg/lv_nanovg_math.h" line={59} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L59">
+
+### nvg_math_is_zero
+
+Check if the floating point number is zero
+
+```c
+static bool nvg_math_is_zero(float a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | `float` | the number to check |
+
+**Returns:** `bool` — true if the number is zero, false otherwise
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="nvg_math_is_equal" file="private/draw/nanovg/lv_nanovg_math.h" line={70} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L70">
+
+### nvg_math_is_equal
+
+Check if two floating point numbers are equal
+
+```c
+static bool nvg_math_is_equal(float a, float b)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `a` | `float` | the first number |
+| `b` | `float` | the second number |
+
+**Returns:** `bool` — true if the numbers are equal, false otherwise
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="nvg_math_inv_sqrtf" file="private/draw/nanovg/lv_nanovg_math.h" line={80} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L80">
+
+### nvg_math_inv_sqrtf
+
+Calculate the inverse square root (1/sqrt(x))
+
+```c
+static float nvg_math_inv_sqrtf(float number)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `number` | `float` | the input number |
+
+**Returns:** `float` — the inverse square root
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="NVG_MATH_PI" file="private/draw/nanovg/lv_nanovg_math.h" line={29} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L29">
+
+### NVG_MATH_PI
+
+```c
+#define NVG_MATH_PI 3.14159265358979323846f
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_MATH_HALF_PI" file="private/draw/nanovg/lv_nanovg_math.h" line={30} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L30">
+
+### NVG_MATH_HALF_PI
+
+```c
+#define NVG_MATH_HALF_PI 1.57079632679489661923f
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_MATH_TWO_PI" file="private/draw/nanovg/lv_nanovg_math.h" line={31} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L31">
+
+### NVG_MATH_TWO_PI
+
+```c
+#define NVG_MATH_TWO_PI 6.28318530717958647692f
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_DEG_TO_RAD" file="private/draw/nanovg/lv_nanovg_math.h" line={32} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L32">
+
+### NVG_DEG_TO_RAD
+
+```c
+#define NVG_DEG_TO_RAD 0.017453292519943295769236907684886f
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_RAD_TO_DEG" file="private/draw/nanovg/lv_nanovg_math.h" line={33} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L33">
+
+### NVG_RAD_TO_DEG
+
+```c
+#define NVG_RAD_TO_DEG 57.295779513082320876798154814105f
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_MATH_TANF" file="private/draw/nanovg/lv_nanovg_math.h" line={35} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L35">
+
+### NVG_MATH_TANF
+
+```c
+#define NVG_MATH_TANF(x) \
+    tanf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_MATH_SINF" file="private/draw/nanovg/lv_nanovg_math.h" line={36} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L36">
+
+### NVG_MATH_SINF
+
+```c
+#define NVG_MATH_SINF(x) \
+    sinf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_MATH_COSF" file="private/draw/nanovg/lv_nanovg_math.h" line={37} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L37">
+
+### NVG_MATH_COSF
+
+```c
+#define NVG_MATH_COSF(x) \
+    cosf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_MATH_ASINF" file="private/draw/nanovg/lv_nanovg_math.h" line={38} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L38">
+
+### NVG_MATH_ASINF
+
+```c
+#define NVG_MATH_ASINF(x) \
+    asinf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_MATH_ACOSF" file="private/draw/nanovg/lv_nanovg_math.h" line={39} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L39">
+
+### NVG_MATH_ACOSF
+
+```c
+#define NVG_MATH_ACOSF(x) \
+    acosf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_MATH_FABSF" file="private/draw/nanovg/lv_nanovg_math.h" line={40} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L40">
+
+### NVG_MATH_FABSF
+
+```c
+#define NVG_MATH_FABSF(x) \
+    fabsf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_MATH_SQRTF" file="private/draw/nanovg/lv_nanovg_math.h" line={41} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L41">
+
+### NVG_MATH_SQRTF
+
+```c
+#define NVG_MATH_SQRTF(x) \
+    sqrtf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_MATH_RADIANS" file="private/draw/nanovg/lv_nanovg_math.h" line={43} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L43">
+
+### NVG_MATH_RADIANS
+
+```c
+#define NVG_MATH_RADIANS(deg) \
+    ((deg) * NVG_DEG_TO_RAD)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="NVG_MATH_DEGREES" file="private/draw/nanovg/lv_nanovg_math.h" line={44} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nanovg/lv_nanovg_math.h#L44">
+
+### NVG_MATH_DEGREES
+
+```c
+#define NVG_MATH_DEGREES(rad) \
+    ((rad) * NVG_RAD_TO_DEG)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "math.h", "stdbool.h", "float.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

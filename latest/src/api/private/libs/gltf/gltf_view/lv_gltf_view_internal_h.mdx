@@ -1,0 +1,313 @@
+---
+title: lv_gltf_view_internal.h
+description: API reference for lv_gltf_view_internal.h
+api:
+  functions: [lv_gltf_view_render, lv_gltf_view_shader_injest_discover_defines]
+  structs: [lv_gltf_renwin_state_t, lv_gltf_view_state_t, lv_gltf_view_desc_t, lv_opengl_state_t, lv_gltf_model_data_t, _lv_gltf_t]
+  macros: [LV_GLTF_GAMMA_BRIGHTEST, LV_GLTF_GAMMA_BRIGHTER, LV_GLTF_GAMMA_BRIGHT, LV_GLTF_GAMMA_STANDARD, LV_GLTF_GAMMA_DARK, LV_GLTF_GAMMA_DARKER, LV_GLTF_GAMMA_DARKEST, LV_GLTF_DISTANCE_SCALE_FACTOR, LV_GLTF_TRANSMISSION_PASS_SIZE, LV_GLTF_LINEAR_OUTPUT, LV_GLTF_TONEMAP_GAMMA]
+---
+
+<ApiSummary functions={2} structs={6} macros={11} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_gltf_view_render" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={188} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L188">
+
+### lv_gltf_view_render
+
+```c
+GLuint lv_gltf_view_render(lv_gltf_t *viewer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `viewer` | <ApiLink name="lv_gltf_t" display="lv_gltf_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_view_shader_injest_discover_defines" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={189} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L189">
+
+### lv_gltf_view_shader_injest_discover_defines
+
+```c
+lv_result_t lv_gltf_view_shader_injest_discover_defines(lv_array_t *result, lv_gltf_model_t *data, fastgltf::Node *node, fastgltf::Primitive *prim)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `result` | <ApiLink name="lv_array_t" display="lv_array_t *" /> |
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `node` | `fastgltf::Node *` |
+| `prim` | `fastgltf::Primitive *` |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_gltf_renwin_state_t">
+
+### lv_gltf_renwin_state_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `texture` | `uint32_t` |  |
+| `renderbuffer` | `uint32_t` |  |
+| `framebuffer` | `unsigned` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_gltf_view_state_t">
+
+### lv_gltf_view_state_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `render_state` | <ApiLink name="lv_gltf_renwin_state_t" /> |  |
+| `opaque_render_state` | <ApiLink name="lv_gltf_renwin_state_t" /> |  |
+| `opaque_frame_buffer_width` | `uint64_t` |  |
+| `opaque_frame_buffer_height` | `uint64_t` |  |
+| `material_variant` | `uint32_t` |  |
+| `render_state_ready` | `bool` |  |
+| `render_opaque_buffer` | `bool` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_gltf_view_desc_t">
+
+### lv_gltf_view_desc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `pitch` | `float` |  |
+| `yaw` | `float` |  |
+| `distance` | `float` |  |
+| `fov` | `float` |  |
+| `render_width` | `int32_t` |  |
+| `render_height` | `int32_t` |  |
+| `focal_x` | `float` |  |
+| `focal_y` | `float` |  |
+| `focal_z` | `float` |  |
+| `frame_was_antialiased` | `bool` |  |
+| `aa_mode` | <ApiLink name="lv_gltf_aa_mode_t" /> |  |
+| `bg_mode` | <ApiLink name="lv_gltf_bg_mode_t" /> |  |
+| `blur_bg` | `float` |  |
+| `env_pow` | `float` | How much to blur the environment background, between 0.0 and 1.0 |
+| `exposure` | `float` | Environmental brightness, 1.8 by default |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_opengl_state_t">
+
+### lv_opengl_state_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `blend_enabled` | `GLboolean` |  |
+| `blend_src` | `GLint` |  |
+| `blend_dst` | `GLint` |  |
+| `blend_equation` | `GLint` |  |
+| `depth_test_enabled` | `GLboolean` |  |
+| `depth_mask` | `GLboolean` |  |
+| `depth_func` | `GLint` |  |
+| `cull_face_enabled` | `GLboolean` |  |
+| `cull_face_mode` | `GLint` |  |
+| `front_face` | `GLint` |  |
+| `stencil_test_enabled` | `GLboolean` |  |
+| `stencil_mask` | `GLuint` |  |
+| `stencil_func` | `GLint` |  |
+| `stencil_ref` | `GLint` |  |
+| `stencil_value_mask` | `GLuint` |  |
+| `current_vao` | `GLuint` |  |
+| `current_vbo` | `GLuint` |  |
+| `current_ibo` | `GLuint` |  |
+| `current_program` | `GLuint` |  |
+| `active_texture` | `GLint` |  |
+| `bound_texture_2d` | `GLuint` |  |
+| `viewport` | `GLint[4]` |  |
+| `scissor_test_enabled` | `GLboolean` |  |
+| `scissor_box` | `GLint[4]` |  |
+| `clear_depth` | `GLfloat` |  |
+| `clear_color` | `GLfloat[4]` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_gltf_model_data_t">
+
+### lv_gltf_model_data_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `model` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |  |
+| `skin_textures` | <ApiLink name="lv_array_t" /> |  |
+| `last_camera_index` | `uint32_t` |  |
+| `owned` | `bool` |  |
+| `last_frame_was_antialiased` | `bool` |  |
+| `last_frame_no_motion` | `bool` |  |
+| `_last_frame_no_motion` | `bool` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_gltf_t">
+
+### _lv_gltf_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `texture` | <ApiLink name="lv_3dtexture_t" /> |  |
+| `models` | <ApiLink name="lv_array_t" /> |  |
+| `state` | <ApiLink name="lv_gltf_view_state_t" /> |  |
+| `desc` | <ApiLink name="lv_gltf_view_desc_t" /> |  |
+| `last_desc` | <ApiLink name="lv_gltf_view_desc_t" /> |  |
+| `shader_manager` | <ApiLink name="lv_opengl_shader_manager_t" /> |  |
+| `model_loader` | <ApiLink name="lv_gltf_model_loader_t" display="lv_gltf_model_loader_t *" /> |  |
+| `environment` | <ApiLink name="lv_gltf_environment_t" display="lv_gltf_environment_t *" /> |  |
+| `view_matrix` | `fastgltf::math::fmat4x4` |  |
+| `projection_matrix` | `fastgltf::math::fmat4x4` |  |
+| `view_projection_matrix` | `fastgltf::math::fmat4x4` |  |
+| `camera_pos` | `fastgltf::math::fvec3` |  |
+| `owns_environment` | `bool` |  |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_GLTF_GAMMA_BRIGHTEST" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={32} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L32">
+
+### LV_GLTF_GAMMA_BRIGHTEST
+
+```c
+#define LV_GLTF_GAMMA_BRIGHTEST "3.5"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_GAMMA_BRIGHTER" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={33} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L33">
+
+### LV_GLTF_GAMMA_BRIGHTER
+
+```c
+#define LV_GLTF_GAMMA_BRIGHTER "3.0"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_GAMMA_BRIGHT" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={34} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L34">
+
+### LV_GLTF_GAMMA_BRIGHT
+
+```c
+#define LV_GLTF_GAMMA_BRIGHT "2.6"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_GAMMA_STANDARD" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={35} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L35">
+
+### LV_GLTF_GAMMA_STANDARD
+
+```c
+#define LV_GLTF_GAMMA_STANDARD "2.2"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_GAMMA_DARK" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={36} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L36">
+
+### LV_GLTF_GAMMA_DARK
+
+```c
+#define LV_GLTF_GAMMA_DARK "1.8"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_GAMMA_DARKER" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={37} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L37">
+
+### LV_GLTF_GAMMA_DARKER
+
+```c
+#define LV_GLTF_GAMMA_DARKER "1.3"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_GAMMA_DARKEST" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={38} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L38">
+
+### LV_GLTF_GAMMA_DARKEST
+
+```c
+#define LV_GLTF_GAMMA_DARKEST "0.8"
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_DISTANCE_SCALE_FACTOR" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={40} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L40">
+
+### LV_GLTF_DISTANCE_SCALE_FACTOR
+
+```c
+#define LV_GLTF_DISTANCE_SCALE_FACTOR 2.5f
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_TRANSMISSION_PASS_SIZE" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={41} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L41">
+
+### LV_GLTF_TRANSMISSION_PASS_SIZE
+
+```c
+#define LV_GLTF_TRANSMISSION_PASS_SIZE 256
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_LINEAR_OUTPUT" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={49} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L49">
+
+### LV_GLTF_LINEAR_OUTPUT
+
+```c
+#define LV_GLTF_LINEAR_OUTPUT 1
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_TONEMAP_GAMMA" file="private/libs/gltf/gltf_view/lv_gltf_view_internal.h" line={56} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_view/lv_gltf_view_internal.h#L56">
+
+### LV_GLTF_TONEMAP_GAMMA
+
+```c
+#define LV_GLTF_TONEMAP_GAMMA LV_GLTF_GAMMA_STANDARD
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_opengl_shader_internal.h", "lv_3dtexture_private.h", "lv_gltf_data_internal.h", "math.hpp", "types.hpp", "map"]}
+  includedBy={["lvgl_private.h"]}
+  transitiveIncludes={["lv_obj_private.h", "lv_opengles_debug.h", "lv_opengles_private.h", "lv_rb_private.h"]}
+/>

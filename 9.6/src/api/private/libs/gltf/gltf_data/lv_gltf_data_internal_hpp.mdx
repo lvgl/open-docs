@@ -1,0 +1,1160 @@
+---
+title: lv_gltf_data_internal.hpp
+description: API reference for lv_gltf_data_internal.hpp
+api:
+  functions: [lv_gltf_data_get_texture, lv_gltf_data_get_bounds_min, lv_gltf_data_get_bounds_max, lv_gltf_data_get_center, lv_gltf_get_filename, lv_gltf_data_centerpoint_cache_contains, lv_gltf_data_get_primitive_from_mesh, lv_gltf_data_get_asset, lv_gltf_data_get_mesh, lv_gltf_data_get_skin_texture_at, lv_gltf_data_validated_skins_contains, lv_gltf_data_validate_skin, lv_gltf_data_add_opaque_node_primitive, lv_gltf_data_add_blended_node_primitive, lv_gltf_data_get_skins_size, lv_gltf_data_get_skin, lv_gltf_data_injest_discover_defines, lv_gltf_data_get_centerpoint, lv_gltf_get_new_meshdata, lv_gltf_data_create_internal, lv_gltf_data_load_internal, lv_gltf_get_primitive_centerpoint, get_cached_centerpoint, lv_gltf_data_delete_textures, lv_gltf_data_create_texture, lv_gltf_model_node_init, lv_gltf_model_node_deinit, lv_gltf_data_get_texture_pixels, lv_gltf_data_get_animation_total_time, lv_gltf_data_animation_get_channel_set, lv_gltf_data_animation_matrix_apply, lv_gltf_model_node_get_by_internal_node, lv_gltf_model_send_new_values, lv_gltf_model_set_transforms, lv_gltf_model_clear_transforms, lv_gltf_data_get_node_transform, lv_gltf_model_has_node_transform, lv_gltf_model_needs_transforms]
+  enums: [lv_gltf_node_prop_t]
+  structs: [lv_gltf_model_node_data_t, lv_gltf_write_op_t, lv_gltf_mesh_data_t, lv_gltf_model_node_attr_t, _lv_gltf_model_node_t, _lv_gltf_model_t]
+  typedefs: [UintVector, IntVector, LongVector, NodePtr, Transform, NodeIndexPair, NodeIndexDistancePair, NodePairVector, NodeDistanceVector, MaterialIndexMap, StringNodeMap, NodeIntMap, NodeVector, NodePrimCenterMap, NodeTransformMap, IbmBySkinThenNodeMap]
+  macros: [LV_GLTF_NODE_CHANNEL_X, LV_GLTF_NODE_CHANNEL_Y, LV_GLTF_NODE_CHANNEL_Z, LV_GLTF_NODE_CHANNEL_W]
+---
+
+<ApiSummary functions={38} enums={1} structs={6} typedefs={16} macros={4} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Getters (18)","Other (18)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_gltf_data_animation_get_channel_set" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={350} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L350">
+
+### lv_gltf_data_animation_get_channel_set
+
+```c
+std::vector< uint32_t > * lv_gltf_data_animation_get_channel_set(std::size_t anim_num, lv_gltf_model_t *data, fastgltf::Node *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `anim_num` | `std::size_t` |
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `node` | `fastgltf::Node *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_set_transforms" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={361} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L361">
+
+### lv_gltf_model_set_transforms
+
+```c
+void lv_gltf_model_set_transforms(lv_gltf_model_t *model, fastgltf::Node *node, fastgltf::math::fmat4x4 M)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `model` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `node` | `fastgltf::Node *` |
+| `M` | `fastgltf::math::fmat4x4` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (18)">
+
+<ApiMember kind="function" name="lv_gltf_data_get_texture" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={153} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L153">
+
+### lv_gltf_data_get_texture
+
+Retrieve a specific texture from the GLTF model data.
+
+```c
+GLuint lv_gltf_data_get_texture(lv_gltf_model_t *data, size_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the lv_gltf_data_t object containing the model data. |
+| `index` | `size_t` | The index of the texture to retrieve. |
+
+**Returns:** `GLuint` — Pointer to the texture object.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_bounds_min" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={162} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L162">
+
+### lv_gltf_data_get_bounds_min
+
+Retrieve the minimum bounds (X/Y/Z) of the model from the GLTF data.
+
+```c
+fastgltf::math::fvec3 lv_gltf_data_get_bounds_min(const lv_gltf_model_t *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="const lv_gltf_model_t *" /> | Pointer to the lv_gltf_data_t object containing the model data. |
+
+**Returns:** `fastgltf::math::fvec3` — Pointer to a 3-element float array representing the minimum bounds.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_bounds_max" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={170} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L170">
+
+### lv_gltf_data_get_bounds_max
+
+Retrieve the maximum bounds (X/Y/Z) of the model from the GLTF data.
+
+```c
+fastgltf::math::fvec3 lv_gltf_data_get_bounds_max(const lv_gltf_model_t *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="const lv_gltf_model_t *" /> |
+
+**Returns:** `fastgltf::math::fvec3` — Pointer to a 3-element float array representing the maximum bounds.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_center" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={178} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L178">
+
+### lv_gltf_data_get_center
+
+Retrieve the center coordinates of the GLTF data object.
+
+```c
+fastgltf::math::fvec3 lv_gltf_data_get_center(const lv_gltf_model_t *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="const lv_gltf_model_t *" /> |
+
+**Returns:** `fastgltf::math::fvec3` — Pointer to an array containing the center coordinates (x, y, z).
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_get_filename" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={186} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L186">
+
+### lv_gltf_get_filename
+
+Retrieve the filename of the GLTF model.
+
+```c
+const char * lv_gltf_get_filename(const lv_gltf_model_t *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="const lv_gltf_model_t *" /> |
+
+**Returns:** `const char *` — Pointer to a constant character string representing the filename.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_primitive_from_mesh" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={205} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L205">
+
+### lv_gltf_data_get_primitive_from_mesh
+
+Retrieve a specific primitive from a mesh.
+
+```c
+lv_gltf_primitive_t * lv_gltf_data_get_primitive_from_mesh(lv_gltf_mesh_data_t *M, size_t I)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `M` | <ApiLink name="lv_gltf_mesh_data_t" display="lv_gltf_mesh_data_t *" /> | Pointer to the MeshData structure containing the mesh data. |
+| `I` | `size_t` | The index of the primitive to retrieve. |
+
+**Returns:** <ApiLink name="lv_gltf_primitive_t" display="lv_gltf_primitive_t *" /> — Pointer to the primitive data.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_asset" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={213} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L213">
+
+### lv_gltf_data_get_asset
+
+Retrieve the asset associated with the GLTF model data.
+
+```c
+fastgltf::Asset * lv_gltf_data_get_asset(lv_gltf_model_t *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+
+**Returns:** `fastgltf::Asset *` — Pointer to the asset data.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_mesh" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={222} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L222">
+
+### lv_gltf_data_get_mesh
+
+Retrieve mesh data for a specific index from the GLTF model data.
+
+```c
+lv_gltf_mesh_data_t * lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `index` | `size_t` |
+
+**Returns:** <ApiLink name="lv_gltf_mesh_data_t" display="lv_gltf_mesh_data_t *" /> — Pointer to the MeshData structure containing the mesh data.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_skin_texture_at" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={231} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L231">
+
+### lv_gltf_data_get_skin_texture_at
+
+Retrieve the skin texture index for a specific entry in the GLTF model data.
+
+```c
+GLuint lv_gltf_data_get_skin_texture_at(lv_gltf_model_t *data, size_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the lv_gltf_data_t object containing the model data. |
+| `index` | `size_t` | The index of the entry for which to retrieve the skin texture index. |
+
+**Returns:** `GLuint` — The skin texture index.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_skins_size" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={278} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L278">
+
+### lv_gltf_data_get_skins_size
+
+Retrieve the size of the skins in the GLTF model data.
+
+```c
+size_t lv_gltf_data_get_skins_size(lv_gltf_model_t *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+
+**Returns:** `size_t` — The size of the skins.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_skin" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={287} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L287">
+
+### lv_gltf_data_get_skin
+
+Retrieve a specific skin from the GLTF model data.
+
+```c
+size_t lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `index` | `size_t` |
+
+**Returns:** `size_t` — The skin index.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_centerpoint" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={307} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L307">
+
+### lv_gltf_data_get_centerpoint
+
+Retrieve the center point of a specific mesh element from the GLTF model data.
+
+```c
+fastgltf::math::fvec3 lv_gltf_data_get_centerpoint(lv_gltf_model_t *gltf_data, fastgltf::math::fmat4x4 matrix, size_t mesh_index, int32_t elem)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `gltf_data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the lv_gltf_data_t object containing the model data. |
+| `matrix` | `fastgltf::math::fmat4x4` | The transformation matrix to apply when calculating the center point. |
+| `mesh_index` | `size_t` |  |
+| `elem` | `int32_t` | The specific element index within the mesh. |
+
+**Returns:** `fastgltf::math::fvec3` — The center point as a fastgltf::math::fvec3 structure.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_get_new_meshdata" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={312} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L312">
+
+### lv_gltf_get_new_meshdata
+
+```c
+lv_gltf_mesh_data_t * lv_gltf_get_new_meshdata(lv_gltf_model_t *_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `_data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_get_primitive_centerpoint" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={319} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L319">
+
+### lv_gltf_get_primitive_centerpoint
+
+```c
+fastgltf::math::fvec4 lv_gltf_get_primitive_centerpoint(lv_gltf_model_t *data, fastgltf::Mesh &mesh, uint32_t prim_num)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `mesh` | `fastgltf::Mesh &` |
+| `prim_num` | `uint32_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_texture_pixels" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={345} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L345">
+
+### lv_gltf_data_get_texture_pixels
+
+Retrieve the pixel data for a specific texture in a GLTF model.
+
+```c
+bool lv_gltf_data_get_texture_pixels(void *pixels, lv_gltf_model_t *data_obj, uint32_t model_texture_index, uint32_t mipmapnum, uint32_t width, uint32_t height, bool has_alpha)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pixels` | `void *` | Pointer to the memory where the pixel data will be stored. |
+| `data_obj` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the lv_gltf_data_t object containing the model data. |
+| `model_texture_index` | `uint32_t` | The index of the texture in the model. |
+| `mipmapnum` | `uint32_t` | The mipmap level to retrieve pixel data for. |
+| `width` | `uint32_t` | The width of the texture. |
+| `height` | `uint32_t` | The height of the texture. |
+| `has_alpha` | `bool` | Flag indicating whether the texture includes an alpha channel. |
+
+**Returns:** `bool` — True if the pixel data was successfully retrieved, false otherwise.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_animation_total_time" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={349} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L349">
+
+### lv_gltf_data_get_animation_total_time
+
+```c
+uint32_t lv_gltf_data_get_animation_total_time(lv_gltf_model_t *data, uint32_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `index` | `uint32_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_get_by_internal_node" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={356} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L356">
+
+### lv_gltf_model_node_get_by_internal_node
+
+```c
+lv_gltf_model_node_t * lv_gltf_model_node_get_by_internal_node(lv_gltf_model_t *model, const fastgltf::Node *fastgltf_node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `model` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `fastgltf_node` | `const fastgltf::Node *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_get_node_transform" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={365} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L365">
+
+### lv_gltf_data_get_node_transform
+
+```c
+fastgltf::math::fmat4x4 lv_gltf_data_get_node_transform(lv_gltf_model_t *model, fastgltf::Node *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `model` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `node` | `fastgltf::Node *` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (18)">
+
+<ApiMember kind="function" name="lv_gltf_data_centerpoint_cache_contains" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={196} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L196">
+
+### lv_gltf_data_centerpoint_cache_contains
+
+Check if the centerpoint cache contains a specific entry.
+
+```c
+bool lv_gltf_data_centerpoint_cache_contains(lv_gltf_model_t *data, size_t index, int32_t element)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the lv_gltf_data_t object containing the model data. |
+| `index` | `size_t` | The index of the entry to check. |
+| `element` | `int32_t` | The specific parameter to check within the cache. |
+
+**Returns:** `bool` — True if the cache contains the entry, false otherwise.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_validated_skins_contains" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={240} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L240">
+
+### lv_gltf_data_validated_skins_contains
+
+Check if the validated skins contain a specific entry.
+
+```c
+bool lv_gltf_data_validated_skins_contains(lv_gltf_model_t *data, size_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the lv_gltf_data_t object containing the model data. |
+| `index` | `size_t` | The index of the skin to check. |
+
+**Returns:** `bool` — True if the validated skins contain the entry, false otherwise.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_validate_skin" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={248} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L248">
+
+### lv_gltf_data_validate_skin
+
+Validate a specific skin in the GLTF model data.
+
+```c
+void lv_gltf_data_validate_skin(lv_gltf_model_t *data, size_t index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the lv_gltf_data_t object containing the model data. |
+| `index` | `size_t` | The index of the skin to validate. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_add_opaque_node_primitive" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={258} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L258">
+
+### lv_gltf_data_add_opaque_node_primitive
+
+Add an opaque node primitive to the GLTF model data.
+
+```c
+void lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `index` | `size_t` |
+| `node` | `fastgltf::Node *` |
+| `primitive_index` | `size_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_add_blended_node_primitive" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={269} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L269">
+
+### lv_gltf_data_add_blended_node_primitive
+
+Add a blended node primitive to the GLTF model data.
+
+```c
+void lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `mesh_index` | `size_t` |
+| `node` | `fastgltf::Node *` |
+| `primitive_index` | `size_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_injest_discover_defines" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={296} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L296">
+
+### lv_gltf_data_injest_discover_defines
+
+Ingest and discover defines for a specific node and primitive in the GLTF model data.
+
+```c
+void lv_gltf_data_injest_discover_defines(lv_gltf_model_t *data, fastgltf::Node *node, fastgltf::Primitive *prim)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |  |
+| `node` | `fastgltf::Node *` | Pointer to the node for which to ingest defines. |
+| `prim` | `fastgltf::Primitive *` | Pointer to the primitive for which to ingest defines. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_create_internal" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={314} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L314">
+
+### lv_gltf_data_create_internal
+
+```c
+lv_gltf_model_t * lv_gltf_data_create_internal(const char *gltf_path, fastgltf::Asset)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `gltf_path` | `const char *` |
+| `` | `fastgltf::Asset` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_load_internal" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={316} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L316">
+
+### lv_gltf_data_load_internal
+
+```c
+lv_gltf_model_t * lv_gltf_data_load_internal(const void *data_source, size_t data_size, lv_gltf_model_loader_t *loader)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data_source` | `const void *` |
+| `data_size` | `size_t` |
+| `loader` | <ApiLink name="lv_gltf_model_loader_t" display="lv_gltf_model_loader_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="get_cached_centerpoint" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={322} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L322">
+
+### get_cached_centerpoint
+
+```c
+fastgltf::math::fvec3 get_cached_centerpoint(lv_gltf_model_t *data, size_t index, int32_t element, fastgltf::math::fmat4x4 matrix)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `index` | `size_t` |
+| `element` | `int32_t` |
+| `matrix` | `fastgltf::math::fmat4x4` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_delete_textures" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={325} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L325">
+
+### lv_gltf_data_delete_textures
+
+```c
+void lv_gltf_data_delete_textures(lv_gltf_model_t *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_create_texture" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={326} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L326">
+
+### lv_gltf_data_create_texture
+
+```c
+GLuint lv_gltf_data_create_texture(lv_gltf_model_t *data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_init" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={327} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L327">
+
+### lv_gltf_model_node_init
+
+```c
+void lv_gltf_model_node_init(lv_gltf_model_t *model, lv_gltf_model_node_t *node, fastgltf::Node *fastgltf_node, const char *path, const char *num_path)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `model` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> |
+| `fastgltf_node` | `fastgltf::Node *` |
+| `path` | `const char *` |
+| `num_path` | `const char *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_node_deinit" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={331} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L331">
+
+### lv_gltf_model_node_deinit
+
+```c
+void lv_gltf_model_node_deinit(lv_gltf_model_node_t *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `node` | <ApiLink name="lv_gltf_model_node_t" display="lv_gltf_model_node_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_data_animation_matrix_apply" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={352} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L352">
+
+### lv_gltf_data_animation_matrix_apply
+
+```c
+void lv_gltf_data_animation_matrix_apply(float timestamp, std::size_t anim_num, lv_gltf_model_t *gltf_data, fastgltf::Node *node, fastgltf::math::fmat4x4 &matrix)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `timestamp` | `float` |
+| `anim_num` | `std::size_t` |
+| `gltf_data` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `node` | `fastgltf::Node *` |
+| `matrix` | `fastgltf::math::fmat4x4 &` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_send_new_values" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={359} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L359">
+
+### lv_gltf_model_send_new_values
+
+```c
+void lv_gltf_model_send_new_values(lv_gltf_model_t *model)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `model` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_clear_transforms" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={363} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L363">
+
+### lv_gltf_model_clear_transforms
+
+```c
+void lv_gltf_model_clear_transforms(lv_gltf_model_t *model)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `model` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_has_node_transform" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={367} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L367">
+
+### lv_gltf_model_has_node_transform
+
+```c
+bool lv_gltf_model_has_node_transform(lv_gltf_model_t *model, fastgltf::Node *node)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `model` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+| `node` | `fastgltf::Node *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_model_needs_transforms" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={369} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L369">
+
+### lv_gltf_model_needs_transforms
+
+```c
+bool lv_gltf_model_needs_transforms(lv_gltf_model_t *model)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `model` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Enums
+
+<ApiMember kind="enum" name="lv_gltf_node_prop_t" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={58} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L58">
+
+### lv_gltf_node_prop_t
+
+| Name |
+|------|
+| `LV_GLTF_NODE_PROP_POSITION` |
+| `LV_GLTF_NODE_PROP_ROTATION` |
+| `LV_GLTF_NODE_PROP_SCALE` |
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="lv_gltf_model_node_data_t">
+
+### lv_gltf_model_node_data_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `local_position` | <ApiLink name="lv_3dpoint_t" /> |  |
+| `world_position` | <ApiLink name="lv_3dpoint_t" /> |  |
+| `scale` | <ApiLink name="lv_3dpoint_t" /> |  |
+| `rotation` | <ApiLink name="lv_3dpoint_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_gltf_write_op_t">
+
+### lv_gltf_write_op_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `prop` | <ApiLink name="lv_gltf_node_prop_t" /> |  |
+| `channel` | `uint8_t` |  |
+| `value` | `float` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_gltf_mesh_data_t">
+
+### lv_gltf_mesh_data_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `drawsBuffer` | `GLuint` |  |
+| `primitives` | <ApiLink name="lv_gltf_primitive_t" display="std::vector< lv_gltf_primitive_t >" /> |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_gltf_mesh_data_t" count={1}>
+
+- `lv_gltf_data_get_primitive_from_mesh` — param `M`
+
+</TypeUsedBy>
+
+<ApiMember kind="struct" name="lv_gltf_model_node_attr_t">
+
+### lv_gltf_model_node_attr_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `event_list` | <ApiLink name="lv_event_list_t" /> |  |
+| `node_data` | <ApiLink name="lv_gltf_model_node_data_t" /> |  |
+| `read_world_position` | `bool` |  |
+| `value_changed` | `bool` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_gltf_model_node_t">
+
+### _lv_gltf_model_node_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `model` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> |  |
+| `numeric_path` | `const char *` |  |
+| `path` | `const char *` |  |
+| `fastgltf_node` | `fastgltf::Node *` |  |
+| `read_attrs` | <ApiLink name="lv_gltf_model_node_attr_t" display="lv_gltf_model_node_attr_t *" /> |  |
+| `write_ops` | <ApiLink name="lv_array_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_gltf_model_t">
+
+### _lv_gltf_model_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `filename` | `const char *` |  |
+| `asset` | `fastgltf::Asset` |  |
+| `nodes` | <ApiLink name="lv_array_t" /> |  |
+| `node_by_light_index` | <ApiLink name="NodeVector" /> |  |
+| `transforms` | <ApiLink name="NodeTransformMap" /> |  |
+| `opaque_nodes_by_material_index` | <ApiLink name="MaterialIndexMap" /> |  |
+| `blended_nodes_by_material_index` | <ApiLink name="MaterialIndexMap" /> |  |
+| `ibm_by_skin_then_node` | <ApiLink name="IbmBySkinThenNodeMap" /> |  |
+| `validated_skins` | `std::vector< size_t >` |  |
+| `skin_tex` | `std::vector< GLuint >` |  |
+| `local_mesh_to_center_points_by_primitive` | <ApiLink name="NodePrimCenterMap" /> |  |
+| `viewers` | <ApiLink name="lv_array_t" /> |  |
+| `meshes` | <ApiLink name="lv_gltf_mesh_data_t" display="std::vector< lv_gltf_mesh_data_t >" /> |  |
+| `textures` | `std::vector< GLuint >` |  |
+| `compiled_shaders` | <ApiLink name="lv_array_t" /> |  |
+| `channel_set_cache` | `std::map< fastgltf::Node *, std::vector< uint32_t > >` |  |
+| `view_mat` | `fastgltf::math::fmat4x4` |  |
+| `view_pos` | `fastgltf::math::fvec3` |  |
+| `vertex_max` | `fastgltf::math::fvec3` |  |
+| `vertex_min` | `fastgltf::math::fvec3` |  |
+| `vertex_cen` | `fastgltf::math::fvec3` |  |
+| `animation_update_timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> |  |
+| `current_animation` | `size_t` |  |
+| `last_material_index` | `size_t` |  |
+| `animation_speed_ratio` | `int32_t` |  |
+| `last_anim_num` | `int32_t` |  |
+| `bound_radius` | `float` |  |
+| `current_animation_max_time` | `uint32_t` |  |
+| `local_timestamp` | `uint32_t` |  |
+| `last_tick` | `uint32_t` |  |
+| `camera` | `uint32_t` |  |
+| `transforms_changed` | `bool` |  |
+| `is_animation_enabled` | `bool` |  |
+| `last_pass_was_transmission` | `bool` |  |
+| `write_ops_pending` | `bool` |  |
+| `write_ops_flushed` | `bool` |  |
+| `linked_view_source` | <ApiLink name="_lv_gltf_model_t" display="struct _lv_gltf_model_t *" /> |  |
+
+
+</ApiMember>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="UintVector" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={21} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L21">
+
+### UintVector
+
+```c
+using UintVector =  std::vector<uint32_t>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="IntVector" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={23} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L23">
+
+### IntVector
+
+```c
+using IntVector =  std::vector<int32_t>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="LongVector" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={25} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L25">
+
+### LongVector
+
+```c
+using LongVector =  std::vector<int64_t>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="NodePtr" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={27} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L27">
+
+### NodePtr
+
+```c
+using NodePtr =  fastgltf::Node *
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="Transform" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={29} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L29">
+
+### Transform
+
+```c
+using Transform =  fastgltf::math::fmat4x4
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="NodeIndexPair" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={31} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L31">
+
+### NodeIndexPair
+
+```c
+using NodeIndexPair =  std::pair<NodePtr, size_t>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="NodeIndexDistancePair" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={33} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L33">
+
+### NodeIndexDistancePair
+
+```c
+using NodeIndexDistancePair =  std::pair<float, NodeIndexPair>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="NodePairVector" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={35} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L35">
+
+### NodePairVector
+
+```c
+using NodePairVector =  std::vector<NodeIndexPair>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="NodeDistanceVector" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={37} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L37">
+
+### NodeDistanceVector
+
+```c
+using NodeDistanceVector =  std::vector<NodeIndexDistancePair>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="MaterialIndexMap" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={39} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L39">
+
+### MaterialIndexMap
+
+```c
+using MaterialIndexMap =  std::map<uint32_t, NodePairVector>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="StringNodeMap" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={41} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L41">
+
+### StringNodeMap
+
+```c
+using StringNodeMap =  std::map<std::string, NodePtr>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="NodeIntMap" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={43} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L43">
+
+### NodeIntMap
+
+```c
+using NodeIntMap =  std::map<NodePtr, uint32_t>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="NodeVector" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={45} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L45">
+
+### NodeVector
+
+```c
+using NodeVector =  std::vector<NodePtr>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="NodePrimCenterMap" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={47} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L47">
+
+### NodePrimCenterMap
+
+```c
+using NodePrimCenterMap =  std::map<uint32_t, std::map<uint32_t, fastgltf::math::fvec4> >
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="NodeTransformMap" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={49} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L49">
+
+### NodeTransformMap
+
+```c
+using NodeTransformMap =  std::map<fastgltf::Node *, fastgltf::math::fmat4x4>
+```
+
+
+</ApiMember>
+
+<ApiMember kind="typedef" name="IbmBySkinThenNodeMap" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={51} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L51">
+
+### IbmBySkinThenNodeMap
+
+```c
+using IbmBySkinThenNodeMap =  std::map<int32_t, std::map<fastgltf::Node *, fastgltf::math::fmat4x4> >
+```
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_GLTF_NODE_CHANNEL_X" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={53} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L53">
+
+### LV_GLTF_NODE_CHANNEL_X
+
+```c
+#define LV_GLTF_NODE_CHANNEL_X 0
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_NODE_CHANNEL_Y" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={54} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L54">
+
+### LV_GLTF_NODE_CHANNEL_Y
+
+```c
+#define LV_GLTF_NODE_CHANNEL_Y 1
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_NODE_CHANNEL_Z" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={55} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L55">
+
+### LV_GLTF_NODE_CHANNEL_Z
+
+```c
+#define LV_GLTF_NODE_CHANNEL_Z 2
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_GLTF_NODE_CHANNEL_W" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.hpp" line={56} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp#L56">
+
+### LV_GLTF_NODE_CHANNEL_W
+
+```c
+#define LV_GLTF_NODE_CHANNEL_W 4
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_gltf_data_internal.h", "lv_opengles_private.h", "math.hpp", "string", "vector", "map", "types.hpp"]}
+  includedBy={["lv_fastgltf.hpp"]}
+  transitiveIncludes={["lv_opengl_shader_internal.h", "lv_opengles_debug.h", "lv_rb_private.h"]}
+/>

@@ -1,0 +1,244 @@
+---
+title: lv_fsdrv.h
+description: API reference for lv_fsdrv.h
+api:
+  functions: [lv_fs_fatfs_init, lv_fs_stdio_init, lv_fs_posix_init, lv_fs_win32_init, lv_fs_memfs_init, lv_littlefs_set_handler, lv_fs_littlefs_init, lv_fs_littlefs_register_drive, lv_fs_arduino_esp_littlefs_init, lv_fs_arduino_sd_init, lv_fs_uefi_init, lv_fs_frogfs_init, lv_fs_frogfs_deinit, lv_fs_frogfs_register_blob, lv_fs_frogfs_unregister_blob]
+  macros: [LV_FS_MAX_PATH_LEN]
+---
+
+<ApiSummary functions={15} macros={1} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Other (14)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="lv_littlefs_set_handler" file="public/fs/lv_fsdrv.h" line={59} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L59">
+
+### lv_littlefs_set_handler
+
+Set the default LittleFS handler to be used by LVGL
+
+```c
+void lv_littlefs_set_handler(struct lfs *lfs)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `lfs` | `struct lfs *` | pointer to an initialized LittleFS filesystem structure |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (14)">
+
+<ApiMember kind="function" name="lv_fs_fatfs_init" file="public/fs/lv_fsdrv.h" line={33} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L33">
+
+### lv_fs_fatfs_init
+
+```c
+void lv_fs_fatfs_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_stdio_init" file="public/fs/lv_fsdrv.h" line={37} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L37">
+
+### lv_fs_stdio_init
+
+```c
+void lv_fs_stdio_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_posix_init" file="public/fs/lv_fsdrv.h" line={41} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L41">
+
+### lv_fs_posix_init
+
+```c
+void lv_fs_posix_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_win32_init" file="public/fs/lv_fsdrv.h" line={45} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L45">
+
+### lv_fs_win32_init
+
+```c
+void lv_fs_win32_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_memfs_init" file="public/fs/lv_fsdrv.h" line={49} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L49">
+
+### lv_fs_memfs_init
+
+```c
+void lv_fs_memfs_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_littlefs_init" file="public/fs/lv_fsdrv.h" line={64} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L64">
+
+### lv_fs_littlefs_init
+
+Initialize LittleFS file system driver
+
+```c
+void lv_fs_littlefs_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_littlefs_register_drive" file="public/fs/lv_fsdrv.h" line={73} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L73">
+
+### lv_fs_littlefs_register_drive
+
+Register a LittleFS drive with LVGL
+
+```c
+lv_fs_res_t lv_fs_littlefs_register_drive(lfs_t *lfs, char letter)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `lfs` | `lfs_t *` | pointer to an initialized LittleFS filesystem structure |
+| `letter` | `char` | driver letter to register (e.g. 'A') |
+
+**Returns:** <ApiLink name="lv_fs_res_t" /> — LV_FS_RES_OK: success, LV_FS_RES_INV_PARAM: lfs is NULL or letter not in range A-Z, LV_FS_RES_DRIVE_LETTER_ALREADY_USED: A drive with this letter is already registered
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_arduino_esp_littlefs_init" file="public/fs/lv_fsdrv.h" line={77} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L77">
+
+### lv_fs_arduino_esp_littlefs_init
+
+```c
+void lv_fs_arduino_esp_littlefs_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_arduino_sd_init" file="public/fs/lv_fsdrv.h" line={81} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L81">
+
+### lv_fs_arduino_sd_init
+
+```c
+void lv_fs_arduino_sd_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_uefi_init" file="public/fs/lv_fsdrv.h" line={85} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L85">
+
+### lv_fs_uefi_init
+
+```c
+void lv_fs_uefi_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_frogfs_init" file="public/fs/lv_fsdrv.h" line={89} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L89">
+
+### lv_fs_frogfs_init
+
+```c
+void lv_fs_frogfs_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_frogfs_deinit" file="public/fs/lv_fsdrv.h" line={90} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L90">
+
+### lv_fs_frogfs_deinit
+
+```c
+void lv_fs_frogfs_deinit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_frogfs_register_blob" file="public/fs/lv_fsdrv.h" line={100} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L100">
+
+### lv_fs_frogfs_register_blob
+
+Mount a frogfs blob at the path prefix. If there is a file "foo.txt" in the blob and the blob is registered with `path_prefix` as "my_blob", it can be opened later at path "my_blob/foo.txt".
+
+```c
+lv_result_t lv_fs_frogfs_register_blob(const void *blob, const char *path_prefix)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `blob` | `const void *` | a frogfs blob/image from mkfrogfs.py |
+| `path_prefix` | `const char *` | a prefix that will be used to refer to this blob when accessing it. |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK or LV_RESULT_INVALID if there was an issue with the blob
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_fs_frogfs_unregister_blob" file="public/fs/lv_fsdrv.h" line={107} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L107">
+
+### lv_fs_frogfs_unregister_blob
+
+Unmount a frogfs blob that was previously mounted by `lv_fs_frogfs_register_blob`. All files and dirs should be closed before calling this.
+
+```c
+void lv_fs_frogfs_unregister_blob(const char *path_prefix)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `path_prefix` | `const char *` | the path prefix that the blob was registered with |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Macros
+
+<ApiMember kind="macro" name="LV_FS_MAX_PATH_LEN" file="public/fs/lv_fsdrv.h" line={22} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/fs/lv_fsdrv.h#L22">
+
+### LV_FS_MAX_PATH_LEN
+
+```c
+#define LV_FS_MAX_PATH_LEN 256
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_conf_internal.h", "lfs.h"]}
+  includedBy={["lvgl.h"]}
+/>

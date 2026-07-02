@@ -1,0 +1,59 @@
+---
+title: lv_draw_opengles.h
+description: API reference for lv_draw_opengles.h
+api:
+  functions: [lv_draw_opengles_init, lv_draw_opengles_deinit, lv_draw_opengles_clear_layer_area]
+---
+
+<ApiSummary functions={3} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_opengles_init" file="private/draw/opengles/lv_draw_opengles.h" line={33} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/opengles/lv_draw_opengles.h#L33">
+
+### lv_draw_opengles_init
+
+```c
+void lv_draw_opengles_init(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_opengles_deinit" file="private/draw/opengles/lv_draw_opengles.h" line={34} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/opengles/lv_draw_opengles.h#L34">
+
+### lv_draw_opengles_deinit
+
+```c
+void lv_draw_opengles_deinit(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_opengles_clear_layer_area" file="private/draw/opengles/lv_draw_opengles.h" line={46} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/opengles/lv_draw_opengles.h#L46">
+
+### lv_draw_opengles_clear_layer_area
+
+Clear a region of the GPU texture that backs the given layer. Needed because `lv_draw_buf_clear` operates on the CPU draw buffer, which is only a dummy placeholder when the layer is rendered to a GL texture. Without this, a transparent screen background leaves stale pixels on the texture between frames.
+
+```c
+void lv_draw_opengles_clear_layer_area(lv_layer_t *layer, const lv_area_t *area)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | layer whose backing texture must be cleared |
+| `area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | area (in layer/screen coordinates) to clear |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

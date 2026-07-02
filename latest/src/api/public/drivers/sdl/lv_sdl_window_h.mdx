@@ -1,0 +1,229 @@
+---
+title: lv_sdl_window.h
+description: API reference for lv_sdl_window.h
+api:
+  functions: [lv_sdl_window_create, lv_sdl_window_set_resizeable, lv_sdl_window_set_size, lv_sdl_window_set_zoom, lv_sdl_window_get_zoom, lv_sdl_window_set_title, lv_sdl_window_set_icon, lv_sdl_window_get_renderer, lv_sdl_quit, lv_sdl_window_get_window]
+  macros: [LV_SDL_MOUSEWHEEL_MODE_ENCODER, LV_SDL_MOUSEWHEEL_MODE_CROWN]
+---
+
+<ApiSummary functions={10} macros={2} />
+
+## Functions
+
+<ApiTabs items={["Setters (5)","Getters (3)","Other (2)"]}>
+<ApiTab value="Setters (5)">
+
+<ApiMember kind="function" name="lv_sdl_window_set_resizeable" file="public/drivers/sdl/lv_sdl_window.h" line={46} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L46">
+
+### lv_sdl_window_set_resizeable
+
+```c
+void lv_sdl_window_set_resizeable(lv_display_t *disp, bool value)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `value` | `bool` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_window_set_size" file="public/drivers/sdl/lv_sdl_window.h" line={48} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L48">
+
+### lv_sdl_window_set_size
+
+```c
+void lv_sdl_window_set_size(lv_display_t *disp, int32_t hor_res, int32_t ver_res)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `hor_res` | `int32_t` |
+| `ver_res` | `int32_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_window_set_zoom" file="public/drivers/sdl/lv_sdl_window.h" line={50} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L50">
+
+### lv_sdl_window_set_zoom
+
+```c
+void lv_sdl_window_set_zoom(lv_display_t *disp, float zoom)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `zoom` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_window_set_title" file="public/drivers/sdl/lv_sdl_window.h" line={54} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L54">
+
+### lv_sdl_window_set_title
+
+```c
+void lv_sdl_window_set_title(lv_display_t *disp, const char *title)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `title` | `const char *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_window_set_icon" file="public/drivers/sdl/lv_sdl_window.h" line={56} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L56">
+
+### lv_sdl_window_set_icon
+
+```c
+void lv_sdl_window_set_icon(lv_display_t *disp, void *icon, int32_t width, int32_t height)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `icon` | `void *` |
+| `width` | `int32_t` |
+| `height` | `int32_t` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (3)">
+
+<ApiMember kind="function" name="lv_sdl_window_get_zoom" file="public/drivers/sdl/lv_sdl_window.h" line={52} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L52">
+
+### lv_sdl_window_get_zoom
+
+```c
+float lv_sdl_window_get_zoom(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_window_get_renderer" file="public/drivers/sdl/lv_sdl_window.h" line={58} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L58">
+
+### lv_sdl_window_get_renderer
+
+```c
+void * lv_sdl_window_get_renderer(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_window_get_window" file="public/drivers/sdl/lv_sdl_window.h" line={62} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L62">
+
+### lv_sdl_window_get_window
+
+```c
+struct SDL_Window * lv_sdl_window_get_window(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_sdl_window_create" file="public/drivers/sdl/lv_sdl_window.h" line={44} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L44">
+
+### lv_sdl_window_create
+
+```c
+lv_display_t * lv_sdl_window_create(int32_t hor_res, int32_t ver_res)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `hor_res` | `int32_t` |
+| `ver_res` | `int32_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_sdl_quit" file="public/drivers/sdl/lv_sdl_window.h" line={60} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L60">
+
+### lv_sdl_quit
+
+```c
+void lv_sdl_quit(void)
+```
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Macros
+
+<ApiMember kind="macro" name="LV_SDL_MOUSEWHEEL_MODE_ENCODER" file="public/drivers/sdl/lv_sdl_window.h" line={31} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L31">
+
+### LV_SDL_MOUSEWHEEL_MODE_ENCODER
+
+```c
+#define LV_SDL_MOUSEWHEEL_MODE_ENCODER 0  /* The mousewheel emulates an encoder input device*/
+```
+
+Modified by NXP in 2025
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_SDL_MOUSEWHEEL_MODE_CROWN" file="public/drivers/sdl/lv_sdl_window.h" line={32} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/sdl/lv_sdl_window.h#L32">
+
+### LV_SDL_MOUSEWHEEL_MODE_CROWN
+
+```c
+#define LV_SDL_MOUSEWHEEL_MODE_CROWN 1  /* The mousewheel emulates a smart watch crown*/
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_display.h", "lv_indev.h"]}
+  includedBy={["lv_sdl_keyboard.h", "lv_sdl_mouse.h", "lv_sdl_mousewheel.h", "lvgl.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_event.h", "lv_group.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_timer.h", "lv_types.h"]}
+/>

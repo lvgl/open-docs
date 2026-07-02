@@ -1,0 +1,121 @@
+---
+title: lv_image_cache.h
+description: API reference for lv_image_cache.h
+api:
+  functions: [lv_image_cache_init, lv_image_cache_resize, lv_image_cache_drop, lv_image_cache_is_enabled, lv_image_cache_iter_create, lv_image_cache_dump]
+---
+
+<ApiSummary functions={6} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_image_cache_init" file="private/misc/cache/instance/lv_image_cache.h" line={38} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/misc/cache/instance/lv_image_cache.h#L38">
+
+### lv_image_cache_init
+
+Initialize image cache.
+
+```c
+lv_result_t lv_image_cache_init(uint32_t size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `size` | `uint32_t` | size of the cache in bytes. |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: initialization succeeded, LV_RESULT_INVALID: failed.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_cache_resize" file="private/misc/cache/instance/lv_image_cache.h" line={46} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/misc/cache/instance/lv_image_cache.h#L46">
+
+### lv_image_cache_resize
+
+Resize image cache. If set to 0, the cache will be disabled.
+
+```c
+void lv_image_cache_resize(uint32_t new_size, bool evict_now)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `new_size` | `uint32_t` | new size of the cache in bytes. |
+| `evict_now` | `bool` | true: evict the images should be removed by the eviction policy, false: wait for the next cache cleanup. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_cache_drop" file="private/misc/cache/instance/lv_image_cache.h" line={52} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/misc/cache/instance/lv_image_cache.h#L52">
+
+### lv_image_cache_drop
+
+Invalidate image cache. Use NULL to invalidate all images.
+
+```c
+void lv_image_cache_drop(const void *src)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `src` | `const void *` | pointer to an image source. |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_cache_is_enabled" file="private/misc/cache/instance/lv_image_cache.h" line={58} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/misc/cache/instance/lv_image_cache.h#L58">
+
+### lv_image_cache_is_enabled
+
+Return true if the image cache is enabled.
+
+```c
+bool lv_image_cache_is_enabled(void)
+```
+
+**Returns:** `bool` — true: enabled, false: disabled.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_cache_iter_create" file="private/misc/cache/instance/lv_image_cache.h" line={64} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/misc/cache/instance/lv_image_cache.h#L64">
+
+### lv_image_cache_iter_create
+
+Create an iterator to iterate over the image cache.
+
+```c
+lv_iter_t * lv_image_cache_iter_create(void)
+```
+
+**Returns:** <ApiLink name="lv_iter_t" display="lv_iter_t *" /> — an iterator to iterate over the image cache.
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_cache_dump" file="private/misc/cache/instance/lv_image_cache.h" line={69} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/misc/cache/instance/lv_image_cache.h#L69">
+
+### lv_image_cache_dump
+
+Dump the content of the image cache in a human-readable format with cache order.
+
+```c
+void lv_image_cache_dump(void)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_iter_private.h", "lv_cache.h"]}
+  includedBy={["lvgl_private.h", "lv_cache_instance.h", "lv_cache.h"]}
+  transitiveIncludes={["lv_cache_class.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_os_private.h"]}
+/>

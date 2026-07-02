@@ -1,0 +1,468 @@
+---
+title: lv_ll.h
+description: API reference for lv_ll.h
+api:
+  functions: [lv_ll_init, lv_ll_ins_head, lv_ll_ins_prev, lv_ll_ins_tail, lv_ll_remove, lv_ll_clear_custom, lv_ll_clear, lv_ll_chg_list, lv_ll_get_head, lv_ll_get_tail, lv_ll_get_next, lv_ll_get_prev, lv_ll_get_len, lv_ll_move_before, lv_ll_is_empty]
+  structs: [lv_ll_t]
+  typedefs: [lv_ll_node_t]
+  macros: [LV_LL_READ, LV_LL_READ_BACK]
+---
+
+Doubly-linked list that embeds user data directly inside each node allocation.
+
+## Memory layout
+
+Unlike a textbook linked list that holds a `data` pointer inside each node, `lv_ll` allocates a single flat block per node and places the user data at the **beginning** of that block. The `prev` / `next` bookkeeping pointers are appended **after** the user data:
+
+```c
++---------------------------------+------------------+------------------+
+|  user data  (n_size bytes,      |  prev  pointer   |  next  pointer   |
+|  rounded up for alignment)      |  (sizeof ptr)    |  (sizeof ptr)    |
+|  ^--- pointer returned to       |                  |                  |
+|       the caller                |                  |                  |
++---------------------------------+------------------+------------------+
+ offset 0                         offset n_size      offset n_size+ptrsize
+```
+
+Because the returned pointer already **is** the user data pointer, callers only need a cast — no `->data` indirection is required. This keeps usage sites clean and avoids a level of indirection on every access:
+
+```c
+my_item_t *item = lv_ll_ins_tail(&my_list);
+item->x = 10;   // write directly, no ->data needed
+```
+
+Pointer arithmetic using the offsets defined by `LL_PREV_P_OFFSET` / `LL_NEXT_P_OFFSET` (in lv_ll.c) is used internally to read and write the `prev` / `next` fields without exposing them to callers.
+
+## Ownership semantics
+
+`lv_ll` **owns the node allocation** but **not the resources referenced by the data stored in each node**.
+
+- `lv_ll_ins_head` / `lv_ll_ins_prev` / `lv_ll_ins_tail` allocate a node block with `lv_malloc` and return a pointer to it.
+- `lv_ll_remove` unlinks a node from the list but does **not** free the block — the caller must call `lv_free(node)` afterwards if appropriate.
+- `lv_ll_clear` frees every node block (the flat allocation described above). It does **not** chase any pointers stored inside the user data portion. If the stored structs themselves contain heap-allocated members, those will leak unless the caller frees them first (or last).
+- `lv_ll_clear_custom` accepts a `cleanup` callback that is invoked for each node **instead** of the default `lv_free`. Use this when the stored data needs deep cleanup:
+
+```c
+static void my_cleanup(void * node)
+{
+    my_item_t * item = node;
+    lv_free(item->inner_buf);   // free owned sub-allocation
+    lv_ll_remove(&my_list, node);
+    lv_free(node);              // free the node block itself
+}
+lv_ll_clear_custom(&my_list, my_cleanup);
+```
+
+<ApiSummary functions={15} structs={1} typedefs={1} macros={2} />
+
+## Functions
+
+<ApiTabs items={["Getters (5)","Other (10)"]}>
+<ApiTab value="Getters (5)">
+
+<ApiMember kind="function" name="lv_ll_get_head" file="public/misc/lv_ll.h" line={168} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L168">
+
+### lv_ll_get_head
+
+Return with head node of the linked list
+
+```c
+void * lv_ll_get_head(const lv_ll_t *ll_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="const lv_ll_t *" /> | pointer to linked list |
+
+**Returns:** `void *` — pointer to the head of 'll_p'
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_get_tail" file="public/misc/lv_ll.h" line={175} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L175">
+
+### lv_ll_get_tail
+
+Return with tail node of the linked list
+
+```c
+void * lv_ll_get_tail(const lv_ll_t *ll_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="const lv_ll_t *" /> | pointer to linked list |
+
+**Returns:** `void *` — pointer to the tail of 'll_p'
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_get_next" file="public/misc/lv_ll.h" line={183} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L183">
+
+### lv_ll_get_next
+
+Return with the pointer of the next node after 'n_act'
+
+```c
+void * lv_ll_get_next(const lv_ll_t *ll_p, const void *n_act)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="const lv_ll_t *" /> | pointer to linked list |
+| `n_act` | `const void *` | pointer a node |
+
+**Returns:** `void *` — pointer to the next node
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_get_prev" file="public/misc/lv_ll.h" line={191} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L191">
+
+### lv_ll_get_prev
+
+Return with the pointer of the previous node after 'n_act'
+
+```c
+void * lv_ll_get_prev(const lv_ll_t *ll_p, const void *n_act)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="const lv_ll_t *" /> | pointer to linked list |
+| `n_act` | `const void *` | pointer a node |
+
+**Returns:** `void *` — pointer to the previous node
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_get_len" file="public/misc/lv_ll.h" line={198} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L198">
+
+### lv_ll_get_len
+
+Return the length of the linked list.
+
+```c
+uint32_t lv_ll_get_len(const lv_ll_t *ll_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="const lv_ll_t *" /> | pointer to linked list |
+
+**Returns:** `uint32_t` — length of the linked list
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (10)">
+
+<ApiMember kind="function" name="lv_ll_init" file="public/misc/lv_ll.h" line={104} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L104">
+
+### lv_ll_init
+
+Initialize linked list
+
+```c
+void lv_ll_init(lv_ll_t *ll_p, uint32_t node_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to <ApiLink name="lv_ll_t" /> variable |
+| `node_size` | `uint32_t` | the size of 1 node in bytes |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_ins_head" file="public/misc/lv_ll.h" line={111} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L111">
+
+### lv_ll_ins_head
+
+Add a new head to a linked list
+
+```c
+void * lv_ll_ins_head(lv_ll_t *ll_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to linked list |
+
+**Returns:** `void *` — pointer to the new head
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_ins_prev" file="public/misc/lv_ll.h" line={119} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L119">
+
+### lv_ll_ins_prev
+
+Insert a new node in front of the n_act node
+
+```c
+void * lv_ll_ins_prev(lv_ll_t *ll_p, void *n_act)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to linked list |
+| `n_act` | `void *` | pointer a node |
+
+**Returns:** `void *` — pointer to the new node
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_ins_tail" file="public/misc/lv_ll.h" line={126} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L126">
+
+### lv_ll_ins_tail
+
+Add a new tail to a linked list
+
+```c
+void * lv_ll_ins_tail(lv_ll_t *ll_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to linked list |
+
+**Returns:** `void *` — pointer to the new tail
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_remove" file="public/misc/lv_ll.h" line={134} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L134">
+
+### lv_ll_remove
+
+Remove the node 'node_p' from 'll_p' linked list. It does not free the memory of node.
+
+```c
+void lv_ll_remove(lv_ll_t *ll_p, void *node_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to the linked list of 'node_p' |
+| `node_p` | `void *` | pointer to node in 'll_p' linked list |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_clear_custom" file="public/misc/lv_ll.h" line={145} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L145">
+
+### lv_ll_clear_custom
+
+Remove and optionally clean up all elements from a linked list via a custom callback. If `cleanup` is NULL the node block is simply freed with `lv_free`. If `cleanup` is provided it is called for every node **instead** of `lv_free`; the callback is then responsible for both releasing any owned sub-resources and freeing the node block itself.
+
+```c
+void lv_ll_clear_custom(lv_ll_t *ll_p, void(*cleanup)(void *))
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to linked list |
+| `cleanup` | `void(*)(void *)` | optional per-node cleanup callback, or NULL for a plain free |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_clear" file="public/misc/lv_ll.h" line={151} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L151">
+
+### lv_ll_clear
+
+Remove and free all elements from a linked list. The list remain valid but become empty.
+
+```c
+void lv_ll_clear(lv_ll_t *ll_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to linked list |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_chg_list" file="public/misc/lv_ll.h" line={161} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L161">
+
+### lv_ll_chg_list
+
+Move a node to a new linked list
+
+```c
+void lv_ll_chg_list(lv_ll_t *ll_ori_p, lv_ll_t *ll_new_p, void *node, bool head)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_ori_p` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to the original (old) linked list |
+| `ll_new_p` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to the new linked list |
+| `node` | `void *` | pointer to a node |
+| `head` | `bool` | true: be the head in the new list false be the tail in the new list |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_move_before" file="public/misc/lv_ll.h" line={215} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L215">
+
+### lv_ll_move_before
+
+Move a node before another node in the same linked list
+
+```c
+void lv_ll_move_before(lv_ll_t *ll_p, void *n_act, void *n_after)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to a linked list |
+| `n_act` | `void *` | pointer to node to move |
+| `n_after` | `void *` | pointer to a node which should be after `n_act` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_ll_is_empty" file="public/misc/lv_ll.h" line={222} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L222">
+
+### lv_ll_is_empty
+
+Check if a linked list is empty
+
+```c
+bool lv_ll_is_empty(lv_ll_t *ll_p)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `ll_p` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to a linked list |
+
+**Returns:** `bool` — true: the linked list is empty; false: not empty
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Structs
+
+<ApiMember kind="struct" name="lv_ll_t">
+
+### lv_ll_t
+
+Description of a linked list
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `n_size` | `uint32_t` |  |
+| `head` | <ApiLink name="lv_ll_node_t" display="lv_ll_node_t *" /> |  |
+| `tail` | <ApiLink name="lv_ll_node_t" display="lv_ll_node_t *" /> |  |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_ll_t" count={17}>
+
+- `lv_ll_init` — param `ll_p`
+- `lv_ll_ins_head` — param `ll_p`
+- `lv_ll_ins_prev` — param `ll_p`
+- `lv_ll_ins_tail` — param `ll_p`
+- `lv_ll_remove` — param `ll_p`
+- `lv_ll_clear_custom` — param `ll_p`
+- `lv_ll_clear` — param `ll_p`
+- `lv_ll_chg_list` — param `ll_ori_p`
+- `lv_ll_chg_list` — param `ll_new_p`
+- `lv_ll_get_head` — param `ll_p`
+- `lv_ll_get_tail` — param `ll_p`
+- `lv_ll_get_next` — param `ll_p`
+- `lv_ll_get_prev` — param `ll_p`
+- `lv_ll_get_len` — param `ll_p`
+- `lv_ll_move_before` — param `ll_p`
+- `lv_ll_is_empty` — param `ll_p`
+- `lv_vector_for_each_destroy_tasks` — param `task_list`
+
+</TypeUsedBy>
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_ll_node_t" file="public/misc/lv_ll.h" line={86} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L86">
+
+### lv_ll_node_t
+
+```c
+typedef uint8_t lv_ll_node_t
+```
+
+Dummy type to make handling easier
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_LL_READ" file="public/misc/lv_ll.h" line={228} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L228">
+
+### LV_LL_READ
+
+```c
+#define LV_LL_READ(list, i) \
+    for(i = lv_ll_get_head(list); i != NULL; i = lv_ll_get_next(list, i))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_LL_READ_BACK" file="public/misc/lv_ll.h" line={230} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/misc/lv_ll.h#L230">
+
+### LV_LL_READ_BACK
+
+```c
+#define LV_LL_READ_BACK(list, i) \
+    for(i = lv_ll_get_tail(list); i != NULL; i = lv_ll_get_prev(list, i))
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_types.h"]}
+  includedBy={["lv_observer.h", "lvgl.h"]}
+  transitiveIncludes={["lv_conf_internal.h"]}
+/>

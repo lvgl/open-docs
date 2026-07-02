@@ -1,0 +1,56 @@
+---
+title: lv_renesas_glcdc.h
+description: API reference for lv_renesas_glcdc.h
+api:
+  functions: [lv_renesas_glcdc_direct_create, lv_renesas_glcdc_partial_create]
+---
+
+<ApiSummary functions={2} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_renesas_glcdc_direct_create" file="public/drivers/display/lv_renesas_glcdc.h" line={36} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/display/lv_renesas_glcdc.h#L36">
+
+### lv_renesas_glcdc_direct_create
+
+Create a display using Renesas' GLCDC peripheral in DIRECT render mode
+
+```c
+lv_display_t * lv_renesas_glcdc_direct_create(void)
+```
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — pointer to the created display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_renesas_glcdc_partial_create" file="public/drivers/display/lv_renesas_glcdc.h" line={45} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/drivers/display/lv_renesas_glcdc.h#L45">
+
+### lv_renesas_glcdc_partial_create
+
+Create a display using Renesas' GLCDC peripheral in PARTIAL render mode
+
+```c
+lv_display_t * lv_renesas_glcdc_partial_create(void *buf1, void *buf2, size_t buf_size)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `buf1` | `void *` | first buffer |
+| `buf2` | `void *` | second buffer (can be `NULL`) |
+| `buf_size` | `size_t` | buffer size in byte |
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — pointer to the created display
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_display.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_area.h", "lv_array.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_event.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_timer.h", "lv_types.h"]}
+/>

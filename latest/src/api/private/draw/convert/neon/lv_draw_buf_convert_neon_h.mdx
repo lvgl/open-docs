@@ -1,0 +1,82 @@
+---
+title: lv_draw_buf_convert_neon.h
+description: API reference for lv_draw_buf_convert_neon.h
+api:
+  functions: [_lv_draw_buf_convert_premultiply_indexed_neon, _lv_draw_buf_convert_premultiply_argb8888_neon]
+  macros: [LV_DRAW_CONVERT_PREMULTIPLY_INDEXED, LV_DRAW_CONVERT_PREMULTIPLY_ARGB8888]
+---
+
+<ApiSummary functions={2} macros={2} />
+
+## Functions
+
+<ApiMember kind="function" name="_lv_draw_buf_convert_premultiply_indexed_neon" file="private/draw/convert/neon/lv_draw_buf_convert_neon.h" line={44} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/convert/neon/lv_draw_buf_convert_neon.h#L44">
+
+### _lv_draw_buf_convert_premultiply_indexed_neon
+
+Convert indexed draw_buf to premultiplied format with neon specific optimizations
+
+```c
+lv_result_t _lv_draw_buf_convert_premultiply_indexed_neon(lv_draw_buf_t *buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to a draw buf |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="_lv_draw_buf_convert_premultiply_argb8888_neon" file="private/draw/convert/neon/lv_draw_buf_convert_neon.h" line={50} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/convert/neon/lv_draw_buf_convert_neon.h#L50">
+
+### _lv_draw_buf_convert_premultiply_argb8888_neon
+
+Convert argb8888 draw_buf to premultiplied format with neon specific optimizations
+
+```c
+lv_result_t _lv_draw_buf_convert_premultiply_argb8888_neon(lv_draw_buf_t *buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to a draw buf |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_DRAW_CONVERT_PREMULTIPLY_INDEXED" file="private/draw/convert/neon/lv_draw_buf_convert_neon.h" line={26} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/convert/neon/lv_draw_buf_convert_neon.h#L26">
+
+### LV_DRAW_CONVERT_PREMULTIPLY_INDEXED
+
+```c
+#define LV_DRAW_CONVERT_PREMULTIPLY_INDEXED(buf) \
+    _lv_draw_buf_convert_premultiply_indexed_neon(buf)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_CONVERT_PREMULTIPLY_ARGB8888" file="private/draw/convert/neon/lv_draw_buf_convert_neon.h" line={31} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/convert/neon/lv_draw_buf_convert_neon.h#L31">
+
+### LV_DRAW_CONVERT_PREMULTIPLY_ARGB8888
+
+```c
+#define LV_DRAW_CONVERT_PREMULTIPLY_ARGB8888(buf) \
+    _lv_draw_buf_convert_premultiply_argb8888_neon(buf)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

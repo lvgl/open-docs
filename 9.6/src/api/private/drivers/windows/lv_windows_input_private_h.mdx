@@ -1,0 +1,82 @@
+---
+title: lv_windows_input_private.h
+description: API reference for lv_windows_input_private.h
+api:
+  functions: [lv_windows_pointer_device_window_message_handler, lv_windows_keypad_device_window_message_handler, lv_windows_encoder_device_window_message_handler]
+---
+
+<RelatedHeaders name="lv_windows_input.h" isPrivate={true} />
+
+<ApiSummary functions={3} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_windows_pointer_device_window_message_handler" file="private/drivers/windows/lv_windows_input_private.h" line={34} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_input_private.h#L34">
+
+### lv_windows_pointer_device_window_message_handler
+
+```c
+bool lv_windows_pointer_device_window_message_handler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, LRESULT *plResult)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `hWnd` | <ApiLink name="HWND" /> |
+| `uMsg` | `UINT` |
+| `wParam` | `WPARAM` |
+| `lParam` | `LPARAM` |
+| `plResult` | `LRESULT *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_windows_keypad_device_window_message_handler" file="private/drivers/windows/lv_windows_input_private.h" line={41} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_input_private.h#L41">
+
+### lv_windows_keypad_device_window_message_handler
+
+```c
+bool lv_windows_keypad_device_window_message_handler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, LRESULT *plResult)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `hWnd` | <ApiLink name="HWND" /> |
+| `uMsg` | `UINT` |
+| `wParam` | `WPARAM` |
+| `lParam` | `LPARAM` |
+| `plResult` | `LRESULT *` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_windows_encoder_device_window_message_handler" file="private/drivers/windows/lv_windows_input_private.h" line={48} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/drivers/windows/lv_windows_input_private.h#L48">
+
+### lv_windows_encoder_device_window_message_handler
+
+```c
+bool lv_windows_encoder_device_window_message_handler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, LRESULT *plResult)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `hWnd` | <ApiLink name="HWND" /> |
+| `uMsg` | `UINT` |
+| `wParam` | `WPARAM` |
+| `lParam` | `LPARAM` |
+| `plResult` | `LRESULT *` |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["LV_STDBOOL_INCLUDE", "windows.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

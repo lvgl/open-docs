@@ -1,0 +1,165 @@
+---
+title: lv_tileview.h
+description: API reference for lv_tileview.h
+api:
+  functions: [lv_tileview_create, lv_tileview_add_tile, lv_tileview_set_tile, lv_tileview_set_tile_by_index, lv_tileview_get_tile_active]
+  variables: [lv_tileview_class, lv_tileview_tile_class]
+---
+
+<RelatedHeaders name="lv_tileview_private.h" isPrivate={false} />
+
+<ApiSummary functions={5} variables={2} />
+
+## Functions
+
+<ApiTabs items={["Setters (2)","Getters (1)","Other (2)"]}>
+<ApiTab value="Setters (2)">
+
+<ApiMember kind="function" name="lv_tileview_set_tile" file="public/widgets/lv_tileview.h" line={54} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/widgets/lv_tileview.h#L54">
+
+### lv_tileview_set_tile
+
+Set the active tile in the tileview.
+
+```c
+void lv_tileview_set_tile(lv_obj_t *tv, lv_obj_t *tile_obj, lv_anim_enable_t anim_en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `tv` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `tile_obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the tile object to be set as active |
+| `anim_en` | <ApiLink name="lv_anim_enable_t" /> | animation enable flag (LV_ANIM_ON or LV_ANIM_OFF) |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_tileview_set_tile_by_index" file="public/widgets/lv_tileview.h" line={63} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/widgets/lv_tileview.h#L63">
+
+### lv_tileview_set_tile_by_index
+
+Set the active tile by index in the tileview
+
+```c
+void lv_tileview_set_tile_by_index(lv_obj_t *tv, uint32_t col_id, uint32_t row_id, lv_anim_enable_t anim_en)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `tv` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the tileview object |
+| `col_id` | `uint32_t` | column id of the tile to be set as active |
+| `row_id` | `uint32_t` | row id of the tile to be set as active |
+| `anim_en` | <ApiLink name="lv_anim_enable_t" /> | animation enable flag (LV_ANIM_ON or LV_ANIM_OFF) |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_tileview_get_tile_active" file="public/widgets/lv_tileview.h" line={70} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/widgets/lv_tileview.h#L70">
+
+### lv_tileview_get_tile_active
+
+Get the currently active tile in the tileview
+
+```c
+lv_obj_t * lv_tileview_get_tile_active(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the tileview object |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the currently active tile object
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="lv_tileview_create" file="public/widgets/lv_tileview.h" line={36} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/widgets/lv_tileview.h#L36">
+
+### lv_tileview_create
+
+Create a tileview object
+
+```c
+lv_obj_t * lv_tileview_create(lv_obj_t *parent)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new tileview |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created tileview
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_tileview_add_tile" file="public/widgets/lv_tileview.h" line={46} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/widgets/lv_tileview.h#L46">
+
+### lv_tileview_add_tile
+
+Add a tile to the tileview
+
+```c
+lv_obj_t * lv_tileview_add_tile(lv_obj_t *tv, uint8_t col_id, uint8_t row_id, lv_dir_t dir)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `tv` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to the tileview object |
+| `col_id` | `uint8_t` | column id of the tile |
+| `row_id` | `uint8_t` | row id of the tile |
+| `dir` | <ApiLink name="lv_dir_t" /> | direction to move to the next tile |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the added tile object
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Variables
+
+<ApiMember kind="variable" name="lv_tileview_class" file="public/widgets/lv_tileview.h" line={24} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/widgets/lv_tileview.h#L24">
+
+### lv_tileview_class
+
+```c
+const lv_obj_class_t lv_tileview_class
+```
+
+
+</ApiMember>
+
+<ApiMember kind="variable" name="lv_tileview_tile_class" file="public/widgets/lv_tileview.h" line={25} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/include/lvgl/widgets/lv_tileview.h#L25">
+
+### lv_tileview_tile_class
+
+```c
+const lv_obj_class_t lv_tileview_tile_class
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_obj.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_array.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_conf_internal.h", "lv_display.h", "lv_draw.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_buf.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_rect.h", "lv_draw_triangle.h", "lv_event.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_fs.h", "lv_grad.h", "lv_grid.h", "lv_group.h", "lv_image_decoder.h", "lv_image_dsc.h", "lv_indev.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_matrix.h", "lv_mem.h", "lv_obj_class.h", "lv_obj_draw.h", "lv_obj_event.h", "lv_obj_pos.h", "lv_obj_property.h", "lv_obj_scroll.h", "lv_obj_style.h", "lv_obj_style_gen.h", "lv_obj_tree.h", "lv_palette.h", "lv_profiler.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style.h", "lv_style_gen.h", "lv_symbol_def.h", "lv_text.h", "lv_timer.h", "lv_types.h"]}
+/>

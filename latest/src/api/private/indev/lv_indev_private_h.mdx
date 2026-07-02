@@ -1,0 +1,131 @@
+---
+title: lv_indev_private.h
+description: API reference for lv_indev_private.h
+api:
+  functions: [lv_indev_find_scroll_obj]
+  structs: [_lv_indev_t]
+  macros: [LV_INDEV_VECT_HIST_SIZE]
+---
+
+<RelatedHeaders name="lv_indev.h" isPrivate={true} />
+
+<ApiSummary functions={1} structs={1} macros={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_indev_find_scroll_obj" file="private/indev/lv_indev_private.h" line={147} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/indev/lv_indev_private.h#L147">
+
+### lv_indev_find_scroll_obj
+
+Find a scrollable object based on the current scroll vector in the indev. In handles scroll propagation to the parent if needed, and scroll directions too.
+
+```c
+lv_obj_t * lv_indev_find_scroll_obj(lv_indev_t *indev)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `indev` | <ApiLink name="lv_indev_t" display="lv_indev_t *" /> | pointer to an indev |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — the found scrollable object or NULL if not found.
+
+
+</ApiMember>
+
+## Structs
+
+<ApiMember kind="struct" name="_lv_indev_t">
+
+### _lv_indev_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `ext_data` | <ApiLink name="lv_ext_data_t" /> |  |
+| `type` | <ApiLink name="lv_indev_type_t" /> | Input device type |
+| `read_cb` | <ApiLink name="lv_indev_read_cb_t" /> | Function pointer to read input device data. |
+| `state` | <ApiLink name="lv_indev_state_t" /> | Current state of the input device. |
+| `prev_state` | <ApiLink name="lv_indev_state_t" /> | Previous state of the input device. |
+| `mode` | <ApiLink name="lv_indev_mode_t" /> |  |
+| `long_pr_sent` | `uint8_t` |  |
+| `reset_query` | `uint8_t` |  |
+| `enabled` | `uint8_t` |  |
+| `wait_until_release` | `uint8_t` |  |
+| `stop_processing_query` | `uint8_t` |  |
+| `timestamp` | `uint32_t` | Timestamp of last event |
+| `pr_timestamp` | `uint32_t` | Pressed time stamp |
+| `longpr_rep_timestamp` | `uint32_t` | Long press repeat time stamp |
+| `driver_data` | `void *` |  |
+| `user_data` | `void *` | Pointer to the assigned display |
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Timer to periodically read the input device |
+| `read_timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | Number of pixels to slide before actually drag the object |
+| `scroll_limit` | `uint8_t` | Drag throw slow-down in [%]. Greater value means faster slow-down |
+| `scroll_throw` | `uint8_t` | Minimum velocity: difference between consecutive points must exceed this (in pixels) to detect gesture speed |
+| `gesture_min_velocity` | `uint8_t` | Minimum distance: total travel from first to current point must exceed this (in pixels) to trigger gesture |
+| `gesture_min_distance` | `uint8_t` | Long press time in milliseconds |
+| `long_press_time` | `uint16_t` | Repeated trigger period in long press [ms] |
+| `long_press_repeat_time` | `uint16_t` | Rotary diff count will be multiplied by this value and divided by 256 |
+| `rotary_sensitivity` | `int32_t` |  |
+| `act_point` | <ApiLink name="lv_point_t" /> | Current point of input device. |
+| `last_point` | <ApiLink name="lv_point_t" /> | Last point of input device. |
+| `last_raw_point` | <ApiLink name="lv_point_t" /> | Last point read from read_cb. |
+| `vect` | <ApiLink name="lv_point_t" /> | Difference between `act_point` and `last_point`. |
+| `vect_hist` | `lv_point_t[8]` |  |
+| `vect_hist_timestamp` | `uint32_t[8]` |  |
+| `vect_hist_index` | `uint8_t` |  |
+| `scroll_sum` | <ApiLink name="lv_point_t" /> |  |
+| `scroll_throw_vect` | <ApiLink name="lv_point_t" /> |  |
+| `scroll_throw_vect_ori` | <ApiLink name="lv_point_t" /> |  |
+| `act_obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `scroll_obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `last_pressed` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `last_hovered` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |  |
+| `scroll_area` | <ApiLink name="lv_area_t" /> |  |
+| `gesture_sum` | <ApiLink name="lv_point_t" /> |  |
+| `diff` | `int32_t` |  |
+| `short_click_streak` | `uint8_t` |  |
+| `last_short_click_point` | <ApiLink name="lv_point_t" /> |  |
+| `last_short_click_timestamp` | `uint32_t` |  |
+| `scroll_dir` | `uint8_t` |  |
+| `gesture_dir` | `uint8_t` |  |
+| `gesture_sent` | `uint8_t` |  |
+| `press_moved` | `uint8_t` |  |
+| `pressed` | `uint8_t` |  |
+| `pointer` | <ApiLink name="_lv_indev_t" display="struct _lv_indev_t" /> |  |
+| `last_state` | <ApiLink name="lv_indev_state_t" /> |  |
+| `last_key` | `uint32_t` |  |
+| `keypad` | <ApiLink name="_lv_indev_t" display="struct _lv_indev_t" /> |  |
+| `cursor` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Cursor for LV_INPUT_TYPE_POINTER |
+| `group` | <ApiLink name="lv_group_t" display="lv_group_t *" /> | Keypad destination group |
+| `btn_points` | <ApiLink name="lv_point_t" display="const lv_point_t *" /> | Array points assigned to the button ()screen will be pressed here by the buttons |
+| `event_list` | <ApiLink name="lv_event_list_t" /> |  |
+| `scroll_throw_anim` | <ApiLink name="lv_anim_t" display="lv_anim_t *" /> | Key remapping callback |
+| `key_remap_cb` | <ApiLink name="lv_indev_key_remap_cb_t" /> |  |
+| `recognizers` | `lv_indev_gesture_recognizer_t[LV_INDEV_GESTURE_CNT]` |  |
+| `cur_gesture` | <ApiLink name="lv_indev_gesture_type_t" /> |  |
+| `gesture_data` | `void *[LV_INDEV_GESTURE_CNT]` |  |
+| `gesture_type` | `lv_indev_gesture_type_t[LV_INDEV_GESTURE_CNT]` |  |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_INDEV_VECT_HIST_SIZE" file="private/indev/lv_indev_private.h" line={22} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/indev/lv_indev_private.h#L22">
+
+### LV_INDEV_VECT_HIST_SIZE
+
+```c
+#define LV_INDEV_VECT_HIST_SIZE 8
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_indev_scroll.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

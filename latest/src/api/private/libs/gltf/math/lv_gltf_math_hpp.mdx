@@ -1,0 +1,121 @@
+---
+title: lv_gltf_math.hpp
+description: API reference for lv_gltf_math.hpp
+api:
+  functions: [lv_gltf_math_look_at_rh, lv_gltf_math_perspective_rh, lv_gltf_math_euler_to_quaternion, lv_gltf_math_quaternion_to_euler]
+  macros: [M_PI]
+---
+
+GLTF math utilities and helper functions.
+
+<ApiSummary functions={4} macros={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_gltf_math_look_at_rh" file="private/libs/gltf/math/lv_gltf_math.hpp" line={35} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/math/lv_gltf_math.hpp#L35">
+
+### lv_gltf_math_look_at_rh
+
+```cpp
+fastgltf::math::fmat4x4 lv_gltf_math_look_at_rh(const fastgltf::math::fvec3 &eye, const fastgltf::math::fvec3 &center, const fastgltf::math::fvec3 &up) noexcept
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `eye` | `const fastgltf::math::fvec3 &` |
+| `center` | `const fastgltf::math::fvec3 &` |
+| `up` | `const fastgltf::math::fvec3 &` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_math_perspective_rh" file="private/libs/gltf/math/lv_gltf_math.hpp" line={36} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/math/lv_gltf_math.hpp#L36">
+
+### lv_gltf_math_perspective_rh
+
+```cpp
+fastgltf::math::fmat4x4 lv_gltf_math_perspective_rh(float fov, float ratio, float z_near, float z_far) noexcept
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `fov` | `float` |
+| `ratio` | `float` |
+| `z_near` | `float` |
+| `z_far` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_math_euler_to_quaternion" file="private/libs/gltf/math/lv_gltf_math.hpp" line={39} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/math/lv_gltf_math.hpp#L39">
+
+### lv_gltf_math_euler_to_quaternion
+
+```cpp
+template <typename T>
+fastgltf::math::quat< T > lv_gltf_math_euler_to_quaternion(T P, T Y, T R)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `P` | `T` |
+| `Y` | `T` |
+| `R` | `T` |
+
+**Template Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `T` | `typename` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_gltf_math_quaternion_to_euler" file="private/libs/gltf/math/lv_gltf_math.hpp" line={60} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/math/lv_gltf_math.hpp#L60">
+
+### lv_gltf_math_quaternion_to_euler
+
+```cpp
+template <typename T>
+fastgltf::math::vec< T, 3 > lv_gltf_math_quaternion_to_euler(fastgltf::math::quat< T > q)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `q` | `fastgltf::math::quat< T >` |
+
+**Template Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `T` | `typename` |  |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="M_PI" file="private/libs/gltf/math/lv_gltf_math.hpp" line={24} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/libs/gltf/math/lv_gltf_math.hpp#L24">
+
+### M_PI
+
+```c
+#define M_PI 3.14159265358979323846264338327950288
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "math.hpp"]}
+/>

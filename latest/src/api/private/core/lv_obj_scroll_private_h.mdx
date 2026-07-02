@@ -1,0 +1,42 @@
+---
+title: lv_obj_scroll_private.h
+description: API reference for lv_obj_scroll_private.h
+api:
+  functions: [lv_obj_scroll_by_raw]
+---
+
+<RelatedHeaders name="lv_obj_scroll.h" isPrivate={true} />
+
+<ApiSummary functions={1} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_obj_scroll_by_raw" file="private/core/lv_obj_scroll_private.h" line={40} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/core/lv_obj_scroll_private.h#L40">
+
+### lv_obj_scroll_by_raw
+
+Low level function to scroll by given x and y coordinates. `LV_EVENT_SCROLL` is sent.
+
+```c
+lv_result_t lv_obj_scroll_by_raw(lv_obj_t *obj, int32_t x, int32_t y)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object to scroll |
+| `x` | `int32_t` | pixels to scroll horizontally |
+| `y` | `int32_t` | pixels to scroll vertically |
+
+**Returns:** <ApiLink name="lv_result_t" /> — `LV_RESULT_INVALID`: to object was deleted in `LV_EVENT_SCROLL`; `LV_RESULT_OK`: if the object is still valid
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

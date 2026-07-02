@@ -1,0 +1,180 @@
+---
+title: lv_g2d_utils.h
+description: API reference for lv_g2d_utils.h
+api:
+  functions: [g2d_get_buf_format, g2d_rgba_to_u32, g2d_get_buf_fd, g2d_set_handle, g2d_get_handle, g2d_rotate]
+  typedefs: [g2d_format_t]
+  macros: [G2D_ASSERT, G2D_ASSERT_MSG]
+---
+
+<ApiSummary functions={6} typedefs={1} macros={2} />
+
+## Functions
+
+<ApiTabs items={["Setters (1)","Getters (3)","Other (2)"]}>
+<ApiTab value="Setters (1)">
+
+<ApiMember kind="function" name="g2d_set_handle" file="private/draw/nxp/g2d/lv_g2d_utils.h" line={64} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nxp/g2d/lv_g2d_utils.h#L64">
+
+### g2d_set_handle
+
+```c
+void g2d_set_handle(void *handle)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `handle` | `void *` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (3)">
+
+<ApiMember kind="function" name="g2d_get_buf_format" file="private/draw/nxp/g2d/lv_g2d_utils.h" line={58} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nxp/g2d/lv_g2d_utils.h#L58">
+
+### g2d_get_buf_format
+
+```c
+g2d_format_t g2d_get_buf_format(lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cf` | <ApiLink name="lv_color_format_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="g2d_get_buf_fd" file="private/draw/nxp/g2d/lv_g2d_utils.h" line={62} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nxp/g2d/lv_g2d_utils.h#L62">
+
+### g2d_get_buf_fd
+
+```c
+int32_t g2d_get_buf_fd(const lv_draw_buf_t *draw_buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="const lv_draw_buf_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="g2d_get_handle" file="private/draw/nxp/g2d/lv_g2d_utils.h" line={66} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nxp/g2d/lv_g2d_utils.h#L66">
+
+### g2d_get_handle
+
+```c
+void * g2d_get_handle(void)
+```
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (2)">
+
+<ApiMember kind="function" name="g2d_rgba_to_u32" file="private/draw/nxp/g2d/lv_g2d_utils.h" line={60} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nxp/g2d/lv_g2d_utils.h#L60">
+
+### g2d_rgba_to_u32
+
+```c
+uint32_t g2d_rgba_to_u32(lv_color_t color)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `color` | <ApiLink name="lv_color_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="g2d_rotate" file="private/draw/nxp/g2d/lv_g2d_utils.h" line={68} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nxp/g2d/lv_g2d_utils.h#L68">
+
+### g2d_rotate
+
+```c
+void g2d_rotate(lv_draw_buf_t *buf1, lv_draw_buf_t *buf2, int32_t width, int32_t height, uint32_t rotation, lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `buf1` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> |
+| `buf2` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> |
+| `width` | `int32_t` |
+| `height` | `int32_t` |
+| `rotation` | `uint32_t` |
+| `cf` | <ApiLink name="lv_color_format_t" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Typedefs
+
+<ApiMember kind="typedef" name="g2d_format_t" file="private/draw/nxp/g2d/lv_g2d_utils.h" line={52} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nxp/g2d/lv_g2d_utils.h#L52">
+
+### g2d_format_t
+
+```c
+typedef enum g2d_format g2d_format_t
+```
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="G2D_ASSERT" file="private/draw/nxp/g2d/lv_g2d_utils.h" line={35} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nxp/g2d/lv_g2d_utils.h#L35">
+
+### G2D_ASSERT
+
+```c
+#define G2D_ASSERT(expr) \
+    LV_ASSERT(expr)
+```
+
+Copyright 2024 NXP
+
+SPDX-License-Identifier: MIT
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="G2D_ASSERT_MSG" file="private/draw/nxp/g2d/lv_g2d_utils.h" line={40} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/nxp/g2d/lv_g2d_utils.h#L40">
+
+### G2D_ASSERT_MSG
+
+```c
+#define G2D_ASSERT_MSG(expr, msg) \
+    do { \
+            if(!(expr)) { \
+                LV_LOG_ERROR(msg); \
+                G2D_ASSERT(false); \
+            } \
+        } while(0)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "lv_draw_sw_private.h", "g2d.h", "g2dExt.h"]}
+  includedBy={["lvgl_private.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_draw_private.h", "lv_draw_sw.h", "lv_draw_sw_blend.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h"]}
+/>

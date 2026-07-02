@@ -1,0 +1,235 @@
+---
+title: lv_vg_lite_math.h
+description: API reference for lv_vg_lite_math.h
+api:
+  functions: [math_zero, math_equal, math_fast_inv_sqrtf]
+  macros: [MATH_PI, MATH_HALF_PI, MATH_TWO_PI, DEG_TO_RAD, RAD_TO_DEG, MATH_TANF, MATH_SINF, MATH_COSF, MATH_ASINF, MATH_ACOSF, MATH_FABSF, MATH_SQRTF, MATH_RADIANS, MATH_DEGREES]
+---
+
+<ApiSummary functions={3} macros={14} />
+
+## Functions
+
+<ApiMember kind="function" name="math_zero" file="private/draw/vg_lite/lv_vg_lite_math.h" line={54} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L54">
+
+### math_zero
+
+```c
+static bool math_zero(float a)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `a` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="math_equal" file="private/draw/vg_lite/lv_vg_lite_math.h" line={59} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L59">
+
+### math_equal
+
+```c
+static bool math_equal(float a, float b)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `a` | `float` |
+| `b` | `float` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="math_fast_inv_sqrtf" file="private/draw/vg_lite/lv_vg_lite_math.h" line={64} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L64">
+
+### math_fast_inv_sqrtf
+
+```c
+float math_fast_inv_sqrtf(float number)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `number` | `float` |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="MATH_PI" file="private/draw/vg_lite/lv_vg_lite_math.h" line={29} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L29">
+
+### MATH_PI
+
+```c
+#define MATH_PI 3.14159265358979323846f
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MATH_HALF_PI" file="private/draw/vg_lite/lv_vg_lite_math.h" line={30} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L30">
+
+### MATH_HALF_PI
+
+```c
+#define MATH_HALF_PI 1.57079632679489661923f
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MATH_TWO_PI" file="private/draw/vg_lite/lv_vg_lite_math.h" line={31} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L31">
+
+### MATH_TWO_PI
+
+```c
+#define MATH_TWO_PI 6.28318530717958647692f
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="DEG_TO_RAD" file="private/draw/vg_lite/lv_vg_lite_math.h" line={32} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L32">
+
+### DEG_TO_RAD
+
+```c
+#define DEG_TO_RAD 0.017453292519943295769236907684886f
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="RAD_TO_DEG" file="private/draw/vg_lite/lv_vg_lite_math.h" line={33} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L33">
+
+### RAD_TO_DEG
+
+```c
+#define RAD_TO_DEG 57.295779513082320876798154814105f
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MATH_TANF" file="private/draw/vg_lite/lv_vg_lite_math.h" line={35} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L35">
+
+### MATH_TANF
+
+```c
+#define MATH_TANF(x) \
+    tanf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MATH_SINF" file="private/draw/vg_lite/lv_vg_lite_math.h" line={36} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L36">
+
+### MATH_SINF
+
+```c
+#define MATH_SINF(x) \
+    sinf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MATH_COSF" file="private/draw/vg_lite/lv_vg_lite_math.h" line={37} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L37">
+
+### MATH_COSF
+
+```c
+#define MATH_COSF(x) \
+    cosf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MATH_ASINF" file="private/draw/vg_lite/lv_vg_lite_math.h" line={38} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L38">
+
+### MATH_ASINF
+
+```c
+#define MATH_ASINF(x) \
+    asinf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MATH_ACOSF" file="private/draw/vg_lite/lv_vg_lite_math.h" line={39} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L39">
+
+### MATH_ACOSF
+
+```c
+#define MATH_ACOSF(x) \
+    acosf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MATH_FABSF" file="private/draw/vg_lite/lv_vg_lite_math.h" line={40} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L40">
+
+### MATH_FABSF
+
+```c
+#define MATH_FABSF(x) \
+    fabsf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MATH_SQRTF" file="private/draw/vg_lite/lv_vg_lite_math.h" line={41} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L41">
+
+### MATH_SQRTF
+
+```c
+#define MATH_SQRTF(x) \
+    sqrtf(x)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MATH_RADIANS" file="private/draw/vg_lite/lv_vg_lite_math.h" line={43} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L43">
+
+### MATH_RADIANS
+
+```c
+#define MATH_RADIANS(deg) \
+    ((deg) * DEG_TO_RAD)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MATH_DEGREES" file="private/draw/vg_lite/lv_vg_lite_math.h" line={44} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/vg_lite/lv_vg_lite_math.h#L44">
+
+### MATH_DEGREES
+
+```c
+#define MATH_DEGREES(rad) \
+    ((rad) * RAD_TO_DEG)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h", "math.h", "stdbool.h", "float.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

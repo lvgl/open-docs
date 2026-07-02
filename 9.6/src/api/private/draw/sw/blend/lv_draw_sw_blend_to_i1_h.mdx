@@ -1,0 +1,52 @@
+---
+title: lv_draw_sw_blend_to_i1.h
+description: API reference for lv_draw_sw_blend_to_i1.h
+api:
+  functions: [lv_draw_sw_blend_color_to_i1, lv_draw_sw_blend_image_to_i1]
+---
+
+<ApiSummary functions={2} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_sw_blend_color_to_i1" file="private/draw/sw/blend/lv_draw_sw_blend_to_i1.h" line={31} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/blend/lv_draw_sw_blend_to_i1.h#L31">
+
+### lv_draw_sw_blend_color_to_i1
+
+```c
+void lv_draw_sw_blend_color_to_i1(lv_draw_sw_blend_fill_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_fill_dsc_t" display="lv_draw_sw_blend_fill_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_sw_blend_image_to_i1" file="private/draw/sw/blend/lv_draw_sw_blend_to_i1.h" line={33} url="https://github.com/lvgl/lvgl/tree/1b18cd0598ed71ff42fb59968a91eb91433e0efc/src/draw/sw/blend/lv_draw_sw_blend_to_i1.h#L33">
+
+### lv_draw_sw_blend_image_to_i1
+
+```c
+void lv_draw_sw_blend_image_to_i1(lv_draw_sw_blend_image_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `dsc` | <ApiLink name="lv_draw_sw_blend_image_dsc_t" display="lv_draw_sw_blend_image_dsc_t *" /> |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw_sw.h"]}
+  includedBy={["lvgl_private.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_draw_private.h", "lv_draw_sw_blend.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h"]}
+/>
