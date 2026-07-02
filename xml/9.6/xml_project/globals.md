@@ -1,4 +1,4 @@
-```xml title="examples/xml_project/globals.xml" source="https://github.com/lvgl/lvgl/blob/d1e005b1f738fe16c7af4d0cee6ac6c3db7ed3f3/examples/xml_project/globals.xml"
+```xml title="examples/xml_project/globals.xml" source="https://github.com/lvgl/lvgl/blob/63f996e774f67d0b10ce94ccebbaa95f8692cb43/examples/xml_project/globals.xml"
 <globals>
     <api>
         <!-- Add <enumdefs> here -->
