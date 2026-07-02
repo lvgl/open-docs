@@ -1,4 +1,4 @@
-```xml title="examples/widgets/table/lv_example_table_width.xml" source="https://github.com/lvgl/lvgl/blob/1b18cd0598ed71ff42fb59968a91eb91433e0efc/examples/widgets/table/lv_example_table_width.xml"
+```xml title="examples/widgets/table/lv_example_table_width.xml" source="https://github.com/lvgl/lvgl/blob/b6ed933feaa45839afabbe3de15a1d882a9e00dc/examples/widgets/table/lv_example_table_width.xml"
 <!--
  @title Table column widths
  @brief Set per-column pixel widths through `<lv_table-column>` children.

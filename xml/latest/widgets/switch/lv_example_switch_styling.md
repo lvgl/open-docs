@@ -1,4 +1,4 @@
-```xml title="examples/widgets/switch/lv_example_switch_styling.xml" source="https://github.com/lvgl/lvgl/blob/1b18cd0598ed71ff42fb59968a91eb91433e0efc/examples/widgets/switch/lv_example_switch_styling.xml"
+```xml title="examples/widgets/switch/lv_example_switch_styling.xml" source="https://github.com/lvgl/lvgl/blob/b6ed933feaa45839afabbe3de15a1d882a9e00dc/examples/widgets/switch/lv_example_switch_styling.xml"
 <!--
  @title Switch styling
  @brief Style the track (MAIN), the filled portion (INDICATOR), and the knob.

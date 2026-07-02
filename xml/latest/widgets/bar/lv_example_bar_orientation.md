@@ -1,4 +1,4 @@
-```xml title="examples/widgets/bar/lv_example_bar_orientation.xml" source="https://github.com/lvgl/lvgl/blob/1b18cd0598ed71ff42fb59968a91eb91433e0efc/examples/widgets/bar/lv_example_bar_orientation.xml"
+```xml title="examples/widgets/bar/lv_example_bar_orientation.xml" source="https://github.com/lvgl/lvgl/blob/b6ed933feaa45839afabbe3de15a1d882a9e00dc/examples/widgets/bar/lv_example_bar_orientation.xml"
 <!--
  @title Bar orientation and size
  @brief Compare horizontal and explicit vertical bars.

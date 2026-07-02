@@ -1,4 +1,4 @@
-```xml title="examples/layouts/grid/lv_example_grid_subgrid.xml" source="https://github.com/lvgl/lvgl/blob/1b18cd0598ed71ff42fb59968a91eb91433e0efc/examples/layouts/grid/lv_example_grid_subgrid.xml"
+```xml title="examples/layouts/grid/lv_example_grid_subgrid.xml" source="https://github.com/lvgl/lvgl/blob/b6ed933feaa45839afabbe3de15a1d882a9e00dc/examples/layouts/grid/lv_example_grid_subgrid.xml"
 <!--
  @title Grid sub-grid
  @brief Nest a grid inside a cell of a parent grid.
