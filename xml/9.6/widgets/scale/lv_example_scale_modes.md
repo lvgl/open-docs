@@ -1,4 +1,4 @@
-```xml title="examples/widgets/scale/lv_example_scale_modes.xml" source="https://github.com/lvgl/lvgl/blob/3ac4ea76e8e21ba13540039dd83bb4370bb74c75/examples/widgets/scale/lv_example_scale_modes.xml"
+```xml title="examples/widgets/scale/lv_example_scale_modes.xml" source="https://github.com/lvgl/lvgl/blob/40fb6ba26c5e3b326df75c6c39ada36c4afb6c0a/examples/widgets/scale/lv_example_scale_modes.xml"
 <!--
  @title Scale linear modes
  @brief Horizontal and vertical scales, ticks on either side of the rail.
