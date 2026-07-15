@@ -1,4 +1,4 @@
-```xml title="examples/styles/lv_example_style_outline.xml" source="https://github.com/lvgl/lvgl/blob/40fb6ba26c5e3b326df75c6c39ada36c4afb6c0a/examples/styles/lv_example_style_outline.xml"
+```xml title="examples/styles/lv_example_style_outline.xml" source="https://github.com/lvgl/lvgl/blob/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/examples/styles/lv_example_style_outline.xml"
 <!--
  @title Outline
  @brief Add a focus-style ring that sits outside the card and ignores layout.
