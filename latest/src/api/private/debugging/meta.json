@@ -1,6 +1,7 @@
 {
   "title": "Debugging",
   "pages": [
+    "profiler",
     "sysmon",
     "test"
   ]

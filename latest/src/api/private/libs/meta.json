@@ -1,14 +1,8 @@
 {
   "title": "Libs",
   "pages": [
-    "barcode",
-    "ffmpeg",
-    "freetype",
     "gltf",
-    "gstreamer",
-    "qrcode",
     "rle",
-    "rlottie",
-    "svg"
+    "rlottie"
   ]
 }

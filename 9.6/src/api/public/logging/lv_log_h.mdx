@@ -4,14 +4,14 @@ description: API reference for lv_log.h
 api:
   functions: [lv_log_register_print_cb, lv_log, lv_log_add]
   typedefs: [lv_log_level_t, lv_log_print_g_cb_t]
-  macros: [LV_LOG_LEVEL_TRACE, LV_LOG_LEVEL_INFO, LV_LOG_LEVEL_WARN, LV_LOG_LEVEL_ERROR, LV_LOG_LEVEL_USER, LV_LOG_LEVEL_NONE, LV_LOG_LEVEL_NUM, LV_LOG_FILE, LV_LOG_LINE, LV_LOG_TRACE, LV_LOG_INFO, LV_LOG_WARN, LV_LOG_WARN_ONCE, LV_LOG_DEPRECATED, LV_LOG_ERROR, LV_LOG_USER, LV_LOG]
+  macros: [LV_LOG_FILE, LV_LOG_LINE, LV_LOG_TRACE, LV_LOG_INFO, LV_LOG_WARN, LV_LOG_WARN_ONCE, LV_LOG_DEPRECATED, LV_LOG_ERROR, LV_LOG_USER, LV_LOG]
 ---
 
-<ApiSummary functions={3} typedefs={2} macros={17} />
+<ApiSummary functions={3} typedefs={2} macros={10} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_log_register_print_cb" file="public/logging/lv_log.h" line={72} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L72">
+<ApiMember kind="function" name="lv_log_register_print_cb" file="public/logging/lv_log.h" line={63} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L63">
 
 ### lv_log_register_print_cb
 
@@ -30,7 +30,7 @@ void lv_log_register_print_cb(lv_log_print_g_cb_t print_cb)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_log" file="public/logging/lv_log.h" line={80} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L80">
+<ApiMember kind="function" name="lv_log" file="public/logging/lv_log.h" line={71} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L71">
 
 ### lv_log
 
@@ -50,7 +50,7 @@ void lv_log(const char *format,...)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_log_add" file="public/logging/lv_log.h" line={91} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L91">
+<ApiMember kind="function" name="lv_log_add" file="public/logging/lv_log.h" line={82} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L82">
 
 ### lv_log_add
 
@@ -76,7 +76,7 @@ void lv_log_add(lv_log_level_t level, const char *file, int line, const char *fu
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_log_level_t" file="public/logging/lv_log.h" line={41} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L41">
+<ApiMember kind="typedef" name="lv_log_level_t" file="public/logging/lv_log.h" line={32} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L32">
 
 ### lv_log_level_t
 
@@ -93,7 +93,7 @@ typedef int8_t lv_log_level_t
 
 </TypeUsedBy>
 
-<ApiMember kind="typedef" name="lv_log_print_g_cb_t" file="public/logging/lv_log.h" line={60} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L60">
+<ApiMember kind="typedef" name="lv_log_print_g_cb_t" file="public/logging/lv_log.h" line={51} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L51">
 
 ### lv_log_print_g_cb_t
 
@@ -114,98 +114,7 @@ Log print function. Receives a string buffer to print".
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_LOG_LEVEL_TRACE" file="public/logging/lv_log.h" line={26} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L26">
-
-### LV_LOG_LEVEL_TRACE
-
-```c
-#define LV_LOG_LEVEL_TRACE 0
-```
-
-Log detailed information.
-
-
-</ApiMember>
-
-<ApiMember kind="macro" name="LV_LOG_LEVEL_INFO" file="public/logging/lv_log.h" line={27} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L27">
-
-### LV_LOG_LEVEL_INFO
-
-```c
-#define LV_LOG_LEVEL_INFO 1
-```
-
-Log important events.
-
-
-</ApiMember>
-
-<ApiMember kind="macro" name="LV_LOG_LEVEL_WARN" file="public/logging/lv_log.h" line={28} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L28">
-
-### LV_LOG_LEVEL_WARN
-
-```c
-#define LV_LOG_LEVEL_WARN 2
-```
-
-Log if something unwanted happened but didn't caused problem.
-
-
-</ApiMember>
-
-<ApiMember kind="macro" name="LV_LOG_LEVEL_ERROR" file="public/logging/lv_log.h" line={29} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L29">
-
-### LV_LOG_LEVEL_ERROR
-
-```c
-#define LV_LOG_LEVEL_ERROR 3
-```
-
-Log only critical issues, when system may fail.
-
-
-</ApiMember>
-
-<ApiMember kind="macro" name="LV_LOG_LEVEL_USER" file="public/logging/lv_log.h" line={30} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L30">
-
-### LV_LOG_LEVEL_USER
-
-```c
-#define LV_LOG_LEVEL_USER 4
-```
-
-Log only custom log messages added by the user.
-
-
-</ApiMember>
-
-<ApiMember kind="macro" name="LV_LOG_LEVEL_NONE" file="public/logging/lv_log.h" line={31} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L31">
-
-### LV_LOG_LEVEL_NONE
-
-```c
-#define LV_LOG_LEVEL_NONE 5
-```
-
-Do not log anything.
-
-
-</ApiMember>
-
-<ApiMember kind="macro" name="LV_LOG_LEVEL_NUM" file="public/logging/lv_log.h" line={32} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L32">
-
-### LV_LOG_LEVEL_NUM
-
-```c
-#define LV_LOG_LEVEL_NUM 5
-```
-
-Number of log levels
-
-
-</ApiMember>
-
-<ApiMember kind="macro" name="LV_LOG_FILE" file="public/logging/lv_log.h" line={46} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L46">
+<ApiMember kind="macro" name="LV_LOG_FILE" file="public/logging/lv_log.h" line={37} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L37">
 
 ### LV_LOG_FILE
 
@@ -216,7 +125,7 @@ Number of log levels
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LOG_LINE" file="public/logging/lv_log.h" line={47} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L47">
+<ApiMember kind="macro" name="LV_LOG_LINE" file="public/logging/lv_log.h" line={38} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L38">
 
 ### LV_LOG_LINE
 
@@ -227,7 +136,7 @@ Number of log levels
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LOG_TRACE" file="public/logging/lv_log.h" line={101} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L101">
+<ApiMember kind="macro" name="LV_LOG_TRACE" file="public/logging/lv_log.h" line={92} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L92">
 
 ### LV_LOG_TRACE
 
@@ -239,7 +148,7 @@ Number of log levels
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LOG_INFO" file="public/logging/lv_log.h" line={109} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L109">
+<ApiMember kind="macro" name="LV_LOG_INFO" file="public/logging/lv_log.h" line={100} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L100">
 
 ### LV_LOG_INFO
 
@@ -251,7 +160,7 @@ Number of log levels
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LOG_WARN" file="public/logging/lv_log.h" line={115} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L115">
+<ApiMember kind="macro" name="LV_LOG_WARN" file="public/logging/lv_log.h" line={106} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L106">
 
 ### LV_LOG_WARN
 
@@ -263,7 +172,7 @@ Number of log levels
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LOG_WARN_ONCE" file="public/logging/lv_log.h" line={124} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L124">
+<ApiMember kind="macro" name="LV_LOG_WARN_ONCE" file="public/logging/lv_log.h" line={115} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L115">
 
 ### LV_LOG_WARN_ONCE
 
@@ -281,7 +190,7 @@ Number of log levels
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LOG_DEPRECATED" file="public/logging/lv_log.h" line={137} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L137">
+<ApiMember kind="macro" name="LV_LOG_DEPRECATED" file="public/logging/lv_log.h" line={128} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L128">
 
 ### LV_LOG_DEPRECATED
 
@@ -293,7 +202,7 @@ Number of log levels
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LOG_ERROR" file="public/logging/lv_log.h" line={142} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L142">
+<ApiMember kind="macro" name="LV_LOG_ERROR" file="public/logging/lv_log.h" line={133} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L133">
 
 ### LV_LOG_ERROR
 
@@ -305,7 +214,7 @@ Number of log levels
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LOG_USER" file="public/logging/lv_log.h" line={150} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L150">
+<ApiMember kind="macro" name="LV_LOG_USER" file="public/logging/lv_log.h" line={141} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L141">
 
 ### LV_LOG_USER
 
@@ -317,7 +226,7 @@ Number of log levels
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_LOG" file="public/logging/lv_log.h" line={158} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/logging/lv_log.h#L158">
+<ApiMember kind="macro" name="LV_LOG" file="public/logging/lv_log.h" line={149} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/logging/lv_log.h#L149">
 
 ### LV_LOG
 

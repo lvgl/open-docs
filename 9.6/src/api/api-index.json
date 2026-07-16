@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-07-15T12:08:09.456Z",
-    "symbolCount": 8813
+    "generatedAt": "2026-07-16T06:35:00.168Z",
+    "symbolCount": 8882
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2081,6 +2081,171 @@
       "anchor": "",
       "kind": "header"
     },
+    "LV_FONT_DEFAULT_MONTSERRAT_8": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_8",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_10": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_10",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_12": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_12",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_14": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_14",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_16": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_16",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_18": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_18",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_20": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_20",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_22": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_22",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_24": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_24",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_26": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_26",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_28": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_28",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_30": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_30",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_32": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_32",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_34": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_34",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_36": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_36",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_38": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_38",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_40": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_40",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_42": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_42",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_44": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_44",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_46": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_46",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_48": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_48",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_MONTSERRAT_28_COMPRESSED": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_MONTSERRAT_28_COMPRESSED",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_DEJAVU_16_PERSIAN_HEBREW": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_DEJAVU_16_PERSIAN_HEBREW",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_SOURCE_HAN_SANS_SC_14_CJK": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_SOURCE_HAN_SANS_SC_14_CJK",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_SOURCE_HAN_SANS_SC_16_CJK": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_SOURCE_HAN_SANS_SC_16_CJK",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_UNSCII_8": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_UNSCII_8",
+      "kind": "macro"
+    },
+    "LV_FONT_DEFAULT_UNSCII_16": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_DEFAULT_UNSCII_16",
+      "kind": "macro"
+    },
+    "LV_STDLIB_BUILTIN": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_STDLIB_BUILTIN",
+      "kind": "macro"
+    },
+    "LV_STDLIB_CLIB": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_STDLIB_CLIB",
+      "kind": "macro"
+    },
+    "LV_STDLIB_MICROPYTHON": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_STDLIB_MICROPYTHON",
+      "kind": "macro"
+    },
+    "LV_STDLIB_RTTHREAD": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_STDLIB_RTTHREAD",
+      "kind": "macro"
+    },
+    "LV_STDLIB_CUSTOM": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_STDLIB_CUSTOM",
+      "kind": "macro"
+    },
+    "LV_LOG_LEVEL_NUM": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LOG_LEVEL_NUM",
+      "kind": "macro"
+    },
     "LV_OS_NONE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_OS_NONE",
@@ -2126,31 +2291,6 @@
       "anchor": "LV_OS_CUSTOM",
       "kind": "macro"
     },
-    "LV_STDLIB_BUILTIN": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_STDLIB_BUILTIN",
-      "kind": "macro"
-    },
-    "LV_STDLIB_CLIB": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_STDLIB_CLIB",
-      "kind": "macro"
-    },
-    "LV_STDLIB_MICROPYTHON": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_STDLIB_MICROPYTHON",
-      "kind": "macro"
-    },
-    "LV_STDLIB_RTTHREAD": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_STDLIB_RTTHREAD",
-      "kind": "macro"
-    },
-    "LV_STDLIB_CUSTOM": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_STDLIB_CUSTOM",
-      "kind": "macro"
-    },
     "LV_DRAW_SW_ASM_NONE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_SW_ASM_NONE",
@@ -2174,6 +2314,36 @@
     "LV_DRAW_SW_ASM_CUSTOM": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_SW_ASM_CUSTOM",
+      "kind": "macro"
+    },
+    "LV_VG_LITE_GPU_GC255_0X40A": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_VG_LITE_GPU_GC255_0X40A",
+      "kind": "macro"
+    },
+    "LV_VG_LITE_GPU_GC355_0X0_1215": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_VG_LITE_GPU_GC355_0X0_1215",
+      "kind": "macro"
+    },
+    "LV_VG_LITE_GPU_GC355_0X0_1216": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_VG_LITE_GPU_GC355_0X0_1216",
+      "kind": "macro"
+    },
+    "LV_VG_LITE_GPU_GC555_0X423": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_VG_LITE_GPU_GC555_0X423",
+      "kind": "macro"
+    },
+    "LV_VG_LITE_GPU_GC555_0X423_ECO": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_VG_LITE_GPU_GC555_0X423_ECO",
+      "kind": "macro"
+    },
+    "LV_VG_LITE_GPU_GCNANOULTRAV_0X1003": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_VG_LITE_GPU_GCNANOULTRAV_0X1003",
       "kind": "macro"
     },
     "LV_NEMA_LIB_NONE": {
@@ -2231,6 +2401,91 @@
       "anchor": "LV_NANOVG_BACKEND_GLES3",
       "kind": "macro"
     },
+    "LV_LOG_LEVEL_TRACE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LOG_LEVEL_TRACE",
+      "kind": "macro"
+    },
+    "LV_LOG_LEVEL_INFO": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LOG_LEVEL_INFO",
+      "kind": "macro"
+    },
+    "LV_LOG_LEVEL_WARN": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LOG_LEVEL_WARN",
+      "kind": "macro"
+    },
+    "LV_LOG_LEVEL_ERROR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LOG_LEVEL_ERROR",
+      "kind": "macro"
+    },
+    "LV_LOG_LEVEL_USER": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LOG_LEVEL_USER",
+      "kind": "macro"
+    },
+    "LV_LOG_LEVEL_NONE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LOG_LEVEL_NONE",
+      "kind": "macro"
+    },
+    "LV_LINUX_DRM_BACKEND_FBDEV": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LINUX_DRM_BACKEND_FBDEV",
+      "kind": "macro"
+    },
+    "LV_LINUX_DRM_BACKEND_GBM": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LINUX_DRM_BACKEND_GBM",
+      "kind": "macro"
+    },
+    "LV_LINUX_DRM_BACKEND_EGL": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LINUX_DRM_BACKEND_EGL",
+      "kind": "macro"
+    },
+    "LV_SDL_BACKEND_SW": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_BACKEND_SW",
+      "kind": "macro"
+    },
+    "LV_SDL_BACKEND_TEXTURE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_BACKEND_TEXTURE",
+      "kind": "macro"
+    },
+    "LV_SDL_BACKEND_EGL": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_BACKEND_EGL",
+      "kind": "macro"
+    },
+    "LV_SDL_MOUSEWHEEL_MODE_ENCODER": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_MOUSEWHEEL_MODE_ENCODER",
+      "kind": "macro"
+    },
+    "LV_SDL_MOUSEWHEEL_MODE_CROWN": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_MOUSEWHEEL_MODE_CROWN",
+      "kind": "macro"
+    },
+    "LV_WAYLAND_BACKEND_SHM": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_WAYLAND_BACKEND_SHM",
+      "kind": "macro"
+    },
+    "LV_WAYLAND_BACKEND_EGL": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_WAYLAND_BACKEND_EGL",
+      "kind": "macro"
+    },
+    "LV_WAYLAND_BACKEND_G2D": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_WAYLAND_BACKEND_G2D",
+      "kind": "macro"
+    },
     "LV_CHECK_ARG_LOG_MODE_NONE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_CHECK_ARG_LOG_MODE_NONE",
@@ -2246,9 +2501,29 @@
       "anchor": "LV_CHECK_ARG_LOG_MODE_VERBOSE",
       "kind": "macro"
     },
-    "LV_COLOR_DEPTH": {
+    "LV_CALENDAR_DISABLE_DEFAULT_DAY_NAMES": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_COLOR_DEPTH",
+      "anchor": "LV_CALENDAR_DISABLE_DEFAULT_DAY_NAMES",
+      "kind": "macro"
+    },
+    "LV_CALENDAR_DISABLE_DEFAULT_MONTH_NAMES": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_CALENDAR_DISABLE_DEFAULT_MONTH_NAMES",
+      "kind": "macro"
+    },
+    "LV_LIBINPUT_XKB_DISABLE_KEY_MAP": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LIBINPUT_XKB_DISABLE_KEY_MAP",
+      "kind": "macro"
+    },
+    "LV_MEM_SIZE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_MEM_SIZE",
+      "kind": "macro"
+    },
+    "LV_MEM_ADR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_MEM_ADR",
       "kind": "macro"
     },
     "LV_STDINT_INCLUDE": {
@@ -2281,19 +2556,24 @@
       "anchor": "LV_STDARG_INCLUDE",
       "kind": "macro"
     },
-    "LV_MEM_SIZE": {
+    "LV_OS_CUSTOM_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_MEM_SIZE",
+      "anchor": "LV_OS_CUSTOM_INCLUDE",
       "kind": "macro"
     },
-    "LV_MEM_POOL_EXPAND_SIZE": {
+    "LV_OS_IDLE_PERCENT_CUSTOM": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_MEM_POOL_EXPAND_SIZE",
+      "anchor": "LV_OS_IDLE_PERCENT_CUSTOM",
       "kind": "macro"
     },
-    "LV_MEM_ADR": {
+    "LV_COLOR_DEPTH": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_MEM_ADR",
+      "anchor": "LV_COLOR_DEPTH",
+      "kind": "macro"
+    },
+    "LV_COLOR_MIX_ROUND_OFS": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_COLOR_MIX_ROUND_OFS",
       "kind": "macro"
     },
     "LV_DEF_REFR_PERIOD": {
@@ -2411,6 +2691,11 @@
       "anchor": "LV_DRAW_SW_COMPLEX",
       "kind": "macro"
     },
+    "LV_GRADIENT_MAX_STOPS": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_GRADIENT_MAX_STOPS",
+      "kind": "macro"
+    },
     "LV_DRAW_SW_SHADOW_CACHE_SIZE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_SW_SHADOW_CACHE_SIZE",
@@ -2421,49 +2706,9 @@
       "anchor": "LV_DRAW_SW_CIRCLE_CACHE_SIZE",
       "kind": "macro"
     },
-    "LV_NEMA_USE_CACHE": {
+    "LV_DRAW_SW_ASM_CUSTOM_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_NEMA_USE_CACHE",
-      "kind": "macro"
-    },
-    "LV_NEMA_CACHE_HAL_INCLUDE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_NEMA_CACHE_HAL_INCLUDE",
-      "kind": "macro"
-    },
-    "LV_USE_NEMA_HAL": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_NEMA_HAL",
-      "kind": "macro"
-    },
-    "LV_NEMA_GFX_MAX_RESX": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_NEMA_GFX_MAX_RESX",
-      "kind": "macro"
-    },
-    "LV_NEMA_GFX_MAX_RESY": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_NEMA_GFX_MAX_RESY",
-      "kind": "macro"
-    },
-    "LV_USE_PXP_DRAW_THREAD": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_PXP_DRAW_THREAD",
-      "kind": "macro"
-    },
-    "LV_USE_DRAW_G2D": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_DRAW_G2D",
-      "kind": "macro"
-    },
-    "LV_G2D_HASH_TABLE_SIZE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_G2D_HASH_TABLE_SIZE",
-      "kind": "macro"
-    },
-    "LV_USE_G2D_DRAW_THREAD": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_G2D_DRAW_THREAD",
+      "anchor": "LV_DRAW_SW_ASM_CUSTOM_INCLUDE",
       "kind": "macro"
     },
     "LV_VG_LITE_USE_GPU_INIT": {
@@ -2506,14 +2751,14 @@
       "anchor": "LV_VG_LITE_DISABLE_VLC_OP_CLOSE",
       "kind": "macro"
     },
-    "LV_VG_LITE_DISABLE_BLIT_RECT_OFFSET": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_VG_LITE_DISABLE_BLIT_RECT_OFFSET",
-      "kind": "macro"
-    },
     "LV_VG_LITE_DISABLE_LINEAR_GRADIENT_EXT": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_VG_LITE_DISABLE_LINEAR_GRADIENT_EXT",
+      "kind": "macro"
+    },
+    "LV_VG_LITE_DISABLE_BLIT_RECT_OFFSET": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_VG_LITE_DISABLE_BLIT_RECT_OFFSET",
       "kind": "macro"
     },
     "LV_VG_LITE_PATH_DUMP_MAX_LEN": {
@@ -2521,14 +2766,9 @@
       "anchor": "LV_VG_LITE_PATH_DUMP_MAX_LEN",
       "kind": "macro"
     },
-    "LV_VG_LITE_HAL_GPU_SERIES": {
+    "LV_VG_LITE_GPU": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_VG_LITE_HAL_GPU_SERIES",
-      "kind": "macro"
-    },
-    "LV_VG_LITE_HAL_GPU_REVISION": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_VG_LITE_HAL_GPU_REVISION",
+      "anchor": "LV_VG_LITE_GPU",
       "kind": "macro"
     },
     "LV_VG_LITE_HAL_GPU_BASE_ADDRESS": {
@@ -2566,14 +2806,49 @@
       "anchor": "LV_VG_LITE_THORVG_THREAD_RENDER",
       "kind": "macro"
     },
-    "LV_DRAW_DMA2D_HAL_INCLUDE": {
+    "LV_NEMA_USE_CACHE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_DRAW_DMA2D_HAL_INCLUDE",
+      "anchor": "LV_NEMA_USE_CACHE",
       "kind": "macro"
     },
-    "LV_DRAW_OPENGLES_TEXTURE_CACHE_COUNT": {
+    "LV_NEMA_CACHE_HAL_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_DRAW_OPENGLES_TEXTURE_CACHE_COUNT",
+      "anchor": "LV_NEMA_CACHE_HAL_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_USE_NEMA_HAL": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_NEMA_HAL",
+      "kind": "macro"
+    },
+    "LV_NEMA_STM32_HAL_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_NEMA_STM32_HAL_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_NEMA_USE_CUSTOM_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_NEMA_USE_CUSTOM_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_NEMA_CUSTOM_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_NEMA_CUSTOM_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_NEMA_GFX_MAX_RESX": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_NEMA_GFX_MAX_RESX",
+      "kind": "macro"
+    },
+    "LV_NEMA_GFX_MAX_RESY": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_NEMA_GFX_MAX_RESY",
+      "kind": "macro"
+    },
+    "LV_USE_PXP_DRAW_THREAD": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_PXP_DRAW_THREAD",
       "kind": "macro"
     },
     "LV_USE_PPA_IMG": {
@@ -2586,6 +2861,11 @@
       "anchor": "LV_PPA_BURST_LENGTH",
       "kind": "macro"
     },
+    "LV_DRAW_DMA2D_HAL_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DRAW_DMA2D_HAL_INCLUDE",
+      "kind": "macro"
+    },
     "LV_DRAW_EVE_EVE_GENERATION": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_EVE_EVE_GENERATION",
@@ -2594,6 +2874,21 @@
     "LV_DRAW_EVE_WRITE_BUFFER_SIZE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_EVE_WRITE_BUFFER_SIZE",
+      "kind": "macro"
+    },
+    "LV_USE_DRAW_G2D": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_DRAW_G2D",
+      "kind": "macro"
+    },
+    "LV_G2D_HASH_TABLE_SIZE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_G2D_HASH_TABLE_SIZE",
+      "kind": "macro"
+    },
+    "LV_USE_G2D_DRAW_THREAD": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_G2D_DRAW_THREAD",
       "kind": "macro"
     },
     "LV_NANOVG_BACKEND": {
@@ -2609,6 +2904,21 @@
     "LV_NANOVG_LETTER_CACHE_CNT": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_NANOVG_LETTER_CACHE_CNT",
+      "kind": "macro"
+    },
+    "LV_DRAW_OPENGLES_TEXTURE_CACHE_COUNT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DRAW_OPENGLES_TEXTURE_CACHE_COUNT",
+      "kind": "macro"
+    },
+    "LV_OBJ_STYLE_CACHE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_OBJ_STYLE_CACHE",
+      "kind": "macro"
+    },
+    "LV_OBJ_ID_AUTO_ASSIGN": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_OBJ_ID_AUTO_ASSIGN",
       "kind": "macro"
     },
     "LV_LOG_LEVEL": {
@@ -2676,44 +2986,19 @@
       "anchor": "LV_LOG_TRACE_CACHE",
       "kind": "macro"
     },
-    "LV_ASSERT_HANDLER_INCLUDE": {
+    "LV_THEME_DEFAULT_DARK": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_ASSERT_HANDLER_INCLUDE",
+      "anchor": "LV_THEME_DEFAULT_DARK",
       "kind": "macro"
     },
-    "LV_ASSERT_HANDLER": {
+    "LV_THEME_DEFAULT_GROW": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_ASSERT_HANDLER",
+      "anchor": "LV_THEME_DEFAULT_GROW",
       "kind": "macro"
     },
-    "LV_USE_CHECK_ARG": {
+    "LV_THEME_DEFAULT_TRANSITION_TIME": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_CHECK_ARG",
-      "kind": "macro"
-    },
-    "LV_CHECK_ARG_ASSERT_ON_FAIL": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_CHECK_ARG_ASSERT_ON_FAIL",
-      "kind": "macro"
-    },
-    "LV_CHECK_ARG_LOG_MODE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_CHECK_ARG_LOG_MODE",
-      "kind": "macro"
-    },
-    "LV_USE_CHECK_OBJ_CLASSTYPE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_CHECK_OBJ_CLASSTYPE",
-      "kind": "macro"
-    },
-    "LV_USE_CHECK_OBJ_VALIDITY": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_CHECK_OBJ_VALIDITY",
-      "kind": "macro"
-    },
-    "LV_ENABLE_GLOBAL_CUSTOM": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_ENABLE_GLOBAL_CUSTOM",
+      "anchor": "LV_THEME_DEFAULT_TRANSITION_TIME",
       "kind": "macro"
     },
     "LV_CACHE_DEF_SIZE": {
@@ -2726,44 +3011,44 @@
       "anchor": "LV_IMAGE_HEADER_CACHE_DEF_CNT",
       "kind": "macro"
     },
-    "LV_GRADIENT_MAX_STOPS": {
+    "LV_BIN_DECODER_RAM_LOAD": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_GRADIENT_MAX_STOPS",
+      "anchor": "LV_BIN_DECODER_RAM_LOAD",
       "kind": "macro"
     },
-    "LV_COLOR_MIX_ROUND_OFS": {
+    "LV_TXT_ENC": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_COLOR_MIX_ROUND_OFS",
+      "anchor": "LV_TXT_ENC",
       "kind": "macro"
     },
-    "LV_OBJ_STYLE_CACHE": {
+    "LV_TXT_BREAK_CHARS": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_OBJ_STYLE_CACHE",
+      "anchor": "LV_TXT_BREAK_CHARS",
       "kind": "macro"
     },
-    "LV_OBJ_ID_AUTO_ASSIGN": {
+    "LV_TXT_LINE_BREAK_LONG_LEN": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_OBJ_ID_AUTO_ASSIGN",
+      "anchor": "LV_TXT_LINE_BREAK_LONG_LEN",
       "kind": "macro"
     },
-    "LV_BIG_ENDIAN_SYSTEM": {
+    "LV_TXT_LINE_BREAK_LONG_PRE_MIN_LEN": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_BIG_ENDIAN_SYSTEM",
+      "anchor": "LV_TXT_LINE_BREAK_LONG_PRE_MIN_LEN",
       "kind": "macro"
     },
-    "LV_ATTRIBUTE_SYNC_READY": {
+    "LV_TXT_LINE_BREAK_LONG_POST_MIN_LEN": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_ATTRIBUTE_SYNC_READY",
+      "anchor": "LV_TXT_LINE_BREAK_LONG_POST_MIN_LEN",
       "kind": "macro"
     },
-    "LV_ATTRIBUTE_MEM_ALIGN_SIZE": {
+    "LV_TXT_COLOR_CMD": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_ATTRIBUTE_MEM_ALIGN_SIZE",
+      "anchor": "LV_TXT_COLOR_CMD",
       "kind": "macro"
     },
-    "LV_EXPORT_CONST_INT": {
+    "LV_BIDI_BASE_DIR_DEF": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_EXPORT_CONST_INT",
+      "anchor": "LV_BIDI_BASE_DIR_DEF",
       "kind": "macro"
     },
     "LV_FONT_MONTSERRAT_8": {
@@ -2901,9 +3186,19 @@
       "anchor": "LV_FONT_UNSCII_16",
       "kind": "macro"
     },
-    "LV_FONT_CUSTOM_DECLARE": {
+    "LV_FONT_USE_CUSTOM_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_FONT_CUSTOM_DECLARE",
+      "anchor": "LV_FONT_USE_CUSTOM_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_FONT_CUSTOM_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FONT_CUSTOM_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_USE_CUSTOM_FONT_DEFAULT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_CUSTOM_FONT_DEFAULT",
       "kind": "macro"
     },
     "LV_FONT_DEFAULT": {
@@ -2916,39 +3211,39 @@
       "anchor": "LV_FONT_FMT_TXT_LARGE",
       "kind": "macro"
     },
-    "LV_TXT_ENC": {
+    "LV_FONT_MANAGER_NAME_MAX_LEN": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_TXT_ENC",
+      "anchor": "LV_FONT_MANAGER_NAME_MAX_LEN",
       "kind": "macro"
     },
-    "LV_TXT_BREAK_CHARS": {
+    "LV_FREETYPE_USE_LVGL_PORT": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_TXT_BREAK_CHARS",
+      "anchor": "LV_FREETYPE_USE_LVGL_PORT",
       "kind": "macro"
     },
-    "LV_TXT_LINE_BREAK_LONG_LEN": {
+    "LV_FREETYPE_CACHE_FT_GLYPH_CNT": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_TXT_LINE_BREAK_LONG_LEN",
+      "anchor": "LV_FREETYPE_CACHE_FT_GLYPH_CNT",
       "kind": "macro"
     },
-    "LV_TXT_LINE_BREAK_LONG_PRE_MIN_LEN": {
+    "LV_FREETYPE_CACHE_FT_GLYPH_L1": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_TXT_LINE_BREAK_LONG_PRE_MIN_LEN",
+      "anchor": "LV_FREETYPE_CACHE_FT_GLYPH_L1",
       "kind": "macro"
     },
-    "LV_TXT_LINE_BREAK_LONG_POST_MIN_LEN": {
+    "LV_TINY_TTF_FILE_SUPPORT": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_TXT_LINE_BREAK_LONG_POST_MIN_LEN",
+      "anchor": "LV_TINY_TTF_FILE_SUPPORT",
       "kind": "macro"
     },
-    "LV_BIDI_BASE_DIR_DEF": {
+    "LV_TINY_TTF_CACHE_GLYPH_CNT": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_BIDI_BASE_DIR_DEF",
+      "anchor": "LV_TINY_TTF_CACHE_GLYPH_CNT",
       "kind": "macro"
     },
-    "LV_TXT_COLOR_CMD": {
+    "LV_TINY_TTF_CACHE_KERNING_CNT": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_TXT_COLOR_CMD",
+      "anchor": "LV_TINY_TTF_CACHE_KERNING_CNT",
       "kind": "macro"
     },
     "LV_WIDGETS_HAS_DEFAULT_VALUE": {
@@ -2961,14 +3256,144 @@
       "anchor": "LV_CALENDAR_WEEK_STARTS_MONDAY",
       "kind": "macro"
     },
-    "LV_CALENDAR_DEFAULT_DAY_NAMES": {
+    "LV_MONDAY_STR": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_CALENDAR_DEFAULT_DAY_NAMES",
+      "anchor": "LV_MONDAY_STR",
       "kind": "macro"
     },
-    "LV_CALENDAR_DEFAULT_MONTH_NAMES": {
+    "LV_TUESDAY_STR": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_CALENDAR_DEFAULT_MONTH_NAMES",
+      "anchor": "LV_TUESDAY_STR",
+      "kind": "macro"
+    },
+    "LV_WEDNESDAY_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_WEDNESDAY_STR",
+      "kind": "macro"
+    },
+    "LV_THURSDAY_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_THURSDAY_STR",
+      "kind": "macro"
+    },
+    "LV_FRIDAY_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FRIDAY_STR",
+      "kind": "macro"
+    },
+    "LV_SATURDAY_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SATURDAY_STR",
+      "kind": "macro"
+    },
+    "LV_SUNDAY_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SUNDAY_STR",
+      "kind": "macro"
+    },
+    "LV_JANUARY_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_JANUARY_STR",
+      "kind": "macro"
+    },
+    "LV_FEBRUARY_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FEBRUARY_STR",
+      "kind": "macro"
+    },
+    "LV_MARCH_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_MARCH_STR",
+      "kind": "macro"
+    },
+    "LV_APRIL_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_APRIL_STR",
+      "kind": "macro"
+    },
+    "LV_MAY_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_MAY_STR",
+      "kind": "macro"
+    },
+    "LV_JUNE_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_JUNE_STR",
+      "kind": "macro"
+    },
+    "LV_JULY_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_JULY_STR",
+      "kind": "macro"
+    },
+    "LV_AUGUST_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_AUGUST_STR",
+      "kind": "macro"
+    },
+    "LV_SEPTEMBER_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SEPTEMBER_STR",
+      "kind": "macro"
+    },
+    "LV_OCTOBER_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_OCTOBER_STR",
+      "kind": "macro"
+    },
+    "LV_NOVEMBER_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_NOVEMBER_STR",
+      "kind": "macro"
+    },
+    "LV_DECEMBER_STR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DECEMBER_STR",
+      "kind": "macro"
+    },
+    "LV_FFMPEG_DUMP_FORMAT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FFMPEG_DUMP_FORMAT",
+      "kind": "macro"
+    },
+    "LV_FFMPEG_PLAYER_USE_LV_FS": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_FFMPEG_PLAYER_USE_LV_FS",
+      "kind": "macro"
+    },
+    "LV_GIF_CACHE_DECODE_DATA": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_GIF_CACHE_DECODE_DATA",
+      "kind": "macro"
+    },
+    "LV_GIF_MAX_WIDTH": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_GIF_MAX_WIDTH",
+      "kind": "macro"
+    },
+    "LV_GIF_MAX_HEIGHT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_GIF_MAX_HEIGHT",
+      "kind": "macro"
+    },
+    "LV_IME_PINYIN_USE_K9_MODE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_IME_PINYIN_USE_K9_MODE",
+      "kind": "macro"
+    },
+    "LV_IME_PINYIN_K9_CAND_TEXT_NUM": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_IME_PINYIN_K9_CAND_TEXT_NUM",
+      "kind": "macro"
+    },
+    "LV_IME_PINYIN_USE_DEFAULT_DICT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_IME_PINYIN_USE_DEFAULT_DICT",
+      "kind": "macro"
+    },
+    "LV_IME_PINYIN_CAND_TEXT_NUM": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_IME_PINYIN_CAND_TEXT_NUM",
       "kind": "macro"
     },
     "LV_LABEL_TEXT_SELECTION": {
@@ -2996,19 +3421,214 @@
       "anchor": "LV_TEXTAREA_DEF_PWD_SHOW_TIME",
       "kind": "macro"
     },
-    "LV_THEME_DEFAULT_DARK": {
+    "LV_LINUX_DRM_AUTO_BACKEND": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_THEME_DEFAULT_DARK",
+      "anchor": "LV_LINUX_DRM_AUTO_BACKEND",
       "kind": "macro"
     },
-    "LV_THEME_DEFAULT_GROW": {
+    "LV_LINUX_DRM_BACKEND": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_THEME_DEFAULT_GROW",
+      "anchor": "LV_LINUX_DRM_BACKEND",
       "kind": "macro"
     },
-    "LV_THEME_DEFAULT_TRANSITION_TIME": {
+    "LV_LINUX_FBDEV_BSD": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_THEME_DEFAULT_TRANSITION_TIME",
+      "anchor": "LV_LINUX_FBDEV_BSD",
+      "kind": "macro"
+    },
+    "LV_LINUX_FBDEV_RENDER_MODE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LINUX_FBDEV_RENDER_MODE",
+      "kind": "macro"
+    },
+    "LV_LINUX_FBDEV_BUFFER_COUNT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LINUX_FBDEV_BUFFER_COUNT",
+      "kind": "macro"
+    },
+    "LV_LINUX_FBDEV_BUFFER_SIZE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LINUX_FBDEV_BUFFER_SIZE",
+      "kind": "macro"
+    },
+    "LV_LINUX_FBDEV_MMAP": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LINUX_FBDEV_MMAP",
+      "kind": "macro"
+    },
+    "LV_LGFX_USER_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LGFX_USER_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_ST_LTDC_USE_DMA2D_FLUSH": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_ST_LTDC_USE_DMA2D_FLUSH",
+      "kind": "macro"
+    },
+    "LV_LIBINPUT_BSD": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LIBINPUT_BSD",
+      "kind": "macro"
+    },
+    "LV_LIBINPUT_XKB_RULES": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LIBINPUT_XKB_RULES",
+      "kind": "macro"
+    },
+    "LV_LIBINPUT_XKB_MODEL": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LIBINPUT_XKB_MODEL",
+      "kind": "macro"
+    },
+    "LV_LIBINPUT_XKB_LAYOUT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LIBINPUT_XKB_LAYOUT",
+      "kind": "macro"
+    },
+    "LV_LIBINPUT_XKB_VARIANT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LIBINPUT_XKB_VARIANT",
+      "kind": "macro"
+    },
+    "LV_LIBINPUT_XKB_OPTIONS_USE_DEFAULT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LIBINPUT_XKB_OPTIONS_USE_DEFAULT",
+      "kind": "macro"
+    },
+    "LV_LIBINPUT_XKB_OPTIONS": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LIBINPUT_XKB_OPTIONS",
+      "kind": "macro"
+    },
+    "LV_USE_NUTTX_INDEPENDENT_IMAGE_HEAP": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_NUTTX_INDEPENDENT_IMAGE_HEAP",
+      "kind": "macro"
+    },
+    "LV_NUTTX_DEFAULT_DRAW_BUF_USE_INDEPENDENT_IMAGE_HEAP": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_NUTTX_DEFAULT_DRAW_BUF_USE_INDEPENDENT_IMAGE_HEAP",
+      "kind": "macro"
+    },
+    "LV_NUTTX_LCD_BUFFER_COUNT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_NUTTX_LCD_BUFFER_COUNT",
+      "kind": "macro"
+    },
+    "LV_NUTTX_LCD_BUFFER_SIZE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_NUTTX_LCD_BUFFER_SIZE",
+      "kind": "macro"
+    },
+    "LV_NUTTX_TOUCHSCREEN_CURSOR_SIZE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_NUTTX_TOUCHSCREEN_CURSOR_SIZE",
+      "kind": "macro"
+    },
+    "LV_USE_NUTTX_MOUSE_MOVE_STEP": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_NUTTX_MOUSE_MOVE_STEP",
+      "kind": "macro"
+    },
+    "LV_USE_NUTTX_TRACE_FILE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_NUTTX_TRACE_FILE",
+      "kind": "macro"
+    },
+    "LV_NUTTX_TRACE_FILE_PATH": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_NUTTX_TRACE_FILE_PATH",
+      "kind": "macro"
+    },
+    "LV_QNX_BUF_COUNT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_QNX_BUF_COUNT",
+      "kind": "macro"
+    },
+    "LV_SDL_INCLUDE_PATH": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_INCLUDE_PATH",
+      "kind": "macro"
+    },
+    "LV_SDL_AUTO_BACKEND": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_AUTO_BACKEND",
+      "kind": "macro"
+    },
+    "LV_SDL_BACKEND": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_BACKEND",
+      "kind": "macro"
+    },
+    "LV_SDL_RENDER_MODE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_RENDER_MODE",
+      "kind": "macro"
+    },
+    "LV_SDL_BUF_COUNT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_BUF_COUNT",
+      "kind": "macro"
+    },
+    "LV_SDL_ACCELERATED": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_ACCELERATED",
+      "kind": "macro"
+    },
+    "LV_SDL_FULLSCREEN": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_FULLSCREEN",
+      "kind": "macro"
+    },
+    "LV_SDL_DIRECT_EXIT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_DIRECT_EXIT",
+      "kind": "macro"
+    },
+    "LV_SDL_MOUSEWHEEL_MODE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_MOUSEWHEEL_MODE",
+      "kind": "macro"
+    },
+    "LV_USE_UEFI_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_UEFI_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_UEFI_USE_MEMORY_SERVICES": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_UEFI_USE_MEMORY_SERVICES",
+      "kind": "macro"
+    },
+    "LV_WAYLAND_DIRECT_EXIT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_WAYLAND_DIRECT_EXIT",
+      "kind": "macro"
+    },
+    "LV_WAYLAND_AUTO_BACKEND": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_WAYLAND_AUTO_BACKEND",
+      "kind": "macro"
+    },
+    "LV_WAYLAND_BACKEND": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_WAYLAND_BACKEND",
+      "kind": "macro"
+    },
+    "LV_X11_DOUBLE_BUFFER": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_X11_DOUBLE_BUFFER",
+      "kind": "macro"
+    },
+    "LV_X11_DIRECT_EXIT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_X11_DIRECT_EXIT",
+      "kind": "macro"
+    },
+    "LV_X11_RENDER_MODE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_X11_RENDER_MODE",
       "kind": "macro"
     },
     "LV_FS_DEFAULT_DRIVER_LETTER": {
@@ -3076,11 +3696,6 @@
       "anchor": "LV_FS_FATFS_CACHE_SIZE",
       "kind": "macro"
     },
-    "LV_FS_MEMFS_LETTER": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_FS_MEMFS_LETTER",
-      "kind": "macro"
-    },
     "LV_FS_LITTLEFS_LETTER": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_FS_LITTLEFS_LETTER",
@@ -3121,69 +3736,9 @@
       "anchor": "LV_FS_FROGFS_LETTER",
       "kind": "macro"
     },
-    "LV_GIF_CACHE_DECODE_DATA": {
+    "LV_FS_MEMFS_LETTER": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_GIF_CACHE_DECODE_DATA",
-      "kind": "macro"
-    },
-    "LV_GIF_MAX_WIDTH": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_GIF_MAX_WIDTH",
-      "kind": "macro"
-    },
-    "LV_GIF_MAX_HEIGHT": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_GIF_MAX_HEIGHT",
-      "kind": "macro"
-    },
-    "LV_BIN_DECODER_RAM_LOAD": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_BIN_DECODER_RAM_LOAD",
-      "kind": "macro"
-    },
-    "LV_FREETYPE_USE_LVGL_PORT": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_FREETYPE_USE_LVGL_PORT",
-      "kind": "macro"
-    },
-    "LV_FREETYPE_CACHE_FT_GLYPH_CNT": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_FREETYPE_CACHE_FT_GLYPH_CNT",
-      "kind": "macro"
-    },
-    "LV_FREETYPE_CACHE_FT_GLYPH_L1": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "LV_FREETYPE_CACHE_FT_GLYPH_L1",
-      "kind": "macro"
-    },
-    "LV_TINY_TTF_FILE_SUPPORT": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_TINY_TTF_FILE_SUPPORT",
-      "kind": "macro"
-    },
-    "LV_TINY_TTF_CACHE_GLYPH_CNT": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_TINY_TTF_CACHE_GLYPH_CNT",
-      "kind": "macro"
-    },
-    "LV_TINY_TTF_CACHE_KERNING_CNT": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_TINY_TTF_CACHE_KERNING_CNT",
-      "kind": "macro"
-    },
-    "LV_FFMPEG_DUMP_FORMAT": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_FFMPEG_DUMP_FORMAT",
-      "kind": "macro"
-    },
-    "LV_FFMPEG_PLAYER_USE_LV_FS": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_FFMPEG_PLAYER_USE_LV_FS",
-      "kind": "macro"
-    },
-    "LV_SYSMON_GET_IDLE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_SYSMON_GET_IDLE",
+      "anchor": "LV_FS_MEMFS_LETTER",
       "kind": "macro"
     },
     "LV_SYSMON_PROC_IDLE_AVAILABLE": {
@@ -3206,6 +3761,16 @@
       "anchor": "LV_USE_MEM_MONITOR_POS",
       "kind": "macro"
     },
+    "LV_SYSMON_USE_CUSTOM_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SYSMON_USE_CUSTOM_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_SYSMON_CUSTOM_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SYSMON_CUSTOM_INCLUDE",
+      "kind": "macro"
+    },
     "LV_PROFILER_BUILTIN_BUF_SIZE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_PROFILER_BUILTIN_BUF_SIZE",
@@ -3219,26 +3784,6 @@
     "LV_PROFILER_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_PROFILER_INCLUDE",
-      "kind": "macro"
-    },
-    "LV_PROFILER_BEGIN": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_PROFILER_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_END": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_PROFILER_END",
-      "kind": "macro"
-    },
-    "LV_PROFILER_BEGIN_TAG": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_PROFILER_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_END_TAG": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_PROFILER_END_TAG",
       "kind": "macro"
     },
     "LV_PROFILER_LAYOUT": {
@@ -3296,24 +3841,9 @@
       "anchor": "LV_PROFILER_EVENT",
       "kind": "macro"
     },
-    "LV_IME_PINYIN_USE_DEFAULT_DICT": {
+    "LV_TEST_SCREENSHOT_CREATE_REFERENCE_IMAGE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_IME_PINYIN_USE_DEFAULT_DICT",
-      "kind": "macro"
-    },
-    "LV_IME_PINYIN_CAND_TEXT_NUM": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_IME_PINYIN_CAND_TEXT_NUM",
-      "kind": "macro"
-    },
-    "LV_IME_PINYIN_USE_K9_MODE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_IME_PINYIN_USE_K9_MODE",
-      "kind": "macro"
-    },
-    "LV_IME_PINYIN_K9_CAND_TEXT_NUM": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_IME_PINYIN_K9_CAND_TEXT_NUM",
+      "anchor": "LV_TEST_SCREENSHOT_CREATE_REFERENCE_IMAGE",
       "kind": "macro"
     },
     "LV_FILE_EXPLORER_PATH_MAX_LEN": {
@@ -3326,179 +3856,74 @@
       "anchor": "LV_FILE_EXPLORER_QUICK_ACCESS",
       "kind": "macro"
     },
-    "LV_FONT_MANAGER_NAME_MAX_LEN": {
+    "LV_ENABLE_GLOBAL_CUSTOM": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_FONT_MANAGER_NAME_MAX_LEN",
+      "anchor": "LV_ENABLE_GLOBAL_CUSTOM",
       "kind": "macro"
     },
-    "LV_TEST_SCREENSHOT_CREATE_REFERENCE_IMAGE": {
+    "LV_GLOBAL_USE_CUSTOM_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_TEST_SCREENSHOT_CREATE_REFERENCE_IMAGE",
+      "anchor": "LV_GLOBAL_USE_CUSTOM_INCLUDE",
       "kind": "macro"
     },
-    "LV_SDL_INCLUDE_PATH": {
+    "LV_GLOBAL_CUSTOM_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_SDL_INCLUDE_PATH",
+      "anchor": "LV_GLOBAL_CUSTOM_INCLUDE",
       "kind": "macro"
     },
-    "LV_SDL_RENDER_MODE": {
+    "LV_DISABLE_ASSERT_HANDLER_INCLUDE_WARNING": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_SDL_RENDER_MODE",
+      "anchor": "LV_DISABLE_ASSERT_HANDLER_INCLUDE_WARNING",
       "kind": "macro"
     },
-    "LV_SDL_BUF_COUNT": {
+    "LV_ASSERT_USE_CUSTOM_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_SDL_BUF_COUNT",
+      "anchor": "LV_ASSERT_USE_CUSTOM_INCLUDE",
       "kind": "macro"
     },
-    "LV_SDL_ACCELERATED": {
+    "LV_ASSERT_CUSTOM_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_SDL_ACCELERATED",
+      "anchor": "LV_ASSERT_CUSTOM_INCLUDE",
       "kind": "macro"
     },
-    "LV_SDL_FULLSCREEN": {
+    "LV_USE_CHECK_ARG": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_SDL_FULLSCREEN",
+      "anchor": "LV_USE_CHECK_ARG",
       "kind": "macro"
     },
-    "LV_SDL_DIRECT_EXIT": {
+    "LV_CHECK_ARG_ASSERT_ON_FAIL": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_SDL_DIRECT_EXIT",
+      "anchor": "LV_CHECK_ARG_ASSERT_ON_FAIL",
       "kind": "macro"
     },
-    "LV_SDL_MOUSEWHEEL_MODE": {
+    "LV_CHECK_ARG_LOG_MODE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_SDL_MOUSEWHEEL_MODE",
+      "anchor": "LV_CHECK_ARG_LOG_MODE",
       "kind": "macro"
     },
-    "LV_X11_DIRECT_EXIT": {
+    "LV_USE_CHECK_OBJ_CLASSTYPE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_X11_DIRECT_EXIT",
+      "anchor": "LV_USE_CHECK_OBJ_CLASSTYPE",
       "kind": "macro"
     },
-    "LV_X11_DOUBLE_BUFFER": {
+    "LV_USE_CHECK_OBJ_VALIDITY": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_X11_DOUBLE_BUFFER",
+      "anchor": "LV_USE_CHECK_OBJ_VALIDITY",
       "kind": "macro"
     },
-    "LV_X11_RENDER_MODE_PARTIAL": {
+    "LV_BIG_ENDIAN_SYSTEM": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_X11_RENDER_MODE_PARTIAL",
+      "anchor": "LV_BIG_ENDIAN_SYSTEM",
       "kind": "macro"
     },
-    "LV_X11_RENDER_MODE_DIRECT": {
+    "LV_ATTRIBUTE_USE_CUSTOM_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_X11_RENDER_MODE_DIRECT",
+      "anchor": "LV_ATTRIBUTE_USE_CUSTOM_INCLUDE",
       "kind": "macro"
     },
-    "LV_X11_RENDER_MODE_FULL": {
+    "LV_ATTRIBUTE_CUSTOM_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_X11_RENDER_MODE_FULL",
-      "kind": "macro"
-    },
-    "LV_WAYLAND_DIRECT_EXIT": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_WAYLAND_DIRECT_EXIT",
-      "kind": "macro"
-    },
-    "LV_LINUX_FBDEV_BSD": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_LINUX_FBDEV_BSD",
-      "kind": "macro"
-    },
-    "LV_LINUX_FBDEV_RENDER_MODE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_LINUX_FBDEV_RENDER_MODE",
-      "kind": "macro"
-    },
-    "LV_LINUX_FBDEV_BUFFER_COUNT": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_LINUX_FBDEV_BUFFER_COUNT",
-      "kind": "macro"
-    },
-    "LV_LINUX_FBDEV_BUFFER_SIZE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_LINUX_FBDEV_BUFFER_SIZE",
-      "kind": "macro"
-    },
-    "LV_LINUX_FBDEV_MMAP": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_LINUX_FBDEV_MMAP",
-      "kind": "macro"
-    },
-    "LV_USE_NUTTX_INDEPENDENT_IMAGE_HEAP": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_NUTTX_INDEPENDENT_IMAGE_HEAP",
-      "kind": "macro"
-    },
-    "LV_NUTTX_DEFAULT_DRAW_BUF_USE_INDEPENDENT_IMAGE_HEAP": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_NUTTX_DEFAULT_DRAW_BUF_USE_INDEPENDENT_IMAGE_HEAP",
-      "kind": "macro"
-    },
-    "LV_NUTTX_LCD_BUFFER_COUNT": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_NUTTX_LCD_BUFFER_COUNT",
-      "kind": "macro"
-    },
-    "LV_NUTTX_LCD_BUFFER_SIZE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_NUTTX_LCD_BUFFER_SIZE",
-      "kind": "macro"
-    },
-    "LV_NUTTX_TOUCHSCREEN_CURSOR_SIZE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_NUTTX_TOUCHSCREEN_CURSOR_SIZE",
-      "kind": "macro"
-    },
-    "LV_USE_NUTTX_MOUSE_MOVE_STEP": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_NUTTX_MOUSE_MOVE_STEP",
-      "kind": "macro"
-    },
-    "LV_USE_NUTTX_TRACE_FILE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_NUTTX_TRACE_FILE",
-      "kind": "macro"
-    },
-    "LV_USE_LINUX_DRM_GBM_BUFFERS": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_LINUX_DRM_GBM_BUFFERS",
-      "kind": "macro"
-    },
-    "LV_LGFX_USER_INCLUDE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_LGFX_USER_INCLUDE",
-      "kind": "macro"
-    },
-    "LV_LIBINPUT_BSD": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_LIBINPUT_BSD",
-      "kind": "macro"
-    },
-    "LV_LIBINPUT_XKB_KEY_MAP": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_LIBINPUT_XKB_KEY_MAP",
-      "kind": "macro"
-    },
-    "LV_ST_LTDC_USE_DMA2D_FLUSH": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_ST_LTDC_USE_DMA2D_FLUSH",
-      "kind": "macro"
-    },
-    "LV_USE_UEFI_INCLUDE": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_UEFI_INCLUDE",
-      "kind": "macro"
-    },
-    "LV_UEFI_USE_MEMORY_SERVICES": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_UEFI_USE_MEMORY_SERVICES",
-      "kind": "macro"
-    },
-    "LV_QNX_BUF_COUNT": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_QNX_BUF_COUNT",
+      "anchor": "LV_ATTRIBUTE_CUSTOM_INCLUDE",
       "kind": "macro"
     },
     "LV_BUILD_EXAMPLES": {
@@ -3511,9 +3936,19 @@
       "anchor": "LV_BUILD_DEMOS",
       "kind": "macro"
     },
-    "LV_USE_DEMO_WIDGETS": {
+    "LV_USE_DEMO_BENCHMARK": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_DEMO_WIDGETS",
+      "anchor": "LV_USE_DEMO_BENCHMARK",
+      "kind": "macro"
+    },
+    "LV_DEMO_BENCHMARK_ALIGNED_FONTS": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DEMO_BENCHMARK_ALIGNED_FONTS",
+      "kind": "macro"
+    },
+    "LV_USE_DEMO_GLTF": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_DEMO_GLTF",
       "kind": "macro"
     },
     "LV_USE_DEMO_KEYPAD_AND_ENCODER": {
@@ -3521,9 +3956,34 @@
       "anchor": "LV_USE_DEMO_KEYPAD_AND_ENCODER",
       "kind": "macro"
     },
-    "LV_USE_DEMO_BENCHMARK": {
+    "LV_USE_DEMO_MUSIC": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_DEMO_BENCHMARK",
+      "anchor": "LV_USE_DEMO_MUSIC",
+      "kind": "macro"
+    },
+    "LV_DEMO_MUSIC_SQUARE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DEMO_MUSIC_SQUARE",
+      "kind": "macro"
+    },
+    "LV_DEMO_MUSIC_LANDSCAPE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DEMO_MUSIC_LANDSCAPE",
+      "kind": "macro"
+    },
+    "LV_DEMO_MUSIC_ROUND": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DEMO_MUSIC_ROUND",
+      "kind": "macro"
+    },
+    "LV_DEMO_MUSIC_LARGE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DEMO_MUSIC_LARGE",
+      "kind": "macro"
+    },
+    "LV_DEMO_MUSIC_AUTO_PLAY": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DEMO_MUSIC_AUTO_PLAY",
       "kind": "macro"
     },
     "LV_USE_DEMO_RENDER": {
@@ -3536,19 +3996,14 @@
       "anchor": "LV_USE_DEMO_STRESS",
       "kind": "macro"
     },
-    "LV_USE_DEMO_MUSIC": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_DEMO_MUSIC",
-      "kind": "macro"
-    },
     "LV_USE_DEMO_VECTOR_GRAPHIC": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_USE_DEMO_VECTOR_GRAPHIC",
       "kind": "macro"
     },
-    "LV_USE_DEMO_GLTF": {
+    "LV_USE_DEMO_WIDGETS": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_DEMO_GLTF",
+      "anchor": "LV_USE_DEMO_WIDGETS",
       "kind": "macro"
     },
     "LV_USE_DEMO_FLEX_LAYOUT": {
@@ -3561,9 +4016,19 @@
       "anchor": "LV_USE_DEMO_MULTILANG",
       "kind": "macro"
     },
+    "LV_USE_DEMO_SMARTWATCH": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_DEMO_SMARTWATCH",
+      "kind": "macro"
+    },
     "LV_USE_DEMO_EBIKE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_USE_DEMO_EBIKE",
+      "kind": "macro"
+    },
+    "LV_DEMO_EBIKE_PORTRAIT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DEMO_EBIKE_PORTRAIT",
       "kind": "macro"
     },
     "LV_USE_DEMO_HIGH_RES": {
@@ -3571,14 +4036,19 @@
       "anchor": "LV_USE_DEMO_HIGH_RES",
       "kind": "macro"
     },
-    "LV_USE_DEMO_SMARTWATCH": {
+    "LV_LINUX_DRM_USE_EGL": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_DEMO_SMARTWATCH",
+      "anchor": "LV_LINUX_DRM_USE_EGL",
       "kind": "macro"
     },
-    "LV_USE_ANIMIMAGE": {
+    "LV_USE_LINUX_DRM_GBM_BUFFERS": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_USE_ANIMIMAGE",
+      "anchor": "LV_USE_LINUX_DRM_GBM_BUFFERS",
+      "kind": "macro"
+    },
+    "LV_SDL_USE_EGL": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_SDL_USE_EGL",
       "kind": "macro"
     },
     "LV_WAYLAND_USE_EGL": {
@@ -3596,14 +4066,74 @@
       "anchor": "LV_WAYLAND_USE_SHM",
       "kind": "macro"
     },
-    "LV_LINUX_DRM_USE_EGL": {
+    "LV_OS_USE_PTHREAD": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_LINUX_DRM_USE_EGL",
+      "anchor": "LV_OS_USE_PTHREAD",
       "kind": "macro"
     },
-    "LV_SDL_USE_EGL": {
+    "LV_OS_USE_FREERTOS": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_SDL_USE_EGL",
+      "anchor": "LV_OS_USE_FREERTOS",
+      "kind": "macro"
+    },
+    "LV_OS_USE_CMSIS_RTOS2": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_OS_USE_CMSIS_RTOS2",
+      "kind": "macro"
+    },
+    "LV_OS_USE_RTTHREAD": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_OS_USE_RTTHREAD",
+      "kind": "macro"
+    },
+    "LV_OS_USE_WINDOWS": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_OS_USE_WINDOWS",
+      "kind": "macro"
+    },
+    "LV_OS_USE_MQX": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_OS_USE_MQX",
+      "kind": "macro"
+    },
+    "LV_OS_USE_SDL2": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_OS_USE_SDL2",
+      "kind": "macro"
+    },
+    "LV_OS_USE_CUSTOM_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_OS_USE_CUSTOM_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_DRAW_HAS_VECTOR_SUPPORT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DRAW_HAS_VECTOR_SUPPORT",
+      "kind": "macro"
+    },
+    "LV_DRAW_HAS_3D_SUPPORT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DRAW_HAS_3D_SUPPORT",
+      "kind": "macro"
+    },
+    "LV_DRAW_SW_ASM_USE_CUSTOM_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DRAW_SW_ASM_USE_CUSTOM_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_ATTRIBUTE_SYNC_READY": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_ATTRIBUTE_SYNC_READY",
+      "kind": "macro"
+    },
+    "LV_EXPORT_CONST_INT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_EXPORT_CONST_INT",
+      "kind": "macro"
+    },
+    "LV_USE_ANIMIMAGE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_ANIMIMAGE",
       "kind": "macro"
     },
     "LV_FS_IS_VALID_LETTER": {
@@ -12656,6 +13186,11 @@
       "anchor": "",
       "kind": "header"
     },
+    "LV_ASSERT_HANDLER": {
+      "path": "api/public/debugging/lv_assert_h",
+      "anchor": "LV_ASSERT_HANDLER",
+      "kind": "macro"
+    },
     "LV_ASSERT": {
       "path": "api/public/debugging/lv_assert_h",
       "anchor": "LV_ASSERT",
@@ -12855,6 +13390,26 @@
       "path": "api/public/debugging/profiler/lv_profiler_h",
       "anchor": "",
       "kind": "header"
+    },
+    "LV_PROFILER_BEGIN": {
+      "path": "api/public/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "LV_PROFILER_BEGIN",
+      "kind": "macro"
+    },
+    "LV_PROFILER_END": {
+      "path": "api/public/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "LV_PROFILER_END",
+      "kind": "macro"
+    },
+    "LV_PROFILER_BEGIN_TAG": {
+      "path": "api/public/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "LV_PROFILER_BEGIN_TAG",
+      "kind": "macro"
+    },
+    "LV_PROFILER_END_TAG": {
+      "path": "api/public/debugging/profiler/lv_profiler_builtin_h",
+      "anchor": "LV_PROFILER_END_TAG",
+      "kind": "macro"
     },
     "LV_PROFILER_LAYOUT_BEGIN": {
       "path": "api/public/debugging/profiler/lv_profiler_h",
@@ -13110,26 +13665,6 @@
       "path": "api/public/debugging/profiler/lv_profiler_builtin_h",
       "anchor": "lv_profiler_builtin_write",
       "kind": "function"
-    },
-    "LV_PROFILER_BUILTIN_BEGIN_TAG": {
-      "path": "api/public/debugging/profiler/lv_profiler_builtin_h",
-      "anchor": "LV_PROFILER_BUILTIN_BEGIN_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_BUILTIN_END_TAG": {
-      "path": "api/public/debugging/profiler/lv_profiler_builtin_h",
-      "anchor": "LV_PROFILER_BUILTIN_END_TAG",
-      "kind": "macro"
-    },
-    "LV_PROFILER_BUILTIN_BEGIN": {
-      "path": "api/public/debugging/profiler/lv_profiler_builtin_h",
-      "anchor": "LV_PROFILER_BUILTIN_BEGIN",
-      "kind": "macro"
-    },
-    "LV_PROFILER_BUILTIN_END": {
-      "path": "api/public/debugging/profiler/lv_profiler_builtin_h",
-      "anchor": "LV_PROFILER_BUILTIN_END",
-      "kind": "macro"
     },
     "lv_test.h": {
       "path": "api/public/debugging/test/lv_test_h",
@@ -20176,86 +20711,6 @@
       "anchor": "lv_tft_espi_create",
       "kind": "function"
     },
-    "lv_ffmpeg.h": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_ffmpeg_init": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_init",
-      "kind": "function"
-    },
-    "lv_ffmpeg_deinit": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_deinit",
-      "kind": "function"
-    },
-    "lv_ffmpeg_get_frame_num": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_get_frame_num",
-      "kind": "function"
-    },
-    "lv_ffmpeg_player_create": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_create",
-      "kind": "function"
-    },
-    "lv_ffmpeg_player_set_src": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_set_src",
-      "kind": "function"
-    },
-    "lv_ffmpeg_player_set_cmd": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_set_cmd",
-      "kind": "function"
-    },
-    "lv_ffmpeg_player_set_auto_restart": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_set_auto_restart",
-      "kind": "function"
-    },
-    "lv_ffmpeg_player_set_decoder": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_set_decoder",
-      "kind": "function"
-    },
-    "lv_ffmpeg_player_cmd_t": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_cmd_t",
-      "kind": "enum"
-    },
-    "LV_FFMPEG_PLAYER_CMD_START": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_cmd_t",
-      "kind": "enumvalue"
-    },
-    "LV_FFMPEG_PLAYER_CMD_STOP": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_cmd_t",
-      "kind": "enumvalue"
-    },
-    "LV_FFMPEG_PLAYER_CMD_PAUSE": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_cmd_t",
-      "kind": "enumvalue"
-    },
-    "LV_FFMPEG_PLAYER_CMD_RESUME": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_cmd_t",
-      "kind": "enumvalue"
-    },
-    "LV_FFMPEG_PLAYER_CMD_LAST": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_cmd_t",
-      "kind": "enumvalue"
-    },
-    "lv_ffmpeg_player_class": {
-      "path": "api/public/drivers/ffmpeg/lv_ffmpeg_h",
-      "anchor": "lv_ffmpeg_player_class",
-      "kind": "variable"
-    },
     "lv_evdev.h": {
       "path": "api/public/drivers/indev/lv_evdev_h",
       "anchor": "",
@@ -20795,16 +21250,6 @@
       "path": "api/public/drivers/sdl/lv_sdl_window_h",
       "anchor": "lv_sdl_window_get_window",
       "kind": "function"
-    },
-    "LV_SDL_MOUSEWHEEL_MODE_ENCODER": {
-      "path": "api/public/drivers/sdl/lv_sdl_window_h",
-      "anchor": "LV_SDL_MOUSEWHEEL_MODE_ENCODER",
-      "kind": "macro"
-    },
-    "LV_SDL_MOUSEWHEEL_MODE_CROWN": {
-      "path": "api/public/drivers/sdl/lv_sdl_window_h",
-      "anchor": "LV_SDL_MOUSEWHEEL_MODE_CROWN",
-      "kind": "macro"
     },
     "lv_uefi.h": {
       "path": "api/public/drivers/uefi/lv_uefi_h",
@@ -24986,41 +25431,6 @@
       "anchor": "lv_log_print_g_cb_t",
       "kind": "typedef"
     },
-    "LV_LOG_LEVEL_TRACE": {
-      "path": "api/public/logging/lv_log_h",
-      "anchor": "LV_LOG_LEVEL_TRACE",
-      "kind": "macro"
-    },
-    "LV_LOG_LEVEL_INFO": {
-      "path": "api/public/logging/lv_log_h",
-      "anchor": "LV_LOG_LEVEL_INFO",
-      "kind": "macro"
-    },
-    "LV_LOG_LEVEL_WARN": {
-      "path": "api/public/logging/lv_log_h",
-      "anchor": "LV_LOG_LEVEL_WARN",
-      "kind": "macro"
-    },
-    "LV_LOG_LEVEL_ERROR": {
-      "path": "api/public/logging/lv_log_h",
-      "anchor": "LV_LOG_LEVEL_ERROR",
-      "kind": "macro"
-    },
-    "LV_LOG_LEVEL_USER": {
-      "path": "api/public/logging/lv_log_h",
-      "anchor": "LV_LOG_LEVEL_USER",
-      "kind": "macro"
-    },
-    "LV_LOG_LEVEL_NONE": {
-      "path": "api/public/logging/lv_log_h",
-      "anchor": "LV_LOG_LEVEL_NONE",
-      "kind": "macro"
-    },
-    "LV_LOG_LEVEL_NUM": {
-      "path": "api/public/logging/lv_log_h",
-      "anchor": "LV_LOG_LEVEL_NUM",
-      "kind": "macro"
-    },
     "LV_LOG_FILE": {
       "path": "api/public/logging/lv_log_h",
       "anchor": "LV_LOG_FILE",
@@ -29161,6 +29571,86 @@
       "anchor": "lv_dropdownlist_class",
       "kind": "variable"
     },
+    "lv_ffmpeg.h": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_ffmpeg_init": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_init",
+      "kind": "function"
+    },
+    "lv_ffmpeg_deinit": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_deinit",
+      "kind": "function"
+    },
+    "lv_ffmpeg_get_frame_num": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_get_frame_num",
+      "kind": "function"
+    },
+    "lv_ffmpeg_player_create": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_create",
+      "kind": "function"
+    },
+    "lv_ffmpeg_player_set_src": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_set_src",
+      "kind": "function"
+    },
+    "lv_ffmpeg_player_set_cmd": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_set_cmd",
+      "kind": "function"
+    },
+    "lv_ffmpeg_player_set_auto_restart": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_set_auto_restart",
+      "kind": "function"
+    },
+    "lv_ffmpeg_player_set_decoder": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_set_decoder",
+      "kind": "function"
+    },
+    "lv_ffmpeg_player_cmd_t": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_cmd_t",
+      "kind": "enum"
+    },
+    "LV_FFMPEG_PLAYER_CMD_START": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_cmd_t",
+      "kind": "enumvalue"
+    },
+    "LV_FFMPEG_PLAYER_CMD_STOP": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_cmd_t",
+      "kind": "enumvalue"
+    },
+    "LV_FFMPEG_PLAYER_CMD_PAUSE": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_cmd_t",
+      "kind": "enumvalue"
+    },
+    "LV_FFMPEG_PLAYER_CMD_RESUME": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_cmd_t",
+      "kind": "enumvalue"
+    },
+    "LV_FFMPEG_PLAYER_CMD_LAST": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_cmd_t",
+      "kind": "enumvalue"
+    },
+    "lv_ffmpeg_player_class": {
+      "path": "api/public/widgets/lv_ffmpeg_h",
+      "anchor": "lv_ffmpeg_player_class",
+      "kind": "variable"
+    },
     "lv_gif.h": {
       "path": "api/public/widgets/lv_gif_h",
       "anchor": "",
@@ -33296,6 +33786,21 @@
       "anchor": "lv_obj_refr",
       "kind": "function"
     },
+    "lv_profiler_builtin_private.h": {
+      "path": "api/private/debugging/profiler/lv_profiler_builtin_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_profiler_builtin_posix_init": {
+      "path": "api/private/debugging/profiler/lv_profiler_builtin_private_h",
+      "anchor": "lv_profiler_builtin_posix_init",
+      "kind": "function"
+    },
+    "_lv_profiler_builtin_config_t": {
+      "path": "api/private/debugging/profiler/lv_profiler_builtin_private_h",
+      "anchor": "_lv_profiler_builtin_config_t",
+      "kind": "struct"
+    },
     "lv_sysmon_private.h": {
       "path": "api/private/debugging/sysmon/lv_sysmon_private_h",
       "anchor": "",
@@ -34111,51 +34616,6 @@
       "anchor": "lv_draw_vector_subtask_t",
       "kind": "struct"
     },
-    "lv_image_decoder_private.h": {
-      "path": "api/private/draw/lv_image_decoder_private_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_image_decoder_init": {
-      "path": "api/private/draw/lv_image_decoder_private_h",
-      "anchor": "lv_image_decoder_init",
-      "kind": "function"
-    },
-    "lv_image_decoder_deinit": {
-      "path": "api/private/draw/lv_image_decoder_private_h",
-      "anchor": "lv_image_decoder_deinit",
-      "kind": "function"
-    },
-    "lv_image_decoder_add_to_cache": {
-      "path": "api/private/draw/lv_image_decoder_private_h",
-      "anchor": "lv_image_decoder_add_to_cache",
-      "kind": "function"
-    },
-    "_lv_image_decoder_args_t": {
-      "path": "api/private/draw/lv_image_decoder_private_h",
-      "anchor": "_lv_image_decoder_args_t",
-      "kind": "struct"
-    },
-    "_lv_image_decoder_t": {
-      "path": "api/private/draw/lv_image_decoder_private_h",
-      "anchor": "_lv_image_decoder_t",
-      "kind": "struct"
-    },
-    "_lv_image_cache_data_t": {
-      "path": "api/private/draw/lv_image_decoder_private_h",
-      "anchor": "_lv_image_cache_data_t",
-      "kind": "struct"
-    },
-    "_lv_image_header_cache_data_t": {
-      "path": "api/private/draw/lv_image_decoder_private_h",
-      "anchor": "_lv_image_header_cache_data_t",
-      "kind": "struct"
-    },
-    "_lv_image_decoder_dsc_t": {
-      "path": "api/private/draw/lv_image_decoder_private_h",
-      "anchor": "_lv_image_decoder_dsc_t",
-      "kind": "struct"
-    },
     "lv_draw_nanovg.h": {
       "path": "api/private/draw/nanovg/lv_draw_nanovg_h",
       "anchor": "",
@@ -34675,151 +35135,6 @@
       "path": "api/private/draw/nema_gfx/lv_nema_gfx_path_h",
       "anchor": "lv_nema_gfx_path_t",
       "kind": "struct"
-    },
-    "lv_draw_g2d.h": {
-      "path": "api/private/draw/nxp/g2d/lv_draw_g2d_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_draw_g2d_init": {
-      "path": "api/private/draw/nxp/g2d/lv_draw_g2d_h",
-      "anchor": "lv_draw_g2d_init",
-      "kind": "function"
-    },
-    "lv_draw_g2d_deinit": {
-      "path": "api/private/draw/nxp/g2d/lv_draw_g2d_h",
-      "anchor": "lv_draw_g2d_deinit",
-      "kind": "function"
-    },
-    "lv_draw_buf_g2d_init_handlers": {
-      "path": "api/private/draw/nxp/g2d/lv_draw_g2d_h",
-      "anchor": "lv_draw_buf_g2d_init_handlers",
-      "kind": "function"
-    },
-    "lv_draw_g2d_fill": {
-      "path": "api/private/draw/nxp/g2d/lv_draw_g2d_h",
-      "anchor": "lv_draw_g2d_fill",
-      "kind": "function"
-    },
-    "lv_draw_g2d_img": {
-      "path": "api/private/draw/nxp/g2d/lv_draw_g2d_h",
-      "anchor": "lv_draw_g2d_img",
-      "kind": "function"
-    },
-    "lv_draw_g2d_unit": {
-      "path": "api/private/draw/nxp/g2d/lv_draw_g2d_h",
-      "anchor": "lv_draw_g2d_unit",
-      "kind": "struct"
-    },
-    "lv_draw_g2d_unit_t": {
-      "path": "api/private/draw/nxp/g2d/lv_draw_g2d_h",
-      "anchor": "lv_draw_g2d_unit_t",
-      "kind": "typedef"
-    },
-    "lv_g2d_buf_map.h": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_buf_map_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "g2d_create_buf_map": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_buf_map_h",
-      "anchor": "g2d_create_buf_map",
-      "kind": "function"
-    },
-    "g2d_free_buf_map": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_buf_map_h",
-      "anchor": "g2d_free_buf_map",
-      "kind": "function"
-    },
-    "g2d_insert_buf_map": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_buf_map_h",
-      "anchor": "g2d_insert_buf_map",
-      "kind": "function"
-    },
-    "g2d_search_buf_map": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_buf_map_h",
-      "anchor": "g2d_search_buf_map",
-      "kind": "function"
-    },
-    "g2d_free_item": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_buf_map_h",
-      "anchor": "g2d_free_item",
-      "kind": "function"
-    },
-    "g2d_print_table": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_buf_map_h",
-      "anchor": "g2d_print_table",
-      "kind": "function"
-    },
-    "lv_map_item": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_buf_map_h",
-      "anchor": "lv_map_item",
-      "kind": "struct"
-    },
-    "lv_buf_map": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_buf_map_h",
-      "anchor": "lv_buf_map",
-      "kind": "struct"
-    },
-    "lv_map_item_t": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_buf_map_h",
-      "anchor": "lv_map_item_t",
-      "kind": "typedef"
-    },
-    "lv_buf_map_t": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_buf_map_h",
-      "anchor": "lv_buf_map_t",
-      "kind": "typedef"
-    },
-    "lv_g2d_utils.h": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_utils_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "g2d_get_buf_format": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_utils_h",
-      "anchor": "g2d_get_buf_format",
-      "kind": "function"
-    },
-    "g2d_rgba_to_u32": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_utils_h",
-      "anchor": "g2d_rgba_to_u32",
-      "kind": "function"
-    },
-    "g2d_get_buf_fd": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_utils_h",
-      "anchor": "g2d_get_buf_fd",
-      "kind": "function"
-    },
-    "g2d_set_handle": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_utils_h",
-      "anchor": "g2d_set_handle",
-      "kind": "function"
-    },
-    "g2d_get_handle": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_utils_h",
-      "anchor": "g2d_get_handle",
-      "kind": "function"
-    },
-    "g2d_rotate": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_utils_h",
-      "anchor": "g2d_rotate",
-      "kind": "function"
-    },
-    "g2d_format_t": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_utils_h",
-      "anchor": "g2d_format_t",
-      "kind": "typedef"
-    },
-    "G2D_ASSERT": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_utils_h",
-      "anchor": "G2D_ASSERT",
-      "kind": "macro"
-    },
-    "G2D_ASSERT_MSG": {
-      "path": "api/private/draw/nxp/g2d/lv_g2d_utils_h",
-      "anchor": "G2D_ASSERT_MSG",
-      "kind": "macro"
     },
     "lv_draw_pxp.h": {
       "path": "api/private/draw/nxp/pxp/lv_draw_pxp_h",
@@ -40736,6 +41051,141 @@
       "anchor": "lv_font_manager_recycle_t",
       "kind": "typedef"
     },
+    "lv_freetype_private.h": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_freetype_get_context": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_get_context",
+      "kind": "function"
+    },
+    "lv_freetype_italic_transform": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_italic_transform",
+      "kind": "function"
+    },
+    "lv_freetype_italic_transform_on_pos": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_italic_transform_on_pos",
+      "kind": "function"
+    },
+    "lv_freetype_create_glyph_cache": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_create_glyph_cache",
+      "kind": "function"
+    },
+    "lv_freetype_set_cbs_glyph": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_set_cbs_glyph",
+      "kind": "function"
+    },
+    "lv_freetype_create_draw_data_image": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_create_draw_data_image",
+      "kind": "function"
+    },
+    "lv_freetype_set_cbs_image_font": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_set_cbs_image_font",
+      "kind": "function"
+    },
+    "lv_freetype_create_draw_data_outline": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_create_draw_data_outline",
+      "kind": "function"
+    },
+    "lv_freetype_set_cbs_outline_font": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_set_cbs_outline_font",
+      "kind": "function"
+    },
+    "_lv_freetype_outline_vector_t": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "_lv_freetype_outline_vector_t",
+      "kind": "struct"
+    },
+    "lv_freetype_outline_sizes_t": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_outline_sizes_t",
+      "kind": "struct"
+    },
+    "_lv_freetype_outline_event_param_t": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "_lv_freetype_outline_event_param_t",
+      "kind": "struct"
+    },
+    "_lv_freetype_cache_node_t": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "_lv_freetype_cache_node_t",
+      "kind": "struct"
+    },
+    "_lv_freetype_context_t": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "_lv_freetype_context_t",
+      "kind": "struct"
+    },
+    "_lv_freetype_font_dsc_t": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "_lv_freetype_font_dsc_t",
+      "kind": "struct"
+    },
+    "lv_freetype_cache_node_t": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_cache_node_t",
+      "kind": "typedef"
+    },
+    "lv_freetype_context_t": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_context_t",
+      "kind": "typedef"
+    },
+    "lv_freetype_font_dsc_t": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "lv_freetype_font_dsc_t",
+      "kind": "typedef"
+    },
+    "FT_ERROR_MSG": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "FT_ERROR_MSG",
+      "kind": "macro"
+    },
+    "LV_FREETYPE_FONT_DSC_MAGIC_NUM": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "LV_FREETYPE_FONT_DSC_MAGIC_NUM",
+      "kind": "macro"
+    },
+    "LV_FREETYPE_FONT_DSC_HAS_MAGIC_NUM": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "LV_FREETYPE_FONT_DSC_HAS_MAGIC_NUM",
+      "kind": "macro"
+    },
+    "LV_ASSERT_FREETYPE_FONT_DSC": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "LV_ASSERT_FREETYPE_FONT_DSC",
+      "kind": "macro"
+    },
+    "FT_INT_TO_F26DOT6": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "FT_INT_TO_F26DOT6",
+      "kind": "macro"
+    },
+    "FT_F26DOT6_TO_INT": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "FT_F26DOT6_TO_INT",
+      "kind": "macro"
+    },
+    "FT_INT_TO_F16DOT16": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "FT_INT_TO_F16DOT16",
+      "kind": "macro"
+    },
+    "FT_F16DOT16_TO_INT": {
+      "path": "api/private/font/freetype/lv_freetype_private_h",
+      "anchor": "FT_F16DOT16_TO_INT",
+      "kind": "macro"
+    },
     "lv_font_private.h": {
       "path": "api/private/font/lv_font_private_h",
       "anchor": "",
@@ -40745,6 +41195,256 @@
       "path": "api/private/font/lv_font_private_h",
       "anchor": "lv_font_glyph_dsc_compare",
       "kind": "function"
+    },
+    "lv_fs_private.h": {
+      "path": "api/private/fs/lv_fs_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_fs_init": {
+      "path": "api/private/fs/lv_fs_private_h",
+      "anchor": "lv_fs_init",
+      "kind": "function"
+    },
+    "lv_fs_deinit": {
+      "path": "api/private/fs/lv_fs_private_h",
+      "anchor": "lv_fs_deinit",
+      "kind": "function"
+    },
+    "_lv_fs_file_cache_t": {
+      "path": "api/private/fs/lv_fs_private_h",
+      "anchor": "_lv_fs_file_cache_t",
+      "kind": "struct"
+    },
+    "lv_image_decoder_private.h": {
+      "path": "api/private/image/lv_image_decoder_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_image_decoder_init": {
+      "path": "api/private/image/lv_image_decoder_private_h",
+      "anchor": "lv_image_decoder_init",
+      "kind": "function"
+    },
+    "lv_image_decoder_deinit": {
+      "path": "api/private/image/lv_image_decoder_private_h",
+      "anchor": "lv_image_decoder_deinit",
+      "kind": "function"
+    },
+    "lv_image_decoder_add_to_cache": {
+      "path": "api/private/image/lv_image_decoder_private_h",
+      "anchor": "lv_image_decoder_add_to_cache",
+      "kind": "function"
+    },
+    "_lv_image_decoder_args_t": {
+      "path": "api/private/image/lv_image_decoder_private_h",
+      "anchor": "_lv_image_decoder_args_t",
+      "kind": "struct"
+    },
+    "_lv_image_decoder_t": {
+      "path": "api/private/image/lv_image_decoder_private_h",
+      "anchor": "_lv_image_decoder_t",
+      "kind": "struct"
+    },
+    "_lv_image_cache_data_t": {
+      "path": "api/private/image/lv_image_decoder_private_h",
+      "anchor": "_lv_image_cache_data_t",
+      "kind": "struct"
+    },
+    "_lv_image_header_cache_data_t": {
+      "path": "api/private/image/lv_image_decoder_private_h",
+      "anchor": "_lv_image_header_cache_data_t",
+      "kind": "struct"
+    },
+    "_lv_image_decoder_dsc_t": {
+      "path": "api/private/image/lv_image_decoder_private_h",
+      "anchor": "_lv_image_decoder_dsc_t",
+      "kind": "struct"
+    },
+    "lv_svg_decoder.h": {
+      "path": "api/private/image/svg/lv_svg_decoder_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_svg_decoder_init": {
+      "path": "api/private/image/svg/lv_svg_decoder_h",
+      "anchor": "lv_svg_decoder_init",
+      "kind": "function"
+    },
+    "lv_svg_decoder_deinit": {
+      "path": "api/private/image/svg/lv_svg_decoder_h",
+      "anchor": "lv_svg_decoder_deinit",
+      "kind": "function"
+    },
+    "lv_svg_parser.h": {
+      "path": "api/private/image/svg/lv_svg_parser_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "_lv_svg_parser_init": {
+      "path": "api/private/image/svg/lv_svg_parser_h",
+      "anchor": "_lv_svg_parser_init",
+      "kind": "function"
+    },
+    "_lv_svg_parser_deinit": {
+      "path": "api/private/image/svg/lv_svg_parser_h",
+      "anchor": "_lv_svg_parser_deinit",
+      "kind": "function"
+    },
+    "_lv_svg_parser_token": {
+      "path": "api/private/image/svg/lv_svg_parser_h",
+      "anchor": "_lv_svg_parser_token",
+      "kind": "function"
+    },
+    "_lv_svg_parser_is_finish": {
+      "path": "api/private/image/svg/lv_svg_parser_h",
+      "anchor": "_lv_svg_parser_is_finish",
+      "kind": "function"
+    },
+    "_lv_svg_dump_tree": {
+      "path": "api/private/image/svg/lv_svg_parser_h",
+      "anchor": "_lv_svg_dump_tree",
+      "kind": "function"
+    },
+    "_lv_svg_parser_state_t": {
+      "path": "api/private/image/svg/lv_svg_parser_h",
+      "anchor": "_lv_svg_parser_state_t",
+      "kind": "enum"
+    },
+    "LV_SVG_PARSER_PROCESS": {
+      "path": "api/private/image/svg/lv_svg_parser_h",
+      "anchor": "_lv_svg_parser_state_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_PARSER_IGNORE": {
+      "path": "api/private/image/svg/lv_svg_parser_h",
+      "anchor": "_lv_svg_parser_state_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_parser_t": {
+      "path": "api/private/image/svg/lv_svg_parser_h",
+      "anchor": "_lv_svg_parser_t",
+      "kind": "struct"
+    },
+    "lv_svg_render.h": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_svg_render_init": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "lv_svg_render_init",
+      "kind": "function"
+    },
+    "lv_svg_render_create": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "lv_svg_render_create",
+      "kind": "function"
+    },
+    "lv_svg_render_delete": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "lv_svg_render_delete",
+      "kind": "function"
+    },
+    "lv_svg_render_get_size": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "lv_svg_render_get_size",
+      "kind": "function"
+    },
+    "lv_svg_render_get_viewport_size": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "lv_svg_render_get_viewport_size",
+      "kind": "function"
+    },
+    "lv_draw_svg_render": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "lv_draw_svg_render",
+      "kind": "function"
+    },
+    "_lv_svg_render_obj": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "_lv_svg_render_obj",
+      "kind": "struct"
+    },
+    "_lv_svg_render_class": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "_lv_svg_render_class",
+      "kind": "struct"
+    },
+    "_lv_svg_render_hal": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "_lv_svg_render_hal",
+      "kind": "struct"
+    },
+    "lv_svg_render_obj_t": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "lv_svg_render_obj_t",
+      "kind": "typedef"
+    },
+    "lv_svg_render_class": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "lv_svg_render_class",
+      "kind": "typedef"
+    },
+    "lv_svg_render_hal_t": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "lv_svg_render_hal_t",
+      "kind": "typedef"
+    },
+    "LV_SVG_RENDER_OBJ": {
+      "path": "api/private/image/svg/lv_svg_render_h",
+      "anchor": "LV_SVG_RENDER_OBJ",
+      "kind": "macro"
+    },
+    "lv_svg_token.h": {
+      "path": "api/private/image/svg/lv_svg_token_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "_lv_svg_tokenizer": {
+      "path": "api/private/image/svg/lv_svg_token_h",
+      "anchor": "_lv_svg_tokenizer",
+      "kind": "function"
+    },
+    "_lv_svg_token_type_t": {
+      "path": "api/private/image/svg/lv_svg_token_h",
+      "anchor": "_lv_svg_token_type_t",
+      "kind": "enum"
+    },
+    "LV_SVG_TOKEN_BEGIN": {
+      "path": "api/private/image/svg/lv_svg_token_h",
+      "anchor": "_lv_svg_token_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TOKEN_END": {
+      "path": "api/private/image/svg/lv_svg_token_h",
+      "anchor": "_lv_svg_token_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TOKEN_CONTENT": {
+      "path": "api/private/image/svg/lv_svg_token_h",
+      "anchor": "_lv_svg_token_type_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_token_attr_t": {
+      "path": "api/private/image/svg/lv_svg_token_h",
+      "anchor": "_lv_svg_token_attr_t",
+      "kind": "struct"
+    },
+    "_lv_svg_token_t": {
+      "path": "api/private/image/svg/lv_svg_token_h",
+      "anchor": "_lv_svg_token_t",
+      "kind": "struct"
+    },
+    "svg_token_process": {
+      "path": "api/private/image/svg/lv_svg_token_h",
+      "anchor": "svg_token_process",
+      "kind": "typedef"
+    },
+    "SVG_TOKEN_LEN": {
+      "path": "api/private/image/svg/lv_svg_token_h",
+      "anchor": "SVG_TOKEN_LEN",
+      "kind": "macro"
     },
     "lv_indev_gesture_private.h": {
       "path": "api/private/indev/lv_indev_gesture_private_h",
@@ -40850,161 +41550,6 @@
       "path": "api/private/layouts/lv_layout_private_h",
       "anchor": "lv_layout_dsc_t",
       "kind": "struct"
-    },
-    "lv_barcode_private.h": {
-      "path": "api/private/libs/barcode/lv_barcode_private_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "_lv_barcode_t": {
-      "path": "api/private/libs/barcode/lv_barcode_private_h",
-      "anchor": "_lv_barcode_t",
-      "kind": "struct"
-    },
-    "lv_ffmpeg_private.h": {
-      "path": "api/private/libs/ffmpeg/lv_ffmpeg_private_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "_lv_ffmpeg_player_t": {
-      "path": "api/private/libs/ffmpeg/lv_ffmpeg_private_h",
-      "anchor": "_lv_ffmpeg_player_t",
-      "kind": "struct"
-    },
-    "lv_freetype_private.h": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_freetype_get_context": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_get_context",
-      "kind": "function"
-    },
-    "lv_freetype_italic_transform": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_italic_transform",
-      "kind": "function"
-    },
-    "lv_freetype_italic_transform_on_pos": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_italic_transform_on_pos",
-      "kind": "function"
-    },
-    "lv_freetype_create_glyph_cache": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_create_glyph_cache",
-      "kind": "function"
-    },
-    "lv_freetype_set_cbs_glyph": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_set_cbs_glyph",
-      "kind": "function"
-    },
-    "lv_freetype_create_draw_data_image": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_create_draw_data_image",
-      "kind": "function"
-    },
-    "lv_freetype_set_cbs_image_font": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_set_cbs_image_font",
-      "kind": "function"
-    },
-    "lv_freetype_create_draw_data_outline": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_create_draw_data_outline",
-      "kind": "function"
-    },
-    "lv_freetype_set_cbs_outline_font": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_set_cbs_outline_font",
-      "kind": "function"
-    },
-    "_lv_freetype_outline_vector_t": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "_lv_freetype_outline_vector_t",
-      "kind": "struct"
-    },
-    "lv_freetype_outline_sizes_t": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_outline_sizes_t",
-      "kind": "struct"
-    },
-    "_lv_freetype_outline_event_param_t": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "_lv_freetype_outline_event_param_t",
-      "kind": "struct"
-    },
-    "_lv_freetype_cache_node_t": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "_lv_freetype_cache_node_t",
-      "kind": "struct"
-    },
-    "_lv_freetype_context_t": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "_lv_freetype_context_t",
-      "kind": "struct"
-    },
-    "_lv_freetype_font_dsc_t": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "_lv_freetype_font_dsc_t",
-      "kind": "struct"
-    },
-    "lv_freetype_cache_node_t": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_cache_node_t",
-      "kind": "typedef"
-    },
-    "lv_freetype_context_t": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_context_t",
-      "kind": "typedef"
-    },
-    "lv_freetype_font_dsc_t": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "lv_freetype_font_dsc_t",
-      "kind": "typedef"
-    },
-    "FT_ERROR_MSG": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "FT_ERROR_MSG",
-      "kind": "macro"
-    },
-    "LV_FREETYPE_FONT_DSC_MAGIC_NUM": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "LV_FREETYPE_FONT_DSC_MAGIC_NUM",
-      "kind": "macro"
-    },
-    "LV_FREETYPE_FONT_DSC_HAS_MAGIC_NUM": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "LV_FREETYPE_FONT_DSC_HAS_MAGIC_NUM",
-      "kind": "macro"
-    },
-    "LV_ASSERT_FREETYPE_FONT_DSC": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "LV_ASSERT_FREETYPE_FONT_DSC",
-      "kind": "macro"
-    },
-    "FT_INT_TO_F26DOT6": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "FT_INT_TO_F26DOT6",
-      "kind": "macro"
-    },
-    "FT_F26DOT6_TO_INT": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "FT_F26DOT6_TO_INT",
-      "kind": "macro"
-    },
-    "FT_INT_TO_F16DOT16": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "FT_INT_TO_F16DOT16",
-      "kind": "macro"
-    },
-    "FT_F16DOT16_TO_INT": {
-      "path": "api/private/libs/freetype/lv_freetype_private_h",
-      "anchor": "FT_F16DOT16_TO_INT",
-      "kind": "macro"
     },
     "lv_fastgltf.hpp": {
       "path": "api/private/libs/gltf/fastgltf/lv_fastgltf_hpp",
@@ -41611,41 +42156,6 @@
       "anchor": "M_PI",
       "kind": "macro"
     },
-    "lv_gstreamer_internal.h": {
-      "path": "api/private/libs/gstreamer/lv_gstreamer_internal_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "_lv_gstreamer_t": {
-      "path": "api/private/libs/gstreamer/lv_gstreamer_internal_h",
-      "anchor": "_lv_gstreamer_t",
-      "kind": "struct"
-    },
-    "frame_data_t": {
-      "path": "api/private/libs/gstreamer/lv_gstreamer_internal_h",
-      "anchor": "frame_data_t",
-      "kind": "struct"
-    },
-    "lv_gstreamer_t": {
-      "path": "api/private/libs/gstreamer/lv_gstreamer_internal_h",
-      "anchor": "lv_gstreamer_t",
-      "kind": "typedef"
-    },
-    "lv_gstreamer_class": {
-      "path": "api/private/libs/gstreamer/lv_gstreamer_internal_h",
-      "anchor": "lv_gstreamer_class",
-      "kind": "variable"
-    },
-    "lv_qrcode_private.h": {
-      "path": "api/private/libs/qrcode/lv_qrcode_private_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "_lv_qrcode_t": {
-      "path": "api/private/libs/qrcode/lv_qrcode_private_h",
-      "anchor": "_lv_qrcode_t",
-      "kind": "struct"
-    },
     "lv_rle_private.h": {
       "path": "api/private/libs/rle/lv_rle_private_h",
       "anchor": "",
@@ -41665,191 +42175,6 @@
       "path": "api/private/libs/rlottie/lv_rlottie_private_h",
       "anchor": "_lv_rlottie_t",
       "kind": "struct"
-    },
-    "lv_svg_decoder.h": {
-      "path": "api/private/libs/svg/lv_svg_decoder_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_svg_decoder_init": {
-      "path": "api/private/libs/svg/lv_svg_decoder_h",
-      "anchor": "lv_svg_decoder_init",
-      "kind": "function"
-    },
-    "lv_svg_decoder_deinit": {
-      "path": "api/private/libs/svg/lv_svg_decoder_h",
-      "anchor": "lv_svg_decoder_deinit",
-      "kind": "function"
-    },
-    "lv_svg_parser.h": {
-      "path": "api/private/libs/svg/lv_svg_parser_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "_lv_svg_parser_init": {
-      "path": "api/private/libs/svg/lv_svg_parser_h",
-      "anchor": "_lv_svg_parser_init",
-      "kind": "function"
-    },
-    "_lv_svg_parser_deinit": {
-      "path": "api/private/libs/svg/lv_svg_parser_h",
-      "anchor": "_lv_svg_parser_deinit",
-      "kind": "function"
-    },
-    "_lv_svg_parser_token": {
-      "path": "api/private/libs/svg/lv_svg_parser_h",
-      "anchor": "_lv_svg_parser_token",
-      "kind": "function"
-    },
-    "_lv_svg_parser_is_finish": {
-      "path": "api/private/libs/svg/lv_svg_parser_h",
-      "anchor": "_lv_svg_parser_is_finish",
-      "kind": "function"
-    },
-    "_lv_svg_dump_tree": {
-      "path": "api/private/libs/svg/lv_svg_parser_h",
-      "anchor": "_lv_svg_dump_tree",
-      "kind": "function"
-    },
-    "_lv_svg_parser_state_t": {
-      "path": "api/private/libs/svg/lv_svg_parser_h",
-      "anchor": "_lv_svg_parser_state_t",
-      "kind": "enum"
-    },
-    "LV_SVG_PARSER_PROCESS": {
-      "path": "api/private/libs/svg/lv_svg_parser_h",
-      "anchor": "_lv_svg_parser_state_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_PARSER_IGNORE": {
-      "path": "api/private/libs/svg/lv_svg_parser_h",
-      "anchor": "_lv_svg_parser_state_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_parser_t": {
-      "path": "api/private/libs/svg/lv_svg_parser_h",
-      "anchor": "_lv_svg_parser_t",
-      "kind": "struct"
-    },
-    "lv_svg_render.h": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_svg_render_init": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "lv_svg_render_init",
-      "kind": "function"
-    },
-    "lv_svg_render_create": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "lv_svg_render_create",
-      "kind": "function"
-    },
-    "lv_svg_render_delete": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "lv_svg_render_delete",
-      "kind": "function"
-    },
-    "lv_svg_render_get_size": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "lv_svg_render_get_size",
-      "kind": "function"
-    },
-    "lv_svg_render_get_viewport_size": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "lv_svg_render_get_viewport_size",
-      "kind": "function"
-    },
-    "lv_draw_svg_render": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "lv_draw_svg_render",
-      "kind": "function"
-    },
-    "_lv_svg_render_obj": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "_lv_svg_render_obj",
-      "kind": "struct"
-    },
-    "_lv_svg_render_class": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "_lv_svg_render_class",
-      "kind": "struct"
-    },
-    "_lv_svg_render_hal": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "_lv_svg_render_hal",
-      "kind": "struct"
-    },
-    "lv_svg_render_obj_t": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "lv_svg_render_obj_t",
-      "kind": "typedef"
-    },
-    "lv_svg_render_class": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "lv_svg_render_class",
-      "kind": "typedef"
-    },
-    "lv_svg_render_hal_t": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "lv_svg_render_hal_t",
-      "kind": "typedef"
-    },
-    "LV_SVG_RENDER_OBJ": {
-      "path": "api/private/libs/svg/lv_svg_render_h",
-      "anchor": "LV_SVG_RENDER_OBJ",
-      "kind": "macro"
-    },
-    "lv_svg_token.h": {
-      "path": "api/private/libs/svg/lv_svg_token_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "_lv_svg_tokenizer": {
-      "path": "api/private/libs/svg/lv_svg_token_h",
-      "anchor": "_lv_svg_tokenizer",
-      "kind": "function"
-    },
-    "_lv_svg_token_type_t": {
-      "path": "api/private/libs/svg/lv_svg_token_h",
-      "anchor": "_lv_svg_token_type_t",
-      "kind": "enum"
-    },
-    "LV_SVG_TOKEN_BEGIN": {
-      "path": "api/private/libs/svg/lv_svg_token_h",
-      "anchor": "_lv_svg_token_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TOKEN_END": {
-      "path": "api/private/libs/svg/lv_svg_token_h",
-      "anchor": "_lv_svg_token_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TOKEN_CONTENT": {
-      "path": "api/private/libs/svg/lv_svg_token_h",
-      "anchor": "_lv_svg_token_type_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_token_attr_t": {
-      "path": "api/private/libs/svg/lv_svg_token_h",
-      "anchor": "_lv_svg_token_attr_t",
-      "kind": "struct"
-    },
-    "_lv_svg_token_t": {
-      "path": "api/private/libs/svg/lv_svg_token_h",
-      "anchor": "_lv_svg_token_t",
-      "kind": "struct"
-    },
-    "svg_token_process": {
-      "path": "api/private/libs/svg/lv_svg_token_h",
-      "anchor": "svg_token_process",
-      "kind": "typedef"
-    },
-    "SVG_TOKEN_LEN": {
-      "path": "api/private/libs/svg/lv_svg_token_h",
-      "anchor": "SVG_TOKEN_LEN",
-      "kind": "macro"
     },
     "lvgl_private.h": {
       "path": "api/private/lvgl_private_h",
@@ -42621,26 +42946,6 @@
       "anchor": "_lv_event_t",
       "kind": "struct"
     },
-    "lv_fs_private.h": {
-      "path": "api/private/misc/lv_fs_private_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_fs_init": {
-      "path": "api/private/misc/lv_fs_private_h",
-      "anchor": "lv_fs_init",
-      "kind": "function"
-    },
-    "lv_fs_deinit": {
-      "path": "api/private/misc/lv_fs_private_h",
-      "anchor": "lv_fs_deinit",
-      "kind": "function"
-    },
-    "_lv_fs_file_cache_t": {
-      "path": "api/private/misc/lv_fs_private_h",
-      "anchor": "_lv_fs_file_cache_t",
-      "kind": "struct"
-    },
     "lv_iter_private.h": {
       "path": "api/private/misc/lv_iter_private_h",
       "anchor": "",
@@ -42840,21 +43145,6 @@
       "path": "api/private/misc/lv_pending_h",
       "anchor": "lv_pending_free_cb_t",
       "kind": "typedef"
-    },
-    "lv_profiler_builtin_private.h": {
-      "path": "api/private/misc/lv_profiler_builtin_private_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_profiler_builtin_posix_init": {
-      "path": "api/private/misc/lv_profiler_builtin_private_h",
-      "anchor": "lv_profiler_builtin_posix_init",
-      "kind": "function"
-    },
-    "_lv_profiler_builtin_config_t": {
-      "path": "api/private/misc/lv_profiler_builtin_private_h",
-      "anchor": "_lv_profiler_builtin_config_t",
-      "kind": "struct"
     },
     "lv_rb_private.h": {
       "path": "api/private/misc/lv_rb_private_h",
@@ -43571,6 +43861,16 @@
       "anchor": "_lv_bar_t",
       "kind": "struct"
     },
+    "lv_barcode_private.h": {
+      "path": "api/private/widgets/barcode/lv_barcode_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "_lv_barcode_t": {
+      "path": "api/private/widgets/barcode/lv_barcode_private_h",
+      "anchor": "_lv_barcode_t",
+      "kind": "struct"
+    },
     "lv_button_private.h": {
       "path": "api/private/widgets/button/lv_button_private_h",
       "anchor": "",
@@ -43655,6 +43955,41 @@
       "path": "api/private/widgets/dropdown/lv_dropdown_private_h",
       "anchor": "_lv_dropdown_list_t",
       "kind": "struct"
+    },
+    "lv_ffmpeg_private.h": {
+      "path": "api/private/widgets/ffmpeg/lv_ffmpeg_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "_lv_ffmpeg_player_t": {
+      "path": "api/private/widgets/ffmpeg/lv_ffmpeg_private_h",
+      "anchor": "_lv_ffmpeg_player_t",
+      "kind": "struct"
+    },
+    "lv_gstreamer_private.h": {
+      "path": "api/private/widgets/gstreamer/lv_gstreamer_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "_lv_gstreamer_t": {
+      "path": "api/private/widgets/gstreamer/lv_gstreamer_private_h",
+      "anchor": "_lv_gstreamer_t",
+      "kind": "struct"
+    },
+    "frame_data_t": {
+      "path": "api/private/widgets/gstreamer/lv_gstreamer_private_h",
+      "anchor": "frame_data_t",
+      "kind": "struct"
+    },
+    "lv_gstreamer_t": {
+      "path": "api/private/widgets/gstreamer/lv_gstreamer_private_h",
+      "anchor": "lv_gstreamer_t",
+      "kind": "typedef"
+    },
+    "lv_gstreamer_class": {
+      "path": "api/private/widgets/gstreamer/lv_gstreamer_private_h",
+      "anchor": "lv_gstreamer_class",
+      "kind": "variable"
     },
     "lv_image_private.h": {
       "path": "api/private/widgets/image/lv_image_private_h",
@@ -43795,6 +44130,16 @@
       "path": "api/private/widgets/objx_templ/lv_objx_templ_h",
       "anchor": "lv_templ_class",
       "kind": "variable"
+    },
+    "lv_qrcode_private.h": {
+      "path": "api/private/widgets/qrcode/lv_qrcode_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "_lv_qrcode_t": {
+      "path": "api/private/widgets/qrcode/lv_qrcode_private_h",
+      "anchor": "_lv_qrcode_t",
+      "kind": "struct"
     },
     "lv_roller_private.h": {
       "path": "api/private/widgets/roller/lv_roller_private_h",

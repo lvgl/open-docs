@@ -3,6 +3,7 @@
   "pages": [
     "fmt_txt",
     "font_manager",
+    "freetype",
     "lv_font_private_h"
   ]
 }

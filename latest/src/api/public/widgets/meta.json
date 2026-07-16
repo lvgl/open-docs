@@ -17,6 +17,7 @@
     "lv_chart_h",
     "lv_checkbox_h",
     "lv_dropdown_h",
+    "lv_ffmpeg_h",
     "lv_gif_h",
     "lv_gltf_h",
     "lv_gstreamer_h",

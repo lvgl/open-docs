@@ -2,14 +2,25 @@
 title: lv_assert.h
 description: API reference for lv_assert.h
 api:
-  macros: [LV_ASSERT, LV_ASSERT_MSG, LV_ASSERT_FORMAT_MSG, LV_ASSERT_NULL, LV_ASSERT_MALLOC, LV_ASSERT_MEM_INTEGRITY]
+  macros: [LV_ASSERT_HANDLER, LV_ASSERT, LV_ASSERT_MSG, LV_ASSERT_FORMAT_MSG, LV_ASSERT_NULL, LV_ASSERT_MALLOC, LV_ASSERT_MEM_INTEGRITY]
 ---
 
-<ApiSummary macros={6} />
+<ApiSummary macros={7} />
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_ASSERT" file="public/debugging/lv_assert.h" line={37} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/debugging/lv_assert.h#L37">
+<ApiMember kind="macro" name="LV_ASSERT_HANDLER" file="public/debugging/lv_assert.h" line={23} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/debugging/lv_assert.h#L23">
+
+### LV_ASSERT_HANDLER
+
+```c
+#define LV_ASSERT_HANDLER while(1); /*halt by default*/
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ASSERT" file="public/debugging/lv_assert.h" line={42} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/debugging/lv_assert.h#L42">
 
 ### LV_ASSERT
 
@@ -26,7 +37,7 @@ api:
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_ASSERT_MSG" file="public/debugging/lv_assert.h" line={45} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/debugging/lv_assert.h#L45">
+<ApiMember kind="macro" name="LV_ASSERT_MSG" file="public/debugging/lv_assert.h" line={50} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/debugging/lv_assert.h#L50">
 
 ### LV_ASSERT_MSG
 
@@ -43,7 +54,7 @@ api:
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_ASSERT_FORMAT_MSG" file="public/debugging/lv_assert.h" line={53} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/debugging/lv_assert.h#L53">
+<ApiMember kind="macro" name="LV_ASSERT_FORMAT_MSG" file="public/debugging/lv_assert.h" line={58} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/debugging/lv_assert.h#L58">
 
 ### LV_ASSERT_FORMAT_MSG
 
@@ -60,7 +71,7 @@ api:
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_ASSERT_NULL" file="public/debugging/lv_assert.h" line={66} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/debugging/lv_assert.h#L66">
+<ApiMember kind="macro" name="LV_ASSERT_NULL" file="public/debugging/lv_assert.h" line={71} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/debugging/lv_assert.h#L71">
 
 ### LV_ASSERT_NULL
 
@@ -72,7 +83,7 @@ api:
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_ASSERT_MALLOC" file="public/debugging/lv_assert.h" line={72} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/debugging/lv_assert.h#L72">
+<ApiMember kind="macro" name="LV_ASSERT_MALLOC" file="public/debugging/lv_assert.h" line={77} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/debugging/lv_assert.h#L77">
 
 ### LV_ASSERT_MALLOC
 
@@ -84,7 +95,7 @@ api:
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_ASSERT_MEM_INTEGRITY" file="public/debugging/lv_assert.h" line={78} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/debugging/lv_assert.h#L78">
+<ApiMember kind="macro" name="LV_ASSERT_MEM_INTEGRITY" file="public/debugging/lv_assert.h" line={83} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/debugging/lv_assert.h#L83">
 
 ### LV_ASSERT_MEM_INTEGRITY
 
@@ -99,7 +110,7 @@ api:
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_log.h", "lv_mem.h", "stdint.h"]}
+  includes={["lv_conf_internal.h", "lv_log.h", "lv_mem.h"]}
   includedBy={["lv_obj.h", "lv_style.h", "lv_check_arg.h", "lv_color.h", "lv_color_op.h", "lvgl.h"]}
   transitiveIncludes={["lv_types.h"]}
 />

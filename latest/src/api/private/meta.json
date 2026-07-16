@@ -7,6 +7,8 @@
     "draw",
     "drivers",
     "font",
+    "fs",
+    "image",
     "indev",
     "layouts",
     "libs",

@@ -2,7 +2,6 @@
   "title": "Drivers",
   "pages": [
     "display",
-    "ffmpeg",
     "indev",
     "nuttx",
     "opengles",

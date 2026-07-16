@@ -14,7 +14,7 @@ api:
 <ApiTabs items={["Setters (1)","Other (3)"]}>
 <ApiTab value="Setters (1)">
 
-<ApiMember kind="function" name="lv_tiny_ttf_set_size" file="public/font/lv_tiny_ttf.h" line={91} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/font/lv_tiny_ttf.h#L91">
+<ApiMember kind="function" name="lv_tiny_ttf_set_size" file="public/font/lv_tiny_ttf.h" line={92} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/font/lv_tiny_ttf.h#L92">
 
 ### lv_tiny_ttf_set_size
 
@@ -41,7 +41,7 @@ the font bitmap cache and glyph cache will be flushed.
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_tiny_ttf_create_data" file="public/font/lv_tiny_ttf.h" line={71} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/font/lv_tiny_ttf.h#L71">
+<ApiMember kind="function" name="lv_tiny_ttf_create_data" file="public/font/lv_tiny_ttf.h" line={72} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/font/lv_tiny_ttf.h#L72">
 
 ### lv_tiny_ttf_create_data
 
@@ -64,7 +64,7 @@ lv_font_t * lv_tiny_ttf_create_data(const void *data, size_t data_size, int32_t 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_tiny_ttf_create_data_ex" file="public/font/lv_tiny_ttf.h" line={82} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/font/lv_tiny_ttf.h#L82">
+<ApiMember kind="function" name="lv_tiny_ttf_create_data_ex" file="public/font/lv_tiny_ttf.h" line={83} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/font/lv_tiny_ttf.h#L83">
 
 ### lv_tiny_ttf_create_data_ex
 
@@ -87,7 +87,7 @@ lv_font_t * lv_tiny_ttf_create_data_ex(const void *data, size_t data_size, int32
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_tiny_ttf_destroy" file="public/font/lv_tiny_ttf.h" line={97} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/font/lv_tiny_ttf.h#L97">
+<ApiMember kind="function" name="lv_tiny_ttf_destroy" file="public/font/lv_tiny_ttf.h" line={98} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/font/lv_tiny_ttf.h#L98">
 
 ### lv_tiny_ttf_destroy
 
@@ -126,7 +126,7 @@ void lv_tiny_ttf_destroy(lv_font_t *font)
 
 ## Variables
 
-<ApiMember kind="variable" name="lv_tiny_ttf_font_class" file="public/font/lv_tiny_ttf.h" line={37} url="https://github.com/lvgl/lvgl/tree/4bce3b8c93c9abb692fe2255e00df787bc5ba2f6/include/lvgl/font/lv_tiny_ttf.h#L37">
+<ApiMember kind="variable" name="lv_tiny_ttf_font_class" file="public/font/lv_tiny_ttf.h" line={38} url="https://github.com/lvgl/lvgl/tree/a73e59f6d144785012e44ab93f1f3d4dde48a180/include/lvgl/font/lv_tiny_ttf.h#L38">
 
 ### lv_tiny_ttf_font_class
 
@@ -140,6 +140,7 @@ const lv_font_class_t lv_tiny_ttf_font_class
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h", "lv_types.h"]}
+  includes={["lv_conf_internal.h", "lv_font.h", "lv_types.h"]}
   includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_area.h", "lv_assert.h", "lv_color.h", "lv_color_op.h", "lv_draw_buf.h", "lv_image_dsc.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_string.h", "lv_symbol_def.h"]}
 />
