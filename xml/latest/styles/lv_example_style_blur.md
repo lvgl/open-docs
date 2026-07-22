@@ -1,4 +1,4 @@
-```xml title="examples/styles/lv_example_style_blur.xml" source="https://github.com/lvgl/lvgl/blob/331ac10a6f2685f47ceab42d4ac843f99dfff97a/examples/styles/lv_example_style_blur.xml"
+```xml title="examples/styles/lv_example_style_blur.xml" source="https://github.com/lvgl/lvgl/blob/62f343b540340a1f14a79afa99b721c09b1679e6/examples/styles/lv_example_style_blur.xml"
 <!--
  @title Backdrop blur
  @brief Frost the text sitting behind a translucent card.
