@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-07-23T11:25:20.844Z",
-    "symbolCount": 8882
+    "generatedAt": "2026-07-23T15:07:57.077Z",
+    "symbolCount": 8883
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -24654,6 +24654,11 @@
     "lv_indev_set_long_press_repeat_time": {
       "path": "api/public/indev/lv_indev_h",
       "anchor": "lv_indev_set_long_press_repeat_time",
+      "kind": "function"
+    },
+    "lv_indev_set_double_click_time": {
+      "path": "api/public/indev/lv_indev_h",
+      "anchor": "lv_indev_set_double_click_time",
       "kind": "function"
     },
     "lv_indev_set_scroll_limit": {
