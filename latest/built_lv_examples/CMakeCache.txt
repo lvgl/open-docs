@@ -340,6 +340,9 @@ LV_BUILD_CONF_PATH:PATH=/home/runner/work/lvgl/emscripten_builder/lvgl/configs/c
 //Supply the default Kconfig configuration - used with Kconfig
 LV_BUILD_DEFCONFIG_PATH:PATH=
 
+//Path to .config path - used with Kconfig
+LV_BUILD_DOTCONFIG_PATH:PATH=
+
 //Disable if the lvgl directory is located at the top-level of
 // your project
 LV_BUILD_LVGL_H_SIMPLE_INCLUDE:BOOL=ON
