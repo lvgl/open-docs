@@ -8,6 +8,6 @@ URL: https://lvgl.io/
 Version: 9.6.0
 Requires: 
 Requires.private: 
-Cflags: -I${includedir}
+Cflags: -I${includedir} -DLV_KCONFIG_IGNORE -DLV_CONF_INCLUDE_SIMPLE
 Libs: -L${libdir} -llvgl 
 Libs.private: -lm -llvgl_thorvg

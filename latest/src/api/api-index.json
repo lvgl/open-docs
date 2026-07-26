@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-07-25T20:02:23.924Z",
-    "symbolCount": 8883
+    "generatedAt": "2026-07-26T05:51:44.175Z",
+    "symbolCount": 8884
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -3469,6 +3469,11 @@
     "LV_LIBINPUT_BSD": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_LIBINPUT_BSD",
+      "kind": "macro"
+    },
+    "LV_LIBINPUT_XKB": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_LIBINPUT_XKB",
       "kind": "macro"
     },
     "LV_LIBINPUT_XKB_RULES": {

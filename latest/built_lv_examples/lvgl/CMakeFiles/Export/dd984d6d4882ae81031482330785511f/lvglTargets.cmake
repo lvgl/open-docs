@@ -59,7 +59,7 @@ endif()
 add_library(lvgl::lvgl STATIC IMPORTED)
 
 set_target_properties(lvgl::lvgl PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "LV_KCONFIG_IGNORE;LV_CONF_PATH=\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\";LV_LVGL_H_INCLUDE_SIMPLE"
+  INTERFACE_COMPILE_DEFINITIONS "LV_KCONFIG_IGNORE;LV_CONF_INCLUDE_SIMPLE"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:m>;\$<LINK_ONLY:lvgl::lvgl_thorvg>"
   INTERFACE_SYSTEM_INCLUDE_DIRECTORIES "include"
