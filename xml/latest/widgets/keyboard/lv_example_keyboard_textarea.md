@@ -1,4 +1,4 @@
-```xml title="examples/widgets/keyboard/lv_example_keyboard_textarea.xml" source="https://github.com/lvgl/lvgl/blob/f67415c9203bd1e49c1815099ee6ea241511048a/examples/widgets/keyboard/lv_example_keyboard_textarea.xml"
+```xml title="examples/widgets/keyboard/lv_example_keyboard_textarea.xml" source="https://github.com/lvgl/lvgl/blob/65bc757457270152ea27a0c8922023dc7290761f/examples/widgets/keyboard/lv_example_keyboard_textarea.xml"
 <!--
  @title Keyboard with text area
  @brief Pair a keyboard with a textarea so typed keys land in the field.

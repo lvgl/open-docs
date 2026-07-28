@@ -1,4 +1,4 @@
-```xml title="examples/styles/lv_example_style_arc.xml" source="https://github.com/lvgl/lvgl/blob/f67415c9203bd1e49c1815099ee6ea241511048a/examples/styles/lv_example_style_arc.xml"
+```xml title="examples/styles/lv_example_style_arc.xml" source="https://github.com/lvgl/lvgl/blob/65bc757457270152ea27a0c8922023dc7290761f/examples/styles/lv_example_style_arc.xml"
 <!--
  @title Arc stroke
  @brief Style the arc's ring and indicator into a modern progress dial.

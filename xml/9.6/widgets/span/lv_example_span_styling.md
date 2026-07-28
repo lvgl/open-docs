@@ -1,4 +1,4 @@
-```xml title="examples/widgets/span/lv_example_span_styling.xml" source="https://github.com/lvgl/lvgl/blob/f67415c9203bd1e49c1815099ee6ea241511048a/examples/widgets/span/lv_example_span_styling.xml"
+```xml title="examples/widgets/span/lv_example_span_styling.xml" source="https://github.com/lvgl/lvgl/blob/65bc757457270152ea27a0c8922023dc7290761f/examples/widgets/span/lv_example_span_styling.xml"
 <!--
  @title Spangroup styled text
  @brief Mix per-span color and decoration in one wrapping rich-text block.

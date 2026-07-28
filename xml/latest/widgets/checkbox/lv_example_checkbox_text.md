@@ -1,4 +1,4 @@
-```xml title="examples/widgets/checkbox/lv_example_checkbox_text.xml" source="https://github.com/lvgl/lvgl/blob/f67415c9203bd1e49c1815099ee6ea241511048a/examples/widgets/checkbox/lv_example_checkbox_text.xml"
+```xml title="examples/widgets/checkbox/lv_example_checkbox_text.xml" source="https://github.com/lvgl/lvgl/blob/65bc757457270152ea27a0c8922023dc7290761f/examples/widgets/checkbox/lv_example_checkbox_text.xml"
 <!--
  @title Checkbox text
  @brief Set the label that appears next to the tick box.
