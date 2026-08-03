@@ -1,4 +1,4 @@
-```xml title="examples/scroll/lv_example_scroll_scrollable.xml" source="https://github.com/lvgl/lvgl/blob/8ec5a94e87d0e07560154b0580194d83de5e94e0/examples/scroll/lv_example_scroll_scrollable.xml"
+```xml title="examples/scroll/lv_example_scroll_scrollable.xml" source="https://github.com/lvgl/lvgl/blob/357cd58443bc7a2babff591a8d320fc9a2acc6d5/examples/scroll/lv_example_scroll_scrollable.xml"
 <!--
  @title Disabling scrolling
  @brief Clearing the SCROLLABLE flag clips overflowing content instead of scrolling it.

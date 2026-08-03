@@ -1,4 +1,4 @@
-```xml title="examples/widgets/calendar/lv_example_calendar_basic.xml" source="https://github.com/lvgl/lvgl/blob/8ec5a94e87d0e07560154b0580194d83de5e94e0/examples/widgets/calendar/lv_example_calendar_basic.xml"
+```xml title="examples/widgets/calendar/lv_example_calendar_basic.xml" source="https://github.com/lvgl/lvgl/blob/357cd58443bc7a2babff591a8d320fc9a2acc6d5/examples/widgets/calendar/lv_example_calendar_basic.xml"
 <!--
  @title Calendar basics
  @brief Month view with an arrow header for navigation.

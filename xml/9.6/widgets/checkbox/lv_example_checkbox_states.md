@@ -1,4 +1,4 @@
-```xml title="examples/widgets/checkbox/lv_example_checkbox_states.xml" source="https://github.com/lvgl/lvgl/blob/8ec5a94e87d0e07560154b0580194d83de5e94e0/examples/widgets/checkbox/lv_example_checkbox_states.xml"
+```xml title="examples/widgets/checkbox/lv_example_checkbox_states.xml" source="https://github.com/lvgl/lvgl/blob/357cd58443bc7a2babff591a8d320fc9a2acc6d5/examples/widgets/checkbox/lv_example_checkbox_states.xml"
 <!--
  @title Checkbox states
  @brief Show unchecked, checked, and disabled tick boxes side by side.

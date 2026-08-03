@@ -1,4 +1,4 @@
-```xml title="examples/widgets/slider/lv_example_slider_value_range_orientation.xml" source="https://github.com/lvgl/lvgl/blob/8ec5a94e87d0e07560154b0580194d83de5e94e0/examples/widgets/slider/lv_example_slider_value_range_orientation.xml"
+```xml title="examples/widgets/slider/lv_example_slider_value_range_orientation.xml" source="https://github.com/lvgl/lvgl/blob/357cd58443bc7a2babff591a8d320fc9a2acc6d5/examples/widgets/slider/lv_example_slider_value_range_orientation.xml"
 <!--
  @title Slider value, range, and orientation
  @brief Set a custom numeric range and choose horizontal or vertical layout.

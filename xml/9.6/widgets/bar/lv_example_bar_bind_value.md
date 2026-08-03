@@ -1,4 +1,4 @@
-```xml title="examples/widgets/bar/lv_example_bar_bind_value.xml" source="https://github.com/lvgl/lvgl/blob/8ec5a94e87d0e07560154b0580194d83de5e94e0/examples/widgets/bar/lv_example_bar_bind_value.xml"
+```xml title="examples/widgets/bar/lv_example_bar_bind_value.xml" source="https://github.com/lvgl/lvgl/blob/357cd58443bc7a2babff591a8d320fc9a2acc6d5/examples/widgets/bar/lv_example_bar_bind_value.xml"
 <!--
  @title Bar bind value with increment buttons
  @brief Mutate a bound int subject via `subject_increment_event` instead of dragging.

@@ -23,9 +23,9 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/display/lv_display.h:273: warn
   parameter 'disp'
   parameter 'buf1'
   parameter 'buf2'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw.h:213: warning: The following parameter of lv_draw_add_task(lv_layer_t *layer, const lv_area_t *coords, lv_draw_task_type_t type) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw.h:216: warning: The following parameter of lv_draw_add_task(lv_layer_t *layer, const lv_area_t *coords, lv_draw_task_type_t type) is not documented:
   parameter 'type'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw.h:326: warning: found documented return type for lv_draw_layer_init that does not return anything
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw.h:329: warning: found documented return type for lv_draw_layer_init that does not return anything
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_3d.h:55: warning: The following parameter of lv_draw_3d(lv_layer_t *layer, const lv_draw_3d_dsc_t *dsc, const lv_area_t *coords) is not documented:
   parameter 'coords'
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/drivers/display/lv_draw_eve_display_defines.h:599: warning: argument 'linestride' of command @param is not found in the argument list of LV_EVE_BITMAP_SIZE_H(uint16_t width, uint16_t height)
@@ -237,7 +237,7 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/display/lv_display.h:273: warn
   parameter 'disp'
   parameter 'buf1'
   parameter 'buf2'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw.h:213: warning: The following parameter of lv_draw_add_task(lv_layer_t *layer, const lv_area_t *coords, lv_draw_task_type_t type) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw.h:216: warning: The following parameter of lv_draw_add_task(lv_layer_t *layer, const lv_area_t *coords, lv_draw_task_type_t type) is not documented:
   parameter 'type'
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/draw/lv_draw_3d.h:55: warning: The following parameter of lv_draw_3d(lv_layer_t *layer, const lv_draw_3d_dsc_t *dsc, const lv_area_t *coords) is not documented:
   parameter 'coords'

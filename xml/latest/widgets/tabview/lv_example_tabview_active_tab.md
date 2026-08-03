@@ -1,4 +1,4 @@
-```xml title="examples/widgets/tabview/lv_example_tabview_active_tab.xml" source="https://github.com/lvgl/lvgl/blob/8ec5a94e87d0e07560154b0580194d83de5e94e0/examples/widgets/tabview/lv_example_tabview_active_tab.xml"
+```xml title="examples/widgets/tabview/lv_example_tabview_active_tab.xml" source="https://github.com/lvgl/lvgl/blob/357cd58443bc7a2babff591a8d320fc9a2acc6d5/examples/widgets/tabview/lv_example_tabview_active_tab.xml"
 <!--
  @title Tab view active tab on creation
  @brief Open a specific tab on first display via the `active` prop.

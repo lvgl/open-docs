@@ -1,4 +1,4 @@
-```xml title="examples/widgets/table/lv_example_table_rows_columns.xml" source="https://github.com/lvgl/lvgl/blob/8ec5a94e87d0e07560154b0580194d83de5e94e0/examples/widgets/table/lv_example_table_rows_columns.xml"
+```xml title="examples/widgets/table/lv_example_table_rows_columns.xml" source="https://github.com/lvgl/lvgl/blob/357cd58443bc7a2babff591a8d320fc9a2acc6d5/examples/widgets/table/lv_example_table_rows_columns.xml"
 <!--
  @title Table rows and columns
  @brief Set the table dimensions explicitly so the grid is sized before cells are placed.
