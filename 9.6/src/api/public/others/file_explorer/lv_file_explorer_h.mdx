@@ -4,23 +4,26 @@ description: API reference for lv_file_explorer.h
 api:
   functions: [lv_file_explorer_create, lv_file_explorer_set_quick_access_path, lv_file_explorer_set_sort, lv_file_explorer_show_back_button, lv_file_explorer_get_selected_file_name, lv_file_explorer_get_current_path, lv_file_explorer_get_file_table, lv_file_explorer_get_header, lv_file_explorer_get_path_label, lv_file_explorer_get_quick_access_area, lv_file_explorer_get_places_list, lv_file_explorer_get_device_list, lv_file_explorer_get_sort, lv_file_explorer_open_dir]
   enums: [lv_file_explorer_sort_t, lv_file_explorer_dir_t]
+  macros: [LV_FILE_EXPLORER_DEPRECATED_MSG]
   variables: [lv_file_explorer_class]
 ---
 
 <RelatedHeaders name="lv_file_explorer_private.h" isPrivate={false} />
 
-<ApiSummary functions={14} enums={2} variables={1} />
+<ApiSummary functions={14} enums={2} macros={1} variables={1} />
 
 ## Functions
 
 <ApiTabs items={["Setters (2)","Getters (9)","Other (3)"]}>
 <ApiTab value="Setters (2)">
 
-<ApiMember kind="function" name="lv_file_explorer_set_quick_access_path" file="public/others/file_explorer/lv_file_explorer.h" line={68} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L68">
+<ApiMember kind="function" name="lv_file_explorer_set_quick_access_path" file="public/others/file_explorer/lv_file_explorer.h" line={88} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L88">
 
 ### lv_file_explorer_set_quick_access_path
 
-Set file_explorer
+Set file_explorer 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 void lv_file_explorer_set_quick_access_path(lv_obj_t *obj, lv_file_explorer_dir_t dir, const char *path)
@@ -37,11 +40,13 @@ void lv_file_explorer_set_quick_access_path(lv_obj_t *obj, lv_file_explorer_dir_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_file_explorer_set_sort" file="public/others/file_explorer/lv_file_explorer.h" line={76} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L76">
+<ApiMember kind="function" name="lv_file_explorer_set_sort" file="public/others/file_explorer/lv_file_explorer.h" line={98} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L98">
 
 ### lv_file_explorer_set_sort
 
-Set file_explorer sort
+Set file_explorer sort 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 void lv_file_explorer_set_sort(lv_obj_t *obj, lv_file_explorer_sort_t sort)
@@ -60,11 +65,13 @@ void lv_file_explorer_set_sort(lv_obj_t *obj, lv_file_explorer_sort_t sort)
 </ApiTab>
 <ApiTab value="Getters (9)">
 
-<ApiMember kind="function" name="lv_file_explorer_get_selected_file_name" file="public/others/file_explorer/lv_file_explorer.h" line={94} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L94">
+<ApiMember kind="function" name="lv_file_explorer_get_selected_file_name" file="public/others/file_explorer/lv_file_explorer.h" line={120} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L120">
 
 ### lv_file_explorer_get_selected_file_name
 
-Get file explorer Selected file
+Get file explorer Selected file 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 const char * lv_file_explorer_get_selected_file_name(const lv_obj_t *obj)
@@ -81,11 +88,13 @@ const char * lv_file_explorer_get_selected_file_name(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_file_explorer_get_current_path" file="public/others/file_explorer/lv_file_explorer.h" line={101} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L101">
+<ApiMember kind="function" name="lv_file_explorer_get_current_path" file="public/others/file_explorer/lv_file_explorer.h" line={129} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L129">
 
 ### lv_file_explorer_get_current_path
 
-Get file explorer cur path
+Get file explorer cur path 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 const char * lv_file_explorer_get_current_path(const lv_obj_t *obj)
@@ -102,11 +111,13 @@ const char * lv_file_explorer_get_current_path(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_file_explorer_get_file_table" file="public/others/file_explorer/lv_file_explorer.h" line={108} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L108">
+<ApiMember kind="function" name="lv_file_explorer_get_file_table" file="public/others/file_explorer/lv_file_explorer.h" line={138} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L138">
 
 ### lv_file_explorer_get_file_table
 
-Get file explorer file list obj(lv_table)
+Get file explorer file list obj(lv_table) 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 lv_obj_t * lv_file_explorer_get_file_table(lv_obj_t *obj)
@@ -123,11 +134,13 @@ lv_obj_t * lv_file_explorer_get_file_table(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_file_explorer_get_header" file="public/others/file_explorer/lv_file_explorer.h" line={115} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L115">
+<ApiMember kind="function" name="lv_file_explorer_get_header" file="public/others/file_explorer/lv_file_explorer.h" line={147} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L147">
 
 ### lv_file_explorer_get_header
 
-Get file explorer head area obj
+Get file explorer head area obj 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 lv_obj_t * lv_file_explorer_get_header(lv_obj_t *obj)
@@ -144,11 +157,13 @@ lv_obj_t * lv_file_explorer_get_header(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_file_explorer_get_path_label" file="public/others/file_explorer/lv_file_explorer.h" line={122} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L122">
+<ApiMember kind="function" name="lv_file_explorer_get_path_label" file="public/others/file_explorer/lv_file_explorer.h" line={156} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L156">
 
 ### lv_file_explorer_get_path_label
 
-Get file explorer path obj(label)
+Get file explorer path obj(label) 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 lv_obj_t * lv_file_explorer_get_path_label(lv_obj_t *obj)
@@ -165,11 +180,13 @@ lv_obj_t * lv_file_explorer_get_path_label(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_file_explorer_get_quick_access_area" file="public/others/file_explorer/lv_file_explorer.h" line={130} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L130">
+<ApiMember kind="function" name="lv_file_explorer_get_quick_access_area" file="public/others/file_explorer/lv_file_explorer.h" line={166} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L166">
 
 ### lv_file_explorer_get_quick_access_area
 
-Get file explorer head area obj
+Get file explorer head area obj 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 lv_obj_t * lv_file_explorer_get_quick_access_area(lv_obj_t *obj)
@@ -186,11 +203,13 @@ lv_obj_t * lv_file_explorer_get_quick_access_area(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_file_explorer_get_places_list" file="public/others/file_explorer/lv_file_explorer.h" line={137} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L137">
+<ApiMember kind="function" name="lv_file_explorer_get_places_list" file="public/others/file_explorer/lv_file_explorer.h" line={175} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L175">
 
 ### lv_file_explorer_get_places_list
 
-Get file explorer places list obj(lv_list)
+Get file explorer places list obj(lv_list) 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 lv_obj_t * lv_file_explorer_get_places_list(lv_obj_t *obj)
@@ -207,11 +226,13 @@ lv_obj_t * lv_file_explorer_get_places_list(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_file_explorer_get_device_list" file="public/others/file_explorer/lv_file_explorer.h" line={144} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L144">
+<ApiMember kind="function" name="lv_file_explorer_get_device_list" file="public/others/file_explorer/lv_file_explorer.h" line={184} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L184">
 
 ### lv_file_explorer_get_device_list
 
-Get file explorer device list obj(lv_list)
+Get file explorer device list obj(lv_list) 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 lv_obj_t * lv_file_explorer_get_device_list(lv_obj_t *obj)
@@ -228,11 +249,13 @@ lv_obj_t * lv_file_explorer_get_device_list(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_file_explorer_get_sort" file="public/others/file_explorer/lv_file_explorer.h" line={152} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L152">
+<ApiMember kind="function" name="lv_file_explorer_get_sort" file="public/others/file_explorer/lv_file_explorer.h" line={194} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L194">
 
 ### lv_file_explorer_get_sort
 
-Set file_explorer sort
+Set file_explorer sort 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 lv_file_explorer_sort_t lv_file_explorer_get_sort(const lv_obj_t *obj)
@@ -252,9 +275,13 @@ lv_file_explorer_sort_t lv_file_explorer_get_sort(const lv_obj_t *obj)
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_file_explorer_create" file="public/others/file_explorer/lv_file_explorer.h" line={54} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L54">
+<ApiMember kind="function" name="lv_file_explorer_create" file="public/others/file_explorer/lv_file_explorer.h" line={73} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L73">
 
 ### lv_file_explorer_create
+
+Create a file explorer object 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. Build a file browser from a table and the `lv_fs` API instead. See `lv_example_table_file_browser`.
 
 ```c
 lv_obj_t * lv_file_explorer_create(lv_obj_t *parent)
@@ -262,18 +289,22 @@ lv_obj_t * lv_file_explorer_create(lv_obj_t *parent)
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object, it will be the parent of the new explorer |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created file explorer
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_file_explorer_show_back_button" file="public/others/file_explorer/lv_file_explorer.h" line={83} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L83">
+<ApiMember kind="function" name="lv_file_explorer_show_back_button" file="public/others/file_explorer/lv_file_explorer.h" line={107} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L107">
 
 ### lv_file_explorer_show_back_button
 
-Set the visibility of the "\< Back" button
+Set the visibility of the "\< Back" button 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 void lv_file_explorer_show_back_button(lv_obj_t *obj, bool show)
@@ -289,11 +320,13 @@ void lv_file_explorer_show_back_button(lv_obj_t *obj, bool show)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_file_explorer_open_dir" file="public/others/file_explorer/lv_file_explorer.h" line={163} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L163">
+<ApiMember kind="function" name="lv_file_explorer_open_dir" file="public/others/file_explorer/lv_file_explorer.h" line={207} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L207">
 
 ### lv_file_explorer_open_dir
 
-Open a specified path
+Open a specified path 
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated. See `lv_example_table_file_browser`.
 
 ```c
 void lv_file_explorer_open_dir(lv_obj_t *obj, const char *dir)
@@ -313,7 +346,7 @@ void lv_file_explorer_open_dir(lv_obj_t *obj, const char *dir)
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_file_explorer_sort_t" file="public/others/file_explorer/lv_file_explorer.h" line={29} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L29">
+<ApiMember kind="enum" name="lv_file_explorer_sort_t" file="public/others/file_explorer/lv_file_explorer.h" line={39} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L39">
 
 ### lv_file_explorer_sort_t
 
@@ -331,7 +364,7 @@ void lv_file_explorer_open_dir(lv_obj_t *obj, const char *dir)
 
 </TypeUsedBy>
 
-<ApiMember kind="enum" name="lv_file_explorer_dir_t" file="public/others/file_explorer/lv_file_explorer.h" line={35} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L35">
+<ApiMember kind="enum" name="lv_file_explorer_dir_t" file="public/others/file_explorer/lv_file_explorer.h" line={45} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L45">
 
 ### lv_file_explorer_dir_t
 
@@ -353,9 +386,24 @@ void lv_file_explorer_open_dir(lv_obj_t *obj, const char *dir)
 
 </TypeUsedBy>
 
+## Macros
+
+<ApiMember kind="macro" name="LV_FILE_EXPLORER_DEPRECATED_MSG" file="public/others/file_explorer/lv_file_explorer.h" line={32} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L32">
+
+### LV_FILE_EXPLORER_DEPRECATED_MSG
+
+```c
+#define LV_FILE_EXPLORER_DEPRECATED_MSG "lv_file_explorer is deprecated; build a file browser from a table + lv_fs instead. See the lv_example_table_file_browser example."
+```
+
+\> **Deprecated:** The `lv_file_explorer` widget is deprecated and kept only for backward compatibility. A file explorer is a path header plus a table of directory entries read with the `lv_fs` API, so build it directly instead. See the `lv_example_table_file_browser` example. All `lv_file_explorer_*` functions below are deprecated.
+
+
+</ApiMember>
+
 ## Variables
 
-<ApiMember kind="variable" name="lv_file_explorer_class" file="public/others/file_explorer/lv_file_explorer.h" line={45} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/others/file_explorer/lv_file_explorer.h#L45">
+<ApiMember kind="variable" name="lv_file_explorer_class" file="public/others/file_explorer/lv_file_explorer.h" line={55} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/others/file_explorer/lv_file_explorer.h#L55">
 
 ### lv_file_explorer_class
 

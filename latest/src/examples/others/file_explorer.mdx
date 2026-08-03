@@ -9,37 +9,16 @@ Browse the filesystem through an LVGL widget.
 
 <LvglExampleBrief>Open a file explorer on the active screen and log the selected path.</LvglExampleBrief>
 
-`lv_file_explorer_create` builds a full-screen browser, `lv_file_explorer_set_sort`
-sorts entries by `LV_EXPLORER_SORT_KIND`, and `lv_file_explorer_open_dir` opens the
-platform root (`"C:C:/"` on Win32 or `"A:/"` on the `lv_fs` Linux driver). When
-`LV_FILE_EXPLORER_QUICK_ACCESS` is enabled, `HOME`, `VIDEO`, `PICTURES`, `MUSIC`,
-`DOCS`, and `FS` shortcuts are registered. An `LV_EVENT_ALL` callback prints the
-current path and the selected file name on every `LV_EVENT_VALUE_CHANGED`.
-
 <LvglExample name="lv_example_file_explorer_1" path="others/file_explorer/lv_example_file_explorer_1" />
 
 ## Quick access toggle and sort control
 
 <LvglExampleBrief>File explorer with a header button to hide quick access and a dropdown to change sort mode.</LvglExampleBrief>
 
-Adds a checkable button and a dropdown into the file explorer's header
-(`lv_file_explorer_get_header`). Toggling the button adds or removes
-`LV_OBJ_FLAG_HIDDEN` on the quick access panel returned by
-`lv_file_explorer_get_quick_access_area`. The dropdown switches between
-`LV_EXPLORER_SORT_NONE` and `LV_EXPLORER_SORT_KIND` via
-`lv_file_explorer_set_sort`. A separate `LV_EVENT_ALL` handler logs the current
-path and selected file name.
-
 <LvglExample name="lv_example_file_explorer_2" path="others/file_explorer/lv_example_file_explorer_2" />
 
 ## Custom file explorer sort
 
 <LvglExampleBrief>Apply a 3-way quicksort over the file table after each directory load.</LvglExampleBrief>
-
-The file explorer is created with `LV_EXPLORER_SORT_NONE` so that default sorting
-stays out of the way. On `LV_EVENT_READY`, `lv_file_explorer_get_file_table`
-returns the underlying table and a static 3-way quicksort reorders rows by the
-kind column. `LV_EVENT_VALUE_CHANGED` still logs the current path and selected
-file name.
 
 <LvglExample name="lv_example_file_explorer_3" path="others/file_explorer/lv_example_file_explorer_3" />

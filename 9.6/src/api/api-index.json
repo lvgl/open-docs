@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-03T08:29:34.212Z",
-    "symbolCount": 8884
+    "generatedAt": "2026-08-03T08:34:43.915Z",
+    "symbolCount": 8889
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -27001,6 +27001,11 @@
       "anchor": "lv_file_explorer_dir_t",
       "kind": "enumvalue"
     },
+    "LV_FILE_EXPLORER_DEPRECATED_MSG": {
+      "path": "api/public/others/file_explorer/lv_file_explorer_h",
+      "anchor": "LV_FILE_EXPLORER_DEPRECATED_MSG",
+      "kind": "macro"
+    },
     "lv_file_explorer_class": {
       "path": "api/public/others/file_explorer/lv_file_explorer_h",
       "anchor": "lv_file_explorer_class",
@@ -31286,6 +31291,11 @@
       "anchor": "lv_list_set_button_translation_tag",
       "kind": "function"
     },
+    "LV_LIST_DEPRECATED_MSG": {
+      "path": "api/public/widgets/lv_list_h",
+      "anchor": "LV_LIST_DEPRECATED_MSG",
+      "kind": "macro"
+    },
     "lv_list_class": {
       "path": "api/public/widgets/lv_list_h",
       "anchor": "lv_list_class",
@@ -31505,6 +31515,11 @@
       "path": "api/public/widgets/lv_menu_h",
       "anchor": "__lv_property_menu_id_t",
       "kind": "enumvalue"
+    },
+    "LV_MENU_DEPRECATED_MSG": {
+      "path": "api/public/widgets/lv_menu_h",
+      "anchor": "LV_MENU_DEPRECATED_MSG",
+      "kind": "macro"
     },
     "lv_menu_class": {
       "path": "api/public/widgets/lv_menu_h",
@@ -31755,6 +31770,11 @@
       "path": "api/public/widgets/lv_rlottie_h",
       "anchor": "lv_rlottie_ctrl_t",
       "kind": "enumvalue"
+    },
+    "LV_RLOTTIE_DEPRECATED_MSG": {
+      "path": "api/public/widgets/lv_rlottie_h",
+      "anchor": "LV_RLOTTIE_DEPRECATED_MSG",
+      "kind": "macro"
     },
     "lv_rlottie_class": {
       "path": "api/public/widgets/lv_rlottie_h",
@@ -33555,6 +33575,11 @@
       "path": "api/public/widgets/lv_win_h",
       "anchor": "lv_win_get_content",
       "kind": "function"
+    },
+    "LV_WIN_DEPRECATED_MSG": {
+      "path": "api/public/widgets/lv_win_h",
+      "anchor": "LV_WIN_DEPRECATED_MSG",
+      "kind": "macro"
     },
     "lv_win_class": {
       "path": "api/public/widgets/lv_win_h",

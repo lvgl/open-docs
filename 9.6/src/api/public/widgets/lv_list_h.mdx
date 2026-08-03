@@ -3,21 +3,24 @@ title: lv_list.h
 description: API reference for lv_list.h
 api:
   functions: [lv_list_create, lv_list_add_text, lv_list_add_button, lv_list_get_button_text, lv_list_set_button_text, lv_list_add_translation_tag, lv_list_add_button_translation_tag, lv_list_set_button_translation_tag]
+  macros: [LV_LIST_DEPRECATED_MSG]
   variables: [lv_list_class, lv_list_text_class, lv_list_button_class]
 ---
 
-<ApiSummary functions={8} variables={3} />
+<ApiSummary functions={8} macros={1} variables={3} />
 
 ## Functions
 
 <ApiTabs items={["Setters (2)","Getters (1)","Other (5)"]}>
 <ApiTab value="Setters (2)">
 
-<ApiMember kind="function" name="lv_list_set_button_text" file="public/widgets/lv_list.h" line={77} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_list.h#L77">
+<ApiMember kind="function" name="lv_list_set_button_text" file="public/widgets/lv_list.h" line={96} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L96">
 
 ### lv_list_set_button_text
 
-Set text of a given list button
+Set text of a given list button 
+
+\> **Deprecated:** The `lv_list` widget is deprecated. See `lv_example_flex_list`.
 
 ```c
 void lv_list_set_button_text(lv_obj_t *list, lv_obj_t *btn, const char *txt)
@@ -34,11 +37,13 @@ void lv_list_set_button_text(lv_obj_t *list, lv_obj_t *btn, const char *txt)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_list_set_button_translation_tag" file="public/widgets/lv_list.h" line={104} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_list.h#L104">
+<ApiMember kind="function" name="lv_list_set_button_translation_tag" file="public/widgets/lv_list.h" line={129} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L129">
 
 ### lv_list_set_button_translation_tag
 
-Set translation tag text of a given list button
+Set translation tag text of a given list button 
+
+\> **Deprecated:** The `lv_list` widget is deprecated. See `lv_example_flex_list`.
 
 ```c
 void lv_list_set_button_translation_tag(lv_obj_t *list, lv_obj_t *btn, const char *tag)
@@ -58,11 +63,13 @@ void lv_list_set_button_translation_tag(lv_obj_t *list, lv_obj_t *btn, const cha
 </ApiTab>
 <ApiTab value="Getters (1)">
 
-<ApiMember kind="function" name="lv_list_get_button_text" file="public/widgets/lv_list.h" line={69} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_list.h#L69">
+<ApiMember kind="function" name="lv_list_get_button_text" file="public/widgets/lv_list.h" line={86} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L86">
 
 ### lv_list_get_button_text
 
-Get text of a given list button
+Get text of a given list button 
+
+\> **Deprecated:** The `lv_list` widget is deprecated. See `lv_example_flex_list`.
 
 ```c
 const char * lv_list_get_button_text(lv_obj_t *list, lv_obj_t *btn)
@@ -83,11 +90,13 @@ const char * lv_list_get_button_text(lv_obj_t *list, lv_obj_t *btn)
 </ApiTab>
 <ApiTab value="Other (5)">
 
-<ApiMember kind="function" name="lv_list_create" file="public/widgets/lv_list.h" line={44} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_list.h#L44">
+<ApiMember kind="function" name="lv_list_create" file="public/widgets/lv_list.h" line={55} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L55">
 
 ### lv_list_create
 
-Create a list object
+Create a list object 
+
+\> **Deprecated:** Use a flex container with `LV_FLEX_FLOW_COLUMN` instead. See `lv_example_flex_list`.
 
 ```c
 lv_obj_t * lv_list_create(lv_obj_t *parent)
@@ -104,11 +113,13 @@ lv_obj_t * lv_list_create(lv_obj_t *parent)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_list_add_text" file="public/widgets/lv_list.h" line={52} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_list.h#L52">
+<ApiMember kind="function" name="lv_list_add_text" file="public/widgets/lv_list.h" line={65} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L65">
 
 ### lv_list_add_text
 
-Add text to a list
+Add text to a list 
+
+\> **Deprecated:** Add a full-width `lv_label` to a flex container instead. See `lv_example_flex_list`.
 
 ```c
 lv_obj_t * lv_list_add_text(lv_obj_t *list, const char *txt)
@@ -126,11 +137,13 @@ lv_obj_t * lv_list_add_text(lv_obj_t *list, const char *txt)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_list_add_button" file="public/widgets/lv_list.h" line={61} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_list.h#L61">
+<ApiMember kind="function" name="lv_list_add_button" file="public/widgets/lv_list.h" line={76} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L76">
 
 ### lv_list_add_button
 
-Add button to a list
+Add button to a list 
+
+\> **Deprecated:** Add a full-width `lv_button` to a flex container instead. See `lv_example_flex_list`.
 
 ```c
 lv_obj_t * lv_list_add_button(lv_obj_t *list, const void *icon, const char *txt)
@@ -149,11 +162,13 @@ lv_obj_t * lv_list_add_button(lv_obj_t *list, const void *icon, const char *txt)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_list_add_translation_tag" file="public/widgets/lv_list.h" line={87} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_list.h#L87">
+<ApiMember kind="function" name="lv_list_add_translation_tag" file="public/widgets/lv_list.h" line={108} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L108">
 
 ### lv_list_add_translation_tag
 
-Add translation tag text to a list
+Add translation tag text to a list 
+
+\> **Deprecated:** The `lv_list` widget is deprecated. See `lv_example_flex_list`.
 
 ```c
 lv_obj_t * lv_list_add_translation_tag(lv_obj_t *list, const char *tag)
@@ -171,11 +186,13 @@ lv_obj_t * lv_list_add_translation_tag(lv_obj_t *list, const char *tag)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_list_add_button_translation_tag" file="public/widgets/lv_list.h" line={96} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_list.h#L96">
+<ApiMember kind="function" name="lv_list_add_button_translation_tag" file="public/widgets/lv_list.h" line={119} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L119">
 
 ### lv_list_add_button_translation_tag
 
-Add translation tag button to a list
+Add translation tag button to a list 
+
+\> **Deprecated:** The `lv_list` widget is deprecated. See `lv_example_flex_list`.
 
 ```c
 lv_obj_t * lv_list_add_button_translation_tag(lv_obj_t *list, const void *icon, const char *tag)
@@ -196,9 +213,24 @@ lv_obj_t * lv_list_add_button_translation_tag(lv_obj_t *list, const void *icon, 
 
 </ApiTab>
 </ApiTabs>
+## Macros
+
+<ApiMember kind="macro" name="LV_LIST_DEPRECATED_MSG" file="public/widgets/lv_list.h" line={30} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L30">
+
+### LV_LIST_DEPRECATED_MSG
+
+```c
+#define LV_LIST_DEPRECATED_MSG "lv_list is deprecated; build a list from a flex column instead. See the lv_example_flex_list example."
+```
+
+\> **Deprecated:** The `lv_list` widget is deprecated and kept only for backward compatibility. A list is just a flex container with a column flow, so build one directly from `lv_obj` + a `LV_FLEX_FLOW_COLUMN` layout instead. See the `lv_example_flex_list` example for a starting point.
+
+
+</ApiMember>
+
 ## Variables
 
-<ApiMember kind="variable" name="lv_list_class" file="public/widgets/lv_list.h" line={32} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_list.h#L32">
+<ApiMember kind="variable" name="lv_list_class" file="public/widgets/lv_list.h" line={41} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L41">
 
 ### lv_list_class
 
@@ -209,7 +241,7 @@ const lv_obj_class_t lv_list_class
 
 </ApiMember>
 
-<ApiMember kind="variable" name="lv_list_text_class" file="public/widgets/lv_list.h" line={33} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_list.h#L33">
+<ApiMember kind="variable" name="lv_list_text_class" file="public/widgets/lv_list.h" line={42} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L42">
 
 ### lv_list_text_class
 
@@ -220,7 +252,7 @@ const lv_obj_class_t lv_list_text_class
 
 </ApiMember>
 
-<ApiMember kind="variable" name="lv_list_button_class" file="public/widgets/lv_list.h" line={34} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_list.h#L34">
+<ApiMember kind="variable" name="lv_list_button_class" file="public/widgets/lv_list.h" line={43} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_list.h#L43">
 
 ### lv_list_button_class
 

@@ -15,6 +15,18 @@ walk row-major.
 
 <LvglExample name="lv_example_table_cells" path="widgets/table/lv_example_table_cells" />
 
+## File browser built from a table
+
+<LvglExampleBrief>Build a file browser with a sidebar, path header and table.</LvglExampleBrief>
+
+A grey quick-access sidebar holds DEVICE/PLACES shortcuts; the white browser area
+shows the current path over an `lv_table` filled from a directory read with the
+`lv_fs` API (`lv_fs_dir_open`/`lv_fs_dir_read`/`lv_fs_dir_close`). Clicking a
+folder row opens the child directory, the ".." row walks back up, and the sidebar
+shortcuts jump straight to a path. Requires a file-system driver in `lv_conf.h`.
+
+<LvglExample name="lv_example_table_file_browser" path="widgets/table/lv_example_table_file_browser" />
+
 ## Table merge cells
 
 <LvglExampleBrief>Span a cell across two columns by setting the `merge_right` control flag.</LvglExampleBrief>

@@ -4,21 +4,24 @@ description: API reference for lv_rlottie.h
 api:
   functions: [lv_rlottie_create_from_file, lv_rlottie_create_from_raw, lv_rlottie_set_play_mode, lv_rlottie_set_current_frame]
   enums: [lv_rlottie_ctrl_t]
+  macros: [LV_RLOTTIE_DEPRECATED_MSG]
   variables: [lv_rlottie_class]
 ---
 
 <RelatedHeaders name="lv_rlottie_private.h" isPrivate={false} />
 
-<ApiSummary functions={4} enums={1} variables={1} />
+<ApiSummary functions={4} enums={1} macros={1} variables={1} />
 
 ## Functions
 
 <ApiTabs items={["Setters (2)","Other (2)"]}>
 <ApiTab value="Setters (2)">
 
-<ApiMember kind="function" name="lv_rlottie_set_play_mode" file="public/widgets/lv_rlottie.h" line={45} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_rlottie.h#L45">
+<ApiMember kind="function" name="lv_rlottie_set_play_mode" file="public/widgets/lv_rlottie.h" line={65} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_rlottie.h#L65">
 
 ### lv_rlottie_set_play_mode
+
+\> **Deprecated:** rlottie is deprecated. Use the `lv_lottie` widget instead.
 
 ```c
 void lv_rlottie_set_play_mode(lv_obj_t *rlottie, const lv_rlottie_ctrl_t ctrl)
@@ -34,9 +37,11 @@ void lv_rlottie_set_play_mode(lv_obj_t *rlottie, const lv_rlottie_ctrl_t ctrl)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_rlottie_set_current_frame" file="public/widgets/lv_rlottie.h" line={46} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_rlottie.h#L46">
+<ApiMember kind="function" name="lv_rlottie_set_current_frame" file="public/widgets/lv_rlottie.h" line={69} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_rlottie.h#L69">
 
 ### lv_rlottie_set_current_frame
+
+\> **Deprecated:** rlottie is deprecated. Use the `lv_lottie` widget instead.
 
 ```c
 void lv_rlottie_set_current_frame(lv_obj_t *rlottie, const size_t goto_frame)
@@ -55,9 +60,12 @@ void lv_rlottie_set_current_frame(lv_obj_t *rlottie, const size_t goto_frame)
 </ApiTab>
 <ApiTab value="Other (2)">
 
-<ApiMember kind="function" name="lv_rlottie_create_from_file" file="public/widgets/lv_rlottie.h" line={40} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_rlottie.h#L40">
+<ApiMember kind="function" name="lv_rlottie_create_from_file" file="public/widgets/lv_rlottie.h" line={53} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_rlottie.h#L53">
 
 ### lv_rlottie_create_from_file
+
+Create an rlottie animation from a JSON file. 
+\> **Deprecated:** rlottie is deprecated. Use the `lv_lottie` widget instead.
 
 ```c
 lv_obj_t * lv_rlottie_create_from_file(lv_obj_t *parent, int32_t width, int32_t height, const char *path)
@@ -75,9 +83,12 @@ lv_obj_t * lv_rlottie_create_from_file(lv_obj_t *parent, int32_t width, int32_t 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_rlottie_create_from_raw" file="public/widgets/lv_rlottie.h" line={42} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_rlottie.h#L42">
+<ApiMember kind="function" name="lv_rlottie_create_from_raw" file="public/widgets/lv_rlottie.h" line={60} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_rlottie.h#L60">
 
 ### lv_rlottie_create_from_raw
+
+Create an rlottie animation from a raw JSON description. 
+\> **Deprecated:** rlottie is deprecated. Use the `lv_lottie` widget instead.
 
 ```c
 lv_obj_t * lv_rlottie_create_from_raw(lv_obj_t *parent, int32_t width, int32_t height, const char *rlottie_desc)
@@ -99,7 +110,7 @@ lv_obj_t * lv_rlottie_create_from_raw(lv_obj_t *parent, int32_t width, int32_t h
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_rlottie_ctrl_t" file="public/widgets/lv_rlottie.h" line={26} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_rlottie.h#L26">
+<ApiMember kind="enum" name="lv_rlottie_ctrl_t" file="public/widgets/lv_rlottie.h" line={34} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_rlottie.h#L34">
 
 ### lv_rlottie_ctrl_t
 
@@ -120,9 +131,24 @@ lv_obj_t * lv_rlottie_create_from_raw(lv_obj_t *parent, int32_t width, int32_t h
 
 </TypeUsedBy>
 
+## Macros
+
+<ApiMember kind="macro" name="LV_RLOTTIE_DEPRECATED_MSG" file="public/widgets/lv_rlottie.h" line={28} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_rlottie.h#L28">
+
+### LV_RLOTTIE_DEPRECATED_MSG
+
+```c
+#define LV_RLOTTIE_DEPRECATED_MSG "rlottie is deprecated; use the lv_lottie widget instead."
+```
+
+\> **Deprecated:** The rlottie player is deprecated and kept only for backward compatibility. Use the `lv_lottie` widget instead. See the Lottie widget docs.
+
+
+</ApiMember>
+
 ## Variables
 
-<ApiMember kind="variable" name="lv_rlottie_class" file="public/widgets/lv_rlottie.h" line={34} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_rlottie.h#L34">
+<ApiMember kind="variable" name="lv_rlottie_class" file="public/widgets/lv_rlottie.h" line={42} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_rlottie.h#L42">
 
 ### lv_rlottie_class
 
@@ -136,6 +162,6 @@ const lv_obj_class_t lv_rlottie_class
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_conf_internal.h"]}
+  includes={["lv_conf_internal.h", "lv_types.h"]}
   includedBy={["lvgl.h"]}
 />

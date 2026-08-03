@@ -55,6 +55,18 @@ gap between wrapped rows. The container uses row_wrap so both gaps are visible a
 
 <LvglExample name="lv_example_flex_internal_padding" path="layouts/flex/lv_example_flex_internal_padding" />
 
+## List built from a flex container
+
+<LvglExampleBrief>Build a list from a plain flex column.</LvglExampleBrief>
+
+A column-flow flex container stacks full-width text headers and buttons. The
+static `flex_list_*` helpers wrap the few flex calls needed:
+`LV_FLEX_FLOW_COLUMN` for the list, full-width rows for the items, and
+`lv_obj_set_flex_grow` so each button's label fills the row next to its icon. The
+list look is produced with styles applied by hand.
+
+<LvglExample name="lv_example_flex_list" path="layouts/flex/lv_example_flex_list" />
+
 ## Flex new track
 
 <LvglExampleBrief>Force an item to start a new wrap row.</LvglExampleBrief>
@@ -74,3 +86,15 @@ to rtl on the second container reverses item ordering on the main axis without c
 the order of children in XML — handy for right-to-left languages or mirrored layouts.
 
 <LvglExample name="lv_example_flex_rtl" path="layouts/flex/lv_example_flex_rtl" />
+
+## Window built from a flex container
+
+<LvglExampleBrief>Build a window from a flex column.</LvglExampleBrief>
+
+The static `win_*` helpers build the window from base widgets: a
+`LV_FLEX_FLOW_COLUMN` container with a fixed-height `LV_FLEX_FLOW_ROW` header bar
+and a `lv_obj_set_flex_grow` content area below. The title uses
+`lv_obj_set_flex_grow` to push the buttons to the right, and the content holds a
+long label so the body scrolls.
+
+<LvglExample name="lv_example_flex_win" path="layouts/flex/lv_example_flex_win" />

@@ -135,11 +135,11 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_span.h:158: warning
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_tileview.h:49: warning: argument 'parent' of command @param is not found in the argument list of lv_tileview_set_tile(lv_obj_t *tv, lv_obj_t *tile_obj, lv_anim_enable_t anim_en)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_tileview.h:49: warning: The following parameter of lv_tileview_set_tile(lv_obj_t *tv, lv_obj_t *tile_obj, lv_anim_enable_t anim_en) is not documented:
   parameter 'tv'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:45: warning: argument 'obj' of command @param is not found in the argument list of lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w)
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:45: warning: The following parameter of lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:58: warning: argument 'obj' of command @param is not found in the argument list of lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w)
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:58: warning: The following parameter of lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w) is not documented:
   parameter 'win'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:37: warning: argument 'obj' of command @param is not found in the argument list of lv_win_add_title(lv_obj_t *win, const char *txt)
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:37: warning: The following parameter of lv_win_add_title(lv_obj_t *win, const char *txt) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:48: warning: argument 'obj' of command @param is not found in the argument list of lv_win_add_title(lv_obj_t *win, const char *txt)
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:48: warning: The following parameter of lv_win_add_title(lv_obj_t *win, const char *txt) is not documented:
   parameter 'win'
 WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:121: warning: argument 'user_data' of command @param is not found in the argument list of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data)
 WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:121: warning: The following parameter of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data) is not documented:
@@ -346,11 +346,11 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_span.h:158: warning
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_tileview.h:49: warning: argument 'parent' of command @param is not found in the argument list of lv_tileview_set_tile(lv_obj_t *tv, lv_obj_t *tile_obj, lv_anim_enable_t anim_en)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_tileview.h:49: warning: The following parameter of lv_tileview_set_tile(lv_obj_t *tv, lv_obj_t *tile_obj, lv_anim_enable_t anim_en) is not documented:
   parameter 'tv'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:37: warning: argument 'obj' of command @param is not found in the argument list of lv_win_add_title(lv_obj_t *win, const char *txt)
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:37: warning: The following parameter of lv_win_add_title(lv_obj_t *win, const char *txt) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:48: warning: argument 'obj' of command @param is not found in the argument list of lv_win_add_title(lv_obj_t *win, const char *txt)
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:48: warning: The following parameter of lv_win_add_title(lv_obj_t *win, const char *txt) is not documented:
   parameter 'win'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:45: warning: argument 'obj' of command @param is not found in the argument list of lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w)
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:45: warning: The following parameter of lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:58: warning: argument 'obj' of command @param is not found in the argument list of lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w)
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:58: warning: The following parameter of lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w) is not documented:
   parameter 'win'
 WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:121: warning: argument 'user_data' of command @param is not found in the argument list of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data)
 WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:121: warning: The following parameter of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data) is not documented:

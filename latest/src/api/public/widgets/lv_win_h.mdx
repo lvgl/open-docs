@@ -3,23 +3,26 @@ title: lv_win.h
 description: API reference for lv_win.h
 api:
   functions: [lv_win_create, lv_win_add_title, lv_win_add_button, lv_win_get_header, lv_win_get_content]
+  macros: [LV_WIN_DEPRECATED_MSG]
   variables: [lv_win_class]
 ---
 
 <RelatedHeaders name="lv_win_private.h" isPrivate={false} />
 
-<ApiSummary functions={5} variables={1} />
+<ApiSummary functions={5} macros={1} variables={1} />
 
 ## Functions
 
 <ApiTabs items={["Getters (2)","Other (3)"]}>
 <ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_win_get_header" file="public/widgets/lv_win.h" line={58} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_win.h#L58">
+<ApiMember kind="function" name="lv_win_get_header" file="public/widgets/lv_win.h" line={75} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_win.h#L75">
 
 ### lv_win_get_header
 
-Get the header of the window
+Get the header of the window 
+
+\> **Deprecated:** The `lv_win` widget is deprecated. See `lv_example_flex_win`.
 
 ```c
 lv_obj_t * lv_win_get_header(lv_obj_t *win)
@@ -36,11 +39,13 @@ lv_obj_t * lv_win_get_header(lv_obj_t *win)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_win_get_content" file="public/widgets/lv_win.h" line={65} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_win.h#L65">
+<ApiMember kind="function" name="lv_win_get_content" file="public/widgets/lv_win.h" line={84} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_win.h#L84">
 
 ### lv_win_get_content
 
-Get the content of the window
+Get the content of the window 
+
+\> **Deprecated:** The `lv_win` widget is deprecated. See `lv_example_flex_win`.
 
 ```c
 lv_obj_t * lv_win_get_content(lv_obj_t *win)
@@ -60,11 +65,13 @@ lv_obj_t * lv_win_get_content(lv_obj_t *win)
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_win_create" file="public/widgets/lv_win.h" line={34} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_win.h#L34">
+<ApiMember kind="function" name="lv_win_create" file="public/widgets/lv_win.h" line={45} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_win.h#L45">
 
 ### lv_win_create
 
-Create a window widget
+Create a window widget 
+
+\> **Deprecated:** Use a flex column with a header and content area instead. See `lv_example_flex_win`.
 
 ```c
 lv_obj_t * lv_win_create(lv_obj_t *parent)
@@ -81,11 +88,13 @@ lv_obj_t * lv_win_create(lv_obj_t *parent)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_win_add_title" file="public/widgets/lv_win.h" line={42} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_win.h#L42">
+<ApiMember kind="function" name="lv_win_add_title" file="public/widgets/lv_win.h" line={55} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_win.h#L55">
 
 ### lv_win_add_title
 
-Add a title to the window
+Add a title to the window 
+
+\> **Deprecated:** The `lv_win` widget is deprecated. See `lv_example_flex_win`.
 
 ```c
 lv_obj_t * lv_win_add_title(lv_obj_t *win, const char *txt)
@@ -103,11 +112,13 @@ lv_obj_t * lv_win_add_title(lv_obj_t *win, const char *txt)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_win_add_button" file="public/widgets/lv_win.h" line={51} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_win.h#L51">
+<ApiMember kind="function" name="lv_win_add_button" file="public/widgets/lv_win.h" line={66} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_win.h#L66">
 
 ### lv_win_add_button
 
-Add a button to the window
+Add a button to the window 
+
+\> **Deprecated:** The `lv_win` widget is deprecated. See `lv_example_flex_win`.
 
 ```c
 lv_obj_t * lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w)
@@ -128,9 +139,24 @@ lv_obj_t * lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w)
 
 </ApiTab>
 </ApiTabs>
+## Macros
+
+<ApiMember kind="macro" name="LV_WIN_DEPRECATED_MSG" file="public/widgets/lv_win.h" line={29} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_win.h#L29">
+
+### LV_WIN_DEPRECATED_MSG
+
+```c
+#define LV_WIN_DEPRECATED_MSG "lv_win is deprecated; build a window from a flex column instead. See the lv_example_flex_win example."
+```
+
+\> **Deprecated:** The `lv_win` widget is deprecated and kept only for backward compatibility. A window is just a flex column with a header bar and a content area, so build one directly from `lv_obj` instead. See the `lv_example_flex_win` example for a starting point.
+
+
+</ApiMember>
+
 ## Variables
 
-<ApiMember kind="variable" name="lv_win_class" file="public/widgets/lv_win.h" line={23} url="https://github.com/lvgl/lvgl/tree/f7ae316b8a627719000810ba5ccdb82e007b3bbd/include/lvgl/widgets/lv_win.h#L23">
+<ApiMember kind="variable" name="lv_win_class" file="public/widgets/lv_win.h" line={32} url="https://github.com/lvgl/lvgl/tree/dd5b0bf46de3a4533a7a230a1d722b937772330c/include/lvgl/widgets/lv_win.h#L32">
 
 ### lv_win_class
 
