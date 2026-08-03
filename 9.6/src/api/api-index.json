@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-03T09:26:00.256Z",
-    "symbolCount": 8889
+    "generatedAt": "2026-08-03T09:33:04.499Z",
+    "symbolCount": 8867
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -39926,80 +39926,35 @@
       "anchor": "",
       "kind": "header"
     },
-    "LGFX": {
+    "LV_LGFX_USE_LOVYAN_BOARD": {
       "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "LGFX",
-      "kind": "class"
+      "anchor": "LV_LGFX_USE_LOVYAN_BOARD",
+      "kind": "macro"
     },
-    "LGFX::LGFX": {
+    "LV_LGFX_USE_LOVYAN_DEVICE": {
       "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "LGFX",
-      "kind": "function"
+      "anchor": "LV_LGFX_USE_LOVYAN_DEVICE",
+      "kind": "macro"
     },
-    "LGFX::init": {
+    "LV_LGFX_USE_CUSTOM_WRAPPER": {
       "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "init",
-      "kind": "function"
+      "anchor": "LV_LGFX_USE_CUSTOM_WRAPPER",
+      "kind": "macro"
     },
-    "LGFX::initDMA": {
+    "LV_LGFX_TYPE": {
       "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "initDMA",
-      "kind": "function"
+      "anchor": "LV_LGFX_TYPE",
+      "kind": "macro"
     },
-    "LGFX::waitDMA": {
+    "LGFX_USE_V1": {
       "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "waitDMA",
-      "kind": "function"
+      "anchor": "LGFX_USE_V1",
+      "kind": "macro"
     },
-    "LGFX::fillScreen": {
+    "LGFX_AUTODETECT": {
       "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "fillScreen",
-      "kind": "function"
-    },
-    "LGFX::setRotation": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "setRotation",
-      "kind": "function"
-    },
-    "LGFX::pushImage": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "pushImage",
-      "kind": "function"
-    },
-    "LGFX::pushImageDMA": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "pushImageDMA",
-      "kind": "function"
-    },
-    "LGFX::startWrite": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "startWrite",
-      "kind": "function"
-    },
-    "LGFX::getStartCount": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "getStartCount",
-      "kind": "function"
-    },
-    "LGFX::endWrite": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "endWrite",
-      "kind": "function"
-    },
-    "LGFX::setBrightness": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "setBrightness",
-      "kind": "function"
-    },
-    "LGFX::writePixel": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "writePixel",
-      "kind": "function"
-    },
-    "LGFX::getTouch": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "getTouch",
-      "kind": "function"
+      "anchor": "LGFX_AUTODETECT",
+      "kind": "macro"
     },
     "lv_evdev_private.h": {
       "path": "api/private/drivers/evdev/lv_evdev_private_h",
@@ -44320,71 +44275,6 @@
       "path": "api/private/widgets/win/lv_win_private_h",
       "anchor": "_lv_win_t",
       "kind": "struct"
-    },
-    "init": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "init",
-      "kind": "function"
-    },
-    "initDMA": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "initDMA",
-      "kind": "function"
-    },
-    "waitDMA": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "waitDMA",
-      "kind": "function"
-    },
-    "fillScreen": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "fillScreen",
-      "kind": "function"
-    },
-    "setRotation": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "setRotation",
-      "kind": "function"
-    },
-    "pushImage": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "pushImage",
-      "kind": "function"
-    },
-    "pushImageDMA": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "pushImageDMA",
-      "kind": "function"
-    },
-    "startWrite": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "startWrite",
-      "kind": "function"
-    },
-    "getStartCount": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "getStartCount",
-      "kind": "function"
-    },
-    "endWrite": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "endWrite",
-      "kind": "function"
-    },
-    "setBrightness": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "setBrightness",
-      "kind": "function"
-    },
-    "writePixel": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "writePixel",
-      "kind": "function"
-    },
-    "getTouch": {
-      "path": "api/private/drivers/display/lovyan_gfx/lv_lgfx_user_hpp",
-      "anchor": "getTouch",
-      "kind": "function"
     },
     "fastgltf": {
       "path": "api/fastgltf",
