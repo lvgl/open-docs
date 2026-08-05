@@ -1,4 +1,4 @@
-```xml title="examples/widgets/slider/lv_example_slider_img_indicator.xml" source="https://github.com/lvgl/lvgl/blob/e9d81b3a95880722c4ec2ac6d451202dd0e75a9c/examples/widgets/slider/lv_example_slider_img_indicator.xml"
+```xml title="examples/widgets/slider/lv_example_slider_img_indicator.xml" source="https://github.com/lvgl/lvgl/blob/10ad713847717a61db5764d73574fe17a818b564/examples/widgets/slider/lv_example_slider_img_indicator.xml"
 <!--
  @title Slider image indicator
  @brief Use bitmaps as the slider track and indicator — the slider clips each image to its part.

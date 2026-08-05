@@ -1,4 +1,4 @@
-```xml title="examples/widgets/tabview/lv_example_tabview_basic.xml" source="https://github.com/lvgl/lvgl/blob/e9d81b3a95880722c4ec2ac6d451202dd0e75a9c/examples/widgets/tabview/lv_example_tabview_basic.xml"
+```xml title="examples/widgets/tabview/lv_example_tabview_basic.xml" source="https://github.com/lvgl/lvgl/blob/10ad713847717a61db5764d73574fe17a818b564/examples/widgets/tabview/lv_example_tabview_basic.xml"
 <!--
  @title Tab view basic structure
  @brief Three tabs hosting plain labels, demonstrating the minimal markup.
