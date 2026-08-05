@@ -337,8 +337,15 @@ LV_BUILD_CONF_DIR:PATH=
 //Use this to specify the location of and/or filename of lv_conf.h
 LV_BUILD_CONF_PATH:PATH=/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h
 
-//Supply the default Kconfig configuration - used with Kconfig
-LV_BUILD_DEFCONFIG_PATH:PATH=
+//Supply the default Kconfig configuration - used with Kconfig.
+// Accepts a ";"-separated list of defconfigs, merged in order
+// so later ones override earlier ones
+LV_BUILD_DEFCONFIG_PATH:STRING=
+
+//Fail if a defconfig assigns an unknown or promptless symbol,
+// or a value that ends up having no effect. Off by default so
+// that existing configurations keep working
+LV_BUILD_DEFCONFIG_STRICT:BOOL=OFF
 
 //Path to .config path - used with Kconfig
 LV_BUILD_DOTCONFIG_PATH:PATH=
@@ -356,6 +363,9 @@ LV_BUILD_LVGL_H_SYSTEM_INCLUDE:BOOL=OFF
 
 //Create variables from the definitions in lv_conf_internal.h
 LV_BUILD_SET_CONFIG_OPTS:BOOL=OFF
+
+//Build the unit tests in the tests directory
+LV_BUILD_TESTS:BOOL=OFF
 
 //Use Kconfig
 LV_BUILD_USE_KCONFIG:BOOL=OFF
