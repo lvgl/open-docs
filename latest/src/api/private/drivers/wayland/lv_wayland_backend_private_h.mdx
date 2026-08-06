@@ -2,20 +2,19 @@
 title: lv_wayland_backend_private.h
 description: API reference for lv_wayland_backend_private.h
 api:
-  functions: [lv_wayland_get_backend_display_data, lv_wayland_set_backend_display_data, lv_wayland_get_window_surface]
-  structs: [lv_wayland_backend_ops_t]
+  functions: [lv_wayland_backend_init_all, lv_wayland_backend_deinit_all, lv_wayland_backend_global_handler, lv_wayland_backend_init_display, lv_wayland_backend_deinit_display, lv_wayland_get_backend_display_data, lv_wayland_set_backend_display_data, lv_wayland_get_window_surface]
+  structs: [lv_wayland_backend_ops_t, lv_wayland_backend_display_ops_t, lv_wayland_backend_display_data_t]
   typedefs: [lv_wayland_backend_init_t, lv_wayland_backend_deinit_t, lv_wayland_backend_init_display_t, lv_wayland_backend_resize_display_t, lv_wayland_backend_destroy_display_t, lv_wayland_backend_global_handler_t]
-  variables: [wl_backend_ops]
 ---
 
-<ApiSummary functions={3} structs={1} typedefs={6} variables={1} />
+<ApiSummary functions={8} structs={3} typedefs={6} />
 
 ## Functions
 
-<ApiTabs items={["Setters (1)","Getters (2)"]}>
+<ApiTabs items={["Setters (1)","Getters (2)","Other (5)"]}>
 <ApiTab value="Setters (1)">
 
-<ApiMember kind="function" name="lv_wayland_set_backend_display_data" file="private/drivers/wayland/lv_wayland_backend_private.h" line={185} url="https://github.com/lvgl/lvgl/tree/066c8d9e8734fb4c08d52d06e383d06a34037703/src/drivers/wayland/lv_wayland_backend_private.h#L185">
+<ApiMember kind="function" name="lv_wayland_set_backend_display_data" file="private/drivers/wayland/lv_wayland_backend_private.h" line={249} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L249">
 
 ### lv_wayland_set_backend_display_data
 
@@ -40,7 +39,7 @@ void lv_wayland_set_backend_display_data(lv_display_t *display, void *data)
 </ApiTab>
 <ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_wayland_get_backend_display_data" file="private/drivers/wayland/lv_wayland_backend_private.h" line={174} url="https://github.com/lvgl/lvgl/tree/066c8d9e8734fb4c08d52d06e383d06a34037703/src/drivers/wayland/lv_wayland_backend_private.h#L174">
+<ApiMember kind="function" name="lv_wayland_get_backend_display_data" file="private/drivers/wayland/lv_wayland_backend_private.h" line={238} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L238">
 
 ### lv_wayland_get_backend_display_data
 
@@ -69,7 +68,7 @@ This returns the value that was returned by lv_wayland_backend_init_display_t or
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_get_window_surface" file="private/drivers/wayland/lv_wayland_backend_private.h" line={201} url="https://github.com/lvgl/lvgl/tree/066c8d9e8734fb4c08d52d06e383d06a34037703/src/drivers/wayland/lv_wayland_backend_private.h#L201">
+<ApiMember kind="function" name="lv_wayland_get_window_surface" file="private/drivers/wayland/lv_wayland_backend_private.h" line={265} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L265">
 
 ### lv_wayland_get_window_surface
 
@@ -101,6 +100,105 @@ All rendering output should be attached to this surface
 </ApiMember>
 
 </ApiTab>
+<ApiTab value="Other (5)">
+
+<ApiMember kind="function" name="lv_wayland_backend_init_all" file="private/drivers/wayland/lv_wayland_backend_private.h" line={187} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L187">
+
+### lv_wayland_backend_init_all
+
+Initializes every compiled-in backend.
+
+A backend whose init() fails is marked unavailable and skipped by all the functions below.
+
+```c
+void lv_wayland_backend_init_all(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_wayland_backend_deinit_all" file="private/drivers/wayland/lv_wayland_backend_private.h" line={191} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L191">
+
+### lv_wayland_backend_deinit_all
+
+Deinitializes every available backend.
+
+```c
+void lv_wayland_backend_deinit_all(void)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_wayland_backend_global_handler" file="private/drivers/wayland/lv_wayland_backend_private.h" line={200} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L200">
+
+### lv_wayland_backend_global_handler
+
+Dispatches a global handler call to all available backends.
+
+```c
+void lv_wayland_backend_global_handler(struct wl_registry *registry, uint32_t name, const char *interface, uint32_t version)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| **[in]** `registry` | `struct wl_registry *` | Wayland registry object |
+| **[in]** `name` | `uint32_t` | Numeric name of the global object |
+| **[in]** `interface` | `const char *` | String name of the interface |
+| **[in]** `version` | `uint32_t` | Version number of the interface |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_wayland_backend_init_display" file="private/drivers/wayland/lv_wayland_backend_private.h" line={213} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L213">
+
+### lv_wayland_backend_init_display
+
+Loops through all available backends to find one capable of initializing a display.
+
+The function loops through all available backends until one can initialize a display
+
+```c
+lv_result_t lv_wayland_backend_init_display(lv_wayland_backend_display_data_t *backend_ddata, lv_display_t *display, int32_t width, int32_t height)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| **[out]** `backend_ddata` | <ApiLink name="lv_wayland_backend_display_data_t" display="lv_wayland_backend_display_data_t *" /> | Backend display data |
+| **[in]** `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | The display to initialize for |
+| **[in]** `width` | `int32_t` | the display width |
+| **[in]** `height` | `int32_t` | the display height |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK if the display was initialized else LV_RESULT_INVALID
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_wayland_backend_deinit_display" file="private/drivers/wayland/lv_wayland_backend_private.h" line={223} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L223">
+
+### lv_wayland_backend_deinit_display
+
+Deinitializes a display.
+
+```c
+void lv_wayland_backend_deinit_display(lv_wayland_backend_display_data_t *backend_ddata, lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| **[in]** `backend_ddata` | <ApiLink name="lv_wayland_backend_display_data_t" display="lv_wayland_backend_display_data_t *" /> | Backend display data of the display |
+| **[in]** `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | The display to deinitialize |
+
+
+</ApiMember>
+
+</ApiTab>
 </ApiTabs>
 ## Structs
 
@@ -110,32 +208,69 @@ All rendering output should be attached to this surface
 
 Wayland backend operations structure.
 
-This structure defines the complete set of operations that a Wayland backend must implement. All function pointers must be non-NULL.
+This structure defines the general set of operations that a Wayland backend must implement. All function pointers must be non-NULL.
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `init` | <ApiLink name="lv_wayland_backend_init_t" /> | Initialize backend context |
+| `init` | <ApiLink name="lv_wayland_backend_init_t" /> | Initialize backend data |
 | `global_handler` | <ApiLink name="lv_wayland_backend_global_handler_t" /> | Handle Wayland global objects |
-| `init_display` | <ApiLink name="lv_wayland_backend_init_display_t" /> | Initialize a new display |
-| `resize_display` | <ApiLink name="lv_wayland_backend_resize_display_t" /> | Resize or reconfigure display |
-| `deinit_display` | <ApiLink name="lv_wayland_backend_destroy_display_t" /> | Destroy a display |
-| `deinit` | <ApiLink name="lv_wayland_backend_deinit_t" /> | Deinitialize backend context |
+| `deinit` | <ApiLink name="lv_wayland_backend_deinit_t" /> | Deinitialize backend data |
 
 <Callout type="info">
-**Lifecycle Order::** 1. init() - Initialize backend context
+**Lifecycle Order::** 1. init() - Initialize backend data
 2. global_handler() - Called for each Wayland global (may be called multiple times)
-3. init_display() - Create display (may be called multiple times for multiple displays)
-4. resize_display() - Resize display (called as needed)
-5. deinit_display() - Destroy display (called once per display)
-6. deinit() - Clean up backend context
+3. deinit() - Clean up backend data
 </Callout>
 
 
 </ApiMember>
 
+<ApiMember kind="struct" name="lv_wayland_backend_display_ops_t">
+
+### lv_wayland_backend_display_ops_t
+
+Wayland backend display operations structure.
+
+This structure defines the display specific set of operations that a Wayland backend must implement. All function pointers must be non-NULL.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `init_display` | <ApiLink name="lv_wayland_backend_init_display_t" /> | Initialize a new display |
+| `resize_display` | <ApiLink name="lv_wayland_backend_resize_display_t" /> | Resize or reconfigure display |
+| `deinit_display` | <ApiLink name="lv_wayland_backend_destroy_display_t" /> | Destroy a display |
+
+<Callout type="info">
+**Lifecycle Order::** 1. init_display() - Create display (may be called multiple times for multiple displays)
+2. resize_display() - Resize display (called as needed)
+3. deinit_display() - Destroy display (called once per display)
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_wayland_backend_display_data_t">
+
+### lv_wayland_backend_display_data_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `ops` | <ApiLink name="lv_wayland_backend_display_ops_t" display="const lv_wayland_backend_display_ops_t *" /> | Backend display specific operations |
+| `backend_data` | `void *` | General backend data |
+| `display_data` | `void *` | Specific display backend data |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_wayland_backend_display_data_t" count={2}>
+
+- `lv_wayland_backend_init_display` — param `backend_ddata`
+- `lv_wayland_backend_deinit_display` — param `backend_ddata`
+
+</TypeUsedBy>
+
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_wayland_backend_init_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/066c8d9e8734fb4c08d52d06e383d06a34037703/src/drivers/wayland/lv_wayland_backend_private.h#L44">
+<ApiMember kind="typedef" name="lv_wayland_backend_init_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={48} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L48">
 
 ### lv_wayland_backend_init_t
 
@@ -143,14 +278,14 @@ This structure defines the complete set of operations that a Wayland backend mus
 lv_wayland_backend_init_t
 ```
 
-Initialize the backend context.
+Initialize the backend data.
 
-This function is called once when the Wayland driver is initialized to create the global backend context. The returned pointer will be passed as backend_ctx to all other backend operations.
+This function is called once when the Wayland driver is initialized to create the global backend data. The context written to backend_data is passed back to every other operation of the backend. It may be left NULL by a backend that keeps no global state.
 
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_wayland_backend_deinit_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={59} url="https://github.com/lvgl/lvgl/tree/066c8d9e8734fb4c08d52d06e383d06a34037703/src/drivers/wayland/lv_wayland_backend_private.h#L59">
+<ApiMember kind="typedef" name="lv_wayland_backend_deinit_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={63} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L63">
 
 ### lv_wayland_backend_deinit_t
 
@@ -158,14 +293,14 @@ This function is called once when the Wayland driver is initialized to create th
 lv_wayland_backend_deinit_t
 ```
 
-Deinitialize the backend context.
+Deinitialize the backend data.
 
 This function is called when the Wayland driver is deinitialized. It must clean up all resources allocated in the init function and free the backend context.
 
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_wayland_backend_init_display_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={79} url="https://github.com/lvgl/lvgl/tree/066c8d9e8734fb4c08d52d06e383d06a34037703/src/drivers/wayland/lv_wayland_backend_private.h#L79">
+<ApiMember kind="typedef" name="lv_wayland_backend_init_display_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={83} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L83">
 
 ### lv_wayland_backend_init_display_t
 
@@ -180,7 +315,7 @@ This function is called when creating a new LVGL display on Wayland. It should a
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_wayland_backend_resize_display_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={98} url="https://github.com/lvgl/lvgl/tree/066c8d9e8734fb4c08d52d06e383d06a34037703/src/drivers/wayland/lv_wayland_backend_private.h#L98">
+<ApiMember kind="typedef" name="lv_wayland_backend_resize_display_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={102} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L102">
 
 ### lv_wayland_backend_resize_display_t
 
@@ -195,7 +330,7 @@ This function is called when a display needs to be resized or when its rotation 
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_wayland_backend_destroy_display_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={113} url="https://github.com/lvgl/lvgl/tree/066c8d9e8734fb4c08d52d06e383d06a34037703/src/drivers/wayland/lv_wayland_backend_private.h#L113">
+<ApiMember kind="typedef" name="lv_wayland_backend_destroy_display_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={117} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L117">
 
 ### lv_wayland_backend_destroy_display_t
 
@@ -210,7 +345,7 @@ This function is called when an LVGL display is being destroyed. It must clean u
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_wayland_backend_global_handler_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={132} url="https://github.com/lvgl/lvgl/tree/066c8d9e8734fb4c08d52d06e383d06a34037703/src/drivers/wayland/lv_wayland_backend_private.h#L132">
+<ApiMember kind="typedef" name="lv_wayland_backend_global_handler_t" file="private/drivers/wayland/lv_wayland_backend_private.h" line={136} url="https://github.com/lvgl/lvgl/tree/6404de3b90af7db071bdc7a17f2e9c405eb560c1/src/drivers/wayland/lv_wayland_backend_private.h#L136">
 
 ### lv_wayland_backend_global_handler_t
 
@@ -225,22 +360,9 @@ This function is called for every global object advertised by the Wayland compos
 
 </ApiMember>
 
-## Variables
-
-<ApiMember kind="variable" name="wl_backend_ops" file="private/drivers/wayland/lv_wayland_backend_private.h" line={159} url="https://github.com/lvgl/lvgl/tree/066c8d9e8734fb4c08d52d06e383d06a34037703/src/drivers/wayland/lv_wayland_backend_private.h#L159">
-
-### wl_backend_ops
-
-```c
-const lv_wayland_backend_ops_t wl_backend_ops
-```
-
-
-</ApiMember>
-
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_wayland_private.h", "wayland-client.h"]}
+  includes={["lvgl_public.h", "wayland-client.h"]}
   includedBy={["lv_wayland_private.h", "lvgl_private.h"]}
 />

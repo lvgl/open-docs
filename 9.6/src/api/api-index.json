@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-06T14:41:27.029Z",
-    "symbolCount": 8870
+    "generatedAt": "2026-08-06T17:37:32.165Z",
+    "symbolCount": 8871
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2471,21 +2471,6 @@
       "anchor": "LV_SDL_MOUSEWHEEL_MODE_CROWN",
       "kind": "macro"
     },
-    "LV_WAYLAND_BACKEND_SHM": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_WAYLAND_BACKEND_SHM",
-      "kind": "macro"
-    },
-    "LV_WAYLAND_BACKEND_EGL": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_WAYLAND_BACKEND_EGL",
-      "kind": "macro"
-    },
-    "LV_WAYLAND_BACKEND_G2D": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_WAYLAND_BACKEND_G2D",
-      "kind": "macro"
-    },
     "LV_CHECK_ARG_LOG_MODE_NONE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_CHECK_ARG_LOG_MODE_NONE",
@@ -3611,14 +3596,19 @@
       "anchor": "LV_WAYLAND_DIRECT_EXIT",
       "kind": "macro"
     },
-    "LV_WAYLAND_AUTO_BACKEND": {
+    "LV_WAYLAND_USE_SHM": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_WAYLAND_AUTO_BACKEND",
+      "anchor": "LV_WAYLAND_USE_SHM",
       "kind": "macro"
     },
-    "LV_WAYLAND_BACKEND": {
+    "LV_WAYLAND_USE_EGL": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_WAYLAND_BACKEND",
+      "anchor": "LV_WAYLAND_USE_EGL",
+      "kind": "macro"
+    },
+    "LV_WAYLAND_USE_G2D": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_WAYLAND_USE_G2D",
       "kind": "macro"
     },
     "LV_X11_DOUBLE_BUFFER": {
@@ -4059,21 +4049,6 @@
     "LV_SDL_USE_EGL": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_SDL_USE_EGL",
-      "kind": "macro"
-    },
-    "LV_WAYLAND_USE_EGL": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_WAYLAND_USE_EGL",
-      "kind": "macro"
-    },
-    "LV_WAYLAND_USE_G2D": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_WAYLAND_USE_G2D",
-      "kind": "macro"
-    },
-    "LV_WAYLAND_USE_SHM": {
-      "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_WAYLAND_USE_SHM",
       "kind": "macro"
     },
     "LV_OS_USE_PTHREAD": {
@@ -40631,6 +40606,31 @@
       "anchor": "",
       "kind": "header"
     },
+    "lv_wayland_backend_init_all": {
+      "path": "api/private/drivers/wayland/lv_wayland_backend_private_h",
+      "anchor": "lv_wayland_backend_init_all",
+      "kind": "function"
+    },
+    "lv_wayland_backend_deinit_all": {
+      "path": "api/private/drivers/wayland/lv_wayland_backend_private_h",
+      "anchor": "lv_wayland_backend_deinit_all",
+      "kind": "function"
+    },
+    "lv_wayland_backend_global_handler": {
+      "path": "api/private/drivers/wayland/lv_wayland_backend_private_h",
+      "anchor": "lv_wayland_backend_global_handler",
+      "kind": "function"
+    },
+    "lv_wayland_backend_init_display": {
+      "path": "api/private/drivers/wayland/lv_wayland_backend_private_h",
+      "anchor": "lv_wayland_backend_init_display",
+      "kind": "function"
+    },
+    "lv_wayland_backend_deinit_display": {
+      "path": "api/private/drivers/wayland/lv_wayland_backend_private_h",
+      "anchor": "lv_wayland_backend_deinit_display",
+      "kind": "function"
+    },
     "lv_wayland_get_backend_display_data": {
       "path": "api/private/drivers/wayland/lv_wayland_backend_private_h",
       "anchor": "lv_wayland_get_backend_display_data",
@@ -40649,6 +40649,16 @@
     "lv_wayland_backend_ops_t": {
       "path": "api/private/drivers/wayland/lv_wayland_backend_private_h",
       "anchor": "lv_wayland_backend_ops_t",
+      "kind": "struct"
+    },
+    "lv_wayland_backend_display_ops_t": {
+      "path": "api/private/drivers/wayland/lv_wayland_backend_private_h",
+      "anchor": "lv_wayland_backend_display_ops_t",
+      "kind": "struct"
+    },
+    "lv_wayland_backend_display_data_t": {
+      "path": "api/private/drivers/wayland/lv_wayland_backend_private_h",
+      "anchor": "lv_wayland_backend_display_data_t",
       "kind": "struct"
     },
     "lv_wayland_backend_init_t": {
@@ -40680,11 +40690,6 @@
       "path": "api/private/drivers/wayland/lv_wayland_backend_private_h",
       "anchor": "lv_wayland_backend_global_handler_t",
       "kind": "typedef"
-    },
-    "wl_backend_ops": {
-      "path": "api/private/drivers/wayland/lv_wayland_backend_private_h",
-      "anchor": "wl_backend_ops",
-      "kind": "variable"
     },
     "lv_wayland_private.h": {
       "path": "api/private/drivers/wayland/lv_wayland_private_h",
