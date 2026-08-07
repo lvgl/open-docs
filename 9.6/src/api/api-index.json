@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-06T17:37:32.165Z",
-    "symbolCount": 8871
+    "generatedAt": "2026-08-07T12:12:40.915Z",
+    "symbolCount": 8872
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -3601,6 +3601,11 @@
       "anchor": "LV_WAYLAND_USE_SHM",
       "kind": "macro"
     },
+    "LV_WAYLAND_USE_DMABUF": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_WAYLAND_USE_DMABUF",
+      "kind": "macro"
+    },
     "LV_WAYLAND_USE_EGL": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_WAYLAND_USE_EGL",
@@ -4106,9 +4111,9 @@
       "anchor": "LV_DRAW_SW_ASM_USE_CUSTOM_INCLUDE",
       "kind": "macro"
     },
-    "LV_WAYLAND_USE_DMABUF": {
+    "LV_WAYLAND_USE_DMABUF_PROTOCOL": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_WAYLAND_USE_DMABUF",
+      "anchor": "LV_WAYLAND_USE_DMABUF_PROTOCOL",
       "kind": "macro"
     },
     "LV_ATTRIBUTE_SYNC_READY": {

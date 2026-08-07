@@ -1,4 +1,4 @@
-```xml title="examples/widgets/table/lv_example_table_scroll.xml" source="https://github.com/lvgl/lvgl/blob/6404de3b90af7db071bdc7a17f2e9c405eb560c1/examples/widgets/table/lv_example_table_scroll.xml"
+```xml title="examples/widgets/table/lv_example_table_scroll.xml" source="https://github.com/lvgl/lvgl/blob/2418dcb9fceec1b89bbcb61213c4a33ee4c0eb87/examples/widgets/table/lv_example_table_scroll.xml"
 <!--
  @title Table scrolling
  @brief A table whose content grid is taller than its explicit height becomes scrollable.
