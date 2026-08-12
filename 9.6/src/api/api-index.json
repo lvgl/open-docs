@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-12T10:54:16.403Z",
-    "symbolCount": 8873
+    "generatedAt": "2026-08-12T15:20:59.904Z",
+    "symbolCount": 8874
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -4054,6 +4054,11 @@
     "LV_SDL_USE_EGL": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_SDL_USE_EGL",
+      "kind": "macro"
+    },
+    "LV_USE_TLSF": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_TLSF",
       "kind": "macro"
     },
     "LV_OS_USE_PTHREAD": {
