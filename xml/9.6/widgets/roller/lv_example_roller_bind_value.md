@@ -1,4 +1,4 @@
-```xml title="examples/widgets/roller/lv_example_roller_bind_value.xml" source="https://github.com/lvgl/lvgl/blob/6e20aab4c589b2054da759e19d6f13c81d5c1145/examples/widgets/roller/lv_example_roller_bind_value.xml"
+```xml title="examples/widgets/roller/lv_example_roller_bind_value.xml" source="https://github.com/lvgl/lvgl/blob/6673cb3b2f6b44083e4cf93c46d4a1caf91368fa/examples/widgets/roller/lv_example_roller_bind_value.xml"
 <!--
  @title Roller bind value
  @brief Roller bound to a subject; a button jumps it programmatically.
