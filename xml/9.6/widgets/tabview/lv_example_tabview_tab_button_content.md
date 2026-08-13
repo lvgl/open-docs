@@ -1,4 +1,4 @@
-```xml title="examples/widgets/tabview/lv_example_tabview_tab_button_content.xml" source="https://github.com/lvgl/lvgl/blob/34d30b0f1b1e3afae119e2ba3987a988deb1a2ea/examples/widgets/tabview/lv_example_tabview_tab_button_content.xml"
+```xml title="examples/widgets/tabview/lv_example_tabview_tab_button_content.xml" source="https://github.com/lvgl/lvgl/blob/5d0e67b01d5f6d6d3f1e49a544b0f65e36075e73/examples/widgets/tabview/lv_example_tabview_tab_button_content.xml"
 <!--
  @title Tab view tab-button content
  @brief Attach a child widget to a specific tab button via `<lv_tabview-tab_button>`.

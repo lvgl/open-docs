@@ -1,4 +1,4 @@
-```xml title="examples/widgets/table/lv_example_table_styling.xml" source="https://github.com/lvgl/lvgl/blob/34d30b0f1b1e3afae119e2ba3987a988deb1a2ea/examples/widgets/table/lv_example_table_styling.xml"
+```xml title="examples/widgets/table/lv_example_table_styling.xml" source="https://github.com/lvgl/lvgl/blob/5d0e67b01d5f6d6d3f1e49a544b0f65e36075e73/examples/widgets/table/lv_example_table_styling.xml"
 <!--
  @title Table styling
  @brief Style the table background and the per-cell appearance.

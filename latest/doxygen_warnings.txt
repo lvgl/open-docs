@@ -110,7 +110,7 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:410: warning
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:383: warning: argument 'screen_y' of command @param is not found in the argument list of lv_intersect_ray_with_plane(const lv_3dray_t *ray, const lv_3dplane_t *plane, lv_3dpoint_t *collision_point)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:383: warning: The following parameter of lv_intersect_ray_with_plane(const lv_3dray_t *ray, const lv_3dplane_t *plane, lv_3dpoint_t *collision_point) is not documented:
   parameter 'plane'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_image.h:231: warning: explicit link request to 'lv' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_image.h:226: warning: explicit link request to 'lv' could not be resolved
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_scale.h:236: warning: argument 'range_min' of command @param is not found in the argument list of lv_scale_section_set_range(lv_scale_section_t *section, int32_t min, int32_t max)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_scale.h:236: warning: argument 'range_max' of command @param is not found in the argument list of lv_scale_section_set_range(lv_scale_section_t *section, int32_t min, int32_t max)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_scale.h:236: warning: The following parameters of lv_scale_section_set_range(lv_scale_section_t *section, int32_t min, int32_t max) are not documented:
@@ -321,7 +321,7 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:383: warning
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:410: warning: argument 'lv_point_t' of command @param is not found in the argument list of lv_gltf_world_to_screen(lv_obj_t *obj, const lv_3dpoint_t world_pos, lv_point_t *screen_pos)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:410: warning: The following parameter of lv_gltf_world_to_screen(lv_obj_t *obj, const lv_3dpoint_t world_pos, lv_point_t *screen_pos) is not documented:
   parameter 'screen_pos'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_image.h:231: warning: explicit link request to 'lv' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_image.h:226: warning: explicit link request to 'lv' could not be resolved
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_scale.h:146: warning: argument 'min' of command @param is not found in the argument list of lv_scale_set_max_value(lv_obj_t *obj, int32_t max)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_scale.h:146: warning: The following parameter of lv_scale_set_max_value(lv_obj_t *obj, int32_t max) is not documented:
   parameter 'max'
