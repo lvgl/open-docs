@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-13T12:23:12.405Z",
-    "symbolCount": 8874
+    "generatedAt": "2026-08-13T12:48:55.280Z",
+    "symbolCount": 8872
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -35566,11 +35566,6 @@
       "anchor": "lv_draw_sw_image_helium",
       "kind": "function"
     },
-    "while": {
-      "path": "api/private/draw/sw/arm2d/lv_draw_sw_arm2d_h",
-      "anchor": "while",
-      "kind": "function"
-    },
     "lv_draw_sw_image_recolor_rgb565": {
       "path": "api/private/draw/sw/arm2d/lv_draw_sw_arm2d_h",
       "anchor": "lv_draw_sw_image_recolor_rgb565",
@@ -35615,11 +35610,6 @@
       "path": "api/private/draw/sw/arm2d/lv_draw_sw_arm2d_h",
       "anchor": "__RECOLOUR_END",
       "kind": "macro"
-    },
-    "result": {
-      "path": "api/private/draw/sw/arm2d/lv_draw_sw_arm2d_h",
-      "anchor": "result",
-      "kind": "variable"
     },
     "lv_blend_arm2d.h": {
       "path": "api/private/draw/sw/blend/arm2d/lv_blend_arm2d_h",
