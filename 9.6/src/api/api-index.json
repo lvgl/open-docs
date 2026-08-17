@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-17T16:47:55.533Z",
-    "symbolCount": 8873
+    "generatedAt": "2026-08-17T18:33:57.464Z",
+    "symbolCount": 8874
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -12999,6 +12999,11 @@
     "lv_timer_handler_run_in_period": {
       "path": "api/public/core/lv_timer_h",
       "anchor": "lv_timer_handler_run_in_period",
+      "kind": "function"
+    },
+    "lv_timer_get_time_to_next": {
+      "path": "api/public/core/lv_timer_h",
+      "anchor": "lv_timer_get_time_to_next",
       "kind": "function"
     },
     "lv_timer_periodic_handler": {

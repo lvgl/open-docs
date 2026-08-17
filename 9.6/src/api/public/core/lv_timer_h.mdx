@@ -2,21 +2,21 @@
 title: lv_timer.h
 description: API reference for lv_timer.h
 api:
-  functions: [lv_timer_handler, lv_timer_handler_run_in_period, lv_timer_periodic_handler, lv_timer_handler_set_resume_cb, lv_timer_create_basic, lv_timer_create, lv_timer_delete, lv_timer_pause, lv_timer_resume, lv_timer_set_cb, lv_timer_set_period, lv_timer_ready, lv_timer_set_repeat_count, lv_timer_set_auto_delete, lv_timer_set_user_data, lv_timer_reset, lv_timer_enable, lv_timer_get_idle, lv_timer_get_time_until_next, lv_timer_get_next, lv_timer_get_user_data, lv_timer_get_paused, lv_timer_set_external_data]
+  functions: [lv_timer_handler, lv_timer_handler_run_in_period, lv_timer_get_time_to_next, lv_timer_periodic_handler, lv_timer_handler_set_resume_cb, lv_timer_create_basic, lv_timer_create, lv_timer_delete, lv_timer_pause, lv_timer_resume, lv_timer_set_cb, lv_timer_set_period, lv_timer_ready, lv_timer_set_repeat_count, lv_timer_set_auto_delete, lv_timer_set_user_data, lv_timer_reset, lv_timer_enable, lv_timer_get_idle, lv_timer_get_time_until_next, lv_timer_get_next, lv_timer_get_user_data, lv_timer_get_paused, lv_timer_set_external_data]
   typedefs: [lv_timer_cb_t, lv_timer_handler_resume_cb_t]
   macros: [LV_NO_TIMER_READY]
 ---
 
 <RelatedHeaders name="lv_timer_private.h" isPrivate={false} />
 
-<ApiSummary functions={23} typedefs={2} macros={1} />
+<ApiSummary functions={24} typedefs={2} macros={1} />
 
 ## Functions
 
-<ApiTabs items={["Setters (7)","Getters (5)","Other (11)"]}>
+<ApiTabs items={["Setters (7)","Getters (6)","Other (11)"]}>
 <ApiTab value="Setters (7)">
 
-<ApiMember kind="function" name="lv_timer_handler_set_resume_cb" file="public/core/lv_timer.h" line={71} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L71">
+<ApiMember kind="function" name="lv_timer_handler_set_resume_cb" file="public/core/lv_timer.h" line={79} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L79">
 
 ### lv_timer_handler_set_resume_cb
 
@@ -36,7 +36,7 @@ void lv_timer_handler_set_resume_cb(lv_timer_handler_resume_cb_t cb, void *data)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_set_cb" file="public/core/lv_timer.h" line={115} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L115">
+<ApiMember kind="function" name="lv_timer_set_cb" file="public/core/lv_timer.h" line={123} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L123">
 
 ### lv_timer_set_cb
 
@@ -56,7 +56,7 @@ void lv_timer_set_cb(lv_timer_t *timer, lv_timer_cb_t timer_cb)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_set_period" file="public/core/lv_timer.h" line={122} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L122">
+<ApiMember kind="function" name="lv_timer_set_period" file="public/core/lv_timer.h" line={130} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L130">
 
 ### lv_timer_set_period
 
@@ -76,7 +76,7 @@ void lv_timer_set_period(lv_timer_t *timer, uint32_t period)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_set_repeat_count" file="public/core/lv_timer.h" line={135} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L135">
+<ApiMember kind="function" name="lv_timer_set_repeat_count" file="public/core/lv_timer.h" line={143} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L143">
 
 ### lv_timer_set_repeat_count
 
@@ -96,7 +96,7 @@ void lv_timer_set_repeat_count(lv_timer_t *timer, int32_t repeat_count)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_set_auto_delete" file="public/core/lv_timer.h" line={142} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L142">
+<ApiMember kind="function" name="lv_timer_set_auto_delete" file="public/core/lv_timer.h" line={150} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L150">
 
 ### lv_timer_set_auto_delete
 
@@ -116,7 +116,7 @@ void lv_timer_set_auto_delete(lv_timer_t *timer, bool auto_delete)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_set_user_data" file="public/core/lv_timer.h" line={149} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L149">
+<ApiMember kind="function" name="lv_timer_set_user_data" file="public/core/lv_timer.h" line={157} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L157">
 
 ### lv_timer_set_user_data
 
@@ -136,7 +136,7 @@ void lv_timer_set_user_data(lv_timer_t *timer, void *user_data)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_set_external_data" file="public/core/lv_timer.h" line={210} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L210">
+<ApiMember kind="function" name="lv_timer_set_external_data" file="public/core/lv_timer.h" line={218} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L218">
 
 ### lv_timer_set_external_data
 
@@ -160,9 +160,24 @@ void lv_timer_set_external_data(lv_timer_t *timer, void *data, void(*free_cb)(vo
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Getters (5)">
+<ApiTab value="Getters (6)">
 
-<ApiMember kind="function" name="lv_timer_get_idle" file="public/core/lv_timer.h" line={168} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L168">
+<ApiMember kind="function" name="lv_timer_get_time_to_next" file="public/core/lv_timer.h" line={65} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L65">
+
+### lv_timer_get_time_to_next
+
+Calculate the time to the soonest LVGL timer.
+
+```c
+uint32_t lv_timer_get_time_to_next(void)
+```
+
+**Returns:** `uint32_t` — time till it needs to be run next timer (in ms)
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_timer_get_idle" file="public/core/lv_timer.h" line={176} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L176">
 
 ### lv_timer_get_idle
 
@@ -177,7 +192,7 @@ uint32_t lv_timer_get_idle(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_get_time_until_next" file="public/core/lv_timer.h" line={174} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L174">
+<ApiMember kind="function" name="lv_timer_get_time_until_next" file="public/core/lv_timer.h" line={182} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L182">
 
 ### lv_timer_get_time_until_next
 
@@ -192,7 +207,7 @@ uint32_t lv_timer_get_time_until_next(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_get_next" file="public/core/lv_timer.h" line={181} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L181">
+<ApiMember kind="function" name="lv_timer_get_next" file="public/core/lv_timer.h" line={189} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L189">
 
 ### lv_timer_get_next
 
@@ -213,7 +228,7 @@ lv_timer_t * lv_timer_get_next(lv_timer_t *timer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_get_user_data" file="public/core/lv_timer.h" line={188} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L188">
+<ApiMember kind="function" name="lv_timer_get_user_data" file="public/core/lv_timer.h" line={196} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L196">
 
 ### lv_timer_get_user_data
 
@@ -234,7 +249,7 @@ void * lv_timer_get_user_data(lv_timer_t *timer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_get_paused" file="public/core/lv_timer.h" line={195} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L195">
+<ApiMember kind="function" name="lv_timer_get_paused" file="public/core/lv_timer.h" line={203} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L203">
 
 ### lv_timer_get_paused
 
@@ -258,7 +273,7 @@ bool lv_timer_get_paused(lv_timer_t *timer)
 </ApiTab>
 <ApiTab value="Other (11)">
 
-<ApiMember kind="function" name="lv_timer_handler" file="public/core/lv_timer.h" line={49} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L49">
+<ApiMember kind="function" name="lv_timer_handler" file="public/core/lv_timer.h" line={49} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L49">
 
 ### lv_timer_handler
 
@@ -273,7 +288,7 @@ uint32_t lv_timer_handler(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_handler_run_in_period" file="public/core/lv_timer.h" line={58} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L58">
+<ApiMember kind="function" name="lv_timer_handler_run_in_period" file="public/core/lv_timer.h" line={58} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L58">
 
 ### lv_timer_handler_run_in_period
 
@@ -294,7 +309,7 @@ uint32_t lv_timer_handler_run_in_period(uint32_t period)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_periodic_handler" file="public/core/lv_timer.h" line={64} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L64">
+<ApiMember kind="function" name="lv_timer_periodic_handler" file="public/core/lv_timer.h" line={72} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L72">
 
 ### lv_timer_periodic_handler
 
@@ -307,7 +322,7 @@ void lv_timer_periodic_handler(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_create_basic" file="public/core/lv_timer.h" line={78} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L78">
+<ApiMember kind="function" name="lv_timer_create_basic" file="public/core/lv_timer.h" line={86} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L86">
 
 ### lv_timer_create_basic
 
@@ -322,7 +337,7 @@ lv_timer_t * lv_timer_create_basic(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_create" file="public/core/lv_timer.h" line={89} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L89">
+<ApiMember kind="function" name="lv_timer_create" file="public/core/lv_timer.h" line={97} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L97">
 
 ### lv_timer_create
 
@@ -345,7 +360,7 @@ lv_timer_t * lv_timer_create(lv_timer_cb_t timer_xcb, uint32_t period, void *use
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_delete" file="public/core/lv_timer.h" line={95} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L95">
+<ApiMember kind="function" name="lv_timer_delete" file="public/core/lv_timer.h" line={103} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L103">
 
 ### lv_timer_delete
 
@@ -364,7 +379,7 @@ void lv_timer_delete(lv_timer_t *timer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_pause" file="public/core/lv_timer.h" line={102} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L102">
+<ApiMember kind="function" name="lv_timer_pause" file="public/core/lv_timer.h" line={110} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L110">
 
 ### lv_timer_pause
 
@@ -383,7 +398,7 @@ void lv_timer_pause(lv_timer_t *timer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_resume" file="public/core/lv_timer.h" line={108} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L108">
+<ApiMember kind="function" name="lv_timer_resume" file="public/core/lv_timer.h" line={116} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L116">
 
 ### lv_timer_resume
 
@@ -402,7 +417,7 @@ void lv_timer_resume(lv_timer_t *timer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_ready" file="public/core/lv_timer.h" line={128} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L128">
+<ApiMember kind="function" name="lv_timer_ready" file="public/core/lv_timer.h" line={136} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L136">
 
 ### lv_timer_ready
 
@@ -421,7 +436,7 @@ void lv_timer_ready(lv_timer_t *timer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_reset" file="public/core/lv_timer.h" line={156} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L156">
+<ApiMember kind="function" name="lv_timer_reset" file="public/core/lv_timer.h" line={164} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L164">
 
 ### lv_timer_reset
 
@@ -440,7 +455,7 @@ void lv_timer_reset(lv_timer_t *timer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_timer_enable" file="public/core/lv_timer.h" line={162} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L162">
+<ApiMember kind="function" name="lv_timer_enable" file="public/core/lv_timer.h" line={170} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L170">
 
 ### lv_timer_enable
 
@@ -463,7 +478,7 @@ void lv_timer_enable(bool en)
 </ApiTabs>
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_timer_cb_t" file="public/core/lv_timer.h" line={34} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L34">
+<ApiMember kind="typedef" name="lv_timer_cb_t" file="public/core/lv_timer.h" line={34} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L34">
 
 ### lv_timer_cb_t
 
@@ -483,7 +498,7 @@ Timers execute this type of functions.
 
 </TypeUsedBy>
 
-<ApiMember kind="typedef" name="lv_timer_handler_resume_cb_t" file="public/core/lv_timer.h" line={39} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L39">
+<ApiMember kind="typedef" name="lv_timer_handler_resume_cb_t" file="public/core/lv_timer.h" line={39} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L39">
 
 ### lv_timer_handler_resume_cb_t
 
@@ -504,7 +519,7 @@ Timer handler resume this type of function.
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_NO_TIMER_READY" file="public/core/lv_timer.h" line={25} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/include/lvgl/core/lv_timer.h#L25">
+<ApiMember kind="macro" name="LV_NO_TIMER_READY" file="public/core/lv_timer.h" line={25} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/include/lvgl/core/lv_timer.h#L25">
 
 ### LV_NO_TIMER_READY
 
