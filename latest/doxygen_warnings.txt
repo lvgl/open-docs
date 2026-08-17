@@ -98,12 +98,12 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/indev/lv_indev_gesture.h:187: 
   parameter 'recognizer'
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/indev/lv_indev_gesture.h:178: warning: The following parameter of lv_indev_set_gesture_data(lv_indev_data_t *data, lv_indev_gesture_recognizer_t *recognizer, lv_indev_gesture_type_t type) is not documented:
   parameter 'type'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:229: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:231: warning: explicit link request to 'endif' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:235: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:237: warning: explicit link request to 'endif' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:241: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:243: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:227: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:229: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:233: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:235: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:239: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:241: warning: explicit link request to 'endif' could not be resolved
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:410: warning: argument 'lv_point_t' of command @param is not found in the argument list of lv_gltf_world_to_screen(lv_obj_t *obj, const lv_3dpoint_t world_pos, lv_point_t *screen_pos)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:410: warning: The following parameter of lv_gltf_world_to_screen(lv_obj_t *obj, const lv_3dpoint_t world_pos, lv_point_t *screen_pos) is not documented:
   parameter 'screen_pos'
@@ -141,8 +141,8 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:58: warning: 
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:48: warning: argument 'obj' of command @param is not found in the argument list of lv_win_add_title(lv_obj_t *win, const char *txt)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:48: warning: The following parameter of lv_win_add_title(lv_obj_t *win, const char *txt) is not documented:
   parameter 'win'
-WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:121: warning: argument 'user_data' of command @param is not found in the argument list of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data)
-WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:121: warning: The following parameter of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:123: warning: argument 'user_data' of command @param is not found in the argument list of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data)
+WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:123: warning: The following parameter of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data) is not documented:
   parameter 'used_data'
 WARNING: /home/runner/work/lvgl/lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_utils.h:166: warning: The following parameters of lv_nemagfx_grad_set(void *gradient, lv_grad_dsc_t lv_grad, lv_opa_t opa) are not documented:
   parameter 'lv_grad'
@@ -163,56 +163,56 @@ WARNING: /home/runner/work/lvgl/lvgl/src/font/font_manager/lv_font_manager_recyc
 WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.h:195: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_radius(const lv_gltf_model_t *model)
 WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.h:195: warning: The following parameter of lv_gltf_data_get_radius(const lv_gltf_model_t *model) is not documented:
   parameter 'model'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:264: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:264: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:264: warning: argument 'N' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:264: warning: argument 'P' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:264: warning: The following parameters of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index) are not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:266: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:266: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:266: warning: argument 'N' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:266: warning: argument 'P' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:266: warning: The following parameters of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index) are not documented:
   parameter 'data'
   parameter 'mesh_index'
   parameter 'node'
   parameter 'primitive_index'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:253: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:253: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:253: warning: argument 'N' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:253: warning: argument 'P' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:253: warning: The following parameters of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index) are not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:255: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:255: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:255: warning: argument 'N' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:255: warning: argument 'P' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:255: warning: The following parameters of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index) are not documented:
   parameter 'data'
   parameter 'index'
   parameter 'node'
   parameter 'primitive_index'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:210: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_asset(lv_gltf_model_t *data)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:210: warning: The following parameter of lv_gltf_data_get_asset(lv_gltf_model_t *data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:212: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_asset(lv_gltf_model_t *data)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:212: warning: The following parameter of lv_gltf_data_get_asset(lv_gltf_model_t *data) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:167: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_bounds_max(const lv_gltf_model_t *data)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:167: warning: The following parameter of lv_gltf_data_get_bounds_max(const lv_gltf_model_t *data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:169: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_bounds_max(const lv_gltf_model_t *data)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:169: warning: The following parameter of lv_gltf_data_get_bounds_max(const lv_gltf_model_t *data) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:175: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_center(const lv_gltf_model_t *data)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:175: warning: The following parameter of lv_gltf_data_get_center(const lv_gltf_model_t *data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:177: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_center(const lv_gltf_model_t *data)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:177: warning: The following parameter of lv_gltf_data_get_center(const lv_gltf_model_t *data) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:301: warning: argument 'meshIndex' of command @param is not found in the argument list of lv_gltf_data_get_centerpoint(lv_gltf_model_t *gltf_data, fastgltf::math::fmat4x4 matrix, size_t mesh_index, int32_t elem)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:301: warning: The following parameter of lv_gltf_data_get_centerpoint(lv_gltf_model_t *gltf_data, fastgltf::math::fmat4x4 matrix, size_t mesh_index, int32_t elem) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:303: warning: argument 'meshIndex' of command @param is not found in the argument list of lv_gltf_data_get_centerpoint(lv_gltf_model_t *gltf_data, fastgltf::math::fmat4x4 matrix, size_t mesh_index, int32_t elem)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:303: warning: The following parameter of lv_gltf_data_get_centerpoint(lv_gltf_model_t *gltf_data, fastgltf::math::fmat4x4 matrix, size_t mesh_index, int32_t elem) is not documented:
   parameter 'mesh_index'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:218: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:218: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:218: warning: The following parameters of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index) are not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:220: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:220: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:220: warning: The following parameters of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index) are not documented:
   parameter 'data'
   parameter 'index'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:283: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:283: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:283: warning: The following parameters of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index) are not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:285: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:285: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:285: warning: The following parameters of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index) are not documented:
   parameter 'data'
   parameter 'index'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:275: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_skins_size(lv_gltf_model_t *data)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:275: warning: The following parameter of lv_gltf_data_get_skins_size(lv_gltf_model_t *data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:277: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_skins_size(lv_gltf_model_t *data)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:277: warning: The following parameter of lv_gltf_data_get_skins_size(lv_gltf_model_t *data) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:292: warning: argument 'data_obj' of command @param is not found in the argument list of lv_gltf_data_injest_discover_defines(lv_gltf_model_t *data, fastgltf::Node *node, fastgltf::Primitive *prim)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:292: warning: The following parameter of lv_gltf_data_injest_discover_defines(lv_gltf_model_t *data, fastgltf::Node *node, fastgltf::Primitive *prim) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:294: warning: argument 'data_obj' of command @param is not found in the argument list of lv_gltf_data_injest_discover_defines(lv_gltf_model_t *data, fastgltf::Node *node, fastgltf::Primitive *prim)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:294: warning: The following parameter of lv_gltf_data_injest_discover_defines(lv_gltf_model_t *data, fastgltf::Node *node, fastgltf::Primitive *prim) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:183: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_get_filename(const lv_gltf_model_t *data)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:183: warning: The following parameter of lv_gltf_get_filename(const lv_gltf_model_t *data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:185: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_get_filename(const lv_gltf_model_t *data)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:185: warning: The following parameter of lv_gltf_get_filename(const lv_gltf_model_t *data) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/misc/lv_circle_buf_private.h:109: warning: found documented return type for lv_circle_buf_reset that does not return anything
+WARNING: /home/runner/work/lvgl/lvgl/src/misc/lv_circle_buf_private.h:110: warning: found documented return type for lv_circle_buf_reset that does not return anything
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h:45: warning: argument 'pointer' of command @param is not found in the argument list of lv_gltf_ibl_sampler_set_cube_map_pixel_resolution(lv_gltf_ibl_sampler_t *sampler, uint32_t resolution)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/3d/lv_gltf_environment.h:45: warning: The following parameter of lv_gltf_ibl_sampler_set_cube_map_pixel_resolution(lv_gltf_ibl_sampler_t *sampler, uint32_t resolution) is not documented:
   parameter 'sampler'
@@ -309,12 +309,12 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/indev/lv_indev_gesture.h:187: 
   parameter 'recognizer'
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/indev/lv_indev_gesture.h:194: warning: The following parameter of lv_event_get_gesture_state(lv_event_t *gesture_event, lv_indev_gesture_type_t type) is not documented:
   parameter 'type'
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:229: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:231: warning: explicit link request to 'endif' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:235: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:237: warning: explicit link request to 'endif' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:241: warning: explicit link request to 'if' could not be resolved
-WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:243: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:227: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:229: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:233: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:235: warning: explicit link request to 'endif' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:239: warning: explicit link request to 'if' could not be resolved
+WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/lvgl.h:241: warning: explicit link request to 'endif' could not be resolved
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:383: warning: argument 'screen_y' of command @param is not found in the argument list of lv_intersect_ray_with_plane(const lv_3dray_t *ray, const lv_3dplane_t *plane, lv_3dpoint_t *collision_point)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_gltf.h:383: warning: The following parameter of lv_intersect_ray_with_plane(const lv_3dray_t *ray, const lv_3dplane_t *plane, lv_3dpoint_t *collision_point) is not documented:
   parameter 'plane'
@@ -352,8 +352,8 @@ WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:48: warning: 
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:58: warning: argument 'obj' of command @param is not found in the argument list of lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w)
 WARNING: /home/runner/work/lvgl/lvgl/include/lvgl/widgets/lv_win.h:58: warning: The following parameter of lv_win_add_button(lv_obj_t *win, const void *icon, int32_t btn_w) is not documented:
   parameter 'win'
-WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:121: warning: argument 'user_data' of command @param is not found in the argument list of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data)
-WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:121: warning: The following parameter of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:123: warning: argument 'user_data' of command @param is not found in the argument list of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data)
+WARNING: /home/runner/work/lvgl/lvgl/src/draw/lv_draw_vector_private.h:123: warning: The following parameter of lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb, void *used_data) is not documented:
   parameter 'used_data'
 WARNING: /home/runner/work/lvgl/lvgl/src/draw/sw/blend/lv_draw_sw_blend.h:46: warning: argument 'draw_unit' of command @param is not found in the argument list of lv_draw_sw_blend(lv_draw_task_t *t, const lv_draw_sw_blend_dsc_t *dsc)
 WARNING: /home/runner/work/lvgl/lvgl/src/draw/sw/blend/lv_draw_sw_blend.h:46: warning: The following parameter of lv_draw_sw_blend(lv_draw_task_t *t, const lv_draw_sw_blend_dsc_t *dsc) is not documented:
@@ -371,52 +371,52 @@ WARNING: /home/runner/work/lvgl/lvgl/src/font/font_manager/lv_font_manager_recyc
 WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.h:195: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_radius(const lv_gltf_model_t *model)
 WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.h:195: warning: The following parameter of lv_gltf_data_get_radius(const lv_gltf_model_t *model) is not documented:
   parameter 'model'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:167: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_bounds_max(const lv_gltf_model_t *data)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:167: warning: The following parameter of lv_gltf_data_get_bounds_max(const lv_gltf_model_t *data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:169: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_bounds_max(const lv_gltf_model_t *data)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:169: warning: The following parameter of lv_gltf_data_get_bounds_max(const lv_gltf_model_t *data) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:175: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_center(const lv_gltf_model_t *data)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:175: warning: The following parameter of lv_gltf_data_get_center(const lv_gltf_model_t *data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:177: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_center(const lv_gltf_model_t *data)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:177: warning: The following parameter of lv_gltf_data_get_center(const lv_gltf_model_t *data) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:183: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_get_filename(const lv_gltf_model_t *data)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:183: warning: The following parameter of lv_gltf_get_filename(const lv_gltf_model_t *data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:185: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_get_filename(const lv_gltf_model_t *data)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:185: warning: The following parameter of lv_gltf_get_filename(const lv_gltf_model_t *data) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:210: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_asset(lv_gltf_model_t *data)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:210: warning: The following parameter of lv_gltf_data_get_asset(lv_gltf_model_t *data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:212: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_asset(lv_gltf_model_t *data)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:212: warning: The following parameter of lv_gltf_data_get_asset(lv_gltf_model_t *data) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:218: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:218: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:218: warning: The following parameters of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index) are not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:220: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:220: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:220: warning: The following parameters of lv_gltf_data_get_mesh(lv_gltf_model_t *data, size_t index) are not documented:
   parameter 'data'
   parameter 'index'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:253: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:253: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:253: warning: argument 'N' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:253: warning: argument 'P' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:253: warning: The following parameters of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index) are not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:255: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:255: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:255: warning: argument 'N' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:255: warning: argument 'P' of command @param is not found in the argument list of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:255: warning: The following parameters of lv_gltf_data_add_opaque_node_primitive(lv_gltf_model_t *data, size_t index, fastgltf::Node *node, size_t primitive_index) are not documented:
   parameter 'data'
   parameter 'index'
   parameter 'node'
   parameter 'primitive_index'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:264: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:264: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:264: warning: argument 'N' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:264: warning: argument 'P' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:264: warning: The following parameters of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index) are not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:266: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:266: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:266: warning: argument 'N' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:266: warning: argument 'P' of command @param is not found in the argument list of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:266: warning: The following parameters of lv_gltf_data_add_blended_node_primitive(lv_gltf_model_t *data, size_t mesh_index, fastgltf::Node *node, size_t primitive_index) are not documented:
   parameter 'data'
   parameter 'mesh_index'
   parameter 'node'
   parameter 'primitive_index'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:275: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_skins_size(lv_gltf_model_t *data)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:275: warning: The following parameter of lv_gltf_data_get_skins_size(lv_gltf_model_t *data) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:277: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_skins_size(lv_gltf_model_t *data)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:277: warning: The following parameter of lv_gltf_data_get_skins_size(lv_gltf_model_t *data) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:283: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:283: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:283: warning: The following parameters of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index) are not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:285: warning: argument 'D' of command @param is not found in the argument list of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:285: warning: argument 'I' of command @param is not found in the argument list of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:285: warning: The following parameters of lv_gltf_data_get_skin(lv_gltf_model_t *data, size_t index) are not documented:
   parameter 'data'
   parameter 'index'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:292: warning: argument 'data_obj' of command @param is not found in the argument list of lv_gltf_data_injest_discover_defines(lv_gltf_model_t *data, fastgltf::Node *node, fastgltf::Primitive *prim)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:292: warning: The following parameter of lv_gltf_data_injest_discover_defines(lv_gltf_model_t *data, fastgltf::Node *node, fastgltf::Primitive *prim) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:294: warning: argument 'data_obj' of command @param is not found in the argument list of lv_gltf_data_injest_discover_defines(lv_gltf_model_t *data, fastgltf::Node *node, fastgltf::Primitive *prim)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:294: warning: The following parameter of lv_gltf_data_injest_discover_defines(lv_gltf_model_t *data, fastgltf::Node *node, fastgltf::Primitive *prim) is not documented:
   parameter 'data'
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:301: warning: argument 'meshIndex' of command @param is not found in the argument list of lv_gltf_data_get_centerpoint(lv_gltf_model_t *gltf_data, fastgltf::math::fmat4x4 matrix, size_t mesh_index, int32_t elem)
-WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:301: warning: The following parameter of lv_gltf_data_get_centerpoint(lv_gltf_model_t *gltf_data, fastgltf::math::fmat4x4 matrix, size_t mesh_index, int32_t elem) is not documented:
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:303: warning: argument 'meshIndex' of command @param is not found in the argument list of lv_gltf_data_get_centerpoint(lv_gltf_model_t *gltf_data, fastgltf::math::fmat4x4 matrix, size_t mesh_index, int32_t elem)
+WARNING: /home/runner/work/lvgl/lvgl/src/libs/gltf/gltf_data/lv_gltf_data_internal.hpp:303: warning: The following parameter of lv_gltf_data_get_centerpoint(lv_gltf_model_t *gltf_data, fastgltf::math::fmat4x4 matrix, size_t mesh_index, int32_t elem) is not documented:
   parameter 'mesh_index'

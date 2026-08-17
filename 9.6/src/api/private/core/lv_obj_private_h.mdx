@@ -13,7 +13,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_obj_allocate_spec_attr" file="private/core/lv_obj_private.h" line={172} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/src/core/lv_obj_private.h#L172">
+<ApiMember kind="function" name="lv_obj_allocate_spec_attr" file="private/core/lv_obj_private.h" line={173} url="https://github.com/lvgl/lvgl/tree/86a797e05bff960672b81b41f3326896f289041e/src/core/lv_obj_private.h#L173">
 
 ### lv_obj_allocate_spec_attr
 
@@ -34,7 +34,7 @@ lv_obj_spec_attr_t * lv_obj_allocate_spec_attr(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_child" file="private/core/lv_obj_private.h" line={174} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/src/core/lv_obj_private.h#L174">
+<ApiMember kind="function" name="lv_obj_add_child" file="private/core/lv_obj_private.h" line={175} url="https://github.com/lvgl/lvgl/tree/86a797e05bff960672b81b41f3326896f289041e/src/core/lv_obj_private.h#L175">
 
 ### lv_obj_add_child
 
@@ -52,7 +52,7 @@ lv_result_t lv_obj_add_child(lv_obj_t *parent, lv_obj_t *child)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_child" file="private/core/lv_obj_private.h" line={175} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/src/core/lv_obj_private.h#L175">
+<ApiMember kind="function" name="lv_obj_remove_child" file="private/core/lv_obj_private.h" line={176} url="https://github.com/lvgl/lvgl/tree/86a797e05bff960672b81b41f3326896f289041e/src/core/lv_obj_private.h#L176">
 
 ### lv_obj_remove_child
 
@@ -161,7 +161,7 @@ Special, rarely used attributes. They are allocated automatically if any element
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_obj_spec_attr_t" file="private/core/lv_obj_private.h" line={54} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/src/core/lv_obj_private.h#L54">
+<ApiMember kind="typedef" name="lv_obj_spec_attr_t" file="private/core/lv_obj_private.h" line={55} url="https://github.com/lvgl/lvgl/tree/86a797e05bff960672b81b41f3326896f289041e/src/core/lv_obj_private.h#L55">
 
 ### lv_obj_spec_attr_t
 
@@ -177,6 +177,7 @@ Special, rarely used attributes. They are allocated automatically if any element
 ## Dependencies
 
 <FileIncludes
-  includes={["lvgl_public.h"]}
+  includes={["lvgl_public.h", "lv_event_private.h"]}
   includedBy={["lvgl_private.h", "lv_file_explorer_private.h", "lv_3dtexture_private.h", "lv_arc_private.h", "lv_arclabel_private.h", "lv_bar_private.h", "lv_button_private.h", "lv_buttonmatrix_private.h", "lv_calendar_private.h", "lv_chart_private.h", "lv_checkbox_private.h", "lv_dropdown_private.h", "lv_image_private.h", "lv_imagebutton_private.h", "lv_ime_pinyin_private.h", "lv_keyboard_private.h", "lv_label_private.h", "lv_led_private.h", "lv_line_private.h", "lv_lottie_private.h", "lv_menu_private.h", "lv_msgbox_private.h", "lv_roller_private.h", "lv_scale_private.h", "lv_slider_private.h", "lv_span_private.h", "lv_spinbox_private.h", "lv_spinner_private.h", "lv_switch_private.h", "lv_table_private.h", "lv_tabview_private.h", "lv_textarea_private.h", "lv_tileview_private.h", "lv_win_private.h"]}
+  transitiveIncludes={["lv_array.h"]}
 />

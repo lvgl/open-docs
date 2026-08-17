@@ -1,4 +1,4 @@
-```xml title="examples/widgets/obj/lv_example_obj_bind_style.xml" source="https://github.com/lvgl/lvgl/blob/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/examples/widgets/obj/lv_example_obj_bind_style.xml"
+```xml title="examples/widgets/obj/lv_example_obj_bind_style.xml" source="https://github.com/lvgl/lvgl/blob/86a797e05bff960672b81b41f3326896f289041e/examples/widgets/obj/lv_example_obj_bind_style.xml"
 <!--
  @title Obj bind style (theme toggle)
  @brief Apply a named style only when a subject equals a reference value.

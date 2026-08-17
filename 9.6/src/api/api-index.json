@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-17T18:33:57.464Z",
-    "symbolCount": 8874
+    "generatedAt": "2026-08-17T20:11:16.405Z",
+    "symbolCount": 8876
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -5590,11 +5590,6 @@
       "path": "api/public/core/lv_event_h",
       "anchor": "lv_event_code_t",
       "kind": "enumvalue"
-    },
-    "lv_event_list_t": {
-      "path": "api/public/core/lv_event_h",
-      "anchor": "lv_event_list_t",
-      "kind": "struct"
     },
     "lv_event_cb_t": {
       "path": "api/public/core/lv_event_h",
@@ -23566,961 +23561,6 @@
       "anchor": "lv_svg_node_delete",
       "kind": "function"
     },
-    "_lv_svg_tag_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enum"
-    },
-    "LV_SVG_TAG_INVALID": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_CONTENT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_SVG": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_USE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_G": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_PATH": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_RECT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_CIRCLE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_ELLIPSE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_LINE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_POLYLINE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_POLYGON": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_SOLID_COLOR": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_LINEAR_GRADIENT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_RADIAL_GRADIENT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_STOP": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_DEFS": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_IMAGE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_MPATH": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_SET": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_ANIMATE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_ANIMATE_COLOR": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_ANIMATE_TRANSFORM": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_ANIMATE_MOTION": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_TEXT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_TSPAN": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TAG_TEXT_AREA": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_tag_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_attr_type_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enum"
-    },
-    "LV_SVG_ATTR_INVALID": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_ID": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_XML_ID": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_VERSION": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_BASE_PROFILE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_VIEWBOX": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_PRESERVE_ASPECT_RATIO": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_VIEWPORT_FILL": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_VIEWPORT_FILL_OPACITY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_DISPLAY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_VISIBILITY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_X": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_Y": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_WIDTH": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_HEIGHT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_RX": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_RY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_CX": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_CY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_R": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_X1": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_Y1": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_X2": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_Y2": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_POINTS": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_D": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_PATH_LENGTH": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_XLINK_HREF": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_STYLE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_FILL": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_FILL_RULE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_FILL_OPACITY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_STROKE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_STROKE_WIDTH": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_STROKE_LINECAP": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_STROKE_LINEJOIN": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_STROKE_MITER_LIMIT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_STROKE_DASH_ARRAY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_STROKE_DASH_OFFSET": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_STROKE_OPACITY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_OPACITY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_SOLID_COLOR": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_SOLID_OPACITY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_GRADIENT_UNITS": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_GRADIENT_STOP_OFFSET": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_GRADIENT_STOP_COLOR": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_GRADIENT_STOP_OPACITY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_FONT_FAMILY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_FONT_STYLE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_FONT_VARIANT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_FONT_WEIGHT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_FONT_SIZE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_TRANSFORM": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_TEXT_ANCHOR": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_ATTRIBUTE_NAME": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_ATTRIBUTE_TYPE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_BEGIN": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_END": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_DUR": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_MIN": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_MAX": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_RESTART": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_REPEAT_COUNT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_REPEAT_DUR": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_CALC_MODE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_VALUES": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_KEY_TIMES": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_KEY_SPLINES": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_KEY_POINTS": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_FROM": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_TO": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_BY": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_ADDITIVE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_ACCUMULATE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_PATH": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_ROTATE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_TRANSFORM_TYPE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_type_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_transform_type_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_transform_type_t",
-      "kind": "enum"
-    },
-    "LV_SVG_TRANSFORM_TYPE_MATRIX": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_transform_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TRANSFORM_TYPE_TRANSLATE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_transform_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TRANSFORM_TYPE_ROTATE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_transform_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TRANSFORM_TYPE_SCALE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_transform_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TRANSFORM_TYPE_SKEW_X": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_transform_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_TRANSFORM_TYPE_SKEW_Y": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_transform_type_t",
-      "kind": "enumvalue"
-    },
-    "lv_svg_anim_action_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_anim_action_t",
-      "kind": "enum"
-    },
-    "LV_SVG_ANIM_REMOVE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_anim_action_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ANIM_FREEZE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_anim_action_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_anim_restart_type_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_restart_type_t",
-      "kind": "enum"
-    },
-    "LV_SVG_ANIM_RESTART_ALWAYS": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_restart_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ANIM_RESTART_WHEN_NOT_ACTIVE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_restart_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ANIM_RESTART_NEVER": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_restart_type_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_anim_calc_mode_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_calc_mode_t",
-      "kind": "enum"
-    },
-    "LV_SVG_ANIM_CALC_MODE_LINEAR": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_calc_mode_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ANIM_CALC_MODE_PACED": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_calc_mode_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ANIM_CALC_MODE_SPLINE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_calc_mode_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ANIM_CALC_MODE_DISCRETE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_calc_mode_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_anim_additive_type_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_additive_type_t",
-      "kind": "enum"
-    },
-    "LV_SVG_ANIM_ADDITIVE_REPLACE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_additive_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ANIM_ADDITIVE_SUM": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_additive_type_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_anim_accumulate_type_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_accumulate_type_t",
-      "kind": "enum"
-    },
-    "LV_SVG_ANIM_ACCUMULATE_NONE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_accumulate_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ANIM_ACCUMULATE_SUM": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_anim_accumulate_type_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_aspect_ratio_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_t",
-      "kind": "enum"
-    },
-    "LV_SVG_ASPECT_RATIO_NONE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ASPECT_RATIO_XMIN_YMIN": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ASPECT_RATIO_XMID_YMIN": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ASPECT_RATIO_XMAX_YMIN": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ASPECT_RATIO_XMIN_YMID": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ASPECT_RATIO_XMID_YMID": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ASPECT_RATIO_XMAX_YMID": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ASPECT_RATIO_XMIN_YMAX": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ASPECT_RATIO_XMID_YMAX": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ASPECT_RATIO_XMAX_YMAX": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_aspect_ratio_opt_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_opt_t",
-      "kind": "enum"
-    },
-    "LV_SVG_ASPECT_RATIO_OPT_MEET": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_opt_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ASPECT_RATIO_OPT_SLICE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_aspect_ratio_opt_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_fill_rule_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_fill_rule_t",
-      "kind": "enum"
-    },
-    "LV_SVG_FILL_NONZERO": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_fill_rule_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_FILL_EVENODD": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_fill_rule_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_line_cap_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_line_cap_t",
-      "kind": "enum"
-    },
-    "LV_SVG_LINE_CAP_BUTT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_line_cap_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_LINE_CAP_SQUARE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_line_cap_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_LINE_CAP_ROUND": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_line_cap_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_line_join_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_line_join_t",
-      "kind": "enum"
-    },
-    "LV_SVG_LINE_JOIN_MITER": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_line_join_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_LINE_JOIN_BEVEL": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_line_join_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_LINE_JOIN_ROUND": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_line_join_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_gradient_units_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_gradient_units_t",
-      "kind": "enum"
-    },
-    "LV_SVG_GRADIENT_UNITS_OBJECT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_gradient_units_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_GRADIENT_UNITS_USER_SPACE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_gradient_units_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_path_cmd_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_path_cmd_t",
-      "kind": "enum"
-    },
-    "LV_SVG_PATH_CMD_MOVE_TO": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_path_cmd_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_PATH_CMD_LINE_TO": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_path_cmd_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_PATH_CMD_CURVE_TO": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_path_cmd_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_PATH_CMD_QUAD_TO": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_path_cmd_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_PATH_CMD_ARC_TO": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_path_cmd_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_PATH_CMD_CLOSE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_path_cmd_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_attr_value_type_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_value_type_t",
-      "kind": "enum"
-    },
-    "LV_SVG_ATTR_VALUE_DATA": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_value_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_VALUE_PTR": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_value_type_t",
-      "kind": "enumvalue"
-    },
-    "_lv_svg_attr_value_class_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_value_class_t",
-      "kind": "enum"
-    },
-    "LV_SVG_ATTR_VALUE_NONE": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_value_class_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_VALUE_INITIAL": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_value_class_t",
-      "kind": "enumvalue"
-    },
-    "LV_SVG_ATTR_VALUE_INHERIT": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "_lv_svg_attr_value_class_t",
-      "kind": "enumvalue"
-    },
-    "lv_svg_point_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_point_t",
-      "kind": "struct"
-    },
-    "lv_svg_matrix_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_matrix_t",
-      "kind": "struct"
-    },
-    "lv_svg_attr_value_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_attr_value_t",
-      "kind": "struct"
-    },
-    "lv_svg_attr_values_list_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_attr_values_list_t",
-      "kind": "struct"
-    },
-    "lv_svg_attr_path_value_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_attr_path_value_t",
-      "kind": "struct"
-    },
-    "lv_svg_attr_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_attr_t",
-      "kind": "struct"
-    },
-    "lv_svg_node_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_node_t",
-      "kind": "struct"
-    },
-    "lv_svg_tag_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_tag_t",
-      "kind": "typedef"
-    },
-    "lv_svg_attr_type_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_attr_type_t",
-      "kind": "typedef"
-    },
-    "lv_svg_transform_type_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_transform_type_t",
-      "kind": "typedef"
-    },
-    "lv_svg_aspect_ratio_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_aspect_ratio_t",
-      "kind": "typedef"
-    },
-    "lv_svg_color_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_color_t",
-      "kind": "typedef"
-    },
-    "lv_svg_fill_rule_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_fill_rule_t",
-      "kind": "typedef"
-    },
-    "lv_svg_line_cap_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_line_cap_t",
-      "kind": "typedef"
-    },
-    "lv_svg_line_join_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_line_join_t",
-      "kind": "typedef"
-    },
-    "lv_svg_gradient_units_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_gradient_units_t",
-      "kind": "typedef"
-    },
-    "lv_svg_attr_value_type_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_attr_value_type_t",
-      "kind": "typedef"
-    },
-    "lv_svg_attr_value_class_t": {
-      "path": "api/public/image/lv_svg_h",
-      "anchor": "lv_svg_attr_value_class_t",
-      "kind": "typedef"
-    },
     "LV_SVG_NODE_CHILD": {
       "path": "api/public/image/lv_svg_h",
       "anchor": "LV_SVG_NODE_CHILD",
@@ -25606,6 +24646,11 @@
       "anchor": "lv_event_t",
       "kind": "typedef"
     },
+    "lv_event_list_t": {
+      "path": "api/public/lv_types_h",
+      "anchor": "lv_event_list_t",
+      "kind": "typedef"
+    },
     "lv_timer_t": {
       "path": "api/public/lv_types_h",
       "anchor": "lv_timer_t",
@@ -26201,6 +25246,11 @@
       "anchor": "lv_draw_buf_t",
       "kind": "typedef"
     },
+    "lv_svg_node_t": {
+      "path": "api/public/lv_types_h",
+      "anchor": "lv_svg_node_t",
+      "kind": "typedef"
+    },
     "lv_property_name_t": {
       "path": "api/public/lv_types_h",
       "anchor": "lv_property_name_t",
@@ -26359,131 +25409,6 @@
     "LV_VERSION_CHECK": {
       "path": "api/public/lvgl_h",
       "anchor": "LV_VERSION_CHECK",
-      "kind": "macro"
-    },
-    "lv_array.h": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_array_init": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_init",
-      "kind": "function"
-    },
-    "lv_array_init_from_buf": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_init_from_buf",
-      "kind": "function"
-    },
-    "lv_array_resize": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_resize",
-      "kind": "function"
-    },
-    "lv_array_deinit": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_deinit",
-      "kind": "function"
-    },
-    "lv_array_size": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_size",
-      "kind": "function"
-    },
-    "lv_array_capacity": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_capacity",
-      "kind": "function"
-    },
-    "lv_array_is_empty": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_is_empty",
-      "kind": "function"
-    },
-    "lv_array_is_full": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_is_full",
-      "kind": "function"
-    },
-    "lv_array_copy": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_copy",
-      "kind": "function"
-    },
-    "lv_array_clear": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_clear",
-      "kind": "function"
-    },
-    "lv_array_shrink": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_shrink",
-      "kind": "function"
-    },
-    "lv_array_remove": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_remove",
-      "kind": "function"
-    },
-    "lv_array_remove_unordered": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_remove_unordered",
-      "kind": "function"
-    },
-    "lv_array_erase": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_erase",
-      "kind": "function"
-    },
-    "lv_array_concat": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_concat",
-      "kind": "function"
-    },
-    "lv_array_push_back": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_push_back",
-      "kind": "function"
-    },
-    "lv_array_assign": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_assign",
-      "kind": "function"
-    },
-    "lv_array_at": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_at",
-      "kind": "function"
-    },
-    "lv_array_front": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_front",
-      "kind": "function"
-    },
-    "lv_array_back": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_back",
-      "kind": "function"
-    },
-    "_lv_array_t": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "_lv_array_t",
-      "kind": "struct"
-    },
-    "lv_array_t": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "lv_array_t",
-      "kind": "typedef"
-    },
-    "LV_ARRAY_DEFAULT_CAPACITY": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "LV_ARRAY_DEFAULT_CAPACITY",
-      "kind": "macro"
-    },
-    "LV_ARRAY_DEFAULT_SHRINK_RATIO": {
-      "path": "api/public/misc/lv_array_h",
-      "anchor": "LV_ARRAY_DEFAULT_SHRINK_RATIO",
       "kind": "macro"
     },
     "lv_async.h": {
@@ -26775,91 +25700,6 @@
       "path": "api/public/misc/lv_math_h",
       "anchor": "LV_MAX_OF",
       "kind": "macro"
-    },
-    "lv_tree.h": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_tree_node_create": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "lv_tree_node_create",
-      "kind": "function"
-    },
-    "lv_tree_node_delete": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "lv_tree_node_delete",
-      "kind": "function"
-    },
-    "lv_tree_walk": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "lv_tree_walk",
-      "kind": "function"
-    },
-    "_lv_tree_walk_mode_t": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "_lv_tree_walk_mode_t",
-      "kind": "enum"
-    },
-    "LV_TREE_WALK_PRE_ORDER": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "_lv_tree_walk_mode_t",
-      "kind": "enumvalue"
-    },
-    "LV_TREE_WALK_POST_ORDER": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "_lv_tree_walk_mode_t",
-      "kind": "enumvalue"
-    },
-    "_lv_tree_class_t": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "_lv_tree_class_t",
-      "kind": "struct"
-    },
-    "_lv_tree_node_t": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "_lv_tree_node_t",
-      "kind": "struct"
-    },
-    "lv_tree_constructor_cb_t": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "lv_tree_constructor_cb_t",
-      "kind": "typedef"
-    },
-    "lv_tree_destructor_cb_t": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "lv_tree_destructor_cb_t",
-      "kind": "typedef"
-    },
-    "lv_tree_walk_mode_t": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "lv_tree_walk_mode_t",
-      "kind": "typedef"
-    },
-    "lv_tree_traverse_cb_t": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "lv_tree_traverse_cb_t",
-      "kind": "typedef"
-    },
-    "lv_tree_before_cb_t": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "lv_tree_before_cb_t",
-      "kind": "typedef"
-    },
-    "lv_tree_after_cb_t": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "lv_tree_after_cb_t",
-      "kind": "typedef"
-    },
-    "LV_TREE_NODE": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "LV_TREE_NODE",
-      "kind": "macro"
-    },
-    "lv_tree_node_class": {
-      "path": "api/public/misc/lv_tree_h",
-      "anchor": "lv_tree_node_class",
-      "kind": "variable"
     },
     "lv_os.h": {
       "path": "api/public/osal/lv_os_h",
@@ -41351,6 +40191,966 @@
       "anchor": "_lv_svg_parser_t",
       "kind": "struct"
     },
+    "lv_svg_private.h": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "_lv_svg_tag_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enum"
+    },
+    "LV_SVG_TAG_INVALID": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_CONTENT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_SVG": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_USE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_G": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_PATH": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_RECT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_CIRCLE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_ELLIPSE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_LINE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_POLYLINE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_POLYGON": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_SOLID_COLOR": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_LINEAR_GRADIENT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_RADIAL_GRADIENT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_STOP": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_DEFS": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_IMAGE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_MPATH": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_SET": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_ANIMATE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_ANIMATE_COLOR": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_ANIMATE_TRANSFORM": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_ANIMATE_MOTION": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_TEXT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_TSPAN": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TAG_TEXT_AREA": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_tag_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_attr_type_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enum"
+    },
+    "LV_SVG_ATTR_INVALID": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_ID": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_XML_ID": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_VERSION": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_BASE_PROFILE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_VIEWBOX": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_PRESERVE_ASPECT_RATIO": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_VIEWPORT_FILL": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_VIEWPORT_FILL_OPACITY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_DISPLAY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_VISIBILITY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_X": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_Y": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_WIDTH": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_HEIGHT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_RX": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_RY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_CX": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_CY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_R": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_X1": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_Y1": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_X2": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_Y2": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_POINTS": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_D": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_PATH_LENGTH": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_XLINK_HREF": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_STYLE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_FILL": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_FILL_RULE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_FILL_OPACITY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_STROKE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_STROKE_WIDTH": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_STROKE_LINECAP": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_STROKE_LINEJOIN": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_STROKE_MITER_LIMIT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_STROKE_DASH_ARRAY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_STROKE_DASH_OFFSET": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_STROKE_OPACITY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_OPACITY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_SOLID_COLOR": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_SOLID_OPACITY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_GRADIENT_UNITS": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_GRADIENT_STOP_OFFSET": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_GRADIENT_STOP_COLOR": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_GRADIENT_STOP_OPACITY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_FONT_FAMILY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_FONT_STYLE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_FONT_VARIANT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_FONT_WEIGHT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_FONT_SIZE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_TRANSFORM": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_TEXT_ANCHOR": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_ATTRIBUTE_NAME": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_ATTRIBUTE_TYPE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_BEGIN": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_END": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_DUR": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_MIN": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_MAX": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_RESTART": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_REPEAT_COUNT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_REPEAT_DUR": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_CALC_MODE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_VALUES": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_KEY_TIMES": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_KEY_SPLINES": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_KEY_POINTS": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_FROM": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_TO": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_BY": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_ADDITIVE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_ACCUMULATE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_PATH": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_ROTATE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_TRANSFORM_TYPE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_type_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_transform_type_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_transform_type_t",
+      "kind": "enum"
+    },
+    "LV_SVG_TRANSFORM_TYPE_MATRIX": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_transform_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TRANSFORM_TYPE_TRANSLATE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_transform_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TRANSFORM_TYPE_ROTATE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_transform_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TRANSFORM_TYPE_SCALE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_transform_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TRANSFORM_TYPE_SKEW_X": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_transform_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_TRANSFORM_TYPE_SKEW_Y": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_transform_type_t",
+      "kind": "enumvalue"
+    },
+    "lv_svg_anim_action_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_anim_action_t",
+      "kind": "enum"
+    },
+    "LV_SVG_ANIM_REMOVE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_anim_action_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ANIM_FREEZE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_anim_action_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_anim_restart_type_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_restart_type_t",
+      "kind": "enum"
+    },
+    "LV_SVG_ANIM_RESTART_ALWAYS": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_restart_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ANIM_RESTART_WHEN_NOT_ACTIVE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_restart_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ANIM_RESTART_NEVER": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_restart_type_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_anim_calc_mode_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_calc_mode_t",
+      "kind": "enum"
+    },
+    "LV_SVG_ANIM_CALC_MODE_LINEAR": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_calc_mode_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ANIM_CALC_MODE_PACED": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_calc_mode_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ANIM_CALC_MODE_SPLINE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_calc_mode_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ANIM_CALC_MODE_DISCRETE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_calc_mode_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_anim_additive_type_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_additive_type_t",
+      "kind": "enum"
+    },
+    "LV_SVG_ANIM_ADDITIVE_REPLACE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_additive_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ANIM_ADDITIVE_SUM": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_additive_type_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_anim_accumulate_type_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_accumulate_type_t",
+      "kind": "enum"
+    },
+    "LV_SVG_ANIM_ACCUMULATE_NONE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_accumulate_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ANIM_ACCUMULATE_SUM": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_anim_accumulate_type_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_aspect_ratio_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_t",
+      "kind": "enum"
+    },
+    "LV_SVG_ASPECT_RATIO_NONE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ASPECT_RATIO_XMIN_YMIN": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ASPECT_RATIO_XMID_YMIN": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ASPECT_RATIO_XMAX_YMIN": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ASPECT_RATIO_XMIN_YMID": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ASPECT_RATIO_XMID_YMID": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ASPECT_RATIO_XMAX_YMID": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ASPECT_RATIO_XMIN_YMAX": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ASPECT_RATIO_XMID_YMAX": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ASPECT_RATIO_XMAX_YMAX": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_aspect_ratio_opt_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_opt_t",
+      "kind": "enum"
+    },
+    "LV_SVG_ASPECT_RATIO_OPT_MEET": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_opt_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ASPECT_RATIO_OPT_SLICE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_aspect_ratio_opt_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_fill_rule_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_fill_rule_t",
+      "kind": "enum"
+    },
+    "LV_SVG_FILL_RULE_NONZERO": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_fill_rule_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_FILL_RULE_EVENODD": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_fill_rule_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_line_cap_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_line_cap_t",
+      "kind": "enum"
+    },
+    "LV_SVG_LINE_CAP_BUTT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_line_cap_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_LINE_CAP_SQUARE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_line_cap_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_LINE_CAP_ROUND": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_line_cap_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_line_join_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_line_join_t",
+      "kind": "enum"
+    },
+    "LV_SVG_LINE_JOIN_MITER": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_line_join_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_LINE_JOIN_BEVEL": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_line_join_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_LINE_JOIN_ROUND": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_line_join_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_gradient_units_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_gradient_units_t",
+      "kind": "enum"
+    },
+    "LV_SVG_GRADIENT_UNITS_OBJECT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_gradient_units_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_GRADIENT_UNITS_USER_SPACE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_gradient_units_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_path_cmd_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_path_cmd_t",
+      "kind": "enum"
+    },
+    "LV_SVG_PATH_CMD_MOVE_TO": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_path_cmd_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_PATH_CMD_LINE_TO": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_path_cmd_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_PATH_CMD_CURVE_TO": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_path_cmd_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_PATH_CMD_QUAD_TO": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_path_cmd_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_PATH_CMD_ARC_TO": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_path_cmd_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_PATH_CMD_CLOSE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_path_cmd_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_attr_value_type_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_value_type_t",
+      "kind": "enum"
+    },
+    "LV_SVG_ATTR_VALUE_DATA": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_value_type_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_VALUE_PTR": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_value_type_t",
+      "kind": "enumvalue"
+    },
+    "_lv_svg_attr_value_class_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_value_class_t",
+      "kind": "enum"
+    },
+    "LV_SVG_ATTR_VALUE_CLASS_NONE": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_value_class_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_VALUE_CLASS_INITIAL": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_value_class_t",
+      "kind": "enumvalue"
+    },
+    "LV_SVG_ATTR_VALUE_CLASS_INHERIT": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_attr_value_class_t",
+      "kind": "enumvalue"
+    },
+    "lv_svg_point_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_point_t",
+      "kind": "struct"
+    },
+    "lv_svg_matrix_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_matrix_t",
+      "kind": "struct"
+    },
+    "lv_svg_attr_value_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_attr_value_t",
+      "kind": "struct"
+    },
+    "lv_svg_attr_values_list_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_attr_values_list_t",
+      "kind": "struct"
+    },
+    "lv_svg_attr_path_value_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_attr_path_value_t",
+      "kind": "struct"
+    },
+    "lv_svg_attr_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_attr_t",
+      "kind": "struct"
+    },
+    "_lv_svg_node_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "_lv_svg_node_t",
+      "kind": "struct"
+    },
+    "lv_svg_tag_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_tag_t",
+      "kind": "typedef"
+    },
+    "lv_svg_attr_type_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_attr_type_t",
+      "kind": "typedef"
+    },
+    "lv_svg_transform_type_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_transform_type_t",
+      "kind": "typedef"
+    },
+    "lv_svg_aspect_ratio_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_aspect_ratio_t",
+      "kind": "typedef"
+    },
+    "lv_svg_color_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_color_t",
+      "kind": "typedef"
+    },
+    "lv_svg_fill_rule_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_fill_rule_t",
+      "kind": "typedef"
+    },
+    "lv_svg_line_cap_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_line_cap_t",
+      "kind": "typedef"
+    },
+    "lv_svg_line_join_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_line_join_t",
+      "kind": "typedef"
+    },
+    "lv_svg_gradient_units_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_gradient_units_t",
+      "kind": "typedef"
+    },
+    "lv_svg_attr_value_type_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_attr_value_type_t",
+      "kind": "typedef"
+    },
+    "lv_svg_attr_value_class_t": {
+      "path": "api/private/image/svg/lv_svg_private_h",
+      "anchor": "lv_svg_attr_value_class_t",
+      "kind": "typedef"
+    },
     "lv_svg_render.h": {
       "path": "api/private/image/svg/lv_svg_render_h",
       "anchor": "",
@@ -41396,9 +41196,9 @@
       "anchor": "_lv_svg_render_class",
       "kind": "struct"
     },
-    "_lv_svg_render_hal": {
+    "lv_svg_render_hal_t": {
       "path": "api/private/image/svg/lv_svg_render_h",
-      "anchor": "_lv_svg_render_hal",
+      "anchor": "lv_svg_render_hal_t",
       "kind": "struct"
     },
     "lv_svg_render_obj_t": {
@@ -41409,11 +41209,6 @@
     "lv_svg_render_class": {
       "path": "api/private/image/svg/lv_svg_render_h",
       "anchor": "lv_svg_render_class",
-      "kind": "typedef"
-    },
-    "lv_svg_render_hal_t": {
-      "path": "api/private/image/svg/lv_svg_render_h",
-      "anchor": "lv_svg_render_hal_t",
       "kind": "typedef"
     },
     "LV_SVG_RENDER_OBJ": {
@@ -42796,6 +42591,131 @@
       "anchor": "lv_area_is_equal",
       "kind": "function"
     },
+    "lv_array.h": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_array_init": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_init",
+      "kind": "function"
+    },
+    "lv_array_init_from_buf": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_init_from_buf",
+      "kind": "function"
+    },
+    "lv_array_resize": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_resize",
+      "kind": "function"
+    },
+    "lv_array_deinit": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_deinit",
+      "kind": "function"
+    },
+    "lv_array_size": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_size",
+      "kind": "function"
+    },
+    "lv_array_capacity": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_capacity",
+      "kind": "function"
+    },
+    "lv_array_is_empty": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_is_empty",
+      "kind": "function"
+    },
+    "lv_array_is_full": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_is_full",
+      "kind": "function"
+    },
+    "lv_array_copy": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_copy",
+      "kind": "function"
+    },
+    "lv_array_clear": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_clear",
+      "kind": "function"
+    },
+    "lv_array_shrink": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_shrink",
+      "kind": "function"
+    },
+    "lv_array_remove": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_remove",
+      "kind": "function"
+    },
+    "lv_array_remove_unordered": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_remove_unordered",
+      "kind": "function"
+    },
+    "lv_array_erase": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_erase",
+      "kind": "function"
+    },
+    "lv_array_concat": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_concat",
+      "kind": "function"
+    },
+    "lv_array_push_back": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_push_back",
+      "kind": "function"
+    },
+    "lv_array_assign": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_assign",
+      "kind": "function"
+    },
+    "lv_array_at": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_at",
+      "kind": "function"
+    },
+    "lv_array_front": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_front",
+      "kind": "function"
+    },
+    "lv_array_back": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_back",
+      "kind": "function"
+    },
+    "_lv_array_t": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "_lv_array_t",
+      "kind": "struct"
+    },
+    "lv_array_t": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "lv_array_t",
+      "kind": "typedef"
+    },
+    "LV_ARRAY_DEFAULT_CAPACITY": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "LV_ARRAY_DEFAULT_CAPACITY",
+      "kind": "macro"
+    },
+    "LV_ARRAY_DEFAULT_SHRINK_RATIO": {
+      "path": "api/private/misc/lv_array_h",
+      "anchor": "LV_ARRAY_DEFAULT_SHRINK_RATIO",
+      "kind": "macro"
+    },
     "lv_bidi_private.h": {
       "path": "api/private/misc/lv_bidi_private_h",
       "anchor": "",
@@ -42969,6 +42889,11 @@
     "_lv_event_t": {
       "path": "api/private/misc/lv_event_private_h",
       "anchor": "_lv_event_t",
+      "kind": "struct"
+    },
+    "_lv_event_list_t": {
+      "path": "api/private/misc/lv_event_private_h",
+      "anchor": "_lv_event_list_t",
       "kind": "struct"
     },
     "lv_iter_private.h": {
@@ -43480,6 +43405,91 @@
       "path": "api/private/misc/lv_timer_private_h",
       "anchor": "lv_timer_state_t",
       "kind": "struct"
+    },
+    "lv_tree.h": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_tree_node_create": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "lv_tree_node_create",
+      "kind": "function"
+    },
+    "lv_tree_node_delete": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "lv_tree_node_delete",
+      "kind": "function"
+    },
+    "lv_tree_walk": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "lv_tree_walk",
+      "kind": "function"
+    },
+    "_lv_tree_walk_mode_t": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "_lv_tree_walk_mode_t",
+      "kind": "enum"
+    },
+    "LV_TREE_WALK_PRE_ORDER": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "_lv_tree_walk_mode_t",
+      "kind": "enumvalue"
+    },
+    "LV_TREE_WALK_POST_ORDER": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "_lv_tree_walk_mode_t",
+      "kind": "enumvalue"
+    },
+    "_lv_tree_class_t": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "_lv_tree_class_t",
+      "kind": "struct"
+    },
+    "_lv_tree_node_t": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "_lv_tree_node_t",
+      "kind": "struct"
+    },
+    "lv_tree_constructor_cb_t": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "lv_tree_constructor_cb_t",
+      "kind": "typedef"
+    },
+    "lv_tree_destructor_cb_t": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "lv_tree_destructor_cb_t",
+      "kind": "typedef"
+    },
+    "lv_tree_walk_mode_t": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "lv_tree_walk_mode_t",
+      "kind": "typedef"
+    },
+    "lv_tree_traverse_cb_t": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "lv_tree_traverse_cb_t",
+      "kind": "typedef"
+    },
+    "lv_tree_before_cb_t": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "lv_tree_before_cb_t",
+      "kind": "typedef"
+    },
+    "lv_tree_after_cb_t": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "lv_tree_after_cb_t",
+      "kind": "typedef"
+    },
+    "LV_TREE_NODE": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "LV_TREE_NODE",
+      "kind": "macro"
+    },
+    "lv_tree_node_class": {
+      "path": "api/private/misc/lv_tree_h",
+      "anchor": "lv_tree_node_class",
+      "kind": "variable"
     },
     "lv_utils.h": {
       "path": "api/private/misc/lv_utils_h",

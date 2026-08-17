@@ -3,6 +3,7 @@
   "pages": [
     "lv_svg_decoder_h",
     "lv_svg_parser_h",
+    "lv_svg_private_h",
     "lv_svg_render_h",
     "lv_svg_token_h"
   ]

@@ -1,4 +1,4 @@
-```xml title="examples/widgets/arc/lv_example_arc_rotation.xml" source="https://github.com/lvgl/lvgl/blob/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/examples/widgets/arc/lv_example_arc_rotation.xml"
+```xml title="examples/widgets/arc/lv_example_arc_rotation.xml" source="https://github.com/lvgl/lvgl/blob/86a797e05bff960672b81b41f3326896f289041e/examples/widgets/arc/lv_example_arc_rotation.xml"
 <!--
  @title Arc rotation offset
  @brief Rotate the whole dial around its center.

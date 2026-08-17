@@ -5,6 +5,7 @@
     "lv_anim_private_h",
     "lv_anim_timeline_private_h",
     "lv_area_private_h",
+    "lv_array_h",
     "lv_bidi_private_h",
     "lv_circle_buf_private_h",
     "lv_event_private_h",
@@ -15,6 +16,7 @@
     "lv_text_ap_h",
     "lv_text_private_h",
     "lv_timer_private_h",
+    "lv_tree_h",
     "lv_utils_h"
   ]
 }

@@ -1,4 +1,4 @@
-```xml title="examples/widgets/textarea/lv_example_textarea_cursor.xml" source="https://github.com/lvgl/lvgl/blob/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/examples/widgets/textarea/lv_example_textarea_cursor.xml"
+```xml title="examples/widgets/textarea/lv_example_textarea_cursor.xml" source="https://github.com/lvgl/lvgl/blob/86a797e05bff960672b81b41f3326896f289041e/examples/widgets/textarea/lv_example_textarea_cursor.xml"
 <!--
  @title Text area cursor styling
  @brief Style the cursor part as a solid block or a thin bar.

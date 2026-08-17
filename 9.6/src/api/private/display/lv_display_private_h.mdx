@@ -92,7 +92,7 @@ api:
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_INV_BUF_SIZE" file="private/display/lv_display_private.h" line={26} url="https://github.com/lvgl/lvgl/tree/d82bb4f4ac8aeb63ec62a08128f0d25a7f9eb73d/src/display/lv_display_private.h#L26">
+<ApiMember kind="macro" name="LV_INV_BUF_SIZE" file="private/display/lv_display_private.h" line={27} url="https://github.com/lvgl/lvgl/tree/86a797e05bff960672b81b41f3326896f289041e/src/display/lv_display_private.h#L27">
 
 ### LV_INV_BUF_SIZE
 
@@ -108,6 +108,7 @@ Buffer size for invalid areas
 ## Dependencies
 
 <FileIncludes
-  includes={["lvgl_public.h", "lv_sysmon_private.h"]}
+  includes={["lvgl_public.h", "lv_event_private.h", "lv_sysmon_private.h"]}
   includedBy={["lv_draw_ppa.h", "lv_draw_ppa_private.h", "lv_draw_pxp.h", "lvgl_private.h"]}
+  transitiveIncludes={["lv_array.h"]}
 />
