@@ -2,12 +2,35 @@
 title: lv_draw_private.h
 description: API reference for lv_draw_private.h
 api:
+  functions: [lv_draw_cleanup_task]
   structs: [_lv_draw_task_t, _lv_draw_mask_t, _lv_draw_unit_t, lv_draw_global_info_t]
 ---
 
 <RelatedHeaders name="lv_draw.h" isPrivate={true} />
 
-<ApiSummary structs={4} />
+<ApiSummary functions={1} structs={4} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_cleanup_task" file="private/draw/lv_draw_private.h" line={213} url="https://github.com/lvgl/lvgl/tree/023e690a48803bb1dee2eb43fa9bb6b26f5da87d/src/draw/lv_draw_private.h#L213">
+
+### lv_draw_cleanup_task
+
+Free a draw task and everything it owns: any descriptor-owned allocation (line points, locally-copied label text), and, for a `LV_DRAW_TASK_TYPE_LAYER` task, the sub-layer it targets (its draw buffer, layer-memory accounting and `LV_EVENT_CHILD_DELETED`/`layer_deinit` bookkeeping included). Used both by the normal dispatch path and to unwind a redraw that is being abandoned.
+
+```c
+void lv_draw_cleanup_task(lv_draw_task_t *t, lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task to free |
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | display the task belongs to, needed to release a sub-layer. May be `NULL`, in which case sub-layer bookkeeping is skipped. |
+
+
+</ApiMember>
 
 ## Structs
 
