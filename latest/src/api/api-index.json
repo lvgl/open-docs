@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-18T09:18:22.460Z",
-    "symbolCount": 8880
+    "generatedAt": "2026-08-18T15:34:22.786Z",
+    "symbolCount": 8881
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2070,6 +2070,11 @@
       "path": "api/public/api_map/lv_api_map_v9_5_h",
       "anchor": "",
       "kind": "header"
+    },
+    "lv_disp_rotation_t": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "lv_disp_rotation_t",
+      "kind": "typedef"
     },
     "lv_display_delete_event": {
       "path": "api/public/api_map/lv_api_map_v9_5_h",
