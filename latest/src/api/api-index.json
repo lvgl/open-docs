@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-17T20:11:16.405Z",
-    "symbolCount": 8876
+    "generatedAt": "2026-08-18T06:37:23.790Z",
+    "symbolCount": 8880
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -14321,6 +14321,11 @@
       "anchor": "lv_display_rotate_point",
       "kind": "function"
     },
+    "lv_display_rotate_point_ccw": {
+      "path": "api/public/display/lv_display_h",
+      "anchor": "lv_display_rotate_point_ccw",
+      "kind": "function"
+    },
     "lv_display_get_draw_buf_size": {
       "path": "api/public/display/lv_display_h",
       "anchor": "lv_display_get_draw_buf_size",
@@ -23909,6 +23914,21 @@
     "lv_indev_set_key_remap_cb": {
       "path": "api/public/indev/lv_indev_h",
       "anchor": "lv_indev_set_key_remap_cb",
+      "kind": "function"
+    },
+    "lv_indev_set_ccw": {
+      "path": "api/public/indev/lv_indev_h",
+      "anchor": "lv_indev_set_ccw",
+      "kind": "function"
+    },
+    "lv_indev_clear_ccw": {
+      "path": "api/public/indev/lv_indev_h",
+      "anchor": "lv_indev_clear_ccw",
+      "kind": "function"
+    },
+    "lv_indev_get_ccw": {
+      "path": "api/public/indev/lv_indev_h",
+      "anchor": "lv_indev_get_ccw",
       "kind": "function"
     },
     "lv_indev_set_external_data": {
