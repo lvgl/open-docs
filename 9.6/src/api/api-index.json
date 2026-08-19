@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-18T15:34:22.786Z",
-    "symbolCount": 8881
+    "generatedAt": "2026-08-19T23:23:09.624Z",
+    "symbolCount": 8894
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2899,6 +2899,71 @@
     "LV_DRAW_OPENGLES_TEXTURE_CACHE_COUNT": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_OPENGLES_TEXTURE_CACHE_COUNT",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_SCROLL_LIMIT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_SCROLL_LIMIT",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_SCROLL_THROW": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_SCROLL_THROW",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_SCROLL_ELASTIC_FACTOR": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_SCROLL_ELASTIC_FACTOR",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_LONG_PRESS_TIME": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_LONG_PRESS_TIME",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_LONG_PRESS_REP_TIME": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_LONG_PRESS_REP_TIME",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_DOUBLE_CLICK_TIME": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_DOUBLE_CLICK_TIME",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_GESTURE_LIMIT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_GESTURE_LIMIT",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_GESTURE_MIN_VELOCITY": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_GESTURE_MIN_VELOCITY",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_ROTARY_SENSITIVITY": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_ROTARY_SENSITIVITY",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_GESTURE_PINCH_DOWN_THRESHOLD": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_GESTURE_PINCH_DOWN_THRESHOLD",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_GESTURE_PINCH_UP_THRESHOLD": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_GESTURE_PINCH_UP_THRESHOLD",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_GESTURE_PINCH_MAX_INITIAL_SCALE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_GESTURE_PINCH_MAX_INITIAL_SCALE",
+      "kind": "macro"
+    },
+    "LV_INDEV_DEF_GESTURE_ROTATION_THRESHOLD": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_INDEV_DEF_GESTURE_ROTATION_THRESHOLD",
       "kind": "macro"
     },
     "LV_OBJ_STYLE_CACHE": {
