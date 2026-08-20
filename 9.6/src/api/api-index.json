@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-20T13:01:29.371Z",
-    "symbolCount": 8894
+    "generatedAt": "2026-08-20T13:38:45.767Z",
+    "symbolCount": 8901
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -30646,10 +30646,45 @@
       "anchor": "lv_qrcode_set_data",
       "kind": "function"
     },
+    "lv_qrcode_render": {
+      "path": "api/public/widgets/lv_qrcode_h",
+      "anchor": "lv_qrcode_render",
+      "kind": "function"
+    },
     "lv_qrcode_set_quiet_zone": {
       "path": "api/public/widgets/lv_qrcode_h",
       "anchor": "lv_qrcode_set_quiet_zone",
       "kind": "function"
+    },
+    "lv_qrcode_set_update_mode": {
+      "path": "api/public/widgets/lv_qrcode_h",
+      "anchor": "lv_qrcode_set_update_mode",
+      "kind": "function"
+    },
+    "lv_qrcode_get_update_mode": {
+      "path": "api/public/widgets/lv_qrcode_h",
+      "anchor": "lv_qrcode_get_update_mode",
+      "kind": "function"
+    },
+    "lv_qrcode_get_render_failed": {
+      "path": "api/public/widgets/lv_qrcode_h",
+      "anchor": "lv_qrcode_get_render_failed",
+      "kind": "function"
+    },
+    "lv_qrcode_update_mode_t": {
+      "path": "api/public/widgets/lv_qrcode_h",
+      "anchor": "lv_qrcode_update_mode_t",
+      "kind": "enum"
+    },
+    "LV_QRCODE_UPDATE_MODE_IMMEDIATE": {
+      "path": "api/public/widgets/lv_qrcode_h",
+      "anchor": "lv_qrcode_update_mode_t",
+      "kind": "enumvalue"
+    },
+    "LV_QRCODE_UPDATE_MODE_DEFERRED": {
+      "path": "api/public/widgets/lv_qrcode_h",
+      "anchor": "lv_qrcode_update_mode_t",
+      "kind": "enumvalue"
     },
     "lv_qrcode_class": {
       "path": "api/public/widgets/lv_qrcode_h",
