@@ -12,7 +12,7 @@ api:
 <ApiTabs items={["Getters (2)","Other (3)"]}>
 <ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_vg_lite_stroke_get" file="private/draw/vg_lite/lv_vg_lite_stroke.h" line={58} url="https://github.com/lvgl/lvgl/tree/95421b26c59c6e94d0a562e41f37bf7bedca6358/src/draw/vg_lite/lv_vg_lite_stroke.h#L58">
+<ApiMember kind="function" name="lv_vg_lite_stroke_get" file="private/draw/vg_lite/lv_vg_lite_stroke.h" line={59} url="https://github.com/lvgl/lvgl/tree/06ca93c2429cc4ce5cb9f8bb36d584f7b3ddbd2e/src/draw/vg_lite/lv_vg_lite_stroke.h#L59">
 
 ### lv_vg_lite_stroke_get
 
@@ -35,7 +35,7 @@ lv_cache_entry_t * lv_vg_lite_stroke_get(struct _lv_draw_vg_lite_unit_t *unit, s
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_vg_lite_stroke_get_path" file="private/draw/vg_lite/lv_vg_lite_stroke.h" line={67} url="https://github.com/lvgl/lvgl/tree/95421b26c59c6e94d0a562e41f37bf7bedca6358/src/draw/vg_lite/lv_vg_lite_stroke.h#L67">
+<ApiMember kind="function" name="lv_vg_lite_stroke_get_path" file="private/draw/vg_lite/lv_vg_lite_stroke.h" line={68} url="https://github.com/lvgl/lvgl/tree/06ca93c2429cc4ce5cb9f8bb36d584f7b3ddbd2e/src/draw/vg_lite/lv_vg_lite_stroke.h#L68">
 
 ### lv_vg_lite_stroke_get_path
 
@@ -59,7 +59,7 @@ struct _lv_vg_lite_path_t * lv_vg_lite_stroke_get_path(lv_cache_entry_t *cache_e
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_vg_lite_stroke_init" file="private/draw/vg_lite/lv_vg_lite_stroke.h" line={43} url="https://github.com/lvgl/lvgl/tree/95421b26c59c6e94d0a562e41f37bf7bedca6358/src/draw/vg_lite/lv_vg_lite_stroke.h#L43">
+<ApiMember kind="function" name="lv_vg_lite_stroke_init" file="private/draw/vg_lite/lv_vg_lite_stroke.h" line={44} url="https://github.com/lvgl/lvgl/tree/06ca93c2429cc4ce5cb9f8bb36d584f7b3ddbd2e/src/draw/vg_lite/lv_vg_lite_stroke.h#L44">
 
 ### lv_vg_lite_stroke_init
 
@@ -74,12 +74,12 @@ void lv_vg_lite_stroke_init(struct _lv_draw_vg_lite_unit_t *unit, uint32_t cache
 | Name | Type | Description |
 |------|------|-------------|
 | `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> | pointer to the unit |
-| `cache_cnt` | `uint32_t` |  |
+| `cache_cnt` | `uint32_t` | maximum amount of entries in the cache at the same time |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_vg_lite_stroke_deinit" file="private/draw/vg_lite/lv_vg_lite_stroke.h" line={49} url="https://github.com/lvgl/lvgl/tree/95421b26c59c6e94d0a562e41f37bf7bedca6358/src/draw/vg_lite/lv_vg_lite_stroke.h#L49">
+<ApiMember kind="function" name="lv_vg_lite_stroke_deinit" file="private/draw/vg_lite/lv_vg_lite_stroke.h" line={50} url="https://github.com/lvgl/lvgl/tree/06ca93c2429cc4ce5cb9f8bb36d584f7b3ddbd2e/src/draw/vg_lite/lv_vg_lite_stroke.h#L50">
 
 ### lv_vg_lite_stroke_deinit
 
@@ -98,7 +98,7 @@ void lv_vg_lite_stroke_deinit(struct _lv_draw_vg_lite_unit_t *unit)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_vg_lite_stroke_drop" file="private/draw/vg_lite/lv_vg_lite_stroke.h" line={74} url="https://github.com/lvgl/lvgl/tree/95421b26c59c6e94d0a562e41f37bf7bedca6358/src/draw/vg_lite/lv_vg_lite_stroke.h#L74">
+<ApiMember kind="function" name="lv_vg_lite_stroke_drop" file="private/draw/vg_lite/lv_vg_lite_stroke.h" line={75} url="https://github.com/lvgl/lvgl/tree/06ca93c2429cc4ce5cb9f8bb36d584f7b3ddbd2e/src/draw/vg_lite/lv_vg_lite_stroke.h#L75">
 
 ### lv_vg_lite_stroke_drop
 
@@ -113,7 +113,7 @@ void lv_vg_lite_stroke_drop(struct _lv_draw_vg_lite_unit_t *unit, lv_cache_entry
 | Name | Type | Description |
 |------|------|-------------|
 | `unit` | <ApiLink name="_lv_draw_vg_lite_unit_t" display="struct _lv_draw_vg_lite_unit_t *" /> | pointer to the unit |
-| `cache_entry` | <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> |  |
+| `cache_entry` | <ApiLink name="lv_cache_entry_t" display="lv_cache_entry_t *" /> | pointer to the stroke cache entry |
 
 
 </ApiMember>

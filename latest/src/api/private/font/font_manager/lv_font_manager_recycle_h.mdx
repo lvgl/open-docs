@@ -13,7 +13,7 @@ api:
 <ApiTabs items={["Setters (1)","Getters (1)","Other (3)"]}>
 <ApiTab value="Setters (1)">
 
-<ApiMember kind="function" name="lv_font_manager_recycle_set_reuse" file="private/font/font_manager/lv_font_manager_recycle.h" line={65} url="https://github.com/lvgl/lvgl/tree/95421b26c59c6e94d0a562e41f37bf7bedca6358/src/font/font_manager/lv_font_manager_recycle.h#L65">
+<ApiMember kind="function" name="lv_font_manager_recycle_set_reuse" file="private/font/font_manager/lv_font_manager_recycle.h" line={66} url="https://github.com/lvgl/lvgl/tree/06ca93c2429cc4ce5cb9f8bb36d584f7b3ddbd2e/src/font/font_manager/lv_font_manager_recycle.h#L66">
 
 ### lv_font_manager_recycle_set_reuse
 
@@ -28,8 +28,8 @@ void lv_font_manager_recycle_set_reuse(lv_font_manager_recycle_t *manager, lv_fo
 | Name | Type | Description |
 |------|------|-------------|
 | `manager` | <ApiLink name="lv_font_manager_recycle_t" display="lv_font_manager_recycle_t *" /> | pointer to font recycle manager. |
-| `font` | <ApiLink name="lv_font_t" display="lv_font_t *" /> |  |
-| `ft_info` | <ApiLink name="lv_font_info_t" display="const lv_font_info_t *" /> | font info. |
+| `font` | <ApiLink name="lv_font_t" display="lv_font_t *" /> | pointer to the font to reuse |
+| `ft_info` | <ApiLink name="lv_font_info_t" display="const lv_font_info_t *" /> | font info |
 
 
 </ApiMember>
@@ -37,7 +37,7 @@ void lv_font_manager_recycle_set_reuse(lv_font_manager_recycle_t *manager, lv_fo
 </ApiTab>
 <ApiTab value="Getters (1)">
 
-<ApiMember kind="function" name="lv_font_manager_recycle_get_reuse" file="private/font/font_manager/lv_font_manager_recycle.h" line={58} url="https://github.com/lvgl/lvgl/tree/95421b26c59c6e94d0a562e41f37bf7bedca6358/src/font/font_manager/lv_font_manager_recycle.h#L58">
+<ApiMember kind="function" name="lv_font_manager_recycle_get_reuse" file="private/font/font_manager/lv_font_manager_recycle.h" line={58} url="https://github.com/lvgl/lvgl/tree/06ca93c2429cc4ce5cb9f8bb36d584f7b3ddbd2e/src/font/font_manager/lv_font_manager_recycle.h#L58">
 
 ### lv_font_manager_recycle_get_reuse
 
@@ -62,7 +62,7 @@ lv_font_t * lv_font_manager_recycle_get_reuse(lv_font_manager_recycle_t *manager
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_font_manager_recycle_create" file="private/font/font_manager/lv_font_manager_recycle.h" line={44} url="https://github.com/lvgl/lvgl/tree/95421b26c59c6e94d0a562e41f37bf7bedca6358/src/font/font_manager/lv_font_manager_recycle.h#L44">
+<ApiMember kind="function" name="lv_font_manager_recycle_create" file="private/font/font_manager/lv_font_manager_recycle.h" line={44} url="https://github.com/lvgl/lvgl/tree/06ca93c2429cc4ce5cb9f8bb36d584f7b3ddbd2e/src/font/font_manager/lv_font_manager_recycle.h#L44">
 
 ### lv_font_manager_recycle_create
 
@@ -83,7 +83,7 @@ lv_font_manager_recycle_t * lv_font_manager_recycle_create(uint32_t max_size)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_font_manager_recycle_delete" file="private/font/font_manager/lv_font_manager_recycle.h" line={50} url="https://github.com/lvgl/lvgl/tree/95421b26c59c6e94d0a562e41f37bf7bedca6358/src/font/font_manager/lv_font_manager_recycle.h#L50">
+<ApiMember kind="function" name="lv_font_manager_recycle_delete" file="private/font/font_manager/lv_font_manager_recycle.h" line={50} url="https://github.com/lvgl/lvgl/tree/06ca93c2429cc4ce5cb9f8bb36d584f7b3ddbd2e/src/font/font_manager/lv_font_manager_recycle.h#L50">
 
 ### lv_font_manager_recycle_delete
 
@@ -102,7 +102,7 @@ void lv_font_manager_recycle_delete(lv_font_manager_recycle_t *manager)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_font_recycle_remove_fonts" file="private/font/font_manager/lv_font_manager_recycle.h" line={73} url="https://github.com/lvgl/lvgl/tree/95421b26c59c6e94d0a562e41f37bf7bedca6358/src/font/font_manager/lv_font_manager_recycle.h#L73">
+<ApiMember kind="function" name="lv_font_recycle_remove_fonts" file="private/font/font_manager/lv_font_manager_recycle.h" line={74} url="https://github.com/lvgl/lvgl/tree/06ca93c2429cc4ce5cb9f8bb36d584f7b3ddbd2e/src/font/font_manager/lv_font_manager_recycle.h#L74">
 
 ### lv_font_recycle_remove_fonts
 
@@ -126,7 +126,7 @@ void lv_font_recycle_remove_fonts(lv_font_manager_recycle_t *manager, const char
 </ApiTabs>
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_font_manager_recycle_t" file="private/font/font_manager/lv_font_manager_recycle.h" line={33} url="https://github.com/lvgl/lvgl/tree/95421b26c59c6e94d0a562e41f37bf7bedca6358/src/font/font_manager/lv_font_manager_recycle.h#L33">
+<ApiMember kind="typedef" name="lv_font_manager_recycle_t" file="private/font/font_manager/lv_font_manager_recycle.h" line={33} url="https://github.com/lvgl/lvgl/tree/06ca93c2429cc4ce5cb9f8bb36d584f7b3ddbd2e/src/font/font_manager/lv_font_manager_recycle.h#L33">
 
 ### lv_font_manager_recycle_t
 
