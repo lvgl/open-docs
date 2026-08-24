@@ -1,4 +1,4 @@
-```xml title="examples/layouts/grid/lv_example_grid_fr.xml" source="https://github.com/lvgl/lvgl/blob/01b1bcaf948b749b0decdb852dc4afcb27a328ef/examples/layouts/grid/lv_example_grid_fr.xml"
+```xml title="examples/layouts/grid/lv_example_grid_fr.xml" source="https://github.com/lvgl/lvgl/blob/224c7dc61f45f7e97becf23ad629d412df35405f/examples/layouts/grid/lv_example_grid_fr.xml"
 <!--
  @title Grid FR units
  @brief Share remaining space across tracks with fr() weights.

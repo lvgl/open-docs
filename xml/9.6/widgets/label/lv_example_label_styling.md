@@ -1,4 +1,4 @@
-```xml title="examples/widgets/label/lv_example_label_styling.xml" source="https://github.com/lvgl/lvgl/blob/01b1bcaf948b749b0decdb852dc4afcb27a328ef/examples/widgets/label/lv_example_label_styling.xml"
+```xml title="examples/widgets/label/lv_example_label_styling.xml" source="https://github.com/lvgl/lvgl/blob/224c7dc61f45f7e97becf23ad629d412df35405f/examples/widgets/label/lv_example_label_styling.xml"
 <!--
  @title Label styling
  @brief Decorate labels with background, padding, border, outline, and shadow.

@@ -1,4 +1,4 @@
-```xml title="examples/layouts/grid/lv_example_grid_internal_padding.xml" source="https://github.com/lvgl/lvgl/blob/01b1bcaf948b749b0decdb852dc4afcb27a328ef/examples/layouts/grid/lv_example_grid_internal_padding.xml"
+```xml title="examples/layouts/grid/lv_example_grid_internal_padding.xml" source="https://github.com/lvgl/lvgl/blob/224c7dc61f45f7e97becf23ad629d412df35405f/examples/layouts/grid/lv_example_grid_internal_padding.xml"
 <!--
  @title Grid internal padding
  @brief Set horizontal and vertical gaps between grid cells.

@@ -1,4 +1,4 @@
-```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_button_ctrl.xml" source="https://github.com/lvgl/lvgl/blob/01b1bcaf948b749b0decdb852dc4afcb27a328ef/examples/widgets/buttonmatrix/lv_example_buttonmatrix_button_ctrl.xml"
+```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_button_ctrl.xml" source="https://github.com/lvgl/lvgl/blob/224c7dc61f45f7e97becf23ad629d412df35405f/examples/widgets/buttonmatrix/lv_example_buttonmatrix_button_ctrl.xml"
 <!--
  @title Button matrix per-button control flags
  @brief Apply checkable, checked, disabled, and hidden flags via `ctrl_map`.

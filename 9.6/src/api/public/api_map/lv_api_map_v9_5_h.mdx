@@ -3,14 +3,14 @@ title: lv_api_map_v9_5.h
 description: API reference for lv_api_map_v9_5.h
 api:
   typedefs: [lv_disp_rotation_t]
-  macros: [lv_display_delete_event]
+  macros: [lv_display_delete_event, lv_observer_remove]
 ---
 
-<ApiSummary typedefs={1} macros={1} />
+<ApiSummary typedefs={1} macros={2} />
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_disp_rotation_t" file="public/api_map/lv_api_map_v9_5.h" line={28} url="https://github.com/lvgl/lvgl/tree/01b1bcaf948b749b0decdb852dc4afcb27a328ef/include/lvgl/api_map/lv_api_map_v9_5.h#L28">
+<ApiMember kind="typedef" name="lv_disp_rotation_t" file="public/api_map/lv_api_map_v9_5.h" line={28} url="https://github.com/lvgl/lvgl/tree/224c7dc61f45f7e97becf23ad629d412df35405f/include/lvgl/api_map/lv_api_map_v9_5.h#L28">
 
 ### lv_disp_rotation_t
 
@@ -23,12 +23,23 @@ typedef lv_display_rotation_t lv_disp_rotation_t
 
 ## Macros
 
-<ApiMember kind="macro" name="lv_display_delete_event" file="public/api_map/lv_api_map_v9_5.h" line={38} url="https://github.com/lvgl/lvgl/tree/01b1bcaf948b749b0decdb852dc4afcb27a328ef/include/lvgl/api_map/lv_api_map_v9_5.h#L38">
+<ApiMember kind="macro" name="lv_display_delete_event" file="public/api_map/lv_api_map_v9_5.h" line={38} url="https://github.com/lvgl/lvgl/tree/224c7dc61f45f7e97becf23ad629d412df35405f/include/lvgl/api_map/lv_api_map_v9_5.h#L38">
 
 ### lv_display_delete_event
 
 ```c
 #define lv_display_delete_event lv_display_remove_event
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_observer_remove" file="public/api_map/lv_api_map_v9_5.h" line={39} url="https://github.com/lvgl/lvgl/tree/224c7dc61f45f7e97becf23ad629d412df35405f/include/lvgl/api_map/lv_api_map_v9_5.h#L39">
+
+### lv_observer_remove
+
+```c
+#define lv_observer_remove lv_observer_delete
 ```
 
 

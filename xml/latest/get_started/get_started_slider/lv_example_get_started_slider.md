@@ -1,4 +1,4 @@
-```xml title="examples/get_started/get_started_slider/lv_example_get_started_slider.xml" source="https://github.com/lvgl/lvgl/blob/01b1bcaf948b749b0decdb852dc4afcb27a328ef/examples/get_started/get_started_slider/lv_example_get_started_slider.xml"
+```xml title="examples/get_started/get_started_slider/lv_example_get_started_slider.xml" source="https://github.com/lvgl/lvgl/blob/224c7dc61f45f7e97becf23ad629d412df35405f/examples/get_started/get_started_slider/lv_example_get_started_slider.xml"
 <!--
  @title Slider with live value
  @brief Mirror a slider's value into a label through a shared subject.

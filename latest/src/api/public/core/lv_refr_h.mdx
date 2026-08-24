@@ -11,7 +11,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_refr_now" file="public/core/lv_refr.h" line={51} url="https://github.com/lvgl/lvgl/tree/01b1bcaf948b749b0decdb852dc4afcb27a328ef/include/lvgl/core/lv_refr.h#L51">
+<ApiMember kind="function" name="lv_refr_now" file="public/core/lv_refr.h" line={51} url="https://github.com/lvgl/lvgl/tree/224c7dc61f45f7e97becf23ad629d412df35405f/include/lvgl/core/lv_refr.h#L51">
 
 ### lv_refr_now
 
@@ -25,12 +25,12 @@ void lv_refr_now(lv_display_t *disp)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display to refresh. NULL to refresh all displays. |
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to display to refresh. **Optional:** may be `NULL`. When NULL all displays are refreshed. |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_redraw" file="public/core/lv_refr.h" line={58} url="https://github.com/lvgl/lvgl/tree/01b1bcaf948b749b0decdb852dc4afcb27a328ef/include/lvgl/core/lv_refr.h#L58">
+<ApiMember kind="function" name="lv_obj_redraw" file="public/core/lv_refr.h" line={58} url="https://github.com/lvgl/lvgl/tree/224c7dc61f45f7e97becf23ad629d412df35405f/include/lvgl/core/lv_refr.h#L58">
 
 ### lv_obj_redraw
 
@@ -50,7 +50,7 @@ void lv_obj_redraw(lv_layer_t *layer, lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_display_refr_timer" file="public/core/lv_refr.h" line={64} url="https://github.com/lvgl/lvgl/tree/01b1bcaf948b749b0decdb852dc4afcb27a328ef/include/lvgl/core/lv_refr.h#L64">
+<ApiMember kind="function" name="lv_display_refr_timer" file="public/core/lv_refr.h" line={64} url="https://github.com/lvgl/lvgl/tree/224c7dc61f45f7e97becf23ad629d412df35405f/include/lvgl/core/lv_refr.h#L64">
 
 ### lv_display_refr_timer
 
@@ -64,7 +64,7 @@ void lv_display_refr_timer(lv_timer_t *timer)
 
 | Name | Type | Description |
 |------|------|-------------|
-| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to the timer itself, or `NULL` |
+| `timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> | pointer to the timer itself. **Optional:** may be `NULL`. When NULL the default display is refreshed |
 
 
 </ApiMember>
