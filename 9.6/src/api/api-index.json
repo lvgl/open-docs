@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-24T17:15:01.296Z",
-    "symbolCount": 8903
+    "generatedAt": "2026-08-24T17:20:51.062Z",
+    "symbolCount": 8904
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -20899,6 +20899,11 @@
     "lv_libinput_find_devs": {
       "path": "api/public/drivers/indev/lv_libinput_h",
       "anchor": "lv_libinput_find_devs",
+      "kind": "function"
+    },
+    "lv_libinput_clear_devs": {
+      "path": "api/public/drivers/indev/lv_libinput_h",
+      "anchor": "lv_libinput_clear_devs",
       "kind": "function"
     },
     "lv_libinput_create": {
