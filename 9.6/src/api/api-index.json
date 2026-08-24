@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-24T18:10:12.250Z",
-    "symbolCount": 8904
+    "generatedAt": "2026-08-24T18:24:47.080Z",
+    "symbolCount": 8905
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -32870,6 +32870,11 @@
       "path": "api/private/display/lv_display_private_h",
       "anchor": "_lv_display_t",
       "kind": "struct"
+    },
+    "LOG_NULL_DISPLAY_DEPRECATED_MESSAGE": {
+      "path": "api/private/display/lv_display_private_h",
+      "anchor": "LOG_NULL_DISPLAY_DEPRECATED_MESSAGE",
+      "kind": "macro"
     },
     "LV_INV_BUF_SIZE": {
       "path": "api/private/display/lv_display_private_h",

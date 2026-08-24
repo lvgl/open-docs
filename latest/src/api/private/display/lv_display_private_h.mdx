@@ -3,12 +3,12 @@ title: lv_display_private.h
 description: API reference for lv_display_private.h
 api:
   structs: [_lv_display_t]
-  macros: [LV_INV_BUF_SIZE]
+  macros: [LOG_NULL_DISPLAY_DEPRECATED_MESSAGE, LV_INV_BUF_SIZE]
 ---
 
 <RelatedHeaders name="lv_display.h" isPrivate={true} />
 
-<ApiSummary structs={1} macros={1} />
+<ApiSummary structs={1} macros={2} />
 
 ## Structs
 
@@ -92,7 +92,19 @@ api:
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_INV_BUF_SIZE" file="private/display/lv_display_private.h" line={27} url="https://github.com/lvgl/lvgl/tree/72c69ec32d4497e3cdf6d51ea72af98485f28adf/src/display/lv_display_private.h#L27">
+<ApiMember kind="macro" name="LOG_NULL_DISPLAY_DEPRECATED_MESSAGE" file="private/display/lv_display_private.h" line={23} url="https://github.com/lvgl/lvgl/tree/ce0766730a585915bd59e1559c53c181e7fbd9ef/src/display/lv_display_private.h#L23">
+
+### LOG_NULL_DISPLAY_DEPRECATED_MESSAGE
+
+```c
+#define LOG_NULL_DISPLAY_DEPRECATED_MESSAGE() \
+    LV_LOG_DEPRECATED("Calling this function with a NULL display is deprecated. You can retrieve the default display with `lv_display_get_default()`")
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_INV_BUF_SIZE" file="private/display/lv_display_private.h" line={30} url="https://github.com/lvgl/lvgl/tree/ce0766730a585915bd59e1559c53c181e7fbd9ef/src/display/lv_display_private.h#L30">
 
 ### LV_INV_BUF_SIZE
 
