@@ -1,4 +1,4 @@
-```xml title="examples/widgets/dropdown/lv_example_dropdown_direction.xml" source="https://github.com/lvgl/lvgl/blob/b45c1ea5b7eee59f0a01a9af72db59bd7b1ed6cb/examples/widgets/dropdown/lv_example_dropdown_direction.xml"
+```xml title="examples/widgets/dropdown/lv_example_dropdown_direction.xml" source="https://github.com/lvgl/lvgl/blob/b25b1720757b6f59b2c2e5f479b4b794af461c83/examples/widgets/dropdown/lv_example_dropdown_direction.xml"
 <!--
  @title Dropdown open direction
  @brief Open the option list towards a specific edge.
