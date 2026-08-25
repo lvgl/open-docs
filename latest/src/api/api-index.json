@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-24T18:24:47.080Z",
-    "symbolCount": 8905
+    "generatedAt": "2026-08-25T19:28:01.337Z",
+    "symbolCount": 8940
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2319,6 +2319,11 @@
     "LV_DRAW_SW_ASM_RISCV_V": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_SW_ASM_RISCV_V",
+      "kind": "macro"
+    },
+    "LV_DRAW_SW_ASM_SVE2": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DRAW_SW_ASM_SVE2",
       "kind": "macro"
     },
     "LV_DRAW_SW_ASM_CUSTOM": {
@@ -25441,6 +25446,16 @@
       "anchor": "LV_ARRAYLEN",
       "kind": "macro"
     },
+    "LV_RESTRICT": {
+      "path": "api/public/lv_types_h",
+      "anchor": "LV_RESTRICT",
+      "kind": "macro"
+    },
+    "LV_NONNULL": {
+      "path": "api/public/lv_types_h",
+      "anchor": "LV_NONNULL",
+      "kind": "macro"
+    },
     "LV_DEPRECATED": {
       "path": "api/public/lv_types_h",
       "anchor": "LV_DEPRECATED",
@@ -28864,6 +28879,16 @@
     "lv_gltf_get_background_blur": {
       "path": "api/public/widgets/lv_gltf_h",
       "anchor": "lv_gltf_get_background_blur",
+      "kind": "function"
+    },
+    "lv_gltf_set_environment_brightness": {
+      "path": "api/public/widgets/lv_gltf_h",
+      "anchor": "lv_gltf_set_environment_brightness",
+      "kind": "function"
+    },
+    "lv_gltf_get_environment_brightness": {
+      "path": "api/public/widgets/lv_gltf_h",
+      "anchor": "lv_gltf_get_environment_brightness",
       "kind": "function"
     },
     "lv_gltf_set_env_brightness": {
@@ -35394,6 +35419,151 @@
     "LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB888": {
       "path": "api/private/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb888_h",
       "anchor": "LV_DRAW_SW_ARGB8888_PREMULTIPLIED_BLEND_NORMAL_TO_RGB888",
+      "kind": "macro"
+    },
+    "lv_sve2_util.h": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "SVE_0_CONNECT2": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_0_CONNECT2",
+      "kind": "macro"
+    },
+    "SVE_0_CONNECT3": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_0_CONNECT3",
+      "kind": "macro"
+    },
+    "SVE_0_CONNECT4": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_0_CONNECT4",
+      "kind": "macro"
+    },
+    "SVE_0_CONNECT5": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_0_CONNECT5",
+      "kind": "macro"
+    },
+    "SVE_0_CONNECT6": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_0_CONNECT6",
+      "kind": "macro"
+    },
+    "SVE_0_CONNECT7": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_0_CONNECT7",
+      "kind": "macro"
+    },
+    "SVE_0_CONNECT8": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_0_CONNECT8",
+      "kind": "macro"
+    },
+    "SVE_0_CONNECT9": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_0_CONNECT9",
+      "kind": "macro"
+    },
+    "ALT_SVE_CONNECT2": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "ALT_SVE_CONNECT2",
+      "kind": "macro"
+    },
+    "SVE_CONNECT2": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_CONNECT2",
+      "kind": "macro"
+    },
+    "SVE_CONNECT3": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_CONNECT3",
+      "kind": "macro"
+    },
+    "SVE_CONNECT4": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_CONNECT4",
+      "kind": "macro"
+    },
+    "SVE_CONNECT5": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_CONNECT5",
+      "kind": "macro"
+    },
+    "SVE_CONNECT6": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_CONNECT6",
+      "kind": "macro"
+    },
+    "SVE_CONNECT7": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_CONNECT7",
+      "kind": "macro"
+    },
+    "SVE_CONNECT8": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_CONNECT8",
+      "kind": "macro"
+    },
+    "SVE_CONNECT9": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_CONNECT9",
+      "kind": "macro"
+    },
+    "SVE_CONNECT": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_CONNECT",
+      "kind": "macro"
+    },
+    "SVE_VA_NUM_ARGS_IMPL": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_VA_NUM_ARGS_IMPL",
+      "kind": "macro"
+    },
+    "SVE_VA_NUM_ARGS": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_VA_NUM_ARGS",
+      "kind": "macro"
+    },
+    "SVE_SAFE_NAME": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVE_SAFE_NAME",
+      "kind": "macro"
+    },
+    "SVT_PRINT_VECTOR": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVT_PRINT_VECTOR",
+      "kind": "macro"
+    },
+    "SVT_INIT_VECOTR": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVT_INIT_VECOTR",
+      "kind": "macro"
+    },
+    "SVT_INIT_PRED": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVT_INIT_PRED",
+      "kind": "macro"
+    },
+    "SVT_PRINT_PRED": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVT_PRINT_PRED",
+      "kind": "macro"
+    },
+    "SVT_PRINT_BUFFER": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "SVT_PRINT_BUFFER",
+      "kind": "macro"
+    },
+    "LV_TARGETING": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "LV_TARGETING",
+      "kind": "macro"
+    },
+    "MIN": {
+      "path": "api/private/draw/sw/blend/sve2/lv_sve2_util_h",
+      "anchor": "MIN",
       "kind": "macro"
     },
     "lv_draw_sw.h": {
@@ -41999,6 +42169,11 @@
     "lv_gltf_view_render": {
       "path": "api/private/libs/gltf/gltf_view/lv_gltf_view_internal_h",
       "anchor": "lv_gltf_view_render",
+      "kind": "function"
+    },
+    "lv_gltf_view_render_deinit": {
+      "path": "api/private/libs/gltf/gltf_view/lv_gltf_view_internal_h",
+      "anchor": "lv_gltf_view_render_deinit",
       "kind": "function"
     },
     "lv_gltf_view_shader_injest_discover_defines": {

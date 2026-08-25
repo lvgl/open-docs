@@ -1,0 +1,413 @@
+---
+title: lv_sve2_util.h
+description: API reference for lv_sve2_util.h
+api:
+  macros: [SVE_0_CONNECT2, SVE_0_CONNECT3, SVE_0_CONNECT4, SVE_0_CONNECT5, SVE_0_CONNECT6, SVE_0_CONNECT7, SVE_0_CONNECT8, SVE_0_CONNECT9, ALT_SVE_CONNECT2, SVE_CONNECT2, SVE_CONNECT3, SVE_CONNECT4, SVE_CONNECT5, SVE_CONNECT6, SVE_CONNECT7, SVE_CONNECT8, SVE_CONNECT9, SVE_CONNECT, SVE_VA_NUM_ARGS_IMPL, SVE_VA_NUM_ARGS, SVE_SAFE_NAME, SVT_PRINT_VECTOR, SVT_INIT_VECOTR, SVT_INIT_PRED, SVT_PRINT_PRED, SVT_PRINT_BUFFER, LV_TARGETING, MIN]
+---
+
+<ApiSummary macros={28} />
+
+## Macros
+
+<ApiMember kind="macro" name="SVE_0_CONNECT2" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={34} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L34">
+
+### SVE_0_CONNECT2
+
+```c
+#define SVE_0_CONNECT2(ma_A, ma_B) \
+    ma_A##ma_B
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_0_CONNECT3" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={35} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L35">
+
+### SVE_0_CONNECT3
+
+```c
+#define SVE_0_CONNECT3(ma_A, ma_B, ma_C) \
+    ma_A##ma_B##ma_C
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_0_CONNECT4" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={36} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L36">
+
+### SVE_0_CONNECT4
+
+```c
+#define SVE_0_CONNECT4(ma_A, ma_B, ma_C, ma_D) \
+    ma_A##ma_B##ma_C##ma_D
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_0_CONNECT5" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={37} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L37">
+
+### SVE_0_CONNECT5
+
+```c
+#define SVE_0_CONNECT5(ma_A, ma_B, ma_C, ma_D, ma_E) \
+    ma_A##ma_B##ma_C##ma_D##ma_E
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_0_CONNECT6" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={39} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L39">
+
+### SVE_0_CONNECT6
+
+```c
+#define SVE_0_CONNECT6(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F) \
+    ma_A##ma_B##ma_C##ma_D##ma_E##ma_F
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_0_CONNECT7" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={41} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L41">
+
+### SVE_0_CONNECT7
+
+```c
+#define SVE_0_CONNECT7(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F, ma_G) \
+    ma_A##ma_B##ma_C##ma_D##ma_E##ma_F##ma_G
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_0_CONNECT8" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={43} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L43">
+
+### SVE_0_CONNECT8
+
+```c
+#define SVE_0_CONNECT8(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F, ma_G, ma_H) \
+    ma_A##ma_B##ma_C##ma_D##ma_E##ma_F##ma_G##ma_H
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_0_CONNECT9" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={45} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L45">
+
+### SVE_0_CONNECT9
+
+```c
+#define SVE_0_CONNECT9(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F, ma_G, ma_H, ma_I) \
+    ma_A##ma_B##ma_C##ma_D##ma_E##ma_F##ma_G##ma_H##ma_I
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="ALT_SVE_CONNECT2" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={48} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L48">
+
+### ALT_SVE_CONNECT2
+
+```c
+#define ALT_SVE_CONNECT2(ma_A, ma_B) \
+    SVE_0_CONNECT2(ma_A, ma_B)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_CONNECT2" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={49} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L49">
+
+### SVE_CONNECT2
+
+```c
+#define SVE_CONNECT2(ma_A, ma_B) \
+    SVE_0_CONNECT2(ma_A, ma_B)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_CONNECT3" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={50} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L50">
+
+### SVE_CONNECT3
+
+```c
+#define SVE_CONNECT3(ma_A, ma_B, ma_C) \
+    SVE_0_CONNECT3(ma_A, ma_B, ma_C)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_CONNECT4" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={51} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L51">
+
+### SVE_CONNECT4
+
+```c
+#define SVE_CONNECT4(ma_A, ma_B, ma_C, ma_D) \
+    SVE_0_CONNECT4(ma_A, ma_B, ma_C, ma_D)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_CONNECT5" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={53} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L53">
+
+### SVE_CONNECT5
+
+```c
+#define SVE_CONNECT5(ma_A, ma_B, ma_C, ma_D, ma_E) \
+    SVE_0_CONNECT5(ma_A, ma_B, ma_C, ma_D, ma_E)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_CONNECT6" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={55} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L55">
+
+### SVE_CONNECT6
+
+```c
+#define SVE_CONNECT6(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F) \
+    SVE_0_CONNECT6(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_CONNECT7" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={57} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L57">
+
+### SVE_CONNECT7
+
+```c
+#define SVE_CONNECT7(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F, ma_G) \
+    SVE_0_CONNECT7(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F, ma_G)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_CONNECT8" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={59} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L59">
+
+### SVE_CONNECT8
+
+```c
+#define SVE_CONNECT8(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F, ma_G, ma_H) \
+    SVE_0_CONNECT8(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F, ma_G, ma_H)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_CONNECT9" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={61} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L61">
+
+### SVE_CONNECT9
+
+```c
+#define SVE_CONNECT9(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F, ma_G, ma_H, ma_I) \
+    SVE_0_CONNECT9(ma_A, ma_B, ma_C, ma_D, ma_E, ma_F, ma_G, ma_H, ma_I)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_CONNECT" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={64} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L64">
+
+### SVE_CONNECT
+
+```c
+#define SVE_CONNECT(...) \
+    ALT_SVE_CONNECT2(SVE_CONNECT, \
+                         SVE_VA_NUM_ARGS(__VA_ARGS__))(__VA_ARGS__)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_VA_NUM_ARGS_IMPL" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={70} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L70">
+
+### SVE_VA_NUM_ARGS_IMPL
+
+```c
+#define SVE_VA_NUM_ARGS_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, ma_N, ...) \
+    ma_N
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_VA_NUM_ARGS" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={74} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L74">
+
+### SVE_VA_NUM_ARGS
+
+```c
+#define SVE_VA_NUM_ARGS(...) \
+    SVE_VA_NUM_ARGS_IMPL(0, ##__VA_ARGS__, 16, 15, 14, 13, 12, 11, 10, 9, \
+                             8, 7, 6, 5, 4, 3, 2, 1, 0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVE_SAFE_NAME" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={79} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L79">
+
+### SVE_SAFE_NAME
+
+```c
+#define SVE_SAFE_NAME(ma_NAME) \
+    SVE_CONNECT3(ma_, ma_NAME, ma_LINEma_)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVT_PRINT_VECTOR" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={85} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L85">
+
+### SVT_PRINT_VECTOR
+
+```c
+#define SVT_PRINT_VECTOR(ma_VECOTOR, ma_ELEMENT_T, ma_FORMAT_STRING) \
+    do { \
+            int_fast8_t nElementCount = svcntb_pat(SV_ALL) / sizeof(ma_ELEMENT_T); \
+            uint8_t SVE_SAFE_NAME(chVectorBuffer) \
+                [nElementCount * sizeof(ma_ELEMENT_T)]; \
+     \
+            svst1_u8(svptrue_b8(), \
+                     SVE_SAFE_NAME(chVectorBuffer), \
+                     svreinterpret_u8(ma_VECOTOR)); \
+     \
+            ma_ELEMENT_T *pElement = (ma_ELEMENT_T *)SVE_SAFE_NAME(chVectorBuffer); \
+            printf("%s\t[", #ma_VECOTOR); \
+            do { \
+                printf(ma_FORMAT_STRING "\t", (int)*pElement++); \
+            } while (--nElementCount); \
+            printf("]\r\n"); \
+        } while (0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVT_INIT_VECOTR" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={103} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L103">
+
+### SVT_INIT_VECOTR
+
+```c
+#define SVT_INIT_VECOTR(ma_VECTOR, ma_ELEMENT_T, ...) \
+    do { \
+            uint8_t SVE_SAFE_NAME(chVectorBuffer)[svcntb_pat(SV_ALL)]; \
+     \
+            memset(SVE_SAFE_NAME(chVectorBuffer), /* This should NOT be LV_memset() */ \
+                   0, \
+                   sizeof(SVE_SAFE_NAME(chVectorBuffer))); \
+            memcpy(SVE_SAFE_NAME(chVectorBuffer), /* This should NOT be LV_memcpy() */ \
+                   (ma_ELEMENT_T[]){ __VA_ARGS__ }, \
+                   MIN(sizeof(SVE_SAFE_NAME(chVectorBuffer)), \
+                       sizeof((ma_ELEMENT_T[]){ __VA_ARGS__ }))); \
+     \
+            ma_VECTOR = svld1(svptrue_b8(), \
+                              (ma_ELEMENT_T *)SVE_SAFE_NAME(chVectorBuffer)); \
+        } while (0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVT_INIT_PRED" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={119} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L119">
+
+### SVT_INIT_PRED
+
+```c
+#define SVT_INIT_PRED(ma_PREDICT, ...) \
+    do { \
+            uint8_t SVE_SAFE_NAME(chBuffer)[svlen(svundef_u64())]; \
+            memset(SVE_SAFE_NAME(chBuffer), /* This should NOT be LV_memset() */ \
+                   0, \
+                   sizeof(SVE_SAFE_NAME(chBuffer))); \
+     \
+            memcpy(SVE_SAFE_NAME(chBuffer), /* This should NOT be LV_memcpy() */ \
+                   (uint8_t[]){ __VA_ARGS__ }, \
+                   MIN(sizeof(SVE_SAFE_NAME(chBuffer)), \
+                       sizeof((uint8_t[]){ __VA_ARGS__ }))); \
+     \
+            ma_PREDICT = (*(svbool_t *)SVE_SAFE_NAME(chBuffer)); \
+        } while (0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVT_PRINT_PRED" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={134} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L134">
+
+### SVT_PRINT_PRED
+
+```c
+#define SVT_PRINT_PRED(ma_PREDICT, ma_TYPE_T)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="SVT_PRINT_BUFFER" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={169} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L169">
+
+### SVT_PRINT_BUFFER
+
+```c
+#define SVT_PRINT_BUFFER(ma_BUFF_PTR, ma_SIZE, ma_TYPE_T, ma_FMT_STR, ma_STRIDE) \
+    do { \
+            ma_TYPE_T *pBuffer = (ma_TYPE_T *)ma_BUFF_PTR; \
+            size_t nElementCount = (ma_SIZE) / sizeof(ma_TYPE_T); \
+     \
+            size_t nStrideSize = (ma_STRIDE); \
+            size_t nLineCount = 0; \
+     \
+            printf("%s\n\t", #ma_BUFF_PTR); \
+            do { \
+     \
+                printf(ma_FMT_STR " ", *pBuffer++); \
+                nLineCount++; \
+                if (nLineCount >= nStrideSize) { \
+                    nLineCount = 0; \
+                    printf("\n\t"); \
+                } \
+     \
+            } while (--nElementCount); \
+            printf("\n"); \
+     \
+        } while (0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_TARGETING" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={192} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L192">
+
+### LV_TARGETING
+
+```c
+#define LV_TARGETING(...) \
+    __attribute__((target(__VA_ARGS__)))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="MIN" file="private/draw/sw/blend/sve2/lv_sve2_util.h" line={194} url="https://github.com/lvgl/lvgl/tree/4ae40489ca26650932e8d7a3a060e51902fbe571/src/draw/sw/blend/sve2/lv_sve2_util.h#L194">
+
+### MIN
+
+```c
+#define MIN(a, b) \
+    ((a) > (b) ? (b) : (a))
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includedBy={["lvgl_private.h"]}
+/>
