@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-26T12:35:10.657Z",
-    "symbolCount": 8952
+    "generatedAt": "2026-08-26T14:14:04.020Z",
+    "symbolCount": 8949
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -41766,16 +41766,6 @@
       "anchor": "lv_gltf_data_get_radius",
       "kind": "function"
     },
-    "lv_gltf_data_copy_bounds_info": {
-      "path": "api/private/libs/gltf/gltf_data/lv_gltf_data_internal_h",
-      "anchor": "lv_gltf_data_copy_bounds_info",
-      "kind": "function"
-    },
-    "lv_gltf_data_rgb_to_bgr": {
-      "path": "api/private/libs/gltf/gltf_data/lv_gltf_data_internal_h",
-      "anchor": "lv_gltf_data_rgb_to_bgr",
-      "kind": "function"
-    },
     "lv_gltf_model_add_viewer": {
       "path": "api/private/libs/gltf/gltf_data/lv_gltf_data_internal_h",
       "anchor": "lv_gltf_model_add_viewer",
@@ -41844,11 +41834,6 @@
     "lv_gltf_get_filename": {
       "path": "api/private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
       "anchor": "lv_gltf_get_filename",
-      "kind": "function"
-    },
-    "lv_gltf_data_centerpoint_cache_contains": {
-      "path": "api/private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
-      "anchor": "lv_gltf_data_centerpoint_cache_contains",
       "kind": "function"
     },
     "lv_gltf_data_get_primitive_from_mesh": {

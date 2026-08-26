@@ -2,18 +2,18 @@
 title: lv_gltf_data_internal.h
 description: API reference for lv_gltf_data_internal.h
 api:
-  functions: [lv_gltf_uniform_locations_create, lv_gltf_store_compiled_shader, lv_gltf_get_compiled_shader, lv_gltf_data_get_radius, lv_gltf_data_copy_bounds_info, lv_gltf_data_rgb_to_bgr, lv_gltf_model_add_viewer, lv_gltf_model_remove_viewer, lv_gltf_model_invalidate]
+  functions: [lv_gltf_uniform_locations_create, lv_gltf_store_compiled_shader, lv_gltf_get_compiled_shader, lv_gltf_data_get_radius, lv_gltf_model_add_viewer, lv_gltf_model_remove_viewer, lv_gltf_model_invalidate]
   structs: [IndirectDrawCommand, lv_gltf_primitive_t, lv_gltf_uniform_locations_t, _lv_gltf_model_loader_t, lv_gltf_compiled_shader_t]
 ---
 
-<ApiSummary functions={9} structs={5} />
+<ApiSummary functions={7} structs={5} />
 
 ## Functions
 
-<ApiTabs items={["Getters (2)","Other (7)"]}>
+<ApiTabs items={["Getters (2)","Other (5)"]}>
 <ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_gltf_get_compiled_shader" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={191} url="https://github.com/lvgl/lvgl/tree/8fae1f782194fccba8012eb3626114cf06fef92f/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L191">
+<ApiMember kind="function" name="lv_gltf_get_compiled_shader" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={191} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L191">
 
 ### lv_gltf_get_compiled_shader
 
@@ -31,7 +31,7 @@ lv_gltf_compiled_shader_t * lv_gltf_get_compiled_shader(lv_gltf_model_t *data, s
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_data_get_radius" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={199} url="https://github.com/lvgl/lvgl/tree/8fae1f782194fccba8012eb3626114cf06fef92f/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L199">
+<ApiMember kind="function" name="lv_gltf_data_get_radius" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={199} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L199">
 
 ### lv_gltf_data_get_radius
 
@@ -53,9 +53,9 @@ double lv_gltf_data_get_radius(const lv_gltf_model_t *model)
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Other (7)">
+<ApiTab value="Other (5)">
 
-<ApiMember kind="function" name="lv_gltf_uniform_locations_create" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={183} url="https://github.com/lvgl/lvgl/tree/8fae1f782194fccba8012eb3626114cf06fef92f/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L183">
+<ApiMember kind="function" name="lv_gltf_uniform_locations_create" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={183} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L183">
 
 ### lv_gltf_uniform_locations_create
 
@@ -72,7 +72,7 @@ lv_gltf_uniform_locations_t lv_gltf_uniform_locations_create(GLuint program)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_store_compiled_shader" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={190} url="https://github.com/lvgl/lvgl/tree/8fae1f782194fccba8012eb3626114cf06fef92f/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L190">
+<ApiMember kind="function" name="lv_gltf_store_compiled_shader" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={190} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L190">
 
 ### lv_gltf_store_compiled_shader
 
@@ -91,48 +91,7 @@ void lv_gltf_store_compiled_shader(lv_gltf_model_t *data, size_t identifier, lv_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_data_copy_bounds_info" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={208} url="https://github.com/lvgl/lvgl/tree/8fae1f782194fccba8012eb3626114cf06fef92f/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L208">
-
-### lv_gltf_data_copy_bounds_info
-
-Copy the bounds information from one GLTF data object to another.
-
-```c
-void lv_gltf_data_copy_bounds_info(lv_gltf_model_t *to, lv_gltf_model_t *from)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `to` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the destination lv_gltf_data_t object. |
-| `from` | <ApiLink name="lv_gltf_model_t" display="lv_gltf_model_t *" /> | Pointer to the source lv_gltf_data_t object. |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_gltf_data_rgb_to_bgr" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={217} url="https://github.com/lvgl/lvgl/tree/8fae1f782194fccba8012eb3626114cf06fef92f/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L217">
-
-### lv_gltf_data_rgb_to_bgr
-
-Swap the red and blue channels in a pixel buffer.
-
-```c
-void lv_gltf_data_rgb_to_bgr(uint8_t *pixel_buffer, size_t byte_total_count, bool has_alpha)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `pixel_buffer` | `uint8_t *` | Pointer to the pixel buffer containing the image data. |
-| `byte_total_count` | `size_t` | The total number of bytes in the pixel buffer. |
-| `has_alpha` | `bool` | Flag indicating whether the pixel buffer includes an alpha channel. |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_gltf_model_add_viewer" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={221} url="https://github.com/lvgl/lvgl/tree/8fae1f782194fccba8012eb3626114cf06fef92f/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L221">
+<ApiMember kind="function" name="lv_gltf_model_add_viewer" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={201} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L201">
 
 ### lv_gltf_model_add_viewer
 
@@ -150,7 +109,7 @@ lv_result_t lv_gltf_model_add_viewer(lv_gltf_model_t *model, lv_obj_t *viewer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_model_remove_viewer" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={222} url="https://github.com/lvgl/lvgl/tree/8fae1f782194fccba8012eb3626114cf06fef92f/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L222">
+<ApiMember kind="function" name="lv_gltf_model_remove_viewer" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={202} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L202">
 
 ### lv_gltf_model_remove_viewer
 
@@ -168,7 +127,7 @@ void lv_gltf_model_remove_viewer(lv_gltf_model_t *model, lv_obj_t *target_viewer
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_model_invalidate" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={223} url="https://github.com/lvgl/lvgl/tree/8fae1f782194fccba8012eb3626114cf06fef92f/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L223">
+<ApiMember kind="function" name="lv_gltf_model_invalidate" file="private/libs/gltf/gltf_data/lv_gltf_data_internal.h" line={203} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/src/libs/gltf/gltf_data/lv_gltf_data_internal.h#L203">
 
 ### lv_gltf_model_invalidate
 
