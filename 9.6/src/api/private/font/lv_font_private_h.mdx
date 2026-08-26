@@ -2,16 +2,113 @@
 title: lv_font_private.h
 description: API reference for lv_font_private.h
 api:
-  functions: [lv_font_glyph_dsc_compare]
+  functions: [lv_font_glyph_dsc_compare, lv_font_get_glyph_bitmap_internal, lv_font_get_glyph_static_bitmap_internal, lv_font_glyph_release_draw_data_internal, lv_font_get_glyph_dsc_internal, lv_font_get_glyph_width_internal, lv_font_get_line_height_internal, lv_font_has_static_bitmap_internal]
 ---
 
 <RelatedHeaders name="lv_font.h" isPrivate={true} />
 
-<ApiSummary functions={1} />
+<ApiSummary functions={8} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_font_glyph_dsc_compare" file="private/font/lv_font_private.h" line={30} url="https://github.com/lvgl/lvgl/tree/f09d217ead5a5750691d0ad4a02b5ec973faa5a7/src/font/lv_font_private.h#L30">
+<ApiTabs items={["Getters (5)","Other (3)"]}>
+<ApiTab value="Getters (5)">
+
+<ApiMember kind="function" name="lv_font_get_glyph_bitmap_internal" file="private/font/lv_font_private.h" line={35} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/src/font/lv_font_private.h#L35">
+
+### lv_font_get_glyph_bitmap_internal
+
+```c
+const void * lv_font_get_glyph_bitmap_internal(lv_font_glyph_dsc_t *g_dsc, lv_draw_buf_t *draw_buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `g_dsc` | <ApiLink name="lv_font_glyph_dsc_t" display="lv_font_glyph_dsc_t *" /> |
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_font_get_glyph_static_bitmap_internal" file="private/font/lv_font_private.h" line={40} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/src/font/lv_font_private.h#L40">
+
+### lv_font_get_glyph_static_bitmap_internal
+
+```c
+const void * lv_font_get_glyph_static_bitmap_internal(lv_font_glyph_dsc_t *g_dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `g_dsc` | <ApiLink name="lv_font_glyph_dsc_t" display="lv_font_glyph_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_font_get_glyph_dsc_internal" file="private/font/lv_font_private.h" line={50} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/src/font/lv_font_private.h#L50">
+
+### lv_font_get_glyph_dsc_internal
+
+```c
+bool lv_font_get_glyph_dsc_internal(const lv_font_t *font, lv_font_glyph_dsc_t *dsc_out, uint32_t letter, uint32_t letter_next)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> |
+| `dsc_out` | <ApiLink name="lv_font_glyph_dsc_t" display="lv_font_glyph_dsc_t *" /> |
+| `letter` | `uint32_t` |
+| `letter_next` | `uint32_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_font_get_glyph_width_internal" file="private/font/lv_font_private.h" line={56} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/src/font/lv_font_private.h#L56">
+
+### lv_font_get_glyph_width_internal
+
+```c
+uint16_t lv_font_get_glyph_width_internal(const lv_font_t *font, uint32_t letter, uint32_t letter_next)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> |
+| `letter` | `uint32_t` |
+| `letter_next` | `uint32_t` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_font_get_line_height_internal" file="private/font/lv_font_private.h" line={61} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/src/font/lv_font_private.h#L61">
+
+### lv_font_get_line_height_internal
+
+```c
+static int32_t lv_font_get_line_height_internal(const lv_font_t *font)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_font_glyph_dsc_compare" file="private/font/lv_font_private.h" line={30} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/src/font/lv_font_private.h#L30">
 
 ### lv_font_glyph_dsc_compare
 
@@ -29,6 +126,42 @@ int32_t lv_font_glyph_dsc_compare(const lv_font_glyph_dsc_t *lhs, const lv_font_
 
 </ApiMember>
 
+<ApiMember kind="function" name="lv_font_glyph_release_draw_data_internal" file="private/font/lv_font_private.h" line={45} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/src/font/lv_font_private.h#L45">
+
+### lv_font_glyph_release_draw_data_internal
+
+```c
+void lv_font_glyph_release_draw_data_internal(lv_font_glyph_dsc_t *g_dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `g_dsc` | <ApiLink name="lv_font_glyph_dsc_t" display="lv_font_glyph_dsc_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_font_has_static_bitmap_internal" file="private/font/lv_font_private.h" line={70} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/src/font/lv_font_private.h#L70">
+
+### lv_font_has_static_bitmap_internal
+
+```c
+static bool lv_font_has_static_bitmap_internal(const lv_font_t *font)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
 ## Dependencies
 
 <FileIncludes

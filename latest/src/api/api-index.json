@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-26T11:43:03.412Z",
-    "symbolCount": 8943
+    "generatedAt": "2026-08-26T12:06:44.764Z",
+    "symbolCount": 8952
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -40391,6 +40391,41 @@
       "anchor": "lv_font_glyph_dsc_compare",
       "kind": "function"
     },
+    "lv_font_get_glyph_bitmap_internal": {
+      "path": "api/private/font/lv_font_private_h",
+      "anchor": "lv_font_get_glyph_bitmap_internal",
+      "kind": "function"
+    },
+    "lv_font_get_glyph_static_bitmap_internal": {
+      "path": "api/private/font/lv_font_private_h",
+      "anchor": "lv_font_get_glyph_static_bitmap_internal",
+      "kind": "function"
+    },
+    "lv_font_glyph_release_draw_data_internal": {
+      "path": "api/private/font/lv_font_private_h",
+      "anchor": "lv_font_glyph_release_draw_data_internal",
+      "kind": "function"
+    },
+    "lv_font_get_glyph_dsc_internal": {
+      "path": "api/private/font/lv_font_private_h",
+      "anchor": "lv_font_get_glyph_dsc_internal",
+      "kind": "function"
+    },
+    "lv_font_get_glyph_width_internal": {
+      "path": "api/private/font/lv_font_private_h",
+      "anchor": "lv_font_get_glyph_width_internal",
+      "kind": "function"
+    },
+    "lv_font_get_line_height_internal": {
+      "path": "api/private/font/lv_font_private_h",
+      "anchor": "lv_font_get_line_height_internal",
+      "kind": "function"
+    },
+    "lv_font_has_static_bitmap_internal": {
+      "path": "api/private/font/lv_font_private_h",
+      "anchor": "lv_font_has_static_bitmap_internal",
+      "kind": "function"
+    },
     "lv_fs_private.h": {
       "path": "api/private/fs/lv_fs_private_h",
       "anchor": "",
@@ -43634,6 +43669,16 @@
     "lv_text_is_marker": {
       "path": "api/private/misc/lv_text_private_h",
       "anchor": "lv_text_is_marker",
+      "kind": "function"
+    },
+    "lv_font_get_bottom_trim_internal": {
+      "path": "api/private/misc/lv_text_private_h",
+      "anchor": "lv_font_get_bottom_trim_internal",
+      "kind": "function"
+    },
+    "lv_font_get_top_trim_internal": {
+      "path": "api/private/misc/lv_text_private_h",
+      "anchor": "lv_font_get_top_trim_internal",
       "kind": "function"
     },
     "lv_text_cmd_state_t": {

@@ -12,14 +12,14 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_font_get_top_trim" file="public/font/lv_text.h" line={96} url="https://github.com/lvgl/lvgl/tree/f09d217ead5a5750691d0ad4a02b5ec973faa5a7/include/lvgl/font/lv_text.h#L96">
+<ApiMember kind="function" name="lv_font_get_top_trim" file="public/font/lv_text.h" line={96} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/include/lvgl/font/lv_text.h#L96">
 
 ### lv_font_get_top_trim
 
 Get the number of pixels to trim from the top of text for a given leading-trim mode.
 
 ```c
-static int32_t lv_font_get_top_trim(const lv_font_t *font, lv_text_leading_trim_t trim)
+int32_t lv_font_get_top_trim(const lv_font_t *font, lv_text_leading_trim_t trim)
 ```
 
 <span className="sr-only">Parameters</span>
@@ -34,14 +34,14 @@ static int32_t lv_font_get_top_trim(const lv_font_t *font, lv_text_leading_trim_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_font_get_bottom_trim" file="public/font/lv_text.h" line={118} url="https://github.com/lvgl/lvgl/tree/f09d217ead5a5750691d0ad4a02b5ec973faa5a7/include/lvgl/font/lv_text.h#L118">
+<ApiMember kind="function" name="lv_font_get_bottom_trim" file="public/font/lv_text.h" line={105} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/include/lvgl/font/lv_text.h#L105">
 
 ### lv_font_get_bottom_trim
 
 Get the number of pixels to trim from the bottom of text for a given leading-trim mode.
 
 ```c
-static int32_t lv_font_get_bottom_trim(const lv_font_t *font, lv_text_leading_trim_t trim)
+int32_t lv_font_get_bottom_trim(const lv_font_t *font, lv_text_leading_trim_t trim)
 ```
 
 <span className="sr-only">Parameters</span>
@@ -56,7 +56,7 @@ static int32_t lv_font_get_bottom_trim(const lv_font_t *font, lv_text_leading_tr
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_text_get_size" file="public/font/lv_text.h" line={140} url="https://github.com/lvgl/lvgl/tree/f09d217ead5a5750691d0ad4a02b5ec973faa5a7/include/lvgl/font/lv_text.h#L140">
+<ApiMember kind="function" name="lv_text_get_size" file="public/font/lv_text.h" line={117} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/include/lvgl/font/lv_text.h#L117">
 
 ### lv_text_get_size
 
@@ -83,7 +83,7 @@ void lv_text_get_size(lv_point_t *size_res, const char *text, const lv_font_t *f
 
 ## Enums
 
-<ApiMember kind="enum" name="lv_text_flag_t" file="public/font/lv_text.h" line={33} url="https://github.com/lvgl/lvgl/tree/f09d217ead5a5750691d0ad4a02b5ec973faa5a7/include/lvgl/font/lv_text.h#L33">
+<ApiMember kind="enum" name="lv_text_flag_t" file="public/font/lv_text.h" line={33} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/include/lvgl/font/lv_text.h#L33">
 
 ### lv_text_flag_t
 
@@ -106,7 +106,7 @@ Options for text rendering.
 
 </TypeUsedBy>
 
-<ApiMember kind="enum" name="lv_text_align_t" file="public/font/lv_text.h" line={54} url="https://github.com/lvgl/lvgl/tree/f09d217ead5a5750691d0ad4a02b5ec973faa5a7/include/lvgl/font/lv_text.h#L54">
+<ApiMember kind="enum" name="lv_text_align_t" file="public/font/lv_text.h" line={54} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/include/lvgl/font/lv_text.h#L54">
 
 ### lv_text_align_t
 
@@ -132,7 +132,7 @@ Label align policy
 
 </TypeUsedBy>
 
-<ApiMember kind="enum" name="lv_text_leading_trim_t" file="public/font/lv_text.h" line={64} url="https://github.com/lvgl/lvgl/tree/f09d217ead5a5750691d0ad4a02b5ec973faa5a7/include/lvgl/font/lv_text.h#L64">
+<ApiMember kind="enum" name="lv_text_leading_trim_t" file="public/font/lv_text.h" line={64} url="https://github.com/lvgl/lvgl/tree/c56e1d711094f5f898de8980fe302678b60a4ba0/include/lvgl/font/lv_text.h#L64">
 
 ### lv_text_leading_trim_t
 
@@ -149,12 +149,14 @@ Text leading trim mode (similar to CSS text-box-trim / text-box-edge) using more
 
 </ApiMember>
 
-<TypeUsedBy name="lv_text_leading_trim_t" count={4}>
+<TypeUsedBy name="lv_text_leading_trim_t" count={6}>
 
 - `lv_obj_set_style_text_leading_trim` — param `value`
 - `lv_style_set_text_leading_trim` — param `value`
 - `lv_font_get_top_trim` — param `trim`
 - `lv_font_get_bottom_trim` — param `trim`
+- `lv_font_get_bottom_trim_internal` — param `trim`
+- `lv_font_get_top_trim_internal` — param `trim`
 
 </TypeUsedBy>
 
