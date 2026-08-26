@@ -12,9 +12,11 @@ api:
 <ApiTabs items={["Setters (5)","Getters (3)","Other (2)"]}>
 <ApiTab value="Setters (5)">
 
-<ApiMember kind="function" name="lv_sdl_window_set_resizeable" file="public/drivers/sdl/lv_sdl_window.h" line={42} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/sdl/lv_sdl_window.h#L42">
+<ApiMember kind="function" name="lv_sdl_window_set_resizeable" file="public/drivers/sdl/lv_sdl_window.h" line={47} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/sdl/lv_sdl_window.h#L47">
 
 ### lv_sdl_window_set_resizeable
+
+Allow or forbid resizing the window
 
 ```c
 void lv_sdl_window_set_resizeable(lv_display_t *disp, bool value)
@@ -22,17 +24,19 @@ void lv_sdl_window_set_resizeable(lv_display_t *disp, bool value)
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
-| `value` | `bool` |
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to an SDL display |
+| `value` | `bool` | true: resizeable, false: fixed size |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_sdl_window_set_size" file="public/drivers/sdl/lv_sdl_window.h" line={44} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/sdl/lv_sdl_window.h#L44">
+<ApiMember kind="function" name="lv_sdl_window_set_size" file="public/drivers/sdl/lv_sdl_window.h" line={55} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/sdl/lv_sdl_window.h#L55">
 
 ### lv_sdl_window_set_size
+
+Set the size of the window
 
 ```c
 void lv_sdl_window_set_size(lv_display_t *disp, int32_t hor_res, int32_t ver_res)
@@ -40,18 +44,20 @@ void lv_sdl_window_set_size(lv_display_t *disp, int32_t hor_res, int32_t ver_res
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
-| `hor_res` | `int32_t` |
-| `ver_res` | `int32_t` |
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to an SDL display |
+| `hor_res` | `int32_t` | the new width in pixels |
+| `ver_res` | `int32_t` | the new height in pixels |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_sdl_window_set_zoom" file="public/drivers/sdl/lv_sdl_window.h" line={46} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/sdl/lv_sdl_window.h#L46">
+<ApiMember kind="function" name="lv_sdl_window_set_zoom" file="public/drivers/sdl/lv_sdl_window.h" line={62} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/sdl/lv_sdl_window.h#L62">
 
 ### lv_sdl_window_set_zoom
+
+Set the zoom factor of the window
 
 ```c
 void lv_sdl_window_set_zoom(lv_display_t *disp, float zoom)
@@ -59,17 +65,19 @@ void lv_sdl_window_set_zoom(lv_display_t *disp, float zoom)
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
-| `zoom` | `float` |
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to an SDL display |
+| `zoom` | `float` | the new zoom factor |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_sdl_window_set_title" file="public/drivers/sdl/lv_sdl_window.h" line={50} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/sdl/lv_sdl_window.h#L50">
+<ApiMember kind="function" name="lv_sdl_window_set_title" file="public/drivers/sdl/lv_sdl_window.h" line={76} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/sdl/lv_sdl_window.h#L76">
 
 ### lv_sdl_window_set_title
+
+Set the title of the window
 
 ```c
 void lv_sdl_window_set_title(lv_display_t *disp, const char *title)
@@ -77,17 +85,19 @@ void lv_sdl_window_set_title(lv_display_t *disp, const char *title)
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
-| `title` | `const char *` |
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to an SDL display |
+| `title` | `const char *` | the new title |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_sdl_window_set_icon" file="public/drivers/sdl/lv_sdl_window.h" line={52} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/sdl/lv_sdl_window.h#L52">
+<ApiMember kind="function" name="lv_sdl_window_set_icon" file="public/drivers/sdl/lv_sdl_window.h" line={85} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/sdl/lv_sdl_window.h#L85">
 
 ### lv_sdl_window_set_icon
+
+Set the icon of the window
 
 ```c
 void lv_sdl_window_set_icon(lv_display_t *disp, void *icon, int32_t width, int32_t height)
@@ -95,12 +105,12 @@ void lv_sdl_window_set_icon(lv_display_t *disp, void *icon, int32_t width, int32
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
-| `icon` | `void *` |
-| `width` | `int32_t` |
-| `height` | `int32_t` |
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to an SDL display |
+| `icon` | `void *` | pointer to the ARGB8888 pixels of the icon |
+| `width` | `int32_t` | the icon width in pixels |
+| `height` | `int32_t` | the icon height in pixels |
 
 
 </ApiMember>
@@ -108,9 +118,11 @@ void lv_sdl_window_set_icon(lv_display_t *disp, void *icon, int32_t width, int32
 </ApiTab>
 <ApiTab value="Getters (3)">
 
-<ApiMember kind="function" name="lv_sdl_window_get_zoom" file="public/drivers/sdl/lv_sdl_window.h" line={48} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/sdl/lv_sdl_window.h#L48">
+<ApiMember kind="function" name="lv_sdl_window_get_zoom" file="public/drivers/sdl/lv_sdl_window.h" line={69} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/sdl/lv_sdl_window.h#L69">
 
 ### lv_sdl_window_get_zoom
+
+Get the zoom factor of the window
 
 ```c
 float lv_sdl_window_get_zoom(lv_display_t *disp)
@@ -118,16 +130,20 @@ float lv_sdl_window_get_zoom(lv_display_t *disp)
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to an SDL display |
+
+**Returns:** `float` — the current zoom factor
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_sdl_window_get_renderer" file="public/drivers/sdl/lv_sdl_window.h" line={54} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/sdl/lv_sdl_window.h#L54">
+<ApiMember kind="function" name="lv_sdl_window_get_renderer" file="public/drivers/sdl/lv_sdl_window.h" line={92} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/sdl/lv_sdl_window.h#L92">
 
 ### lv_sdl_window_get_renderer
+
+Get the SDL renderer of the window
 
 ```c
 void * lv_sdl_window_get_renderer(lv_display_t *disp)
@@ -135,16 +151,20 @@ void * lv_sdl_window_get_renderer(lv_display_t *disp)
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to an SDL display |
+
+**Returns:** `void *` — pointer to the SDL_Renderer, or NULL on error
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_sdl_window_get_window" file="public/drivers/sdl/lv_sdl_window.h" line={58} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/sdl/lv_sdl_window.h#L58">
+<ApiMember kind="function" name="lv_sdl_window_get_window" file="public/drivers/sdl/lv_sdl_window.h" line={101} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/sdl/lv_sdl_window.h#L101">
 
 ### lv_sdl_window_get_window
+
+Get the SDL window
 
 ```c
 struct SDL_Window * lv_sdl_window_get_window(lv_display_t *disp)
@@ -152,9 +172,11 @@ struct SDL_Window * lv_sdl_window_get_window(lv_display_t *disp)
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to an SDL display |
+
+**Returns:** `struct SDL_Window *` — pointer to the SDL_Window, or NULL on error
 
 
 </ApiMember>
@@ -162,7 +184,7 @@ struct SDL_Window * lv_sdl_window_get_window(lv_display_t *disp)
 </ApiTab>
 <ApiTab value="Other (2)">
 
-<ApiMember kind="function" name="lv_sdl_window_create" file="public/drivers/sdl/lv_sdl_window.h" line={40} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/sdl/lv_sdl_window.h#L40">
+<ApiMember kind="function" name="lv_sdl_window_create" file="public/drivers/sdl/lv_sdl_window.h" line={40} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/sdl/lv_sdl_window.h#L40">
 
 ### lv_sdl_window_create
 
@@ -180,7 +202,7 @@ lv_display_t * lv_sdl_window_create(int32_t hor_res, int32_t ver_res)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_sdl_quit" file="public/drivers/sdl/lv_sdl_window.h" line={56} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/sdl/lv_sdl_window.h#L56">
+<ApiMember kind="function" name="lv_sdl_quit" file="public/drivers/sdl/lv_sdl_window.h" line={94} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/sdl/lv_sdl_window.h#L94">
 
 ### lv_sdl_quit
 

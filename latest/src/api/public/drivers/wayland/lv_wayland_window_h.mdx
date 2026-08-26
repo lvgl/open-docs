@@ -13,61 +13,61 @@ api:
 <ApiTabs items={["Setters (3)","Other (5)"]}>
 <ApiTab value="Setters (3)">
 
-<ApiMember kind="function" name="lv_wayland_window_set_fullscreen" file="public/drivers/wayland/lv_wayland_window.h" line={79} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/wayland/lv_wayland_window.h#L79">
+<ApiMember kind="function" name="lv_wayland_window_set_fullscreen" file="public/drivers/wayland/lv_wayland_window.h" line={79} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/wayland/lv_wayland_window.h#L79">
 
 ### lv_wayland_window_set_fullscreen
 
 Sets the fullscreen state of the window
 
 ```c
-void lv_wayland_window_set_fullscreen(lv_display_t *disp, bool fullscreen)
+void lv_wayland_window_set_fullscreen(lv_display_t *display, bool fullscreen)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
 | `fullscreen` | `bool` | If true the window enters fullscreen |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_window_set_maximized" file="public/drivers/wayland/lv_wayland_window.h" line={86} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/wayland/lv_wayland_window.h#L86">
+<ApiMember kind="function" name="lv_wayland_window_set_maximized" file="public/drivers/wayland/lv_wayland_window.h" line={86} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/wayland/lv_wayland_window.h#L86">
 
 ### lv_wayland_window_set_maximized
 
 Sets the maximized state of the window
 
 ```c
-void lv_wayland_window_set_maximized(lv_display_t *disp, bool maximize)
+void lv_wayland_window_set_maximized(lv_display_t *display, bool maximize)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
 | `maximize` | `bool` | If true the window is maximized |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_window_set_minimized" file="public/drivers/wayland/lv_wayland_window.h" line={92} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/wayland/lv_wayland_window.h#L92">
+<ApiMember kind="function" name="lv_wayland_window_set_minimized" file="public/drivers/wayland/lv_wayland_window.h" line={92} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/wayland/lv_wayland_window.h#L92">
 
 ### lv_wayland_window_set_minimized
 
 Minimizes the window
 
 ```c
-void lv_wayland_window_set_minimized(lv_display_t *disp)
+void lv_wayland_window_set_minimized(lv_display_t *display)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
 
 
 </ApiMember>
@@ -75,7 +75,7 @@ void lv_wayland_window_set_minimized(lv_display_t *disp)
 </ApiTab>
 <ApiTab value="Other (5)">
 
-<ApiMember kind="function" name="lv_wayland_window_create" file="public/drivers/wayland/lv_wayland_window.h" line={44} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/wayland/lv_wayland_window.h#L44">
+<ApiMember kind="function" name="lv_wayland_window_create" file="public/drivers/wayland/lv_wayland_window.h" line={44} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/wayland/lv_wayland_window.h#L44">
 
 ### lv_wayland_window_create
 
@@ -99,81 +99,81 @@ lv_display_t * lv_wayland_window_create(uint32_t hor_res, uint32_t ver_res, char
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_window_close" file="public/drivers/wayland/lv_wayland_window.h" line={51} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/wayland/lv_wayland_window.h#L51">
+<ApiMember kind="function" name="lv_wayland_window_close" file="public/drivers/wayland/lv_wayland_window.h" line={51} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/wayland/lv_wayland_window.h#L51">
 
 ### lv_wayland_window_close
 
 Closes the window programmatically
 
 ```c
-void lv_wayland_window_close(lv_display_t *disp)
+void lv_wayland_window_close(lv_display_t *display)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window **Optional:** may be `NULL`. |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_window_is_open" file="public/drivers/wayland/lv_wayland_window.h" line={58} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/wayland/lv_wayland_window.h#L58">
+<ApiMember kind="function" name="lv_wayland_window_is_open" file="public/drivers/wayland/lv_wayland_window.h" line={58} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/wayland/lv_wayland_window.h#L58">
 
 ### lv_wayland_window_is_open
 
 Check if the window is open
 
 ```c
-bool lv_wayland_window_is_open(lv_display_t *disp)
+bool lv_wayland_window_is_open(lv_display_t *display)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
 
 **Returns:** `bool` — true: The window is open
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_assign_physical_display" file="public/drivers/wayland/lv_wayland_window.h" line={65} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/wayland/lv_wayland_window.h#L65">
+<ApiMember kind="function" name="lv_wayland_assign_physical_display" file="public/drivers/wayland/lv_wayland_window.h" line={65} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/wayland/lv_wayland_window.h#L65">
 
 ### lv_wayland_assign_physical_display
 
 Assigns the window to a specific physical display
 
 ```c
-void lv_wayland_assign_physical_display(lv_display_t *disp, uint8_t display)
+void lv_wayland_assign_physical_display(lv_display_t *display, uint8_t phys_display)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
-| `display` | `uint8_t` | Physical display number |
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
+| `phys_display` | `uint8_t` | Physical display number |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_unassign_physical_display" file="public/drivers/wayland/lv_wayland_window.h" line={71} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/wayland/lv_wayland_window.h#L71">
+<ApiMember kind="function" name="lv_wayland_unassign_physical_display" file="public/drivers/wayland/lv_wayland_window.h" line={71} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/wayland/lv_wayland_window.h#L71">
 
 ### lv_wayland_unassign_physical_display
 
 Unassigns the current physical display attached to the window
 
 ```c
-void lv_wayland_unassign_physical_display(lv_display_t *disp)
+void lv_wayland_unassign_physical_display(lv_display_t *display)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
 
 
 </ApiMember>
@@ -182,12 +182,12 @@ void lv_wayland_unassign_physical_display(lv_display_t *disp)
 </ApiTabs>
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_wayland_display_close_cb_t" file="public/drivers/wayland/lv_wayland_window.h" line={30} url="https://github.com/lvgl/lvgl/tree/62e35b0fd21877fcabccd16dda3eef907133ce10/include/lvgl/drivers/wayland/lv_wayland_window.h#L30">
+<ApiMember kind="typedef" name="lv_wayland_display_close_cb_t" file="public/drivers/wayland/lv_wayland_window.h" line={30} url="https://github.com/lvgl/lvgl/tree/c738d776e50ebf8f1a7fb4044d9bd52cbce04853/include/lvgl/drivers/wayland/lv_wayland_window.h#L30">
 
 ### lv_wayland_display_close_cb_t
 
 ```c
-typedef bool(* lv_wayland_display_close_cb_t) (lv_display_t *disp)
+typedef bool(* lv_wayland_display_close_cb_t) (lv_display_t *display)
 ```
 
 
