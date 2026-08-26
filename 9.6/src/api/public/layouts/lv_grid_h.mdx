@@ -14,9 +14,19 @@ api:
 <ApiTabs items={["Setters (3)","Other (2)"]}>
 <ApiTab value="Setters (3)">
 
-<ApiMember kind="function" name="lv_obj_set_grid_dsc_array" file="public/layouts/lv_grid.h" line={63} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/include/lvgl/layouts/lv_grid.h#L63">
+<ApiMember kind="function" name="lv_obj_set_grid_dsc_array" file="public/layouts/lv_grid.h" line={98} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/layouts/lv_grid.h#L98">
 
 ### lv_obj_set_grid_dsc_array
+
+Set a grid layout on a Widget by describing its column and row track sizes.
+
+Each element of the descriptor arrays is either a size in pixels, <ApiLink name="LV_GRID_FR" display="LV_GRID_FR(x)" /> to take a proportional share of the free space, or `LV_GRID_CONTENT` to fit the largest child on that track. Both arrays must be closed with `LV_GRID_TEMPLATE_LAST`.
+
+Only the pointers are saved, so the arrays must be static, global or dynamically allocated. They must outlive the Widget.
+
+Calling this function also sets the Widget's layout to `LV_LAYOUT_GRID`, so its children will be positioned by the cells assigned with <ApiLink name="lv_obj_set_grid_cell" display="lv_obj_set_grid_cell()" />.
+
+Passing `NULL` for either array turns that axis into a sub-grid: the tracks are taken from the parent Grid container, sliced to the cell this Widget occupies (its own position and span on that axis). This makes a wrapper Widget "transparent" so that its children align to the outer grid's tracks.
 
 ```c
 void lv_obj_set_grid_dsc_array(lv_obj_t *obj, const int32_t col_dsc[], const int32_t row_dsc[])
@@ -24,18 +34,44 @@ void lv_obj_set_grid_dsc_array(lv_obj_t *obj, const int32_t col_dsc[], const int
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `col_dsc` | `const int32_t` |
-| `row_dsc` | `const int32_t` |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Widget which will be the grid container |
+| `col_dsc` | `const int32_t` | array of column track sizes closed by LV_GRID_TEMPLATE_LAST. **Optional:** may be `NULL`. Pass NULL to inherit the parent's columns (sub-grid) |
+| `row_dsc` | `const int32_t` | array of row track sizes closed by LV_GRID_TEMPLATE_LAST. **Optional:** may be `NULL`. Pass NULL to inherit the parent's rows (sub-grid) |
+
+<Callout type="info">
+Sub-grids are resolved only one level deep: a sub-grid cannot itself have a sub-grid child.
+</Callout>
+
+<Callout type="info">
+An inherited `LV_GRID_CONTENT` track is measured from the sub-grid's own children, so it can end up a different size than in the parent. Use fixed or <ApiLink name="LV_GRID_FR" display="LV_GRID_FR(x)" /> tracks on the inherited axis to keep the sub-grid aligned.
+</Callout>
+
+<Callout type="info">
+If both this Widget and its parent have a NULL descriptor on the same axis, no layout is performed and a warning is logged.
+</Callout>
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_grid_align" file="public/layouts/lv_grid.h" line={65} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/include/lvgl/layouts/lv_grid.h#L65">
+<ApiMember kind="function" name="lv_obj_set_grid_align" file="public/layouts/lv_grid.h" line={137} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/layouts/lv_grid.h#L137">
 
 ### lv_obj_set_grid_align
+
+Set how the Grid's tracks are distributed inside the container's content area.
+
+This aligns the grid as a whole, similar to CSS's `justify-content`/`align-content`, not of `justify-self`/`align-self`. To align an individual item inside its cell, use the align parameters of <ApiLink name="lv_obj_set_grid_cell" display="lv_obj_set_grid_cell()" />.
+
+It only has a visible effect if there is free space left over after the tracks are sized. A grid built purely from <ApiLink name="LV_GRID_FR" display="LV_GRID_FR(x)" /> tracks consumes all available space, so alignment will appear to do nothing.
+
+Accepted values on both axes:
+- `LV_GRID_ALIGN_START`: tracks are packed to the left/top (default)
+- `LV_GRID_ALIGN_CENTER`: tracks are centered
+- `LV_GRID_ALIGN_END`: tracks are packed to the right/bottom
+- `LV_GRID_ALIGN_SPACE_BETWEEN`: free space is split between the tracks, none at the edges
+- `LV_GRID_ALIGN_SPACE_AROUND`: equal space around each track, so edge space is half of the space between tracks
+- `LV_GRID_ALIGN_SPACE_EVENLY`: gaps between tracks and at the edges are all equal
 
 ```c
 void lv_obj_set_grid_align(lv_obj_t *obj, lv_grid_align_t column_align, lv_grid_align_t row_align)
@@ -43,16 +79,36 @@ void lv_obj_set_grid_align(lv_obj_t *obj, lv_grid_align_t column_align, lv_grid_
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `column_align` | <ApiLink name="lv_grid_align_t" /> |
-| `row_align` | <ApiLink name="lv_grid_align_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a Grid container |
+| `column_align` | <ApiLink name="lv_grid_align_t" /> | how to distribute the columns horizontally |
+| `row_align` | <ApiLink name="lv_grid_align_t" /> | how to distribute the rows vertically |
+
+<Callout type="info">
+This function does not set the Widget's layout to `LV_LAYOUT_GRID`
+</Callout>
+
+<Callout type="info">
+`LV_GRID_ALIGN_STRETCH` is meaningful only for items in a cell and is not a valid track alignment here.
+</Callout>
+
+<Callout type="info">
+The `SPACE_*` modes compute the spacing from the remaining free space and therefore override `pad_column`/`pad_row`. With a single track they behave like `LV_GRID_ALIGN_CENTER`.
+</Callout>
+
+<Callout type="info">
+If the container's size is `LV_SIZE_CONTENT` on an axis, there is no free space by definition and the alignment on that axis is ignored.
+</Callout>
+
+<Callout type="info">
+With `LV_BASE_DIR_RTL` on the container the column tracks are laid out right-to-left, so `START` means right-most.
+</Callout>
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_grid_cell" file="public/layouts/lv_grid.h" line={77} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/include/lvgl/layouts/lv_grid.h#L77">
+<ApiMember kind="function" name="lv_obj_set_grid_cell" file="public/layouts/lv_grid.h" line={149} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/layouts/lv_grid.h#L149">
 
 ### lv_obj_set_grid_cell
 
@@ -80,7 +136,7 @@ void lv_obj_set_grid_cell(lv_obj_t *obj, lv_grid_align_t column_align, int32_t c
 </ApiTab>
 <ApiTab value="Other (2)">
 
-<ApiMember kind="function" name="lv_grid_init" file="public/layouts/lv_grid.h" line={61} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/include/lvgl/layouts/lv_grid.h#L61">
+<ApiMember kind="function" name="lv_grid_init" file="public/layouts/lv_grid.h" line={61} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/layouts/lv_grid.h#L61">
 
 ### lv_grid_init
 
@@ -91,7 +147,7 @@ void lv_grid_init(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_grid_fr" file="public/layouts/lv_grid.h" line={83} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/include/lvgl/layouts/lv_grid.h#L83">
+<ApiMember kind="function" name="lv_grid_fr" file="public/layouts/lv_grid.h" line={155} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/layouts/lv_grid.h#L155">
 
 ### lv_grid_fr
 
@@ -114,7 +170,7 @@ int32_t lv_grid_fr(uint8_t x)
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_grid_align_t" file="public/layouts/lv_grid.h" line={43} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/include/lvgl/layouts/lv_grid.h#L43">
+<ApiMember kind="enum" name="lv_grid_align_t" file="public/layouts/lv_grid.h" line={43} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/layouts/lv_grid.h#L43">
 
 ### lv_grid_align_t
 
@@ -150,7 +206,7 @@ int32_t lv_grid_fr(uint8_t x)
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_GRID_FR" file="public/layouts/lv_grid.h" line={29} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/include/lvgl/layouts/lv_grid.h#L29">
+<ApiMember kind="macro" name="LV_GRID_FR" file="public/layouts/lv_grid.h" line={29} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/layouts/lv_grid.h#L29">
 
 ### LV_GRID_FR
 
@@ -172,7 +228,7 @@ Can be used track size to make the track fill the free space.
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_GRID_CONTENT" file="public/layouts/lv_grid.h" line={31} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/include/lvgl/layouts/lv_grid.h#L31">
+<ApiMember kind="macro" name="LV_GRID_CONTENT" file="public/layouts/lv_grid.h" line={31} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/layouts/lv_grid.h#L31">
 
 ### LV_GRID_CONTENT
 
@@ -183,7 +239,7 @@ Can be used track size to make the track fill the free space.
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_GRID_TEMPLATE_LAST" file="public/layouts/lv_grid.h" line={34} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/include/lvgl/layouts/lv_grid.h#L34">
+<ApiMember kind="macro" name="LV_GRID_TEMPLATE_LAST" file="public/layouts/lv_grid.h" line={34} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/layouts/lv_grid.h#L34">
 
 ### LV_GRID_TEMPLATE_LAST
 

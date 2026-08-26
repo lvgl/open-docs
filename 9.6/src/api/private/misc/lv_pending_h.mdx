@@ -13,7 +13,7 @@ api:
 <ApiTabs items={["Setters (1)","Other (5)"]}>
 <ApiTab value="Setters (1)">
 
-<ApiMember kind="function" name="lv_pending_set_free_cb" file="private/misc/lv_pending.h" line={55} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/src/misc/lv_pending.h#L55">
+<ApiMember kind="function" name="lv_pending_set_free_cb" file="private/misc/lv_pending.h" line={55} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/src/misc/lv_pending.h#L55">
 
 ### lv_pending_set_free_cb
 
@@ -29,7 +29,7 @@ void lv_pending_set_free_cb(lv_pending_t *pending, lv_pending_free_cb_t free_cb,
 |------|------|-------------|
 | `pending` | <ApiLink name="lv_pending_t" display="lv_pending_t *" /> | pointer to the pending list |
 | `free_cb` | <ApiLink name="lv_pending_free_cb_t" /> | the free callback |
-| `user_data` | `void *` | user data to pass to the free callback |
+| `user_data` | `void *` | user data to pass to the free callback **Optional:** may be `NULL`. |
 
 
 </ApiMember>
@@ -37,7 +37,7 @@ void lv_pending_set_free_cb(lv_pending_t *pending, lv_pending_free_cb_t free_cb,
 </ApiTab>
 <ApiTab value="Other (5)">
 
-<ApiMember kind="function" name="lv_pending_create" file="private/misc/lv_pending.h" line={41} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/src/misc/lv_pending.h#L41">
+<ApiMember kind="function" name="lv_pending_create" file="private/misc/lv_pending.h" line={41} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/src/misc/lv_pending.h#L41">
 
 ### lv_pending_create
 
@@ -59,7 +59,7 @@ lv_pending_t * lv_pending_create(size_t obj_size, uint32_t capacity_default)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_pending_destroy" file="private/misc/lv_pending.h" line={47} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/src/misc/lv_pending.h#L47">
+<ApiMember kind="function" name="lv_pending_destroy" file="private/misc/lv_pending.h" line={47} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/src/misc/lv_pending.h#L47">
 
 ### lv_pending_destroy
 
@@ -78,7 +78,7 @@ void lv_pending_destroy(lv_pending_t *pending)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_pending_add" file="private/misc/lv_pending.h" line={63} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/src/misc/lv_pending.h#L63">
+<ApiMember kind="function" name="lv_pending_add" file="private/misc/lv_pending.h" line={63} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/src/misc/lv_pending.h#L63">
 
 ### lv_pending_add
 
@@ -98,7 +98,7 @@ void lv_pending_add(lv_pending_t *pending, void *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_pending_remove_all" file="private/misc/lv_pending.h" line={69} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/src/misc/lv_pending.h#L69">
+<ApiMember kind="function" name="lv_pending_remove_all" file="private/misc/lv_pending.h" line={69} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/src/misc/lv_pending.h#L69">
 
 ### lv_pending_remove_all
 
@@ -117,7 +117,7 @@ void lv_pending_remove_all(lv_pending_t *pending)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_pending_swap" file="private/misc/lv_pending.h" line={75} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/src/misc/lv_pending.h#L75">
+<ApiMember kind="function" name="lv_pending_swap" file="private/misc/lv_pending.h" line={75} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/src/misc/lv_pending.h#L75">
 
 ### lv_pending_swap
 
@@ -140,7 +140,7 @@ void lv_pending_swap(lv_pending_t *pending)
 </ApiTabs>
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_pending_t" file="private/misc/lv_pending.h" line={27} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/src/misc/lv_pending.h#L27">
+<ApiMember kind="typedef" name="lv_pending_t" file="private/misc/lv_pending.h" line={27} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/src/misc/lv_pending.h#L27">
 
 ### lv_pending_t
 
@@ -161,7 +161,7 @@ typedef struct _lv_pending_t lv_pending_t
 
 </TypeUsedBy>
 
-<ApiMember kind="typedef" name="lv_pending_free_cb_t" file="private/misc/lv_pending.h" line={29} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/src/misc/lv_pending.h#L29">
+<ApiMember kind="typedef" name="lv_pending_free_cb_t" file="private/misc/lv_pending.h" line={29} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/src/misc/lv_pending.h#L29">
 
 ### lv_pending_free_cb_t
 

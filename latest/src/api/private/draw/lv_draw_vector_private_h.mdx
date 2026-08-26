@@ -12,7 +12,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_vector_for_each_destroy_tasks" file="private/draw/lv_draw_vector_private.h" line={131} url="https://github.com/lvgl/lvgl/tree/ff2f96c4db86b37d609b38354785e479e43ba3b6/src/draw/lv_draw_vector_private.h#L131">
+<ApiMember kind="function" name="lv_vector_for_each_destroy_tasks" file="private/draw/lv_draw_vector_private.h" line={131} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/src/draw/lv_draw_vector_private.h#L131">
 
 ### lv_vector_for_each_destroy_tasks
 
@@ -28,7 +28,7 @@ void lv_vector_for_each_destroy_tasks(lv_ll_t *task_list, vector_draw_task_cb cb
 |------|------|-------------|
 | `task_list` | <ApiLink name="lv_ll_t" display="lv_ll_t *" /> | pointer to the linked list in `lv_draw_vector_dsc_t` that stores the path shapes and their attributes. |
 | `cb` | <ApiLink name="vector_draw_task_cb" /> | the callback used to iterate through the task |
-| `user_data` | `void *` | a custom pointer that will be passed to the callback |
+| `user_data` | `void *` | a custom pointer that will be passed to the callback **Optional:** may be `NULL`. |
 
 
 </ApiMember>
