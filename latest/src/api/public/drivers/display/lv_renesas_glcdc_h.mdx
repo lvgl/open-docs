@@ -9,7 +9,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_renesas_glcdc_direct_create" file="public/drivers/display/lv_renesas_glcdc.h" line={36} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/drivers/display/lv_renesas_glcdc.h#L36">
+<ApiMember kind="function" name="lv_renesas_glcdc_direct_create" file="public/drivers/display/lv_renesas_glcdc.h" line={36} url="https://github.com/lvgl/lvgl/tree/1906077e06146e4f94a9c0f5cfe98b9b683fe13b/include/lvgl/drivers/display/lv_renesas_glcdc.h#L36">
 
 ### lv_renesas_glcdc_direct_create
 
@@ -24,7 +24,7 @@ lv_display_t * lv_renesas_glcdc_direct_create(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_renesas_glcdc_partial_create" file="public/drivers/display/lv_renesas_glcdc.h" line={45} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/drivers/display/lv_renesas_glcdc.h#L45">
+<ApiMember kind="function" name="lv_renesas_glcdc_partial_create" file="public/drivers/display/lv_renesas_glcdc.h" line={45} url="https://github.com/lvgl/lvgl/tree/1906077e06146e4f94a9c0f5cfe98b9b683fe13b/include/lvgl/drivers/display/lv_renesas_glcdc.h#L45">
 
 ### lv_renesas_glcdc_partial_create
 
@@ -39,7 +39,7 @@ lv_display_t * lv_renesas_glcdc_partial_create(void *buf1, void *buf2, size_t bu
 | Name | Type | Description |
 |------|------|-------------|
 | `buf1` | `void *` | first buffer |
-| `buf2` | `void *` | second buffer. **Optional:** may be `NULL`. When NULL a single buffer is used. |
+| `buf2` | `void *` | second buffer. **May** be `NULL`. When NULL a single buffer is used. |
 | `buf_size` | `size_t` | buffer size in byte |
 
 **Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — pointer to the created display

@@ -10,7 +10,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_async_call" file="public/misc/lv_async.h" line={44} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/misc/lv_async.h#L44">
+<ApiMember kind="function" name="lv_async_call" file="public/misc/lv_async.h" line={44} url="https://github.com/lvgl/lvgl/tree/1906077e06146e4f94a9c0f5cfe98b9b683fe13b/include/lvgl/misc/lv_async.h#L44">
 
 ### lv_async_call
 
@@ -25,12 +25,12 @@ lv_result_t lv_async_call(lv_async_cb_t async_xcb, void *user_data)
 | Name | Type | Description |
 |------|------|-------------|
 | `async_xcb` | <ApiLink name="lv_async_cb_t" /> | a callback which is the task itself. (the 'x' in the argument name indicates that it's not a fully generic function because it not follows the `func_name(object, callback, ...)` convention) |
-| `user_data` | `void *` | custom parameter **Optional:** may be `NULL`. |
+| `user_data` | `void *` | custom parameter **May** be `NULL`. |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_async_call_cancel" file="public/misc/lv_async.h" line={51} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/misc/lv_async.h#L51">
+<ApiMember kind="function" name="lv_async_call_cancel" file="public/misc/lv_async.h" line={51} url="https://github.com/lvgl/lvgl/tree/1906077e06146e4f94a9c0f5cfe98b9b683fe13b/include/lvgl/misc/lv_async.h#L51">
 
 ### lv_async_call_cancel
 
@@ -45,14 +45,14 @@ lv_result_t lv_async_call_cancel(lv_async_cb_t async_xcb, void *user_data)
 | Name | Type | Description |
 |------|------|-------------|
 | `async_xcb` | <ApiLink name="lv_async_cb_t" /> | a callback which is the task itself. |
-| `user_data` | `void *` | custom parameter **Optional:** may be `NULL`. |
+| `user_data` | `void *` | custom parameter **May** be `NULL`. |
 
 
 </ApiMember>
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_async_cb_t" file="public/misc/lv_async.h" line={30} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/misc/lv_async.h#L30">
+<ApiMember kind="typedef" name="lv_async_cb_t" file="public/misc/lv_async.h" line={30} url="https://github.com/lvgl/lvgl/tree/1906077e06146e4f94a9c0f5cfe98b9b683fe13b/include/lvgl/misc/lv_async.h#L30">
 
 ### lv_async_cb_t
 

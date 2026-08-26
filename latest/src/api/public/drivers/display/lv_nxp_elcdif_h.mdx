@@ -11,7 +11,7 @@ Driver for NXP's ELCD
 
 ## Functions
 
-<ApiMember kind="function" name="lv_nxp_display_elcdif_create_direct" file="public/drivers/display/lv_nxp_elcdif.h" line={45} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/drivers/display/lv_nxp_elcdif.h#L45">
+<ApiMember kind="function" name="lv_nxp_display_elcdif_create_direct" file="public/drivers/display/lv_nxp_elcdif.h" line={45} url="https://github.com/lvgl/lvgl/tree/1906077e06146e4f94a9c0f5cfe98b9b683fe13b/include/lvgl/drivers/display/lv_nxp_elcdif.h#L45">
 
 ### lv_nxp_display_elcdif_create_direct
 
@@ -28,7 +28,7 @@ lv_display_t * lv_nxp_display_elcdif_create_direct(LCDIF_Type *base, const elcdi
 | `base` | `LCDIF_Type *` | The NXP eLCD controller base address |
 | `config` | `const elcdif_rgb_mode_config_t *` | NXP eLCD config object |
 | `frame_buffer1` | `void *` | pointer the first frame buffers |
-| `frame_buffer2` | `void *` | pointer the second frame buffer. **Optional:** may be `NULL`. When NULL a single buffer is used. |
+| `frame_buffer2` | `void *` | pointer the second frame buffer. **May** be `NULL`. When NULL a single buffer is used. |
 | `buf_size` | `size_t` | size of a buffer in bytes (must be at least as large as the screen) |
 
 **Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — a display object initialized and registered on the LVGL runtime
@@ -36,7 +36,7 @@ lv_display_t * lv_nxp_display_elcdif_create_direct(LCDIF_Type *base, const elcdi
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_nxp_display_elcdif_create_partial" file="public/drivers/display/lv_nxp_elcdif.h" line={61} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/drivers/display/lv_nxp_elcdif.h#L61">
+<ApiMember kind="function" name="lv_nxp_display_elcdif_create_partial" file="public/drivers/display/lv_nxp_elcdif.h" line={61} url="https://github.com/lvgl/lvgl/tree/1906077e06146e4f94a9c0f5cfe98b9b683fe13b/include/lvgl/drivers/display/lv_nxp_elcdif.h#L61">
 
 ### lv_nxp_display_elcdif_create_partial
 
@@ -53,7 +53,7 @@ lv_display_t * lv_nxp_display_elcdif_create_partial(LCDIF_Type *base, const elcd
 | `base` | `LCDIF_Type *` | The NXP eLCD controller base address |
 | `config` | `const elcdif_rgb_mode_config_t *` | NXP eLCD config object |
 | `frame_buffer1` | `void *` | pointer the first frame buffers |
-| `frame_buffer2` | `void *` | pointer the second frame buffer. **Optional:** may be `NULL`. When NULL a single buffer is used. |
+| `frame_buffer2` | `void *` | pointer the second frame buffer. **May** be `NULL`. When NULL a single buffer is used. |
 | `buf_size` | `size_t` | size of a buffer in bytes |
 
 **Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — a display object initialized and registered on the LVGL runtime
@@ -61,7 +61,7 @@ lv_display_t * lv_nxp_display_elcdif_create_partial(LCDIF_Type *base, const elcd
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_nxp_display_elcdif_event_handler" file="public/drivers/display/lv_nxp_elcdif.h" line={74} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/drivers/display/lv_nxp_elcdif.h#L74">
+<ApiMember kind="function" name="lv_nxp_display_elcdif_event_handler" file="public/drivers/display/lv_nxp_elcdif.h" line={74} url="https://github.com/lvgl/lvgl/tree/1906077e06146e4f94a9c0f5cfe98b9b683fe13b/include/lvgl/drivers/display/lv_nxp_elcdif.h#L74">
 
 ### lv_nxp_display_elcdif_event_handler
 

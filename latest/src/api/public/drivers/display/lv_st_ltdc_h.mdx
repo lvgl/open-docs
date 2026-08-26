@@ -9,7 +9,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_st_ltdc_create_direct" file="public/drivers/display/lv_st_ltdc.h" line={42} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/drivers/display/lv_st_ltdc.h#L42">
+<ApiMember kind="function" name="lv_st_ltdc_create_direct" file="public/drivers/display/lv_st_ltdc.h" line={42} url="https://github.com/lvgl/lvgl/tree/1906077e06146e4f94a9c0f5cfe98b9b683fe13b/include/lvgl/drivers/display/lv_st_ltdc.h#L42">
 
 ### lv_st_ltdc_create_direct
 
@@ -24,7 +24,7 @@ lv_display_t * lv_st_ltdc_create_direct(void *fb_adr_1, void *fb_adr_2, uint32_t
 | Name | Type | Description |
 |------|------|-------------|
 | `fb_adr_1` | `void *` | The LTDC layer's framebuffer memory address. |
-| `fb_adr_2` | `void *` | An additional framebuffer-sized buffer to use for double buffering. **Optional:** may be `NULL`. When NULL a single buffer is used. |
+| `fb_adr_2` | `void *` | An additional framebuffer-sized buffer to use for double buffering. **May** be `NULL`. When NULL a single buffer is used. |
 | `layer_idx` | `uint32_t` | The LTDC layer number to bind the display to. Typically 0 or 1. |
 
 **Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — The display.
@@ -32,7 +32,7 @@ lv_display_t * lv_st_ltdc_create_direct(void *fb_adr_1, void *fb_adr_2, uint32_t
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_st_ltdc_create_partial" file="public/drivers/display/lv_st_ltdc.h" line={54} url="https://github.com/lvgl/lvgl/tree/1c71f15c945c9521cc85aaf9fd7a92e994a69c91/include/lvgl/drivers/display/lv_st_ltdc.h#L54">
+<ApiMember kind="function" name="lv_st_ltdc_create_partial" file="public/drivers/display/lv_st_ltdc.h" line={54} url="https://github.com/lvgl/lvgl/tree/1906077e06146e4f94a9c0f5cfe98b9b683fe13b/include/lvgl/drivers/display/lv_st_ltdc.h#L54">
 
 ### lv_st_ltdc_create_partial
 
@@ -47,7 +47,7 @@ lv_display_t * lv_st_ltdc_create_partial(void *render_buf_1, void *render_buf_2,
 | Name | Type | Description |
 |------|------|-------------|
 | `render_buf_1` | `void *` | A render buffer. |
-| `render_buf_2` | `void *` | An additional render buffer for double-buffering. **Optional:** may be `NULL`. When NULL a single buffer is used. |
+| `render_buf_2` | `void *` | An additional render buffer for double-buffering. **May** be `NULL`. When NULL a single buffer is used. |
 | `buf_size` | `uint32_t` | The size of the buffer(s) in bytes. |
 | `layer_idx` | `uint32_t` | The LTDC layer number to bind the display to. Typically 0 or 1. |
 
