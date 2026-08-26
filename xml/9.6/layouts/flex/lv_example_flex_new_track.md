@@ -1,4 +1,4 @@
-```xml title="examples/layouts/flex/lv_example_flex_new_track.xml" source="https://github.com/lvgl/lvgl/blob/c306fdc7a03ff77c4eb7d9d847afbb7914666a9f/examples/layouts/flex/lv_example_flex_new_track.xml"
+```xml title="examples/layouts/flex/lv_example_flex_new_track.xml" source="https://github.com/lvgl/lvgl/blob/8fae1f782194fccba8012eb3626114cf06fef92f/examples/layouts/flex/lv_example_flex_new_track.xml"
 <!--
  @title Flex new track
  @brief Force an item to start a new wrap row.
