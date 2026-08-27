@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-27T15:21:05.831Z",
-    "symbolCount": 8957
+    "generatedAt": "2026-08-27T18:52:02.071Z",
+    "symbolCount": 8989
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -5401,6 +5401,26 @@
       "anchor": "lv_event_code_t",
       "kind": "enumvalue"
     },
+    "LV_EVENT_GESTURE_UP": {
+      "path": "api/public/core/lv_event_h",
+      "anchor": "lv_event_code_t",
+      "kind": "enumvalue"
+    },
+    "LV_EVENT_GESTURE_DOWN": {
+      "path": "api/public/core/lv_event_h",
+      "anchor": "lv_event_code_t",
+      "kind": "enumvalue"
+    },
+    "LV_EVENT_GESTURE_LEFT": {
+      "path": "api/public/core/lv_event_h",
+      "anchor": "lv_event_code_t",
+      "kind": "enumvalue"
+    },
+    "LV_EVENT_GESTURE_RIGHT": {
+      "path": "api/public/core/lv_event_h",
+      "anchor": "lv_event_code_t",
+      "kind": "enumvalue"
+    },
     "LV_EVENT_KEY": {
       "path": "api/public/core/lv_event_h",
       "anchor": "lv_event_code_t",
@@ -5517,6 +5537,16 @@
       "kind": "enumvalue"
     },
     "LV_EVENT_STATE_CHANGED": {
+      "path": "api/public/core/lv_event_h",
+      "anchor": "lv_event_code_t",
+      "kind": "enumvalue"
+    },
+    "LV_EVENT_CHECKED": {
+      "path": "api/public/core/lv_event_h",
+      "anchor": "lv_event_code_t",
+      "kind": "enumvalue"
+    },
+    "LV_EVENT_UNCHECKED": {
       "path": "api/public/core/lv_event_h",
       "anchor": "lv_event_code_t",
       "kind": "enumvalue"
@@ -6221,6 +6251,71 @@
       "anchor": "lv_obj_set_state",
       "kind": "function"
     },
+    "lv_obj_set_alt": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_alt",
+      "kind": "function"
+    },
+    "lv_obj_set_checked": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_checked",
+      "kind": "function"
+    },
+    "lv_obj_set_focused": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_focused",
+      "kind": "function"
+    },
+    "lv_obj_set_focus_key": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_focus_key",
+      "kind": "function"
+    },
+    "lv_obj_set_edited": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_edited",
+      "kind": "function"
+    },
+    "lv_obj_set_hovered": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_hovered",
+      "kind": "function"
+    },
+    "lv_obj_set_pressed": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_pressed",
+      "kind": "function"
+    },
+    "lv_obj_set_scrolled": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_scrolled",
+      "kind": "function"
+    },
+    "lv_obj_set_disabled": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_disabled",
+      "kind": "function"
+    },
+    "lv_obj_set_state_user_1": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_state_user_1",
+      "kind": "function"
+    },
+    "lv_obj_set_state_user_2": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_state_user_2",
+      "kind": "function"
+    },
+    "lv_obj_set_state_user_3": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_state_user_3",
+      "kind": "function"
+    },
+    "lv_obj_set_state_user_4": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_set_state_user_4",
+      "kind": "function"
+    },
     "lv_obj_set_user_data": {
       "path": "api/public/core/lv_obj_h",
       "anchor": "lv_obj_set_user_data",
@@ -6374,6 +6469,71 @@
     "lv_obj_has_state": {
       "path": "api/public/core/lv_obj_h",
       "anchor": "lv_obj_has_state",
+      "kind": "function"
+    },
+    "lv_obj_is_alt": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_alt",
+      "kind": "function"
+    },
+    "lv_obj_is_checked": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_checked",
+      "kind": "function"
+    },
+    "lv_obj_is_focused": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_focused",
+      "kind": "function"
+    },
+    "lv_obj_is_focus_key": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_focus_key",
+      "kind": "function"
+    },
+    "lv_obj_is_edited": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_edited",
+      "kind": "function"
+    },
+    "lv_obj_is_hovered": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_hovered",
+      "kind": "function"
+    },
+    "lv_obj_is_pressed": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_pressed",
+      "kind": "function"
+    },
+    "lv_obj_is_scrolled": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_scrolled",
+      "kind": "function"
+    },
+    "lv_obj_is_disabled": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_disabled",
+      "kind": "function"
+    },
+    "lv_obj_is_state_user_1": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_state_user_1",
+      "kind": "function"
+    },
+    "lv_obj_is_state_user_2": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_state_user_2",
+      "kind": "function"
+    },
+    "lv_obj_is_state_user_3": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_state_user_3",
+      "kind": "function"
+    },
+    "lv_obj_is_state_user_4": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "lv_obj_is_state_user_4",
       "kind": "function"
     },
     "lv_obj_get_group": {
