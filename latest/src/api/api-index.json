@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-26T20:01:29.618Z",
-    "symbolCount": 8951
+    "generatedAt": "2026-08-27T06:21:28.597Z",
+    "symbolCount": 8952
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -4709,6 +4709,11 @@
     "lv_anim_timeline_start": {
       "path": "api/public/core/lv_anim_timeline_h",
       "anchor": "lv_anim_timeline_start",
+      "kind": "function"
+    },
+    "lv_anim_timeline_restart": {
+      "path": "api/public/core/lv_anim_timeline_h",
+      "anchor": "lv_anim_timeline_restart",
       "kind": "function"
     },
     "lv_anim_timeline_pause": {
