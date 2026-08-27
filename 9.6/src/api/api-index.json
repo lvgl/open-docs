@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-27T06:21:28.597Z",
-    "symbolCount": 8952
+    "generatedAt": "2026-08-27T15:21:05.831Z",
+    "symbolCount": 8957
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2084,6 +2084,31 @@
     "lv_observer_remove": {
       "path": "api/public/api_map/lv_api_map_v9_5_h",
       "anchor": "lv_observer_remove",
+      "kind": "macro"
+    },
+    "lv_draw_sw_i1_to_argb8888": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "lv_draw_sw_i1_to_argb8888",
+      "kind": "macro"
+    },
+    "lv_draw_sw_rgb565_swap": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "lv_draw_sw_rgb565_swap",
+      "kind": "macro"
+    },
+    "lv_draw_sw_rotate": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "lv_draw_sw_rotate",
+      "kind": "macro"
+    },
+    "lv_draw_sw_i1_invert": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "lv_draw_sw_i1_invert",
+      "kind": "macro"
+    },
+    "lv_draw_sw_i1_convert_to_vtiled": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "lv_draw_sw_i1_convert_to_vtiled",
       "kind": "macro"
     },
     "lv_conf_internal.h": {
@@ -16071,6 +16096,36 @@
       "anchor": "lv_draw_triangle_dsc_t",
       "kind": "struct"
     },
+    "lv_draw_utils.h": {
+      "path": "api/public/draw/lv_draw_utils_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_draw_i1_to_argb8888": {
+      "path": "api/public/draw/lv_draw_utils_h",
+      "anchor": "lv_draw_i1_to_argb8888",
+      "kind": "function"
+    },
+    "lv_draw_rgb565_swap": {
+      "path": "api/public/draw/lv_draw_utils_h",
+      "anchor": "lv_draw_rgb565_swap",
+      "kind": "function"
+    },
+    "lv_draw_i1_invert": {
+      "path": "api/public/draw/lv_draw_utils_h",
+      "anchor": "lv_draw_i1_invert",
+      "kind": "function"
+    },
+    "lv_draw_i1_convert_to_vtiled": {
+      "path": "api/public/draw/lv_draw_utils_h",
+      "anchor": "lv_draw_i1_convert_to_vtiled",
+      "kind": "function"
+    },
+    "lv_draw_rotate": {
+      "path": "api/public/draw/lv_draw_utils_h",
+      "anchor": "lv_draw_rotate",
+      "kind": "function"
+    },
     "lv_draw_vector.h": {
       "path": "api/public/draw/lv_draw_vector_h",
       "anchor": "",
@@ -16994,36 +17049,6 @@
     "lv_snapshot_take_to_buf": {
       "path": "api/public/draw/lv_snapshot_h",
       "anchor": "lv_snapshot_take_to_buf",
-      "kind": "function"
-    },
-    "lv_draw_sw_utils.h": {
-      "path": "api/public/draw/sw/lv_draw_sw_utils_h",
-      "anchor": "",
-      "kind": "header"
-    },
-    "lv_draw_sw_i1_to_argb8888": {
-      "path": "api/public/draw/sw/lv_draw_sw_utils_h",
-      "anchor": "lv_draw_sw_i1_to_argb8888",
-      "kind": "function"
-    },
-    "lv_draw_sw_rgb565_swap": {
-      "path": "api/public/draw/sw/lv_draw_sw_utils_h",
-      "anchor": "lv_draw_sw_rgb565_swap",
-      "kind": "function"
-    },
-    "lv_draw_sw_i1_invert": {
-      "path": "api/public/draw/sw/lv_draw_sw_utils_h",
-      "anchor": "lv_draw_sw_i1_invert",
-      "kind": "function"
-    },
-    "lv_draw_sw_i1_convert_to_vtiled": {
-      "path": "api/public/draw/sw/lv_draw_sw_utils_h",
-      "anchor": "lv_draw_sw_i1_convert_to_vtiled",
-      "kind": "function"
-    },
-    "lv_draw_sw_rotate": {
-      "path": "api/public/draw/sw/lv_draw_sw_utils_h",
-      "anchor": "lv_draw_sw_rotate",
       "kind": "function"
     },
     "lv_draw_eve_display.h": {
@@ -34596,9 +34621,9 @@
       "anchor": "arm_2d_helper_swap_rgb16",
       "kind": "function"
     },
-    "lv_draw_sw_rgb565_swap_helium": {
+    "lv_draw_rgb565_swap_helium": {
       "path": "api/private/draw/sw/arm2d/lv_draw_sw_arm2d_h",
-      "anchor": "lv_draw_sw_rgb565_swap_helium",
+      "anchor": "lv_draw_rgb565_swap_helium",
       "kind": "function"
     },
     "lv_draw_sw_image_helium": {
@@ -34621,9 +34646,9 @@
       "anchor": "__ARM_2D_IMPL__",
       "kind": "macro"
     },
-    "LV_DRAW_SW_RGB565_SWAP": {
+    "LV_DRAW_RGB565_SWAP": {
       "path": "api/private/draw/sw/arm2d/lv_draw_sw_arm2d_h",
-      "anchor": "LV_DRAW_SW_RGB565_SWAP",
+      "anchor": "LV_DRAW_RGB565_SWAP",
       "kind": "macro"
     },
     "LV_DRAW_SW_IMAGE": {

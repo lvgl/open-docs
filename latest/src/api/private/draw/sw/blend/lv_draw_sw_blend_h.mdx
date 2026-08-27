@@ -13,7 +13,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_sw_blend" file="private/draw/sw/blend/lv_draw_sw_blend.h" line={50} url="https://github.com/lvgl/lvgl/tree/8a711eb3f914b883ea8a8d2922b74804114ae716/src/draw/sw/blend/lv_draw_sw_blend.h#L50">
+<ApiMember kind="function" name="lv_draw_sw_blend" file="private/draw/sw/blend/lv_draw_sw_blend.h" line={62} url="https://github.com/lvgl/lvgl/tree/49587a4b9b75a51f4646711174a9f8a9c8a60130/src/draw/sw/blend/lv_draw_sw_blend.h#L62">
 
 ### lv_draw_sw_blend
 
@@ -55,7 +55,7 @@ void lv_draw_sw_blend(lv_draw_task_t *t, const lv_draw_sw_blend_dsc_t *dsc)
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_draw_sw_blend_handler_t" file="private/draw/sw/blend/lv_draw_sw_blend.h" line={38} url="https://github.com/lvgl/lvgl/tree/8a711eb3f914b883ea8a8d2922b74804114ae716/src/draw/sw/blend/lv_draw_sw_blend.h#L38">
+<ApiMember kind="typedef" name="lv_draw_sw_blend_handler_t" file="private/draw/sw/blend/lv_draw_sw_blend.h" line={50} url="https://github.com/lvgl/lvgl/tree/49587a4b9b75a51f4646711174a9f8a9c8a60130/src/draw/sw/blend/lv_draw_sw_blend.h#L50">
 
 ### lv_draw_sw_blend_handler_t
 
@@ -71,6 +71,7 @@ Custom draw function for SW rendering.
 ## Dependencies
 
 <FileIncludes
-  includes={["lvgl_public.h"]}
+  includes={["lvgl_public.h", "lv_blend_neon.h"]}
   includedBy={["lv_draw_sw_blend_private.h", "lv_blend_riscv_v.h", "lv_draw_sw.h", "lvgl_private.h"]}
+  transitiveIncludes={["lv_draw_sw_blend_neon_to_rgb565.h", "lv_draw_sw_blend_neon_to_rgb888.h"]}
 />

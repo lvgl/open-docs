@@ -1,7 +1,6 @@
 {
   "title": "Draw",
   "pages": [
-    "sw",
     "lv_color_h",
     "lv_color_op_h",
     "lv_draw_3d_h",
@@ -15,6 +14,7 @@
     "lv_draw_mask_h",
     "lv_draw_rect_h",
     "lv_draw_triangle_h",
+    "lv_draw_utils_h",
     "lv_draw_vector_h",
     "lv_grad_h",
     "lv_image_dsc_h",
