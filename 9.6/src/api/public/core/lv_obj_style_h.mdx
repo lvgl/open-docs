@@ -16,7 +16,7 @@ api:
 <ApiTabs items={["Setters (11)","Getters (13)","Other (17)"]}>
 <ApiTab value="Setters (11)">
 
-<ApiMember kind="function" name="lv_obj_style_set_disabled" file="public/core/lv_obj_style.h" line={184} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L184">
+<ApiMember kind="function" name="lv_obj_style_set_disabled" file="public/core/lv_obj_style.h" line={184} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L184">
 
 ### lv_obj_style_set_disabled
 
@@ -38,7 +38,7 @@ void lv_obj_style_set_disabled(lv_obj_t *obj, const lv_style_t *style, lv_style_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_local_style_prop" file="public/core/lv_obj_style.h" line={230} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L230">
+<ApiMember kind="function" name="lv_obj_set_local_style_prop" file="public/core/lv_obj_style.h" line={230} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L230">
 
 ### lv_obj_set_local_style_prop
 
@@ -60,174 +60,192 @@ void lv_obj_set_local_style_prop(lv_obj_t *obj, lv_style_prop_t prop, lv_style_v
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_style_pad_all" file="public/core/lv_obj_style.h" line={278} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L278">
+<ApiMember kind="function" name="lv_obj_set_style_pad_all" file="public/core/lv_obj_style.h" line={290} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L290">
 
 ### lv_obj_set_style_pad_all
 
+Sets padding on all four sides at once by calling <ApiLink name="lv_obj_set_style_pad_top" display="lv_obj_set_style_pad_top()" />, <ApiLink name="lv_obj_set_style_pad_bottom" display="lv_obj_set_style_pad_bottom()" />, <ApiLink name="lv_obj_set_style_pad_left" display="lv_obj_set_style_pad_left()" /> and <ApiLink name="lv_obj_set_style_pad_right" display="lv_obj_set_style_pad_right()" /> with the same value.
+
 ```c
-static void lv_obj_set_style_pad_all(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+void lv_obj_set_style_pad_all(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `value` | `int32_t` |
-| `selector` | <ApiLink name="lv_style_selector_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to Widget |
+| `value` | `int32_t` | Value to submit |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | A joint type for `lv_part_t` and `lv_state_t`. Example values:<br/>- `0`: means `LV_PART_MAIN | LV_STATE_DEFAULT`<br/>- `LV_STATE_PRESSED`<br/>- `LV_PART_KNOB`<br/>- `LV_PART_KNOB | LV_STATE_PRESSED | LV_STATE_CHECKED` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_style_pad_hor" file="public/core/lv_obj_style.h" line={286} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L286">
+<ApiMember kind="function" name="lv_obj_set_style_pad_hor" file="public/core/lv_obj_style.h" line={303} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L303">
 
 ### lv_obj_set_style_pad_hor
 
+Sets horizontal padding by calling <ApiLink name="lv_obj_set_style_pad_left" display="lv_obj_set_style_pad_left()" /> and <ApiLink name="lv_obj_set_style_pad_right" display="lv_obj_set_style_pad_right()" /> with the same value.
+
 ```c
-static void lv_obj_set_style_pad_hor(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+void lv_obj_set_style_pad_hor(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `value` | `int32_t` |
-| `selector` | <ApiLink name="lv_style_selector_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to Widget |
+| `value` | `int32_t` | Value to submit |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | A joint type for `lv_part_t` and `lv_state_t`. Example values:<br/>- `0`: means `LV_PART_MAIN | LV_STATE_DEFAULT`<br/>- `LV_STATE_PRESSED`<br/>- `LV_PART_KNOB`<br/>- `LV_PART_KNOB | LV_STATE_PRESSED | LV_STATE_CHECKED` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_style_pad_ver" file="public/core/lv_obj_style.h" line={292} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L292">
+<ApiMember kind="function" name="lv_obj_set_style_pad_ver" file="public/core/lv_obj_style.h" line={316} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L316">
 
 ### lv_obj_set_style_pad_ver
 
+Sets vertical padding by calling <ApiLink name="lv_obj_set_style_pad_top" display="lv_obj_set_style_pad_top()" /> and <ApiLink name="lv_obj_set_style_pad_bottom" display="lv_obj_set_style_pad_bottom()" /> with the same value.
+
 ```c
-static void lv_obj_set_style_pad_ver(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+void lv_obj_set_style_pad_ver(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `value` | `int32_t` |
-| `selector` | <ApiLink name="lv_style_selector_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to Widget |
+| `value` | `int32_t` | Value to submit |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | A joint type for `lv_part_t` and `lv_state_t`. Example values:<br/>- `0`: means `LV_PART_MAIN | LV_STATE_DEFAULT`<br/>- `LV_STATE_PRESSED`<br/>- `LV_PART_KNOB`<br/>- `LV_PART_KNOB | LV_STATE_PRESSED | LV_STATE_CHECKED` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_style_margin_all" file="public/core/lv_obj_style.h" line={298} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L298">
+<ApiMember kind="function" name="lv_obj_set_style_margin_all" file="public/core/lv_obj_style.h" line={330} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L330">
 
 ### lv_obj_set_style_margin_all
 
+Sets margin on all four sides at once by calling <ApiLink name="lv_obj_set_style_margin_top" display="lv_obj_set_style_margin_top()" />, <ApiLink name="lv_obj_set_style_margin_bottom" display="lv_obj_set_style_margin_bottom()" />, <ApiLink name="lv_obj_set_style_margin_left" display="lv_obj_set_style_margin_left()" /> and <ApiLink name="lv_obj_set_style_margin_right" display="lv_obj_set_style_margin_right()" /> with the same value.
+
 ```c
-static void lv_obj_set_style_margin_all(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+void lv_obj_set_style_margin_all(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `value` | `int32_t` |
-| `selector` | <ApiLink name="lv_style_selector_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to Widget |
+| `value` | `int32_t` | Value to submit |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | A joint type for `lv_part_t` and `lv_state_t`. Example values:<br/>- `0`: means `LV_PART_MAIN | LV_STATE_DEFAULT`<br/>- `LV_STATE_PRESSED`<br/>- `LV_PART_KNOB`<br/>- `LV_PART_KNOB | LV_STATE_PRESSED | LV_STATE_CHECKED` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_style_margin_hor" file="public/core/lv_obj_style.h" line={306} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L306">
+<ApiMember kind="function" name="lv_obj_set_style_margin_hor" file="public/core/lv_obj_style.h" line={343} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L343">
 
 ### lv_obj_set_style_margin_hor
 
+Sets horizontal margin by calling <ApiLink name="lv_obj_set_style_margin_left" display="lv_obj_set_style_margin_left()" /> and <ApiLink name="lv_obj_set_style_margin_right" display="lv_obj_set_style_margin_right()" /> with the same value.
+
 ```c
-static void lv_obj_set_style_margin_hor(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+void lv_obj_set_style_margin_hor(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `value` | `int32_t` |
-| `selector` | <ApiLink name="lv_style_selector_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to Widget |
+| `value` | `int32_t` | Value to submit |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | A joint type for `lv_part_t` and `lv_state_t`. Example values:<br/>- `0`: means `LV_PART_MAIN | LV_STATE_DEFAULT`<br/>- `LV_STATE_PRESSED`<br/>- `LV_PART_KNOB`<br/>- `LV_PART_KNOB | LV_STATE_PRESSED | LV_STATE_CHECKED` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_style_margin_ver" file="public/core/lv_obj_style.h" line={312} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L312">
+<ApiMember kind="function" name="lv_obj_set_style_margin_ver" file="public/core/lv_obj_style.h" line={356} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L356">
 
 ### lv_obj_set_style_margin_ver
 
+Sets vertical margin by calling <ApiLink name="lv_obj_set_style_margin_top" display="lv_obj_set_style_margin_top()" /> and <ApiLink name="lv_obj_set_style_margin_bottom" display="lv_obj_set_style_margin_bottom()" /> with the same value.
+
 ```c
-static void lv_obj_set_style_margin_ver(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+void lv_obj_set_style_margin_ver(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `value` | `int32_t` |
-| `selector` | <ApiLink name="lv_style_selector_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to Widget |
+| `value` | `int32_t` | Value to submit |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | A joint type for `lv_part_t` and `lv_state_t`. Example values:<br/>- `0`: means `LV_PART_MAIN | LV_STATE_DEFAULT`<br/>- `LV_STATE_PRESSED`<br/>- `LV_PART_KNOB`<br/>- `LV_PART_KNOB | LV_STATE_PRESSED | LV_STATE_CHECKED` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_style_pad_gap" file="public/core/lv_obj_style.h" line={318} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L318">
+<ApiMember kind="function" name="lv_obj_set_style_pad_gap" file="public/core/lv_obj_style.h" line={370} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L370">
 
 ### lv_obj_set_style_pad_gap
 
+Sets the gap between the children in both directions by calling <ApiLink name="lv_obj_set_style_pad_row" display="lv_obj_set_style_pad_row()" /> and <ApiLink name="lv_obj_set_style_pad_column" display="lv_obj_set_style_pad_column()" /> with the same value.
+
 ```c
-static void lv_obj_set_style_pad_gap(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+void lv_obj_set_style_pad_gap(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `value` | `int32_t` |
-| `selector` | <ApiLink name="lv_style_selector_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to Widget |
+| `value` | `int32_t` | Value to submit |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | A joint type for `lv_part_t` and `lv_state_t`. Example values:<br/>- `0`: means `LV_PART_MAIN | LV_STATE_DEFAULT`<br/>- `LV_STATE_PRESSED`<br/>- `LV_PART_KNOB`<br/>- `LV_PART_KNOB | LV_STATE_PRESSED | LV_STATE_CHECKED` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_style_size" file="public/core/lv_obj_style.h" line={324} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L324">
+<ApiMember kind="function" name="lv_obj_set_style_size" file="public/core/lv_obj_style.h" line={384} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L384">
 
 ### lv_obj_set_style_size
 
+Sets size of Widget by calling <ApiLink name="lv_obj_set_style_width" display="lv_obj_set_style_width()" /> and <ApiLink name="lv_obj_set_style_height" display="lv_obj_set_style_height()" />.
+
 ```c
-static void lv_obj_set_style_size(lv_obj_t *obj, int32_t width, int32_t height, lv_style_selector_t selector)
+void lv_obj_set_style_size(lv_obj_t *obj, int32_t width, int32_t height, lv_style_selector_t selector)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `width` | `int32_t` |
-| `height` | `int32_t` |
-| `selector` | <ApiLink name="lv_style_selector_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to Widget |
+| `width` | `int32_t` | Width value to submit |
+| `height` | `int32_t` | Height value to submit |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | A joint type for `lv_part_t` and `lv_state_t`. Example values:<br/>- `0`: means `LV_PART_MAIN | LV_STATE_DEFAULT`<br/>- `LV_STATE_PRESSED`<br/>- `LV_PART_KNOB`<br/>- `LV_PART_KNOB | LV_STATE_PRESSED | LV_STATE_CHECKED` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_style_transform_scale" file="public/core/lv_obj_style.h" line={331} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L331">
+<ApiMember kind="function" name="lv_obj_set_style_transform_scale" file="public/core/lv_obj_style.h" line={398} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L398">
 
 ### lv_obj_set_style_transform_scale
 
+Sets the zoom factor of Widget in both directions by calling <ApiLink name="lv_obj_set_style_transform_scale_x" display="lv_obj_set_style_transform_scale_x()" /> and <ApiLink name="lv_obj_set_style_transform_scale_y" display="lv_obj_set_style_transform_scale_y()" /> with the same value.
+
 ```c
-static void lv_obj_set_style_transform_scale(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
+void lv_obj_set_style_transform_scale(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `value` | `int32_t` |
-| `selector` | <ApiLink name="lv_style_selector_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to Widget |
+| `value` | `int32_t` | Value to submit |
+| `selector` | <ApiLink name="lv_style_selector_t" /> | A joint type for `lv_part_t` and `lv_state_t`. Example values:<br/>- `0`: means `LV_PART_MAIN | LV_STATE_DEFAULT`<br/>- `LV_STATE_PRESSED`<br/>- `LV_PART_KNOB`<br/>- `LV_PART_KNOB | LV_STATE_PRESSED | LV_STATE_CHECKED` |
 
 
 </ApiMember>
@@ -235,7 +253,7 @@ static void lv_obj_set_style_transform_scale(lv_obj_t *obj, int32_t value, lv_st
 </ApiTab>
 <ApiTab value="Getters (13)">
 
-<ApiMember kind="function" name="lv_obj_style_get_disabled" file="public/core/lv_obj_style.h" line={193} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L193">
+<ApiMember kind="function" name="lv_obj_style_get_disabled" file="public/core/lv_obj_style.h" line={193} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L193">
 
 ### lv_obj_style_get_disabled
 
@@ -258,7 +276,7 @@ bool lv_obj_style_get_disabled(lv_obj_t *obj, const lv_style_t *style, lv_style_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_style_prop" file="public/core/lv_obj_style.h" line={212} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L212">
+<ApiMember kind="function" name="lv_obj_get_style_prop" file="public/core/lv_obj_style.h" line={212} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L212">
 
 ### lv_obj_get_style_prop
 
@@ -281,7 +299,7 @@ lv_style_value_t lv_obj_get_style_prop(const lv_obj_t *obj, lv_part_t part, lv_s
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_local_style_prop" file="public/core/lv_obj_style.h" line={233} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L233">
+<ApiMember kind="function" name="lv_obj_get_local_style_prop" file="public/core/lv_obj_style.h" line={233} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L233">
 
 ### lv_obj_get_local_style_prop
 
@@ -301,7 +319,7 @@ lv_style_res_t lv_obj_get_local_style_prop(lv_obj_t *obj, lv_style_prop_t prop, 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_style_get_selector_state" file="public/core/lv_obj_style.h" line={266} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L266">
+<ApiMember kind="function" name="lv_obj_style_get_selector_state" file="public/core/lv_obj_style.h" line={266} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L266">
 
 ### lv_obj_style_get_selector_state
 
@@ -318,7 +336,7 @@ static lv_state_t lv_obj_style_get_selector_state(lv_style_selector_t selector)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_style_get_selector_part" file="public/core/lv_obj_style.h" line={271} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L271">
+<ApiMember kind="function" name="lv_obj_style_get_selector_part" file="public/core/lv_obj_style.h" line={271} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L271">
 
 ### lv_obj_style_get_selector_part
 
@@ -335,115 +353,139 @@ static lv_part_t lv_obj_style_get_selector_part(lv_style_selector_t selector)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_style_space_left" file="public/core/lv_obj_style.h" line={338} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L338">
+<ApiMember kind="function" name="lv_obj_get_style_space_left" file="public/core/lv_obj_style.h" line={408} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L408">
 
 ### lv_obj_get_style_space_left
 
+Gets the space taken on the left side, i.e. the sum of `pad_left` and the border width. It tells how far the content area starts from the left edge of Widget's bounding box.
+
 ```c
-static int32_t lv_obj_get_style_space_left(const lv_obj_t *obj, lv_part_t part)
+int32_t lv_obj_get_style_space_left(const lv_obj_t *obj, lv_part_t part)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
-| `part` | <ApiLink name="lv_part_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | Pointer to Widget |
+| `part` | <ApiLink name="lv_part_t" /> | One of the `LV_PART_...` enum values |
+
+**Returns:** `int32_t` — Space on the left in pixels
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_style_space_right" file="public/core/lv_obj_style.h" line={346} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L346">
+<ApiMember kind="function" name="lv_obj_get_style_space_right" file="public/core/lv_obj_style.h" line={418} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L418">
 
 ### lv_obj_get_style_space_right
 
+Gets the space taken on the right side, i.e. the sum of `pad_right` and the border width. It tells how far the content area ends from the right edge of Widget's bounding box.
+
 ```c
-static int32_t lv_obj_get_style_space_right(const lv_obj_t *obj, lv_part_t part)
+int32_t lv_obj_get_style_space_right(const lv_obj_t *obj, lv_part_t part)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
-| `part` | <ApiLink name="lv_part_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | Pointer to Widget |
+| `part` | <ApiLink name="lv_part_t" /> | One of the `LV_PART_...` enum values |
+
+**Returns:** `int32_t` — Space on the right in pixels
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_style_space_top" file="public/core/lv_obj_style.h" line={354} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L354">
+<ApiMember kind="function" name="lv_obj_get_style_space_top" file="public/core/lv_obj_style.h" line={428} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L428">
 
 ### lv_obj_get_style_space_top
 
+Gets the space taken on the top side, i.e. the sum of `pad_top` and the border width. It tells how far the content area starts from the top edge of Widget's bounding box.
+
 ```c
-static int32_t lv_obj_get_style_space_top(const lv_obj_t *obj, lv_part_t part)
+int32_t lv_obj_get_style_space_top(const lv_obj_t *obj, lv_part_t part)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
-| `part` | <ApiLink name="lv_part_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | Pointer to Widget |
+| `part` | <ApiLink name="lv_part_t" /> | One of the `LV_PART_...` enum values |
+
+**Returns:** `int32_t` — Space on the top in pixels
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_style_space_bottom" file="public/core/lv_obj_style.h" line={362} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L362">
+<ApiMember kind="function" name="lv_obj_get_style_space_bottom" file="public/core/lv_obj_style.h" line={438} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L438">
 
 ### lv_obj_get_style_space_bottom
 
+Gets the space taken on the bottom side, i.e. the sum of `pad_bottom` and the border width. It tells how far the content area ends from the bottom edge of Widget's bounding box.
+
 ```c
-static int32_t lv_obj_get_style_space_bottom(const lv_obj_t *obj, lv_part_t part)
+int32_t lv_obj_get_style_space_bottom(const lv_obj_t *obj, lv_part_t part)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
-| `part` | <ApiLink name="lv_part_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | Pointer to Widget |
+| `part` | <ApiLink name="lv_part_t" /> | One of the `LV_PART_...` enum values |
+
+**Returns:** `int32_t` — Space on the bottom in pixels
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_style_transform_scale_x_safe" file="public/core/lv_obj_style.h" line={372} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L372">
+<ApiMember kind="function" name="lv_obj_get_style_transform_scale_x_safe" file="public/core/lv_obj_style.h" line={462} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L462">
 
 ### lv_obj_get_style_transform_scale_x_safe
 
+Gets the horizontal zoom factor of Widget in a way which is safe to divide or multiply by. Same as <ApiLink name="lv_obj_get_style_transform_scale_x" display="lv_obj_get_style_transform_scale_x()" /> except that `0` is replaced by `1` to avoid division by zero.
+
 ```c
-static int32_t lv_obj_get_style_transform_scale_x_safe(const lv_obj_t *obj, lv_part_t part)
+int32_t lv_obj_get_style_transform_scale_x_safe(const lv_obj_t *obj, lv_part_t part)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
-| `part` | <ApiLink name="lv_part_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | Pointer to Widget |
+| `part` | <ApiLink name="lv_part_t" /> | One of the `LV_PART_...` enum values |
+
+**Returns:** `int32_t` — The horizontal scale factor, never `0`. `256` (`LV_SCALE_NONE`) means normal size.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_style_transform_scale_y_safe" file="public/core/lv_obj_style.h" line={378} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L378">
+<ApiMember kind="function" name="lv_obj_get_style_transform_scale_y_safe" file="public/core/lv_obj_style.h" line={473} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L473">
 
 ### lv_obj_get_style_transform_scale_y_safe
 
+Gets the vertical zoom factor of Widget in a way which is safe to divide or multiply by. Same as <ApiLink name="lv_obj_get_style_transform_scale_y" display="lv_obj_get_style_transform_scale_y()" /> except that `0` is replaced by `1` to avoid division by zero.
+
 ```c
-static int32_t lv_obj_get_style_transform_scale_y_safe(const lv_obj_t *obj, lv_part_t part)
+int32_t lv_obj_get_style_transform_scale_y_safe(const lv_obj_t *obj, lv_part_t part)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
-| `part` | <ApiLink name="lv_part_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | Pointer to Widget |
+| `part` | <ApiLink name="lv_part_t" /> | One of the `LV_PART_...` enum values |
+
+**Returns:** `int32_t` — The vertical scale factor, never `0`. `256` (`LV_SCALE_NONE`) means normal size.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_style_opa_recursive" file="public/core/lv_obj_style.h" line={390} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L390">
+<ApiMember kind="function" name="lv_obj_get_style_opa_recursive" file="public/core/lv_obj_style.h" line={482} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L482">
 
 ### lv_obj_get_style_opa_recursive
 
@@ -465,7 +507,7 @@ lv_opa_t lv_obj_get_style_opa_recursive(const lv_obj_t *obj, lv_part_t part)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_style_recolor_recursive" file="public/core/lv_obj_style.h" line={409} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L409">
+<ApiMember kind="function" name="lv_obj_get_style_recolor_recursive" file="public/core/lv_obj_style.h" line={501} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L501">
 
 ### lv_obj_get_style_recolor_recursive
 
@@ -490,7 +532,7 @@ lv_color32_t lv_obj_get_style_recolor_recursive(const lv_obj_t *obj, lv_part_t p
 </ApiTab>
 <ApiTab value="Other (17)">
 
-<ApiMember kind="function" name="lv_obj_add_style" file="public/core/lv_obj_style.h" line={107} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L107">
+<ApiMember kind="function" name="lv_obj_add_style" file="public/core/lv_obj_style.h" line={107} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L107">
 
 ### lv_obj_add_style
 
@@ -517,7 +559,7 @@ void lv_obj_add_style(lv_obj_t *obj, const lv_style_t *style, lv_style_selector_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_replace_style" file="public/core/lv_obj_style.h" line={123} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L123">
+<ApiMember kind="function" name="lv_obj_replace_style" file="public/core/lv_obj_style.h" line={123} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L123">
 
 ### lv_obj_replace_style
 
@@ -545,7 +587,7 @@ bool lv_obj_replace_style(lv_obj_t *obj, const lv_style_t *old_style, const lv_s
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_style" file="public/core/lv_obj_style.h" line={143} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L143">
+<ApiMember kind="function" name="lv_obj_remove_style" file="public/core/lv_obj_style.h" line={143} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L143">
 
 ### lv_obj_remove_style
 
@@ -575,7 +617,7 @@ void lv_obj_remove_style(lv_obj_t *obj, const lv_style_t *style, lv_style_select
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_theme" file="public/core/lv_obj_style.h" line={152} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L152">
+<ApiMember kind="function" name="lv_obj_remove_theme" file="public/core/lv_obj_style.h" line={152} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L152">
 
 ### lv_obj_remove_theme
 
@@ -595,7 +637,7 @@ void lv_obj_remove_theme(lv_obj_t *obj, lv_style_selector_t selector)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_style_all" file="public/core/lv_obj_style.h" line={158} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L158">
+<ApiMember kind="function" name="lv_obj_remove_style_all" file="public/core/lv_obj_style.h" line={158} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L158">
 
 ### lv_obj_remove_style_all
 
@@ -614,7 +656,7 @@ void lv_obj_remove_style_all(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_report_style_change" file="public/core/lv_obj_style.h" line={165} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L165">
+<ApiMember kind="function" name="lv_obj_report_style_change" file="public/core/lv_obj_style.h" line={165} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L165">
 
 ### lv_obj_report_style_change
 
@@ -633,7 +675,7 @@ void lv_obj_report_style_change(lv_style_t *style)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_refresh_style" file="public/core/lv_obj_style.h" line={175} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L175">
+<ApiMember kind="function" name="lv_obj_refresh_style" file="public/core/lv_obj_style.h" line={175} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L175">
 
 ### lv_obj_refresh_style
 
@@ -654,7 +696,7 @@ void lv_obj_refresh_style(lv_obj_t *obj, lv_part_t part, lv_style_prop_t prop)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_enable_style_refresh" file="public/core/lv_obj_style.h" line={200} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L200">
+<ApiMember kind="function" name="lv_obj_enable_style_refresh" file="public/core/lv_obj_style.h" line={200} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L200">
 
 ### lv_obj_enable_style_refresh
 
@@ -673,7 +715,7 @@ void lv_obj_enable_style_refresh(bool en)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_has_style_prop" file="public/core/lv_obj_style.h" line={221} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L221">
+<ApiMember kind="function" name="lv_obj_has_style_prop" file="public/core/lv_obj_style.h" line={221} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L221">
 
 ### lv_obj_has_style_prop
 
@@ -696,7 +738,7 @@ bool lv_obj_has_style_prop(const lv_obj_t *obj, lv_style_selector_t selector, lv
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_local_style_prop" file="public/core/lv_obj_style.h" line={243} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L243">
+<ApiMember kind="function" name="lv_obj_remove_local_style_prop" file="public/core/lv_obj_style.h" line={243} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L243">
 
 ### lv_obj_remove_local_style_prop
 
@@ -719,7 +761,7 @@ bool lv_obj_remove_local_style_prop(lv_obj_t *obj, lv_style_prop_t prop, lv_styl
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_style_apply_color_filter" file="public/core/lv_obj_style.h" line={248} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L248">
+<ApiMember kind="function" name="lv_obj_style_apply_color_filter" file="public/core/lv_obj_style.h" line={248} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L248">
 
 ### lv_obj_style_apply_color_filter
 
@@ -740,7 +782,7 @@ lv_style_value_t lv_obj_style_apply_color_filter(const lv_obj_t *obj, lv_part_t 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_fade_in" file="public/core/lv_obj_style.h" line={256} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L256">
+<ApiMember kind="function" name="lv_obj_fade_in" file="public/core/lv_obj_style.h" line={256} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L256">
 
 ### lv_obj_fade_in
 
@@ -761,7 +803,7 @@ void lv_obj_fade_in(lv_obj_t *obj, uint32_t time, uint32_t delay)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_fade_out" file="public/core/lv_obj_style.h" line={264} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L264">
+<ApiMember kind="function" name="lv_obj_fade_out" file="public/core/lv_obj_style.h" line={264} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L264">
 
 ### lv_obj_fade_out
 
@@ -782,9 +824,11 @@ void lv_obj_fade_out(lv_obj_t *obj, uint32_t time, uint32_t delay)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_calculate_style_text_align" file="public/core/lv_obj_style.h" line={370} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L370">
+<ApiMember kind="function" name="lv_obj_calculate_style_text_align" file="public/core/lv_obj_style.h" line={451} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L451">
 
 ### lv_obj_calculate_style_text_align
+
+Gets the text alignment which should be really used. Compared to <ApiLink name="lv_obj_get_style_text_align" display="lv_obj_get_style_text_align()" /> it resolves `LV_TEXT_ALIGN_AUTO` by considering the base direction of Widget and the text itself.
 
 ```c
 lv_text_align_t lv_obj_calculate_style_text_align(const lv_obj_t *obj, lv_part_t part, const char *txt)
@@ -792,16 +836,18 @@ lv_text_align_t lv_obj_calculate_style_text_align(const lv_obj_t *obj, lv_part_t
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
-| `part` | <ApiLink name="lv_part_t" /> |
-| `txt` | `const char *` |
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | Pointer to Widget |
+| `part` | <ApiLink name="lv_part_t" /> | One of the `LV_PART_...` enum values |
+| `txt` | `const char *` | The text to align. Its first strong character determines the direction if the base direction is `LV_BASE_DIR_AUTO`. |
+
+**Returns:** <ApiLink name="lv_text_align_t" /> — The resolved alignment: `LV_TEXT_ALIGN_LEFT/CENTER/RIGHT` (never `LV_TEXT_ALIGN_AUTO`)
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_style_apply_recolor" file="public/core/lv_obj_style.h" line={400} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L400">
+<ApiMember kind="function" name="lv_obj_style_apply_recolor" file="public/core/lv_obj_style.h" line={492} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L492">
 
 ### lv_obj_style_apply_recolor
 
@@ -824,7 +870,7 @@ lv_color32_t lv_obj_style_apply_recolor(const lv_obj_t *obj, lv_part_t part, lv_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_bind_style" file="public/core/lv_obj_style.h" line={421} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L421">
+<ApiMember kind="function" name="lv_obj_bind_style" file="public/core/lv_obj_style.h" line={513} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L513">
 
 ### lv_obj_bind_style
 
@@ -849,7 +895,7 @@ lv_observer_t * lv_obj_bind_style(lv_obj_t *obj, const lv_style_t *style, lv_sty
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_bind_style_prop" file="public/core/lv_obj_style.h" line={432} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L432">
+<ApiMember kind="function" name="lv_obj_bind_style_prop" file="public/core/lv_obj_style.h" line={524} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L524">
 
 ### lv_obj_bind_style_prop
 
@@ -877,7 +923,7 @@ lv_observer_t * lv_obj_bind_style_prop(lv_obj_t *obj, lv_style_prop_t prop, lv_s
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_state_t" file="public/core/lv_obj_style.h" line={32} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L32">
+<ApiMember kind="enum" name="lv_state_t" file="public/core/lv_obj_style.h" line={32} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L32">
 
 ### lv_state_t
 
@@ -923,7 +969,7 @@ Possible states of a widget. OR-ed values are possible
 
 </TypeUsedBy>
 
-<ApiMember kind="enum" name="lv_part_t" file="public/core/lv_obj_style.h" line={60} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L60">
+<ApiMember kind="enum" name="lv_part_t" file="public/core/lv_obj_style.h" line={60} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L60">
 
 ### lv_part_t
 
@@ -944,7 +990,7 @@ The possible parts of widgets. The parts can be considered as the internal build
 
 </ApiMember>
 
-<TypeUsedBy name="lv_part_t" count={165}>
+<TypeUsedBy name="lv_part_t" count={315}>
 
 - `lv_obj_init_draw_rect_dsc` — param `part`
 - `lv_obj_init_draw_label_dsc` — param `part`
@@ -1109,12 +1155,162 @@ The possible parts of widgets. The parts can be considered as the internal build
 - `lv_obj_get_style_grid_cell_y_align` — param `part`
 - `lv_obj_get_style_grid_cell_row_span` — param `part`
 - `lv_scale_section_set_style` — param `part`
+- `lv_obj_calculate_style_text_align_internal` — param `part`
+- `lv_obj_get_style_space_left_internal` — param `part`
+- `lv_obj_get_style_space_right_internal` — param `part`
+- `lv_obj_get_style_space_top_internal` — param `part`
+- `lv_obj_get_style_space_bottom_internal` — param `part`
+- `lv_obj_get_style_transform_scale_x_safe_internal` — param `part`
+- `lv_obj_get_style_transform_scale_y_safe_internal` — param `part`
+- `lv_obj_get_style_width_internal` — param `part`
+- `lv_obj_get_style_min_width_internal` — param `part`
+- `lv_obj_get_style_max_width_internal` — param `part`
+- `lv_obj_get_style_height_internal` — param `part`
+- `lv_obj_get_style_min_height_internal` — param `part`
+- `lv_obj_get_style_max_height_internal` — param `part`
+- `lv_obj_get_style_length_internal` — param `part`
+- `lv_obj_get_style_x_internal` — param `part`
+- `lv_obj_get_style_y_internal` — param `part`
+- `lv_obj_get_style_align_internal` — param `part`
+- `lv_obj_get_style_transform_width_internal` — param `part`
+- `lv_obj_get_style_transform_height_internal` — param `part`
+- `lv_obj_get_style_translate_x_internal` — param `part`
+- `lv_obj_get_style_translate_y_internal` — param `part`
+- `lv_obj_get_style_translate_radial_internal` — param `part`
+- `lv_obj_get_style_transform_scale_x_internal` — param `part`
+- `lv_obj_get_style_transform_scale_y_internal` — param `part`
+- `lv_obj_get_style_transform_rotation_internal` — param `part`
+- `lv_obj_get_style_transform_pivot_x_internal` — param `part`
+- `lv_obj_get_style_transform_pivot_y_internal` — param `part`
+- `lv_obj_get_style_transform_skew_x_internal` — param `part`
+- `lv_obj_get_style_transform_skew_y_internal` — param `part`
+- `lv_obj_get_style_pad_top_internal` — param `part`
+- `lv_obj_get_style_pad_bottom_internal` — param `part`
+- `lv_obj_get_style_pad_left_internal` — param `part`
+- `lv_obj_get_style_pad_right_internal` — param `part`
+- `lv_obj_get_style_pad_row_internal` — param `part`
+- `lv_obj_get_style_pad_column_internal` — param `part`
+- `lv_obj_get_style_pad_radial_internal` — param `part`
+- `lv_obj_get_style_margin_top_internal` — param `part`
+- `lv_obj_get_style_margin_bottom_internal` — param `part`
+- `lv_obj_get_style_margin_left_internal` — param `part`
+- `lv_obj_get_style_margin_right_internal` — param `part`
+- `lv_obj_get_style_bg_color_internal` — param `part`
+- `lv_obj_get_style_bg_color_filtered_internal` — param `part`
+- `lv_obj_get_style_bg_opa_internal` — param `part`
+- `lv_obj_get_style_bg_grad_color_internal` — param `part`
+- `lv_obj_get_style_bg_grad_color_filtered_internal` — param `part`
+- `lv_obj_get_style_bg_grad_dir_internal` — param `part`
+- `lv_obj_get_style_bg_main_stop_internal` — param `part`
+- `lv_obj_get_style_bg_grad_stop_internal` — param `part`
+- `lv_obj_get_style_bg_main_opa_internal` — param `part`
+- `lv_obj_get_style_bg_grad_opa_internal` — param `part`
+- `lv_obj_get_style_bg_grad_internal` — param `part`
+- `lv_obj_get_style_bg_image_src_internal` — param `part`
+- `lv_obj_get_style_bg_image_opa_internal` — param `part`
+- `lv_obj_get_style_bg_image_recolor_internal` — param `part`
+- `lv_obj_get_style_bg_image_recolor_filtered_internal` — param `part`
+- `lv_obj_get_style_bg_image_recolor_opa_internal` — param `part`
+- `lv_obj_get_style_bg_image_tiled_internal` — param `part`
+- `lv_obj_get_style_border_color_internal` — param `part`
+- `lv_obj_get_style_border_color_filtered_internal` — param `part`
+- `lv_obj_get_style_border_opa_internal` — param `part`
+- `lv_obj_get_style_border_width_internal` — param `part`
+- `lv_obj_get_style_border_side_internal` — param `part`
+- `lv_obj_get_style_border_post_internal` — param `part`
+- `lv_obj_get_style_outline_width_internal` — param `part`
+- `lv_obj_get_style_outline_color_internal` — param `part`
+- `lv_obj_get_style_outline_color_filtered_internal` — param `part`
+- `lv_obj_get_style_outline_opa_internal` — param `part`
+- `lv_obj_get_style_outline_pad_internal` — param `part`
+- `lv_obj_get_style_shadow_width_internal` — param `part`
+- `lv_obj_get_style_shadow_offset_x_internal` — param `part`
+- `lv_obj_get_style_shadow_offset_y_internal` — param `part`
+- `lv_obj_get_style_shadow_spread_internal` — param `part`
+- `lv_obj_get_style_shadow_color_internal` — param `part`
+- `lv_obj_get_style_shadow_color_filtered_internal` — param `part`
+- `lv_obj_get_style_shadow_opa_internal` — param `part`
+- `lv_obj_get_style_image_opa_internal` — param `part`
+- `lv_obj_get_style_image_recolor_internal` — param `part`
+- `lv_obj_get_style_image_recolor_filtered_internal` — param `part`
+- `lv_obj_get_style_image_recolor_opa_internal` — param `part`
+- `lv_obj_get_style_image_colorkey_internal` — param `part`
+- `lv_obj_get_style_line_width_internal` — param `part`
+- `lv_obj_get_style_line_dash_width_internal` — param `part`
+- `lv_obj_get_style_line_dash_gap_internal` — param `part`
+- `lv_obj_get_style_line_rounded_internal` — param `part`
+- `lv_obj_get_style_line_color_internal` — param `part`
+- `lv_obj_get_style_line_color_filtered_internal` — param `part`
+- `lv_obj_get_style_line_opa_internal` — param `part`
+- `lv_obj_get_style_arc_width_internal` — param `part`
+- `lv_obj_get_style_arc_rounded_internal` — param `part`
+- `lv_obj_get_style_arc_color_internal` — param `part`
+- `lv_obj_get_style_arc_color_filtered_internal` — param `part`
+- `lv_obj_get_style_arc_opa_internal` — param `part`
+- `lv_obj_get_style_arc_image_src_internal` — param `part`
+- `lv_obj_get_style_text_color_internal` — param `part`
+- `lv_obj_get_style_text_color_filtered_internal` — param `part`
+- `lv_obj_get_style_text_opa_internal` — param `part`
+- `lv_obj_get_style_text_font_internal` — param `part`
+- `lv_obj_get_style_text_letter_space_internal` — param `part`
+- `lv_obj_get_style_text_line_space_internal` — param `part`
+- `lv_obj_get_style_text_decor_internal` — param `part`
+- `lv_obj_get_style_text_align_internal` — param `part`
+- `lv_obj_get_style_text_outline_stroke_color_internal` — param `part`
+- `lv_obj_get_style_text_outline_stroke_color_filtered_internal` — param `part`
+- `lv_obj_get_style_text_outline_stroke_width_internal` — param `part`
+- `lv_obj_get_style_text_outline_stroke_opa_internal` — param `part`
+- `lv_obj_get_style_text_leading_trim_internal` — param `part`
+- `lv_obj_get_style_blur_radius_internal` — param `part`
+- `lv_obj_get_style_blur_backdrop_internal` — param `part`
+- `lv_obj_get_style_blur_quality_internal` — param `part`
+- `lv_obj_get_style_drop_shadow_radius_internal` — param `part`
+- `lv_obj_get_style_drop_shadow_offset_x_internal` — param `part`
+- `lv_obj_get_style_drop_shadow_offset_y_internal` — param `part`
+- `lv_obj_get_style_drop_shadow_color_internal` — param `part`
+- `lv_obj_get_style_drop_shadow_color_filtered_internal` — param `part`
+- `lv_obj_get_style_drop_shadow_opa_internal` — param `part`
+- `lv_obj_get_style_drop_shadow_quality_internal` — param `part`
+- `lv_obj_get_style_radius_internal` — param `part`
+- `lv_obj_get_style_radial_offset_internal` — param `part`
+- `lv_obj_get_style_clip_corner_internal` — param `part`
+- `lv_obj_get_style_opa_internal` — param `part`
+- `lv_obj_get_style_opa_layered_internal` — param `part`
+- `lv_obj_get_style_color_filter_dsc_internal` — param `part`
+- `lv_obj_get_style_color_filter_opa_internal` — param `part`
+- `lv_obj_get_style_recolor_internal` — param `part`
+- `lv_obj_get_style_recolor_opa_internal` — param `part`
+- `lv_obj_get_style_anim_internal` — param `part`
+- `lv_obj_get_style_anim_duration_internal` — param `part`
+- `lv_obj_get_style_transition_internal` — param `part`
+- `lv_obj_get_style_blend_mode_internal` — param `part`
+- `lv_obj_get_style_layout_internal` — param `part`
+- `lv_obj_get_style_base_dir_internal` — param `part`
+- `lv_obj_get_style_bitmap_mask_src_internal` — param `part`
+- `lv_obj_get_style_rotary_sensitivity_internal` — param `part`
+- `lv_obj_get_style_flex_flow_internal` — param `part`
+- `lv_obj_get_style_flex_main_place_internal` — param `part`
+- `lv_obj_get_style_flex_cross_place_internal` — param `part`
+- `lv_obj_get_style_flex_track_place_internal` — param `part`
+- `lv_obj_get_style_flex_grow_internal` — param `part`
+- `lv_obj_get_style_grid_column_dsc_array_internal` — param `part`
+- `lv_obj_get_style_grid_column_align_internal` — param `part`
+- `lv_obj_get_style_grid_row_dsc_array_internal` — param `part`
+- `lv_obj_get_style_grid_row_align_internal` — param `part`
+- `lv_obj_get_style_grid_cell_column_pos_internal` — param `part`
+- `lv_obj_get_style_grid_cell_x_align_internal` — param `part`
+- `lv_obj_get_style_grid_cell_column_span_internal` — param `part`
+- `lv_obj_get_style_grid_cell_row_pos_internal` — param `part`
+- `lv_obj_get_style_grid_cell_y_align_internal` — param `part`
+- `lv_obj_get_style_grid_cell_row_span_internal` — param `part`
 - `lv_obj_style_create_transition` — param `part`
 - `lv_obj_style_state_compare` — param `changed_part`
+- `lv_obj_get_style_prop_internal` — param `part`
+- `lv_obj_style_apply_color_filter_internal` — param `part`
 
 </TypeUsedBy>
 
-<ApiMember kind="enum" name="lv_style_state_cmp_t" file="public/core/lv_obj_style.h" line={74} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L74">
+<ApiMember kind="enum" name="lv_style_state_cmp_t" file="public/core/lv_obj_style.h" line={74} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L74">
 
 ### lv_style_state_cmp_t
 
@@ -1130,7 +1326,7 @@ The possible parts of widgets. The parts can be considered as the internal build
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_style_selector_t" file="public/core/lv_obj_style.h" line={88} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/core/lv_obj_style.h#L88">
+<ApiMember kind="typedef" name="lv_style_selector_t" file="public/core/lv_obj_style.h" line={88} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/include/lvgl/core/lv_obj_style.h#L88">
 
 ### lv_style_selector_t
 

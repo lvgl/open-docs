@@ -2,17 +2,44 @@
 title: lv_obj_style_private.h
 description: API reference for lv_obj_style_private.h
 api:
-  functions: [lv_obj_style_init, lv_obj_style_deinit, lv_obj_style_create_transition, lv_obj_style_state_compare, lv_obj_update_layer_type]
+  functions: [lv_obj_style_init, lv_obj_style_deinit, lv_obj_style_create_transition, lv_obj_style_state_compare, lv_obj_update_layer_type, lv_obj_get_style_prop_internal, lv_obj_style_apply_color_filter_internal]
   structs: [_lv_obj_style_t, _lv_obj_style_transition_dsc_t]
 ---
 
 <RelatedHeaders name="lv_obj_style.h" isPrivate={true} />
 
-<ApiSummary functions={5} structs={2} />
+<ApiSummary functions={7} structs={2} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_obj_style_init" file="private/core/lv_obj_style_private.h" line={54} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/src/core/lv_obj_style_private.h#L54">
+<ApiTabs items={["Getters (1)","Other (6)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_obj_get_style_prop_internal" file="private/core/lv_obj_style_private.h" line={98} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/src/core/lv_obj_style_private.h#L98">
+
+### lv_obj_get_style_prop_internal
+
+Internal implementation of <ApiLink name="lv_obj_get_style_prop" /> Does not do any argument checking
+
+```c
+lv_style_value_t lv_obj_get_style_prop_internal(const lv_obj_t *obj, lv_part_t part, lv_style_prop_t prop)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
+| `part` | <ApiLink name="lv_part_t" /> |
+| `prop` | <ApiLink name="lv_style_prop_t" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (6)">
+
+<ApiMember kind="function" name="lv_obj_style_init" file="private/core/lv_obj_style_private.h" line={54} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/src/core/lv_obj_style_private.h#L54">
 
 ### lv_obj_style_init
 
@@ -25,7 +52,7 @@ void lv_obj_style_init(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_style_deinit" file="private/core/lv_obj_style_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/src/core/lv_obj_style_private.h#L60">
+<ApiMember kind="function" name="lv_obj_style_deinit" file="private/core/lv_obj_style_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/src/core/lv_obj_style_private.h#L60">
 
 ### lv_obj_style_deinit
 
@@ -38,7 +65,7 @@ void lv_obj_style_deinit(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_style_create_transition" file="private/core/lv_obj_style_private.h" line={70} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/src/core/lv_obj_style_private.h#L70">
+<ApiMember kind="function" name="lv_obj_style_create_transition" file="private/core/lv_obj_style_private.h" line={70} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/src/core/lv_obj_style_private.h#L70">
 
 ### lv_obj_style_create_transition
 
@@ -61,7 +88,7 @@ void lv_obj_style_create_transition(lv_obj_t *obj, lv_part_t part, lv_state_t pr
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_style_state_compare" file="private/core/lv_obj_style_private.h" line={84} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/src/core/lv_obj_style_private.h#L84">
+<ApiMember kind="function" name="lv_obj_style_state_compare" file="private/core/lv_obj_style_private.h" line={84} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/src/core/lv_obj_style_private.h#L84">
 
 ### lv_obj_style_state_compare
 
@@ -83,7 +110,7 @@ lv_style_state_cmp_t lv_obj_style_state_compare(lv_obj_t *obj, lv_state_t state1
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_update_layer_type" file="private/core/lv_obj_style_private.h" line={92} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/src/core/lv_obj_style_private.h#L92">
+<ApiMember kind="function" name="lv_obj_update_layer_type" file="private/core/lv_obj_style_private.h" line={92} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/src/core/lv_obj_style_private.h#L92">
 
 ### lv_obj_update_layer_type
 
@@ -102,6 +129,29 @@ void lv_obj_update_layer_type(lv_obj_t *obj)
 
 </ApiMember>
 
+<ApiMember kind="function" name="lv_obj_style_apply_color_filter_internal" file="private/core/lv_obj_style_private.h" line={105} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/src/core/lv_obj_style_private.h#L105">
+
+### lv_obj_style_apply_color_filter_internal
+
+Internal implementation of <ApiLink name="lv_obj_style_apply_color_filter" /> Does not do any argument checking
+
+```c
+lv_style_value_t lv_obj_style_apply_color_filter_internal(const lv_obj_t *obj, lv_part_t part, lv_style_value_t v)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
+| `part` | <ApiLink name="lv_part_t" /> |
+| `v` | <ApiLink name="lv_style_value_t" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
 ## Structs
 
 <ApiMember kind="struct" name="_lv_obj_style_t">
@@ -140,5 +190,5 @@ void lv_obj_update_layer_type(lv_obj_t *obj)
 
 <FileIncludes
   includes={["lvgl_public.h"]}
-  includedBy={["lvgl_private.h"]}
+  includedBy={["lv_obj_style_internal_gen.h", "lvgl_private.h"]}
 />

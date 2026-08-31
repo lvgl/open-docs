@@ -13,6 +13,7 @@
     "lv_lru_h",
     "lv_pending_h",
     "lv_rb_private_h",
+    "lv_style_private_h",
     "lv_text_ap_h",
     "lv_text_private_h",
     "lv_timer_private_h",

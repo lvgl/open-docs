@@ -1,0 +1,63 @@
+---
+title: lv_style_private.h
+description: API reference for lv_style_private.h
+api:
+  functions: [lv_style_is_const_internal, lv_style_get_prop_internal]
+---
+
+<RelatedHeaders name="lv_style.h" isPrivate={true} />
+
+<ApiSummary functions={2} />
+
+## Functions
+
+<ApiTabs items={["Getters (1)","Other (1)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_style_get_prop_internal" file="private/misc/lv_style_private.h" line={36} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/src/misc/lv_style_private.h#L36">
+
+### lv_style_get_prop_internal
+
+```c
+static lv_style_res_t lv_style_get_prop_internal(const lv_style_t *style, lv_style_prop_t prop, lv_style_value_t *value)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> |
+| `prop` | <ApiLink name="lv_style_prop_t" /> |
+| `value` | <ApiLink name="lv_style_value_t" display="lv_style_value_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="lv_style_is_const_internal" file="private/misc/lv_style_private.h" line={30} url="https://github.com/lvgl/lvgl/tree/0de12499ea17924486fe9ec1f6050898cdd9b947/src/misc/lv_style_private.h#L30">
+
+### lv_style_is_const_internal
+
+```c
+static bool lv_style_is_const_internal(const lv_style_t *style)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `style` | <ApiLink name="lv_style_t" display="const lv_style_t *" /> |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

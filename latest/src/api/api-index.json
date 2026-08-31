@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-31T14:31:46.365Z",
-    "symbolCount": 8995
+    "generatedAt": "2026-08-31T15:30:22.281Z",
+    "symbolCount": 9150
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2084,6 +2084,11 @@
     "lv_observer_remove": {
       "path": "api/public/api_map/lv_api_map_v9_5_h",
       "anchor": "lv_observer_remove",
+      "kind": "macro"
+    },
+    "lv_style_get_prop_inlined": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "lv_style_get_prop_inlined",
       "kind": "macro"
     },
     "lv_draw_sw_i1_to_argb8888": {
@@ -10949,11 +10954,6 @@
     "lv_style_prop_get_default": {
       "path": "api/public/core/lv_style_h",
       "anchor": "lv_style_prop_get_default",
-      "kind": "function"
-    },
-    "lv_style_get_prop_inlined": {
-      "path": "api/public/core/lv_style_h",
-      "anchor": "lv_style_get_prop_inlined",
       "kind": "function"
     },
     "lv_style_is_empty": {
@@ -32961,6 +32961,756 @@
       "anchor": "lv_obj_scroll_by_raw",
       "kind": "function"
     },
+    "lv_obj_style_internal.h": {
+      "path": "api/private/core/lv_obj_style_internal_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_obj_calculate_style_text_align_internal": {
+      "path": "api/private/core/lv_obj_style_internal_h",
+      "anchor": "lv_obj_calculate_style_text_align_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_space_left_internal": {
+      "path": "api/private/core/lv_obj_style_internal_h",
+      "anchor": "lv_obj_get_style_space_left_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_space_right_internal": {
+      "path": "api/private/core/lv_obj_style_internal_h",
+      "anchor": "lv_obj_get_style_space_right_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_space_top_internal": {
+      "path": "api/private/core/lv_obj_style_internal_h",
+      "anchor": "lv_obj_get_style_space_top_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_space_bottom_internal": {
+      "path": "api/private/core/lv_obj_style_internal_h",
+      "anchor": "lv_obj_get_style_space_bottom_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transform_scale_x_safe_internal": {
+      "path": "api/private/core/lv_obj_style_internal_h",
+      "anchor": "lv_obj_get_style_transform_scale_x_safe_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transform_scale_y_safe_internal": {
+      "path": "api/private/core/lv_obj_style_internal_h",
+      "anchor": "lv_obj_get_style_transform_scale_y_safe_internal",
+      "kind": "function"
+    },
+    "lv_obj_style_internal_gen.h": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_obj_get_style_width_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_width_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_min_width_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_min_width_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_max_width_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_max_width_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_height_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_height_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_min_height_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_min_height_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_max_height_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_max_height_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_length_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_length_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_x_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_x_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_y_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_y_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_align_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_align_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transform_width_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_transform_width_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transform_height_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_transform_height_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_translate_x_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_translate_x_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_translate_y_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_translate_y_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_translate_radial_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_translate_radial_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transform_scale_x_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_transform_scale_x_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transform_scale_y_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_transform_scale_y_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transform_rotation_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_transform_rotation_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transform_pivot_x_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_transform_pivot_x_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transform_pivot_y_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_transform_pivot_y_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transform_skew_x_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_transform_skew_x_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transform_skew_y_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_transform_skew_y_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_pad_top_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_pad_top_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_pad_bottom_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_pad_bottom_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_pad_left_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_pad_left_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_pad_right_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_pad_right_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_pad_row_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_pad_row_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_pad_column_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_pad_column_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_pad_radial_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_pad_radial_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_margin_top_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_margin_top_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_margin_bottom_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_margin_bottom_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_margin_left_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_margin_left_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_margin_right_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_margin_right_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_color_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_color_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_color_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_color_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_grad_color_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_grad_color_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_grad_color_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_grad_color_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_grad_dir_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_grad_dir_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_main_stop_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_main_stop_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_grad_stop_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_grad_stop_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_main_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_main_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_grad_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_grad_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_grad_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_grad_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_image_src_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_image_src_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_image_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_image_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_image_recolor_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_image_recolor_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_image_recolor_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_image_recolor_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_image_recolor_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_image_recolor_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bg_image_tiled_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bg_image_tiled_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_border_color_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_border_color_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_border_color_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_border_color_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_border_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_border_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_border_width_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_border_width_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_border_side_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_border_side_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_border_post_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_border_post_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_outline_width_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_outline_width_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_outline_color_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_outline_color_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_outline_color_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_outline_color_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_outline_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_outline_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_outline_pad_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_outline_pad_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_shadow_width_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_shadow_width_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_shadow_offset_x_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_shadow_offset_x_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_shadow_offset_y_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_shadow_offset_y_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_shadow_spread_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_shadow_spread_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_shadow_color_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_shadow_color_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_shadow_color_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_shadow_color_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_shadow_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_shadow_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_image_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_image_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_image_recolor_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_image_recolor_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_image_recolor_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_image_recolor_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_image_recolor_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_image_recolor_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_image_colorkey_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_image_colorkey_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_line_width_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_line_width_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_line_dash_width_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_line_dash_width_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_line_dash_gap_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_line_dash_gap_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_line_rounded_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_line_rounded_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_line_color_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_line_color_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_line_color_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_line_color_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_line_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_line_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_arc_width_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_arc_width_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_arc_rounded_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_arc_rounded_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_arc_color_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_arc_color_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_arc_color_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_arc_color_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_arc_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_arc_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_arc_image_src_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_arc_image_src_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_color_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_color_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_color_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_color_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_font_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_font_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_letter_space_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_letter_space_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_line_space_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_line_space_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_decor_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_decor_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_align_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_align_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_outline_stroke_color_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_outline_stroke_color_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_outline_stroke_color_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_outline_stroke_color_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_outline_stroke_width_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_outline_stroke_width_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_outline_stroke_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_outline_stroke_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_text_leading_trim_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_text_leading_trim_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_blur_radius_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_blur_radius_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_blur_backdrop_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_blur_backdrop_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_blur_quality_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_blur_quality_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_drop_shadow_radius_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_drop_shadow_radius_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_drop_shadow_offset_x_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_drop_shadow_offset_x_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_drop_shadow_offset_y_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_drop_shadow_offset_y_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_drop_shadow_color_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_drop_shadow_color_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_drop_shadow_color_filtered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_drop_shadow_color_filtered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_drop_shadow_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_drop_shadow_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_drop_shadow_quality_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_drop_shadow_quality_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_radius_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_radius_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_radial_offset_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_radial_offset_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_clip_corner_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_clip_corner_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_opa_layered_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_opa_layered_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_color_filter_dsc_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_color_filter_dsc_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_color_filter_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_color_filter_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_recolor_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_recolor_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_recolor_opa_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_recolor_opa_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_anim_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_anim_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_anim_duration_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_anim_duration_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_transition_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_transition_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_blend_mode_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_blend_mode_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_layout_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_layout_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_base_dir_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_base_dir_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_bitmap_mask_src_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_bitmap_mask_src_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_rotary_sensitivity_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_rotary_sensitivity_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_flex_flow_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_flex_flow_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_flex_main_place_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_flex_main_place_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_flex_cross_place_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_flex_cross_place_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_flex_track_place_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_flex_track_place_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_flex_grow_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_flex_grow_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_grid_column_dsc_array_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_grid_column_dsc_array_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_grid_column_align_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_grid_column_align_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_grid_row_dsc_array_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_grid_row_dsc_array_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_grid_row_align_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_grid_row_align_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_grid_cell_column_pos_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_grid_cell_column_pos_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_grid_cell_x_align_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_grid_cell_x_align_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_grid_cell_column_span_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_grid_cell_column_span_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_grid_cell_row_pos_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_grid_cell_row_pos_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_grid_cell_y_align_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_grid_cell_y_align_internal",
+      "kind": "function"
+    },
+    "lv_obj_get_style_grid_cell_row_span_internal": {
+      "path": "api/private/core/lv_obj_style_internal_gen_h",
+      "anchor": "lv_obj_get_style_grid_cell_row_span_internal",
+      "kind": "function"
+    },
     "lv_obj_style_private.h": {
       "path": "api/private/core/lv_obj_style_private_h",
       "anchor": "",
@@ -32989,6 +33739,16 @@
     "lv_obj_update_layer_type": {
       "path": "api/private/core/lv_obj_style_private_h",
       "anchor": "lv_obj_update_layer_type",
+      "kind": "function"
+    },
+    "lv_obj_get_style_prop_internal": {
+      "path": "api/private/core/lv_obj_style_private_h",
+      "anchor": "lv_obj_get_style_prop_internal",
+      "kind": "function"
+    },
+    "lv_obj_style_apply_color_filter_internal": {
+      "path": "api/private/core/lv_obj_style_private_h",
+      "anchor": "lv_obj_style_apply_color_filter_internal",
       "kind": "function"
     },
     "_lv_obj_style_t": {
@@ -43785,6 +44545,21 @@
       "path": "api/private/misc/lv_rb_private_h",
       "anchor": "lv_rb_t",
       "kind": "typedef"
+    },
+    "lv_style_private.h": {
+      "path": "api/private/misc/lv_style_private_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_style_is_const_internal": {
+      "path": "api/private/misc/lv_style_private_h",
+      "anchor": "lv_style_is_const_internal",
+      "kind": "function"
+    },
+    "lv_style_get_prop_internal": {
+      "path": "api/private/misc/lv_style_private_h",
+      "anchor": "lv_style_get_prop_internal",
+      "kind": "function"
     },
     "lv_text_ap.h": {
       "path": "api/private/misc/lv_text_ap_h",

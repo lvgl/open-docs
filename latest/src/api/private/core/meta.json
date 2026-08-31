@@ -8,6 +8,8 @@
     "lv_obj_event_private_h",
     "lv_obj_private_h",
     "lv_obj_scroll_private_h",
+    "lv_obj_style_internal_gen_h",
+    "lv_obj_style_internal_h",
     "lv_obj_style_private_h",
     "lv_observer_private_h",
     "lv_refr_private_h"
