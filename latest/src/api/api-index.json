@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-31T17:36:09.758Z",
-    "symbolCount": 9154
+    "generatedAt": "2026-08-31T18:11:31.843Z",
+    "symbolCount": 9158
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -13536,14 +13536,34 @@
       "anchor": "LV_CHECK_ARG_LOG_",
       "kind": "macro"
     },
+    "LV_CHECK_ARG_LOG_FORMAT_": {
+      "path": "api/public/debugging/lv_check_arg_h",
+      "anchor": "LV_CHECK_ARG_LOG_FORMAT_",
+      "kind": "macro"
+    },
     "LV_CHECK_ARG_INTERNAL_": {
       "path": "api/public/debugging/lv_check_arg_h",
       "anchor": "LV_CHECK_ARG_INTERNAL_",
       "kind": "macro"
     },
+    "LV_CHECK_ARG_FORMAT_INTERNAL_": {
+      "path": "api/public/debugging/lv_check_arg_h",
+      "anchor": "LV_CHECK_ARG_FORMAT_INTERNAL_",
+      "kind": "macro"
+    },
     "LV_CHECK_ARG": {
       "path": "api/public/debugging/lv_check_arg_h",
       "anchor": "LV_CHECK_ARG",
+      "kind": "macro"
+    },
+    "LV_CHECK_ARG_MSG": {
+      "path": "api/public/debugging/lv_check_arg_h",
+      "anchor": "LV_CHECK_ARG_MSG",
+      "kind": "macro"
+    },
+    "LV_CHECK_ARG_FORMAT_MSG": {
+      "path": "api/public/debugging/lv_check_arg_h",
+      "anchor": "LV_CHECK_ARG_FORMAT_MSG",
       "kind": "macro"
     },
     "lv_check_obj.h": {
