@@ -17,12 +17,12 @@ api:
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `task_act` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |  |
+| `task_act` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *volatile" /> |  |
 | `thread` | `lv_thread_t` |  |
-| `sync` | `lv_thread_sync_t` |  |
+| `new_task_sync` | `lv_thread_sync_t` |  |
+| `task_done_sync` | `lv_thread_sync_t` |  |
 | `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> |  |
 | `idx` | `uint32_t` |  |
-| `inited` | `volatile bool` |  |
 | `exit_status` | `volatile bool` |  |
 
 
