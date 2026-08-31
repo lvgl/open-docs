@@ -1,4 +1,4 @@
-```xml title="examples/styles/lv_example_style_shadow.xml" source="https://github.com/lvgl/lvgl/blob/df12db1e0a857fd9928b908ea99c05b044aa12a3/examples/styles/lv_example_style_shadow.xml"
+```xml title="examples/styles/lv_example_style_shadow.xml" source="https://github.com/lvgl/lvgl/blob/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/examples/styles/lv_example_style_shadow.xml"
 <!--
  @title Box shadow
  @brief Lift a card off the page with a soft, offset shadow.

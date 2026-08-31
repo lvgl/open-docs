@@ -1,4 +1,4 @@
-```xml title="examples/widgets/arc/lv_example_arc_mode.xml" source="https://github.com/lvgl/lvgl/blob/df12db1e0a857fd9928b908ea99c05b044aa12a3/examples/widgets/arc/lv_example_arc_mode.xml"
+```xml title="examples/widgets/arc/lv_example_arc_mode.xml" source="https://github.com/lvgl/lvgl/blob/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/examples/widgets/arc/lv_example_arc_mode.xml"
 <!--
  @title Arc indicator modes
  @brief Compare normal, reverse, and symmetrical mode side by side.

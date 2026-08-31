@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-31T16:46:27.550Z",
-    "symbolCount": 9151
+    "generatedAt": "2026-08-31T16:56:02.933Z",
+    "symbolCount": 9154
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -3984,6 +3984,11 @@
     "LV_GLOBAL_CUSTOM_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_GLOBAL_CUSTOM_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_USE_ASSERT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_ASSERT",
       "kind": "macro"
     },
     "LV_DISABLE_ASSERT_HANDLER_INCLUDE_WARNING": {
@@ -13464,6 +13469,16 @@
     "LV_ASSERT_HANDLER": {
       "path": "api/public/debugging/lv_assert_h",
       "anchor": "LV_ASSERT_HANDLER",
+      "kind": "macro"
+    },
+    "LV_ASSERT_INTERNAL": {
+      "path": "api/public/debugging/lv_assert_h",
+      "anchor": "LV_ASSERT_INTERNAL",
+      "kind": "macro"
+    },
+    "LV_ASSERT_FORMAT_INTERNAL": {
+      "path": "api/public/debugging/lv_assert_h",
+      "anchor": "LV_ASSERT_FORMAT_INTERNAL",
       "kind": "macro"
     },
     "LV_ASSERT": {

@@ -1,4 +1,4 @@
-```xml title="examples/widgets/keyboard/lv_example_keyboard_popovers.xml" source="https://github.com/lvgl/lvgl/blob/df12db1e0a857fd9928b908ea99c05b044aa12a3/examples/widgets/keyboard/lv_example_keyboard_popovers.xml"
+```xml title="examples/widgets/keyboard/lv_example_keyboard_popovers.xml" source="https://github.com/lvgl/lvgl/blob/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/examples/widgets/keyboard/lv_example_keyboard_popovers.xml"
 <!--
  @title Keyboard pop-overs
  @brief Enlarged preview balloons appear above the pressed key while held.

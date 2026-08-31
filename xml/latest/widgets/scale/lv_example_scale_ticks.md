@@ -1,4 +1,4 @@
-```xml title="examples/widgets/scale/lv_example_scale_ticks.xml" source="https://github.com/lvgl/lvgl/blob/df12db1e0a857fd9928b908ea99c05b044aa12a3/examples/widgets/scale/lv_example_scale_ticks.xml"
+```xml title="examples/widgets/scale/lv_example_scale_ticks.xml" source="https://github.com/lvgl/lvgl/blob/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/examples/widgets/scale/lv_example_scale_ticks.xml"
 <!--
  @title Scale tick configuration
  @brief Tune tick density and which ticks count as "major" (drawn longer with labels).

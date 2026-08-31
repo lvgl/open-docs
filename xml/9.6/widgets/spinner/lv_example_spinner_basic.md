@@ -1,4 +1,4 @@
-```xml title="examples/widgets/spinner/lv_example_spinner_basic.xml" source="https://github.com/lvgl/lvgl/blob/df12db1e0a857fd9928b908ea99c05b044aa12a3/examples/widgets/spinner/lv_example_spinner_basic.xml"
+```xml title="examples/widgets/spinner/lv_example_spinner_basic.xml" source="https://github.com/lvgl/lvgl/blob/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/examples/widgets/spinner/lv_example_spinner_basic.xml"
 <!--
  @title Spinner basics
  @brief A loading indicator that rotates a configurable arc segment.

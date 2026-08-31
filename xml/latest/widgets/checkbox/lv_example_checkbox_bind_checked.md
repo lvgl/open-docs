@@ -1,4 +1,4 @@
-```xml title="examples/widgets/checkbox/lv_example_checkbox_bind_checked.xml" source="https://github.com/lvgl/lvgl/blob/df12db1e0a857fd9928b908ea99c05b044aa12a3/examples/widgets/checkbox/lv_example_checkbox_bind_checked.xml"
+```xml title="examples/widgets/checkbox/lv_example_checkbox_bind_checked.xml" source="https://github.com/lvgl/lvgl/blob/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/examples/widgets/checkbox/lv_example_checkbox_bind_checked.xml"
 <!--
  @title Checkbox bind checked + bind flag
  @brief A checkbox drives an int subject; a sibling label hides when the subject is zero.

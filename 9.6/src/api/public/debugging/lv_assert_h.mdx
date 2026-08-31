@@ -2,14 +2,14 @@
 title: lv_assert.h
 description: API reference for lv_assert.h
 api:
-  macros: [LV_ASSERT_HANDLER, LV_ASSERT, LV_ASSERT_MSG, LV_ASSERT_FORMAT_MSG, LV_ASSERT_NULL, LV_ASSERT_MALLOC, LV_ASSERT_MEM_INTEGRITY]
+  macros: [LV_ASSERT_HANDLER, LV_ASSERT_INTERNAL, LV_ASSERT_FORMAT_INTERNAL, LV_ASSERT, LV_ASSERT_MSG, LV_ASSERT_FORMAT_MSG, LV_ASSERT_NULL, LV_ASSERT_MALLOC, LV_ASSERT_MEM_INTEGRITY]
 ---
 
-<ApiSummary macros={7} />
+<ApiSummary macros={9} />
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_ASSERT_HANDLER" file="public/debugging/lv_assert.h" line={23} url="https://github.com/lvgl/lvgl/tree/df12db1e0a857fd9928b908ea99c05b044aa12a3/include/lvgl/debugging/lv_assert.h#L23">
+<ApiMember kind="macro" name="LV_ASSERT_HANDLER" file="public/debugging/lv_assert.h" line={23} url="https://github.com/lvgl/lvgl/tree/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/include/lvgl/debugging/lv_assert.h#L23">
 
 ### LV_ASSERT_HANDLER
 
@@ -20,88 +20,104 @@ api:
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_ASSERT" file="public/debugging/lv_assert.h" line={42} url="https://github.com/lvgl/lvgl/tree/df12db1e0a857fd9928b908ea99c05b044aa12a3/include/lvgl/debugging/lv_assert.h#L42">
+<ApiMember kind="macro" name="LV_ASSERT_INTERNAL" file="public/debugging/lv_assert.h" line={43} url="https://github.com/lvgl/lvgl/tree/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/include/lvgl/debugging/lv_assert.h#L43">
+
+### LV_ASSERT_INTERNAL
+
+```c
+#define LV_ASSERT_INTERNAL(expr, msg) \
+    do { \
+            if(!(expr)) { \
+                LV_LOG_ERROR("Assertion `%s` failed." msg, #expr); \
+                LV_ASSERT_HANDLER \
+            } \
+        } while(0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ASSERT_FORMAT_INTERNAL" file="public/debugging/lv_assert.h" line={51} url="https://github.com/lvgl/lvgl/tree/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/include/lvgl/debugging/lv_assert.h#L51">
+
+### LV_ASSERT_FORMAT_INTERNAL
+
+```c
+#define LV_ASSERT_FORMAT_INTERNAL(expr, format, ...) \
+    do { \
+            if(!(expr)) { \
+                LV_LOG_ERROR("Assertion `%s` failed." format, #expr, __VA_ARGS__); \
+                LV_ASSERT_HANDLER \
+            } \
+        } while(0)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_ASSERT" file="public/debugging/lv_assert.h" line={67} url="https://github.com/lvgl/lvgl/tree/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/include/lvgl/debugging/lv_assert.h#L67">
 
 ### LV_ASSERT
 
 ```c
-#define LV_ASSERT(expr) \
-    do { \
-            if(!(expr)) { \
-                LV_LOG_ERROR("Asserted at expression: %s", #expr); \
-                LV_ASSERT_HANDLER \
-            } \
-        } while(0)
+#define LV_ASSERT(expr)
 ```
 
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_ASSERT_MSG" file="public/debugging/lv_assert.h" line={50} url="https://github.com/lvgl/lvgl/tree/df12db1e0a857fd9928b908ea99c05b044aa12a3/include/lvgl/debugging/lv_assert.h#L50">
+<ApiMember kind="macro" name="LV_ASSERT_MSG" file="public/debugging/lv_assert.h" line={68} url="https://github.com/lvgl/lvgl/tree/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/include/lvgl/debugging/lv_assert.h#L68">
 
 ### LV_ASSERT_MSG
 
 ```c
-#define LV_ASSERT_MSG(expr, msg) \
-    do { \
-            if(!(expr)) { \
-                LV_LOG_ERROR("Asserted at expression: %s (%s)", #expr, msg); \
-                LV_ASSERT_HANDLER \
-            } \
-        } while(0)
+#define LV_ASSERT_MSG(expr, msg)
 ```
 
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_ASSERT_FORMAT_MSG" file="public/debugging/lv_assert.h" line={58} url="https://github.com/lvgl/lvgl/tree/df12db1e0a857fd9928b908ea99c05b044aa12a3/include/lvgl/debugging/lv_assert.h#L58">
+<ApiMember kind="macro" name="LV_ASSERT_FORMAT_MSG" file="public/debugging/lv_assert.h" line={69} url="https://github.com/lvgl/lvgl/tree/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/include/lvgl/debugging/lv_assert.h#L69">
 
 ### LV_ASSERT_FORMAT_MSG
 
 ```c
-#define LV_ASSERT_FORMAT_MSG(expr, format, ...) \
-    do { \
-            if(!(expr)) { \
-                LV_LOG_ERROR("Asserted at expression: %s " format , #expr, __VA_ARGS__); \
-                LV_ASSERT_HANDLER \
-            } \
-        } while(0)
+#define LV_ASSERT_FORMAT_MSG(expr, format, ...)
 ```
 
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_ASSERT_NULL" file="public/debugging/lv_assert.h" line={71} url="https://github.com/lvgl/lvgl/tree/df12db1e0a857fd9928b908ea99c05b044aa12a3/include/lvgl/debugging/lv_assert.h#L71">
+<ApiMember kind="macro" name="LV_ASSERT_NULL" file="public/debugging/lv_assert.h" line={78} url="https://github.com/lvgl/lvgl/tree/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/include/lvgl/debugging/lv_assert.h#L78">
 
 ### LV_ASSERT_NULL
 
 ```c
 #define LV_ASSERT_NULL(p) \
-    LV_ASSERT_MSG(p != NULL, "NULL pointer");
+    LV_ASSERT_INTERNAL(p != NULL, " NULL pointer");
 ```
 
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_ASSERT_MALLOC" file="public/debugging/lv_assert.h" line={77} url="https://github.com/lvgl/lvgl/tree/df12db1e0a857fd9928b908ea99c05b044aa12a3/include/lvgl/debugging/lv_assert.h#L77">
+<ApiMember kind="macro" name="LV_ASSERT_MALLOC" file="public/debugging/lv_assert.h" line={84} url="https://github.com/lvgl/lvgl/tree/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/include/lvgl/debugging/lv_assert.h#L84">
 
 ### LV_ASSERT_MALLOC
 
 ```c
 #define LV_ASSERT_MALLOC(p) \
-    LV_ASSERT_MSG(p != NULL, "Out of memory");
+    LV_ASSERT_INTERNAL(p != NULL, " Out of memory");
 ```
 
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_ASSERT_MEM_INTEGRITY" file="public/debugging/lv_assert.h" line={83} url="https://github.com/lvgl/lvgl/tree/df12db1e0a857fd9928b908ea99c05b044aa12a3/include/lvgl/debugging/lv_assert.h#L83">
+<ApiMember kind="macro" name="LV_ASSERT_MEM_INTEGRITY" file="public/debugging/lv_assert.h" line={90} url="https://github.com/lvgl/lvgl/tree/6339dcb9ee5cc1a24e2f69d63d53deb92abd1e69/include/lvgl/debugging/lv_assert.h#L90">
 
 ### LV_ASSERT_MEM_INTEGRITY
 
 ```c
 #define LV_ASSERT_MEM_INTEGRITY() \
-    LV_ASSERT_MSG(lv_mem_test() == LV_RESULT_OK, "Memory integrity error");
+    LV_ASSERT_INTERNAL(lv_mem_test() == LV_RESULT_OK, " Memory integrity error");
 ```
 
 
