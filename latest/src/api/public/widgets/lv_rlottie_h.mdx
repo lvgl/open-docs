@@ -17,9 +17,11 @@ api:
 <ApiTabs items={["Setters (2)","Other (2)"]}>
 <ApiTab value="Setters (2)">
 
-<ApiMember kind="function" name="lv_rlottie_set_play_mode" file="public/widgets/lv_rlottie.h" line={65} url="https://github.com/lvgl/lvgl/tree/ec3b2d53d1e71078174fe3f2203729711232896a/include/lvgl/widgets/lv_rlottie.h#L65">
+<ApiMember kind="function" name="lv_rlottie_set_play_mode" file="public/widgets/lv_rlottie.h" line={93} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/widgets/lv_rlottie.h#L93">
 
 ### lv_rlottie_set_play_mode
+
+Set how the animation is played.
 
 \> **Deprecated:** rlottie is deprecated. Use the `lv_lottie` widget instead.
 
@@ -29,17 +31,19 @@ void lv_rlottie_set_play_mode(lv_obj_t *rlottie, const lv_rlottie_ctrl_t ctrl)
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `rlottie` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `ctrl` | <ApiLink name="lv_rlottie_ctrl_t" display="const lv_rlottie_ctrl_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `rlottie` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an rlottie widget |
+| `ctrl` | <ApiLink name="lv_rlottie_ctrl_t" display="const lv_rlottie_ctrl_t" /> | OR-ed values of `lv_rlottie_ctrl_t`, e.g. `LV_RLOTTIE_CTRL_BACKWARD | LV_RLOTTIE_CTRL_LOOP`. Without `LV_RLOTTIE_CTRL_LOOP` an `LV_EVENT_READY` event is sent when the last frame is reached. |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_rlottie_set_current_frame" file="public/widgets/lv_rlottie.h" line={69} url="https://github.com/lvgl/lvgl/tree/ec3b2d53d1e71078174fe3f2203729711232896a/include/lvgl/widgets/lv_rlottie.h#L69">
+<ApiMember kind="function" name="lv_rlottie_set_current_frame" file="public/widgets/lv_rlottie.h" line={104} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/widgets/lv_rlottie.h#L104">
 
 ### lv_rlottie_set_current_frame
+
+Jump to a given frame of the animation.
 
 \> **Deprecated:** rlottie is deprecated. Use the `lv_lottie` widget instead.
 
@@ -49,10 +53,10 @@ void lv_rlottie_set_current_frame(lv_obj_t *rlottie, const size_t goto_frame)
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `rlottie` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `goto_frame` | `const size_t` |
+| Name | Type | Description |
+|------|------|-------------|
+| `rlottie` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an rlottie widget |
+| `goto_frame` | `const size_t` | zero based index of the frame to show. Values not smaller than the total frame count select the last frame. |
 
 
 </ApiMember>
@@ -60,11 +64,14 @@ void lv_rlottie_set_current_frame(lv_obj_t *rlottie, const size_t goto_frame)
 </ApiTab>
 <ApiTab value="Other (2)">
 
-<ApiMember kind="function" name="lv_rlottie_create_from_file" file="public/widgets/lv_rlottie.h" line={53} url="https://github.com/lvgl/lvgl/tree/ec3b2d53d1e71078174fe3f2203729711232896a/include/lvgl/widgets/lv_rlottie.h#L53">
+<ApiMember kind="function" name="lv_rlottie_create_from_file" file="public/widgets/lv_rlottie.h" line={63} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/widgets/lv_rlottie.h#L63">
 
 ### lv_rlottie_create_from_file
 
-Create an rlottie animation from a JSON file. 
+Create an rlottie animation from a JSON file. The animation starts playing forward in a loop right away.
+
+rlottie doesn't use LVGL's File System API.
+
 \> **Deprecated:** rlottie is deprecated. Use the `lv_lottie` widget instead.
 
 ```c
@@ -73,21 +80,24 @@ lv_obj_t * lv_rlottie_create_from_file(lv_obj_t *parent, int32_t width, int32_t 
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `width` | `int32_t` |
-| `height` | `int32_t` |
-| `path` | `const char *` |
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a parent widget **May** be `NULL`.. When NULL, the widget is created as a screen on the active display. |
+| `width` | `int32_t` | width of the animation and its render buffer in pixels |
+| `height` | `int32_t` | height of the animation and its render buffer in pixels |
+| `path` | `const char *` | path to a json file, e.g. "path/to/file.json" |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created rlottie widget, or NULL if `path` is NULL
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_rlottie_create_from_raw" file="public/widgets/lv_rlottie.h" line={60} url="https://github.com/lvgl/lvgl/tree/ec3b2d53d1e71078174fe3f2203729711232896a/include/lvgl/widgets/lv_rlottie.h#L60">
+<ApiMember kind="function" name="lv_rlottie_create_from_raw" file="public/widgets/lv_rlottie.h" line={79} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/widgets/lv_rlottie.h#L79">
 
 ### lv_rlottie_create_from_raw
 
-Create an rlottie animation from a raw JSON description. 
+Create an rlottie animation from a raw JSON description. The animation starts playing forward in a loop right away.
+
 \> **Deprecated:** rlottie is deprecated. Use the `lv_lottie` widget instead.
 
 ```c
@@ -96,12 +106,14 @@ lv_obj_t * lv_rlottie_create_from_raw(lv_obj_t *parent, int32_t width, int32_t h
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `width` | `int32_t` |
-| `height` | `int32_t` |
-| `rlottie_desc` | `const char *` |
+| Name | Type | Description |
+|------|------|-------------|
+| `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a parent widget **May** be `NULL`.. When NULL, the widget is created as a screen on the active display. |
+| `width` | `int32_t` | width of the animation and its render buffer in pixels |
+| `height` | `int32_t` | height of the animation and its render buffer in pixels |
+| `rlottie_desc` | `const char *` | the lottie animation as a nul terminated string |
+
+**Returns:** <ApiLink name="lv_obj_t" display="lv_obj_t *" /> — pointer to the created rlottie widget, or NULL if `rlottie_desc` is NULL
 
 
 </ApiMember>
@@ -110,7 +122,7 @@ lv_obj_t * lv_rlottie_create_from_raw(lv_obj_t *parent, int32_t width, int32_t h
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_rlottie_ctrl_t" file="public/widgets/lv_rlottie.h" line={34} url="https://github.com/lvgl/lvgl/tree/ec3b2d53d1e71078174fe3f2203729711232896a/include/lvgl/widgets/lv_rlottie.h#L34">
+<ApiMember kind="enum" name="lv_rlottie_ctrl_t" file="public/widgets/lv_rlottie.h" line={34} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/widgets/lv_rlottie.h#L34">
 
 ### lv_rlottie_ctrl_t
 
@@ -133,7 +145,7 @@ lv_obj_t * lv_rlottie_create_from_raw(lv_obj_t *parent, int32_t width, int32_t h
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_RLOTTIE_DEPRECATED_MSG" file="public/widgets/lv_rlottie.h" line={28} url="https://github.com/lvgl/lvgl/tree/ec3b2d53d1e71078174fe3f2203729711232896a/include/lvgl/widgets/lv_rlottie.h#L28">
+<ApiMember kind="macro" name="LV_RLOTTIE_DEPRECATED_MSG" file="public/widgets/lv_rlottie.h" line={28} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/widgets/lv_rlottie.h#L28">
 
 ### LV_RLOTTIE_DEPRECATED_MSG
 
@@ -148,7 +160,7 @@ lv_obj_t * lv_rlottie_create_from_raw(lv_obj_t *parent, int32_t width, int32_t h
 
 ## Variables
 
-<ApiMember kind="variable" name="lv_rlottie_class" file="public/widgets/lv_rlottie.h" line={42} url="https://github.com/lvgl/lvgl/tree/ec3b2d53d1e71078174fe3f2203729711232896a/include/lvgl/widgets/lv_rlottie.h#L42">
+<ApiMember kind="variable" name="lv_rlottie_class" file="public/widgets/lv_rlottie.h" line={42} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/widgets/lv_rlottie.h#L42">
 
 ### lv_rlottie_class
 

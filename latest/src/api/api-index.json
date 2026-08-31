@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-31T08:29:24.547Z",
-    "symbolCount": 8989
+    "generatedAt": "2026-08-31T09:05:48.227Z",
+    "symbolCount": 8993
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -21966,6 +21966,11 @@
       "anchor": "lv_binfont_create",
       "kind": "function"
     },
+    "lv_binfont_create_ex": {
+      "path": "api/public/font/lv_binfont_loader_h",
+      "anchor": "lv_binfont_create_ex",
+      "kind": "function"
+    },
     "lv_binfont_create_from_buffer": {
       "path": "api/public/font/lv_binfont_loader_h",
       "anchor": "lv_binfont_create_from_buffer",
@@ -21979,6 +21984,11 @@
     "lv_binfont_font_src_t": {
       "path": "api/public/font/lv_binfont_loader_h",
       "anchor": "lv_binfont_font_src_t",
+      "kind": "struct"
+    },
+    "lv_binfont_dsc_t": {
+      "path": "api/public/font/lv_binfont_loader_h",
+      "anchor": "lv_binfont_dsc_t",
       "kind": "struct"
     },
     "lv_binfont_font_class": {
@@ -22255,6 +22265,11 @@
       "path": "api/public/font/lv_font_fmt_txt_h",
       "anchor": "lv_builtin_font_src_t",
       "kind": "struct"
+    },
+    "lv_font_fmt_txt_glyph_loader_t": {
+      "path": "api/public/font/lv_font_fmt_txt_h",
+      "anchor": "lv_font_fmt_txt_glyph_loader_t",
+      "kind": "typedef"
     },
     "lv_builtin_font_class": {
       "path": "api/public/font/lv_font_fmt_txt_h",
@@ -40405,6 +40420,11 @@
       "path": "api/private/font/fmt_txt/lv_font_fmt_txt_private_h",
       "anchor": "lv_font_fmt_rle_state_t",
       "kind": "enumvalue"
+    },
+    "_lv_font_fmt_txt_glyph_loader_t": {
+      "path": "api/private/font/fmt_txt/lv_font_fmt_txt_private_h",
+      "anchor": "_lv_font_fmt_txt_glyph_loader_t",
+      "kind": "struct"
     },
     "lv_font_fmt_rle_t": {
       "path": "api/private/font/fmt_txt/lv_font_fmt_txt_private_h",

@@ -2,16 +2,16 @@
 title: lv_binfont_loader.h
 description: API reference for lv_binfont_loader.h
 api:
-  functions: [lv_binfont_create, lv_binfont_create_from_buffer, lv_binfont_destroy]
-  structs: [lv_binfont_font_src_t]
+  functions: [lv_binfont_create, lv_binfont_create_ex, lv_binfont_create_from_buffer, lv_binfont_destroy]
+  structs: [lv_binfont_font_src_t, lv_binfont_dsc_t]
   variables: [lv_binfont_font_class]
 ---
 
-<ApiSummary functions={3} structs={1} variables={1} />
+<ApiSummary functions={4} structs={2} variables={1} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_binfont_create" file="public/font/lv_binfont_loader.h" line={45} url="https://github.com/lvgl/lvgl/tree/ec3b2d53d1e71078174fe3f2203729711232896a/include/lvgl/font/lv_binfont_loader.h#L45">
+<ApiMember kind="function" name="lv_binfont_create" file="public/font/lv_binfont_loader.h" line={65} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/font/lv_binfont_loader.h#L65">
 
 ### lv_binfont_create
 
@@ -32,7 +32,28 @@ lv_font_t * lv_binfont_create(const char *path)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_binfont_create_from_buffer" file="public/font/lv_binfont_loader.h" line={55} url="https://github.com/lvgl/lvgl/tree/ec3b2d53d1e71078174fe3f2203729711232896a/include/lvgl/font/lv_binfont_loader.h#L55">
+<ApiMember kind="function" name="lv_binfont_create_ex" file="public/font/lv_binfont_loader.h" line={72} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/font/lv_binfont_loader.h#L72">
+
+### lv_binfont_create_ex
+
+Loads a `lv_font_t` object from a binary font file with additional options.
+
+```c
+lv_font_t * lv_binfont_create_ex(const lv_binfont_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_binfont_dsc_t" display="const lv_binfont_dsc_t *" /> | describes the font source and how to load it |
+
+**Returns:** <ApiLink name="lv_font_t" display="lv_font_t *" /> — pointer to the loaded font or `NULL` on error
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_binfont_create_from_buffer" file="public/font/lv_binfont_loader.h" line={82} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/font/lv_binfont_loader.h#L82">
 
 ### lv_binfont_create_from_buffer
 
@@ -54,7 +75,7 @@ lv_font_t * lv_binfont_create_from_buffer(void *buffer, uint32_t size)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_binfont_destroy" file="public/font/lv_binfont_loader.h" line={62} url="https://github.com/lvgl/lvgl/tree/ec3b2d53d1e71078174fe3f2203729711232896a/include/lvgl/font/lv_binfont_loader.h#L62">
+<ApiMember kind="function" name="lv_binfont_destroy" file="public/font/lv_binfont_loader.h" line={89} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/font/lv_binfont_loader.h#L89">
 
 ### lv_binfont_destroy
 
@@ -85,13 +106,36 @@ void lv_binfont_destroy(lv_font_t *font)
 | `path` | `const char *` | Path to font file |
 | `buffer` | `const void *` | Address of the font file in the memory |
 | `buffer_size` | `uint32_t` | Size of the font file buffer |
+| `dynamic_glyph_load` | `bool` | Load the glyph bitmaps on demand. See <ApiLink name="lv_binfont_dsc_t" /> |
 
 
 </ApiMember>
 
+<ApiMember kind="struct" name="lv_binfont_dsc_t">
+
+### lv_binfont_dsc_t
+
+Describes how a binary font should be loaded
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `path` | `const char *` | Path to the font file. If `NULL` the font is loaded from `buffer`. |
+| `buffer` | `const void *` | Address of the font file in the memory. Used only if `path` is `NULL`. Requires LV_USE_FS_MEMFS. |
+| `buffer_size` | `uint32_t` | Size of the font file buffer |
+| `dynamic_glyph_load` | `bool` | if true the glyph bitmaps are not loaded into RAM when the font is created, instead the glyph is loaded from the file during rendering when the glyph is drawn |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_binfont_dsc_t" count={1}>
+
+- `lv_binfont_create_ex` — param `dsc`
+
+</TypeUsedBy>
+
 ## Variables
 
-<ApiMember kind="variable" name="lv_binfont_font_class" file="public/font/lv_binfont_loader.h" line={34} url="https://github.com/lvgl/lvgl/tree/ec3b2d53d1e71078174fe3f2203729711232896a/include/lvgl/font/lv_binfont_loader.h#L34">
+<ApiMember kind="variable" name="lv_binfont_font_class" file="public/font/lv_binfont_loader.h" line={54} url="https://github.com/lvgl/lvgl/tree/ccdda91492eeffc6776e8c623d7c2ab687dda294/include/lvgl/font/lv_binfont_loader.h#L54">
 
 ### lv_binfont_font_class
 
