@@ -370,6 +370,10 @@ LV_BUILD_TESTS:BOOL=OFF
 //Use Kconfig
 LV_BUILD_USE_KCONFIG:BOOL=OFF
 
+//Build without lv_conf.h, using lv_conf_internal.h defaults. Options
+// can still be set via compiler definitions
+LV_CONF_SKIP:BOOL=OFF
+
 //Fetch dependencies from source if not found on the system
 LV_FETCH_DEPENDENCIES:BOOL=ON
 
