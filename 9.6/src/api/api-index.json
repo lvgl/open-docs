@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-31T10:12:13.919Z",
-    "symbolCount": 8993
+    "generatedAt": "2026-08-31T14:31:46.365Z",
+    "symbolCount": 8995
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -43321,6 +43321,11 @@
       "anchor": "lv_bidi_process_paragraph",
       "kind": "function"
     },
+    "lv_bidi_calculate_align_internal": {
+      "path": "api/private/misc/lv_bidi_private_h",
+      "anchor": "lv_bidi_calculate_align_internal",
+      "kind": "function"
+    },
     "lv_circle_buf_private.h": {
       "path": "api/private/misc/lv_circle_buf_private_h",
       "anchor": "",
@@ -43859,6 +43864,11 @@
     "lv_text_encoded_letter_next_2": {
       "path": "api/private/misc/lv_text_private_h",
       "anchor": "lv_text_encoded_letter_next_2",
+      "kind": "function"
+    },
+    "lv_text_get_size_internal": {
+      "path": "api/private/misc/lv_text_private_h",
+      "anchor": "lv_text_get_size_internal",
       "kind": "function"
     },
     "lv_text_is_break_char": {

@@ -2,19 +2,19 @@
 title: lv_bidi_private.h
 description: API reference for lv_bidi_private.h
 api:
-  functions: [lv_bidi_process, lv_bidi_detect_base_dir, lv_bidi_get_logical_pos, lv_bidi_get_visual_pos, lv_bidi_process_paragraph]
+  functions: [lv_bidi_process, lv_bidi_detect_base_dir, lv_bidi_get_logical_pos, lv_bidi_get_visual_pos, lv_bidi_process_paragraph, lv_bidi_calculate_align_internal]
 ---
 
 <RelatedHeaders name="lv_bidi.h" isPrivate={true} />
 
-<ApiSummary functions={5} />
+<ApiSummary functions={6} />
 
 ## Functions
 
-<ApiTabs items={["Getters (2)","Other (3)"]}>
+<ApiTabs items={["Getters (2)","Other (4)"]}>
 <ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_bidi_get_logical_pos" file="private/misc/lv_bidi_private.h" line={64} url="https://github.com/lvgl/lvgl/tree/274c7e692da72b6021cdda9d70672135ecd6d94f/src/misc/lv_bidi_private.h#L64">
+<ApiMember kind="function" name="lv_bidi_get_logical_pos" file="private/misc/lv_bidi_private.h" line={64} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/src/misc/lv_bidi_private.h#L64">
 
 ### lv_bidi_get_logical_pos
 
@@ -40,7 +40,7 @@ uint16_t lv_bidi_get_logical_pos(const char *str_in, char **bidi_txt, uint32_t l
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_bidi_get_visual_pos" file="private/misc/lv_bidi_private.h" line={79} url="https://github.com/lvgl/lvgl/tree/274c7e692da72b6021cdda9d70672135ecd6d94f/src/misc/lv_bidi_private.h#L79">
+<ApiMember kind="function" name="lv_bidi_get_visual_pos" file="private/misc/lv_bidi_private.h" line={79} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/src/misc/lv_bidi_private.h#L79">
 
 ### lv_bidi_get_visual_pos
 
@@ -67,9 +67,9 @@ uint16_t lv_bidi_get_visual_pos(const char *str_in, char **bidi_txt, uint16_t le
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Other (3)">
+<ApiTab value="Other (4)">
 
-<ApiMember kind="function" name="lv_bidi_process" file="private/misc/lv_bidi_private.h" line={39} url="https://github.com/lvgl/lvgl/tree/274c7e692da72b6021cdda9d70672135ecd6d94f/src/misc/lv_bidi_private.h#L39">
+<ApiMember kind="function" name="lv_bidi_process" file="private/misc/lv_bidi_private.h" line={39} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/src/misc/lv_bidi_private.h#L39">
 
 ### lv_bidi_process
 
@@ -90,7 +90,7 @@ void lv_bidi_process(const char *str_in, char *str_out, lv_base_dir_t base_dir)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_bidi_detect_base_dir" file="private/misc/lv_bidi_private.h" line={50} url="https://github.com/lvgl/lvgl/tree/274c7e692da72b6021cdda9d70672135ecd6d94f/src/misc/lv_bidi_private.h#L50">
+<ApiMember kind="function" name="lv_bidi_detect_base_dir" file="private/misc/lv_bidi_private.h" line={50} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/src/misc/lv_bidi_private.h#L50">
 
 ### lv_bidi_detect_base_dir
 
@@ -111,7 +111,7 @@ lv_base_dir_t lv_bidi_detect_base_dir(const char *txt)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_bidi_process_paragraph" file="private/misc/lv_bidi_private.h" line={92} url="https://github.com/lvgl/lvgl/tree/274c7e692da72b6021cdda9d70672135ecd6d94f/src/misc/lv_bidi_private.h#L92">
+<ApiMember kind="function" name="lv_bidi_process_paragraph" file="private/misc/lv_bidi_private.h" line={92} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/src/misc/lv_bidi_private.h#L92">
 
 ### lv_bidi_process_paragraph
 
@@ -131,6 +131,27 @@ void lv_bidi_process_paragraph(const char *str_in, char *str_out, uint32_t len, 
 | `base_dir` | <ApiLink name="lv_base_dir_t" /> | base dir of the text |
 | `pos_conv_out` | `uint16_t *` | an `uint16_t` array to store the related logical position of the character. Can be `NULL` is unused |
 | `pos_conv_len` | `uint16_t` | length of `pos_conv_out` in element count |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_bidi_calculate_align_internal" file="private/misc/lv_bidi_private.h" line={102} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/src/misc/lv_bidi_private.h#L102">
+
+### lv_bidi_calculate_align_internal
+
+Internal implementation of <ApiLink name="lv_bidi_calculate_align" />
+
+```c
+static void lv_bidi_calculate_align_internal(lv_text_align_t *align, lv_base_dir_t *base_dir, const char *txt)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `align` | <ApiLink name="lv_text_align_t" display="lv_text_align_t *" /> |
+| `base_dir` | <ApiLink name="lv_base_dir_t" display="lv_base_dir_t *" /> |
+| `txt` | `const char *` |
 
 
 </ApiMember>

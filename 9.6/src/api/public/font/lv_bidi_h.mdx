@@ -16,7 +16,7 @@ api:
 <ApiTabs items={["Setters (1)","Other (1)"]}>
 <ApiTab value="Setters (1)">
 
-<ApiMember kind="function" name="lv_bidi_set_custom_neutrals_static" file="public/font/lv_bidi.h" line={57} url="https://github.com/lvgl/lvgl/tree/274c7e692da72b6021cdda9d70672135ecd6d94f/include/lvgl/font/lv_bidi.h#L57">
+<ApiMember kind="function" name="lv_bidi_set_custom_neutrals_static" file="public/font/lv_bidi.h" line={58} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/font/lv_bidi.h#L58">
 
 ### lv_bidi_set_custom_neutrals_static
 
@@ -38,7 +38,7 @@ void lv_bidi_set_custom_neutrals_static(const char *neutrals)
 </ApiTab>
 <ApiTab value="Other (1)">
 
-<ApiMember kind="function" name="lv_bidi_calculate_align" file="public/font/lv_bidi.h" line={51} url="https://github.com/lvgl/lvgl/tree/274c7e692da72b6021cdda9d70672135ecd6d94f/include/lvgl/font/lv_bidi.h#L51">
+<ApiMember kind="function" name="lv_bidi_calculate_align" file="public/font/lv_bidi.h" line={50} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/font/lv_bidi.h#L50">
 
 ### lv_bidi_calculate_align
 
@@ -63,7 +63,7 @@ void lv_bidi_calculate_align(lv_text_align_t *align, lv_base_dir_t *base_dir, co
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_base_dir_t" file="public/font/lv_bidi.h" line={31} url="https://github.com/lvgl/lvgl/tree/274c7e692da72b6021cdda9d70672135ecd6d94f/include/lvgl/font/lv_bidi.h#L31">
+<ApiMember kind="enum" name="lv_base_dir_t" file="public/font/lv_bidi.h" line={31} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/font/lv_bidi.h#L31">
 
 ### lv_base_dir_t
 
@@ -78,7 +78,7 @@ void lv_bidi_calculate_align(lv_text_align_t *align, lv_base_dir_t *base_dir, co
 
 </ApiMember>
 
-<TypeUsedBy name="lv_base_dir_t" count={7}>
+<TypeUsedBy name="lv_base_dir_t" count={8}>
 
 - `lv_obj_set_style_base_dir` — param `value`
 - `lv_style_set_base_dir` — param `value`
@@ -87,12 +87,13 @@ void lv_bidi_calculate_align(lv_text_align_t *align, lv_base_dir_t *base_dir, co
 - `lv_bidi_get_logical_pos` — param `base_dir`
 - `lv_bidi_get_visual_pos` — param `base_dir`
 - `lv_bidi_process_paragraph` — param `base_dir`
+- `lv_bidi_calculate_align_internal` — param `base_dir`
 
 </TypeUsedBy>
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_BIDI_LRO" file="public/font/lv_bidi.h" line={25} url="https://github.com/lvgl/lvgl/tree/274c7e692da72b6021cdda9d70672135ecd6d94f/include/lvgl/font/lv_bidi.h#L25">
+<ApiMember kind="macro" name="LV_BIDI_LRO" file="public/font/lv_bidi.h" line={25} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/font/lv_bidi.h#L25">
 
 ### LV_BIDI_LRO
 
@@ -105,7 +106,7 @@ Special non printable strong characters. They can be inserted to texts to affect
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_BIDI_RLO" file="public/font/lv_bidi.h" line={26} url="https://github.com/lvgl/lvgl/tree/274c7e692da72b6021cdda9d70672135ecd6d94f/include/lvgl/font/lv_bidi.h#L26">
+<ApiMember kind="macro" name="LV_BIDI_RLO" file="public/font/lv_bidi.h" line={26} url="https://github.com/lvgl/lvgl/tree/0c3b507a15010e8edfa526dacfa20623aabb0703/include/lvgl/font/lv_bidi.h#L26">
 
 ### LV_BIDI_RLO
 
