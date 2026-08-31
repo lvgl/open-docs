@@ -2,12 +2,37 @@
 title: lv_draw_label_private.h
 description: API reference for lv_draw_label_private.h
 api:
+  functions: [lv_draw_unit_draw_letter_internal]
   structs: [_lv_draw_label_hint_t, _lv_draw_glyph_dsc_t]
 ---
 
 <RelatedHeaders name="lv_draw_label.h" isPrivate={true} />
 
-<ApiSummary structs={2} />
+<ApiSummary functions={1} structs={2} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_unit_draw_letter_internal" file="private/draw/lv_draw_label_private.h" line={66} url="https://github.com/lvgl/lvgl/tree/df12db1e0a857fd9928b908ea99c05b044aa12a3/src/draw/lv_draw_label_private.h#L66">
+
+### lv_draw_unit_draw_letter_internal
+
+```c
+void lv_draw_unit_draw_letter_internal(lv_draw_task_t *t, lv_draw_glyph_dsc_t *dsc, const lv_point_t *pos, const lv_font_t *font, uint32_t letter, lv_draw_glyph_cb_t cb)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `dsc` | <ApiLink name="lv_draw_glyph_dsc_t" display="lv_draw_glyph_dsc_t *" /> |
+| `pos` | <ApiLink name="lv_point_t" display="const lv_point_t *" /> |
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> |
+| `letter` | `uint32_t` |
+| `cb` | <ApiLink name="lv_draw_glyph_cb_t" /> |
+
+
+</ApiMember>
 
 ## Structs
 

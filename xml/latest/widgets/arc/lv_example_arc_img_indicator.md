@@ -1,4 +1,4 @@
-```xml title="examples/widgets/arc/lv_example_arc_img_indicator.xml" source="https://github.com/lvgl/lvgl/blob/01152c86d09e0826558e5fa9a5ad882e386fe607/examples/widgets/arc/lv_example_arc_img_indicator.xml"
+```xml title="examples/widgets/arc/lv_example_arc_img_indicator.xml" source="https://github.com/lvgl/lvgl/blob/df12db1e0a857fd9928b908ea99c05b044aa12a3/examples/widgets/arc/lv_example_arc_img_indicator.xml"
 <!--
  @title Arc image indicator
  @brief Use bitmaps as the arc background and indicator — the arc shape is cut from each image.

@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-08-31T16:13:11.119Z",
-    "symbolCount": 9150
+    "generatedAt": "2026-08-31T16:46:27.550Z",
+    "symbolCount": 9151
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -34570,6 +34570,11 @@
       "path": "api/private/draw/lv_draw_label_private_h",
       "anchor": "",
       "kind": "header"
+    },
+    "lv_draw_unit_draw_letter_internal": {
+      "path": "api/private/draw/lv_draw_label_private_h",
+      "anchor": "lv_draw_unit_draw_letter_internal",
+      "kind": "function"
     },
     "_lv_draw_label_hint_t": {
       "path": "api/private/draw/lv_draw_label_private_h",
