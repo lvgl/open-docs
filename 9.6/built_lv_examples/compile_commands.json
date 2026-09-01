@@ -1243,6 +1243,12 @@
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
+  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/lv_opengles_pbuffer.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/drivers/opengles/lv_opengles_pbuffer.c",
+  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/drivers/opengles/lv_opengles_pbuffer.c",
+  "output": "lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/lv_opengles_pbuffer.c.o"
+},
+{
+  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/lv_opengles_texture.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/drivers/opengles/lv_opengles_texture.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/drivers/opengles/lv_opengles_texture.c",
   "output": "lvgl/CMakeFiles/lvgl.dir/src/drivers/opengles/lv_opengles_texture.c.o"

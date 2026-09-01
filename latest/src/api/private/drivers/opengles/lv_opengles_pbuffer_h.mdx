@@ -1,0 +1,156 @@
+---
+title: lv_opengles_pbuffer.h
+description: API reference for lv_opengles_pbuffer.h
+api:
+  functions: [lv_opengles_pbuffer_create, lv_opengles_pbuffer_read_to_draw_buf, lv_opengles_pbuffer_get_gles_version, lv_opengles_pbuffer_get_handle, lv_opengles_pbuffer_destroy]
+  typedefs: [lv_opengles_pbuffer_t]
+---
+
+<ApiSummary functions={5} typedefs={1} />
+
+## Functions
+
+<ApiTabs items={["Getters (2)","Other (3)"]}>
+<ApiTab value="Getters (2)">
+
+<ApiMember kind="function" name="lv_opengles_pbuffer_get_gles_version" file="private/drivers/opengles/lv_opengles_pbuffer.h" line={65} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/src/drivers/opengles/lv_opengles_pbuffer.h#L65">
+
+### lv_opengles_pbuffer_get_gles_version
+
+Get the OpenGL ES major version of the context backing a pbuffer display. ES3 is requested first, but drivers that cannot provide it fall back to ES2, where features needing ES3 shaders (e.g. glTF) are unavailable.
+
+```c
+uint8_t lv_opengles_pbuffer_get_gles_version(lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | a display created by `lv_opengles_pbuffer_create` |
+
+**Returns:** `uint8_t` — 3 or 2, or 0 if `display` is not a pbuffer display
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_pbuffer_get_handle" file="private/drivers/opengles/lv_opengles_pbuffer.h" line={73} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/src/drivers/opengles/lv_opengles_pbuffer.h#L73">
+
+### lv_opengles_pbuffer_get_handle
+
+Get the pbuffer handle of a display, so it can be torn down after the display itself is gone. See `lv_opengles_pbuffer_destroy`.
+
+```c
+lv_opengles_pbuffer_t * lv_opengles_pbuffer_get_handle(lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | a display created by `lv_opengles_pbuffer_create` |
+
+**Returns:** <ApiLink name="lv_opengles_pbuffer_t" display="lv_opengles_pbuffer_t *" /> — the handle, or NULL if `display` is not a pbuffer display
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (3)">
+
+<ApiMember kind="function" name="lv_opengles_pbuffer_create" file="private/drivers/opengles/lv_opengles_pbuffer.h" line={46} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/src/drivers/opengles/lv_opengles_pbuffer.h#L46">
+
+### lv_opengles_pbuffer_create
+
+Create a display that renders off-screen into an EGL pbuffer and reads the result back into its draw buffer, so no window system is needed.
+
+The resolution and color format are fixed at creation; changing either on the returned display is not supported.
+
+```c
+lv_display_t * lv_opengles_pbuffer_create(int32_t hor_res, int32_t ver_res)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `hor_res` | `int32_t` | horizontal resolution in pixels |
+| `ver_res` | `int32_t` | vertical resolution in pixels |
+
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — the new display, or NULL on failure
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_pbuffer_read_to_draw_buf" file="private/drivers/opengles/lv_opengles_pbuffer.h" line={56} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/src/drivers/opengles/lv_opengles_pbuffer.h#L56">
+
+### lv_opengles_pbuffer_read_to_draw_buf
+
+Read the pbuffer display's current framebuffer contents into a draw buffer. Called automatically when the display is flushed; use it directly only to take an extra copy. The draw buffer must match the display resolution.
+
+```c
+lv_result_t lv_opengles_pbuffer_read_to_draw_buf(lv_display_t *display, lv_draw_buf_t *draw_buf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | a display created by `lv_opengles_pbuffer_create` |
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | the draw buffer to read the pixels into |
+
+**Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK on success, LV_RESULT_INVALID on error
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_pbuffer_destroy" file="private/drivers/opengles/lv_opengles_pbuffer.h" line={86} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/src/drivers/opengles/lv_opengles_pbuffer.h#L86">
+
+### lv_opengles_pbuffer_destroy
+
+Destroy a pbuffer context, releasing its GL objects and the EGL context.
+
+This is deliberately not done when the display is deleted. Draw units may still run GL calls while they are being destroyed, and <ApiLink name="lv_deinit" display="lv_deinit()" /> deletes displays before draw units, so tearing the EGL context down from the display's delete event would pull the context out from under them. Fetch the handle with <ApiLink name="lv_opengles_pbuffer_get_handle" display="lv_opengles_pbuffer_get_handle()" /> beforehand and call this afterwards.
+
+```c
+void lv_opengles_pbuffer_destroy(lv_opengles_pbuffer_t *pbuffer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `pbuffer` | <ApiLink name="lv_opengles_pbuffer_t" display="lv_opengles_pbuffer_t *" /> | handle from `lv_opengles_pbuffer_get_handle`, NULL is ignored |
+
+
+</ApiMember>
+
+</ApiTab>
+</ApiTabs>
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_opengles_pbuffer_t" file="private/drivers/opengles/lv_opengles_pbuffer.h" line={29} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/src/drivers/opengles/lv_opengles_pbuffer.h#L29">
+
+### lv_opengles_pbuffer_t
+
+```c
+typedef struct _lv_opengles_pbuffer lv_opengles_pbuffer_t
+```
+
+An off-screen EGL pbuffer context and its render target
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_opengles_pbuffer_t" count={1}>
+
+- `lv_opengles_pbuffer_destroy` — param `pbuffer`
+
+</TypeUsedBy>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lvgl_public.h"]}
+  includedBy={["lvgl_private.h"]}
+/>

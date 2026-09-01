@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-01T13:32:47.815Z",
-    "symbolCount": 9158
+    "generatedAt": "2026-09-01T14:04:51.415Z",
+    "symbolCount": 9172
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -26656,6 +26656,11 @@
       "anchor": "lv_theme_set_apply_cb",
       "kind": "function"
     },
+    "lv_theme_set_user_data": {
+      "path": "api/public/themes/lv_theme_h",
+      "anchor": "lv_theme_set_user_data",
+      "kind": "function"
+    },
     "lv_theme_get_font_small": {
       "path": "api/public/themes/lv_theme_h",
       "anchor": "lv_theme_get_font_small",
@@ -26679,6 +26684,11 @@
     "lv_theme_get_color_secondary": {
       "path": "api/public/themes/lv_theme_h",
       "anchor": "lv_theme_get_color_secondary",
+      "kind": "function"
+    },
+    "lv_theme_get_user_data": {
+      "path": "api/public/themes/lv_theme_h",
+      "anchor": "lv_theme_get_user_data",
       "kind": "function"
     },
     "lv_theme_delete": {
@@ -40286,6 +40296,11 @@
       "anchor": "lv_opengles_egl_color_format_from_egl_config",
       "kind": "function"
     },
+    "lv_opengles_egl_get_gles_version": {
+      "path": "api/private/drivers/opengles/lv_opengles_egl_h",
+      "anchor": "lv_opengles_egl_get_gles_version",
+      "kind": "function"
+    },
     "lv_opengles_egl_update": {
       "path": "api/private/drivers/opengles/lv_opengles_egl_h",
       "anchor": "lv_opengles_egl_update",
@@ -40321,6 +40336,11 @@
       "anchor": "",
       "kind": "header"
     },
+    "lv_opengles_egl_display_select_config": {
+      "path": "api/private/drivers/opengles/lv_opengles_egl_private_h",
+      "anchor": "lv_opengles_egl_display_select_config",
+      "kind": "function"
+    },
     "_lv_egl_config": {
       "path": "api/private/drivers/opengles/lv_opengles_egl_private_h",
       "anchor": "_lv_egl_config",
@@ -40329,6 +40349,11 @@
     "lv_egl_native_window_properties_t": {
       "path": "api/private/drivers/opengles/lv_opengles_egl_private_h",
       "anchor": "lv_egl_native_window_properties_t",
+      "kind": "struct"
+    },
+    "lv_egl_create_surface_params_t": {
+      "path": "api/private/drivers/opengles/lv_opengles_egl_private_h",
+      "anchor": "lv_egl_create_surface_params_t",
       "kind": "struct"
     },
     "_lv_egl_interface": {
@@ -40351,14 +40376,24 @@
       "anchor": "lv_egl_get_display_t",
       "kind": "typedef"
     },
-    "lv_create_window_t": {
+    "lv_egl_create_window_t": {
       "path": "api/private/drivers/opengles/lv_opengles_egl_private_h",
-      "anchor": "lv_create_window_t",
+      "anchor": "lv_egl_create_window_t",
       "kind": "typedef"
     },
-    "lv_destroy_window_t": {
+    "lv_egl_destroy_window_t": {
       "path": "api/private/drivers/opengles/lv_opengles_egl_private_h",
-      "anchor": "lv_destroy_window_t",
+      "anchor": "lv_egl_destroy_window_t",
+      "kind": "typedef"
+    },
+    "lv_egl_create_surface_t": {
+      "path": "api/private/drivers/opengles/lv_opengles_egl_private_h",
+      "anchor": "lv_egl_create_surface_t",
+      "kind": "typedef"
+    },
+    "lv_egl_destroy_surface_t": {
+      "path": "api/private/drivers/opengles/lv_opengles_egl_private_h",
+      "anchor": "lv_egl_destroy_surface_t",
       "kind": "typedef"
     },
     "lv_egl_set_visible_t": {
@@ -40379,6 +40414,41 @@
     "lv_egl_select_config_t": {
       "path": "api/private/drivers/opengles/lv_opengles_egl_private_h",
       "anchor": "lv_egl_select_config_t",
+      "kind": "typedef"
+    },
+    "lv_opengles_pbuffer.h": {
+      "path": "api/private/drivers/opengles/lv_opengles_pbuffer_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_opengles_pbuffer_create": {
+      "path": "api/private/drivers/opengles/lv_opengles_pbuffer_h",
+      "anchor": "lv_opengles_pbuffer_create",
+      "kind": "function"
+    },
+    "lv_opengles_pbuffer_read_to_draw_buf": {
+      "path": "api/private/drivers/opengles/lv_opengles_pbuffer_h",
+      "anchor": "lv_opengles_pbuffer_read_to_draw_buf",
+      "kind": "function"
+    },
+    "lv_opengles_pbuffer_get_gles_version": {
+      "path": "api/private/drivers/opengles/lv_opengles_pbuffer_h",
+      "anchor": "lv_opengles_pbuffer_get_gles_version",
+      "kind": "function"
+    },
+    "lv_opengles_pbuffer_get_handle": {
+      "path": "api/private/drivers/opengles/lv_opengles_pbuffer_h",
+      "anchor": "lv_opengles_pbuffer_get_handle",
+      "kind": "function"
+    },
+    "lv_opengles_pbuffer_destroy": {
+      "path": "api/private/drivers/opengles/lv_opengles_pbuffer_h",
+      "anchor": "lv_opengles_pbuffer_destroy",
+      "kind": "function"
+    },
+    "lv_opengles_pbuffer_t": {
+      "path": "api/private/drivers/opengles/lv_opengles_pbuffer_h",
+      "anchor": "lv_opengles_pbuffer_t",
       "kind": "typedef"
     },
     "lv_opengles_private.h": {
