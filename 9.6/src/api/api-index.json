@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-01T15:00:25.133Z",
-    "symbolCount": 9174
+    "generatedAt": "2026-09-01T17:33:27.686Z",
+    "symbolCount": 9193
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2121,10 +2121,70 @@
       "anchor": "lv_draw_sw_i1_convert_to_vtiled",
       "kind": "macro"
     },
+    "LV_COLOR_FORMAT_NATIVE": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "LV_COLOR_FORMAT_NATIVE",
+      "kind": "macro"
+    },
+    "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_I1": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_I1",
+      "kind": "macro"
+    },
+    "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_L8": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_L8",
+      "kind": "macro"
+    },
+    "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_RGB565": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_RGB565",
+      "kind": "macro"
+    },
+    "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_RGB565_SWAPPED": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_RGB565_SWAPPED",
+      "kind": "macro"
+    },
+    "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_RGB888": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_RGB888",
+      "kind": "macro"
+    },
+    "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_XRGB8888": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_XRGB8888",
+      "kind": "macro"
+    },
+    "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_ARGB8888": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_ARGB8888",
+      "kind": "macro"
+    },
+    "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_ARGB8888_PREMULTIPLIED": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_ARGB8888_PREMULTIPLIED",
+      "kind": "macro"
+    },
+    "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA",
+      "kind": "macro"
+    },
     "lv_conf_internal.h": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "",
       "kind": "header"
+    },
+    "LV_CONF_PASTE_": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_CONF_PASTE_",
+      "kind": "macro"
+    },
+    "LV_CONF_PASTE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_CONF_PASTE",
+      "kind": "macro"
     },
     "LV_FONT_DEFAULT_MONTSERRAT_8": {
       "path": "api/public/config/lv_conf_internal_h",
@@ -2601,9 +2661,9 @@
       "anchor": "LV_OS_IDLE_PERCENT_CUSTOM",
       "kind": "macro"
     },
-    "LV_COLOR_DEPTH": {
+    "LV_COLOR_FORMAT_DEFAULT": {
       "path": "api/public/config/lv_conf_internal_h",
-      "anchor": "LV_COLOR_DEPTH",
+      "anchor": "LV_COLOR_FORMAT_DEFAULT",
       "kind": "macro"
     },
     "LV_COLOR_MIX_ROUND_OFS": {
@@ -4179,6 +4239,51 @@
     "LV_SDL_USE_EGL": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_SDL_USE_EGL",
+      "kind": "macro"
+    },
+    "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_I1": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_I1",
+      "kind": "macro"
+    },
+    "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_L8": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_L8",
+      "kind": "macro"
+    },
+    "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_RGB565": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_RGB565",
+      "kind": "macro"
+    },
+    "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_RGB565_SWAPPED": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_RGB565_SWAPPED",
+      "kind": "macro"
+    },
+    "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_RGB888": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_RGB888",
+      "kind": "macro"
+    },
+    "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_XRGB8888": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_XRGB8888",
+      "kind": "macro"
+    },
+    "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_ARGB8888": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_ARGB8888",
+      "kind": "macro"
+    },
+    "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_ARGB8888_PREMULTIPLIED": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_COLOR_DEPTH_OF_LV_COLOR_FORMAT_ARGB8888_PREMULTIPLIED",
+      "kind": "macro"
+    },
+    "LV_COLOR_DEPTH": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_COLOR_DEPTH",
       "kind": "macro"
     },
     "LV_USE_TLSF": {
@@ -15277,16 +15382,6 @@
       "kind": "enumvalue"
     },
     "LV_COLOR_FORMAT_NEMA_TSC_END": {
-      "path": "api/public/draw/lv_color_h",
-      "anchor": "lv_color_format_t",
-      "kind": "enumvalue"
-    },
-    "LV_COLOR_FORMAT_NATIVE": {
-      "path": "api/public/draw/lv_color_h",
-      "anchor": "lv_color_format_t",
-      "kind": "enumvalue"
-    },
-    "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA": {
       "path": "api/public/draw/lv_color_h",
       "anchor": "lv_color_format_t",
       "kind": "enumvalue"
