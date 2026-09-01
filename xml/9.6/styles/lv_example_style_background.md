@@ -1,4 +1,4 @@
-```xml title="examples/styles/lv_example_style_background.xml" source="https://github.com/lvgl/lvgl/blob/4930ee2484cf24a2fb696779020d38b511e3c662/examples/styles/lv_example_style_background.xml"
+```xml title="examples/styles/lv_example_style_background.xml" source="https://github.com/lvgl/lvgl/blob/7b0d56966d4923c5d8823b97412d481e9ed1e0c2/examples/styles/lv_example_style_background.xml"
 <!--
  @title Background gradient
  @brief Blend two colors vertically and shift where the blend happens.
