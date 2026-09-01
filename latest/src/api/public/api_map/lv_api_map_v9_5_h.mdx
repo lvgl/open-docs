@@ -3,14 +3,14 @@ title: lv_api_map_v9_5.h
 description: API reference for lv_api_map_v9_5.h
 api:
   typedefs: [lv_disp_rotation_t]
-  macros: [lv_display_delete_event, lv_observer_remove, lv_style_get_prop_inlined, lv_draw_sw_i1_to_argb8888, lv_draw_sw_rgb565_swap, lv_draw_sw_rotate, lv_draw_sw_i1_invert, lv_draw_sw_i1_convert_to_vtiled]
+  macros: [lv_display_delete_event, lv_observer_remove, lv_style_get_prop_inlined, lv_obj_is_valid, lv_draw_sw_i1_to_argb8888, lv_draw_sw_rgb565_swap, lv_draw_sw_rotate, lv_draw_sw_i1_invert, lv_draw_sw_i1_convert_to_vtiled]
 ---
 
-<ApiSummary typedefs={1} macros={8} />
+<ApiSummary typedefs={1} macros={9} />
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_disp_rotation_t" file="public/api_map/lv_api_map_v9_5.h" line={28} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/include/lvgl/api_map/lv_api_map_v9_5.h#L28">
+<ApiMember kind="typedef" name="lv_disp_rotation_t" file="public/api_map/lv_api_map_v9_5.h" line={28} url="https://github.com/lvgl/lvgl/tree/27b2cbf57dd515891f1dc0b50c5d65a43012f867/include/lvgl/api_map/lv_api_map_v9_5.h#L28">
 
 ### lv_disp_rotation_t
 
@@ -23,7 +23,7 @@ typedef lv_display_rotation_t lv_disp_rotation_t
 
 ## Macros
 
-<ApiMember kind="macro" name="lv_display_delete_event" file="public/api_map/lv_api_map_v9_5.h" line={38} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/include/lvgl/api_map/lv_api_map_v9_5.h#L38">
+<ApiMember kind="macro" name="lv_display_delete_event" file="public/api_map/lv_api_map_v9_5.h" line={38} url="https://github.com/lvgl/lvgl/tree/27b2cbf57dd515891f1dc0b50c5d65a43012f867/include/lvgl/api_map/lv_api_map_v9_5.h#L38">
 
 ### lv_display_delete_event
 
@@ -34,7 +34,7 @@ typedef lv_display_rotation_t lv_disp_rotation_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="lv_observer_remove" file="public/api_map/lv_api_map_v9_5.h" line={39} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/include/lvgl/api_map/lv_api_map_v9_5.h#L39">
+<ApiMember kind="macro" name="lv_observer_remove" file="public/api_map/lv_api_map_v9_5.h" line={39} url="https://github.com/lvgl/lvgl/tree/27b2cbf57dd515891f1dc0b50c5d65a43012f867/include/lvgl/api_map/lv_api_map_v9_5.h#L39">
 
 ### lv_observer_remove
 
@@ -45,7 +45,7 @@ typedef lv_display_rotation_t lv_disp_rotation_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="lv_style_get_prop_inlined" file="public/api_map/lv_api_map_v9_5.h" line={40} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/include/lvgl/api_map/lv_api_map_v9_5.h#L40">
+<ApiMember kind="macro" name="lv_style_get_prop_inlined" file="public/api_map/lv_api_map_v9_5.h" line={40} url="https://github.com/lvgl/lvgl/tree/27b2cbf57dd515891f1dc0b50c5d65a43012f867/include/lvgl/api_map/lv_api_map_v9_5.h#L40">
 
 ### lv_style_get_prop_inlined
 
@@ -56,7 +56,18 @@ typedef lv_display_rotation_t lv_disp_rotation_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="lv_draw_sw_i1_to_argb8888" file="public/api_map/lv_api_map_v9_5.h" line={42} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/include/lvgl/api_map/lv_api_map_v9_5.h#L42">
+<ApiMember kind="macro" name="lv_obj_is_valid" file="public/api_map/lv_api_map_v9_5.h" line={41} url="https://github.com/lvgl/lvgl/tree/27b2cbf57dd515891f1dc0b50c5d65a43012f867/include/lvgl/api_map/lv_api_map_v9_5.h#L41">
+
+### lv_obj_is_valid
+
+```c
+#define lv_obj_is_valid lv_obj_is_in_widget_tree
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_draw_sw_i1_to_argb8888" file="public/api_map/lv_api_map_v9_5.h" line={43} url="https://github.com/lvgl/lvgl/tree/27b2cbf57dd515891f1dc0b50c5d65a43012f867/include/lvgl/api_map/lv_api_map_v9_5.h#L43">
 
 ### lv_draw_sw_i1_to_argb8888
 
@@ -67,7 +78,7 @@ typedef lv_display_rotation_t lv_disp_rotation_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="lv_draw_sw_rgb565_swap" file="public/api_map/lv_api_map_v9_5.h" line={43} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/include/lvgl/api_map/lv_api_map_v9_5.h#L43">
+<ApiMember kind="macro" name="lv_draw_sw_rgb565_swap" file="public/api_map/lv_api_map_v9_5.h" line={44} url="https://github.com/lvgl/lvgl/tree/27b2cbf57dd515891f1dc0b50c5d65a43012f867/include/lvgl/api_map/lv_api_map_v9_5.h#L44">
 
 ### lv_draw_sw_rgb565_swap
 
@@ -78,7 +89,7 @@ typedef lv_display_rotation_t lv_disp_rotation_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="lv_draw_sw_rotate" file="public/api_map/lv_api_map_v9_5.h" line={44} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/include/lvgl/api_map/lv_api_map_v9_5.h#L44">
+<ApiMember kind="macro" name="lv_draw_sw_rotate" file="public/api_map/lv_api_map_v9_5.h" line={45} url="https://github.com/lvgl/lvgl/tree/27b2cbf57dd515891f1dc0b50c5d65a43012f867/include/lvgl/api_map/lv_api_map_v9_5.h#L45">
 
 ### lv_draw_sw_rotate
 
@@ -89,7 +100,7 @@ typedef lv_display_rotation_t lv_disp_rotation_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="lv_draw_sw_i1_invert" file="public/api_map/lv_api_map_v9_5.h" line={45} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/include/lvgl/api_map/lv_api_map_v9_5.h#L45">
+<ApiMember kind="macro" name="lv_draw_sw_i1_invert" file="public/api_map/lv_api_map_v9_5.h" line={46} url="https://github.com/lvgl/lvgl/tree/27b2cbf57dd515891f1dc0b50c5d65a43012f867/include/lvgl/api_map/lv_api_map_v9_5.h#L46">
 
 ### lv_draw_sw_i1_invert
 
@@ -100,7 +111,7 @@ typedef lv_display_rotation_t lv_disp_rotation_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="lv_draw_sw_i1_convert_to_vtiled" file="public/api_map/lv_api_map_v9_5.h" line={46} url="https://github.com/lvgl/lvgl/tree/4c8afbf777d91c6d73cf5ac33a40a3d469fe514c/include/lvgl/api_map/lv_api_map_v9_5.h#L46">
+<ApiMember kind="macro" name="lv_draw_sw_i1_convert_to_vtiled" file="public/api_map/lv_api_map_v9_5.h" line={47} url="https://github.com/lvgl/lvgl/tree/27b2cbf57dd515891f1dc0b50c5d65a43012f867/include/lvgl/api_map/lv_api_map_v9_5.h#L47">
 
 ### lv_draw_sw_i1_convert_to_vtiled
 

@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-01T14:04:51.415Z",
-    "symbolCount": 9172
+    "generatedAt": "2026-09-01T15:00:25.133Z",
+    "symbolCount": 9174
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2091,6 +2091,11 @@
       "anchor": "lv_style_get_prop_inlined",
       "kind": "macro"
     },
+    "lv_obj_is_valid": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "lv_obj_is_valid",
+      "kind": "macro"
+    },
     "lv_draw_sw_i1_to_argb8888": {
       "path": "api/public/api_map/lv_api_map_v9_5_h",
       "anchor": "lv_draw_sw_i1_to_argb8888",
@@ -4029,6 +4034,11 @@
     "LV_USE_CHECK_OBJ_VALIDITY": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_USE_CHECK_OBJ_VALIDITY",
+      "kind": "macro"
+    },
+    "LV_USE_CHECK_OBJ_PARENT_LINK": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_CHECK_OBJ_PARENT_LINK",
       "kind": "macro"
     },
     "LV_BIG_ENDIAN_SYSTEM": {
@@ -6576,9 +6586,9 @@
       "anchor": "lv_obj_get_class",
       "kind": "function"
     },
-    "lv_obj_is_valid": {
+    "lv_obj_is_in_widget_tree": {
       "path": "api/public/core/lv_obj_h",
-      "anchor": "lv_obj_is_valid",
+      "anchor": "lv_obj_is_in_widget_tree",
       "kind": "function"
     },
     "lv_obj_null_on_delete": {
