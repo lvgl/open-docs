@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-02T11:39:24.822Z",
-    "symbolCount": 9210
+    "generatedAt": "2026-09-02T11:49:22.652Z",
+    "symbolCount": 9212
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -29184,6 +29184,16 @@
     "lv_gltf_get_primary_model": {
       "path": "api/public/widgets/lv_gltf_h",
       "anchor": "lv_gltf_get_primary_model",
+      "kind": "function"
+    },
+    "lv_gltf_remove_model": {
+      "path": "api/public/widgets/lv_gltf_h",
+      "anchor": "lv_gltf_remove_model",
+      "kind": "function"
+    },
+    "lv_gltf_remove_all_models": {
+      "path": "api/public/widgets/lv_gltf_h",
+      "anchor": "lv_gltf_remove_all_models",
       "kind": "function"
     },
     "lv_gltf_set_yaw": {
