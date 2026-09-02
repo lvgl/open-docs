@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-02T15:23:27.979Z",
-    "symbolCount": 9216
+    "generatedAt": "2026-09-02T16:09:26.624Z",
+    "symbolCount": 9217
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -26689,6 +26689,11 @@
     "LV_PRIX64": {
       "path": "api/public/stdlib/lv_sprintf_h",
       "anchor": "LV_PRIX64",
+      "kind": "macro"
+    },
+    "LV_PRIuPTR": {
+      "path": "api/public/stdlib/lv_sprintf_h",
+      "anchor": "LV_PRIuPTR",
       "kind": "macro"
     },
     "lv_string.h": {
