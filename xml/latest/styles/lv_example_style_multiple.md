@@ -1,4 +1,4 @@
-```xml title="examples/styles/lv_example_style_multiple.xml" source="https://github.com/lvgl/lvgl/blob/1295d1f44f911223267962b75f81f54fe6bef095/examples/styles/lv_example_style_multiple.xml"
+```xml title="examples/styles/lv_example_style_multiple.xml" source="https://github.com/lvgl/lvgl/blob/22c74b8303a6c86a165fee29d7902e3e0ca66c3b/examples/styles/lv_example_style_multiple.xml"
 <!--
  @title Cascading styles
  @brief Stack a second style that overrides only a few properties of a shared base.

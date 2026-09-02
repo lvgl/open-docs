@@ -1,4 +1,4 @@
-```xml title="examples/styles/lv_example_style_margin.xml" source="https://github.com/lvgl/lvgl/blob/1295d1f44f911223267962b75f81f54fe6bef095/examples/styles/lv_example_style_margin.xml"
+```xml title="examples/styles/lv_example_style_margin.xml" source="https://github.com/lvgl/lvgl/blob/22c74b8303a6c86a165fee29d7902e3e0ca66c3b/examples/styles/lv_example_style_margin.xml"
 <!--
  @title Margin
  @brief Reserve space around one item on top of the layout's own gaps.
