@@ -1,4 +1,4 @@
-```xml title="examples/widgets/arc/lv_example_arc_set_angles.xml" source="https://github.com/lvgl/lvgl/blob/d9bbb067c658a0ee8d8e9cc7d6fa911d07f783be/examples/widgets/arc/lv_example_arc_set_angles.xml"
+```xml title="examples/widgets/arc/lv_example_arc_set_angles.xml" source="https://github.com/lvgl/lvgl/blob/e21695f6cb6f91f120da7ead63e15fb25998b990/examples/widgets/arc/lv_example_arc_set_angles.xml"
 <!--
  @title Arc with explicit indicator angles
  @brief Drive the indicator directly via start_angle and end_angle.

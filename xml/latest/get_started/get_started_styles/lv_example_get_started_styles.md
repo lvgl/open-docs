@@ -1,4 +1,4 @@
-```xml title="examples/get_started/get_started_styles/lv_example_get_started_styles.xml" source="https://github.com/lvgl/lvgl/blob/d9bbb067c658a0ee8d8e9cc7d6fa911d07f783be/examples/get_started/get_started_styles/lv_example_get_started_styles.xml"
+```xml title="examples/get_started/get_started_styles/lv_example_get_started_styles.xml" source="https://github.com/lvgl/lvgl/blob/e21695f6cb6f91f120da7ead63e15fb25998b990/examples/get_started/get_started_styles/lv_example_get_started_styles.xml"
 <!--
  @title Styles from scratch for buttons
  @brief Build named button styles, then add a pressed state and an accent variant.

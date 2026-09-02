@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-01T17:33:27.686Z",
-    "symbolCount": 9193
+    "generatedAt": "2026-09-02T07:46:13.188Z",
+    "symbolCount": 9205
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -10631,11 +10631,6 @@
       "anchor": "",
       "kind": "header"
     },
-    "lv_subject_set_external_data": {
-      "path": "api/public/core/lv_observer_h",
-      "anchor": "lv_subject_set_external_data",
-      "kind": "function"
-    },
     "lv_subject_init_int": {
       "path": "api/public/core/lv_observer_h",
       "anchor": "lv_subject_init_int",
@@ -10816,6 +10811,11 @@
       "anchor": "lv_observer_get_user_data",
       "kind": "function"
     },
+    "lv_subject_set_external_data": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_subject_set_external_data",
+      "kind": "function"
+    },
     "lv_observer_set_user_data": {
       "path": "api/public/core/lv_observer_h",
       "anchor": "lv_observer_set_user_data",
@@ -10864,6 +10864,36 @@
     "lv_obj_add_subject_set_string_event": {
       "path": "api/public/core/lv_observer_h",
       "anchor": "lv_obj_add_subject_set_string_event",
+      "kind": "function"
+    },
+    "lv_obj_bind_bool": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_bind_bool",
+      "kind": "function"
+    },
+    "lv_obj_bind_int": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_bind_int",
+      "kind": "function"
+    },
+    "lv_obj_bind_float": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_bind_float",
+      "kind": "function"
+    },
+    "lv_obj_bind_string": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_bind_string",
+      "kind": "function"
+    },
+    "lv_obj_bind_color": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_bind_color",
+      "kind": "function"
+    },
+    "lv_obj_bind_pointer": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_bind_pointer",
       "kind": "function"
     },
     "lv_obj_bind_flag_if_eq": {
@@ -10989,6 +11019,36 @@
     "lv_observer_cb_t": {
       "path": "api/public/core/lv_observer_h",
       "anchor": "lv_observer_cb_t",
+      "kind": "typedef"
+    },
+    "lv_obj_set_bool_t": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_set_bool_t",
+      "kind": "typedef"
+    },
+    "lv_obj_set_int_t": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_set_int_t",
+      "kind": "typedef"
+    },
+    "lv_obj_set_float_t": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_set_float_t",
+      "kind": "typedef"
+    },
+    "lv_obj_set_string_t": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_set_string_t",
+      "kind": "typedef"
+    },
+    "lv_obj_set_color_t": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_set_color_t",
+      "kind": "typedef"
+    },
+    "lv_obj_set_pointer_t": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_obj_set_pointer_t",
       "kind": "typedef"
     },
     "lv_refr.h": {

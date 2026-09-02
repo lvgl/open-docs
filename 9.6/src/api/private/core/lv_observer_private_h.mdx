@@ -22,7 +22,8 @@ The observer object: a descriptor returned when subscribing LVGL widgets to subj
 | `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | Observed subject |
 | `cb` | <ApiLink name="lv_observer_cb_t" /> | Callback that notifies when value changes |
 | `target` | `void *` | A target for the observer, e.g. a widget or any pointer |
-| `user_data` | `void *` | Additional parameter supplied when subscribing |
+| `user_data` | `void *` | Additional parameter, can be used freely by user |
+| `user_cb` | `void(*)(void)` | Additional function pointer, can be used freely by user |
 | `auto_free_user_data` | `uint32_t` | Automatically free user data when observer is removed |
 | `notified` | `uint32_t` | Was observer already notified? |
 | `for_obj` | `uint32_t` | Is `target` a pointer to a Widget (`lv_obj_t *`)? |

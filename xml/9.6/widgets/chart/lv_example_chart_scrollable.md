@@ -1,4 +1,4 @@
-```xml title="examples/widgets/chart/lv_example_chart_scrollable.xml" source="https://github.com/lvgl/lvgl/blob/d9bbb067c658a0ee8d8e9cc7d6fa911d07f783be/examples/widgets/chart/lv_example_chart_scrollable.xml"
+```xml title="examples/widgets/chart/lv_example_chart_scrollable.xml" source="https://github.com/lvgl/lvgl/blob/e21695f6cb6f91f120da7ead63e15fb25998b990/examples/widgets/chart/lv_example_chart_scrollable.xml"
 <!--
  @title Scrollable chart
  @brief A chart wider than its container scrolls horizontally as the user drags it.

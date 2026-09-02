@@ -17,18 +17,17 @@ label text.
 
 <LvglExample name="lv_example_observer_1" path="others/observer/lv_example_observer_1" />
 
-## PIN login via state bindings
+## PIN login via state observers
 
-<LvglExampleBrief>Decouple a login UI from an engine subject using `lv_obj_bind_state_if_*`.</LvglExampleBrief>
+<LvglExampleBrief>Decouple a login UI from an engine subject using observers on an auth subject.</LvglExampleBrief>
 
 Two int subjects are initialised: `engine_subject` for the engine state and
 `auth_state_subject` for `LOGGED_OUT`, `LOGGED_IN`, and `AUTH_FAILED`. A
 password textarea fires `LV_EVENT_READY` to set the auth subject, a log-out
 button resets it, and an observer on `auth_state_subject` writes status text
-into an info label. `lv_obj_bind_state_if_eq` and
-`lv_obj_bind_state_if_not_eq` toggle `LV_STATE_DISABLED` on the textarea, log
-out button, and a start-engine button, which itself uses `lv_obj_bind_checked`
-to drive `engine_subject`.
+into an info label. Observers added with `lv_subject_add_observer_obj` toggle
+`LV_STATE_DISABLED` on the textarea, log out button, and a start-engine
+button, which itself uses `lv_obj_bind_checked` to drive `engine_subject`.
 
 <LvglExample name="lv_example_observer_2" path="others/observer/lv_example_observer_2" />
 
@@ -40,10 +39,10 @@ Four int subjects hold hour, minute, 12/24 format, and AM/PM. They are gathered
 into `time_subject` via `lv_subject_init_group` so a single observer can
 re-render the time label whenever any element changes. A "Set" button creates
 a bottom container with two rollers and two dropdowns bound through
-`lv_roller_bind_value` and `lv_dropdown_bind_value`; the AM/PM dropdown uses
-`lv_obj_bind_state_if_eq` to disable itself in `TIME_FORMAT_24`. A second
-observer on the format subject swaps the hour roller options between the 12
-and 24 lists.
+`lv_roller_bind_value` and `lv_dropdown_bind_value`; the AM/PM dropdown adds an
+observer with `lv_subject_add_observer_obj` to disable itself in
+`TIME_FORMAT_24`. A second observer on the format subject swaps the hour roller
+options between the 12 and 24 lists.
 
 <LvglExample name="lv_example_observer_3" path="others/observer/lv_example_observer_3" />
 
