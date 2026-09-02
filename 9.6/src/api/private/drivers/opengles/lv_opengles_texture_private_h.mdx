@@ -2,17 +2,17 @@
 title: lv_opengles_texture_private.h
 description: API reference for lv_opengles_texture_private.h
 api:
-  functions: [lv_opengles_texture_reshape, lv_opengles_texture_deinit]
+  functions: [lv_opengles_texture_reshape, lv_opengles_texture_deinit, lv_opengles_texture_render_display]
   structs: [lv_opengles_texture_t]
 ---
 
 <RelatedHeaders name="lv_opengles_texture.h" isPrivate={true} />
 
-<ApiSummary functions={2} structs={1} />
+<ApiSummary functions={3} structs={1} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_opengles_texture_reshape" file="private/drivers/opengles/lv_opengles_texture_private.h" line={41} url="https://github.com/lvgl/lvgl/tree/e21695f6cb6f91f120da7ead63e15fb25998b990/src/drivers/opengles/lv_opengles_texture_private.h#L41">
+<ApiMember kind="function" name="lv_opengles_texture_reshape" file="private/drivers/opengles/lv_opengles_texture_private.h" line={41} url="https://github.com/lvgl/lvgl/tree/1ca3d9a07a04aa25669a2a14a302775458a85bb1/src/drivers/opengles/lv_opengles_texture_private.h#L41">
 
 ### lv_opengles_texture_reshape
 
@@ -32,7 +32,7 @@ lv_result_t lv_opengles_texture_reshape(lv_opengles_texture_t *texture, lv_displ
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_opengles_texture_deinit" file="private/drivers/opengles/lv_opengles_texture_private.h" line={43} url="https://github.com/lvgl/lvgl/tree/e21695f6cb6f91f120da7ead63e15fb25998b990/src/drivers/opengles/lv_opengles_texture_private.h#L43">
+<ApiMember kind="function" name="lv_opengles_texture_deinit" file="private/drivers/opengles/lv_opengles_texture_private.h" line={43} url="https://github.com/lvgl/lvgl/tree/1ca3d9a07a04aa25669a2a14a302775458a85bb1/src/drivers/opengles/lv_opengles_texture_private.h#L43">
 
 ### lv_opengles_texture_deinit
 
@@ -45,6 +45,26 @@ void lv_opengles_texture_deinit(lv_opengles_texture_t *texture)
 | Name | Type |
 |------|------|
 | `texture` | <ApiLink name="lv_opengles_texture_t" display="lv_opengles_texture_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_texture_render_display" file="private/drivers/opengles/lv_opengles_texture_private.h" line={51} url="https://github.com/lvgl/lvgl/tree/1ca3d9a07a04aa25669a2a14a302775458a85bb1/src/drivers/opengles/lv_opengles_texture_private.h#L51">
+
+### lv_opengles_texture_render_display
+
+Render the display content to the current OpenGL framebuffer Handles NanoVG, OpenGL and SW rendering
+
+```c
+void lv_opengles_texture_render_display(lv_opengles_texture_t *texture, lv_display_t *display)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `texture` | <ApiLink name="lv_opengles_texture_t" display="lv_opengles_texture_t *" /> | the texture of the display |
+| `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | the display to render |
 
 
 </ApiMember>
@@ -63,10 +83,11 @@ void lv_opengles_texture_deinit(lv_opengles_texture_t *texture)
 
 </ApiMember>
 
-<TypeUsedBy name="lv_opengles_texture_t" count={2}>
+<TypeUsedBy name="lv_opengles_texture_t" count={3}>
 
 - `lv_opengles_texture_reshape` — param `texture`
 - `lv_opengles_texture_deinit` — param `texture`
+- `lv_opengles_texture_render_display` — param `texture`
 
 </TypeUsedBy>
 

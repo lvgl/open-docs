@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-02T07:46:13.188Z",
-    "symbolCount": 9205
+    "generatedAt": "2026-09-02T08:01:26.566Z",
+    "symbolCount": 9210
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -40656,6 +40656,16 @@
       "anchor": "lv_opengles_render_display_texture_internal",
       "kind": "function"
     },
+    "lv_opengles_texture_upload_buf": {
+      "path": "api/private/drivers/opengles/lv_opengles_private_h",
+      "anchor": "lv_opengles_texture_upload_buf",
+      "kind": "function"
+    },
+    "lv_opengles_texture_upload_display_buf": {
+      "path": "api/private/drivers/opengles/lv_opengles_private_h",
+      "anchor": "lv_opengles_texture_upload_display_buf",
+      "kind": "function"
+    },
     "lv_opengles_render_params_t": {
       "path": "api/private/drivers/opengles/lv_opengles_private_h",
       "anchor": "lv_opengles_render_params_t",
@@ -40716,6 +40726,16 @@
       "anchor": "GL_RGBA8",
       "kind": "macro"
     },
+    "GL_R8": {
+      "path": "api/private/drivers/opengles/lv_opengles_private_h",
+      "anchor": "GL_R8",
+      "kind": "macro"
+    },
+    "GL_RED": {
+      "path": "api/private/drivers/opengles/lv_opengles_private_h",
+      "anchor": "GL_RED",
+      "kind": "macro"
+    },
     "LV_GL_PREFERRED_DEPTH": {
       "path": "api/private/drivers/opengles/lv_opengles_private_h",
       "anchor": "LV_GL_PREFERRED_DEPTH",
@@ -40734,6 +40754,11 @@
     "lv_opengles_texture_deinit": {
       "path": "api/private/drivers/opengles/lv_opengles_texture_private_h",
       "anchor": "lv_opengles_texture_deinit",
+      "kind": "function"
+    },
+    "lv_opengles_texture_render_display": {
+      "path": "api/private/drivers/opengles/lv_opengles_texture_private_h",
+      "anchor": "lv_opengles_texture_render_display",
       "kind": "function"
     },
     "lv_opengles_texture_t": {
