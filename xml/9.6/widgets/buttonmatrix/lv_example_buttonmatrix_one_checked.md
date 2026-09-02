@@ -1,4 +1,4 @@
-```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_one_checked.xml" source="https://github.com/lvgl/lvgl/blob/229eae03fb1a2048bed1585a28d0f290a8c0ed2a/examples/widgets/buttonmatrix/lv_example_buttonmatrix_one_checked.xml"
+```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_one_checked.xml" source="https://github.com/lvgl/lvgl/blob/452032083172d3de922b5db76215740c5c1ea007/examples/widgets/buttonmatrix/lv_example_buttonmatrix_one_checked.xml"
 <!--
  @title Button matrix one-checked mode
  @brief Make the matrix behave like a radio group with a single checked button.

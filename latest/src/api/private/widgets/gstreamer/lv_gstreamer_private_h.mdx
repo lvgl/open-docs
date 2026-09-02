@@ -4,12 +4,13 @@ description: API reference for lv_gstreamer_private.h
 api:
   structs: [_lv_gstreamer_t, frame_data_t]
   typedefs: [lv_gstreamer_t]
+  macros: [LV_GSTREAMER_MAX_QUEUED_FRAMES]
   variables: [lv_gstreamer_class]
 ---
 
 <RelatedHeaders name="lv_gstreamer.h" isPrivate={true} />
 
-<ApiSummary structs={2} typedefs={1} variables={1} />
+<ApiSummary structs={2} typedefs={1} macros={1} variables={1} />
 
 ## Structs
 
@@ -29,6 +30,8 @@ api:
 | `audio_convert` | `GstElement *` |  |
 | `video_convert` | `GstElement *` |  |
 | `audio_volume` | `GstElement *` |  |
+| `aligned_frame` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> |  |
+| `color_format` | <ApiLink name="lv_color_format_t" /> |  |
 | `gstreamer_timer` | <ApiLink name="lv_timer_t" display="lv_timer_t *" /> |  |
 | `frame_queue` | `GAsyncQueue *` |  |
 | `is_video_info_valid` | `bool` |  |
@@ -53,7 +56,7 @@ api:
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_gstreamer_t" file="private/widgets/gstreamer/lv_gstreamer_private.h" line={58} url="https://github.com/lvgl/lvgl/tree/229eae03fb1a2048bed1585a28d0f290a8c0ed2a/src/widgets/gstreamer/lv_gstreamer_private.h#L58">
+<ApiMember kind="typedef" name="lv_gstreamer_t" file="private/widgets/gstreamer/lv_gstreamer_private.h" line={67} url="https://github.com/lvgl/lvgl/tree/452032083172d3de922b5db76215740c5c1ea007/src/widgets/gstreamer/lv_gstreamer_private.h#L67">
 
 ### lv_gstreamer_t
 
@@ -64,9 +67,24 @@ typedef struct _lv_gstreamer_t lv_gstreamer_t
 
 </ApiMember>
 
+## Macros
+
+<ApiMember kind="macro" name="LV_GSTREAMER_MAX_QUEUED_FRAMES" file="private/widgets/gstreamer/lv_gstreamer_private.h" line={35} url="https://github.com/lvgl/lvgl/tree/452032083172d3de922b5db76215740c5c1ea007/src/widgets/gstreamer/lv_gstreamer_private.h#L35">
+
+### LV_GSTREAMER_MAX_QUEUED_FRAMES
+
+```c
+#define LV_GSTREAMER_MAX_QUEUED_FRAMES 2
+```
+
+How many decoded frames may wait to be displayed. Only the newest one is ever shown, so this only has to absorb the jitter between the thread that decodes and the LVGL timer that displays.
+
+
+</ApiMember>
+
 ## Variables
 
-<ApiMember kind="variable" name="lv_gstreamer_class" file="private/widgets/gstreamer/lv_gstreamer_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/229eae03fb1a2048bed1585a28d0f290a8c0ed2a/src/widgets/gstreamer/lv_gstreamer_private.h#L60">
+<ApiMember kind="variable" name="lv_gstreamer_class" file="private/widgets/gstreamer/lv_gstreamer_private.h" line={69} url="https://github.com/lvgl/lvgl/tree/452032083172d3de922b5db76215740c5c1ea007/src/widgets/gstreamer/lv_gstreamer_private.h#L69">
 
 ### lv_gstreamer_class
 

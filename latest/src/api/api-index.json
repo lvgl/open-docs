@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-02T15:02:30.726Z",
-    "symbolCount": 9212
+    "generatedAt": "2026-09-02T15:23:27.979Z",
+    "symbolCount": 9216
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -29516,6 +29516,11 @@
       "anchor": "lv_gstreamer_stream_state_t",
       "kind": "enum"
     },
+    "LV_GSTREAMER_STREAM_STATE_INVALID": {
+      "path": "api/public/widgets/lv_gstreamer_h",
+      "anchor": "lv_gstreamer_stream_state_t",
+      "kind": "enumvalue"
+    },
     "LV_GSTREAMER_STREAM_STATE_START": {
       "path": "api/public/widgets/lv_gstreamer_h",
       "anchor": "lv_gstreamer_stream_state_t",
@@ -43071,6 +43076,11 @@
       "anchor": "lv_gltf_model_invalidate",
       "kind": "function"
     },
+    "lv_gltf_detach_model": {
+      "path": "api/private/libs/gltf/gltf_data/lv_gltf_data_internal_h",
+      "anchor": "lv_gltf_detach_model",
+      "kind": "function"
+    },
     "IndirectDrawCommand": {
       "path": "api/private/libs/gltf/gltf_data/lv_gltf_data_internal_h",
       "anchor": "IndirectDrawCommand",
@@ -43154,6 +43164,11 @@
     "lv_gltf_data_validate_skin": {
       "path": "api/private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
       "anchor": "lv_gltf_data_validate_skin",
+      "kind": "function"
+    },
+    "lv_gltf_data_clear_node_primitives": {
+      "path": "api/private/libs/gltf/gltf_data/lv_gltf_data_internal_hpp",
+      "anchor": "lv_gltf_data_clear_node_primitives",
       "kind": "function"
     },
     "lv_gltf_data_add_opaque_node_primitive": {
@@ -45700,6 +45715,11 @@
       "path": "api/private/widgets/gstreamer/lv_gstreamer_private_h",
       "anchor": "lv_gstreamer_t",
       "kind": "typedef"
+    },
+    "LV_GSTREAMER_MAX_QUEUED_FRAMES": {
+      "path": "api/private/widgets/gstreamer/lv_gstreamer_private_h",
+      "anchor": "LV_GSTREAMER_MAX_QUEUED_FRAMES",
+      "kind": "macro"
     },
     "lv_gstreamer_class": {
       "path": "api/private/widgets/gstreamer/lv_gstreamer_private_h",
