@@ -2,17 +2,17 @@
 title: lv_draw_buf_private.h
 description: API reference for lv_draw_buf_private.h
 api:
-  functions: [lv_draw_buf_init_handlers]
+  functions: [lv_draw_buf_init_handlers, lv_draw_buf_clear_ex]
   structs: [_lv_draw_buf_handlers_t]
 ---
 
 <RelatedHeaders name="lv_draw_buf.h" isPrivate={true} />
 
-<ApiSummary functions={1} structs={1} />
+<ApiSummary functions={2} structs={1} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_buf_init_handlers" file="private/draw/lv_draw_buf_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/draw/lv_draw_buf_private.h#L44">
+<ApiMember kind="function" name="lv_draw_buf_init_handlers" file="private/draw/lv_draw_buf_private.h" line={45} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/draw/lv_draw_buf_private.h#L45">
 
 ### lv_draw_buf_init_handlers
 
@@ -21,6 +21,27 @@ Called internally to initialize the draw_buf_handlers in lv_global
 ```c
 void lv_draw_buf_init_handlers(void)
 ```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_buf_clear_ex" file="private/draw/lv_draw_buf_private.h" line={55} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/draw/lv_draw_buf_private.h#L55">
+
+### lv_draw_buf_clear_ex
+
+TODO(v10): the draw buffer should describe its own storage well enough that the layer isn't needed. Merge this back into <ApiLink name="lv_draw_buf_clear" display="lv_draw_buf_clear()" /> then.
+
+```c
+void lv_draw_buf_clear_ex(lv_draw_buf_t *draw_buf, const lv_area_t *a, lv_layer_t *layer)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_buf` | <ApiLink name="lv_draw_buf_t" display="lv_draw_buf_t *" /> | pointer to draw buffer |
+| `a` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area to clear **May** be `NULL`.. When NULL the whole buffer is cleared |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the layer `draw_buf` belongs to **May** be `NULL`. |
 
 
 </ApiMember>
@@ -40,6 +61,7 @@ void lv_draw_buf_init_handlers(void)
 | `invalidate_cache_cb` | <ApiLink name="lv_draw_buf_cache_operation_cb_t" /> |  |
 | `flush_cache_cb` | <ApiLink name="lv_draw_buf_cache_operation_cb_t" /> |  |
 | `width_to_stride_cb` | <ApiLink name="lv_draw_buf_width_to_stride_cb_t" /> |  |
+| `buf_clear_cb` | <ApiLink name="lv_draw_buf_clear_cb_t" /> |  |
 
 
 </ApiMember>

@@ -2,13 +2,36 @@
 title: lv_display_private.h
 description: API reference for lv_display_private.h
 api:
+  functions: [lv_display_set_draw_buf_handlers]
   structs: [_lv_display_t]
   macros: [LOG_NULL_DISPLAY_DEPRECATED_MESSAGE, LV_INV_BUF_SIZE]
 ---
 
 <RelatedHeaders name="lv_display.h" isPrivate={true} />
 
-<ApiSummary structs={1} macros={2} />
+<ApiSummary functions={1} structs={1} macros={2} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_display_set_draw_buf_handlers" file="private/display/lv_display_private.h" line={206} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/display/lv_display_private.h#L206">
+
+### lv_display_set_draw_buf_handlers
+
+TODO(v10): rework the draw buffer abstraction so a buffer describes its own storage, and remove this.
+
+```c
+void lv_display_set_draw_buf_handlers(lv_display_t *disp, const lv_draw_buf_handlers_t *handlers)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+| `handlers` | <ApiLink name="lv_draw_buf_handlers_t" display="const lv_draw_buf_handlers_t *" /> | the handlers to set on every draw buffer of the display |
+
+
+</ApiMember>
 
 ## Structs
 
@@ -90,7 +113,7 @@ api:
 
 ## Macros
 
-<ApiMember kind="macro" name="LOG_NULL_DISPLAY_DEPRECATED_MESSAGE" file="private/display/lv_display_private.h" line={23} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/display/lv_display_private.h#L23">
+<ApiMember kind="macro" name="LOG_NULL_DISPLAY_DEPRECATED_MESSAGE" file="private/display/lv_display_private.h" line={23} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/display/lv_display_private.h#L23">
 
 ### LOG_NULL_DISPLAY_DEPRECATED_MESSAGE
 
@@ -102,7 +125,7 @@ api:
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_INV_BUF_SIZE" file="private/display/lv_display_private.h" line={30} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/display/lv_display_private.h#L30">
+<ApiMember kind="macro" name="LV_INV_BUF_SIZE" file="private/display/lv_display_private.h" line={30} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/display/lv_display_private.h#L30">
 
 ### LV_INV_BUF_SIZE
 

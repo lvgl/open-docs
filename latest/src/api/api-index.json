@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-03T08:33:12.285Z",
-    "symbolCount": 9224
+    "generatedAt": "2026-09-03T10:54:34.488Z",
+    "symbolCount": 9240
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -10631,6 +10631,16 @@
       "anchor": "",
       "kind": "header"
     },
+    "lv_subject_create": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_subject_create",
+      "kind": "function"
+    },
+    "lv_subject_delete": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_subject_delete",
+      "kind": "function"
+    },
     "lv_subject_init_int": {
       "path": "api/public/core/lv_observer_h",
       "anchor": "lv_subject_init_int",
@@ -10696,6 +10706,11 @@
       "anchor": "lv_subject_init_string",
       "kind": "function"
     },
+    "lv_subject_set_string_buffer_static": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_subject_set_string_buffer_static",
+      "kind": "function"
+    },
     "lv_subject_copy_string": {
       "path": "api/public/core/lv_observer_h",
       "anchor": "lv_subject_copy_string",
@@ -10759,6 +10774,11 @@
     "lv_subject_init_group": {
       "path": "api/public/core/lv_observer_h",
       "anchor": "lv_subject_init_group",
+      "kind": "function"
+    },
+    "lv_subject_set_group_list_static": {
+      "path": "api/public/core/lv_observer_h",
+      "anchor": "lv_subject_set_group_list_static",
       "kind": "function"
     },
     "lv_subject_deinit": {
@@ -16149,6 +16169,11 @@
     "lv_draw_buf_width_to_stride_cb_t": {
       "path": "api/public/draw/lv_draw_buf_h",
       "anchor": "lv_draw_buf_width_to_stride_cb_t",
+      "kind": "typedef"
+    },
+    "lv_draw_buf_clear_cb_t": {
+      "path": "api/public/draw/lv_draw_buf_h",
+      "anchor": "lv_draw_buf_clear_cb_t",
       "kind": "typedef"
     },
     "LV_STRIDE_AUTO": {
@@ -34031,6 +34056,16 @@
       "anchor": "",
       "kind": "header"
     },
+    "lv_subject_global_init": {
+      "path": "api/private/core/lv_observer_private_h",
+      "anchor": "lv_subject_global_init",
+      "kind": "function"
+    },
+    "lv_subject_global_deinit": {
+      "path": "api/private/core/lv_observer_private_h",
+      "anchor": "lv_subject_global_deinit",
+      "kind": "function"
+    },
     "_lv_observer_t": {
       "path": "api/private/core/lv_observer_private_h",
       "anchor": "_lv_observer_t",
@@ -34135,6 +34170,11 @@
       "path": "api/private/display/lv_display_private_h",
       "anchor": "",
       "kind": "header"
+    },
+    "lv_display_set_draw_buf_handlers": {
+      "path": "api/private/display/lv_display_private_h",
+      "anchor": "lv_display_set_draw_buf_handlers",
+      "kind": "function"
     },
     "_lv_display_t": {
       "path": "api/private/display/lv_display_private_h",
@@ -34801,6 +34841,11 @@
       "anchor": "lv_draw_buf_init_handlers",
       "kind": "function"
     },
+    "lv_draw_buf_clear_ex": {
+      "path": "api/private/draw/lv_draw_buf_private_h",
+      "anchor": "lv_draw_buf_clear_ex",
+      "kind": "function"
+    },
     "_lv_draw_buf_handlers_t": {
       "path": "api/private/draw/lv_draw_buf_private_h",
       "anchor": "_lv_draw_buf_handlers_t",
@@ -34934,6 +34979,11 @@
     "lv_draw_nanovg_init": {
       "path": "api/private/draw/nanovg/lv_draw_nanovg_h",
       "anchor": "lv_draw_nanovg_init",
+      "kind": "function"
+    },
+    "lv_draw_nanovg_get_draw_buf_handlers": {
+      "path": "api/private/draw/nanovg/lv_draw_nanovg_h",
+      "anchor": "lv_draw_nanovg_get_draw_buf_handlers",
       "kind": "function"
     },
     "lv_draw_nanovg_private.h": {
@@ -35609,6 +35659,11 @@
     "lv_draw_opengles_clear_layer_area": {
       "path": "api/private/draw/opengles/lv_draw_opengles_h",
       "anchor": "lv_draw_opengles_clear_layer_area",
+      "kind": "function"
+    },
+    "lv_draw_opengles_get_draw_buf_handlers": {
+      "path": "api/private/draw/opengles/lv_draw_opengles_h",
+      "anchor": "lv_draw_opengles_get_draw_buf_handlers",
       "kind": "function"
     },
     "lv_draw_dave2d.h": {
@@ -40521,6 +40576,11 @@
       "anchor": "lv_opengles_egl_get_gles_version",
       "kind": "function"
     },
+    "lv_opengles_egl_set_display_color_format": {
+      "path": "api/private/drivers/opengles/lv_opengles_egl_h",
+      "anchor": "lv_opengles_egl_set_display_color_format",
+      "kind": "function"
+    },
     "lv_opengles_egl_update": {
       "path": "api/private/drivers/opengles/lv_opengles_egl_h",
       "anchor": "lv_opengles_egl_update",
@@ -40691,6 +40751,11 @@
       "anchor": "lv_opengles_render_texture_rbswap",
       "kind": "function"
     },
+    "lv_opengles_render_texture_cf": {
+      "path": "api/private/drivers/opengles/lv_opengles_private_h",
+      "anchor": "lv_opengles_render_texture_cf",
+      "kind": "function"
+    },
     "lv_opengles_regular_viewport": {
       "path": "api/private/drivers/opengles/lv_opengles_private_h",
       "anchor": "lv_opengles_regular_viewport",
@@ -40711,6 +40776,16 @@
       "anchor": "lv_opengles_render_display_texture_internal",
       "kind": "function"
     },
+    "lv_opengles_gl_format_from_color_format": {
+      "path": "api/private/drivers/opengles/lv_opengles_private_h",
+      "anchor": "lv_opengles_gl_format_from_color_format",
+      "kind": "function"
+    },
+    "lv_opengles_color_format_is_rb_swap": {
+      "path": "api/private/drivers/opengles/lv_opengles_private_h",
+      "anchor": "lv_opengles_color_format_is_rb_swap",
+      "kind": "function"
+    },
     "lv_opengles_texture_upload_buf": {
       "path": "api/private/drivers/opengles/lv_opengles_private_h",
       "anchor": "lv_opengles_texture_upload_buf",
@@ -40724,6 +40799,11 @@
     "lv_opengles_render_params_t": {
       "path": "api/private/drivers/opengles/lv_opengles_private_h",
       "anchor": "lv_opengles_render_params_t",
+      "kind": "struct"
+    },
+    "lv_opengles_gl_format_t": {
+      "path": "api/private/drivers/opengles/lv_opengles_private_h",
+      "anchor": "lv_opengles_gl_format_t",
       "kind": "struct"
     },
     "GL_BGRA": {

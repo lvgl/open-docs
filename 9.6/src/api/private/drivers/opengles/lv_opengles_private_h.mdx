@@ -2,16 +2,16 @@
 title: lv_opengles_private.h
 description: API reference for lv_opengles_private.h
 api:
-  functions: [lv_opengles_render_params_init, lv_opengles_render, lv_opengles_render_texture_rbswap, lv_opengles_regular_viewport, lv_opengles_render_display, lv_opengles_render_texture_internal, lv_opengles_render_display_texture_internal, lv_opengles_texture_upload_buf, lv_opengles_texture_upload_display_buf]
-  structs: [lv_opengles_render_params_t]
+  functions: [lv_opengles_render_params_init, lv_opengles_render, lv_opengles_render_texture_rbswap, lv_opengles_render_texture_cf, lv_opengles_regular_viewport, lv_opengles_render_display, lv_opengles_render_texture_internal, lv_opengles_render_display_texture_internal, lv_opengles_gl_format_from_color_format, lv_opengles_color_format_is_rb_swap, lv_opengles_texture_upload_buf, lv_opengles_texture_upload_display_buf]
+  structs: [lv_opengles_render_params_t, lv_opengles_gl_format_t]
   macros: [GL_BGRA, GL_TEXTURE_MAX_LEVEL, GL_UNPACK_ROW_LENGTH, glGenVertexArrays, glBindVertexArray, glDeleteVertexArrays, glTexStorage2D, GL_RGBA32F, GL_NUM_EXTENSIONS, GL_RGB8, GL_RGBA8, GL_R8, GL_RED, LV_GL_PREFERRED_DEPTH]
 ---
 
-<ApiSummary functions={9} structs={1} macros={14} />
+<ApiSummary functions={12} structs={2} macros={14} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_opengles_render_params_init" file="private/drivers/opengles/lv_opengles_private.h" line={147} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L147">
+<ApiMember kind="function" name="lv_opengles_render_params_init" file="private/drivers/opengles/lv_opengles_private.h" line={158} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L158">
 
 ### lv_opengles_render_params_init
 
@@ -30,7 +30,7 @@ void lv_opengles_render_params_init(lv_opengles_render_params_t *params)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_opengles_render" file="private/drivers/opengles/lv_opengles_private.h" line={153} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L153">
+<ApiMember kind="function" name="lv_opengles_render" file="private/drivers/opengles/lv_opengles_private.h" line={164} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L164">
 
 ### lv_opengles_render
 
@@ -49,7 +49,7 @@ void lv_opengles_render(const lv_opengles_render_params_t *params)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_opengles_render_texture_rbswap" file="private/drivers/opengles/lv_opengles_private.h" line={166} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L166">
+<ApiMember kind="function" name="lv_opengles_render_texture_rbswap" file="private/drivers/opengles/lv_opengles_private.h" line={177} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L177">
 
 ### lv_opengles_render_texture_rbswap
 
@@ -75,7 +75,34 @@ void lv_opengles_render_texture_rbswap(unsigned int texture, const lv_area_t *te
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_opengles_regular_viewport" file="private/drivers/opengles/lv_opengles_private.h" line={177} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L177">
+<ApiMember kind="function" name="lv_opengles_render_texture_cf" file="private/drivers/opengles/lv_opengles_private.h" line={194} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L194">
+
+### lv_opengles_render_texture_cf
+
+Render a texture holding pixels of an LVGL color format, using alternate blending mode. The channel order and the grayscale handling are derived from `cf`.
+
+```c
+void lv_opengles_render_texture_cf(unsigned int texture, const lv_area_t *texture_area, lv_opa_t opa, int32_t disp_w, int32_t disp_h, const lv_area_t *texture_clip_area, bool h_flip, bool v_flip, lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `texture` | `unsigned int` | OpenGL texture ID |
+| `texture_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area in the window to render the texture in |
+| `opa` | <ApiLink name="lv_opa_t" /> | opacity to blend the texture with existing contents |
+| `disp_w` | `int32_t` | width of the window/framebuffer being rendered to |
+| `disp_h` | `int32_t` | height of the window/framebuffer being rendered to |
+| `texture_clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the area of the texture to draw |
+| `h_flip` | `bool` | horizontal flip |
+| `v_flip` | `bool` | vertical flip |
+| `cf` | <ApiLink name="lv_color_format_t" /> | the LVGL color format the texture was uploaded from |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_regular_viewport" file="private/drivers/opengles/lv_opengles_private.h" line={205} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L205">
 
 ### lv_opengles_regular_viewport
 
@@ -97,7 +124,7 @@ void lv_opengles_regular_viewport(int32_t x, int32_t y, int32_t w, int32_t h)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_opengles_render_display" file="private/drivers/opengles/lv_opengles_private.h" line={179} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L179">
+<ApiMember kind="function" name="lv_opengles_render_display" file="private/drivers/opengles/lv_opengles_private.h" line={207} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L207">
 
 ### lv_opengles_render_display
 
@@ -115,7 +142,7 @@ void lv_opengles_render_display(lv_display_t *display, const lv_opengles_render_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_opengles_render_texture_internal" file="private/drivers/opengles/lv_opengles_private.h" line={185} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L185">
+<ApiMember kind="function" name="lv_opengles_render_texture_internal" file="private/drivers/opengles/lv_opengles_private.h" line={213} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L213">
 
 ### lv_opengles_render_texture_internal
 
@@ -139,7 +166,7 @@ void lv_opengles_render_texture_internal(unsigned int texture, const lv_area_t *
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_opengles_render_display_texture_internal" file="private/drivers/opengles/lv_opengles_private.h" line={192} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L192">
+<ApiMember kind="function" name="lv_opengles_render_display_texture_internal" file="private/drivers/opengles/lv_opengles_private.h" line={220} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L220">
 
 ### lv_opengles_render_display_texture_internal
 
@@ -158,14 +185,53 @@ void lv_opengles_render_display_texture_internal(lv_display_t *display, bool h_f
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_opengles_texture_upload_buf" file="private/drivers/opengles/lv_opengles_private.h" line={202} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L202">
+<ApiMember kind="function" name="lv_opengles_gl_format_from_color_format" file="private/drivers/opengles/lv_opengles_private.h" line={228} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L228">
+
+### lv_opengles_gl_format_from_color_format
+
+Get the `glTexImage2D` arguments to upload a buffer of an LVGL color format with
+
+```c
+lv_result_t lv_opengles_gl_format_from_color_format(lv_color_format_t cf, lv_opengles_gl_format_t *gl_format)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `cf` | <ApiLink name="lv_color_format_t" /> | the LVGL color format |
+| `gl_format` | <ApiLink name="lv_opengles_gl_format_t" display="lv_opengles_gl_format_t *" /> | pointer to the struct to fill |
+
+**Returns:** <ApiLink name="lv_result_t" /> — `LV_RESULT_OK` on success, `LV_RESULT_INVALID` if `cf` has no OpenGL equivalent
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_color_format_is_rb_swap" file="private/drivers/opengles/lv_opengles_private.h" line={230} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L230">
+
+### lv_opengles_color_format_is_rb_swap
+
+```c
+bool lv_opengles_color_format_is_rb_swap(lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `cf` | <ApiLink name="lv_color_format_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_opengles_texture_upload_buf" file="private/drivers/opengles/lv_opengles_private.h" line={242} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L242">
 
 ### lv_opengles_texture_upload_buf
 
 Upload a pixel buffer into an OpenGL texture
 
 ```c
-void lv_opengles_texture_upload_buf(unsigned int texture_id, const void *buf, int32_t w, int32_t h, uint32_t stride)
+lv_result_t lv_opengles_texture_upload_buf(unsigned int texture_id, const void *buf, int32_t w, int32_t h, uint32_t stride, lv_color_format_t cf)
 ```
 
 <span className="sr-only">Parameters</span>
@@ -177,18 +243,21 @@ void lv_opengles_texture_upload_buf(unsigned int texture_id, const void *buf, in
 | `w` | `int32_t` | width of the buffer in pixels |
 | `h` | `int32_t` | height of the buffer in pixels |
 | `stride` | `uint32_t` | stride of the buffer in bytes. Ignored when `buf` is `NULL` |
+| `cf` | <ApiLink name="lv_color_format_t" /> | the LVGL color format of the buffer |
+
+**Returns:** <ApiLink name="lv_result_t" /> — `LV_RESULT_OK` on success, `LV_RESULT_INVALID` if `cf` has no OpenGL equivalent
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_opengles_texture_upload_display_buf" file="private/drivers/opengles/lv_opengles_private.h" line={211} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L211">
+<ApiMember kind="function" name="lv_opengles_texture_upload_display_buf" file="private/drivers/opengles/lv_opengles_private.h" line={254} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L254">
 
 ### lv_opengles_texture_upload_display_buf
 
-Upload the rendered buffer of a display into an OpenGL texture.
+Upload the rendered buffer of a display into an OpenGL texture. The size and the color format are taken from the display.
 
 ```c
-void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_t *display, const void *buf)
+lv_result_t lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_t *display, const void *buf)
 ```
 
 <span className="sr-only">Parameters</span>
@@ -198,6 +267,8 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 | `texture_id` | `unsigned int` | the OpenGL texture ID to upload into |
 | `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | the display the buffer belongs to |
 | `buf` | `const void *` | the pixel buffer. **May** be `NULL`.. Can be `NULL` to only define the size and the format |
+
+**Returns:** <ApiLink name="lv_result_t" /> — `LV_RESULT_OK` on success, `LV_RESULT_INVALID` if the color format of the display has no OpenGL equivalent
 
 
 </ApiMember>
@@ -222,6 +293,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 | `fill_color` | <ApiLink name="lv_color_t" /> |  |
 | `blend_opt` | `bool` |  |
 | `matrix` | <ApiLink name="lv_matrix_t" display="const lv_matrix_t *" /> |  |
+| `cf` | <ApiLink name="lv_color_format_t" /> |  |
 
 
 </ApiMember>
@@ -234,9 +306,31 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </TypeUsedBy>
 
+<ApiMember kind="struct" name="lv_opengles_gl_format_t">
+
+### lv_opengles_gl_format_t
+
+The `glTexImage2D` arguments describing an LVGL color format
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `internal_format` | `int32_t` | the `internalformat` argument of `glTexImage2D` |
+| `format` | `uint32_t` | the `format` argument of `glTexImage2D` |
+| `type` | `uint32_t` | the `type` argument of `glTexImage2D` |
+| `rb_swap` | `bool` | the red and blue channels have to be swapped while rendering |
+
+
+</ApiMember>
+
+<TypeUsedBy name="lv_opengles_gl_format_t" count={1}>
+
+- `lv_opengles_gl_format_from_color_format` — param `gl_format`
+
+</TypeUsedBy>
+
 ## Macros
 
-<ApiMember kind="macro" name="GL_BGRA" file="private/drivers/opengles/lv_opengles_private.h" line={43} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L43">
+<ApiMember kind="macro" name="GL_BGRA" file="private/drivers/opengles/lv_opengles_private.h" line={43} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L43">
 
 ### GL_BGRA
 
@@ -247,7 +341,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="GL_TEXTURE_MAX_LEVEL" file="private/drivers/opengles/lv_opengles_private.h" line={47} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L47">
+<ApiMember kind="macro" name="GL_TEXTURE_MAX_LEVEL" file="private/drivers/opengles/lv_opengles_private.h" line={47} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L47">
 
 ### GL_TEXTURE_MAX_LEVEL
 
@@ -258,7 +352,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="GL_UNPACK_ROW_LENGTH" file="private/drivers/opengles/lv_opengles_private.h" line={51} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L51">
+<ApiMember kind="macro" name="GL_UNPACK_ROW_LENGTH" file="private/drivers/opengles/lv_opengles_private.h" line={51} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L51">
 
 ### GL_UNPACK_ROW_LENGTH
 
@@ -269,7 +363,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="glGenVertexArrays" file="private/drivers/opengles/lv_opengles_private.h" line={55} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L55">
+<ApiMember kind="macro" name="glGenVertexArrays" file="private/drivers/opengles/lv_opengles_private.h" line={55} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L55">
 
 ### glGenVertexArrays
 
@@ -280,7 +374,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="glBindVertexArray" file="private/drivers/opengles/lv_opengles_private.h" line={59} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L59">
+<ApiMember kind="macro" name="glBindVertexArray" file="private/drivers/opengles/lv_opengles_private.h" line={59} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L59">
 
 ### glBindVertexArray
 
@@ -291,7 +385,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="glDeleteVertexArrays" file="private/drivers/opengles/lv_opengles_private.h" line={63} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L63">
+<ApiMember kind="macro" name="glDeleteVertexArrays" file="private/drivers/opengles/lv_opengles_private.h" line={63} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L63">
 
 ### glDeleteVertexArrays
 
@@ -302,7 +396,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="glTexStorage2D" file="private/drivers/opengles/lv_opengles_private.h" line={67} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L67">
+<ApiMember kind="macro" name="glTexStorage2D" file="private/drivers/opengles/lv_opengles_private.h" line={67} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L67">
 
 ### glTexStorage2D
 
@@ -313,7 +407,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="GL_RGBA32F" file="private/drivers/opengles/lv_opengles_private.h" line={71} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L71">
+<ApiMember kind="macro" name="GL_RGBA32F" file="private/drivers/opengles/lv_opengles_private.h" line={71} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L71">
 
 ### GL_RGBA32F
 
@@ -324,7 +418,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="GL_NUM_EXTENSIONS" file="private/drivers/opengles/lv_opengles_private.h" line={74} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L74">
+<ApiMember kind="macro" name="GL_NUM_EXTENSIONS" file="private/drivers/opengles/lv_opengles_private.h" line={74} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L74">
 
 ### GL_NUM_EXTENSIONS
 
@@ -335,7 +429,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="GL_RGB8" file="private/drivers/opengles/lv_opengles_private.h" line={78} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L78">
+<ApiMember kind="macro" name="GL_RGB8" file="private/drivers/opengles/lv_opengles_private.h" line={78} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L78">
 
 ### GL_RGB8
 
@@ -346,7 +440,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="GL_RGBA8" file="private/drivers/opengles/lv_opengles_private.h" line={82} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L82">
+<ApiMember kind="macro" name="GL_RGBA8" file="private/drivers/opengles/lv_opengles_private.h" line={82} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L82">
 
 ### GL_RGBA8
 
@@ -357,7 +451,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="GL_R8" file="private/drivers/opengles/lv_opengles_private.h" line={93} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L93">
+<ApiMember kind="macro" name="GL_R8" file="private/drivers/opengles/lv_opengles_private.h" line={93} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L93">
 
 ### GL_R8
 
@@ -368,7 +462,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="GL_RED" file="private/drivers/opengles/lv_opengles_private.h" line={97} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L97">
+<ApiMember kind="macro" name="GL_RED" file="private/drivers/opengles/lv_opengles_private.h" line={97} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L97">
 
 ### GL_RED
 
@@ -379,7 +473,7 @@ void lv_opengles_texture_upload_display_buf(unsigned int texture_id, lv_display_
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_GL_PREFERRED_DEPTH" file="private/drivers/opengles/lv_opengles_private.h" line={117} url="https://github.com/lvgl/lvgl/tree/c8382723d7bf7f852f0262bfc0fe069365ca278b/src/drivers/opengles/lv_opengles_private.h#L117">
+<ApiMember kind="macro" name="LV_GL_PREFERRED_DEPTH" file="private/drivers/opengles/lv_opengles_private.h" line={117} url="https://github.com/lvgl/lvgl/tree/76719b18991970ee207c4e22c3f53cde224daf1b/src/drivers/opengles/lv_opengles_private.h#L117">
 
 ### LV_GL_PREFERRED_DEPTH
 
