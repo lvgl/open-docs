@@ -2,7 +2,7 @@
 title: lv_barcode.h
 description: API reference for lv_barcode.h
 api:
-  functions: [lv_barcode_create, lv_barcode_set_dark_color, lv_barcode_set_light_color, lv_barcode_set_scale, lv_barcode_set_direction, lv_barcode_set_tiled, lv_barcode_set_encoding, lv_barcode_update, lv_barcode_render, lv_barcode_set_update_mode, lv_barcode_get_update_mode, lv_barcode_get_render_failed, lv_barcode_get_dark_color, lv_barcode_get_light_color, lv_barcode_get_scale, lv_barcode_get_encoding]
+  functions: [lv_barcode_create, lv_barcode_set_dark_color, lv_barcode_set_light_color, lv_barcode_set_scale, lv_barcode_set_direction, lv_barcode_set_tiled, lv_barcode_set_encoding, lv_barcode_update, lv_barcode_render, lv_barcode_set_update_mode, lv_barcode_get_update_mode, lv_barcode_is_render_valid, lv_barcode_get_dark_color, lv_barcode_get_light_color, lv_barcode_get_scale, lv_barcode_get_encoding]
   enums: [lv_barcode_encoding_t, lv_barcode_update_mode_t]
   variables: [lv_barcode_class]
 ---
@@ -13,10 +13,10 @@ api:
 
 ## Functions
 
-<ApiTabs items={["Setters (7)","Getters (6)","Other (3)"]}>
+<ApiTabs items={["Setters (7)","Getters (5)","Other (4)"]}>
 <ApiTab value="Setters (7)">
 
-<ApiMember kind="function" name="lv_barcode_set_dark_color" file="public/widgets/lv_barcode.h" line={72} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L72">
+<ApiMember kind="function" name="lv_barcode_set_dark_color" file="public/widgets/lv_barcode.h" line={72} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L72">
 
 ### lv_barcode_set_dark_color
 
@@ -36,7 +36,7 @@ void lv_barcode_set_dark_color(lv_obj_t *obj, lv_color_t color)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_set_light_color" file="public/widgets/lv_barcode.h" line={81} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L81">
+<ApiMember kind="function" name="lv_barcode_set_light_color" file="public/widgets/lv_barcode.h" line={81} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L81">
 
 ### lv_barcode_set_light_color
 
@@ -56,7 +56,7 @@ void lv_barcode_set_light_color(lv_obj_t *obj, lv_color_t color)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_set_scale" file="public/widgets/lv_barcode.h" line={89} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L89">
+<ApiMember kind="function" name="lv_barcode_set_scale" file="public/widgets/lv_barcode.h" line={89} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L89">
 
 ### lv_barcode_set_scale
 
@@ -76,7 +76,7 @@ void lv_barcode_set_scale(lv_obj_t *obj, uint16_t scale)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_set_direction" file="public/widgets/lv_barcode.h" line={97} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L97">
+<ApiMember kind="function" name="lv_barcode_set_direction" file="public/widgets/lv_barcode.h" line={97} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L97">
 
 ### lv_barcode_set_direction
 
@@ -96,7 +96,7 @@ void lv_barcode_set_direction(lv_obj_t *obj, lv_dir_t direction)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_set_tiled" file="public/widgets/lv_barcode.h" line={105} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L105">
+<ApiMember kind="function" name="lv_barcode_set_tiled" file="public/widgets/lv_barcode.h" line={105} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L105">
 
 ### lv_barcode_set_tiled
 
@@ -116,7 +116,7 @@ void lv_barcode_set_tiled(lv_obj_t *obj, bool tiled)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_set_encoding" file="public/widgets/lv_barcode.h" line={113} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L113">
+<ApiMember kind="function" name="lv_barcode_set_encoding" file="public/widgets/lv_barcode.h" line={113} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L113">
 
 ### lv_barcode_set_encoding
 
@@ -136,7 +136,7 @@ void lv_barcode_set_encoding(lv_obj_t *obj, lv_barcode_encoding_t encoding)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_set_update_mode" file="public/widgets/lv_barcode.h" line={149} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L149">
+<ApiMember kind="function" name="lv_barcode_set_update_mode" file="public/widgets/lv_barcode.h" line={149} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L149">
 
 ### lv_barcode_set_update_mode
 
@@ -169,9 +169,9 @@ Switching back to IMMEDIATE while out of date also regenerates, but this returns
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Getters (6)">
+<ApiTab value="Getters (5)">
 
-<ApiMember kind="function" name="lv_barcode_get_update_mode" file="public/widgets/lv_barcode.h" line={156} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L156">
+<ApiMember kind="function" name="lv_barcode_get_update_mode" file="public/widgets/lv_barcode.h" line={156} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L156">
 
 ### lv_barcode_get_update_mode
 
@@ -192,32 +192,7 @@ lv_barcode_update_mode_t lv_barcode_get_update_mode(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_get_render_failed" file="public/widgets/lv_barcode.h" line={168} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L168">
-
-### lv_barcode_get_render_failed
-
-Get whether the last attempt to generate the bitmap failed. <ApiLink name="lv_barcode_render" display="lv_barcode_render()" />, and <ApiLink name="lv_barcode_update" display="lv_barcode_update()" /> in IMMEDIATE mode, return their result directly; the rest cannot - they run in a void setter, the resize handler, or a deferred fill in the draw pass. Use this for those, e.g. after shrinking the object below the size its data needs.
-
-```c
-bool lv_barcode_get_render_failed(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to barcode object |
-
-**Returns:** `bool` — true: the last generation attempt failed, or no data has been set yet; false: no generation attempt has failed; deferred changes may still be pending
-
-<Callout type="info">
-A failure is not retried every redraw; only a change makes the Widget try again.
-</Callout>
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_barcode_get_dark_color" file="public/widgets/lv_barcode.h" line={175} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L175">
+<ApiMember kind="function" name="lv_barcode_get_dark_color" file="public/widgets/lv_barcode.h" line={176} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L176">
 
 ### lv_barcode_get_dark_color
 
@@ -238,7 +213,7 @@ lv_color_t lv_barcode_get_dark_color(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_get_light_color" file="public/widgets/lv_barcode.h" line={182} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L182">
+<ApiMember kind="function" name="lv_barcode_get_light_color" file="public/widgets/lv_barcode.h" line={183} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L183">
 
 ### lv_barcode_get_light_color
 
@@ -259,7 +234,7 @@ lv_color_t lv_barcode_get_light_color(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_get_scale" file="public/widgets/lv_barcode.h" line={189} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L189">
+<ApiMember kind="function" name="lv_barcode_get_scale" file="public/widgets/lv_barcode.h" line={190} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L190">
 
 ### lv_barcode_get_scale
 
@@ -280,7 +255,7 @@ uint16_t lv_barcode_get_scale(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_get_encoding" file="public/widgets/lv_barcode.h" line={196} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L196">
+<ApiMember kind="function" name="lv_barcode_get_encoding" file="public/widgets/lv_barcode.h" line={197} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L197">
 
 ### lv_barcode_get_encoding
 
@@ -302,9 +277,9 @@ lv_barcode_encoding_t lv_barcode_get_encoding(const lv_obj_t *obj)
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Other (3)">
+<ApiTab value="Other (4)">
 
-<ApiMember kind="function" name="lv_barcode_create" file="public/widgets/lv_barcode.h" line={63} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L63">
+<ApiMember kind="function" name="lv_barcode_create" file="public/widgets/lv_barcode.h" line={63} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L63">
 
 ### lv_barcode_create
 
@@ -325,7 +300,7 @@ lv_obj_t * lv_barcode_create(lv_obj_t *parent)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_update" file="public/widgets/lv_barcode.h" line={125} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L125">
+<ApiMember kind="function" name="lv_barcode_update" file="public/widgets/lv_barcode.h" line={125} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L125">
 
 ### lv_barcode_update
 
@@ -351,7 +326,7 @@ Obeys the update mode. In DEFERRED the canvas is only resized here, so the retur
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_barcode_render" file="public/widgets/lv_barcode.h" line={134} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L134">
+<ApiMember kind="function" name="lv_barcode_render" file="public/widgets/lv_barcode.h" line={134} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L134">
 
 ### lv_barcode_render
 
@@ -372,11 +347,36 @@ lv_result_t lv_barcode_render(lv_obj_t *obj)
 
 </ApiMember>
 
+<ApiMember kind="function" name="lv_barcode_is_render_valid" file="public/widgets/lv_barcode.h" line={169} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L169">
+
+### lv_barcode_is_render_valid
+
+Check whether the bitmap is free of a known generation failure. <ApiLink name="lv_barcode_render" display="lv_barcode_render()" />, and <ApiLink name="lv_barcode_update" display="lv_barcode_update()" /> in IMMEDIATE mode, return their result directly; the rest cannot - they run in a void setter, the resize handler, or a deferred fill in the draw pass. Use this for those, e.g. after shrinking the object below the size its data needs.
+
+```c
+bool lv_barcode_is_render_valid(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to barcode object |
+
+**Returns:** `bool` — true: no generation attempt is known to have failed. A change re-arms the Widget, so this is also true while a deferred regeneration is still pending; false: the last generation attempt failed, or no data has been set yet
+
+<Callout type="info">
+A failure is not retried every redraw; only a change makes the Widget try again.
+</Callout>
+
+
+</ApiMember>
+
 </ApiTab>
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_barcode_encoding_t" file="public/widgets/lv_barcode.h" line={31} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L31">
+<ApiMember kind="enum" name="lv_barcode_encoding_t" file="public/widgets/lv_barcode.h" line={31} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L31">
 
 ### lv_barcode_encoding_t
 
@@ -394,7 +394,7 @@ lv_result_t lv_barcode_render(lv_obj_t *obj)
 
 </TypeUsedBy>
 
-<ApiMember kind="enum" name="lv_barcode_update_mode_t" file="public/widgets/lv_barcode.h" line={46} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L46">
+<ApiMember kind="enum" name="lv_barcode_update_mode_t" file="public/widgets/lv_barcode.h" line={46} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L46">
 
 ### lv_barcode_update_mode_t
 
@@ -416,7 +416,7 @@ Controls when a change is turned into a new barcode bitmap. Applies to the data 
 
 ## Variables
 
-<ApiMember kind="variable" name="lv_barcode_class" file="public/widgets/lv_barcode.h" line={51} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_barcode.h#L51">
+<ApiMember kind="variable" name="lv_barcode_class" file="public/widgets/lv_barcode.h" line={51} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_barcode.h#L51">
 
 ### lv_barcode_class
 

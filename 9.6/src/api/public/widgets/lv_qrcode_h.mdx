@@ -2,7 +2,7 @@
 title: lv_qrcode.h
 description: API reference for lv_qrcode.h
 api:
-  functions: [lv_qrcode_create, lv_qrcode_set_size, lv_qrcode_set_dark_color, lv_qrcode_set_light_color, lv_qrcode_update, lv_qrcode_set_data, lv_qrcode_render, lv_qrcode_set_quiet_zone, lv_qrcode_set_update_mode, lv_qrcode_get_update_mode, lv_qrcode_get_render_failed]
+  functions: [lv_qrcode_create, lv_qrcode_set_size, lv_qrcode_set_dark_color, lv_qrcode_set_light_color, lv_qrcode_update, lv_qrcode_set_data, lv_qrcode_render, lv_qrcode_set_quiet_zone, lv_qrcode_set_update_mode, lv_qrcode_get_update_mode, lv_qrcode_is_render_valid]
   enums: [lv_qrcode_update_mode_t]
   variables: [lv_qrcode_class]
 ---
@@ -13,10 +13,10 @@ api:
 
 ## Functions
 
-<ApiTabs items={["Setters (6)","Getters (2)","Other (3)"]}>
+<ApiTabs items={["Setters (6)","Getters (1)","Other (4)"]}>
 <ApiTab value="Setters (6)">
 
-<ApiMember kind="function" name="lv_qrcode_set_size" file="public/widgets/lv_qrcode.h" line={63} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L63">
+<ApiMember kind="function" name="lv_qrcode_set_size" file="public/widgets/lv_qrcode.h" line={63} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L63">
 
 ### lv_qrcode_set_size
 
@@ -36,7 +36,7 @@ void lv_qrcode_set_size(lv_obj_t *obj, int32_t size)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_qrcode_set_dark_color" file="public/widgets/lv_qrcode.h" line={70} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L70">
+<ApiMember kind="function" name="lv_qrcode_set_dark_color" file="public/widgets/lv_qrcode.h" line={70} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L70">
 
 ### lv_qrcode_set_dark_color
 
@@ -56,7 +56,7 @@ void lv_qrcode_set_dark_color(lv_obj_t *obj, lv_color_t color)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_qrcode_set_light_color" file="public/widgets/lv_qrcode.h" line={77} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L77">
+<ApiMember kind="function" name="lv_qrcode_set_light_color" file="public/widgets/lv_qrcode.h" line={77} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L77">
 
 ### lv_qrcode_set_light_color
 
@@ -76,7 +76,7 @@ void lv_qrcode_set_light_color(lv_obj_t *obj, lv_color_t color)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_qrcode_set_data" file="public/widgets/lv_qrcode.h" line={98} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L98">
+<ApiMember kind="function" name="lv_qrcode_set_data" file="public/widgets/lv_qrcode.h" line={98} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L98">
 
 ### lv_qrcode_set_data
 
@@ -96,7 +96,7 @@ void lv_qrcode_set_data(lv_obj_t *obj, const char *data)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_qrcode_set_quiet_zone" file="public/widgets/lv_qrcode.h" line={118} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L118">
+<ApiMember kind="function" name="lv_qrcode_set_quiet_zone" file="public/widgets/lv_qrcode.h" line={118} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L118">
 
 ### lv_qrcode_set_quiet_zone
 
@@ -116,7 +116,7 @@ void lv_qrcode_set_quiet_zone(lv_obj_t *obj, bool enable)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_qrcode_set_update_mode" file="public/widgets/lv_qrcode.h" line={139} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L139">
+<ApiMember kind="function" name="lv_qrcode_set_update_mode" file="public/widgets/lv_qrcode.h" line={139} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L139">
 
 ### lv_qrcode_set_update_mode
 
@@ -145,9 +145,9 @@ Switching back to LV_QRCODE_UPDATE_MODE_IMMEDIATE while the bitmap is out of dat
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Getters (2)">
+<ApiTab value="Getters (1)">
 
-<ApiMember kind="function" name="lv_qrcode_get_update_mode" file="public/widgets/lv_qrcode.h" line={146} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L146">
+<ApiMember kind="function" name="lv_qrcode_get_update_mode" file="public/widgets/lv_qrcode.h" line={146} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L146">
 
 ### lv_qrcode_get_update_mode
 
@@ -168,35 +168,10 @@ lv_qrcode_update_mode_t lv_qrcode_get_update_mode(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_qrcode_get_render_failed" file="public/widgets/lv_qrcode.h" line={163} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L163">
-
-### lv_qrcode_get_render_failed
-
-Get whether the QR code bitmap is missing because the last attempt to generate it failed. Most encodes report their result directly: <ApiLink name="lv_qrcode_update" display="lv_qrcode_update()" /> returns it. The ones that cannot are the re-encodes triggered by a property change - they happen in a void setter or, in LV_QRCODE_UPDATE_MODE_DEFERRED, in the draw pass. Use this to detect those, e.g. after shrinking the object below the size its payload needs.
-
-```c
-bool lv_qrcode_get_render_failed(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a QR code object |
-
-**Returns:** `bool` — true: the last generation attempt failed, or no data has been set yet; false: the bitmap holds a valid QR code
-
-<Callout type="info">
-A failed encode leaves the bitmap marked as out of date, so it is never reported as current, and it is not retried on every redraw - only a property change makes the Widget try again. Encode failures are not logged when the caller can see the result; the one exception is the re-encode done by the redraw, which has no caller, so that one is logged.
-</Callout>
-
-
-</ApiMember>
-
 </ApiTab>
-<ApiTab value="Other (3)">
+<ApiTab value="Other (4)">
 
-<ApiMember kind="function" name="lv_qrcode_create" file="public/widgets/lv_qrcode.h" line={56} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L56">
+<ApiMember kind="function" name="lv_qrcode_create" file="public/widgets/lv_qrcode.h" line={56} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L56">
 
 ### lv_qrcode_create
 
@@ -217,7 +192,7 @@ lv_obj_t * lv_qrcode_create(lv_obj_t *parent)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_qrcode_update" file="public/widgets/lv_qrcode.h" line={90} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L90">
+<ApiMember kind="function" name="lv_qrcode_update" file="public/widgets/lv_qrcode.h" line={90} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L90">
 
 ### lv_qrcode_update
 
@@ -240,7 +215,7 @@ lv_result_t lv_qrcode_update(lv_obj_t *obj, const void *data, uint32_t data_len)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_qrcode_render" file="public/widgets/lv_qrcode.h" line={110} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L110">
+<ApiMember kind="function" name="lv_qrcode_render" file="public/widgets/lv_qrcode.h" line={110} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L110">
 
 ### lv_qrcode_render
 
@@ -261,11 +236,36 @@ lv_result_t lv_qrcode_render(lv_obj_t *obj)
 
 </ApiMember>
 
+<ApiMember kind="function" name="lv_qrcode_is_render_valid" file="public/widgets/lv_qrcode.h" line={164} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L164">
+
+### lv_qrcode_is_render_valid
+
+Check whether the QR code bitmap is free of a known encode failure. Most encodes report their result directly: <ApiLink name="lv_qrcode_update" display="lv_qrcode_update()" /> returns it. The ones that cannot are the re-encodes triggered by a property change - they happen in a void setter or, in LV_QRCODE_UPDATE_MODE_DEFERRED, in the draw pass. Use this to detect those, e.g. after shrinking the object below the size its payload needs.
+
+```c
+bool lv_qrcode_is_render_valid(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a QR code object |
+
+**Returns:** `bool` — true: no encode attempt is known to have failed. A property change re-arms the Widget, so this is also true while a deferred re-encode is still pending; false: the last encode attempt failed, or no data has been set yet
+
+<Callout type="info">
+A failed encode leaves the bitmap marked as out of date, so it is never reported as current, and it is not retried on every redraw - only a property change makes the Widget try again. Encode failures are not logged when the caller can see the result; the one exception is the re-encode done by the redraw, which has no caller, so that one is logged.
+</Callout>
+
+
+</ApiMember>
+
 </ApiTab>
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_qrcode_update_mode_t" file="public/widgets/lv_qrcode.h" line={39} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L39">
+<ApiMember kind="enum" name="lv_qrcode_update_mode_t" file="public/widgets/lv_qrcode.h" line={39} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L39">
 
 ### lv_qrcode_update_mode_t
 
@@ -287,7 +287,7 @@ Controls when a property change is turned into a new QR code bitmap. Only the pr
 
 ## Variables
 
-<ApiMember kind="variable" name="lv_qrcode_class" file="public/widgets/lv_qrcode.h" line={44} url="https://github.com/lvgl/lvgl/tree/9f4e962f531fe6b74387eebbe846682dc869acd2/include/lvgl/widgets/lv_qrcode.h#L44">
+<ApiMember kind="variable" name="lv_qrcode_class" file="public/widgets/lv_qrcode.h" line={44} url="https://github.com/lvgl/lvgl/tree/f35e139edab74c29d24e2c73256e0eeb58547390/include/lvgl/widgets/lv_qrcode.h#L44">
 
 ### lv_qrcode_class
 

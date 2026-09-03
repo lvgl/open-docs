@@ -2,7 +2,7 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-03T16:04:34.171Z",
+    "generatedAt": "2026-09-03T17:14:11.440Z",
     "symbolCount": 9239
   },
   "symbols": {
@@ -27876,9 +27876,9 @@
       "anchor": "lv_barcode_get_update_mode",
       "kind": "function"
     },
-    "lv_barcode_get_render_failed": {
+    "lv_barcode_is_render_valid": {
       "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_get_render_failed",
+      "anchor": "lv_barcode_is_render_valid",
       "kind": "function"
     },
     "lv_barcode_get_dark_color": {
@@ -31216,9 +31216,9 @@
       "anchor": "lv_qrcode_get_update_mode",
       "kind": "function"
     },
-    "lv_qrcode_get_render_failed": {
+    "lv_qrcode_is_render_valid": {
       "path": "api/public/widgets/lv_qrcode_h",
-      "anchor": "lv_qrcode_get_render_failed",
+      "anchor": "lv_qrcode_is_render_valid",
       "kind": "function"
     },
     "lv_qrcode_update_mode_t": {
