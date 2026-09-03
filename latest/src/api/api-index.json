@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-02T16:09:26.624Z",
-    "symbolCount": 9217
+    "generatedAt": "2026-09-03T05:20:29.883Z",
+    "symbolCount": 9224
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -27836,6 +27836,26 @@
       "anchor": "lv_barcode_update",
       "kind": "function"
     },
+    "lv_barcode_render": {
+      "path": "api/public/widgets/lv_barcode_h",
+      "anchor": "lv_barcode_render",
+      "kind": "function"
+    },
+    "lv_barcode_set_update_mode": {
+      "path": "api/public/widgets/lv_barcode_h",
+      "anchor": "lv_barcode_set_update_mode",
+      "kind": "function"
+    },
+    "lv_barcode_get_update_mode": {
+      "path": "api/public/widgets/lv_barcode_h",
+      "anchor": "lv_barcode_get_update_mode",
+      "kind": "function"
+    },
+    "lv_barcode_get_render_failed": {
+      "path": "api/public/widgets/lv_barcode_h",
+      "anchor": "lv_barcode_get_render_failed",
+      "kind": "function"
+    },
     "lv_barcode_get_dark_color": {
       "path": "api/public/widgets/lv_barcode_h",
       "anchor": "lv_barcode_get_dark_color",
@@ -27869,6 +27889,21 @@
     "LV_BARCODE_ENCODING_CODE128_RAW": {
       "path": "api/public/widgets/lv_barcode_h",
       "anchor": "lv_barcode_encoding_t",
+      "kind": "enumvalue"
+    },
+    "lv_barcode_update_mode_t": {
+      "path": "api/public/widgets/lv_barcode_h",
+      "anchor": "lv_barcode_update_mode_t",
+      "kind": "enum"
+    },
+    "LV_BARCODE_UPDATE_MODE_IMMEDIATE": {
+      "path": "api/public/widgets/lv_barcode_h",
+      "anchor": "lv_barcode_update_mode_t",
+      "kind": "enumvalue"
+    },
+    "LV_BARCODE_UPDATE_MODE_DEFERRED": {
+      "path": "api/public/widgets/lv_barcode_h",
+      "anchor": "lv_barcode_update_mode_t",
       "kind": "enumvalue"
     },
     "lv_barcode_class": {
