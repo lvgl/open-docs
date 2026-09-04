@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-04T19:07:37.805Z",
-    "symbolCount": 9267
+    "generatedAt": "2026-09-04T21:12:28.261Z",
+    "symbolCount": 9269
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -8809,6 +8809,16 @@
     "lv_obj_refresh_style": {
       "path": "api/public/core/lv_obj_style_h",
       "anchor": "lv_obj_refresh_style",
+      "kind": "function"
+    },
+    "lv_obj_style_set_enabled": {
+      "path": "api/public/core/lv_obj_style_h",
+      "anchor": "lv_obj_style_set_enabled",
+      "kind": "function"
+    },
+    "lv_obj_style_get_enabled": {
+      "path": "api/public/core/lv_obj_style_h",
+      "anchor": "lv_obj_style_get_enabled",
       "kind": "function"
     },
     "lv_obj_style_set_disabled": {
