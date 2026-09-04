@@ -2,18 +2,18 @@
 title: lv_wayland_window.h
 description: API reference for lv_wayland_window.h
 api:
-  functions: [lv_wayland_window_create, lv_wayland_window_close, lv_wayland_window_is_open, lv_wayland_assign_physical_display, lv_wayland_unassign_physical_display, lv_wayland_window_set_fullscreen, lv_wayland_window_set_maximized, lv_wayland_window_set_minimized]
+  functions: [lv_wayland_window_create, lv_wayland_window_close, lv_wayland_window_is_open, lv_wayland_assign_physical_display, lv_wayland_unassign_physical_display, lv_wayland_window_set_fullscreen, lv_wayland_window_is_fullscreen, lv_wayland_window_set_maximized, lv_wayland_window_is_maximized, lv_wayland_window_set_minimized]
   typedefs: [lv_wayland_display_close_cb_t]
 ---
 
-<ApiSummary functions={8} typedefs={1} />
+<ApiSummary functions={10} typedefs={1} />
 
 ## Functions
 
-<ApiTabs items={["Setters (3)","Other (5)"]}>
+<ApiTabs items={["Setters (3)","Other (7)"]}>
 <ApiTab value="Setters (3)">
 
-<ApiMember kind="function" name="lv_wayland_window_set_fullscreen" file="public/drivers/wayland/lv_wayland_window.h" line={79} url="https://github.com/lvgl/lvgl/tree/a0e5183d5d1c2d97930da2372186815617e38179/include/lvgl/drivers/wayland/lv_wayland_window.h#L79">
+<ApiMember kind="function" name="lv_wayland_window_set_fullscreen" file="public/drivers/wayland/lv_wayland_window.h" line={82} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland_window.h#L82">
 
 ### lv_wayland_window_set_fullscreen
 
@@ -30,14 +30,18 @@ void lv_wayland_window_set_fullscreen(lv_display_t *display, bool fullscreen)
 | `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
 | `fullscreen` | `bool` | If true the window enters fullscreen |
 
+<Callout type="info">
+The fullscreen request is made asynchronously and may not be fulfilled if the compositor doesn't allow it. <ApiLink name="lv_wayland_window_is_fullscreen" display="lv_wayland_window_is_fullscreen()" /> can be used to determine the fullscreen state of the window.
+</Callout>
+
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_window_set_maximized" file="public/drivers/wayland/lv_wayland_window.h" line={86} url="https://github.com/lvgl/lvgl/tree/a0e5183d5d1c2d97930da2372186815617e38179/include/lvgl/drivers/wayland/lv_wayland_window.h#L86">
+<ApiMember kind="function" name="lv_wayland_window_set_maximized" file="public/drivers/wayland/lv_wayland_window.h" line={100} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland_window.h#L100">
 
 ### lv_wayland_window_set_maximized
 
-Sets the maximized state of the window
+Requests the window be maximized/unmaximized
 
 ```c
 void lv_wayland_window_set_maximized(lv_display_t *display, bool maximize)
@@ -48,12 +52,16 @@ void lv_wayland_window_set_maximized(lv_display_t *display, bool maximize)
 | Name | Type | Description |
 |------|------|-------------|
 | `display` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
-| `maximize` | `bool` | If true the window is maximized |
+| `maximize` | `bool` | true: maximize the window false: unmaximize the window |
+
+<Callout type="info">
+The maximized request is made asynchronously and may not be fulfilled if the compositor doesn't allow it. <ApiLink name="lv_wayland_window_is_maximized" display="lv_wayland_window_is_maximized()" /> can be used to determine the maximized state of the window.
+</Callout>
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_window_set_minimized" file="public/drivers/wayland/lv_wayland_window.h" line={92} url="https://github.com/lvgl/lvgl/tree/a0e5183d5d1c2d97930da2372186815617e38179/include/lvgl/drivers/wayland/lv_wayland_window.h#L92">
+<ApiMember kind="function" name="lv_wayland_window_set_minimized" file="public/drivers/wayland/lv_wayland_window.h" line={113} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland_window.h#L113">
 
 ### lv_wayland_window_set_minimized
 
@@ -73,9 +81,9 @@ void lv_wayland_window_set_minimized(lv_display_t *display)
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Other (5)">
+<ApiTab value="Other (7)">
 
-<ApiMember kind="function" name="lv_wayland_window_create" file="public/drivers/wayland/lv_wayland_window.h" line={44} url="https://github.com/lvgl/lvgl/tree/a0e5183d5d1c2d97930da2372186815617e38179/include/lvgl/drivers/wayland/lv_wayland_window.h#L44">
+<ApiMember kind="function" name="lv_wayland_window_create" file="public/drivers/wayland/lv_wayland_window.h" line={44} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland_window.h#L44">
 
 ### lv_wayland_window_create
 
@@ -99,7 +107,7 @@ lv_display_t * lv_wayland_window_create(uint32_t hor_res, uint32_t ver_res, char
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_window_close" file="public/drivers/wayland/lv_wayland_window.h" line={51} url="https://github.com/lvgl/lvgl/tree/a0e5183d5d1c2d97930da2372186815617e38179/include/lvgl/drivers/wayland/lv_wayland_window.h#L51">
+<ApiMember kind="function" name="lv_wayland_window_close" file="public/drivers/wayland/lv_wayland_window.h" line={51} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland_window.h#L51">
 
 ### lv_wayland_window_close
 
@@ -118,7 +126,7 @@ void lv_wayland_window_close(lv_display_t *display)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_window_is_open" file="public/drivers/wayland/lv_wayland_window.h" line={58} url="https://github.com/lvgl/lvgl/tree/a0e5183d5d1c2d97930da2372186815617e38179/include/lvgl/drivers/wayland/lv_wayland_window.h#L58">
+<ApiMember kind="function" name="lv_wayland_window_is_open" file="public/drivers/wayland/lv_wayland_window.h" line={58} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland_window.h#L58">
 
 ### lv_wayland_window_is_open
 
@@ -139,7 +147,7 @@ bool lv_wayland_window_is_open(lv_display_t *display)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_assign_physical_display" file="public/drivers/wayland/lv_wayland_window.h" line={65} url="https://github.com/lvgl/lvgl/tree/a0e5183d5d1c2d97930da2372186815617e38179/include/lvgl/drivers/wayland/lv_wayland_window.h#L65">
+<ApiMember kind="function" name="lv_wayland_assign_physical_display" file="public/drivers/wayland/lv_wayland_window.h" line={65} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland_window.h#L65">
 
 ### lv_wayland_assign_physical_display
 
@@ -159,7 +167,7 @@ void lv_wayland_assign_physical_display(lv_display_t *display, uint8_t phys_disp
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_wayland_unassign_physical_display" file="public/drivers/wayland/lv_wayland_window.h" line={71} url="https://github.com/lvgl/lvgl/tree/a0e5183d5d1c2d97930da2372186815617e38179/include/lvgl/drivers/wayland/lv_wayland_window.h#L71">
+<ApiMember kind="function" name="lv_wayland_unassign_physical_display" file="public/drivers/wayland/lv_wayland_window.h" line={71} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland_window.h#L71">
 
 ### lv_wayland_unassign_physical_display
 
@@ -178,11 +186,53 @@ void lv_wayland_unassign_physical_display(lv_display_t *display)
 
 </ApiMember>
 
+<ApiMember kind="function" name="lv_wayland_window_is_fullscreen" file="public/drivers/wayland/lv_wayland_window.h" line={89} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland_window.h#L89">
+
+### lv_wayland_window_is_fullscreen
+
+Check if window is fullscreen
+
+```c
+bool lv_wayland_window_is_fullscreen(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
+
+**Returns:** `bool` — the fullscreen state of the window as reported by the compositor
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_wayland_window_is_maximized" file="public/drivers/wayland/lv_wayland_window.h" line={107} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland_window.h#L107">
+
+### lv_wayland_window_is_maximized
+
+Check if window is maximized
+
+```c
+bool lv_wayland_window_is_maximized(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | Reference to the LVGL display associated to the window |
+
+**Returns:** `bool` — the maximized state of the window as reported by the compositor
+
+
+</ApiMember>
+
 </ApiTab>
 </ApiTabs>
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_wayland_display_close_cb_t" file="public/drivers/wayland/lv_wayland_window.h" line={30} url="https://github.com/lvgl/lvgl/tree/a0e5183d5d1c2d97930da2372186815617e38179/include/lvgl/drivers/wayland/lv_wayland_window.h#L30">
+<ApiMember kind="typedef" name="lv_wayland_display_close_cb_t" file="public/drivers/wayland/lv_wayland_window.h" line={30} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland_window.h#L30">
 
 ### lv_wayland_display_close_cb_t
 

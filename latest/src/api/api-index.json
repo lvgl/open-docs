@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-04T17:40:21.977Z",
-    "symbolCount": 9248
+    "generatedAt": "2026-09-04T18:25:19.894Z",
+    "symbolCount": 9250
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -22036,9 +22036,19 @@
       "anchor": "lv_wayland_window_set_fullscreen",
       "kind": "function"
     },
+    "lv_wayland_window_is_fullscreen": {
+      "path": "api/public/drivers/wayland/lv_wayland_window_h",
+      "anchor": "lv_wayland_window_is_fullscreen",
+      "kind": "function"
+    },
     "lv_wayland_window_set_maximized": {
       "path": "api/public/drivers/wayland/lv_wayland_window_h",
       "anchor": "lv_wayland_window_set_maximized",
+      "kind": "function"
+    },
+    "lv_wayland_window_is_maximized": {
+      "path": "api/public/drivers/wayland/lv_wayland_window_h",
+      "anchor": "lv_wayland_window_is_maximized",
       "kind": "function"
     },
     "lv_wayland_window_set_minimized": {
