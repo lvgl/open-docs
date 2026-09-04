@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-04T17:08:38.963Z",
-    "symbolCount": 9246
+    "generatedAt": "2026-09-04T17:40:21.977Z",
+    "symbolCount": 9248
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -28896,6 +28896,11 @@
       "anchor": "lv_dropdown_set_text_static",
       "kind": "function"
     },
+    "lv_dropdown_set_text_translation_tag": {
+      "path": "api/public/widgets/lv_dropdown_h",
+      "anchor": "lv_dropdown_set_text_translation_tag",
+      "kind": "function"
+    },
     "lv_dropdown_set_options": {
       "path": "api/public/widgets/lv_dropdown_h",
       "anchor": "lv_dropdown_set_options",
@@ -28904,6 +28909,11 @@
     "lv_dropdown_set_options_static": {
       "path": "api/public/widgets/lv_dropdown_h",
       "anchor": "lv_dropdown_set_options_static",
+      "kind": "function"
+    },
+    "lv_dropdown_set_options_translation_tag": {
+      "path": "api/public/widgets/lv_dropdown_h",
+      "anchor": "lv_dropdown_set_options_translation_tag",
       "kind": "function"
     },
     "lv_dropdown_add_option": {
