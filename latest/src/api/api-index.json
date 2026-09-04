@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-04T09:45:28.603Z",
-    "symbolCount": 9242
+    "generatedAt": "2026-09-04T10:02:34.141Z",
+    "symbolCount": 9243
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -40794,6 +40794,11 @@
     "lv_opengles_color_format_is_rb_swap": {
       "path": "api/private/drivers/opengles/lv_opengles_private_h",
       "anchor": "lv_opengles_color_format_is_rb_swap",
+      "kind": "function"
+    },
+    "lv_opengles_color_format_is_premultiplied": {
+      "path": "api/private/drivers/opengles/lv_opengles_private_h",
+      "anchor": "lv_opengles_color_format_is_premultiplied",
       "kind": "function"
     },
     "lv_opengles_texture_upload_buf": {
