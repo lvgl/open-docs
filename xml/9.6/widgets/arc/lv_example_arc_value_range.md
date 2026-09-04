@@ -1,4 +1,4 @@
-```xml title="examples/widgets/arc/lv_example_arc_value_range.xml" source="https://github.com/lvgl/lvgl/blob/7d230fe6e67efaddd62dbf4872fbfb306fa73516/examples/widgets/arc/lv_example_arc_value_range.xml"
+```xml title="examples/widgets/arc/lv_example_arc_value_range.xml" source="https://github.com/lvgl/lvgl/blob/2110b9face987d8c597a84bf3d310f0bfeb60f5d/examples/widgets/arc/lv_example_arc_value_range.xml"
 <!--
  @title Arc value and range
  @brief Show how min_value/max_value map onto the same background arc.

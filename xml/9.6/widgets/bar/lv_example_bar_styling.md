@@ -1,4 +1,4 @@
-```xml title="examples/widgets/bar/lv_example_bar_styling.xml" source="https://github.com/lvgl/lvgl/blob/7d230fe6e67efaddd62dbf4872fbfb306fa73516/examples/widgets/bar/lv_example_bar_styling.xml"
+```xml title="examples/widgets/bar/lv_example_bar_styling.xml" source="https://github.com/lvgl/lvgl/blob/2110b9face987d8c597a84bf3d310f0bfeb60f5d/examples/widgets/bar/lv_example_bar_styling.xml"
 <!--
  @title Bar styling
  @brief Style the MAIN track and the INDICATOR independently, with a gradient fill.

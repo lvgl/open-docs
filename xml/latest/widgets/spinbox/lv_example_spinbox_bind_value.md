@@ -1,4 +1,4 @@
-```xml title="examples/widgets/spinbox/lv_example_spinbox_bind_value.xml" source="https://github.com/lvgl/lvgl/blob/7d230fe6e67efaddd62dbf4872fbfb306fa73516/examples/widgets/spinbox/lv_example_spinbox_bind_value.xml"
+```xml title="examples/widgets/spinbox/lv_example_spinbox_bind_value.xml" source="https://github.com/lvgl/lvgl/blob/2110b9face987d8c597a84bf3d310f0bfeb60f5d/examples/widgets/spinbox/lv_example_spinbox_bind_value.xml"
 <!--
  @title Spinbox bind value
  @brief Spinbox edits a subject; a bound arc visualises the same number.

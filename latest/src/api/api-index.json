@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-04T18:25:19.894Z",
-    "symbolCount": 9250
+    "generatedAt": "2026-09-04T18:31:18.074Z",
+    "symbolCount": 9256
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2085,6 +2085,16 @@
       "path": "api/public/api_map/lv_api_map_v9_5_h",
       "anchor": "lv_disp_rotation_t",
       "kind": "typedef"
+    },
+    "lv_wayland_assign_physical_display": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "lv_wayland_assign_physical_display",
+      "kind": "macro"
+    },
+    "lv_wayland_unassign_physical_display": {
+      "path": "api/public/api_map/lv_api_map_v9_5_h",
+      "anchor": "lv_wayland_unassign_physical_display",
+      "kind": "macro"
     },
     "lv_display_delete_event": {
       "path": "api/public/api_map/lv_api_map_v9_5_h",
@@ -21941,6 +21951,26 @@
       "anchor": "lv_wayland_get_fd",
       "kind": "function"
     },
+    "lv_wayland_get_output_count": {
+      "path": "api/public/drivers/wayland/lv_wayland_h",
+      "anchor": "lv_wayland_get_output_count",
+      "kind": "function"
+    },
+    "lv_wayland_get_output_name": {
+      "path": "api/public/drivers/wayland/lv_wayland_h",
+      "anchor": "lv_wayland_get_output_name",
+      "kind": "function"
+    },
+    "lv_wayland_get_output_size": {
+      "path": "api/public/drivers/wayland/lv_wayland_h",
+      "anchor": "lv_wayland_get_output_size",
+      "kind": "function"
+    },
+    "lv_wayland_get_display_size": {
+      "path": "api/public/drivers/wayland/lv_wayland_h",
+      "anchor": "lv_wayland_get_display_size",
+      "kind": "function"
+    },
     "lv_wayland_keyboard.h": {
       "path": "api/public/drivers/wayland/lv_wayland_keyboard_h",
       "anchor": "",
@@ -22021,14 +22051,14 @@
       "anchor": "lv_wayland_window_is_open",
       "kind": "function"
     },
-    "lv_wayland_assign_physical_display": {
+    "lv_wayland_window_set_physical_display": {
       "path": "api/public/drivers/wayland/lv_wayland_window_h",
-      "anchor": "lv_wayland_assign_physical_display",
+      "anchor": "lv_wayland_window_set_physical_display",
       "kind": "function"
     },
-    "lv_wayland_unassign_physical_display": {
+    "lv_wayland_window_remove_physical_display": {
       "path": "api/public/drivers/wayland/lv_wayland_window_h",
-      "anchor": "lv_wayland_unassign_physical_display",
+      "anchor": "lv_wayland_window_remove_physical_display",
       "kind": "function"
     },
     "lv_wayland_window_set_fullscreen": {
@@ -22060,6 +22090,11 @@
       "path": "api/public/drivers/wayland/lv_wayland_window_h",
       "anchor": "lv_wayland_display_close_cb_t",
       "kind": "typedef"
+    },
+    "LV_WAYLAND_PHYSICAL_DISPLAY_ANY": {
+      "path": "api/public/drivers/wayland/lv_wayland_window_h",
+      "anchor": "LV_WAYLAND_PHYSICAL_DISPLAY_ANY",
+      "kind": "macro"
     },
     "lv_windows_display.h": {
       "path": "api/public/drivers/windows/lv_windows_display_h",
@@ -41519,11 +41554,6 @@
     "LV_WAYLAND_DEFAULT_CURSOR_NAME": {
       "path": "api/private/drivers/wayland/lv_wayland_private_h",
       "anchor": "LV_WAYLAND_DEFAULT_CURSOR_NAME",
-      "kind": "macro"
-    },
-    "LV_WAYLAND_MAX_OUTPUTS": {
-      "path": "api/private/drivers/wayland/lv_wayland_private_h",
-      "anchor": "LV_WAYLAND_MAX_OUTPUTS",
       "kind": "macro"
     },
     "LV_WAYLAND_KEY_EVENT_MAX_COUNT": {

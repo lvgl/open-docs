@@ -2,16 +2,16 @@
 title: lv_wayland.h
 description: API reference for lv_wayland.h
 api:
-  functions: [lv_wayland_get_fd]
+  functions: [lv_wayland_get_fd, lv_wayland_get_output_count, lv_wayland_get_output_name, lv_wayland_get_output_size, lv_wayland_get_display_size]
 ---
 
 <RelatedHeaders name="lv_wayland_private.h" isPrivate={false} />
 
-<ApiSummary functions={1} />
+<ApiSummary functions={5} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_wayland_get_fd" file="public/drivers/wayland/lv_wayland.h" line={41} url="https://github.com/lvgl/lvgl/tree/7d230fe6e67efaddd62dbf4872fbfb306fa73516/include/lvgl/drivers/wayland/lv_wayland.h#L41">
+<ApiMember kind="function" name="lv_wayland_get_fd" file="public/drivers/wayland/lv_wayland.h" line={41} url="https://github.com/lvgl/lvgl/tree/2110b9face987d8c597a84bf3d310f0bfeb60f5d/include/lvgl/drivers/wayland/lv_wayland.h#L41">
 
 ### lv_wayland_get_fd
 
@@ -20,6 +20,88 @@ Retrieves the file descriptor of the wayland socket
 ```c
 int lv_wayland_get_fd(void)
 ```
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_wayland_get_output_count" file="public/drivers/wayland/lv_wayland.h" line={47} url="https://github.com/lvgl/lvgl/tree/2110b9face987d8c597a84bf3d310f0bfeb60f5d/include/lvgl/drivers/wayland/lv_wayland.h#L47">
+
+### lv_wayland_get_output_count
+
+Get the number of physical outputs (screens) advertised by the compositor
+
+```c
+uint8_t lv_wayland_get_output_count(void)
+```
+
+**Returns:** `uint8_t` — the number of outputs, 0 if the driver isn't initialized yet
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_wayland_get_output_name" file="public/drivers/wayland/lv_wayland.h" line={55} url="https://github.com/lvgl/lvgl/tree/2110b9face987d8c597a84bf3d310f0bfeb60f5d/include/lvgl/drivers/wayland/lv_wayland.h#L55">
+
+### lv_wayland_get_output_name
+
+Get the name of a physical output
+
+```c
+const char * lv_wayland_get_output_name(uint8_t output)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `output` | `uint8_t` | index of the output, `0`..<ApiLink name="lv_wayland_get_output_count" display="lv_wayland_get_output_count()" />` - 1` |
+
+**Returns:** `const char *` — the connector name, e.g. "HDMI-A-1", or NULL if `output` is out of range. The string is owned by the driver and stays valid until `lv_wayland_deinit`
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_wayland_get_output_size" file="public/drivers/wayland/lv_wayland.h" line={65} url="https://github.com/lvgl/lvgl/tree/2110b9face987d8c597a84bf3d310f0bfeb60f5d/include/lvgl/drivers/wayland/lv_wayland.h#L65">
+
+### lv_wayland_get_output_size
+
+Get the size of a physical output
+
+```c
+bool lv_wayland_get_output_size(uint8_t output, int32_t *width, int32_t *height)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `output` | `uint8_t` | index of the output, `0`..<ApiLink name="lv_wayland_get_output_count" display="lv_wayland_get_output_count()" />` - 1` |
+| `width` | `int32_t *` | pointer to store the width in pixels **May** be `NULL`. |
+| `height` | `int32_t *` | pointer to store the height in pixels **May** be `NULL`. |
+
+**Returns:** `bool` — true if the size is known, false if `output` is out of range or the compositor hasn't reported a size yet
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_wayland_get_display_size" file="public/drivers/wayland/lv_wayland.h" line={75} url="https://github.com/lvgl/lvgl/tree/2110b9face987d8c597a84bf3d310f0bfeb60f5d/include/lvgl/drivers/wayland/lv_wayland.h#L75">
+
+### lv_wayland_get_display_size
+
+Look up a physical output by name and get its size
+
+```c
+int32_t lv_wayland_get_display_size(const char *name, int32_t *width, int32_t *height)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `name` | `const char *` | connector name of the output, e.g. "DSI-1" or "HDMI-A-1" |
+| `width` | `int32_t *` | pointer to store the width in pixels **May** be `NULL`. |
+| `height` | `int32_t *` | pointer to store the height in pixels **May** be `NULL`. |
+
+**Returns:** `int32_t` — the index of the output, to be passed to `lv_wayland_window_set_physical_display`, or -1 if no output goes by that name
 
 
 </ApiMember>

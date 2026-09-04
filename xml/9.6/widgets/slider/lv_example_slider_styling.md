@@ -1,4 +1,4 @@
-```xml title="examples/widgets/slider/lv_example_slider_styling.xml" source="https://github.com/lvgl/lvgl/blob/7d230fe6e67efaddd62dbf4872fbfb306fa73516/examples/widgets/slider/lv_example_slider_styling.xml"
+```xml title="examples/widgets/slider/lv_example_slider_styling.xml" source="https://github.com/lvgl/lvgl/blob/2110b9face987d8c597a84bf3d310f0bfeb60f5d/examples/widgets/slider/lv_example_slider_styling.xml"
 <!--
  @title Slider styling
  @brief Style MAIN, INDICATOR, and KNOB — including a pressed-state knob highlight.
