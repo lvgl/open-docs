@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-04T19:00:16.243Z",
-    "symbolCount": 9266
+    "generatedAt": "2026-09-04T19:07:37.805Z",
+    "symbolCount": 9267
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -31399,6 +31399,11 @@
     "lv_roller_set_options": {
       "path": "api/public/widgets/lv_roller_h",
       "anchor": "lv_roller_set_options",
+      "kind": "function"
+    },
+    "lv_roller_set_options_translation_tag": {
+      "path": "api/public/widgets/lv_roller_h",
+      "anchor": "lv_roller_set_options_translation_tag",
       "kind": "function"
     },
     "lv_roller_set_selected": {
