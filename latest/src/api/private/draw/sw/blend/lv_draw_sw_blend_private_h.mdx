@@ -2,12 +2,136 @@
 title: lv_draw_sw_blend_private.h
 description: API reference for lv_draw_sw_blend_private.h
 api:
-  structs: [_lv_draw_sw_blend_dsc_t, _lv_draw_sw_blend_fill_dsc_t, _lv_draw_sw_blend_image_dsc_t]
+  functions: [lv_color32_unpremultiply, lv_color32_lumi_of, lv_color_16_16_mix_inlined, lv_color_mix32_inlined, lv_color_mix32_premultiplied_inlined]
+  structs: [_lv_draw_sw_blend_dsc_t, _lv_draw_sw_blend_fill_dsc_t, _lv_draw_sw_blend_image_dsc_t, lv_draw_sw_word_t, lv_draw_sw_halfword_t]
+  macros: [LV_COLOR_MIX_16_PREPARE, LV_COLOR_24_TO_16, LV_COLOR_MIX_16_TO_16_PREPARED]
 ---
 
 <RelatedHeaders name="lv_draw_sw_blend.h" isPrivate={true} />
 
-<ApiSummary structs={3} />
+<ApiSummary functions={5} structs={5} macros={3} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_color32_unpremultiply" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={142} url="https://github.com/lvgl/lvgl/tree/3481e3f1fd6ea65f1fcb6450d2d158ab38732a6a/src/draw/sw/blend/lv_draw_sw_blend_private.h#L142">
+
+### lv_color32_unpremultiply
+
+Undo the alpha scaling of a premultiplied pixel, giving back a straight color. Shared so the output formats that need it can't drift apart.
+
+```c
+static lv_color32_t lv_color32_unpremultiply(lv_color32_t c)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | <ApiLink name="lv_color32_t" /> | a premultiplied pixel |
+
+**Returns:** <ApiLink name="lv_color32_t" /> — the same pixel with straight channels
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color32_lumi_of" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={170} url="https://github.com/lvgl/lvgl/tree/3481e3f1fd6ea65f1fcb6450d2d158ab38732a6a/src/draw/sw/blend/lv_draw_sw_blend_private.h#L170">
+
+### lv_color32_lumi_of
+
+Luminance of an image pixel for the grayscale and indexed outputs. A premultiplied source has its channels already scaled by its alpha, so undo that first to get the same value a straight source would give.
+
+```c
+static uint8_t lv_color32_lumi_of(lv_color32_t c, bool premultiplied)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c` | <ApiLink name="lv_color32_t" /> | the pixel |
+| `premultiplied` | `bool` | true: `c` is premultiplied |
+
+**Returns:** `uint8_t` — the luminance, 0..255
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_16_16_mix_inlined" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={187} url="https://github.com/lvgl/lvgl/tree/3481e3f1fd6ea65f1fcb6450d2d158ab38732a6a/src/draw/sw/blend/lv_draw_sw_blend_private.h#L187">
+
+### lv_color_16_16_mix_inlined
+
+Inlined version of <ApiLink name="lv_color_16_16_mix" display="lv_color_16_16_mix()" /> for the per-pixel blend loops. Identical to the public function, but being in a header it can be inlined and loop-invariant parts (e.g. a constant fill color) can be hoisted out of the loops.
+
+```c
+static uint16_t lv_color_16_16_mix_inlined(uint16_t c1, uint16_t c2, uint8_t mix)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `c1` | `uint16_t` | the first color (typically the foreground color) |
+| `c2` | `uint16_t` | the second color (typically the background color) |
+| `mix` | `uint8_t` | 0..255, the opacity of `c1` |
+
+**Returns:** `uint16_t` — the mixed color
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_mix32_inlined" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={214} url="https://github.com/lvgl/lvgl/tree/3481e3f1fd6ea65f1fcb6450d2d158ab38732a6a/src/draw/sw/blend/lv_draw_sw_blend_private.h#L214">
+
+### lv_color_mix32_inlined
+
+Inlined version of <ApiLink name="lv_color_mix32" display="lv_color_mix32()" /> for the per-pixel blend loops. Identical to the public function, but being in a header it can be inlined, sparing a function call per pixel. The channels are mixed independently on purpose: superscalar CPUs can compute them in parallel, which is faster than packing them into one 32 bit value.
+
+\< Fully cover if opa \>= LV_OPA_MAX
+
+\< Fully transparent if opa \<= LV_OPA_MIN
+
+```c
+static lv_color32_t lv_color_mix32_inlined(lv_color32_t fg, lv_color32_t bg)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `fg` | <ApiLink name="lv_color32_t" /> | the foreground color, fg.alpha is the mix ratio |
+| `bg` | <ApiLink name="lv_color32_t" /> | the background color |
+
+**Returns:** <ApiLink name="lv_color32_t" /> — the mixed color, the alpha of `bg` is kept
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_mix32_premultiplied_inlined" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={240} url="https://github.com/lvgl/lvgl/tree/3481e3f1fd6ea65f1fcb6450d2d158ab38732a6a/src/draw/sw/blend/lv_draw_sw_blend_private.h#L240">
+
+### lv_color_mix32_premultiplied_inlined
+
+Inlined version of <ApiLink name="lv_color_mix32_premultiplied" display="lv_color_mix32_premultiplied()" /> for the per-pixel blend loops. The premultiplied foreground is added as is and the background is weighted with the remaining alpha.
+
+\< Fully cover if opa \>= LV_OPA_MAX
+
+\< Fully transparent if opa \<= LV_OPA_MIN
+
+\< Fully cover if opa \>= LV_OPA_MAX
+
+```c
+static lv_color32_t lv_color_mix32_premultiplied_inlined(lv_color32_t fg, lv_color32_t bg)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `fg` | <ApiLink name="lv_color32_t" /> | the premultiplied foreground color, fg.alpha is the mix ratio |
+| `bg` | <ApiLink name="lv_color32_t" /> | the background color |
+
+**Returns:** <ApiLink name="lv_color32_t" /> — the mixed color with the alpha of `bg`, except for an (almost) opaque foreground where `fg` is returned as it is, so its alpha is kept
+
+
+</ApiMember>
 
 ## Structs
 
@@ -71,6 +195,88 @@ api:
 | `blend_mode` | <ApiLink name="lv_blend_mode_t" /> |  |
 | `relative_area` | <ApiLink name="lv_area_t" /> | The blend area relative to the layer's buffer area. |
 | `src_area` | <ApiLink name="lv_area_t" /> | The original src area. |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_draw_sw_word_t">
+
+### lv_draw_sw_word_t
+
+Read or write four bytes of a pixel or mask buffer as one word. The caller must align the pointer to a word first.
+
+Through a union and not a cast: C99 6.5p7 lets an object be accessed through an aggregate that has its type among the members, `*(uint32_t *)ptr` on a `uint8_t` or `uint16_t` buffer is undefined and GCC 13 at -O2 really does keep a stale half word across it.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `u32` | `uint32_t` |  |
+| `u16` | `uint16_t[2]` |  |
+| `u8` | `uint8_t[4]` |  |
+| `c32` | <ApiLink name="lv_color32_t" /> |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="lv_draw_sw_halfword_t">
+
+### lv_draw_sw_halfword_t
+
+The same for two bytes, for the RGB565 buffers.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `u16` | `uint16_t` |  |
+| `u8` | `uint8_t[2]` |  |
+| `c16` | <ApiLink name="lv_color16_t" /> |  |
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_COLOR_MIX_16_PREPARE" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={110} url="https://github.com/lvgl/lvgl/tree/3481e3f1fd6ea65f1fcb6450d2d158ab38732a6a/src/draw/sw/blend/lv_draw_sw_blend_private.h#L110">
+
+### LV_COLOR_MIX_16_PREPARE
+
+```c
+#define LV_COLOR_MIX_16_PREPARE(c) \
+    ((((uint32_t)(c)) | (((uint32_t)(c)) << 16)) & 0x07E0F81Fu)
+```
+
+Prepare an RGB565 color for mixing: spread it over 32 bits so each channel gets room to grow and a whole pixel can be mixed with one multiplication. See [https://stackoverflow.com/a/50012418/1999969](https://stackoverflow.com/a/50012418/1999969)
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_COLOR_24_TO_16" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={115} url="https://github.com/lvgl/lvgl/tree/3481e3f1fd6ea65f1fcb6450d2d158ab38732a6a/src/draw/sw/blend/lv_draw_sw_blend_private.h#L115">
+
+### LV_COLOR_24_TO_16
+
+```c
+#define LV_COLOR_24_TO_16(c1) \
+    ((uint16_t)((((c1)[2] & 0xF8) << 8) + (((c1)[1] & 0xFC) << 3) + (((c1)[0] & 0xF8) >> 3)))
+```
+
+Convert RGB888 to RGB565.
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_COLOR_MIX_16_TO_16_PREPARED" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={124} url="https://github.com/lvgl/lvgl/tree/3481e3f1fd6ea65f1fcb6450d2d158ab38732a6a/src/draw/sw/blend/lv_draw_sw_blend_private.h#L124">
+
+### LV_COLOR_MIX_16_TO_16_PREPARED
+
+```c
+#define LV_COLOR_MIX_16_TO_16_PREPARED(res, fg_prep, bg, mix) \
+    do { \
+            uint32_t bg_prep_ = LV_COLOR_MIX_16_PREPARE(bg); \
+            uint32_t mix5_ = ((uint32_t)(mix) + 4) >> 3; \
+            uint32_t res_ = (((((fg_prep) - bg_prep_) * mix5_) >> 5) + bg_prep_) & 0x07E0F81Fu; \
+            (res) = (uint16_t)((res_ >> 16) | res_); \
+        } while(0)
+```
+
+Mix a prepared foreground into an RGB565 background. `mix` must be 1..254, the callers handle 0 and 255 themselves. `res` may be the same variable as `bg`. A macro and not a function because -Os inlines neither, and this runs on every pixel. See [https://stackoverflow.com/a/50012418/1999969](https://stackoverflow.com/a/50012418/1999969)
 
 
 </ApiMember>

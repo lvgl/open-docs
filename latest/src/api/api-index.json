@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-04T18:55:50.384Z",
-    "symbolCount": 9256
+    "generatedAt": "2026-09-04T19:00:16.243Z",
+    "symbolCount": 9266
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -36371,6 +36371,31 @@
       "anchor": "",
       "kind": "header"
     },
+    "lv_color32_unpremultiply": {
+      "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
+      "anchor": "lv_color32_unpremultiply",
+      "kind": "function"
+    },
+    "lv_color32_lumi_of": {
+      "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
+      "anchor": "lv_color32_lumi_of",
+      "kind": "function"
+    },
+    "lv_color_16_16_mix_inlined": {
+      "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
+      "anchor": "lv_color_16_16_mix_inlined",
+      "kind": "function"
+    },
+    "lv_color_mix32_inlined": {
+      "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
+      "anchor": "lv_color_mix32_inlined",
+      "kind": "function"
+    },
+    "lv_color_mix32_premultiplied_inlined": {
+      "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
+      "anchor": "lv_color_mix32_premultiplied_inlined",
+      "kind": "function"
+    },
     "_lv_draw_sw_blend_dsc_t": {
       "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
       "anchor": "_lv_draw_sw_blend_dsc_t",
@@ -36385,6 +36410,31 @@
       "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
       "anchor": "_lv_draw_sw_blend_image_dsc_t",
       "kind": "struct"
+    },
+    "lv_draw_sw_word_t": {
+      "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
+      "anchor": "lv_draw_sw_word_t",
+      "kind": "struct"
+    },
+    "lv_draw_sw_halfword_t": {
+      "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
+      "anchor": "lv_draw_sw_halfword_t",
+      "kind": "struct"
+    },
+    "LV_COLOR_MIX_16_PREPARE": {
+      "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
+      "anchor": "LV_COLOR_MIX_16_PREPARE",
+      "kind": "macro"
+    },
+    "LV_COLOR_24_TO_16": {
+      "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
+      "anchor": "LV_COLOR_24_TO_16",
+      "kind": "macro"
+    },
+    "LV_COLOR_MIX_16_TO_16_PREPARED": {
+      "path": "api/private/draw/sw/blend/lv_draw_sw_blend_private_h",
+      "anchor": "LV_COLOR_MIX_16_TO_16_PREPARED",
+      "kind": "macro"
     },
     "lv_draw_sw_blend_to_a8.h": {
       "path": "api/private/draw/sw/blend/lv_draw_sw_blend_to_a8_h",
