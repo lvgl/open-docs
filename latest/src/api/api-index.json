@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-04T05:34:53.032Z",
-    "symbolCount": 9239
+    "generatedAt": "2026-09-04T06:28:21.841Z",
+    "symbolCount": 9242
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2959,6 +2959,21 @@
     "LV_DRAW_DMA2D_HAL_INCLUDE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_DMA2D_HAL_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_USE_SIFLI_EPIC": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_SIFLI_EPIC",
+      "kind": "macro"
+    },
+    "LV_USE_SIFLI_EPIC_DRAW_THREAD": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_SIFLI_EPIC_DRAW_THREAD",
+      "kind": "macro"
+    },
+    "LV_USE_SIFLI_EPIC_ASSERT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_SIFLI_EPIC_ASSERT",
       "kind": "macro"
     },
     "LV_DRAW_EVE_EVE_GENERATION": {
