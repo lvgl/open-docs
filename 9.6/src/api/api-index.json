@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-04T10:02:34.141Z",
-    "symbolCount": 9243
+    "generatedAt": "2026-09-04T10:53:09.746Z",
+    "symbolCount": 9245
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -159,6 +159,16 @@
     "lv_gltf_model_get_animation_speed": {
       "path": "api/public/3d/lv_gltf_model_h",
       "anchor": "lv_gltf_model_get_animation_speed",
+      "kind": "function"
+    },
+    "lv_gltf_model_set_animation_time": {
+      "path": "api/public/3d/lv_gltf_model_h",
+      "anchor": "lv_gltf_model_set_animation_time",
+      "kind": "function"
+    },
+    "lv_gltf_model_set_animation_ratio": {
+      "path": "api/public/3d/lv_gltf_model_h",
+      "anchor": "lv_gltf_model_set_animation_ratio",
       "kind": "function"
     },
     "lv_gltf_model_loader.h": {
