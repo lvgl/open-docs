@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-04T14:24:15.938Z",
-    "symbolCount": 9245
+    "generatedAt": "2026-09-04T17:08:38.963Z",
+    "symbolCount": 9246
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -41504,6 +41504,11 @@
     "LV_WAYLAND_MAX_OUTPUTS": {
       "path": "api/private/drivers/wayland/lv_wayland_private_h",
       "anchor": "LV_WAYLAND_MAX_OUTPUTS",
+      "kind": "macro"
+    },
+    "LV_WAYLAND_KEY_EVENT_MAX_COUNT": {
+      "path": "api/private/drivers/wayland/lv_wayland_private_h",
+      "anchor": "LV_WAYLAND_KEY_EVENT_MAX_COUNT",
       "kind": "macro"
     },
     "lv_wl_ctx": {
