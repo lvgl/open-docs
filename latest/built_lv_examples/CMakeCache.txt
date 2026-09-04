@@ -353,6 +353,9 @@ LV_BUILD_DEFCONFIG_STRICT:BOOL=OFF
 //Path to .config path - used with Kconfig
 LV_BUILD_DOTCONFIG_PATH:PATH=
 
+//Enable install rules
+LV_BUILD_INSTALL:BOOL=OFF
+
 //Path to root Kconfig file
 LV_BUILD_KCONFIG_ROOT:PATH=/home/runner/work/lvgl/emscripten_builder/lvgl/Kconfig
 
