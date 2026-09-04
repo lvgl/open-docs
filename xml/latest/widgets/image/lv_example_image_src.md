@@ -1,4 +1,4 @@
-```xml title="examples/widgets/image/lv_example_image_src.xml" source="https://github.com/lvgl/lvgl/blob/2efe79d921abf7bba6eeabf02d873d1439c0c189/examples/widgets/image/lv_example_image_src.xml"
+```xml title="examples/widgets/image/lv_example_image_src.xml" source="https://github.com/lvgl/lvgl/blob/2f048b06e507a3640d21215a0bd3534c6e56a46d/examples/widgets/image/lv_example_image_src.xml"
 <!--
  @title Image source
  @brief Display an image registered globally for the project.

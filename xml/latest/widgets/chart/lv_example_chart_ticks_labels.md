@@ -1,4 +1,4 @@
-```xml title="examples/widgets/chart/lv_example_chart_ticks_labels.xml" source="https://github.com/lvgl/lvgl/blob/2efe79d921abf7bba6eeabf02d873d1439c0c189/examples/widgets/chart/lv_example_chart_ticks_labels.xml"
+```xml title="examples/widgets/chart/lv_example_chart_ticks_labels.xml" source="https://github.com/lvgl/lvgl/blob/2f048b06e507a3640d21215a0bd3534c6e56a46d/examples/widgets/chart/lv_example_chart_ticks_labels.xml"
 <!--
  @title Chart ticks and labels
  @brief Pair a chart with an `lv_scale` to get a labelled X axis.

@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-04T21:18:48.584Z",
-    "symbolCount": 9269
+    "generatedAt": "2026-09-04T23:01:35.334Z",
+    "symbolCount": 9270
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -7472,6 +7472,11 @@
       "kind": "enumvalue"
     },
     "LV_PROPERTY_OBJ_FLEX_IN_NEW_TRACK": {
+      "path": "api/public/core/lv_obj_h",
+      "anchor": "_lv_signed_prop_id_t",
+      "kind": "enumvalue"
+    },
+    "LV_PROPERTY_OBJ_NAME": {
       "path": "api/public/core/lv_obj_h",
       "anchor": "_lv_signed_prop_id_t",
       "kind": "enumvalue"

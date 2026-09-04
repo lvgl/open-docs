@@ -1,4 +1,4 @@
-```xml title="examples/widgets/checkbox/lv_example_checkbox_styling.xml" source="https://github.com/lvgl/lvgl/blob/2efe79d921abf7bba6eeabf02d873d1439c0c189/examples/widgets/checkbox/lv_example_checkbox_styling.xml"
+```xml title="examples/widgets/checkbox/lv_example_checkbox_styling.xml" source="https://github.com/lvgl/lvgl/blob/2f048b06e507a3640d21215a0bd3534c6e56a46d/examples/widgets/checkbox/lv_example_checkbox_styling.xml"
 <!--
  @title Checkbox styling
  @brief Style the tick box (INDICATOR) and its checked state separately.
