@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-05T07:03:25.270Z",
-    "symbolCount": 9270
+    "generatedAt": "2026-09-05T18:40:00.067Z",
+    "symbolCount": 9271
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -5877,6 +5877,11 @@
       "kind": "enumvalue"
     },
     "LV_EVENT_LAST": {
+      "path": "api/public/core/lv_event_h",
+      "anchor": "lv_event_code_t",
+      "kind": "enumvalue"
+    },
+    "LV_EVENT_LAST_CUSTOM": {
       "path": "api/public/core/lv_event_h",
       "anchor": "lv_event_code_t",
       "kind": "enumvalue"
