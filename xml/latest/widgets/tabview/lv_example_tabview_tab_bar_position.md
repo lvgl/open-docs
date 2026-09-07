@@ -1,4 +1,4 @@
-```xml title="examples/widgets/tabview/lv_example_tabview_tab_bar_position.xml" source="https://github.com/lvgl/lvgl/blob/c1387caafe7dab8e7aee9517f0c12dec66921c4f/examples/widgets/tabview/lv_example_tabview_tab_bar_position.xml"
+```xml title="examples/widgets/tabview/lv_example_tabview_tab_bar_position.xml" source="https://github.com/lvgl/lvgl/blob/607ce5ad787031634a2664a7ca7b70940f64c897/examples/widgets/tabview/lv_example_tabview_tab_bar_position.xml"
 <!--
  @title Tab view tab bar position
  @brief Place the tab bar on any of the four sides.
