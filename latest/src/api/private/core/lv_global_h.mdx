@@ -26,6 +26,7 @@ api:
 | `disp_default` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |  |
 | `style_trans_ll` | <ApiLink name="lv_ll_t" /> |  |
 | `style_refresh` | `bool` |  |
+| `blur_obj_cnt` | `uint32_t` | Number of widgets that currently have blur or a drop shadow (see lv_obj_t::has_blur). If it is zero <ApiLink name="lv_obj_invalidate_expand_blur" display="lv_obj_invalidate_expand_blur()" /> is skipped. |
 | `style_custom_table_size` | `uint32_t` |  |
 | `style_last_custom_prop_id` | `uint32_t` |  |
 | `style_custom_prop_flag_lookup_table` | `uint8_t *` |  |
@@ -95,7 +96,7 @@ api:
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_global_t" file="private/core/lv_global.h" line={270} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_global.h#L270">
+<ApiMember kind="typedef" name="lv_global_t" file="private/core/lv_global.h" line={273} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_global.h#L273">
 
 ### lv_global_t
 
@@ -108,7 +109,7 @@ typedef struct _lv_global_t lv_global_t
 
 ## Macros
 
-<ApiMember kind="macro" name="ZERO_MEM_SENTINEL" file="private/core/lv_global.h" line={43} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_global.h#L43">
+<ApiMember kind="macro" name="ZERO_MEM_SENTINEL" file="private/core/lv_global.h" line={43} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_global.h#L43">
 
 ### ZERO_MEM_SENTINEL
 
@@ -119,7 +120,7 @@ typedef struct _lv_global_t lv_global_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_GLOBAL_DEFAULT" file="private/core/lv_global.h" line={287} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_global.h#L287">
+<ApiMember kind="macro" name="LV_GLOBAL_DEFAULT" file="private/core/lv_global.h" line={290} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_global.h#L290">
 
 ### LV_GLOBAL_DEFAULT
 
@@ -133,7 +134,7 @@ typedef struct _lv_global_t lv_global_t
 
 ## Variables
 
-<ApiMember kind="variable" name="lv_global" file="private/core/lv_global.h" line={286} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_global.h#L286">
+<ApiMember kind="variable" name="lv_global" file="private/core/lv_global.h" line={289} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_global.h#L289">
 
 ### lv_global
 

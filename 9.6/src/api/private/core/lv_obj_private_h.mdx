@@ -2,18 +2,18 @@
 title: lv_obj_private.h
 description: API reference for lv_obj_private.h
 api:
-  functions: [lv_obj_allocate_spec_attr, lv_obj_add_child, lv_obj_remove_child]
+  functions: [lv_obj_allocate_spec_attr, lv_obj_add_child, lv_obj_remove_child, lv_obj_invalidate_expand_blur]
   structs: [_lv_obj_spec_attr_t, _lv_obj_t]
   typedefs: [lv_obj_spec_attr_t]
 ---
 
 <RelatedHeaders name="lv_obj.h" isPrivate={true} />
 
-<ApiSummary functions={3} structs={2} typedefs={1} />
+<ApiSummary functions={4} structs={2} typedefs={1} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_obj_allocate_spec_attr" file="private/core/lv_obj_private.h" line={173} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_obj_private.h#L173">
+<ApiMember kind="function" name="lv_obj_allocate_spec_attr" file="private/core/lv_obj_private.h" line={178} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_private.h#L178">
 
 ### lv_obj_allocate_spec_attr
 
@@ -34,7 +34,7 @@ lv_obj_spec_attr_t * lv_obj_allocate_spec_attr(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_child" file="private/core/lv_obj_private.h" line={175} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_obj_private.h#L175">
+<ApiMember kind="function" name="lv_obj_add_child" file="private/core/lv_obj_private.h" line={180} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_private.h#L180">
 
 ### lv_obj_add_child
 
@@ -52,7 +52,7 @@ lv_result_t lv_obj_add_child(lv_obj_t *parent, lv_obj_t *child)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_child" file="private/core/lv_obj_private.h" line={176} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_obj_private.h#L176">
+<ApiMember kind="function" name="lv_obj_remove_child" file="private/core/lv_obj_private.h" line={181} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_private.h#L181">
 
 ### lv_obj_remove_child
 
@@ -66,6 +66,25 @@ void lv_obj_remove_child(lv_obj_t *parent, lv_obj_t *child)
 |------|------|
 | `parent` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
 | `child` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_invalidate_expand_blur" file="private/core/lv_obj_private.h" line={191} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_private.h#L191">
+
+### lv_obj_invalidate_expand_blur
+
+Expand the display's invalidated areas to cover blur objects whose background changed. It's called once per frame and invalidates the full extent of every blur object that overlaps an invalidated area, repeating the walk until a pass adds no new areas to cover transitive blur-over-blur cases. Does nothing while no widget has blur (blur_obj_cnt in lv_global_t is zero).
+
+```c
+void lv_obj_invalidate_expand_blur(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
 
 
 </ApiMember>
@@ -151,13 +170,14 @@ Special, rarely used attributes. They are allocated automatically if any element
 | `w_ignore_size` | `uint16_t` |  |
 | `is_deleting` | `uint16_t` |  |
 | `rendered` | `uint16_t` | The widget is rendered at least once already. It's used to skip initial animations and transitions. |
+| `has_blur` | `uint16_t` | The widget has blur or a drop shadow in its current state, so a change behind it must invalidate its full extent. It's updated by <ApiLink name="lv_obj_update_blur_status" display="lv_obj_update_blur_status()" /> and counted in blur_obj_cnt in lv_global_t. |
 
 
 </ApiMember>
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_obj_spec_attr_t" file="private/core/lv_obj_private.h" line={55} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_obj_private.h#L55">
+<ApiMember kind="typedef" name="lv_obj_spec_attr_t" file="private/core/lv_obj_private.h" line={55} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_private.h#L55">
 
 ### lv_obj_spec_attr_t
 

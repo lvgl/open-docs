@@ -2,20 +2,20 @@
 title: lv_obj_style_private.h
 description: API reference for lv_obj_style_private.h
 api:
-  functions: [lv_obj_style_init, lv_obj_style_deinit, lv_obj_style_create_transition, lv_obj_style_state_compare, lv_obj_update_layer_type, lv_obj_get_style_prop_internal, lv_obj_style_apply_color_filter_internal]
+  functions: [lv_obj_style_init, lv_obj_style_deinit, lv_obj_style_create_transition, lv_obj_style_state_compare, lv_obj_update_layer_type, lv_obj_get_style_prop_internal, lv_obj_style_apply_color_filter_internal, lv_obj_update_blur_status]
   structs: [_lv_obj_style_t, _lv_obj_style_transition_dsc_t]
 ---
 
 <RelatedHeaders name="lv_obj_style.h" isPrivate={true} />
 
-<ApiSummary functions={7} structs={2} />
+<ApiSummary functions={8} structs={2} />
 
 ## Functions
 
-<ApiTabs items={["Getters (1)","Other (6)"]}>
+<ApiTabs items={["Getters (1)","Other (7)"]}>
 <ApiTab value="Getters (1)">
 
-<ApiMember kind="function" name="lv_obj_get_style_prop_internal" file="private/core/lv_obj_style_private.h" line={98} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_obj_style_private.h#L98">
+<ApiMember kind="function" name="lv_obj_get_style_prop_internal" file="private/core/lv_obj_style_private.h" line={98} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_style_private.h#L98">
 
 ### lv_obj_get_style_prop_internal
 
@@ -37,9 +37,9 @@ lv_style_value_t lv_obj_get_style_prop_internal(const lv_obj_t *obj, lv_part_t p
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Other (6)">
+<ApiTab value="Other (7)">
 
-<ApiMember kind="function" name="lv_obj_style_init" file="private/core/lv_obj_style_private.h" line={54} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_obj_style_private.h#L54">
+<ApiMember kind="function" name="lv_obj_style_init" file="private/core/lv_obj_style_private.h" line={54} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_style_private.h#L54">
 
 ### lv_obj_style_init
 
@@ -52,7 +52,7 @@ void lv_obj_style_init(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_style_deinit" file="private/core/lv_obj_style_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_obj_style_private.h#L60">
+<ApiMember kind="function" name="lv_obj_style_deinit" file="private/core/lv_obj_style_private.h" line={60} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_style_private.h#L60">
 
 ### lv_obj_style_deinit
 
@@ -65,7 +65,7 @@ void lv_obj_style_deinit(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_style_create_transition" file="private/core/lv_obj_style_private.h" line={70} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_obj_style_private.h#L70">
+<ApiMember kind="function" name="lv_obj_style_create_transition" file="private/core/lv_obj_style_private.h" line={70} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_style_private.h#L70">
 
 ### lv_obj_style_create_transition
 
@@ -88,7 +88,7 @@ void lv_obj_style_create_transition(lv_obj_t *obj, lv_part_t part, lv_state_t pr
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_style_state_compare" file="private/core/lv_obj_style_private.h" line={84} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_obj_style_private.h#L84">
+<ApiMember kind="function" name="lv_obj_style_state_compare" file="private/core/lv_obj_style_private.h" line={84} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_style_private.h#L84">
 
 ### lv_obj_style_state_compare
 
@@ -110,7 +110,7 @@ lv_style_state_cmp_t lv_obj_style_state_compare(lv_obj_t *obj, lv_state_t state1
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_update_layer_type" file="private/core/lv_obj_style_private.h" line={92} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_obj_style_private.h#L92">
+<ApiMember kind="function" name="lv_obj_update_layer_type" file="private/core/lv_obj_style_private.h" line={92} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_style_private.h#L92">
 
 ### lv_obj_update_layer_type
 
@@ -129,7 +129,7 @@ void lv_obj_update_layer_type(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_style_apply_color_filter_internal" file="private/core/lv_obj_style_private.h" line={105} url="https://github.com/lvgl/lvgl/tree/8f52ded65f765ae50850a1e9409c6a747253ca13/src/core/lv_obj_style_private.h#L105">
+<ApiMember kind="function" name="lv_obj_style_apply_color_filter_internal" file="private/core/lv_obj_style_private.h" line={105} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_style_private.h#L105">
 
 ### lv_obj_style_apply_color_filter_internal
 
@@ -146,6 +146,25 @@ lv_style_value_t lv_obj_style_apply_color_filter_internal(const lv_obj_t *obj, l
 | `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> |
 | `part` | <ApiLink name="lv_part_t" /> |
 | `v` | <ApiLink name="lv_style_value_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_update_blur_status" file="private/core/lv_obj_style_private.h" line={113} url="https://github.com/lvgl/lvgl/tree/bf1aa8210f7336ba19624733f3903fc83b5e8907/src/core/lv_obj_style_private.h#L113">
+
+### lv_obj_update_blur_status
+
+Update the cached blur status of a widget based on its current styles and state, and maintain the global count of widgets with blur (blur_obj_cnt in lv_global_t). The result will be stored in `obj->has_blur`.
+
+```c
+void lv_obj_update_blur_status(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | the object whose blur status should be updated |
 
 
 </ApiMember>
