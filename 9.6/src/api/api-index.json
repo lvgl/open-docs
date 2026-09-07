@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-07T06:56:58.416Z",
-    "symbolCount": 9273
+    "generatedAt": "2026-09-07T07:02:10.839Z",
+    "symbolCount": 9275
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -45221,6 +45221,11 @@
       "anchor": "lv_text_get_width",
       "kind": "function"
     },
+    "lv_text_get_line_width": {
+      "path": "api/private/misc/lv_text_private_h",
+      "anchor": "lv_text_get_line_width",
+      "kind": "function"
+    },
     "lv_text_is_cmd": {
       "path": "api/private/misc/lv_text_private_h",
       "anchor": "lv_text_is_cmd",
@@ -45259,6 +45264,11 @@
     "lv_text_is_break_char": {
       "path": "api/private/misc/lv_text_private_h",
       "anchor": "lv_text_is_break_char",
+      "kind": "function"
+    },
+    "lv_text_is_hanging_space": {
+      "path": "api/private/misc/lv_text_private_h",
+      "anchor": "lv_text_is_hanging_space",
       "kind": "function"
     },
     "lv_text_is_a_word": {
