@@ -2,7 +2,7 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-05T18:40:00.067Z",
+    "generatedAt": "2026-09-07T06:02:49.284Z",
     "symbolCount": 9271
   },
   "symbols": {
@@ -8821,14 +8821,14 @@
       "anchor": "lv_obj_refresh_style",
       "kind": "function"
     },
-    "lv_obj_style_set_enabled": {
+    "lv_obj_set_style_enabled": {
       "path": "api/public/core/lv_obj_style_h",
-      "anchor": "lv_obj_style_set_enabled",
+      "anchor": "lv_obj_set_style_enabled",
       "kind": "function"
     },
-    "lv_obj_style_get_enabled": {
+    "lv_obj_get_style_enabled": {
       "path": "api/public/core/lv_obj_style_h",
-      "anchor": "lv_obj_style_get_enabled",
+      "anchor": "lv_obj_get_style_enabled",
       "kind": "function"
     },
     "lv_obj_style_set_disabled": {
