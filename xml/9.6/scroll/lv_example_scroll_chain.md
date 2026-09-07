@@ -1,4 +1,4 @@
-```xml title="examples/scroll/lv_example_scroll_chain.xml" source="https://github.com/lvgl/lvgl/blob/e392ab2af89334c39f72038e0047b70ad0b93c0b/examples/scroll/lv_example_scroll_chain.xml"
+```xml title="examples/scroll/lv_example_scroll_chain.xml" source="https://github.com/lvgl/lvgl/blob/e93fb8815a2455a66454cb14a63614a7b99acae5/examples/scroll/lv_example_scroll_chain.xml"
 <!--
  @title Scroll chaining
  @brief A nested scrollable can stop scrolling from propagating to its parent.
