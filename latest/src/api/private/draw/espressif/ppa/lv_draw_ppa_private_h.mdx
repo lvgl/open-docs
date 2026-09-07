@@ -2,7 +2,7 @@
 title: lv_draw_ppa_private.h
 description: API reference for lv_draw_ppa_private.h
 api:
-  functions: [ppa_src_cf_supported, ppa_dest_cf_supported, lv_color_format_to_ppa_fill, lv_color_format_to_ppa_blend, lv_color_format_to_ppa_srm]
+  functions: [ppa_src_cf_supported, ppa_dest_cf_supported, lv_color_format_to_ppa_fill, lv_color_format_to_ppa_blend, lv_ppa_pic_w, lv_color_format_to_ppa_srm]
   structs: [lv_draw_ppa_unit]
   typedefs: [lv_draw_ppa_unit_t]
   macros: [LV_PPA_NONBLOCKING_OPS, PPA_ALIGN_UP, PPA_PTR_ALIGN_UP, PPA_ALIGN_DOWN, PPA_PTR_ALIGN_DOWN]
@@ -10,11 +10,11 @@ api:
 
 <RelatedHeaders name="lv_draw_ppa.h" isPrivate={true} />
 
-<ApiSummary functions={5} structs={1} typedefs={1} macros={5} />
+<ApiSummary functions={6} structs={1} typedefs={1} macros={5} />
 
 ## Functions
 
-<ApiMember kind="function" name="ppa_src_cf_supported" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={89} url="https://github.com/lvgl/lvgl/tree/83b620f5bcdc69d84669de4cada8e6ec93d32a9b/src/draw/espressif/ppa/lv_draw_ppa_private.h#L89">
+<ApiMember kind="function" name="ppa_src_cf_supported" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={90} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L90">
 
 ### ppa_src_cf_supported
 
@@ -31,7 +31,7 @@ static bool ppa_src_cf_supported(lv_color_format_t cf)
 
 </ApiMember>
 
-<ApiMember kind="function" name="ppa_dest_cf_supported" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={106} url="https://github.com/lvgl/lvgl/tree/83b620f5bcdc69d84669de4cada8e6ec93d32a9b/src/draw/espressif/ppa/lv_draw_ppa_private.h#L106">
+<ApiMember kind="function" name="ppa_dest_cf_supported" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={107} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L107">
 
 ### ppa_dest_cf_supported
 
@@ -48,7 +48,7 @@ static bool ppa_dest_cf_supported(lv_color_format_t cf)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_color_format_to_ppa_fill" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={123} url="https://github.com/lvgl/lvgl/tree/83b620f5bcdc69d84669de4cada8e6ec93d32a9b/src/draw/espressif/ppa/lv_draw_ppa_private.h#L123">
+<ApiMember kind="function" name="lv_color_format_to_ppa_fill" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={124} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L124">
 
 ### lv_color_format_to_ppa_fill
 
@@ -65,7 +65,7 @@ static ppa_fill_color_mode_t lv_color_format_to_ppa_fill(lv_color_format_t lv_fm
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_color_format_to_ppa_blend" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={137} url="https://github.com/lvgl/lvgl/tree/83b620f5bcdc69d84669de4cada8e6ec93d32a9b/src/draw/espressif/ppa/lv_draw_ppa_private.h#L137">
+<ApiMember kind="function" name="lv_color_format_to_ppa_blend" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={138} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L138">
 
 ### lv_color_format_to_ppa_blend
 
@@ -82,7 +82,26 @@ static ppa_blend_color_mode_t lv_color_format_to_ppa_blend(lv_color_format_t lv_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_color_format_to_ppa_srm" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={151} url="https://github.com/lvgl/lvgl/tree/83b620f5bcdc69d84669de4cada8e6ec93d32a9b/src/draw/espressif/ppa/lv_draw_ppa_private.h#L151">
+<ApiMember kind="function" name="lv_ppa_pic_w" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={152} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L152">
+
+### lv_ppa_pic_w
+
+```c
+static int32_t lv_ppa_pic_w(uint32_t stride, int32_t w, lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `stride` | `uint32_t` |
+| `w` | `int32_t` |
+| `cf` | <ApiLink name="lv_color_format_t" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_color_format_to_ppa_srm" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={162} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L162">
 
 ### lv_color_format_to_ppa_srm
 
@@ -113,13 +132,14 @@ static ppa_srm_color_mode_t lv_color_format_to_ppa_srm(lv_color_format_t lv_fmt)
 | `fill_client` | `ppa_client_handle_t` |  |
 | `blend_client` | `ppa_client_handle_t` |  |
 | `buf` | `uint8_t *` |  |
+| `img_sw_fallback` | `bool` |  |
 
 
 </ApiMember>
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_draw_ppa_unit_t" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={71} url="https://github.com/lvgl/lvgl/tree/83b620f5bcdc69d84669de4cada8e6ec93d32a9b/src/draw/espressif/ppa/lv_draw_ppa_private.h#L71">
+<ApiMember kind="typedef" name="lv_draw_ppa_unit_t" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={72} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L72">
 
 ### lv_draw_ppa_unit_t
 
@@ -132,7 +152,7 @@ typedef struct lv_draw_ppa_unit lv_draw_ppa_unit_t
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_PPA_NONBLOCKING_OPS" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={24} url="https://github.com/lvgl/lvgl/tree/83b620f5bcdc69d84669de4cada8e6ec93d32a9b/src/draw/espressif/ppa/lv_draw_ppa_private.h#L24">
+<ApiMember kind="macro" name="LV_PPA_NONBLOCKING_OPS" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={24} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L24">
 
 ### LV_PPA_NONBLOCKING_OPS
 
@@ -143,7 +163,7 @@ typedef struct lv_draw_ppa_unit lv_draw_ppa_unit_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="PPA_ALIGN_UP" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={165} url="https://github.com/lvgl/lvgl/tree/83b620f5bcdc69d84669de4cada8e6ec93d32a9b/src/draw/espressif/ppa/lv_draw_ppa_private.h#L165">
+<ApiMember kind="macro" name="PPA_ALIGN_UP" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={176} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L176">
 
 ### PPA_ALIGN_UP
 
@@ -155,7 +175,7 @@ typedef struct lv_draw_ppa_unit lv_draw_ppa_unit_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="PPA_PTR_ALIGN_UP" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={166} url="https://github.com/lvgl/lvgl/tree/83b620f5bcdc69d84669de4cada8e6ec93d32a9b/src/draw/espressif/ppa/lv_draw_ppa_private.h#L166">
+<ApiMember kind="macro" name="PPA_PTR_ALIGN_UP" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={177} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L177">
 
 ### PPA_PTR_ALIGN_UP
 
@@ -167,7 +187,7 @@ typedef struct lv_draw_ppa_unit lv_draw_ppa_unit_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="PPA_ALIGN_DOWN" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={169} url="https://github.com/lvgl/lvgl/tree/83b620f5bcdc69d84669de4cada8e6ec93d32a9b/src/draw/espressif/ppa/lv_draw_ppa_private.h#L169">
+<ApiMember kind="macro" name="PPA_ALIGN_DOWN" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={180} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L180">
 
 ### PPA_ALIGN_DOWN
 
@@ -179,7 +199,7 @@ typedef struct lv_draw_ppa_unit lv_draw_ppa_unit_t
 
 </ApiMember>
 
-<ApiMember kind="macro" name="PPA_PTR_ALIGN_DOWN" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={170} url="https://github.com/lvgl/lvgl/tree/83b620f5bcdc69d84669de4cada8e6ec93d32a9b/src/draw/espressif/ppa/lv_draw_ppa_private.h#L170">
+<ApiMember kind="macro" name="PPA_PTR_ALIGN_DOWN" file="private/draw/espressif/ppa/lv_draw_ppa_private.h" line={181} url="https://github.com/lvgl/lvgl/tree/952ec5a324e5a59203ed9cbc749179fcd8a4f468/src/draw/espressif/ppa/lv_draw_ppa_private.h#L181">
 
 ### PPA_PTR_ALIGN_DOWN
 
