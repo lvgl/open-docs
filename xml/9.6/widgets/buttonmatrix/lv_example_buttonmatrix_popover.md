@@ -1,4 +1,4 @@
-```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_popover.xml" source="https://github.com/lvgl/lvgl/blob/e93fb8815a2455a66454cb14a63614a7b99acae5/examples/widgets/buttonmatrix/lv_example_buttonmatrix_popover.xml"
+```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_popover.xml" source="https://github.com/lvgl/lvgl/blob/addf7d8b707897c9d1523dd64847268384bfd484/examples/widgets/buttonmatrix/lv_example_buttonmatrix_popover.xml"
 <!--
  @title Button matrix popover preview
  @brief Show a magnified label above a button while it is pressed.
