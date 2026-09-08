@@ -1,4 +1,4 @@
-```xml title="examples/styles/lv_example_style_local.xml" source="https://github.com/lvgl/lvgl/blob/afba8ce506497403ed119471d1ae6fd982f2a1ce/examples/styles/lv_example_style_local.xml"
+```xml title="examples/styles/lv_example_style_local.xml" source="https://github.com/lvgl/lvgl/blob/b6d1bb48834295f9c1086136bcb7b5f5c41b90ec/examples/styles/lv_example_style_local.xml"
 <!--
  @title Local style override
  @brief Local properties — including state selectors — beat the shared style.
