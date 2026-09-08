@@ -1,4 +1,4 @@
-```xml title="examples/widgets/table/lv_example_table_cells.xml" source="https://github.com/lvgl/lvgl/blob/9e61721bb5a67c84682e46c8f65deddcccbddb4f/examples/widgets/table/lv_example_table_cells.xml"
+```xml title="examples/widgets/table/lv_example_table_cells.xml" source="https://github.com/lvgl/lvgl/blob/2fa4eab8532df811870a99ad630b2d15557d4b7f/examples/widgets/table/lv_example_table_cells.xml"
 <!--
  @title Table cell values
  @brief Populate a grid of cells with text using `<lv_table-cell>` children.
