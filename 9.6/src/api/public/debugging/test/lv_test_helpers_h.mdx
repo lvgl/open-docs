@@ -2,18 +2,33 @@
 title: lv_test_helpers.h
 description: API reference for lv_test_helpers.h
 api:
-  functions: [lv_test_wait, lv_test_fast_forward, lv_test_get_free_mem]
+  functions: [lv_test_wait, lv_test_fast_forward, lv_test_get_allocation_count, lv_test_get_free_mem]
   macros: [LV_HEAP_CHECK, LV_TEST_WIDTH_TO_STRIDE]
 ---
 
-<ApiSummary functions={3} macros={2} />
+<ApiSummary functions={4} macros={2} />
 
 ## Functions
 
-<ApiTabs items={["Getters (1)","Other (2)"]}>
-<ApiTab value="Getters (1)">
+<ApiTabs items={["Getters (2)","Other (2)"]}>
+<ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_test_get_free_mem" file="public/debugging/test/lv_test_helpers.h" line={60} url="https://github.com/lvgl/lvgl/tree/764f0af920022cc218002c2c29bb55cc2cc6d9e3/include/lvgl/debugging/test/lv_test_helpers.h#L60">
+<ApiMember kind="function" name="lv_test_get_allocation_count" file="public/debugging/test/lv_test_helpers.h" line={57} url="https://github.com/lvgl/lvgl/tree/64471805b19a8f67cd2c652d25296c69bf3429e3/include/lvgl/debugging/test/lv_test_helpers.h#L57">
+
+### lv_test_get_allocation_count
+
+Get the number of live allocations on the LVGL heap.
+
+```c
+size_t lv_test_get_allocation_count(void)
+```
+
+**Returns:** `size_t` — the number of allocated blocks, or 0 when the heap does not report it
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_test_get_free_mem" file="public/debugging/test/lv_test_helpers.h" line={67} url="https://github.com/lvgl/lvgl/tree/64471805b19a8f67cd2c652d25296c69bf3429e3/include/lvgl/debugging/test/lv_test_helpers.h#L67">
 
 ### lv_test_get_free_mem
 
@@ -27,7 +42,7 @@ static size_t lv_test_get_free_mem(void)
 </ApiTab>
 <ApiTab value="Other (2)">
 
-<ApiMember kind="function" name="lv_test_wait" file="public/debugging/test/lv_test_helpers.h" line={43} url="https://github.com/lvgl/lvgl/tree/764f0af920022cc218002c2c29bb55cc2cc6d9e3/include/lvgl/debugging/test/lv_test_helpers.h#L43">
+<ApiMember kind="function" name="lv_test_wait" file="public/debugging/test/lv_test_helpers.h" line={43} url="https://github.com/lvgl/lvgl/tree/64471805b19a8f67cd2c652d25296c69bf3429e3/include/lvgl/debugging/test/lv_test_helpers.h#L43">
 
 ### lv_test_wait
 
@@ -46,7 +61,7 @@ void lv_test_wait(uint32_t ms)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_test_fast_forward" file="public/debugging/test/lv_test_helpers.h" line={50} url="https://github.com/lvgl/lvgl/tree/764f0af920022cc218002c2c29bb55cc2cc6d9e3/include/lvgl/debugging/test/lv_test_helpers.h#L50">
+<ApiMember kind="function" name="lv_test_fast_forward" file="public/debugging/test/lv_test_helpers.h" line={50} url="https://github.com/lvgl/lvgl/tree/64471805b19a8f67cd2c652d25296c69bf3429e3/include/lvgl/debugging/test/lv_test_helpers.h#L50">
 
 ### lv_test_fast_forward
 
@@ -69,7 +84,7 @@ void lv_test_fast_forward(uint32_t ms)
 </ApiTabs>
 ## Macros
 
-<ApiMember kind="macro" name="LV_HEAP_CHECK" file="public/debugging/test/lv_test_helpers.h" line={58} url="https://github.com/lvgl/lvgl/tree/764f0af920022cc218002c2c29bb55cc2cc6d9e3/include/lvgl/debugging/test/lv_test_helpers.h#L58">
+<ApiMember kind="macro" name="LV_HEAP_CHECK" file="public/debugging/test/lv_test_helpers.h" line={65} url="https://github.com/lvgl/lvgl/tree/64471805b19a8f67cd2c652d25296c69bf3429e3/include/lvgl/debugging/test/lv_test_helpers.h#L65">
 
 ### LV_HEAP_CHECK
 
@@ -81,7 +96,7 @@ void lv_test_fast_forward(uint32_t ms)
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_TEST_WIDTH_TO_STRIDE" file="public/debugging/test/lv_test_helpers.h" line={72} url="https://github.com/lvgl/lvgl/tree/764f0af920022cc218002c2c29bb55cc2cc6d9e3/include/lvgl/debugging/test/lv_test_helpers.h#L72">
+<ApiMember kind="macro" name="LV_TEST_WIDTH_TO_STRIDE" file="public/debugging/test/lv_test_helpers.h" line={79} url="https://github.com/lvgl/lvgl/tree/64471805b19a8f67cd2c652d25296c69bf3429e3/include/lvgl/debugging/test/lv_test_helpers.h#L79">
 
 ### LV_TEST_WIDTH_TO_STRIDE
 

@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-09T05:08:35.572Z",
-    "symbolCount": 9279
+    "generatedAt": "2026-09-09T10:02:31.819Z",
+    "symbolCount": 9280
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -14289,6 +14289,11 @@
     "lv_test_fast_forward": {
       "path": "api/public/debugging/test/lv_test_helpers_h",
       "anchor": "lv_test_fast_forward",
+      "kind": "function"
+    },
+    "lv_test_get_allocation_count": {
+      "path": "api/public/debugging/test/lv_test_helpers_h",
+      "anchor": "lv_test_get_allocation_count",
       "kind": "function"
     },
     "lv_test_get_free_mem": {
