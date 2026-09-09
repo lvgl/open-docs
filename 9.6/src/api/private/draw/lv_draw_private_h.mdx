@@ -12,7 +12,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_cleanup_task" file="private/draw/lv_draw_private.h" line={204} url="https://github.com/lvgl/lvgl/tree/64471805b19a8f67cd2c652d25296c69bf3429e3/src/draw/lv_draw_private.h#L204">
+<ApiMember kind="function" name="lv_draw_cleanup_task" file="private/draw/lv_draw_private.h" line={201} url="https://github.com/lvgl/lvgl/tree/db53672c9dfe1eadf2b2c7382a02ea107992ef09/src/draw/lv_draw_private.h#L201">
 
 ### lv_draw_cleanup_task
 
@@ -43,7 +43,6 @@ void lv_draw_cleanup_task(lv_draw_task_t *t)
 | `type` | <ApiLink name="lv_draw_task_type_t" /> |  |
 | `area` | <ApiLink name="lv_area_t" /> | The area where to draw |
 | `_real_area` | <ApiLink name="lv_area_t" /> | The real draw area. E.g. for shadow, outline, or transformed images it's different from `area` |
-| `clip_area_original` | <ApiLink name="lv_area_t" /> | The original area which is updated |
 | `clip_area` | <ApiLink name="lv_area_t" /> | The clip area of the layer is saved here when the draw task is created. As the clip area of the layer can be changed as new draw tasks are added its current value needs to be saved. Therefore during drawing the layer's clip area shouldn't be used as it might be already changed for other draw tasks. |
 | `target_layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> |  |
 | `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> |  |
