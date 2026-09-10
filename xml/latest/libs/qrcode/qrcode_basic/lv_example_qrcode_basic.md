@@ -1,4 +1,4 @@
-```xml title="examples/libs/qrcode/qrcode_basic/lv_example_qrcode_basic.xml" source="https://github.com/lvgl/lvgl/blob/bb8ef34b1328006eecc4d192c9f45a04e54de31d/examples/libs/qrcode/qrcode_basic/lv_example_qrcode_basic.xml"
+```xml title="examples/libs/qrcode/qrcode_basic/lv_example_qrcode_basic.xml" source="https://github.com/lvgl/lvgl/blob/9291468c750dc7ff75cc6c2dfd68866375c70e72/examples/libs/qrcode/qrcode_basic/lv_example_qrcode_basic.xml"
 <!--
  @title QR code colors and quiet zone
  @brief Encode a URL with custom dark/light colors and a padded quiet zone.

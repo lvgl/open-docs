@@ -1,4 +1,4 @@
-```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_styling.xml" source="https://github.com/lvgl/lvgl/blob/bb8ef34b1328006eecc4d192c9f45a04e54de31d/examples/widgets/buttonmatrix/lv_example_buttonmatrix_styling.xml"
+```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_styling.xml" source="https://github.com/lvgl/lvgl/blob/9291468c750dc7ff75cc6c2dfd68866375c70e72/examples/widgets/buttonmatrix/lv_example_buttonmatrix_styling.xml"
 <!--
  @title Button matrix styling
  @brief Style the MAIN container, the ITEMS, and the checked-state items separately.

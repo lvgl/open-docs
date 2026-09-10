@@ -1,4 +1,4 @@
-```xml title="examples/get_started/get_started_hello_world/lv_example_get_started_hello_world.xml" source="https://github.com/lvgl/lvgl/blob/bb8ef34b1328006eecc4d192c9f45a04e54de31d/examples/get_started/get_started_hello_world/lv_example_get_started_hello_world.xml"
+```xml title="examples/get_started/get_started_hello_world/lv_example_get_started_hello_world.xml" source="https://github.com/lvgl/lvgl/blob/9291468c750dc7ff75cc6c2dfd68866375c70e72/examples/get_started/get_started_hello_world/lv_example_get_started_hello_world.xml"
 <!--
  @title Hello world label
  @brief Paint the screen background and center a label on it.
