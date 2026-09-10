@@ -1,4 +1,4 @@
-```xml title="examples/widgets/bar/lv_example_bar_value_range.xml" source="https://github.com/lvgl/lvgl/blob/30793eacc4998566d386afde68fa228d9305ed2a/examples/widgets/bar/lv_example_bar_value_range.xml"
+```xml title="examples/widgets/bar/lv_example_bar_value_range.xml" source="https://github.com/lvgl/lvgl/blob/b25c1882e9baf1cc6d07f4c548a582f4b546efad/examples/widgets/bar/lv_example_bar_value_range.xml"
 <!--
  @title Bar value and custom range
  @brief Drive the indicator with a custom min/max range.

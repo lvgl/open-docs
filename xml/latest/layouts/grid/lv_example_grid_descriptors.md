@@ -1,4 +1,4 @@
-```xml title="examples/layouts/grid/lv_example_grid_descriptors.xml" source="https://github.com/lvgl/lvgl/blob/30793eacc4998566d386afde68fa228d9305ed2a/examples/layouts/grid/lv_example_grid_descriptors.xml"
+```xml title="examples/layouts/grid/lv_example_grid_descriptors.xml" source="https://github.com/lvgl/lvgl/blob/b25c1882e9baf1cc6d07f4c548a582f4b546efad/examples/layouts/grid/lv_example_grid_descriptors.xml"
 <!--
  @title Grid descriptors
  @brief Define fixed-size column and row tracks.
