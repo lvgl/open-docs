@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-10T10:06:02.223Z",
-    "symbolCount": 9280
+    "generatedAt": "2026-09-10T11:41:48.345Z",
+    "symbolCount": 9283
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -38131,6 +38131,11 @@
       "anchor": "lv_vg_lite_matrix_transform_point",
       "kind": "function"
     },
+    "lv_vg_lite_matrix_transform_area": {
+      "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
+      "anchor": "lv_vg_lite_matrix_transform_area",
+      "kind": "function"
+    },
     "lv_vg_lite_matrix_has_transform": {
       "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
       "anchor": "lv_vg_lite_matrix_has_transform",
@@ -38139,6 +38144,11 @@
     "lv_vg_lite_matrix_get_filter": {
       "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
       "anchor": "lv_vg_lite_matrix_get_filter",
+      "kind": "function"
+    },
+    "lv_vg_lite_matrix_has_perspective": {
+      "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
+      "anchor": "lv_vg_lite_matrix_has_perspective",
       "kind": "function"
     },
     "lv_vg_lite_set_scissor_area": {
@@ -38184,6 +38194,11 @@
     "lv_vg_lite_blit_rect": {
       "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
       "anchor": "lv_vg_lite_blit_rect",
+      "kind": "function"
+    },
+    "lv_vg_lite_blit": {
+      "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
+      "anchor": "lv_vg_lite_blit",
       "kind": "function"
     },
     "lv_vg_lite_set_color_key": {
