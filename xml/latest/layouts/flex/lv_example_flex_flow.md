@@ -1,4 +1,4 @@
-```xml title="examples/layouts/flex/lv_example_flex_flow.xml" source="https://github.com/lvgl/lvgl/blob/f9f974f912742703d61f2dc26a62d42e5ef4fd02/examples/layouts/flex/lv_example_flex_flow.xml"
+```xml title="examples/layouts/flex/lv_example_flex_flow.xml" source="https://github.com/lvgl/lvgl/blob/c900f8afa517c7a421a4499197ffbc1181c09fcb/examples/layouts/flex/lv_example_flex_flow.xml"
 <!--
  @title Flex flow
  @brief Arrange children with a flex flow direction.

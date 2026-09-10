@@ -1,4 +1,4 @@
-```xml title="examples/widgets/tabview/lv_example_tabview_tab_bar_style.xml" source="https://github.com/lvgl/lvgl/blob/f9f974f912742703d61f2dc26a62d42e5ef4fd02/examples/widgets/tabview/lv_example_tabview_tab_bar_style.xml"
+```xml title="examples/widgets/tabview/lv_example_tabview_tab_bar_style.xml" source="https://github.com/lvgl/lvgl/blob/c900f8afa517c7a421a4499197ffbc1181c09fcb/examples/widgets/tabview/lv_example_tabview_tab_bar_style.xml"
 <!--
  @title Tab view styling spots
  @brief Three independent style targets: tab view body, tab bar, and a single tab.

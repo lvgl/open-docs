@@ -1,4 +1,4 @@
-```xml title="examples/scroll/lv_example_scroll_scrollbar_style.xml" source="https://github.com/lvgl/lvgl/blob/f9f974f912742703d61f2dc26a62d42e5ef4fd02/examples/scroll/lv_example_scroll_scrollbar_style.xml"
+```xml title="examples/scroll/lv_example_scroll_scrollbar_style.xml" source="https://github.com/lvgl/lvgl/blob/c900f8afa517c7a421a4499197ffbc1181c09fcb/examples/scroll/lv_example_scroll_scrollbar_style.xml"
 <!--
  @title Styling the scrollbar
  @brief Restyle the SCROLLBAR part into a thick, rounded, coloured bar.

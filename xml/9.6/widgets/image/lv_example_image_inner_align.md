@@ -1,4 +1,4 @@
-```xml title="examples/widgets/image/lv_example_image_inner_align.xml" source="https://github.com/lvgl/lvgl/blob/f9f974f912742703d61f2dc26a62d42e5ef4fd02/examples/widgets/image/lv_example_image_inner_align.xml"
+```xml title="examples/widgets/image/lv_example_image_inner_align.xml" source="https://github.com/lvgl/lvgl/blob/c900f8afa517c7a421a4499197ffbc1181c09fcb/examples/widgets/image/lv_example_image_inner_align.xml"
 <!--
  @title Image inner align
  @brief When the widget is larger than the image, `inner_align` chooses where it sits.

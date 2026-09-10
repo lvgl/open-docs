@@ -1,4 +1,4 @@
-```xml title="examples/widgets/chart/lv_example_chart_series.xml" source="https://github.com/lvgl/lvgl/blob/f9f974f912742703d61f2dc26a62d42e5ef4fd02/examples/widgets/chart/lv_example_chart_series.xml"
+```xml title="examples/widgets/chart/lv_example_chart_series.xml" source="https://github.com/lvgl/lvgl/blob/c900f8afa517c7a421a4499197ffbc1181c09fcb/examples/widgets/chart/lv_example_chart_series.xml"
 <!--
  @title Chart data series
  @brief Two series on the same chart, each bound to its own Y axis.
