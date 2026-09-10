@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-10T20:57:04.260Z",
-    "symbolCount": 9286
+    "generatedAt": "2026-09-10T23:07:15.752Z",
+    "symbolCount": 9287
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -4384,6 +4384,11 @@
     "LV_DRAW_HAS_3D_SUPPORT": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_HAS_3D_SUPPORT",
+      "kind": "macro"
+    },
+    "LV_DRAW_DISABLE_TILED_RENDERING": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DRAW_DISABLE_TILED_RENDERING",
       "kind": "macro"
     },
     "LV_DRAW_SW_ASM_USE_CUSTOM_INCLUDE": {
