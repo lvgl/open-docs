@@ -2,17 +2,17 @@
 title: lv_linux_fbdev.h
 description: API reference for lv_linux_fbdev.h
 api:
-  functions: [lv_linux_fbdev_create, lv_linux_fbdev_set_file, lv_linux_fbdev_set_force_refresh]
+  functions: [lv_linux_fbdev_create, lv_linux_fbdev_set_file, lv_linux_fbdev_set_skip_unblank, lv_linux_fbdev_set_force_refresh, lv_linux_fbdev_set_swap_rb, lv_linux_fbdev_get_swap_rb]
 ---
 
-<ApiSummary functions={3} />
+<ApiSummary functions={6} />
 
 ## Functions
 
-<ApiTabs items={["Setters (2)","Other (1)"]}>
-<ApiTab value="Setters (2)">
+<ApiTabs items={["Setters (4)","Getters (1)","Other (1)"]}>
+<ApiTab value="Setters (4)">
 
-<ApiMember kind="function" name="lv_linux_fbdev_set_file" file="public/drivers/display/lv_linux_fbdev.h" line={34} url="https://github.com/lvgl/lvgl/tree/9b24da0d8f3c54190b3f69960660531b611fc090/include/lvgl/drivers/display/lv_linux_fbdev.h#L34">
+<ApiMember kind="function" name="lv_linux_fbdev_set_file" file="public/drivers/display/lv_linux_fbdev.h" line={34} url="https://github.com/lvgl/lvgl/tree/508dfc7e5ea821205f630fc44cdfb97708cfcc4f/include/lvgl/drivers/display/lv_linux_fbdev.h#L34">
 
 ### lv_linux_fbdev_set_file
 
@@ -30,7 +30,27 @@ lv_result_t lv_linux_fbdev_set_file(lv_display_t *disp, const char *file)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_linux_fbdev_set_force_refresh" file="public/drivers/display/lv_linux_fbdev.h" line={40} url="https://github.com/lvgl/lvgl/tree/9b24da0d8f3c54190b3f69960660531b611fc090/include/lvgl/drivers/display/lv_linux_fbdev.h#L40">
+<ApiMember kind="function" name="lv_linux_fbdev_set_skip_unblank" file="public/drivers/display/lv_linux_fbdev.h" line={42} url="https://github.com/lvgl/lvgl/tree/508dfc7e5ea821205f630fc44cdfb97708cfcc4f/include/lvgl/drivers/display/lv_linux_fbdev.h#L42">
+
+### lv_linux_fbdev_set_skip_unblank
+
+Skip the FBIOBLANK unblank ioctl in <ApiLink name="lv_linux_fbdev_set_file" display="lv_linux_fbdev_set_file()" />. Use when another process (e.g. splash screen) already owns the framebuffer and calling FBIOBLANK would cause visible flicker. Must be called BEFORE <ApiLink name="lv_linux_fbdev_set_file" display="lv_linux_fbdev_set_file()" />.
+
+```c
+void lv_linux_fbdev_set_skip_unblank(lv_display_t *disp, bool skip)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `skip` | `bool` |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_linux_fbdev_set_force_refresh" file="public/drivers/display/lv_linux_fbdev.h" line={48} url="https://github.com/lvgl/lvgl/tree/508dfc7e5ea821205f630fc44cdfb97708cfcc4f/include/lvgl/drivers/display/lv_linux_fbdev.h#L48">
 
 ### lv_linux_fbdev_set_force_refresh
 
@@ -50,10 +70,52 @@ void lv_linux_fbdev_set_force_refresh(lv_display_t *disp, bool enabled)
 
 </ApiMember>
 
+<ApiMember kind="function" name="lv_linux_fbdev_set_swap_rb" file="public/drivers/display/lv_linux_fbdev.h" line={57} url="https://github.com/lvgl/lvgl/tree/508dfc7e5ea821205f630fc44cdfb97708cfcc4f/include/lvgl/drivers/display/lv_linux_fbdev.h#L57">
+
+### lv_linux_fbdev_set_swap_rb
+
+Enable red/blue channel swap in the flush callback. Use for framebuffers with BGR pixel order (e.g., some Allwinner SoCs). On Linux (non-BSD) builds, auto-detected from fb_var_screeninfo if not called explicitly. When LV_LINUX_FBDEV_BSD is enabled, auto-detection is disabled and this must be set manually. Must be called AFTER <ApiLink name="lv_linux_fbdev_set_file" display="lv_linux_fbdev_set_file()" />.
+
+```c
+void lv_linux_fbdev_set_swap_rb(lv_display_t *disp, bool enabled)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+| `enabled` | `bool` |
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_linux_fbdev_get_swap_rb" file="public/drivers/display/lv_linux_fbdev.h" line={62} url="https://github.com/lvgl/lvgl/tree/508dfc7e5ea821205f630fc44cdfb97708cfcc4f/include/lvgl/drivers/display/lv_linux_fbdev.h#L62">
+
+### lv_linux_fbdev_get_swap_rb
+
+Query whether red/blue channel swap is active.
+
+```c
+bool lv_linux_fbdev_get_swap_rb(lv_display_t *disp)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type |
+|------|------|
+| `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> |
+
+
+</ApiMember>
+
 </ApiTab>
 <ApiTab value="Other (1)">
 
-<ApiMember kind="function" name="lv_linux_fbdev_create" file="public/drivers/display/lv_linux_fbdev.h" line={32} url="https://github.com/lvgl/lvgl/tree/9b24da0d8f3c54190b3f69960660531b611fc090/include/lvgl/drivers/display/lv_linux_fbdev.h#L32">
+<ApiMember kind="function" name="lv_linux_fbdev_create" file="public/drivers/display/lv_linux_fbdev.h" line={32} url="https://github.com/lvgl/lvgl/tree/508dfc7e5ea821205f630fc44cdfb97708cfcc4f/include/lvgl/drivers/display/lv_linux_fbdev.h#L32">
 
 ### lv_linux_fbdev_create
 

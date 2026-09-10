@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-10T19:00:13.898Z",
-    "symbolCount": 9283
+    "generatedAt": "2026-09-10T19:04:05.359Z",
+    "symbolCount": 9286
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -21076,9 +21076,24 @@
       "anchor": "lv_linux_fbdev_set_file",
       "kind": "function"
     },
+    "lv_linux_fbdev_set_skip_unblank": {
+      "path": "api/public/drivers/display/lv_linux_fbdev_h",
+      "anchor": "lv_linux_fbdev_set_skip_unblank",
+      "kind": "function"
+    },
     "lv_linux_fbdev_set_force_refresh": {
       "path": "api/public/drivers/display/lv_linux_fbdev_h",
       "anchor": "lv_linux_fbdev_set_force_refresh",
+      "kind": "function"
+    },
+    "lv_linux_fbdev_set_swap_rb": {
+      "path": "api/public/drivers/display/lv_linux_fbdev_h",
+      "anchor": "lv_linux_fbdev_set_swap_rb",
+      "kind": "function"
+    },
+    "lv_linux_fbdev_get_swap_rb": {
+      "path": "api/public/drivers/display/lv_linux_fbdev_h",
+      "anchor": "lv_linux_fbdev_get_swap_rb",
       "kind": "function"
     },
     "lv_lovyan_gfx.h": {

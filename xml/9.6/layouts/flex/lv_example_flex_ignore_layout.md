@@ -1,4 +1,4 @@
-```xml title="examples/layouts/flex/lv_example_flex_ignore_layout.xml" source="https://github.com/lvgl/lvgl/blob/9b24da0d8f3c54190b3f69960660531b611fc090/examples/layouts/flex/lv_example_flex_ignore_layout.xml"
+```xml title="examples/layouts/flex/lv_example_flex_ignore_layout.xml" source="https://github.com/lvgl/lvgl/blob/508dfc7e5ea821205f630fc44cdfb97708cfcc4f/examples/layouts/flex/lv_example_flex_ignore_layout.xml"
 <!--
  @title Flex ignore layout
  @brief Opt one item out of the flex flow.
