@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-15T10:07:41.515Z",
-    "symbolCount": 9288
+    "generatedAt": "2026-09-15T10:19:04.481Z",
+    "symbolCount": 9290
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2966,6 +2966,11 @@
       "anchor": "LV_NEMA_GFX_MAX_RESY",
       "kind": "macro"
     },
+    "LV_USE_PXP": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_PXP",
+      "kind": "macro"
+    },
     "LV_USE_PXP_DRAW_THREAD": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_USE_PXP_DRAW_THREAD",
@@ -3009,6 +3014,11 @@
     "LV_DRAW_EVE_WRITE_BUFFER_SIZE": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_EVE_WRITE_BUFFER_SIZE",
+      "kind": "macro"
+    },
+    "LV_USE_G2D": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_G2D",
       "kind": "macro"
     },
     "LV_USE_DRAW_G2D": {
