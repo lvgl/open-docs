@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-16T11:35:46.688Z",
-    "symbolCount": 9290
+    "generatedAt": "2026-09-16T13:58:34.262Z",
+    "symbolCount": 9289
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -36072,7 +36072,7 @@
       "kind": "function"
     },
     "__ARM_2D_IMPL__": {
-      "path": "api/private/draw/sw/blend/arm2d/lv_blend_arm2d_h",
+      "path": "api/private/draw/sw/arm2d/lv_draw_sw_arm2d_h",
       "anchor": "__ARM_2D_IMPL__",
       "kind": "macro"
     },
@@ -36270,11 +36270,6 @@
       "path": "api/private/draw/sw/blend/arm2d/lv_blend_arm2d_h",
       "anchor": "lv_argb8888_blend_normal_to_rgb888_mix_mask_opa_arm2d",
       "kind": "function"
-    },
-    "LV_ARM2D_XRGB888_ALPHA_ALWAYS_FF": {
-      "path": "api/private/draw/sw/blend/arm2d/lv_blend_arm2d_h",
-      "anchor": "LV_ARM2D_XRGB888_ALPHA_ALWAYS_FF",
-      "kind": "macro"
     },
     "LV_DRAW_SW_COLOR_BLEND_TO_RGB565": {
       "path": "api/private/draw/sw/blend/neon/lv_draw_sw_blend_neon_to_rgb565_h",

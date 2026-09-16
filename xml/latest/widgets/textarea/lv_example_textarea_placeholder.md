@@ -1,4 +1,4 @@
-```xml title="examples/widgets/textarea/lv_example_textarea_placeholder.xml" source="https://github.com/lvgl/lvgl/blob/c54639b919307c9adb49fdd3ac694e9e5f24b2ab/examples/widgets/textarea/lv_example_textarea_placeholder.xml"
+```xml title="examples/widgets/textarea/lv_example_textarea_placeholder.xml" source="https://github.com/lvgl/lvgl/blob/be722419a6a68d1fac808196f830f88806d85e7e/examples/widgets/textarea/lv_example_textarea_placeholder.xml"
 <!--
  @title Text area placeholder
  @brief Show a hint while the text area is empty.
