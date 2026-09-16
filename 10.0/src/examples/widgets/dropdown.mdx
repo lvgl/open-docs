@@ -1,0 +1,58 @@
+---
+title: "Dropdown"
+order: 60
+---
+
+## Dropdown bind value
+
+<LvglExampleBrief>Dropdown bound to a subject; a button jumps it programmatically.</LvglExampleBrief>
+
+The dropdown's `bind_value` is wired to `subject_index`. A "Pick Cherry" button uses
+`subject_set_int_event` to write `2` into the subject on click — the dropdown
+picks up the change and updates the selection without any direct call into
+the dropdown widget.
+
+<LvglExample name="lv_example_dropdown_bind_value" path="widgets/dropdown/lv_example_dropdown_bind_value" />
+
+## Dropdown open direction
+
+<LvglExampleBrief>Open the option list towards a specific edge.</LvglExampleBrief>
+
+Four dropdowns sit on the four sides of the screen and use the dir attribute to choose
+which way their option list pops. The default is bottom, but top, left, and right are
+useful when a dropdown sits close to a screen edge and there is no room to expand
+downward.
+
+<LvglExample name="lv_example_dropdown_direction" path="widgets/dropdown/lv_example_dropdown_direction" />
+
+## Dropdown value-changed event
+
+<LvglExampleBrief>Mirror the selected option into a sibling label.</LvglExampleBrief>
+
+`LV_EVENT_VALUE_CHANGED` fires when a new option is chosen.
+`lv_dropdown_get_selected` returns the index; `_get_selected_str` reads
+the option text into a buffer. The handler writes that text into a
+sibling label.
+
+<LvglExample name="lv_example_dropdown_event" path="widgets/dropdown/lv_example_dropdown_event" />
+
+## Dropdown styling
+
+<LvglExampleBrief>Style the dropdown button (MAIN) with rounded corners and a focused border.</LvglExampleBrief>
+
+The dropdown's primary surface is MAIN (the button users tap). Local `style_*` props
+give it a card-like rounded look with padding and a custom border. A `focused` state
+style applied to MAIN brightens the border ring when the dropdown receives focus, so
+the example also demonstrates a state-specific style on a non-button widget.
+
+<LvglExample name="lv_example_dropdown_styling" path="widgets/dropdown/lv_example_dropdown_styling" />
+
+## Dropdown fixed text
+
+<LvglExampleBrief>Pin the dropdown button label regardless of selection.</LvglExampleBrief>
+
+Without a text attribute the dropdown shows the currently selected option (left). With
+text="Menu" the button always displays that string while the option list remains
+intact, which is useful for icon-style or fixed-label menus.
+
+<LvglExample name="lv_example_dropdown_text" path="widgets/dropdown/lv_example_dropdown_text" />

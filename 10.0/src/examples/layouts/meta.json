@@ -1,0 +1,8 @@
+{
+  "title": "Layouts",
+  "pages": [
+    "flex",
+    "grid"
+  ],
+  "description": "Automatic positioning with Flex and Grid."
+}

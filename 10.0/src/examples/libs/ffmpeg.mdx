@@ -1,0 +1,30 @@
+---
+title: "FFmpeg"
+order: 60
+---
+
+Decodes video streams and a wide range of image formats via FFmpeg. Enable with `LV_USE_FFMPEG` in `lv_conf.h`.
+
+## Decode image with FFmpeg
+
+<LvglExampleBrief>Open a PNG through the FFmpeg integration and center it on the screen.</LvglExampleBrief>
+
+An image widget is created on the active screen and its source is set to
+`A:lvgl/examples/libs/ffmpeg/ffmpeg.png`. The FFmpeg image path always
+routes through the LVGL filesystem abstraction regardless of
+`LV_FFMPEG_PLAYER_USE_LV_FS`, so the file is read via the driver registered
+under drive letter `A`.
+
+<LvglExample name="lv_example_ffmpeg_1" path="libs/ffmpeg/lv_example_ffmpeg_1" />
+
+## Play MP4 video with FFmpeg
+
+<LvglExampleBrief>Play an MP4 clip on loop through the FFmpeg player widget.</LvglExampleBrief>
+
+An `lv_ffmpeg_player` is centered on the active screen and pointed at
+`birds.mp4`. The decoder is requested as `h264_v4l2m2m` (with software
+fallback when V4L2 is unavailable), auto-restart is enabled, and
+`LV_FFMPEG_PLAYER_CMD_START` begins playback. The source path uses an
+`A:` prefix when `LV_FFMPEG_PLAYER_USE_LV_FS` is set, otherwise `./`.
+
+<LvglExample name="lv_example_ffmpeg_2" path="libs/ffmpeg/lv_example_ffmpeg_2" />

@@ -1,0 +1,18 @@
+---
+title: "LodePNG"
+order: 5
+---
+
+PNG image decoder integration. Enable with `LV_USE_LODEPNG` in `lv_conf.h`.
+
+## PNG from array and file with LodePNG
+
+<LvglExampleBrief>Show the same PNG decoded from an embedded array and from a file path.</LvglExampleBrief>
+
+Two image widgets are created on the active screen. The left one binds
+to the `img_wink_png` descriptor declared with `LV_IMAGE_DECLARE`, and
+the right one reads `A:lvgl/examples/libs/lodepng/wink.png` through
+the filesystem driver registered under drive letter `A`. Both routes
+go through the LodePNG image decoder.
+
+<LvglExample name="lv_example_lodepng_1" path="libs/lodepng/lv_example_lodepng_1" />

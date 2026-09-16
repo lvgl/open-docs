@@ -1,0 +1,64 @@
+---
+title: "glTF"
+order: 20
+---
+
+Loads and renders 3D models in glTF format within LVGL. Enable with `LV_USE_GLTF` in `lv_conf.h`.
+
+## Spin a glTF model on a platter
+
+<LvglExampleBrief>Load a glTF scene and spin it around the yaw axis with a timer.</LvglExampleBrief>
+
+`lv_gltf_create` attaches the viewer to the active screen and
+`lv_obj_set_size` sizes it to fill the screen. `lv_gltf_load_model_from_file`
+loads `webp_diffuse_transmission_plant.glb` from drive letter `A`. The first
+embedded animation plays, the viewer is pitched down by 45 degrees, and a
+timer running at `LV_DEF_REFR_PERIOD` advances yaw by one degree per tick,
+wrapping at 360.
+
+<LvglExample name="lv_example_gltf_1" path="libs/gltf/lv_example_gltf_1" />
+
+## Cycle glTF cameras and speeds
+
+<LvglExampleBrief>Rotate through the scene cameras and animation speeds every 5 seconds.</LvglExampleBrief>
+
+`lv_gltf_create` fills the active screen with
+`webp_diffuse_transmission_plant.glb` loaded from drive letter `A`. The
+viewer starts at `LV_GLTF_ANIM_SPEED_HALF` with the first animation
+playing and a 45 degree downward pitch. A 5000 ms timer advances the
+active camera with `lv_gltf_set_camera` and doubles the playback rate
+with `lv_gltf_model_set_animation_speed`, wrapping back to half once it
+passes `LV_GLTF_ANIM_SPEED_4X`.
+
+<LvglExample name="lv_example_gltf_2" path="libs/gltf/lv_example_gltf_2" />
+
+## Drag plants across a glTF scene
+
+<LvglExampleBrief>Pick and drag one of five glTF plants along the ground plane with a cursor model.</LvglExampleBrief>
+
+Five copies of `webp_diffuse_transmission_plant.glb` are loaded into a
+single `lv_gltf` viewer and spaced across the ground at fixed x and z
+offsets, while `support_assets.glb` contributes a `/cursor` node hidden
+by zeroing its scale. Pointer events
+cast a ray through `lv_gltf_get_ray_from_2d_coordinate` into the ground
+plane built by `lv_get_ground_plane`. On `LV_EVENT_PRESSED` the nearest
+plant within a squared distance of `0.1` is selected; `LV_EVENT_PRESSING`
+moves the plant and cursor to the hit point and nudges rotation, and
+`LV_EVENT_RELEASED` hides the cursor again.
+
+<LvglExample name="lv_example_gltf_3" path="libs/gltf/lv_example_gltf_3" />
+
+## Share one glTF across four viewers
+
+<LvglExampleBrief>Animate the scale of a logo shared by four `lv_gltf` viewers arranged in a 2x2 grid.</LvglExampleBrief>
+
+`lv_gltf_data_load_from_file` loads `lvgl_logo.glb` once, and four
+`lv_gltf` viewers sized `50%` by `50%` are aligned to each corner of the
+active screen with pitch and yaw set to +/-30 degrees so each viewer
+shows a different angle. `lv_gltf_add_model` attaches the shared model
+to all four. An `lv_anim_t` drives the root node via `anim_scale_cb`
+from 10 to 100 (0.1 to 1.0 scale) over 2000 ms with
+`lv_anim_path_ease_in_out`, a 1000 ms reverse delay, a 1500 ms reverse
+duration, a 500 ms repeat delay, and `LV_ANIM_REPEAT_INFINITE`.
+
+<LvglExample name="lv_example_gltf_4" path="libs/gltf/lv_example_gltf_4" />

@@ -1,0 +1,10 @@
+{
+  "title": "Nuttx",
+  "pages": [
+    "lv_nuttx_entry_h",
+    "lv_nuttx_fbdev_h",
+    "lv_nuttx_lcd_h",
+    "lv_nuttx_libuv_h",
+    "lv_nuttx_touchscreen_h"
+  ]
+}

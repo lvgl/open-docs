@@ -1,0 +1,45 @@
+---
+title: "Button"
+order: 30
+---
+
+## Button basics
+
+<LvglExampleBrief>Two buttons showing default content-sized sizing and an explicit width.</LvglExampleBrief>
+
+The first button uses default sizing so it wraps tightly around its label. The second
+button sets an explicit width and height, illustrating that a button is just a
+clickable base widget with a label child.
+
+<LvglExample name="lv_example_button_basic" path="widgets/button/lv_example_button_basic" />
+
+## Button click event
+
+<LvglExampleBrief>Count clicks and refresh a sibling label from the handler.</LvglExampleBrief>
+
+`LV_EVENT_CLICKED` fires on a short press-release sequence. The handler
+bumps a counter, logs it, and writes the new count into a label with
+`lv_label_set_text_fmt`.
+
+<LvglExample name="lv_example_button_event" path="widgets/button/lv_example_button_event" />
+
+## Button states
+
+<LvglExampleBrief>Show normal, checked, and disabled buttons side by side.</LvglExampleBrief>
+
+Three buttons share the same shape but advertise different states via flags. The
+second one is checkable and starts in the checked state, picking up the checked-style
+colors. The third uses the disabled state so it ignores input and renders faded.
+
+<LvglExample name="lv_example_button_states" path="widgets/button/lv_example_button_states" />
+
+## Button styling
+
+<LvglExampleBrief>State-aware colors, rounded corners, shadow, and a pressed outline.</LvglExampleBrief>
+
+A single named style sets the resting look (rounded corners, soft shadow, a base
+color). Separate styles attached with `selector="pressed"` and `selector="checked"`
+swap the background color, lift the shadow, and add an outline so the rendered
+button changes appearance when the user interacts with it.
+
+<LvglExample name="lv_example_button_styling" path="widgets/button/lv_example_button_styling" />

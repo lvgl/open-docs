@@ -1,0 +1,87 @@
+---
+title: "Grid"
+order: 10
+---
+
+A 2D cell-based layout that places children into explicit rows and columns, analogous to CSS Grid. Use it when content must align across both axes, such as dashboards or forms.
+
+## Grid alignment of tracks
+
+<LvglExampleBrief>Place column and row tracks within free space.</LvglExampleBrief>
+
+Track sizes are smaller than the container, so leftover space is distributed by
+style_grid_column_align and style_grid_row_align. Here columns use space_between to
+push them to the edges, while rows align to end and stick to the bottom.
+
+<LvglExample name="lv_example_grid_align" path="layouts/grid/lv_example_grid_align" />
+
+## Grid cell span and alignment
+
+<LvglExampleBrief>Position cells inside their track and span multiple tracks.</LvglExampleBrief>
+
+The first row uses different style_grid_cell_x_align / y_align values to show start,
+center, and end placement within a cell. Two further items use column_span and row_span
+to occupy multiple tracks at once, demonstrating how a single child can cover several
+cells of the grid.
+
+<LvglExample name="lv_example_grid_cell_span" path="layouts/grid/lv_example_grid_cell_span" />
+
+## Grid descriptors
+
+<LvglExampleBrief>Define fixed-size column and row tracks.</LvglExampleBrief>
+
+style_grid_column_dsc_array and style_grid_row_dsc_array list the size of each track in
+pixels. The example uses three 70px columns and two 44px rows, and each child positions
+itself with style_grid_cell_column_pos and style_grid_cell_row_pos.
+
+<LvglExample name="lv_example_grid_descriptors" path="layouts/grid/lv_example_grid_descriptors" />
+
+## Grid FR units
+
+<LvglExampleBrief>Share remaining space across tracks with fr() weights.</LvglExampleBrief>
+
+The first column has a fixed 60px size; the next two columns use fr(1) and fr(2) and
+split the remaining width in a 1:2 ratio. The same idea applies to rows: the first row
+is fixed at 44px and the second uses fr(1) to absorb the leftover height.
+
+<LvglExample name="lv_example_grid_fr" path="layouts/grid/lv_example_grid_fr" />
+
+## Grid ignore layout
+
+<LvglExampleBrief>Detach an item from grid placement.</LvglExampleBrief>
+
+Four normal grid items occupy their cells while a fifth item with ignore_layout="true"
+is skipped by the grid. The detached item keeps its manual x/y position and does not
+displace any of the placed cells, useful for floating badges or overlays.
+
+<LvglExample name="lv_example_grid_ignore_layout" path="layouts/grid/lv_example_grid_ignore_layout" />
+
+## Grid internal padding
+
+<LvglExampleBrief>Set horizontal and vertical gaps between grid cells.</LvglExampleBrief>
+
+style_pad_column inserts space between columns and style_pad_row inserts space between
+rows. The two are independent, so column gaps and row gaps can differ — here columns
+are flush together while rows have a large vertical gap.
+
+<LvglExample name="lv_example_grid_internal_padding" path="layouts/grid/lv_example_grid_internal_padding" />
+
+## Grid RTL
+
+<LvglExampleBrief>Reverse column order with style_base_dir.</LvglExampleBrief>
+
+Both grids declare the same three columns and the same children. Setting style_base_dir
+to rtl on the second grid flips the column order, so cell 0 appears on the right
+without changing how children are referenced or ordered in XML.
+
+<LvglExample name="lv_example_grid_rtl" path="layouts/grid/lv_example_grid_rtl" />
+
+## Grid sub-grid
+
+<LvglExampleBrief>Nest a grid inside a cell of a parent grid.</LvglExampleBrief>
+
+The outer grid defines 3x2 tracks, and an inner grid occupies a 2x2 area within it. The
+inner grid intentionally omits its own column/row descriptors so it inherits the parent
+tracks, keeping its cells aligned with the outer grid's columns and rows.
+
+<LvglExample name="lv_example_grid_subgrid" path="layouts/grid/lv_example_grid_subgrid" />

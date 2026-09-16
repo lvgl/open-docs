@@ -1,0 +1,33 @@
+---
+title: "Translation"
+order: 15
+---
+
+Register multi-language string tables and switch locales at runtime.
+
+## Static and dynamic translation packs
+
+<LvglExampleBrief>Register two translation sources and print labels via `lv_tr`.</LvglExampleBrief>
+
+A static pack provides the tags `tiger`, `lion`, `rabbit`, and `elephant` in
+English, German, and Spanish through `lv_translation_add_static`. A dynamic
+pack built with `lv_translation_add_dynamic` adds the tags `table` and
+`chair` for English and German using `lv_translation_add_tag` and
+`lv_translation_set_tag_translation`. `lv_translation_set_language("de")`
+selects German and two labels render the `tiger` and `chair` translations
+through `lv_tr`.
+
+<LvglExample name="lv_example_translation_1" path="others/translation/lv_example_translation_1" />
+
+## Live language switching from a dropdown
+
+<LvglExampleBrief>Refresh translated labels on `LV_EVENT_TRANSLATION_LANGUAGE_CHANGED`.</LvglExampleBrief>
+
+A dropdown lists the entries in the `languages` array (English, Deutsch, Español). Its
+`LV_EVENT_VALUE_CHANGED` callback reads the selected string and calls
+`lv_translation_set_language`. One label is created per tag in the `tags`
+array and subscribes to `LV_EVENT_TRANSLATION_LANGUAGE_CHANGED`; the handler
+rewrites its text with `lv_tr(tag)`. The screen uses a centered column flex
+layout and starts in English.
+
+<LvglExample name="lv_example_translation_2" path="others/translation/lv_example_translation_2" />

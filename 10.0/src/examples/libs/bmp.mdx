@@ -1,0 +1,17 @@
+---
+title: "BMP"
+order: 25
+---
+
+BMP image decoder integration. Enable with `LV_USE_BMP` in `lv_conf.h`.
+
+## Decode BMP from filesystem
+
+<LvglExampleBrief>Load a 32-bit BMP file through the LVGL filesystem and center it on the screen.</LvglExampleBrief>
+
+An image widget is created on the active screen and its source is set to
+`A:lvgl/examples/libs/bmp/example_32bit.bmp` so the BMP decoder reads the
+file through an attached filesystem driver registered under drive letter
+`A`, such as `LV_USE_FS_STDIO`.
+
+<LvglExample name="lv_example_bmp_1" path="libs/bmp/lv_example_bmp_1" />

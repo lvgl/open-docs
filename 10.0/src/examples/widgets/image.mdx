@@ -1,0 +1,66 @@
+---
+title: "Image"
+order: 65
+---
+
+## Image inner align
+
+<LvglExampleBrief>When the widget is larger than the image, `inner_align` chooses where it sits.</LvglExampleBrief>
+
+Each image widget here has a fixed 140x100 size while `img_example_lvgl_logo` is
+smaller, so the source occupies a fraction of the widget. `inner_align`
+picks how the image is positioned inside the widget box — `top_left`,
+`center`, `bottom_right` for fixed placement; `contain`, `cover`, `stretch`,
+`tile` for fit modes. A coloured background makes the unused area visible.
+
+<LvglExample name="lv_example_image_inner_align" path="widgets/image/lv_example_image_inner_align" />
+
+## Image recolor
+
+<LvglExampleBrief>Mix a tint into an image; a slider drives the recolor intensity live via `bind_style_prop`.</LvglExampleBrief>
+
+The image's MAIN part exposes `image_recolor` (the colour to mix in) and
+`image_recolor_opa` (the intensity, 0..255). Here `image_recolor` is set
+statically and `image_recolor_opa` is bound to `subject_opa` through
+`<bind_style_prop>`. Dragging the slider — which is also bound to
+`subject_opa` — rewrites the subject and the binding pushes the new
+intensity into the style, so the image retints in real time without any
+event callback.
+
+<LvglExample name="lv_example_image_recolor" path="widgets/image/lv_example_image_recolor" />
+
+## Image source
+
+<LvglExampleBrief>Display an image registered globally for the project.</LvglExampleBrief>
+
+`lv_image` paints whatever is set as its `src`.
+In C the image can be a file or a C array.
+In XML the source needs to b set in globals.xml.
+
+<LvglExample name="lv_example_image_src" path="widgets/image/lv_example_image_src" />
+
+## SVG image with transform style
+
+<LvglExampleBrief>Display an SVG source scaled and rotated via both widget and style APIs.</LvglExampleBrief>
+
+An `lv_image` loaded from the `img_svg_img` descriptor is sized to
+100% width and 50% height and given a 5 px outline. Rotation is set
+to 450 (45 degrees) and scale to 128 twice, once through
+`lv_obj_set_style_transform_rotation` and
+`lv_obj_set_style_transform_scale` and once through
+`lv_image_set_rotation` and `lv_image_set_scale`, then the image is
+centered.
+
+<LvglExample name="lv_example_image_svg" path="widgets/image/lv_example_image_svg" />
+
+## Image transformations
+
+<LvglExampleBrief>Rotate and scale a single image source by setting widget attributes.</LvglExampleBrief>
+
+`rotation` is in *tenths of a degree*, so `450` means 45°. `scale_x`/
+`scale_y` use 100 = original (so `160` is 1.6×). `pivot_x`/`pivot_y` move
+the rotation/scale anchor; defaults centre on the image. All three copies
+share the same registered `img_example_lvgl_logo` source — the transforms happen
+at render time, no extra image variants needed.
+
+<LvglExample name="lv_example_image_transformations" path="widgets/image/lv_example_image_transformations" />

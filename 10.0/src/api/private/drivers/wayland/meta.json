@@ -1,0 +1,7 @@
+{
+  "title": "Wayland",
+  "pages": [
+    "lv_wayland_backend_private_h",
+    "lv_wayland_private_h"
+  ]
+}

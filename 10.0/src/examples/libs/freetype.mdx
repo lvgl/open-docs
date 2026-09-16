@@ -1,0 +1,44 @@
+---
+title: "FreeType"
+order: 30
+---
+
+Rasterizes TrueType and OpenType fonts at runtime for LVGL text rendering. Enable with `LV_USE_FREETYPE` in `lv_conf.h`.
+
+## FreeType bitmap font
+
+<LvglExampleBrief>Render a label with a 24 px bitmap TTF loaded via FreeType.</LvglExampleBrief>
+
+`lv_freetype_font_create` loads `Lato-Regular.ttf` in
+`LV_FREETYPE_FONT_RENDER_MODE_BITMAP` at 24 px with
+`LV_FREETYPE_FONT_STYLE_NORMAL`. A style binds the font and centers text,
+then a label carrying a two-line greeting is placed at the center of the
+active screen. The path prefix resolves to `A:` when
+`LV_FREETYPE_USE_LVGL_PORT` is enabled and `./` otherwise.
+
+<LvglExample name="lv_example_freetype_1" path="libs/freetype/lv_example_freetype_1" />
+
+## FreeType emoji fallback font
+
+<LvglExampleBrief>Render a large label whose primary font falls back to a color emoji font.</LvglExampleBrief>
+
+A 400 px bitmap `Lato-Regular.ttf` is loaded as the primary font and a
+200 px subset of `NotoColorEmoji-32.subset.ttf` is loaded as
+`font->fallback`. A style applies the combined font and centers the text,
+and a label placed at the center of the active screen shows a greeting
+ending in an emoji so the fallback glyph is exercised.
+
+<LvglExample name="lv_example_freetype_2" path="libs/freetype/lv_example_freetype_2" />
+
+## FreeType kerning comparison
+
+<LvglExampleBrief>Compare a FreeType-loaded font rendered with and without kerning.</LvglExampleBrief>
+
+A static helper builds a 32 px `Lato-Regular.ttf` font via
+`lv_freetype_font_create_with_info`, applies it to a label with
+`lv_obj_set_style_text_font`, and centers the label at a given y offset.
+The public function calls the helper twice, once with
+`LV_FONT_KERNING_NONE` above center and once with `LV_FONT_KERNING_NORMAL`
+below, both showing the pair test string `AVAWAY,ToTaTe`.
+
+<LvglExample name="lv_example_freetype_3" path="libs/freetype/lv_example_freetype_3" />

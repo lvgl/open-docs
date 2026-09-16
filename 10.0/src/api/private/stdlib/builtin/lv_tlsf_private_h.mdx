@@ -1,0 +1,34 @@
+---
+title: lv_tlsf_private.h
+description: API reference for lv_tlsf_private.h
+api:
+  structs: [lv_tlsf_state_t]
+---
+
+<RelatedHeaders name="lv_tlsf.h" isPrivate={true} />
+
+<ApiSummary structs={1} />
+
+## Structs
+
+<ApiMember kind="struct" name="lv_tlsf_state_t">
+
+### lv_tlsf_state_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `mutex` | `lv_mutex_t` |  |
+| `tlsf` | <ApiLink name="lv_tlsf_t" /> |  |
+| `cur_used` | `size_t` |  |
+| `max_used` | `size_t` |  |
+| `pool_ll` | <ApiLink name="lv_ll_t" /> |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_tlsf.h", "lv_os_private.h"]}
+  includedBy={["lv_global.h", "lvgl_private.h"]}
+/>

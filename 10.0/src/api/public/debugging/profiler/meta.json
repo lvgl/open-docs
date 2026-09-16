@@ -1,0 +1,7 @@
+{
+  "title": "Profiler",
+  "pages": [
+    "lv_profiler_builtin_h",
+    "lv_profiler_h"
+  ]
+}

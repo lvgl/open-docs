@@ -1,0 +1,40 @@
+---
+title: "Monkey"
+order: 30
+---
+
+Generate random input events to stress-test the UI and surface hard-to-reproduce bugs.
+
+## Pointer monkey input
+
+<LvglExampleBrief>Generate random pointer events with `LV_INDEV_TYPE_POINTER`.</LvglExampleBrief>
+
+`lv_monkey_config_init` initializes a config which is then set to
+`LV_INDEV_TYPE_POINTER` with a period between 10 ms and 100 ms.
+`lv_monkey_create` registers the synthetic input device and
+`lv_monkey_set_enable(monkey, true)` starts the stream of random clicks.
+
+<LvglExample name="lv_example_monkey_1" path="others/monkey/lv_example_monkey_1" />
+
+## Encoder monkey input
+
+<LvglExampleBrief>Feed random encoder steps into a new default group for focus testing.</LvglExampleBrief>
+
+The config is set to `LV_INDEV_TYPE_ENCODER` with a 50 to 500 ms period and
+input range of -5 to 5. A fresh `lv_group_t` is created, bound to the
+monkey's indev with `lv_indev_set_group`, and installed as the default
+group. `lv_monkey_set_enable` then starts the random encoder events.
+
+<LvglExample name="lv_example_monkey_2" path="others/monkey/lv_example_monkey_2" />
+
+## Button monkey input
+
+<LvglExampleBrief>Fire random button presses mapped to three fixed screen coordinates.</LvglExampleBrief>
+
+The config is set to `LV_INDEV_TYPE_BUTTON` with a 50 to 500 ms period and
+an input range covering indices 0 through 2. Three points are placed along
+the top of the screen at `hor_res/4`, `hor_res/2`, and `hor_res*3/4`, then
+bound to the monkey's indev with `lv_indev_set_button_points`.
+`lv_monkey_set_enable` starts the random presses.
+
+<LvglExample name="lv_example_monkey_3" path="others/monkey/lv_example_monkey_3" />

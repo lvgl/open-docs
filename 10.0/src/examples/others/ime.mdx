@@ -1,0 +1,33 @@
+---
+title: "Pinyin IME"
+order: 40
+---
+
+Input method editor for typing Chinese characters via Pinyin with candidate selection.
+
+## Pinyin IME with 26-key keyboard
+
+<LvglExampleBrief>Wire a keyboard and candidate panel to an `lv_ime_pinyin` for Chinese input.</LvglExampleBrief>
+
+`lv_ime_pinyin_create` is placed on the active screen with
+`lv_font_source_han_sans_sc_16_cjk` as its text font. A one-line `lv_textarea`
+receives focus; when a non-keypad indev focuses it the `lv_keyboard` is
+unhidden via `LV_OBJ_FLAG_HIDDEN` and attached with `lv_keyboard_set_textarea`.
+`LV_EVENT_CANCEL` hides the keyboard and calls `lv_indev_reset`.
+`lv_ime_pinyin_get_cand_panel` is sized to 100% by 10% and aligned above the
+keyboard. A second label shows sample Chinese text to copy.
+
+<LvglExample name="lv_example_ime_pinyin_1" path="others/ime/lv_example_ime_pinyin_1" />
+
+## Pinyin IME in 9-key mode
+
+<LvglExampleBrief>Switch the pinyin IME into `LV_IME_PINYIN_MODE_K9` for phone-style input.</LvglExampleBrief>
+
+Mirrors the 26-key example but calls `lv_ime_pinyin_set_mode` with
+`LV_IME_PINYIN_MODE_K9` so the attached keyboard uses a 9-key layout. The
+textarea callback hides the keyboard on `LV_EVENT_READY` instead of
+`LV_EVENT_CANCEL`, and `lv_ime_pinyin_get_cand_panel` is aligned above the
+keyboard at 100% width and 10% height. A reference label displays Chinese
+sample text to type.
+
+<LvglExample name="lv_example_ime_pinyin_2" path="others/ime/lv_example_ime_pinyin_2" />

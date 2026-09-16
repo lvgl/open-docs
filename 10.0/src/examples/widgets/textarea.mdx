@@ -1,0 +1,62 @@
+---
+title: "Textarea"
+order: 160
+---
+
+## Single-line textarea with button matrix
+
+<LvglExampleBrief>Feed a one-line textarea from a numeric button matrix.</LvglExampleBrief>
+
+A textarea is placed at the top in one-line mode and forced into
+`LV_STATE_FOCUSED` so the cursor stays visible. A four-row button matrix
+holds digits `0..9` plus `LV_SYMBOL_BACKSPACE` and `LV_SYMBOL_NEW_LINE`. Its
+`LV_EVENT_VALUE_CHANGED` handler appends the pressed character, deletes on
+backspace, or sends `LV_EVENT_READY` to the textarea on new line. The matrix
+drops `LV_OBJ_FLAG_CLICK_FOCUSABLE` so focus stays with the textarea.
+
+<LvglExample name="lv_example_textarea_buttonmatrix" path="widgets/textarea/lv_example_textarea_buttonmatrix" />
+
+## Text area cursor styling
+
+<LvglExampleBrief>Style the cursor part as a solid block or a thin bar.</LvglExampleBrief>
+
+Both text areas style the `cursor` part with a named style. The first fills
+the cell with an opaque background for a block cursor; the second leaves the
+background transparent and draws only a left border for a bar cursor — the
+same part, two looks.
+
+<LvglExample name="lv_example_textarea_cursor" path="widgets/textarea/lv_example_textarea_cursor" />
+
+## Auto-format HH:MM clock input
+
+<LvglExampleBrief>Insert the `:` automatically after the first two digits.</LvglExampleBrief>
+
+A one-line textarea restricts input to `0123456789:` via
+`lv_textarea_set_accepted_chars` and caps the length at 5. A
+`LV_EVENT_VALUE_CHANGED` callback checks the first two characters and, once
+both are digits with no colon in position 2, moves the cursor and calls
+`lv_textarea_add_char(':')`. A numeric `lv_keyboard` in
+`LV_KEYBOARD_MODE_NUMBER` feeds the textarea.
+
+<LvglExample name="lv_example_textarea_format" path="widgets/textarea/lv_example_textarea_format" />
+
+## Password text area
+
+<LvglExampleBrief>Mask typed characters with password mode.</LvglExampleBrief>
+
+A one-line textarea has `lv_textarea_set_password_mode` enabled, so each
+typed character shows briefly and then turns into a bullet. An
+`lv_keyboard` docked at the bottom is bound to the textarea so the masking
+can be tried interactively.
+
+<LvglExample name="lv_example_textarea_password" path="widgets/textarea/lv_example_textarea_password" />
+
+## Text area placeholder
+
+<LvglExampleBrief>Show a hint while the text area is empty.</LvglExampleBrief>
+
+Both text areas carry the same `placeholder_text`. The first is left empty
+so the grey hint is visible; the second has `text` set, which hides the
+placeholder — the contrast shows exactly when the hint appears.
+
+<LvglExample name="lv_example_textarea_placeholder" path="widgets/textarea/lv_example_textarea_placeholder" />

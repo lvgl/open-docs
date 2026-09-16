@@ -1,0 +1,78 @@
+---
+title: "Events"
+description: "Widget events and user input handling."
+order: 50
+---
+
+Widgets emit events such as `LV_EVENT_CLICKED`, `LV_EVENT_VALUE_CHANGED`, `LV_EVENT_DRAW_MAIN`, and `LV_EVENT_KEY`. You register a callback with `lv_obj_add_event_cb()` and receive an `lv_event_t` pointer from which you read the code, target, and user data. The examples cover basic wiring, bubbling, custom event codes, and reading input device state inside a handler.
+
+## Event bubbling to a parent
+
+<LvglExampleBrief>Handle clicks on child buttons from a single container callback.</LvglExampleBrief>
+
+A 290x200 container uses `LV_FLEX_FLOW_ROW_WRAP` and holds 30 small
+buttons, each flagged with `LV_OBJ_FLAG_EVENT_BUBBLE`. One
+`LV_EVENT_CLICKED` callback on the container reads
+`lv_event_get_target_obj` to identify which button was clicked and paints
+its background red; clicks on the container itself are ignored.
+
+<LvglExample name="lv_example_event_bubble" path="event/lv_example_event_bubble" />
+
+## Handle multiple button events
+
+<LvglExampleBrief>Report the most recent button event on a second label.</LvglExampleBrief>
+
+A centered button with a `Click me!` label is paired with an info label
+on the active screen. A single callback subscribed with `LV_EVENT_ALL`
+switches on `lv_event_get_code` and writes the name of the latest event
+(`LV_EVENT_PRESSED`, `LV_EVENT_CLICKED`, `LV_EVENT_LONG_PRESSED`,
+`LV_EVENT_LONG_PRESSED_REPEAT`) into the info label.
+
+<LvglExample name="lv_example_event_button" path="event/lv_example_event_button" />
+
+## Click event on a button
+
+<LvglExampleBrief>Update a button's label with an incrementing counter on each click.</LvglExampleBrief>
+
+A button with a child label is placed on the active screen. An
+`LV_EVENT_CLICKED` callback retrieves the button, updates its label with
+a static incrementing counter, and logs `Clicked`.
+
+<LvglExample name="lv_example_event_click" path="event/lv_example_event_click" />
+
+## Custom drawing on draw task events
+
+<LvglExampleBrief>Draw a pulsing red circle on top of a container with a draw task callback.</LvglExampleBrief>
+
+A 200x200 container is centered and flagged with
+`LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS`. An `LV_EVENT_DRAW_TASK_ADDED`
+callback inspects the draw task and, when `base_dsc->part` is
+`LV_PART_MAIN`, calls `lv_draw_rect` to paint a pink circle with a red
+border and outline. A 30 ms `lv_timer_t` bounces a `size` counter between
+0 and 50 and invalidates the container each tick to animate the circle.
+
+<LvglExample name="lv_example_event_draw" path="event/lv_example_event_draw" />
+
+## Click streaks (single, double, triple)
+
+<LvglExampleBrief>React to single, double, and triple click events plus the short-click streak count.</LvglExampleBrief>
+
+A button is registered with four event callbacks: `LV_EVENT_SHORT_CLICKED`
+reads `lv_indev_get_short_click_streak()` and writes the count to a
+separate label; `LV_EVENT_SINGLE_CLICKED`, `LV_EVENT_DOUBLE_CLICKED`, and
+`LV_EVENT_TRIPLE_CLICKED` each set the button's label to a matching string.
+
+<LvglExample name="lv_example_event_streak" path="event/lv_example_event_streak" />
+
+## Event trickle to children
+
+<LvglExampleBrief>Forward pressed state from a flex container down to its children.</LvglExampleBrief>
+
+A 290x200 container with `LV_FLEX_FLOW_ROW_WRAP` holds nine small
+sub-containers, each with a numbered label. The container is flagged with
+`LV_OBJ_FLAG_EVENT_TRICKLE` so its input events reach the children; a
+single white-on-black style is added to the container for
+`LV_STATE_PRESSED` and to each sub-container for `LV_STATE_FOCUSED`, so
+pressing the container flips the whole group to the dark style.
+
+<LvglExample name="lv_example_event_trickle" path="event/lv_example_event_trickle" />

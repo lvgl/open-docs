@@ -1,0 +1,29 @@
+---
+title: "Span"
+order: 130
+---
+
+Rich text container where each `lv_span_t` segment can carry its own style, enabling mixed formatting within one paragraph.
+
+## Resolve the clicked span
+
+<LvglExampleBrief>Map a click point to the span under it with lv_spangroup_get_span_by_point.</LvglExampleBrief>
+
+A clickable `lv_spangroup` holds three spans, colored only so the segments
+are easy to tell apart. On `LV_EVENT_CLICKED` the handler reads the pointer
+position and calls `lv_spangroup_get_span_by_point` to find which span was
+hit, then logs its text — the example isolates the hit-test, not styling.
+
+<LvglExample name="lv_example_span_hittest" path="widgets/span/lv_example_span_hittest" />
+
+## Spangroup styled text
+
+<LvglExampleBrief>Mix per-span color and decoration in one wrapping rich-text block.</LvglExampleBrief>
+
+Five spans share one group but each carries its own named style: a colored
+title, plain body, a red accent, an underlined run, and a struck-through
+run. The group has a fixed width with `LV_SIZE_CONTENT` height so the text
+wraps, `indent` pushes the first line in, and `overflow="ellipsis"` with
+`max_lines` shows how the tail is truncated.
+
+<LvglExample name="lv_example_span_styling" path="widgets/span/lv_example_span_styling" />

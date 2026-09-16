@@ -1,0 +1,49 @@
+---
+title: lv_draw_sw_private.h
+description: API reference for lv_draw_sw_private.h
+api:
+  structs: [lv_draw_sw_thread_dsc_t, _lv_draw_sw_unit_t]
+---
+
+<RelatedHeaders name="lv_draw_sw.h" isPrivate={true} />
+
+<ApiSummary structs={2} />
+
+## Structs
+
+<ApiMember kind="struct" name="lv_draw_sw_thread_dsc_t">
+
+### lv_draw_sw_thread_dsc_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `task_act` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *volatile" /> |  |
+| `thread` | `lv_thread_t` |  |
+| `new_task_sync` | `lv_thread_sync_t` |  |
+| `task_done_sync` | `lv_thread_sync_t` |  |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> |  |
+| `idx` | `uint32_t` |  |
+| `exit_status` | `volatile bool` |  |
+
+
+</ApiMember>
+
+<ApiMember kind="struct" name="_lv_draw_sw_unit_t">
+
+### _lv_draw_sw_unit_t
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `base_unit` | <ApiLink name="lv_draw_unit_t" /> |  |
+| `thread_dscs` | `lv_draw_sw_thread_dsc_t[1]` |  |
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_draw_sw.h", "lv_draw_private.h"]}
+  includedBy={["lv_global.h", "lvgl_private.h"]}
+  transitiveIncludes={["lv_blend_neon.h", "lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_draw_sw_blend.h", "lv_draw_sw_blend_neon_to_rgb565.h", "lv_draw_sw_blend_neon_to_rgb888.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h"]}
+/>

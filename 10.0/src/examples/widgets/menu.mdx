@@ -1,0 +1,46 @@
+---
+title: "Menu"
+order: 105
+---
+
+## Customized back button header
+
+<LvglExampleBrief>A menu with a labeled "Back" button in the header and three titled sub pages.</LvglExampleBrief>
+
+<LvglExample name="lv_example_menu_custom_back_button" path="widgets/menu/lv_example_menu_custom_back_button" />
+
+## Menu with floating add button
+
+<LvglExampleBrief>A circular floating button appends new items and matching sub pages.</LvglExampleBrief>
+
+<LvglExample name="lv_example_menu_floating_button" path="widgets/menu/lv_example_menu_floating_button" />
+
+## Menu built from base widgets
+
+<LvglExampleBrief>Build a menu with pages and a back button.</LvglExampleBrief>
+
+The static `menu_*` helpers build the menu: `menu_page_create`
+makes a hidden full-size page, `menu_add_item` adds clickable rows, and
+`menu_set_load_page_event` wires an item to reveal another page. Navigation is
+just toggling `LV_OBJ_FLAG_HIDDEN` on the pages and showing the header back
+button whenever we are off the root page.
+
+<LvglExample name="lv_example_menu_navigation" path="widgets/menu/lv_example_menu_navigation" />
+
+## Menu with root back button
+
+<LvglExampleBrief>A menu whose always-visible root back button pops a message box when tapped.</LvglExampleBrief>
+
+<LvglExample name="lv_example_menu_root_back_button" path="widgets/menu/lv_example_menu_root_back_button" />
+
+## Settings menu with sidebar mode
+
+<LvglExampleBrief>A full Settings screen with sidebar navigation and a switch that toggles between sidebar and stacked modes.</LvglExampleBrief>
+
+<LvglExample name="lv_example_menu_sidebar" path="widgets/menu/lv_example_menu_sidebar" />
+
+## Basic menu with sub page
+
+<LvglExampleBrief>A three-item main page whose third entry opens a hidden sub page.</LvglExampleBrief>
+
+<LvglExample name="lv_example_menu_sub_page" path="widgets/menu/lv_example_menu_sub_page" />

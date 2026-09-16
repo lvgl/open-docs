@@ -1,0 +1,9 @@
+{
+  "title": "Themes",
+  "pages": [
+    "lv_theme_default_h",
+    "lv_theme_h",
+    "lv_theme_mono_h",
+    "lv_theme_simple_h"
+  ]
+}

@@ -1,0 +1,18 @@
+---
+title: "Barcode"
+order: 80
+---
+
+Generates 1D barcodes as LVGL canvas images using code128. Enable with `LV_USE_BARCODE` in `lv_conf.h`.
+
+## Barcode with palette colors
+
+<LvglExampleBrief>Render a barcode encoding an LVGL URL with custom dark and light colors.</LvglExampleBrief>
+
+A barcode widget is centered on the active screen with its height set to 50 px.
+`lv_barcode_set_dark_color` and `lv_barcode_set_light_color` use darkened and
+lightened entries from `LV_PALETTE_BLUE` and `LV_PALETTE_LIGHT_BLUE` for the
+bars and background, a matching border color is applied, and
+`lv_barcode_update` encodes `https://lvgl.io`.
+
+<LvglExample name="lv_example_barcode_1" path="libs/barcode/lv_example_barcode_1" />

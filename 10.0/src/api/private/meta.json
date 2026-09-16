@@ -1,0 +1,24 @@
+{
+  "title": "Private API",
+  "pages": [
+    "core",
+    "debugging",
+    "display",
+    "draw",
+    "drivers",
+    "font",
+    "fs",
+    "image",
+    "indev",
+    "layouts",
+    "libs",
+    "misc",
+    "osal",
+    "others",
+    "stdlib",
+    "themes",
+    "tick",
+    "widgets",
+    "lvgl_private_h"
+  ]
+}

@@ -1,0 +1,20 @@
+---
+title: "Gestures"
+order: 5
+---
+
+Detect swipe and pinch gestures on widgets.
+
+## Pinch, rotate, and two-finger swipe
+
+<LvglExampleBrief>Transform a 300x300 rectangle with three `LV_EVENT_GESTURE` callbacks.</LvglExampleBrief>
+
+A clickable label styled as a 300x300 rectangle is centered on the screen.
+Three callbacks are attached on `LV_EVENT_GESTURE`: one handles
+`LV_INDEV_GESTURE_PINCH` and rescales the rectangle between 0.4x and 2.0x via
+`lv_event_get_pinch_scale`, one handles `LV_INDEV_GESTURE_ROTATE` and applies
+`lv_obj_set_style_transform_rotation` around the pivot, and one handles
+`LV_INDEV_GESTURE_TWO_FINGERS_SWIPE` and writes the direction and distance
+into the label text.
+
+<LvglExample name="lv_example_gestures" path="others/gestures/lv_example_gestures" />
