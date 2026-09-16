@@ -1,4 +1,4 @@
-```xml title="examples/styles/lv_example_style_drop_shadow.xml" source="https://github.com/lvgl/lvgl/blob/3c25ac60244c8641ba942da8be8bbc9fe1f8718f/examples/styles/lv_example_style_drop_shadow.xml"
+```xml title="examples/styles/lv_example_style_drop_shadow.xml" source="https://github.com/lvgl/lvgl/blob/dbb97348ffce56edcc5f60f458c67223b5102579/examples/styles/lv_example_style_drop_shadow.xml"
 <!--
  @title Drop shadow
  @brief Blur the indicator's actual shape into a colored, offset shadow.
