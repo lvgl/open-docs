@@ -1,4 +1,4 @@
-```xml title="examples/widgets/roller/lv_example_roller_visible_rows.xml" source="https://github.com/lvgl/lvgl/blob/2e0d6ae4dde390ab7090e19eb333bfecc3da61be/examples/widgets/roller/lv_example_roller_visible_rows.xml"
+```xml title="examples/widgets/roller/lv_example_roller_visible_rows.xml" source="https://github.com/lvgl/lvgl/blob/898956a102afbe3f2941b891ebdcea08825cbb46/examples/widgets/roller/lv_example_roller_visible_rows.xml"
 <!--
  @title Roller visible row count
  @brief Tune how many list items the roller shows at once.
