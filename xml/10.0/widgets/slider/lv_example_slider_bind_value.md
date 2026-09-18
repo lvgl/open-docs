@@ -1,4 +1,4 @@
-```xml title="examples/widgets/slider/lv_example_slider_bind_value.xml" source="https://github.com/lvgl/lvgl/blob/05a4a37130d9948518d29a1794f37818c4401e8b/examples/widgets/slider/lv_example_slider_bind_value.xml"
+```xml title="examples/widgets/slider/lv_example_slider_bind_value.xml" source="https://github.com/lvgl/lvgl/blob/31dba727e6c766c0fa7d4bcbb02e3ac7c73e9911/examples/widgets/slider/lv_example_slider_bind_value.xml"
 <!--
  @title Slider bind value
  @brief Two-way bind a slider to a shared int subject; a label mirrors the live value.

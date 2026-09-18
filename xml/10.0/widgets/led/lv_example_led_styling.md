@@ -1,4 +1,4 @@
-```xml title="examples/widgets/led/lv_example_led_styling.xml" source="https://github.com/lvgl/lvgl/blob/05a4a37130d9948518d29a1794f37818c4401e8b/examples/widgets/led/lv_example_led_styling.xml"
+```xml title="examples/widgets/led/lv_example_led_styling.xml" source="https://github.com/lvgl/lvgl/blob/31dba727e6c766c0fa7d4bcbb02e3ac7c73e9911/examples/widgets/led/lv_example_led_styling.xml"
 <!--
  @title LED styling
  @brief Push the LED past its color attribute with border, outline, shadow, and shape.

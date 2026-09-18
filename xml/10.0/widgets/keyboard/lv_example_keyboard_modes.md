@@ -1,4 +1,4 @@
-```xml title="examples/widgets/keyboard/lv_example_keyboard_modes.xml" source="https://github.com/lvgl/lvgl/blob/05a4a37130d9948518d29a1794f37818c4401e8b/examples/widgets/keyboard/lv_example_keyboard_modes.xml"
+```xml title="examples/widgets/keyboard/lv_example_keyboard_modes.xml" source="https://github.com/lvgl/lvgl/blob/31dba727e6c766c0fa7d4bcbb02e3ac7c73e9911/examples/widgets/keyboard/lv_example_keyboard_modes.xml"
 <!--
  @title Keyboard modes
  @brief Switch between text and number layouts via the `mode` attribute.
