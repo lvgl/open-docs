@@ -13,7 +13,7 @@ function add_version_selector() {
       const dropdown = document.getElementById("version_dropdown");
       if (!dropdown) return;
       dropdown.innerHTML = versionList.map((v) => {
-        const name = v === "master" ? "Latest" : "v" + v;
+        const name = v === "dev" ? "Development" : "v" + v;
         return '<option value="' + v + '">' + name + '</option>';
       }).join("");
       const match = window.location.pathname.match(/\/docs\/open\/([^/]+)/);
