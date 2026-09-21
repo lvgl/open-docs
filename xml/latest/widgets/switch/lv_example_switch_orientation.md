@@ -1,4 +1,4 @@
-```xml title="examples/widgets/switch/lv_example_switch_orientation.xml" source="https://github.com/lvgl/lvgl/blob/e1a0ad863f29742359bc680d6a7d973448ec2285/examples/widgets/switch/lv_example_switch_orientation.xml"
+```xml title="examples/widgets/switch/lv_example_switch_orientation.xml" source="https://github.com/lvgl/lvgl/blob/7cf49a06ce30036906721766e31061ad833973d3/examples/widgets/switch/lv_example_switch_orientation.xml"
 <!--
  @title Switch orientation
  @brief Lay the switch out horizontally or vertically.
