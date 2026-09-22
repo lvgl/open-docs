@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-09-22T20:06:59.933Z",
-    "symbolCount": 9289
+    "generatedAt": "2026-09-22T22:12:12.411Z",
+    "symbolCount": 9303
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2194,6 +2194,56 @@
     "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA": {
       "path": "api/public/api_map/lv_api_map_v9_5_h",
       "anchor": "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA",
+      "kind": "macro"
+    },
+    "lv_api_map_v9_6.h": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "",
+      "kind": "header"
+    },
+    "lv_display_rotation_t": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "lv_display_rotation_t",
+      "kind": "typedef"
+    },
+    "lv_display_rotate_point_ccw": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "lv_display_rotate_point_ccw",
+      "kind": "macro"
+    },
+    "LV_DISPLAY_ROTATION_0": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DISPLAY_ROTATION_0",
+      "kind": "macro"
+    },
+    "LV_DISPLAY_ROTATION_90": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DISPLAY_ROTATION_90",
+      "kind": "macro"
+    },
+    "LV_DISPLAY_ROTATION_180": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DISPLAY_ROTATION_180",
+      "kind": "macro"
+    },
+    "LV_DISPLAY_ROTATION_270": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DISPLAY_ROTATION_270",
+      "kind": "macro"
+    },
+    "lv_indev_set_ccw": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "lv_indev_set_ccw",
+      "kind": "macro"
+    },
+    "lv_indev_clear_ccw": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "lv_indev_clear_ccw",
+      "kind": "macro"
+    },
+    "lv_indev_get_ccw": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "lv_indev_get_ccw",
       "kind": "macro"
     },
     "lv_conf_internal.h": {
@@ -5116,6 +5166,21 @@
       "anchor": "lv_point_precise_swap",
       "kind": "function"
     },
+    "lv_point_rotate": {
+      "path": "api/public/core/lv_area_h",
+      "anchor": "lv_point_rotate",
+      "kind": "function"
+    },
+    "lv_rotation_resolve": {
+      "path": "api/public/core/lv_area_h",
+      "anchor": "lv_rotation_resolve",
+      "kind": "function"
+    },
+    "lv_rotation_invert": {
+      "path": "api/public/core/lv_area_h",
+      "anchor": "lv_rotation_invert",
+      "kind": "function"
+    },
     "lv_pct": {
       "path": "api/public/core/lv_area_h",
       "anchor": "lv_pct",
@@ -5284,6 +5349,46 @@
     "LV_DIR_ALL": {
       "path": "api/public/core/lv_area_h",
       "anchor": "lv_dir_t",
+      "kind": "enumvalue"
+    },
+    "lv_rotation_t": {
+      "path": "api/public/core/lv_area_h",
+      "anchor": "lv_rotation_t",
+      "kind": "enum"
+    },
+    "LV_ROTATION_0": {
+      "path": "api/public/core/lv_area_h",
+      "anchor": "lv_rotation_t",
+      "kind": "enumvalue"
+    },
+    "LV_ROTATION_90": {
+      "path": "api/public/core/lv_area_h",
+      "anchor": "lv_rotation_t",
+      "kind": "enumvalue"
+    },
+    "LV_ROTATION_180": {
+      "path": "api/public/core/lv_area_h",
+      "anchor": "lv_rotation_t",
+      "kind": "enumvalue"
+    },
+    "LV_ROTATION_270": {
+      "path": "api/public/core/lv_area_h",
+      "anchor": "lv_rotation_t",
+      "kind": "enumvalue"
+    },
+    "lv_rotation_dir_t": {
+      "path": "api/public/core/lv_area_h",
+      "anchor": "lv_rotation_dir_t",
+      "kind": "enum"
+    },
+    "LV_ROTATION_DIR_CW": {
+      "path": "api/public/core/lv_area_h",
+      "anchor": "lv_rotation_dir_t",
+      "kind": "enumvalue"
+    },
+    "LV_ROTATION_DIR_CCW": {
+      "path": "api/public/core/lv_area_h",
+      "anchor": "lv_rotation_dir_t",
       "kind": "enumvalue"
     },
     "lv_point_t": {
@@ -14911,11 +15016,6 @@
       "anchor": "lv_display_rotate_point",
       "kind": "function"
     },
-    "lv_display_rotate_point_ccw": {
-      "path": "api/public/display/lv_display_h",
-      "anchor": "lv_display_rotate_point_ccw",
-      "kind": "function"
-    },
     "lv_display_get_draw_buf_size": {
       "path": "api/public/display/lv_display_h",
       "anchor": "lv_display_get_draw_buf_size",
@@ -14940,31 +15040,6 @@
       "path": "api/public/display/lv_display_h",
       "anchor": "lv_display_set_external_data",
       "kind": "function"
-    },
-    "lv_display_rotation_t": {
-      "path": "api/public/display/lv_display_h",
-      "anchor": "lv_display_rotation_t",
-      "kind": "enum"
-    },
-    "LV_DISPLAY_ROTATION_0": {
-      "path": "api/public/display/lv_display_h",
-      "anchor": "lv_display_rotation_t",
-      "kind": "enumvalue"
-    },
-    "LV_DISPLAY_ROTATION_90": {
-      "path": "api/public/display/lv_display_h",
-      "anchor": "lv_display_rotation_t",
-      "kind": "enumvalue"
-    },
-    "LV_DISPLAY_ROTATION_180": {
-      "path": "api/public/display/lv_display_h",
-      "anchor": "lv_display_rotation_t",
-      "kind": "enumvalue"
-    },
-    "LV_DISPLAY_ROTATION_270": {
-      "path": "api/public/display/lv_display_h",
-      "anchor": "lv_display_rotation_t",
-      "kind": "enumvalue"
     },
     "lv_display_render_mode_t": {
       "path": "api/public/display/lv_display_h",
@@ -24591,19 +24666,14 @@
       "anchor": "lv_indev_set_key_remap_cb",
       "kind": "function"
     },
-    "lv_indev_set_ccw": {
+    "lv_indev_set_rotation_dir": {
       "path": "api/public/indev/lv_indev_h",
-      "anchor": "lv_indev_set_ccw",
+      "anchor": "lv_indev_set_rotation_dir",
       "kind": "function"
     },
-    "lv_indev_clear_ccw": {
+    "lv_indev_get_rotation_dir": {
       "path": "api/public/indev/lv_indev_h",
-      "anchor": "lv_indev_clear_ccw",
-      "kind": "function"
-    },
-    "lv_indev_get_ccw": {
-      "path": "api/public/indev/lv_indev_h",
-      "anchor": "lv_indev_get_ccw",
+      "anchor": "lv_indev_get_rotation_dir",
       "kind": "function"
     },
     "lv_indev_set_external_data": {

@@ -1,0 +1,126 @@
+---
+title: lv_api_map_v9_6.h
+description: API reference for lv_api_map_v9_6.h
+api:
+  typedefs: [lv_display_rotation_t]
+  macros: [lv_display_rotate_point_ccw, LV_DISPLAY_ROTATION_0, LV_DISPLAY_ROTATION_90, LV_DISPLAY_ROTATION_180, LV_DISPLAY_ROTATION_270, lv_indev_set_ccw, lv_indev_clear_ccw, lv_indev_get_ccw]
+---
+
+<ApiSummary typedefs={1} macros={8} />
+
+## Typedefs
+
+<ApiMember kind="typedef" name="lv_display_rotation_t" file="public/api_map/lv_api_map_v9_6.h" line={25} url="https://github.com/lvgl/lvgl/tree/390531bb40867fd3faf6efb5d607128e8bd0aba7/include/lvgl/api_map/lv_api_map_v9_6.h#L25">
+
+### lv_display_rotation_t
+
+```c
+typedef lv_rotation_t lv_display_rotation_t
+```
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="lv_display_rotate_point_ccw" file="public/api_map/lv_api_map_v9_6.h" line={16} url="https://github.com/lvgl/lvgl/tree/390531bb40867fd3faf6efb5d607128e8bd0aba7/include/lvgl/api_map/lv_api_map_v9_6.h#L16">
+
+### lv_display_rotate_point_ccw
+
+```c
+#define lv_display_rotate_point_ccw(display, point) \
+    lv_point_rotate(point, lv_display_get_rotation(display), \
+                        lv_display_get_original_horizontal_resolution(display), \
+                        lv_display_get_original_vertical_resolution(display))
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DISPLAY_ROTATION_0" file="public/api_map/lv_api_map_v9_6.h" line={21} url="https://github.com/lvgl/lvgl/tree/390531bb40867fd3faf6efb5d607128e8bd0aba7/include/lvgl/api_map/lv_api_map_v9_6.h#L21">
+
+### LV_DISPLAY_ROTATION_0
+
+```c
+#define LV_DISPLAY_ROTATION_0 LV_ROTATION_0
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DISPLAY_ROTATION_90" file="public/api_map/lv_api_map_v9_6.h" line={22} url="https://github.com/lvgl/lvgl/tree/390531bb40867fd3faf6efb5d607128e8bd0aba7/include/lvgl/api_map/lv_api_map_v9_6.h#L22">
+
+### LV_DISPLAY_ROTATION_90
+
+```c
+#define LV_DISPLAY_ROTATION_90 LV_ROTATION_90
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DISPLAY_ROTATION_180" file="public/api_map/lv_api_map_v9_6.h" line={23} url="https://github.com/lvgl/lvgl/tree/390531bb40867fd3faf6efb5d607128e8bd0aba7/include/lvgl/api_map/lv_api_map_v9_6.h#L23">
+
+### LV_DISPLAY_ROTATION_180
+
+```c
+#define LV_DISPLAY_ROTATION_180 LV_ROTATION_180
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DISPLAY_ROTATION_270" file="public/api_map/lv_api_map_v9_6.h" line={24} url="https://github.com/lvgl/lvgl/tree/390531bb40867fd3faf6efb5d607128e8bd0aba7/include/lvgl/api_map/lv_api_map_v9_6.h#L24">
+
+### LV_DISPLAY_ROTATION_270
+
+```c
+#define LV_DISPLAY_ROTATION_270 LV_ROTATION_270
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_indev_set_ccw" file="public/api_map/lv_api_map_v9_6.h" line={27} url="https://github.com/lvgl/lvgl/tree/390531bb40867fd3faf6efb5d607128e8bd0aba7/include/lvgl/api_map/lv_api_map_v9_6.h#L27">
+
+### lv_indev_set_ccw
+
+```c
+#define lv_indev_set_ccw(indev) \
+    lv_indev_set_rotation_dir(indev, LV_ROTATION_DIR_CCW)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_indev_clear_ccw" file="public/api_map/lv_api_map_v9_6.h" line={28} url="https://github.com/lvgl/lvgl/tree/390531bb40867fd3faf6efb5d607128e8bd0aba7/include/lvgl/api_map/lv_api_map_v9_6.h#L28">
+
+### lv_indev_clear_ccw
+
+```c
+#define lv_indev_clear_ccw(indev) \
+    lv_indev_set_rotation_dir(indev, LV_ROTATION_DIR_CW)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="lv_indev_get_ccw" file="public/api_map/lv_api_map_v9_6.h" line={29} url="https://github.com/lvgl/lvgl/tree/390531bb40867fd3faf6efb5d607128e8bd0aba7/include/lvgl/api_map/lv_api_map_v9_6.h#L29">
+
+### lv_indev_get_ccw
+
+```c
+#define lv_indev_get_ccw(indev) \
+    (lv_indev_get_rotation_dir(indev) == LV_ROTATION_DIR_CCW)
+```
+
+
+</ApiMember>
+
+## Dependencies
+
+<FileIncludes
+  includes={["lv_area.h"]}
+  includedBy={["lvgl.h"]}
+  transitiveIncludes={["lv_conf_internal.h", "lv_math.h", "lv_types.h"]}
+/>
