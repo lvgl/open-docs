@@ -1,4 +1,4 @@
-```xml title="examples/widgets/slider/lv_example_slider_modes.xml" source="https://github.com/lvgl/lvgl/blob/c460e9d9c119881d72e78d5b9d40efdffd8e0662/examples/widgets/slider/lv_example_slider_modes.xml"
+```xml title="examples/widgets/slider/lv_example_slider_modes.xml" source="https://github.com/lvgl/lvgl/blob/4f8c9399483eb75d994210d4872052c706bfb2ec/examples/widgets/slider/lv_example_slider_modes.xml"
 <!--
  @title Slider modes
  @brief Compare normal, symmetrical, and range modes.
