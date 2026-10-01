@@ -1,4 +1,4 @@
-```xml title="examples/widgets/image/lv_example_image_recolor.xml" source="https://github.com/lvgl/lvgl/blob/bcb23a2c192fdeeb758b9e2fef71e91e68033ab3/examples/widgets/image/lv_example_image_recolor.xml"
+```xml title="examples/widgets/image/lv_example_image_recolor.xml" source="https://github.com/lvgl/lvgl/blob/0f65d39df38492af48f1777ef3c00ff8470cecc8/examples/widgets/image/lv_example_image_recolor.xml"
 <!--
  @title Image recolor
  @brief Mix a tint into an image; a slider drives the recolor intensity live via `bind_style_prop`.

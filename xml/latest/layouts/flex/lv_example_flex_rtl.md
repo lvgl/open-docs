@@ -1,4 +1,4 @@
-```xml title="examples/layouts/flex/lv_example_flex_rtl.xml" source="https://github.com/lvgl/lvgl/blob/bcb23a2c192fdeeb758b9e2fef71e91e68033ab3/examples/layouts/flex/lv_example_flex_rtl.xml"
+```xml title="examples/layouts/flex/lv_example_flex_rtl.xml" source="https://github.com/lvgl/lvgl/blob/0f65d39df38492af48f1777ef3c00ff8470cecc8/examples/layouts/flex/lv_example_flex_rtl.xml"
 <!--
  @title Flex RTL
  @brief Reverse the main axis direction with style_base_dir.
