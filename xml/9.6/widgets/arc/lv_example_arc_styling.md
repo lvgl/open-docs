@@ -1,4 +1,4 @@
-```xml title="examples/widgets/arc/lv_example_arc_styling.xml" source="https://github.com/lvgl/lvgl/blob/4d4b2da423adae73ee27886b7f1c060ee7747069/examples/widgets/arc/lv_example_arc_styling.xml"
+```xml title="examples/widgets/arc/lv_example_arc_styling.xml" source="https://github.com/lvgl/lvgl/blob/53c081d80ed62185ed50fd410f7f137604c41d02/examples/widgets/arc/lv_example_arc_styling.xml"
 <!--
  @title Arc styling
  @brief Style the background ring, the active indicator, and the knob.
