@@ -1,4 +1,4 @@
-```xml title="examples/widgets/arc/lv_example_arc_pie_chart.xml" source="https://github.com/lvgl/lvgl/blob/0f65d39df38492af48f1777ef3c00ff8470cecc8/examples/widgets/arc/lv_example_arc_pie_chart.xml"
+```xml title="examples/widgets/arc/lv_example_arc_pie_chart.xml" source="https://github.com/lvgl/lvgl/blob/c27547dffb115b54fa5e8c4db727635421add910/examples/widgets/arc/lv_example_arc_pie_chart.xml"
 <!--
  @title Arc as pie-chart slices
  @brief Stack five arcs at the same centre to render a coloured pie chart.

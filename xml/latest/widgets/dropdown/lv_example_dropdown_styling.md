@@ -1,4 +1,4 @@
-```xml title="examples/widgets/dropdown/lv_example_dropdown_styling.xml" source="https://github.com/lvgl/lvgl/blob/0f65d39df38492af48f1777ef3c00ff8470cecc8/examples/widgets/dropdown/lv_example_dropdown_styling.xml"
+```xml title="examples/widgets/dropdown/lv_example_dropdown_styling.xml" source="https://github.com/lvgl/lvgl/blob/c27547dffb115b54fa5e8c4db727635421add910/examples/widgets/dropdown/lv_example_dropdown_styling.xml"
 <!--
  @title Dropdown styling
  @brief Style the dropdown button (MAIN) with rounded corners and a focused border.

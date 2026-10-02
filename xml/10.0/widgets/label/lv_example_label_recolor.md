@@ -1,4 +1,4 @@
-```xml title="examples/widgets/label/lv_example_label_recolor.xml" source="https://github.com/lvgl/lvgl/blob/0f65d39df38492af48f1777ef3c00ff8470cecc8/examples/widgets/label/lv_example_label_recolor.xml"
+```xml title="examples/widgets/label/lv_example_label_recolor.xml" source="https://github.com/lvgl/lvgl/blob/c27547dffb115b54fa5e8c4db727635421add910/examples/widgets/label/lv_example_label_recolor.xml"
 <!--
  @title Label text recolor
  @brief Recolor individual words via inline color tags.

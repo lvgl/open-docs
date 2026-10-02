@@ -1,4 +1,4 @@
-```xml title="examples/widgets/chart/lv_example_chart_cursor.xml" source="https://github.com/lvgl/lvgl/blob/0f65d39df38492af48f1777ef3c00ff8470cecc8/examples/widgets/chart/lv_example_chart_cursor.xml"
+```xml title="examples/widgets/chart/lv_example_chart_cursor.xml" source="https://github.com/lvgl/lvgl/blob/c27547dffb115b54fa5e8c4db727635421add910/examples/widgets/chart/lv_example_chart_cursor.xml"
 <!--
  @title Chart cursor
  @brief A cross-hair cursor pinned to a specific (X, Y) location on the chart.
