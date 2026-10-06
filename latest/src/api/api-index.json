@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-10-02T17:03:14.599Z",
-    "symbolCount": 9303
+    "generatedAt": "2026-10-06T19:29:47.505Z",
+    "symbolCount": 9304
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -38234,6 +38234,11 @@
     "lv_vg_lite_matrix_transform_area": {
       "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
       "anchor": "lv_vg_lite_matrix_transform_area",
+      "kind": "function"
+    },
+    "lv_vg_lite_float_frac_near_half": {
+      "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
+      "anchor": "lv_vg_lite_float_frac_near_half",
       "kind": "function"
     },
     "lv_vg_lite_matrix_has_transform": {
