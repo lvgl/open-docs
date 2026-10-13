@@ -9,7 +9,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_st_ltdc_create_direct" file="public/drivers/display/lv_st_ltdc.h" line={42} url="https://github.com/lvgl/lvgl/tree/e08516f9f09f749ec9776120a5b27c83d09f94af/include/lvgl/drivers/display/lv_st_ltdc.h#L42">
+<ApiMember kind="function" name="lv_st_ltdc_create_direct" file="public/drivers/display/lv_st_ltdc.h" line={42} url="https://github.com/lvgl/lvgl/tree/7e472b519c130f40ff7c27aefea4d45f4c7f6ccd/include/lvgl/drivers/display/lv_st_ltdc.h#L42">
 
 ### lv_st_ltdc_create_direct
 
@@ -27,12 +27,12 @@ lv_display_t * lv_st_ltdc_create_direct(void *fb_adr_1, void *fb_adr_2, uint32_t
 | `fb_adr_2` | `void *` | An additional framebuffer-sized buffer to use for double buffering. **May** be `NULL`. When NULL a single buffer is used. |
 | `layer_idx` | `uint32_t` | The LTDC layer number to bind the display to. Typically 0 or 1. |
 
-**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — The display.
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — The display, or NULL if the LTDC layer's color format is not supported.
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_st_ltdc_create_partial" file="public/drivers/display/lv_st_ltdc.h" line={54} url="https://github.com/lvgl/lvgl/tree/e08516f9f09f749ec9776120a5b27c83d09f94af/include/lvgl/drivers/display/lv_st_ltdc.h#L54">
+<ApiMember kind="function" name="lv_st_ltdc_create_partial" file="public/drivers/display/lv_st_ltdc.h" line={55} url="https://github.com/lvgl/lvgl/tree/7e472b519c130f40ff7c27aefea4d45f4c7f6ccd/include/lvgl/drivers/display/lv_st_ltdc.h#L55">
 
 ### lv_st_ltdc_create_partial
 
@@ -51,7 +51,7 @@ lv_display_t * lv_st_ltdc_create_partial(void *render_buf_1, void *render_buf_2,
 | `buf_size` | `uint32_t` | The size of the buffer(s) in bytes. |
 | `layer_idx` | `uint32_t` | The LTDC layer number to bind the display to. Typically 0 or 1. |
 
-**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — The display.
+**Returns:** <ApiLink name="lv_display_t" display="lv_display_t *" /> — The display, or NULL if the LTDC layer's color format is not supported (with `LV_ST_LTDC_USE_DMA2D_FLUSH`, L8 and AL88 are not supported either).
 
 
 </ApiMember>
