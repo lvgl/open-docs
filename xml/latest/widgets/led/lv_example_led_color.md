@@ -1,4 +1,4 @@
-```xml title="examples/widgets/led/lv_example_led_color.xml" source="https://github.com/lvgl/lvgl/blob/98e5ef7c055e95282def3ad2dcd0ffb15d528d35/examples/widgets/led/lv_example_led_color.xml"
+```xml title="examples/widgets/led/lv_example_led_color.xml" source="https://github.com/lvgl/lvgl/blob/a34f97c3af155c7b0db3228c9eafd2982d136c6e/examples/widgets/led/lv_example_led_color.xml"
 <!--
  @title LED color
  @brief Three LEDs lit in different hues via the color attribute.

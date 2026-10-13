@@ -1,4 +1,4 @@
-```xml title="examples/widgets/label/lv_example_label_set_text_newline.xml" source="https://github.com/lvgl/lvgl/blob/98e5ef7c055e95282def3ad2dcd0ffb15d528d35/examples/widgets/label/lv_example_label_set_text_newline.xml"
+```xml title="examples/widgets/label/lv_example_label_set_text_newline.xml" source="https://github.com/lvgl/lvgl/blob/a34f97c3af155c7b0db3228c9eafd2982d136c6e/examples/widgets/label/lv_example_label_set_text_newline.xml"
 <!--
  @title Label set text with newlines
  @brief Insert explicit line breaks into a label's text.

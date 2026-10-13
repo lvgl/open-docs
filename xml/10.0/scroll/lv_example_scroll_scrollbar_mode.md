@@ -1,4 +1,4 @@
-```xml title="examples/scroll/lv_example_scroll_scrollbar_mode.xml" source="https://github.com/lvgl/lvgl/blob/98e5ef7c055e95282def3ad2dcd0ffb15d528d35/examples/scroll/lv_example_scroll_scrollbar_mode.xml"
+```xml title="examples/scroll/lv_example_scroll_scrollbar_mode.xml" source="https://github.com/lvgl/lvgl/blob/a34f97c3af155c7b0db3228c9eafd2982d136c6e/examples/scroll/lv_example_scroll_scrollbar_mode.xml"
 <!--
  @title Scrollbar mode
  @brief Compare an always-hidden scrollbar with an always-visible one.
