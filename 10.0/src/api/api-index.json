@@ -2,7 +2,7 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-10-16T10:58:33.784Z",
+    "generatedAt": "2026-10-16T13:00:31.318Z",
     "symbolCount": 9304
   },
   "symbols": {
@@ -37571,6 +37571,11 @@
       "anchor": "lv_draw_vg_lite_box_shadow",
       "kind": "function"
     },
+    "lv_draw_vg_lite_blur": {
+      "path": "api/private/draw/vg_lite/lv_draw_vg_lite_h",
+      "anchor": "lv_draw_vg_lite_blur",
+      "kind": "function"
+    },
     "lv_draw_vg_lite_border": {
       "path": "api/private/draw/vg_lite/lv_draw_vg_lite_h",
       "anchor": "lv_draw_vg_lite_border",
@@ -38124,11 +38129,6 @@
     "lv_vg_lite_vg_fmt": {
       "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
       "anchor": "lv_vg_lite_vg_fmt",
-      "kind": "function"
-    },
-    "lv_vg_lite_buffer_format_bytes": {
-      "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
-      "anchor": "lv_vg_lite_buffer_format_bytes",
       "kind": "function"
     },
     "lv_vg_lite_width_to_stride": {
