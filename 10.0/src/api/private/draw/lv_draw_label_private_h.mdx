@@ -12,24 +12,28 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_unit_draw_letter_internal" file="private/draw/lv_draw_label_private.h" line={66} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/lv_draw_label_private.h#L66">
+<ApiMember kind="function" name="lv_draw_unit_draw_letter_internal" file="private/draw/lv_draw_label_private.h" line={77} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/lv_draw_label_private.h#L77">
 
 ### lv_draw_unit_draw_letter_internal
 
+Same as `lv_draw_unit_draw_letter` but without argument checks.
+
 ```c
-void lv_draw_unit_draw_letter_internal(lv_draw_task_t *t, lv_draw_glyph_dsc_t *dsc, const lv_point_t *pos, const lv_font_t *font, uint32_t letter, lv_draw_glyph_cb_t cb)
+void lv_draw_unit_draw_letter_internal(lv_layer_t *layer, const lv_area_t *clip_area, lv_draw_glyph_dsc_t *dsc, const lv_point_t *pos, const lv_font_t *font, uint32_t letter, lv_draw_glyph_cb_t cb, void *user_data)
 ```
 
 <span className="sr-only">Parameters</span>
 
-| Name | Type |
-|------|------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
-| `dsc` | <ApiLink name="lv_draw_glyph_dsc_t" display="lv_draw_glyph_dsc_t *" /> |
-| `pos` | <ApiLink name="lv_point_t" display="const lv_point_t *" /> |
-| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> |
-| `letter` | `uint32_t` |
-| `cb` | <ApiLink name="lv_draw_glyph_cb_t" /> |
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
+| `dsc` | <ApiLink name="lv_draw_glyph_dsc_t" display="lv_draw_glyph_dsc_t *" /> | pointer to the glyph descriptor |
+| `pos` | <ApiLink name="lv_point_t" display="const lv_point_t *" /> | position of the letter |
+| `font` | <ApiLink name="lv_font_t" display="const lv_font_t *" /> | the font of the letter |
+| `letter` | `uint32_t` | the Unicode code point of the letter |
+| `cb` | <ApiLink name="lv_draw_glyph_cb_t" /> | callback to render the glyph |
+| `user_data` | `void *` | passed to cb as is |
 
 
 </ApiMember>

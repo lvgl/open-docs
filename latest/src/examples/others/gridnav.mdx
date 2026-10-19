@@ -22,9 +22,10 @@ from the group with `lv_group_remove_obj` so gridnav handles keypad movement.
 
 <LvglExampleBrief>Side-by-side list widgets with distinct `lv_gridnav_ctrl_t` modes.</LvglExampleBrief>
 
-Two `lv_list` widgets sit at the left and right edges. The left list registers
-with `LV_GRIDNAV_CTRL_NONE` and is populated with 15 `LV_SYMBOL_FILE` buttons;
-the right list uses `LV_GRIDNAV_CTRL_ROLLOVER` and holds 15 `LV_SYMBOL_DIRECTORY`
+Two lists, each a `LV_FLEX_FLOW_COLUMN` container built by the static `list_*`
+helpers, sit at the left and right edges. The left list registers with
+`LV_GRIDNAV_CTRL_NONE` and is populated with 15 `LV_SYMBOL_FILE` buttons; the
+right list uses `LV_GRIDNAV_CTRL_ROLLOVER` and holds 15 `LV_SYMBOL_DIRECTORY`
 buttons. Each list is added to the default group while every item is removed
 with `lv_group_remove_obj` so gridnav drives focus inside the list.
 
@@ -46,14 +47,14 @@ and escape steps back out.
 
 ## List with section separators
 
-<LvglExampleBrief>Twenty list buttons grouped by `lv_list_add_text` separators under gridnav rollover.</LvglExampleBrief>
+<LvglExampleBrief>Twenty list buttons grouped by full-width text separators under gridnav rollover.</LvglExampleBrief>
 
-A list on the left is registered with `LV_GRIDNAV_CTRL_ROLLOVER`. Every fifth
-iteration adds a non-focusable separator via `lv_list_add_text`, and each
-focusable entry is added with `lv_list_add_button` using `LV_SYMBOL_FILE`.
-Items are removed from the default group so gridnav handles movement, and
-each item's `LV_EVENT_CLICKED` callback logs its text through
-`lv_list_get_button_text`. A separate `Button` sits at the right edge.
+A list, a `LV_FLEX_FLOW_COLUMN` container built by the static `list_*` helpers,
+sits on the left and is registered with `LV_GRIDNAV_CTRL_ROLLOVER`. Every fifth
+iteration adds a non-focusable `lv_label` separator, and each focusable entry is
+an `lv_button` with an `LV_SYMBOL_FILE` icon. Items are removed from the default
+group so gridnav handles movement, and each item's `LV_EVENT_CLICKED` callback
+logs the text of its label child. A separate `Button` sits at the right edge.
 
 <LvglExample name="lv_example_gridnav_4" path="others/gridnav/lv_example_gridnav_4" />
 

@@ -17,7 +17,7 @@ api:
 <ApiTabs items={["Getters (1)","Other (21)"]}>
 <ApiTab value="Getters (1)">
 
-<ApiMember kind="function" name="lv_nanovg_fb_get_image_handle" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={199} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L199">
+<ApiMember kind="function" name="lv_nanovg_fb_get_image_handle" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={234} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L234">
 
 ### lv_nanovg_fb_get_image_handle
 
@@ -41,126 +41,138 @@ int lv_nanovg_fb_get_image_handle(struct NVGLUframebuffer *fb)
 </ApiTab>
 <ApiTab value="Other (21)">
 
-<ApiMember kind="function" name="lv_draw_nanovg_3d" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={92} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L92">
+<ApiMember kind="function" name="lv_draw_nanovg_3d" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={94} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L94">
 
 ### lv_draw_nanovg_3d
 
 Draw 3D texture on a NanoVG context
 
 ```c
-void lv_draw_nanovg_3d(lv_draw_task_t *t, const lv_draw_3d_dsc_t *dsc, const lv_area_t *coords)
+void lv_draw_nanovg_3d(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_3d_dsc_t *dsc, const lv_area_t *coords)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_3d_dsc_t" display="const lv_draw_3d_dsc_t *" /> | pointer to a 3D draw descriptor |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the 3D texture |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_arc" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={101} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L101">
+<ApiMember kind="function" name="lv_draw_nanovg_arc" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={106} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L106">
 
 ### lv_draw_nanovg_arc
 
 Draw arc on a NanoVG context
 
 ```c
-void lv_draw_nanovg_arc(lv_draw_task_t *t, const lv_draw_arc_dsc_t *dsc, const lv_area_t *coords)
+void lv_draw_nanovg_arc(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_arc_dsc_t *dsc, const lv_area_t *coords)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_arc_dsc_t" display="const lv_draw_arc_dsc_t *" /> | pointer to an arc descriptor |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the arc |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_border" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={109} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L109">
+<ApiMember kind="function" name="lv_draw_nanovg_border" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={117} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L117">
 
 ### lv_draw_nanovg_border
 
 Draw border on a NanoVG context
 
 ```c
-void lv_draw_nanovg_border(lv_draw_task_t *t, const lv_draw_border_dsc_t *dsc, const lv_area_t *coords)
+void lv_draw_nanovg_border(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_border_dsc_t *dsc, const lv_area_t *coords)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_border_dsc_t" display="const lv_draw_border_dsc_t *" /> | pointer to a border descriptor |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the border |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_box_shadow" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={117} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L117">
+<ApiMember kind="function" name="lv_draw_nanovg_box_shadow" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={128} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L128">
 
 ### lv_draw_nanovg_box_shadow
 
 Draw box on a NanoVG context
 
 ```c
-void lv_draw_nanovg_box_shadow(lv_draw_task_t *t, const lv_draw_box_shadow_dsc_t *dsc, const lv_area_t *coords)
+void lv_draw_nanovg_box_shadow(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_box_shadow_dsc_t *dsc, const lv_area_t *coords)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_box_shadow_dsc_t" display="const lv_draw_box_shadow_dsc_t *" /> | pointer to a box descriptor |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the box |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_fill" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={125} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L125">
+<ApiMember kind="function" name="lv_draw_nanovg_fill" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={139} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L139">
 
 ### lv_draw_nanovg_fill
 
 Fill a rectangle on a NanoVG context
 
 ```c
-void lv_draw_nanovg_fill(lv_draw_task_t *t, const lv_draw_fill_dsc_t *dsc, const lv_area_t *coords)
+void lv_draw_nanovg_fill(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_fill_dsc_t *dsc, const lv_area_t *coords)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_fill_dsc_t" display="const lv_draw_fill_dsc_t *" /> | pointer to a fill descriptor |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the rectangle |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_image" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={134} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L134">
+<ApiMember kind="function" name="lv_draw_nanovg_image" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={151} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L151">
 
 ### lv_draw_nanovg_image
 
 Draw image on a NanoVG context
 
 ```c
-void lv_draw_nanovg_image(lv_draw_task_t *t, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords, int image_handle)
+void lv_draw_nanovg_image(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords, int image_handle)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> | pointer to an image descriptor |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the image |
 | `image_handle` | `int` | the handle of the image to draw |
@@ -168,7 +180,7 @@ void lv_draw_nanovg_image(lv_draw_task_t *t, const lv_draw_image_dsc_t *dsc, con
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_label_init" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={141} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L141">
+<ApiMember kind="function" name="lv_draw_nanovg_label_init" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={158} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L158">
 
 ### lv_draw_nanovg_label_init
 
@@ -187,7 +199,7 @@ void lv_draw_nanovg_label_init(lv_draw_nanovg_unit_t *u)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_label_deinit" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={147} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L147">
+<ApiMember kind="function" name="lv_draw_nanovg_label_deinit" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={164} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L164">
 
 ### lv_draw_nanovg_label_deinit
 
@@ -206,130 +218,142 @@ void lv_draw_nanovg_label_deinit(lv_draw_nanovg_unit_t *u)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_letter" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={155} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L155">
+<ApiMember kind="function" name="lv_draw_nanovg_letter" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={174} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L174">
 
 ### lv_draw_nanovg_letter
 
 Draw letter on a NanoVG context
 
 ```c
-void lv_draw_nanovg_letter(lv_draw_task_t *t, const lv_draw_letter_dsc_t *dsc, const lv_area_t *coords)
+void lv_draw_nanovg_letter(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_letter_dsc_t *dsc, const lv_area_t *coords)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_letter_dsc_t" display="const lv_draw_letter_dsc_t *" /> | pointer to a letter descriptor |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the letter |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_label" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={163} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L163">
+<ApiMember kind="function" name="lv_draw_nanovg_label" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={185} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L185">
 
 ### lv_draw_nanovg_label
 
 Draw label on a NanoVG context
 
 ```c
-void lv_draw_nanovg_label(lv_draw_task_t *t, const lv_draw_label_dsc_t *dsc, const lv_area_t *coords)
+void lv_draw_nanovg_label(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_label_dsc_t *dsc, const lv_area_t *coords)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_label_dsc_t" display="const lv_draw_label_dsc_t *" /> | pointer to a label descriptor |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the label |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_layer" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={171} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L171">
+<ApiMember kind="function" name="lv_draw_nanovg_layer" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={196} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L196">
 
 ### lv_draw_nanovg_layer
 
 Draw layer on a NanoVG context
 
 ```c
-void lv_draw_nanovg_layer(lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *coords)
+void lv_draw_nanovg_layer(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
-| `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> | pointer to an image descriptor |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
+| `dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> | pointer to an image descriptor |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the layer |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_line" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={178} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L178">
+<ApiMember kind="function" name="lv_draw_nanovg_line" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={206} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L206">
 
 ### lv_draw_nanovg_line
 
 Draw line on a NanoVG context
 
 ```c
-void lv_draw_nanovg_line(lv_draw_task_t *t, const lv_draw_line_dsc_t *dsc)
+void lv_draw_nanovg_line(lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_line_dsc_t *dsc, void *user_data)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_line_dsc_t" display="const lv_draw_line_dsc_t *" /> | pointer to a line descriptor |
+| `user_data` | `void *` | pointer to the NanoVG draw unit |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_triangle" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={185} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L185">
+<ApiMember kind="function" name="lv_draw_nanovg_triangle" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={216} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L216">
 
 ### lv_draw_nanovg_triangle
 
 Draw triangle on a NanoVG context
 
 ```c
-void lv_draw_nanovg_triangle(lv_draw_task_t *t, const lv_draw_triangle_dsc_t *dsc)
+void lv_draw_nanovg_triangle(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_triangle_dsc_t *dsc)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_triangle_dsc_t" display="const lv_draw_triangle_dsc_t *" /> | pointer to a triangle descriptor |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_mask_rect" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={192} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L192">
+<ApiMember kind="function" name="lv_draw_nanovg_mask_rect" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={226} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L226">
 
 ### lv_draw_nanovg_mask_rect
 
 Draw mask rectangles on a NanoVG context
 
 ```c
-void lv_draw_nanovg_mask_rect(lv_draw_task_t *t, const lv_draw_mask_rect_dsc_t *dsc)
+void lv_draw_nanovg_mask_rect(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_mask_rect_dsc_t *dsc)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_mask_rect_dsc_t" display="const lv_draw_mask_rect_dsc_t *" /> | pointer to a mask descriptor |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_blur_init" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={205} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L205">
+<ApiMember kind="function" name="lv_draw_nanovg_blur_init" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={240} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L240">
 
 ### lv_draw_nanovg_blur_init
 
@@ -348,7 +372,7 @@ void lv_draw_nanovg_blur_init(lv_draw_nanovg_unit_t *u)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_blur_deinit" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={211} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L211">
+<ApiMember kind="function" name="lv_draw_nanovg_blur_deinit" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={246} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L246">
 
 ### lv_draw_nanovg_blur_deinit
 
@@ -367,48 +391,52 @@ void lv_draw_nanovg_blur_deinit(lv_draw_nanovg_unit_t *u)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_blur" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={219} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L219">
+<ApiMember kind="function" name="lv_draw_nanovg_blur" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={256} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L256">
 
 ### lv_draw_nanovg_blur
 
 Apply a separable gaussian blur to the current layer using a fragment shader
 
 ```c
-void lv_draw_nanovg_blur(lv_draw_task_t *t, const lv_draw_blur_dsc_t *dsc, const lv_area_t *coords)
+void lv_draw_nanovg_blur(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_blur_dsc_t *dsc, const lv_area_t *coords)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_blur_dsc_t" display="const lv_draw_blur_dsc_t *" /> | pointer to a blur descriptor |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the area to blur |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_nanovg_vector" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={227} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L227">
+<ApiMember kind="function" name="lv_draw_nanovg_vector" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={267} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L267">
 
 ### lv_draw_nanovg_vector
 
 Draw vector graphics on a NanoVG context
 
 ```c
-void lv_draw_nanovg_vector(lv_draw_task_t *t, const lv_draw_vector_dsc_t *dsc)
+void lv_draw_nanovg_vector(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_vector_dsc_t *dsc)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a drawing task |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_vector_dsc_t" display="const lv_draw_vector_dsc_t *" /> | pointer to a vector descriptor |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_nanovg_grad_to_paint" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={235} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L235">
+<ApiMember kind="function" name="lv_nanovg_grad_to_paint" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={276} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L276">
 
 ### lv_nanovg_grad_to_paint
 
@@ -429,7 +457,7 @@ bool lv_nanovg_grad_to_paint(NVGcontext *ctx, const lv_vector_gradient_t *grad, 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_nanovg_draw_grad" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={244} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L244">
+<ApiMember kind="function" name="lv_nanovg_draw_grad" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={285} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L285">
 
 ### lv_nanovg_draw_grad
 
@@ -451,7 +479,7 @@ void lv_nanovg_draw_grad(NVGcontext *ctx, const lv_vector_gradient_t *grad, enum
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_nanovg_draw_grad_helper" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={258} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L258">
+<ApiMember kind="function" name="lv_nanovg_draw_grad_helper" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={299} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L299">
 
 ### lv_nanovg_draw_grad_helper
 
@@ -522,7 +550,7 @@ void lv_nanovg_draw_grad_helper(NVGcontext *ctx, const lv_area_t *area, const lv
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_draw_nanovg_unit_t" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={79} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L79">
+<ApiMember kind="typedef" name="lv_draw_nanovg_unit_t" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={79} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L79">
 
 ### lv_draw_nanovg_unit_t
 
@@ -544,7 +572,7 @@ typedef struct _lv_draw_nanovg_unit_t lv_draw_nanovg_unit_t
 
 ## Macros
 
-<ApiMember kind="macro" name="NANOVG_GLES2_IMPLEMENTATION" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/nanovg/lv_draw_nanovg_private.h#L44">
+<ApiMember kind="macro" name="NANOVG_GLES2_IMPLEMENTATION" file="private/draw/nanovg/lv_draw_nanovg_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/nanovg/lv_draw_nanovg_private.h#L44">
 
 ### NANOVG_GLES2_IMPLEMENTATION
 

@@ -28,12 +28,9 @@
     "lv_label_h",
     "lv_led_h",
     "lv_line_h",
-    "lv_list_h",
     "lv_lottie_h",
-    "lv_menu_h",
     "lv_msgbox_h",
     "lv_qrcode_h",
-    "lv_rlottie_h",
     "lv_roller_h",
     "lv_scale_h",
     "lv_slider_h",
@@ -44,7 +41,6 @@
     "lv_table_h",
     "lv_tabview_h",
     "lv_textarea_h",
-    "lv_tileview_h",
-    "lv_win_h"
+    "lv_tileview_h"
   ]
 }

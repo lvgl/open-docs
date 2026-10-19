@@ -2143,12 +2143,6 @@
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/libs/rlottie/lv_rlottie.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/rlottie/lv_rlottie.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/rlottie/lv_rlottie.c",
-  "output": "lvgl/CMakeFiles/lvgl.dir/src/libs/rlottie/lv_rlottie.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/libs/tjpgd/tjpgd.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/tjpgd/tjpgd.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/tjpgd/tjpgd.c",
   "output": "lvgl/CMakeFiles/lvgl.dir/src/libs/tjpgd/tjpgd.c.o"
@@ -2485,24 +2479,6 @@
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/others/file_explorer/lv_file_explorer.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/others/file_explorer/lv_file_explorer.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/others/file_explorer/lv_file_explorer.c",
-  "output": "lvgl/CMakeFiles/lvgl.dir/src/others/file_explorer/lv_file_explorer.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/others/fragment/lv_fragment.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/others/fragment/lv_fragment.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/others/fragment/lv_fragment.c",
-  "output": "lvgl/CMakeFiles/lvgl.dir/src/others/fragment/lv_fragment.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/others/fragment/lv_fragment_manager.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/others/fragment/lv_fragment_manager.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/others/fragment/lv_fragment_manager.c",
-  "output": "lvgl/CMakeFiles/lvgl.dir/src/others/fragment/lv_fragment_manager.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/others/translation/lv_translation.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/others/translation/lv_translation.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/others/translation/lv_translation.c",
   "output": "lvgl/CMakeFiles/lvgl.dir/src/others/translation/lv_translation.c.o"
@@ -2773,21 +2749,9 @@
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/widgets/list/lv_list.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/list/lv_list.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/list/lv_list.c",
-  "output": "lvgl/CMakeFiles/lvgl.dir/src/widgets/list/lv_list.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/widgets/lottie/lv_lottie.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/lottie/lv_lottie.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/lottie/lv_lottie.c",
   "output": "lvgl/CMakeFiles/lvgl.dir/src/widgets/lottie/lv_lottie.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/widgets/menu/lv_menu.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/menu/lv_menu.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/menu/lv_menu.c",
-  "output": "lvgl/CMakeFiles/lvgl.dir/src/widgets/menu/lv_menu.c.o"
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
@@ -2872,12 +2836,6 @@
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_line_properties.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/property/lv_line_properties.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/property/lv_line_properties.c",
   "output": "lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_line_properties.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_menu_properties.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/property/lv_menu_properties.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/property/lv_menu_properties.c",
-  "output": "lvgl/CMakeFiles/lvgl.dir/src/widgets/property/lv_menu_properties.c.o"
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
@@ -3022,12 +2980,6 @@
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/widgets/tileview/lv_tileview.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/tileview/lv_tileview.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/tileview/lv_tileview.c",
   "output": "lvgl/CMakeFiles/lvgl.dir/src/widgets/tileview/lv_tileview.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl.dir/src/widgets/win/lv_win.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/win/lv_win.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/src/widgets/win/lv_win.c",
-  "output": "lvgl/CMakeFiles/lvgl.dir/src/widgets/win/lv_win.c.o"
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
@@ -3577,6 +3529,12 @@
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
+  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/layouts/flex/lv_example_flex_list_reorder.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/layouts/flex/lv_example_flex_list_reorder.c",
+  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/layouts/flex/lv_example_flex_list_reorder.c",
+  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/layouts/flex/lv_example_flex_list_reorder.c.o"
+},
+{
+  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/layouts/flex/lv_example_flex_new_track.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/layouts/flex/lv_example_flex_new_track.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/layouts/flex/lv_example_flex_new_track.c",
   "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/layouts/flex/lv_example_flex_new_track.c.o"
@@ -3781,24 +3739,6 @@
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/libs/rlottie/lv_example_rlottie_1.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/libs/rlottie/lv_example_rlottie_1.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/libs/rlottie/lv_example_rlottie_1.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/libs/rlottie/lv_example_rlottie_1.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/libs/rlottie/lv_example_rlottie_2.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/libs/rlottie/lv_example_rlottie_2.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/libs/rlottie/lv_example_rlottie_2.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/libs/rlottie/lv_example_rlottie_2.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/libs/rlottie/lv_example_rlottie_approve.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/libs/rlottie/lv_example_rlottie_approve.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/libs/rlottie/lv_example_rlottie_approve.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/libs/rlottie/lv_example_rlottie_approve.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/libs/svg/lv_example_svg_1.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/libs/svg/lv_example_svg_1.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/libs/svg/lv_example_svg_1.c",
   "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/libs/svg/lv_example_svg_1.c.o"
@@ -3847,24 +3787,6 @@
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/others/file_explorer/lv_example_file_explorer_1.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/file_explorer/lv_example_file_explorer_1.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/file_explorer/lv_example_file_explorer_1.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/others/file_explorer/lv_example_file_explorer_1.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/others/file_explorer/lv_example_file_explorer_2.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/file_explorer/lv_example_file_explorer_2.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/file_explorer/lv_example_file_explorer_2.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/others/file_explorer/lv_example_file_explorer_2.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/others/file_explorer/lv_example_file_explorer_3.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/file_explorer/lv_example_file_explorer_3.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/file_explorer/lv_example_file_explorer_3.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/others/file_explorer/lv_example_file_explorer_3.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/others/font_manager/lv_example_font_manager_1.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/font_manager/lv_example_font_manager_1.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/font_manager/lv_example_font_manager_1.c",
   "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/others/font_manager/lv_example_font_manager_1.c.o"
@@ -3880,18 +3802,6 @@
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/others/font_manager/lv_example_font_manager_3.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/font_manager/lv_example_font_manager_3.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/font_manager/lv_example_font_manager_3.c",
   "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/others/font_manager/lv_example_font_manager_3.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/others/fragment/lv_example_fragment_1.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/fragment/lv_example_fragment_1.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/fragment/lv_example_fragment_1.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/others/fragment/lv_example_fragment_1.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/others/fragment/lv_example_fragment_2.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/fragment/lv_example_fragment_2.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/others/fragment/lv_example_fragment_2.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/others/fragment/lv_example_fragment_2.c.o"
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
@@ -4819,18 +4729,6 @@
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/list/lv_example_list_reorder.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/list/lv_example_list_reorder.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/list/lv_example_list_reorder.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/list/lv_example_list_reorder.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/list/lv_example_list_sections.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/list/lv_example_list_sections.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/list/lv_example_list_sections.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/list/lv_example_list_sections.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/lottie/lv_example_lottie_approve.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/lottie/lv_example_lottie_approve.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/lottie/lv_example_lottie_approve.c",
   "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/lottie/lv_example_lottie_approve.c.o"
@@ -4846,42 +4744,6 @@
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/lottie/lv_example_lottie_from_file.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/lottie/lv_example_lottie_from_file.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/lottie/lv_example_lottie_from_file.c",
   "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/lottie/lv_example_lottie_from_file.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_custom_back_button.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_custom_back_button.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_custom_back_button.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_custom_back_button.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_floating_button.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_floating_button.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_floating_button.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_floating_button.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_navigation.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_navigation.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_navigation.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_navigation.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_root_back_button.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_root_back_button.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_root_back_button.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_root_back_button.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_sidebar.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_sidebar.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_sidebar.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_sidebar.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_sub_page.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_sub_page.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/menu/lv_example_menu_sub_page.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/menu/lv_example_menu_sub_page.c.o"
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
@@ -5260,12 +5122,6 @@
   "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/tileview/lv_example_tileview_l_shape.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/tileview/lv_example_tileview_l_shape.c",
   "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/tileview/lv_example_tileview_l_shape.c",
   "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/tileview/lv_example_tileview_l_shape.c.o"
-},
-{
-  "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",
-  "command": "/home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/emcc -DLV_CONF_PATH=\\\"/home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h\\\" -DLV_KCONFIG_IGNORE -DLV_LVGL_H_INCLUDE_SIMPLE -I/home/runner/work/lvgl/emscripten_builder -I/home/runner/work/lvgl/emscripten_builder/lvgl/include/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/include -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl  -O2 -s USE_SDL=2 -o lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/win/lv_example_win_toolbar.c.o -c /home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/win/lv_example_win_toolbar.c",
-  "file": "/home/runner/work/lvgl/emscripten_builder/lvgl/examples/widgets/win/lv_example_win_toolbar.c",
-  "output": "lvgl/CMakeFiles/lvgl_examples.dir/examples/widgets/win/lv_example_win_toolbar.c.o"
 },
 {
   "directory": "/home/runner/work/lvgl/emscripten_builder/cmbuild",

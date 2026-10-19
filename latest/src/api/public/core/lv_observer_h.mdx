@@ -2,7 +2,7 @@
 title: lv_observer.h
 description: API reference for lv_observer.h
 api:
-  functions: [lv_subject_create, lv_subject_delete, lv_subject_init_int, lv_subject_set_int, lv_subject_get_int, lv_subject_get_previous_int, lv_subject_set_min_value_int, lv_subject_set_max_value_int, lv_subject_init_float, lv_subject_set_float, lv_subject_get_float, lv_subject_get_previous_float, lv_subject_set_min_value_float, lv_subject_set_max_value_float, lv_subject_init_string, lv_subject_set_string_buffer_static, lv_subject_set_string, lv_subject_snprintf, lv_subject_get_string, lv_subject_get_previous_string, lv_subject_init_pointer, lv_subject_set_pointer, lv_subject_get_pointer, lv_subject_get_previous_pointer, lv_subject_init_color, lv_subject_set_color, lv_subject_get_color, lv_subject_get_previous_color, lv_subject_init_group, lv_subject_set_group_list_static, lv_subject_deinit, lv_subject_get_group_element, lv_subject_add_observer, lv_subject_add_observer_obj, lv_subject_add_observer_with_target, lv_observer_delete, lv_obj_remove_from_subject, lv_observer_get_target, lv_observer_get_target_obj, lv_observer_get_user_data, lv_subject_set_external_data, lv_observer_set_user_data, lv_subject_notify, lv_obj_add_subject_increment_event, lv_obj_set_subject_increment_event_min_value, lv_obj_set_subject_increment_event_max_value, lv_obj_set_subject_increment_event_rollover, lv_obj_add_subject_toggle_event, lv_obj_add_subject_set_int_event, lv_obj_add_subject_set_float_event, lv_obj_add_subject_set_string_event, lv_obj_bind_bool, lv_obj_bind_int, lv_obj_bind_float, lv_obj_bind_string, lv_obj_bind_color, lv_obj_bind_pointer, lv_obj_bind_flag_if_eq, lv_obj_bind_flag_if_not_eq, lv_obj_bind_flag_if_gt, lv_obj_bind_flag_if_ge, lv_obj_bind_flag_if_lt, lv_obj_bind_flag_if_le, lv_obj_bind_state_if_eq, lv_obj_bind_state_if_not_eq, lv_obj_bind_state_if_gt, lv_obj_bind_state_if_ge, lv_obj_bind_state_if_lt, lv_obj_bind_state_if_le, lv_obj_bind_checked]
+  functions: [lv_subject_create, lv_subject_delete, lv_subject_set_int, lv_subject_get_int, lv_subject_get_previous_int, lv_subject_set_min_value_int, lv_subject_set_max_value_int, lv_subject_set_float, lv_subject_get_float, lv_subject_get_previous_float, lv_subject_set_min_value_float, lv_subject_set_max_value_float, lv_subject_set_string_buffer_static, lv_subject_set_string, lv_subject_snprintf, lv_subject_get_string, lv_subject_get_previous_string, lv_subject_set_pointer, lv_subject_get_pointer, lv_subject_get_previous_pointer, lv_subject_set_color, lv_subject_get_color, lv_subject_get_previous_color, lv_subject_set_group_list_static, lv_subject_get_group_element, lv_subject_add_observer, lv_subject_add_observer_obj, lv_subject_add_observer_with_target, lv_observer_delete, lv_obj_remove_from_subject, lv_observer_get_target, lv_observer_get_target_obj, lv_observer_get_user_data, lv_subject_set_external_data, lv_observer_set_user_data, lv_subject_notify, lv_obj_add_subject_increment_event, lv_obj_set_subject_increment_event_min_value, lv_obj_set_subject_increment_event_max_value, lv_obj_set_subject_increment_event_rollover, lv_obj_add_subject_toggle_event, lv_obj_add_subject_set_int_event, lv_obj_add_subject_set_float_event, lv_obj_add_subject_set_string_event, lv_obj_bind_bool, lv_obj_bind_int, lv_obj_bind_float, lv_obj_bind_string, lv_obj_bind_color, lv_obj_bind_pointer, lv_obj_bind_checked]
   enums: [lv_subject_type_t]
   structs: [lv_subject_value_t, _lv_subject_t]
   typedefs: [lv_observer_cb_t, lv_obj_set_bool_t, lv_obj_set_int_t, lv_obj_set_float_t, lv_obj_set_string_t, lv_obj_set_color_t, lv_obj_set_pointer_t]
@@ -10,14 +10,14 @@ api:
 
 <RelatedHeaders name="lv_observer_private.h" isPrivate={false} />
 
-<ApiSummary functions={70} enums={1} structs={2} typedefs={7} />
+<ApiSummary functions={51} enums={1} structs={2} typedefs={7} />
 
 ## Functions
 
-<ApiTabs items={["Setters (19)","Getters (14)","Other (37)"]}>
+<ApiTabs items={["Setters (19)","Getters (14)","Other (18)"]}>
 <ApiTab value="Setters (19)">
 
-<ApiMember kind="function" name="lv_subject_set_int" file="public/core/lv_observer.h" line={158} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L158">
+<ApiMember kind="function" name="lv_subject_set_int" file="public/core/lv_observer.h" line={149} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L149">
 
 ### lv_subject_set_int
 
@@ -37,7 +37,7 @@ void lv_subject_set_int(lv_subject_t *subject, int32_t value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_set_min_value_int" file="public/core/lv_observer.h" line={180} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L180">
+<ApiMember kind="function" name="lv_subject_set_min_value_int" file="public/core/lv_observer.h" line={171} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L171">
 
 ### lv_subject_set_min_value_int
 
@@ -57,7 +57,7 @@ void lv_subject_set_min_value_int(lv_subject_t *subject, int32_t min_value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_set_max_value_int" file="public/core/lv_observer.h" line={187} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L187">
+<ApiMember kind="function" name="lv_subject_set_max_value_int" file="public/core/lv_observer.h" line={178} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L178">
 
 ### lv_subject_set_max_value_int
 
@@ -77,7 +77,7 @@ void lv_subject_set_max_value_int(lv_subject_t *subject, int32_t max_value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_set_float" file="public/core/lv_observer.h" line={205} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L205">
+<ApiMember kind="function" name="lv_subject_set_float" file="public/core/lv_observer.h" line={187} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L187">
 
 ### lv_subject_set_float
 
@@ -97,7 +97,7 @@ void lv_subject_set_float(lv_subject_t *subject, float value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_set_min_value_float" file="public/core/lv_observer.h" line={226} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L226">
+<ApiMember kind="function" name="lv_subject_set_min_value_float" file="public/core/lv_observer.h" line={208} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L208">
 
 ### lv_subject_set_min_value_float
 
@@ -117,7 +117,7 @@ void lv_subject_set_min_value_float(lv_subject_t *subject, float min_value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_set_max_value_float" file="public/core/lv_observer.h" line={233} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L233">
+<ApiMember kind="function" name="lv_subject_set_max_value_float" file="public/core/lv_observer.h" line={215} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L215">
 
 ### lv_subject_set_max_value_float
 
@@ -137,7 +137,7 @@ void lv_subject_set_max_value_float(lv_subject_t *subject, float max_value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_set_string_buffer_static" file="public/core/lv_observer.h" line={262} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L262">
+<ApiMember kind="function" name="lv_subject_set_string_buffer_static" file="public/core/lv_observer.h" line={230} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L230">
 
 ### lv_subject_set_string_buffer_static
 
@@ -163,7 +163,7 @@ A string Subject stores its own copy of the string, not just the pointer.
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_set_string" file="public/core/lv_observer.h" line={270} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L270">
+<ApiMember kind="function" name="lv_subject_set_string" file="public/core/lv_observer.h" line={238} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L238">
 
 ### lv_subject_set_string
 
@@ -187,7 +187,7 @@ The Subject stores its own copy of the string, not just the pointer.
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_set_pointer" file="public/core/lv_observer.h" line={307} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L307">
+<ApiMember kind="function" name="lv_subject_set_pointer" file="public/core/lv_observer.h" line={266} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L266">
 
 ### lv_subject_set_pointer
 
@@ -207,7 +207,7 @@ void lv_subject_set_pointer(lv_subject_t *subject, void *ptr)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_set_color" file="public/core/lv_observer.h" line={337} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L337">
+<ApiMember kind="function" name="lv_subject_set_color" file="public/core/lv_observer.h" line={287} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L287">
 
 ### lv_subject_set_color
 
@@ -227,7 +227,7 @@ void lv_subject_set_color(lv_subject_t *subject, lv_color_t color)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_set_group_list_static" file="public/core/lv_observer.h" line={372} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L372">
+<ApiMember kind="function" name="lv_subject_set_group_list_static" file="public/core/lv_observer.h" line={311} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L311">
 
 ### lv_subject_set_group_list_static
 
@@ -248,7 +248,7 @@ void lv_subject_set_group_list_static(lv_subject_t *subject, lv_subject_t *list[
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_set_external_data" file="public/core/lv_observer.h" line={491} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L491">
+<ApiMember kind="function" name="lv_subject_set_external_data" file="public/core/lv_observer.h" line={417} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L417">
 
 ### lv_subject_set_external_data
 
@@ -274,7 +274,7 @@ void lv_subject_set_external_data(lv_subject_t *subject, void *data, void(*free_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_observer_set_user_data" file="public/core/lv_observer.h" line={499} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L499">
+<ApiMember kind="function" name="lv_observer_set_user_data" file="public/core/lv_observer.h" line={425} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L425">
 
 ### lv_observer_set_user_data
 
@@ -294,7 +294,7 @@ void lv_observer_set_user_data(lv_observer_t *observer, void *user_data)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_subject_increment_event_min_value" file="public/core/lv_observer.h" line={524} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L524">
+<ApiMember kind="function" name="lv_obj_set_subject_increment_event_min_value" file="public/core/lv_observer.h" line={450} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L450">
 
 ### lv_obj_set_subject_increment_event_min_value
 
@@ -315,7 +315,7 @@ void lv_obj_set_subject_increment_event_min_value(lv_obj_t *obj, lv_subject_incr
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_subject_increment_event_max_value" file="public/core/lv_observer.h" line={532} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L532">
+<ApiMember kind="function" name="lv_obj_set_subject_increment_event_max_value" file="public/core/lv_observer.h" line={458} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L458">
 
 ### lv_obj_set_subject_increment_event_max_value
 
@@ -336,7 +336,7 @@ void lv_obj_set_subject_increment_event_max_value(lv_obj_t *obj, lv_subject_incr
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_subject_increment_event_rollover" file="public/core/lv_observer.h" line={541} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L541">
+<ApiMember kind="function" name="lv_obj_set_subject_increment_event_rollover" file="public/core/lv_observer.h" line={467} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L467">
 
 ### lv_obj_set_subject_increment_event_rollover
 
@@ -361,7 +361,7 @@ the subject also can have min/max values and always the smaller range will be co
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_subject_set_int_event" file="public/core/lv_observer.h" line={559} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L559">
+<ApiMember kind="function" name="lv_obj_add_subject_set_int_event" file="public/core/lv_observer.h" line={485} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L485">
 
 ### lv_obj_add_subject_set_int_event
 
@@ -383,7 +383,7 @@ void lv_obj_add_subject_set_int_event(lv_obj_t *obj, lv_subject_t *subject, lv_e
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_subject_set_float_event" file="public/core/lv_observer.h" line={570} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L570">
+<ApiMember kind="function" name="lv_obj_add_subject_set_float_event" file="public/core/lv_observer.h" line={496} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L496">
 
 ### lv_obj_add_subject_set_float_event
 
@@ -405,7 +405,7 @@ void lv_obj_add_subject_set_float_event(lv_obj_t *obj, lv_subject_t *subject, lv
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_subject_set_string_event" file="public/core/lv_observer.h" line={580} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L580">
+<ApiMember kind="function" name="lv_obj_add_subject_set_string_event" file="public/core/lv_observer.h" line={506} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L506">
 
 ### lv_obj_add_subject_set_string_event
 
@@ -430,7 +430,7 @@ void lv_obj_add_subject_set_string_event(lv_obj_t *obj, lv_subject_t *subject, l
 </ApiTab>
 <ApiTab value="Getters (14)">
 
-<ApiMember kind="function" name="lv_subject_get_int" file="public/core/lv_observer.h" line={165} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L165">
+<ApiMember kind="function" name="lv_subject_get_int" file="public/core/lv_observer.h" line={156} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L156">
 
 ### lv_subject_get_int
 
@@ -451,7 +451,7 @@ int32_t lv_subject_get_int(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_get_previous_int" file="public/core/lv_observer.h" line={172} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L172">
+<ApiMember kind="function" name="lv_subject_get_previous_int" file="public/core/lv_observer.h" line={163} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L163">
 
 ### lv_subject_get_previous_int
 
@@ -472,7 +472,7 @@ int32_t lv_subject_get_previous_int(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_get_float" file="public/core/lv_observer.h" line={212} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L212">
+<ApiMember kind="function" name="lv_subject_get_float" file="public/core/lv_observer.h" line={194} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L194">
 
 ### lv_subject_get_float
 
@@ -493,7 +493,7 @@ float lv_subject_get_float(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_get_previous_float" file="public/core/lv_observer.h" line={219} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L219">
+<ApiMember kind="function" name="lv_subject_get_previous_float" file="public/core/lv_observer.h" line={201} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L201">
 
 ### lv_subject_get_previous_float
 
@@ -514,7 +514,7 @@ float lv_subject_get_previous_float(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_get_string" file="public/core/lv_observer.h" line={284} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L284">
+<ApiMember kind="function" name="lv_subject_get_string" file="public/core/lv_observer.h" line={252} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L252">
 
 ### lv_subject_get_string
 
@@ -535,7 +535,7 @@ const char * lv_subject_get_string(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_get_previous_string" file="public/core/lv_observer.h" line={291} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L291">
+<ApiMember kind="function" name="lv_subject_get_previous_string" file="public/core/lv_observer.h" line={259} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L259">
 
 ### lv_subject_get_previous_string
 
@@ -556,7 +556,7 @@ const char * lv_subject_get_previous_string(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_get_pointer" file="public/core/lv_observer.h" line={314} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L314">
+<ApiMember kind="function" name="lv_subject_get_pointer" file="public/core/lv_observer.h" line={273} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L273">
 
 ### lv_subject_get_pointer
 
@@ -577,7 +577,7 @@ const void * lv_subject_get_pointer(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_get_previous_pointer" file="public/core/lv_observer.h" line={321} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L321">
+<ApiMember kind="function" name="lv_subject_get_previous_pointer" file="public/core/lv_observer.h" line={280} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L280">
 
 ### lv_subject_get_previous_pointer
 
@@ -598,7 +598,7 @@ const void * lv_subject_get_previous_pointer(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_get_color" file="public/core/lv_observer.h" line={344} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L344">
+<ApiMember kind="function" name="lv_subject_get_color" file="public/core/lv_observer.h" line={294} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L294">
 
 ### lv_subject_get_color
 
@@ -619,7 +619,7 @@ lv_color_t lv_subject_get_color(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_get_previous_color" file="public/core/lv_observer.h" line={351} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L351">
+<ApiMember kind="function" name="lv_subject_get_previous_color" file="public/core/lv_observer.h" line={301} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L301">
 
 ### lv_subject_get_previous_color
 
@@ -640,7 +640,7 @@ lv_color_t lv_subject_get_previous_color(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_get_group_element" file="public/core/lv_observer.h" line={393} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L393">
+<ApiMember kind="function" name="lv_subject_get_group_element" file="public/core/lv_observer.h" line={319} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L319">
 
 ### lv_subject_get_group_element
 
@@ -662,7 +662,7 @@ lv_subject_t * lv_subject_get_group_element(lv_subject_t *subject, int32_t index
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_observer_get_target" file="public/core/lv_observer.h" line={454} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L454">
+<ApiMember kind="function" name="lv_observer_get_target" file="public/core/lv_observer.h" line={380} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L380">
 
 ### lv_observer_get_target
 
@@ -683,7 +683,7 @@ void * lv_observer_get_target(lv_observer_t *observer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_observer_get_target_obj" file="public/core/lv_observer.h" line={463} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L463">
+<ApiMember kind="function" name="lv_observer_get_target_obj" file="public/core/lv_observer.h" line={389} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L389">
 
 ### lv_observer_get_target_obj
 
@@ -704,7 +704,7 @@ lv_obj_t * lv_observer_get_target_obj(lv_observer_t *observer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_observer_get_user_data" file="public/core/lv_observer.h" line={470} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L470">
+<ApiMember kind="function" name="lv_observer_get_user_data" file="public/core/lv_observer.h" line={396} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L396">
 
 ### lv_observer_get_user_data
 
@@ -726,9 +726,9 @@ void * lv_observer_get_user_data(const lv_observer_t *observer)
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Other (37)">
+<ApiTab value="Other (18)">
 
-<ApiMember kind="function" name="lv_subject_create" file="public/core/lv_observer.h" line={136} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L136">
+<ApiMember kind="function" name="lv_subject_create" file="public/core/lv_observer.h" line={136} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L136">
 
 ### lv_subject_create
 
@@ -747,7 +747,7 @@ lv_subject_t * lv_subject_create(lv_subject_type_t type)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_delete" file="public/core/lv_observer.h" line={142} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L142">
+<ApiMember kind="function" name="lv_subject_delete" file="public/core/lv_observer.h" line={142} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L142">
 
 ### lv_subject_delete
 
@@ -766,80 +766,7 @@ void lv_subject_delete(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_init_int" file="public/core/lv_observer.h" line={151} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L151">
-
-### lv_subject_init_int
-
-Initialize an integer-type Subject. 
-
-\> **Deprecated:** The subject init API is deprecated, use `lv_subject_create` instead
-
-```c
-void lv_subject_init_int(lv_subject_t *subject, int32_t value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `value` | `int32_t` | initial value |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_subject_init_float" file="public/core/lv_observer.h" line={198} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L198">
-
-### lv_subject_init_float
-
-Initialize an float-type Subject. 
-
-\> **Deprecated:** The subject init API is deprecated, use `lv_subject_create` instead
-
-```c
-void lv_subject_init_float(lv_subject_t *subject, float value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `value` | `float` | initial value |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_subject_init_string" file="public/core/lv_observer.h" line={249} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L249">
-
-### lv_subject_init_string
-
-Initialize a string-type Subject. 
-
-\> **Deprecated:** The subject init API is deprecated, use `lv_subject_create` instead
-
-```c
-void lv_subject_init_string(lv_subject_t *subject, char *buf, char *prev_buf, size_t size, const char *value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `buf` | `char *` | pointer to buffer to store string |
-| `prev_buf` | `char *` | pointer to buffer to store previous string. **May** be `NULL`. When NULL the previous string is not tracked. |
-| `size` | `size_t` | size of buffer(s) |
-| `value` | `const char *` | initial value of string, e.g. "hello" |
-
-<Callout type="info">
-A string Subject stores its own copy of the string, not just the pointer.
-</Callout>
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_subject_snprintf" file="public/core/lv_observer.h" line={277} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L277">
+<ApiMember kind="function" name="lv_subject_snprintf" file="public/core/lv_observer.h" line={245} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L245">
 
 ### lv_subject_snprintf
 
@@ -860,99 +787,7 @@ void lv_subject_snprintf(lv_subject_t *subject, const char *format,...)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_init_pointer" file="public/core/lv_observer.h" line={300} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L300">
-
-### lv_subject_init_pointer
-
-Initialize a pointer-type Subject. 
-
-\> **Deprecated:** The subject init API is deprecated, use `lv_subject_create` instead
-
-```c
-void lv_subject_init_pointer(lv_subject_t *subject, void *value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `value` | `void *` | initial value **May** be `NULL`. |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_subject_init_color" file="public/core/lv_observer.h" line={330} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L330">
-
-### lv_subject_init_color
-
-Initialize a color-type Subject. 
-
-\> **Deprecated:** The subject init API is deprecated, use `lv_subject_create` instead
-
-```c
-void lv_subject_init_color(lv_subject_t *subject, lv_color_t color)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `color` | <ApiLink name="lv_color_t" /> | initial value |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_subject_init_group" file="public/core/lv_observer.h" line={362} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L362">
-
-### lv_subject_init_group
-
-Initialize a Group-type Subject. 
-
-\> **Deprecated:** The subject init API is deprecated, use `lv_subject_create` instead
-
-```c
-void lv_subject_init_group(lv_subject_t *group_subject, lv_subject_t *list[], uint32_t list_len)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `group_subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Group-type Subject |
-| `list` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | list of other Subject addresses; when any of these have values updated, Observers of `group_subject` will be notified. |
-| `list_len` | `uint32_t` | number of elements in `list[]` |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_subject_deinit" file="public/core/lv_observer.h" line={385} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L385">
-
-### lv_subject_deinit
-
-Remove all Observers from a Subject and free allocated memory, and delete any associated Widget-Binding events. This leaves `subject` "disconnected" from all Observers and all associated Widget events established through Widget Binding. 
-
-\> **Deprecated:** The subject init API is deprecated, use `lv_subject_create`/`lv_subject_delete` instead
-
-```c
-void lv_subject_deinit(lv_subject_t *subject)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject **May** be `NULL`. |
-
-<Callout type="info">
-This can safely be called regardless of whether any Observers added with <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> or bound to a Widget Property with one of the `..._bind_...()` functions.
-</Callout>
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_subject_add_observer" file="public/core/lv_observer.h" line={402} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L402">
+<ApiMember kind="function" name="lv_subject_add_observer" file="public/core/lv_observer.h" line={328} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L328">
 
 ### lv_subject_add_observer
 
@@ -975,7 +810,7 @@ lv_observer_t * lv_subject_add_observer(lv_subject_t *subject, lv_observer_cb_t 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_add_observer_obj" file="public/core/lv_observer.h" line={419} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L419">
+<ApiMember kind="function" name="lv_subject_add_observer_obj" file="public/core/lv_observer.h" line={345} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L345">
 
 ### lv_subject_add_observer_obj
 
@@ -999,13 +834,13 @@ lv_observer_t * lv_subject_add_observer_obj(lv_subject_t *subject, lv_observer_c
 <Callout type="info">
 Do not call <ApiLink name="lv_observer_delete" display="lv_observer_delete()" /> on Observers created this way. Only clean up such Observers by either:
 - deleting the Widget, or
-- calling <ApiLink name="lv_subject_deinit" display="lv_subject_deinit()" /> to gracefully de-couple and remove all Observers.
+- calling <ApiLink name="lv_subject_delete" display="lv_subject_delete()" /> to gracefully de-couple and remove all Observers.
 </Callout>
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_add_observer_with_target" file="public/core/lv_observer.h" line={430} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L430">
+<ApiMember kind="function" name="lv_subject_add_observer_with_target" file="public/core/lv_observer.h" line={356} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L356">
 
 ### lv_subject_add_observer_with_target
 
@@ -1029,7 +864,7 @@ lv_observer_t * lv_subject_add_observer_with_target(lv_subject_t *subject, lv_ob
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_observer_delete" file="public/core/lv_observer.h" line={437} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L437">
+<ApiMember kind="function" name="lv_observer_delete" file="public/core/lv_observer.h" line={363} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L363">
 
 ### lv_observer_delete
 
@@ -1048,7 +883,7 @@ void lv_observer_delete(lv_observer_t *observer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_from_subject" file="public/core/lv_observer.h" line={447} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L447">
+<ApiMember kind="function" name="lv_obj_remove_from_subject" file="public/core/lv_observer.h" line={373} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L373">
 
 ### lv_obj_remove_from_subject
 
@@ -1072,7 +907,7 @@ This function can be used e.g. when a Widget's Subject(s) needs to be replaced b
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_subject_notify" file="public/core/lv_observer.h" line={505} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L505">
+<ApiMember kind="function" name="lv_subject_notify" file="public/core/lv_observer.h" line={431} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L431">
 
 ### lv_subject_notify
 
@@ -1091,7 +926,7 @@ void lv_subject_notify(lv_subject_t *subject)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_subject_increment_event" file="public/core/lv_observer.h" line={515} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L515">
+<ApiMember kind="function" name="lv_obj_add_subject_increment_event" file="public/core/lv_observer.h" line={441} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L441">
 
 ### lv_obj_add_subject_increment_event
 
@@ -1113,7 +948,7 @@ lv_subject_increment_dsc_t * lv_obj_add_subject_increment_event(lv_obj_t *obj, l
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_subject_toggle_event" file="public/core/lv_observer.h" line={550} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L550">
+<ApiMember kind="function" name="lv_obj_add_subject_toggle_event" file="public/core/lv_observer.h" line={476} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L476">
 
 ### lv_obj_add_subject_toggle_event
 
@@ -1134,7 +969,7 @@ void lv_obj_add_subject_toggle_event(lv_obj_t *obj, lv_subject_t *subject, lv_ev
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_bind_bool" file="public/core/lv_observer.h" line={592} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L592">
+<ApiMember kind="function" name="lv_obj_bind_bool" file="public/core/lv_observer.h" line={518} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L518">
 
 ### lv_obj_bind_bool
 
@@ -1157,7 +992,7 @@ lv_observer_t * lv_obj_bind_bool(lv_obj_t *obj, lv_subject_t *subject, lv_obj_se
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_bind_int" file="public/core/lv_observer.h" line={602} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L602">
+<ApiMember kind="function" name="lv_obj_bind_int" file="public/core/lv_observer.h" line={528} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L528">
 
 ### lv_obj_bind_int
 
@@ -1180,7 +1015,7 @@ lv_observer_t * lv_obj_bind_int(lv_obj_t *obj, lv_subject_t *subject, lv_obj_set
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_bind_float" file="public/core/lv_observer.h" line={613} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L613">
+<ApiMember kind="function" name="lv_obj_bind_float" file="public/core/lv_observer.h" line={539} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L539">
 
 ### lv_obj_bind_float
 
@@ -1203,7 +1038,7 @@ lv_observer_t * lv_obj_bind_float(lv_obj_t *obj, lv_subject_t *subject, lv_obj_s
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_bind_string" file="public/core/lv_observer.h" line={624} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L624">
+<ApiMember kind="function" name="lv_obj_bind_string" file="public/core/lv_observer.h" line={550} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L550">
 
 ### lv_obj_bind_string
 
@@ -1226,7 +1061,7 @@ lv_observer_t * lv_obj_bind_string(lv_obj_t *obj, lv_subject_t *subject, lv_obj_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_bind_color" file="public/core/lv_observer.h" line={634} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L634">
+<ApiMember kind="function" name="lv_obj_bind_color" file="public/core/lv_observer.h" line={560} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L560">
 
 ### lv_obj_bind_color
 
@@ -1249,7 +1084,7 @@ lv_observer_t * lv_obj_bind_color(lv_obj_t *obj, lv_subject_t *subject, lv_obj_s
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_bind_pointer" file="public/core/lv_observer.h" line={644} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L644">
+<ApiMember kind="function" name="lv_obj_bind_pointer" file="public/core/lv_observer.h" line={570} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L570">
 
 ### lv_obj_bind_pointer
 
@@ -1272,319 +1107,7 @@ lv_observer_t * lv_obj_bind_pointer(lv_obj_t *obj, lv_subject_t *subject, lv_obj
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_bind_flag_if_eq" file="public/core/lv_observer.h" line={656} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L656">
-
-### lv_obj_bind_flag_if_eq
-
-Set Widget's flag(s) if an integer Subject's value is equal to a reference value, clear flag otherwise. 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_flag_if_eq(lv_obj_t *obj, lv_subject_t *subject, lv_obj_flag_t flag, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `flag` | <ApiLink name="lv_obj_flag_t" /> | flag(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_OBJ_FLAG_HIDDEN`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_flag_if_not_eq" file="public/core/lv_observer.h" line={668} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L668">
-
-### lv_obj_bind_flag_if_not_eq
-
-Set Widget's flag(s) if an integer Subject's value is not equal to a reference value, clear flag otherwise. 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_flag_if_not_eq(lv_obj_t *obj, lv_subject_t *subject, lv_obj_flag_t flag, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `flag` | <ApiLink name="lv_obj_flag_t" /> | flag(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_OBJ_FLAG_HIDDEN`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_flag_if_gt" file="public/core/lv_observer.h" line={681} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L681">
-
-### lv_obj_bind_flag_if_gt
-
-Set Widget's flag(s) if an integer Subject's value is greater than a reference value, clear flag otherwise. 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_flag_if_gt(lv_obj_t *obj, lv_subject_t *subject, lv_obj_flag_t flag, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `flag` | <ApiLink name="lv_obj_flag_t" /> | flag(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_OBJ_FLAG_HIDDEN`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_flag_if_ge" file="public/core/lv_observer.h" line={693} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L693">
-
-### lv_obj_bind_flag_if_ge
-
-Set Widget's flag(s) if an integer Subject's value is greater than or equal to a reference value, clear flag otherwise. 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_flag_if_ge(lv_obj_t *obj, lv_subject_t *subject, lv_obj_flag_t flag, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `flag` | <ApiLink name="lv_obj_flag_t" /> | flag(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_OBJ_FLAG_HIDDEN`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_flag_if_lt" file="public/core/lv_observer.h" line={705} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L705">
-
-### lv_obj_bind_flag_if_lt
-
-Set Widget's flag(s) if an integer Subject's value is less than a reference value, clear flag otherwise. 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_flag_if_lt(lv_obj_t *obj, lv_subject_t *subject, lv_obj_flag_t flag, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `flag` | <ApiLink name="lv_obj_flag_t" /> | flag(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_OBJ_FLAG_HIDDEN`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_flag_if_le" file="public/core/lv_observer.h" line={717} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L717">
-
-### lv_obj_bind_flag_if_le
-
-Set Widget's flag(s) if an integer Subject's value is less than or equal to a reference value, clear flag otherwise. 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_flag_if_le(lv_obj_t *obj, lv_subject_t *subject, lv_obj_flag_t flag, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `flag` | <ApiLink name="lv_obj_flag_t" /> | flag(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_OBJ_FLAG_HIDDEN`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_state_if_eq" file="public/core/lv_observer.h" line={730} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L730">
-
-### lv_obj_bind_state_if_eq
-
-Set Widget's state(s) if an integer Subject's value is equal to a reference value, clear flag otherwise. 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_state_if_eq(lv_obj_t *obj, lv_subject_t *subject, lv_state_t state, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `state` | <ApiLink name="lv_state_t" /> | state(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_STATE_CHECKED`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_state_if_not_eq" file="public/core/lv_observer.h" line={742} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L742">
-
-### lv_obj_bind_state_if_not_eq
-
-Set a Widget's state(s) if an integer Subject's value is not equal to a reference value, clear flag otherwise 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_state_if_not_eq(lv_obj_t *obj, lv_subject_t *subject, lv_state_t state, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `state` | <ApiLink name="lv_state_t" /> | state(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_STATE_CHECKED`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_state_if_gt" file="public/core/lv_observer.h" line={755} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L755">
-
-### lv_obj_bind_state_if_gt
-
-Set Widget's state(s) if an integer Subject's value is greater than a reference value, clear flag otherwise. 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_state_if_gt(lv_obj_t *obj, lv_subject_t *subject, lv_state_t state, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `state` | <ApiLink name="lv_state_t" /> | state(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_STATE_CHECKED`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_state_if_ge" file="public/core/lv_observer.h" line={767} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L767">
-
-### lv_obj_bind_state_if_ge
-
-Set Widget's state(s) if an integer Subject's value is greater than or equal to a reference value, clear flag otherwise. 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_state_if_ge(lv_obj_t *obj, lv_subject_t *subject, lv_state_t state, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `state` | <ApiLink name="lv_state_t" /> | state(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_STATE_CHECKED`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_state_if_lt" file="public/core/lv_observer.h" line={779} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L779">
-
-### lv_obj_bind_state_if_lt
-
-Set Widget's state(s) if an integer Subject's value is less than a reference value, clear flag otherwise. 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_state_if_lt(lv_obj_t *obj, lv_subject_t *subject, lv_state_t state, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `state` | <ApiLink name="lv_state_t" /> | state(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_STATE_CHECKED`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_state_if_le" file="public/core/lv_observer.h" line={791} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L791">
-
-### lv_obj_bind_state_if_le
-
-Set Widget's state(s) if an integer Subject's value is less than or equal to a reference value, clear flag otherwise. 
-
-\> **Deprecated:** Use <ApiLink name="lv_obj_bind_bool" display="lv_obj_bind_bool()" /> or <ApiLink name="lv_subject_add_observer_obj" display="lv_subject_add_observer_obj()" /> instead.
-
-```c
-lv_observer_t * lv_obj_bind_state_if_le(lv_obj_t *obj, lv_subject_t *subject, lv_state_t state, int32_t ref_value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to Widget |
-| `subject` | <ApiLink name="lv_subject_t" display="lv_subject_t *" /> | pointer to Subject |
-| `state` | <ApiLink name="lv_state_t" /> | state(s) (can be bit-wise OR-ed) to set or clear (e.g. `LV_STATE_CHECKED`) |
-| `ref_value` | `int32_t` | reference value to compare Subject's value with |
-
-**Returns:** <ApiLink name="lv_observer_t" display="lv_observer_t *" /> — pointer to newly-created Observer
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_bind_checked" file="public/core/lv_observer.h" line={801} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L801">
+<ApiMember kind="function" name="lv_obj_bind_checked" file="public/core/lv_observer.h" line={580} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L580">
 
 ### lv_obj_bind_checked
 
@@ -1614,7 +1137,7 @@ Ensure Widget's `LV_OBJ_FLAG_CHECKABLE` flag is set.
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_subject_type_t" file="public/core/lv_observer.h" line={34} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L34">
+<ApiMember kind="enum" name="lv_subject_type_t" file="public/core/lv_observer.h" line={34} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L34">
 
 ### lv_subject_type_t
 
@@ -1682,7 +1205,7 @@ The Subject (an observable value)
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_observer_cb_t" file="public/core/lv_observer.h" line={82} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L82">
+<ApiMember kind="typedef" name="lv_observer_cb_t" file="public/core/lv_observer.h" line={82} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L82">
 
 ### lv_observer_cb_t
 
@@ -1703,7 +1226,7 @@ Callback called to notify Observer that Subject's value has changed
 
 </TypeUsedBy>
 
-<ApiMember kind="typedef" name="lv_obj_set_bool_t" file="public/core/lv_observer.h" line={90} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L90">
+<ApiMember kind="typedef" name="lv_obj_set_bool_t" file="public/core/lv_observer.h" line={90} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L90">
 
 ### lv_obj_set_bool_t
 
@@ -1722,7 +1245,7 @@ Generic callback called to set a boolean value on a Widget.
 
 </TypeUsedBy>
 
-<ApiMember kind="typedef" name="lv_obj_set_int_t" file="public/core/lv_observer.h" line={97} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L97">
+<ApiMember kind="typedef" name="lv_obj_set_int_t" file="public/core/lv_observer.h" line={97} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L97">
 
 ### lv_obj_set_int_t
 
@@ -1741,7 +1264,7 @@ Generic callback called to set an int value on a Widget.
 
 </TypeUsedBy>
 
-<ApiMember kind="typedef" name="lv_obj_set_float_t" file="public/core/lv_observer.h" line={104} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L104">
+<ApiMember kind="typedef" name="lv_obj_set_float_t" file="public/core/lv_observer.h" line={104} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L104">
 
 ### lv_obj_set_float_t
 
@@ -1760,7 +1283,7 @@ Generic callback called to set a float value on a Widget.
 
 </TypeUsedBy>
 
-<ApiMember kind="typedef" name="lv_obj_set_string_t" file="public/core/lv_observer.h" line={111} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L111">
+<ApiMember kind="typedef" name="lv_obj_set_string_t" file="public/core/lv_observer.h" line={111} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L111">
 
 ### lv_obj_set_string_t
 
@@ -1779,7 +1302,7 @@ Generic callback called to set a string value on a Widget.
 
 </TypeUsedBy>
 
-<ApiMember kind="typedef" name="lv_obj_set_color_t" file="public/core/lv_observer.h" line={118} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L118">
+<ApiMember kind="typedef" name="lv_obj_set_color_t" file="public/core/lv_observer.h" line={118} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L118">
 
 ### lv_obj_set_color_t
 
@@ -1798,7 +1321,7 @@ Generic callback called to set a color value on a Widget.
 
 </TypeUsedBy>
 
-<ApiMember kind="typedef" name="lv_obj_set_pointer_t" file="public/core/lv_observer.h" line={125} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/core/lv_observer.h#L125">
+<ApiMember kind="typedef" name="lv_obj_set_pointer_t" file="public/core/lv_observer.h" line={125} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/core/lv_observer.h#L125">
 
 ### lv_obj_set_pointer_t
 

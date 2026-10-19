@@ -9,8 +9,6 @@
     "monkey",
     "imgfont",
     "ime",
-    "file_explorer",
-    "fragment",
     "observer"
   ],
   "description": "Utility modules: navigation, observers, file explorer, translation, and more."

@@ -19,9 +19,7 @@
     "label",
     "led",
     "line",
-    "list",
     "lottie",
-    "menu",
     "msgbox",
     "roller",
     "scale",
@@ -33,8 +31,7 @@
     "table",
     "tabview",
     "textarea",
-    "tileview",
-    "win"
+    "tileview"
   ],
   "description": "Every built-in LVGL widget."
 }

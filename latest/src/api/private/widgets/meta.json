@@ -24,7 +24,6 @@
     "led",
     "line",
     "lottie",
-    "menu",
     "msgbox",
     "objx_templ",
     "qrcode",
@@ -38,7 +37,6 @@
     "table",
     "tabview",
     "textarea",
-    "tileview",
-    "win"
+    "tileview"
   ]
 }

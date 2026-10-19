@@ -2,7 +2,7 @@
 title: lv_layout.h
 description: API reference for lv_layout.h
 api:
-  functions: [lv_layout_create, lv_layout_register]
+  functions: [lv_layout_create]
   enums: [lv_layout_t]
   structs: [lv_layout_callbacks_t]
   typedefs: [lv_layout_update_cb_t, lv_layout_get_min_size_cb_t]
@@ -10,11 +10,11 @@ api:
 
 <RelatedHeaders name="lv_layout_private.h" isPrivate={false} />
 
-<ApiSummary functions={2} enums={1} structs={1} typedefs={2} />
+<ApiSummary functions={1} enums={1} structs={1} typedefs={2} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_layout_create" file="public/layouts/lv_layout.h" line={57} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/layouts/lv_layout.h#L57">
+<ApiMember kind="function" name="lv_layout_create" file="public/layouts/lv_layout.h" line={57} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/layouts/lv_layout.h#L57">
 
 ### lv_layout_create
 
@@ -36,33 +36,9 @@ uint32_t lv_layout_create(lv_layout_callbacks_t callbacks, void *user_data)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_layout_register" file="public/layouts/lv_layout.h" line={69} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/layouts/lv_layout.h#L69">
-
-### lv_layout_register
-
-Register a new layout
-
-\> **Deprecated:** use `lv_layout_create` instead.
-
-```c
-uint32_t lv_layout_register(lv_layout_update_cb_t cb, void *user_data)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `cb` | <ApiLink name="lv_layout_update_cb_t" /> | the layout update callback |
-| `user_data` | `void *` | custom data that will be passed to `cb` **May** be `NULL`. |
-
-**Returns:** `uint32_t` — the ID of the new layout
-
-
-</ApiMember>
-
 ## Enums
 
-<ApiMember kind="enum" name="lv_layout_t" file="public/layouts/lv_layout.h" line={36} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/layouts/lv_layout.h#L36">
+<ApiMember kind="enum" name="lv_layout_t" file="public/layouts/lv_layout.h" line={36} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/layouts/lv_layout.h#L36">
 
 ### lv_layout_t
 
@@ -98,7 +74,7 @@ uint32_t lv_layout_register(lv_layout_update_cb_t cb, void *user_data)
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_layout_update_cb_t" file="public/layouts/lv_layout.h" line={27} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/layouts/lv_layout.h#L27">
+<ApiMember kind="typedef" name="lv_layout_update_cb_t" file="public/layouts/lv_layout.h" line={27} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/layouts/lv_layout.h#L27">
 
 ### lv_layout_update_cb_t
 
@@ -109,13 +85,7 @@ typedef void(* lv_layout_update_cb_t) (lv_obj_t *, void *user_data)
 
 </ApiMember>
 
-<TypeUsedBy name="lv_layout_update_cb_t" count={1}>
-
-- `lv_layout_register` — param `cb`
-
-</TypeUsedBy>
-
-<ApiMember kind="typedef" name="lv_layout_get_min_size_cb_t" file="public/layouts/lv_layout.h" line={28} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/layouts/lv_layout.h#L28">
+<ApiMember kind="typedef" name="lv_layout_get_min_size_cb_t" file="public/layouts/lv_layout.h" line={28} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/layouts/lv_layout.h#L28">
 
 ### lv_layout_get_min_size_cb_t
 

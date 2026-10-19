@@ -16,7 +16,7 @@ api:
 <ApiTabs items={["Getters (2)","Other (3)"]}>
 <ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_draw_task_get_image_dsc" file="public/draw/lv_draw_image.h" line={130} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/draw/lv_draw_image.h#L130">
+<ApiMember kind="function" name="lv_draw_task_get_image_dsc" file="public/draw/lv_draw_image.h" line={132} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/draw/lv_draw_image.h#L132">
 
 ### lv_draw_task_get_image_dsc
 
@@ -37,7 +37,7 @@ lv_draw_image_dsc_t * lv_draw_task_get_image_dsc(lv_draw_task_t *task)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_src_get_type" file="public/draw/lv_draw_image.h" line={161} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/draw/lv_draw_image.h#L161">
+<ApiMember kind="function" name="lv_image_src_get_type" file="public/draw/lv_draw_image.h" line={163} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/draw/lv_draw_image.h#L163">
 
 ### lv_image_src_get_type
 
@@ -61,7 +61,7 @@ lv_image_src_t lv_image_src_get_type(const void *src)
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_draw_image_dsc_init" file="public/draw/lv_draw_image.h" line={123} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/draw/lv_draw_image.h#L123">
+<ApiMember kind="function" name="lv_draw_image_dsc_init" file="public/draw/lv_draw_image.h" line={125} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/draw/lv_draw_image.h#L125">
 
 ### lv_draw_image_dsc_init
 
@@ -80,7 +80,7 @@ void lv_draw_image_dsc_init(lv_draw_image_dsc_t *dsc)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_image" file="public/draw/lv_draw_image.h" line={141} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/draw/lv_draw_image.h#L141">
+<ApiMember kind="function" name="lv_draw_image" file="public/draw/lv_draw_image.h" line={143} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/draw/lv_draw_image.h#L143">
 
 ### lv_draw_image
 
@@ -105,7 +105,7 @@ void lv_draw_image(lv_layer_t *layer, const lv_draw_image_dsc_t *dsc, const lv_a
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_layer" file="public/draw/lv_draw_image.h" line={151} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/draw/lv_draw_image.h#L151">
+<ApiMember kind="function" name="lv_draw_layer" file="public/draw/lv_draw_image.h" line={153} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/draw/lv_draw_image.h#L153">
 
 ### lv_draw_layer
 
@@ -166,12 +166,12 @@ void lv_draw_layer(lv_layer_t *layer, const lv_draw_image_dsc_t *dsc, const lv_a
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_draw_image_core_cb" file="public/draw/lv_draw_image.h" line={111} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/draw/lv_draw_image.h#L111">
+<ApiMember kind="typedef" name="lv_draw_image_core_cb" file="public/draw/lv_draw_image.h" line={112} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/draw/lv_draw_image.h#L112">
 
 ### lv_draw_image_core_cb
 
 ```c
-typedef void(* lv_draw_image_core_cb) (lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc, const lv_image_decoder_dsc_t *decoder_dsc, lv_draw_image_sup_t *sup, const lv_area_t *img_coords, const lv_area_t *clipped_img_area)
+typedef void(* lv_draw_image_core_cb) (lv_layer_t *layer, const lv_draw_image_dsc_t *draw_dsc, const lv_image_decoder_dsc_t *decoder_dsc, lv_draw_image_sup_t *sup, const lv_area_t *img_coords, const lv_area_t *clipped_img_area, void *user_data)
 ```
 
 PErform the actual rendering of a decoded image

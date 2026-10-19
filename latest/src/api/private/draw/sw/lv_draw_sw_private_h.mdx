@@ -2,12 +2,40 @@
 title: lv_draw_sw_private.h
 description: API reference for lv_draw_sw_private.h
 api:
+  functions: [lv_draw_sw_image_core]
   structs: [lv_draw_sw_thread_dsc_t, _lv_draw_sw_unit_t]
 ---
 
 <RelatedHeaders name="lv_draw_sw.h" isPrivate={true} />
 
-<ApiSummary structs={2} />
+<ApiSummary functions={1} structs={2} />
+
+## Functions
+
+<ApiMember kind="function" name="lv_draw_sw_image_core" file="private/draw/sw/lv_draw_sw_private.h" line={76} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/lv_draw_sw_private.h#L76">
+
+### lv_draw_sw_image_core
+
+Draw a decoded image.
+
+```c
+void lv_draw_sw_image_core(lv_layer_t *layer, const lv_draw_image_dsc_t *draw_dsc, const lv_image_decoder_dsc_t *decoder_dsc, lv_draw_image_sup_t *sup, const lv_area_t *img_coords, const lv_area_t *clipped_img_area, void *user_data)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> | the draw descriptor of the image |
+| `decoder_dsc` | <ApiLink name="lv_image_decoder_dsc_t" display="const lv_image_decoder_dsc_t *" /> | pointer to the decoded image's descriptor |
+| `sup` | <ApiLink name="lv_draw_image_sup_t" display="lv_draw_image_sup_t *" /> | supplementary data |
+| `img_coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the absolute coordinates of the image |
+| `clipped_img_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the absolute coordinates of the image area to draw (already clipped) |
+| `user_data` | `void *` | unused |
+
+
+</ApiMember>
 
 ## Structs
 

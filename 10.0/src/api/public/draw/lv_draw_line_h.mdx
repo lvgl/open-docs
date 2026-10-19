@@ -14,7 +14,7 @@ api:
 <ApiTabs items={["Getters (1)","Other (3)"]}>
 <ApiTab value="Getters (1)">
 
-<ApiMember kind="function" name="lv_draw_task_get_line_dsc" file="public/draw/lv_draw_line.h" line={95} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/draw/lv_draw_line.h#L95">
+<ApiMember kind="function" name="lv_draw_task_get_line_dsc" file="public/draw/lv_draw_line.h" line={95} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/draw/lv_draw_line.h#L95">
 
 ### lv_draw_task_get_line_dsc
 
@@ -38,7 +38,7 @@ lv_draw_line_dsc_t * lv_draw_task_get_line_dsc(lv_draw_task_t *task)
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_draw_line_dsc_init" file="public/draw/lv_draw_line.h" line={88} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/draw/lv_draw_line.h#L88">
+<ApiMember kind="function" name="lv_draw_line_dsc_init" file="public/draw/lv_draw_line.h" line={88} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/draw/lv_draw_line.h#L88">
 
 ### lv_draw_line_dsc_init
 
@@ -57,7 +57,7 @@ void lv_draw_line_dsc_init(lv_draw_line_dsc_t *dsc)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_line" file="public/draw/lv_draw_line.h" line={102} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/draw/lv_draw_line.h#L102">
+<ApiMember kind="function" name="lv_draw_line" file="public/draw/lv_draw_line.h" line={102} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/draw/lv_draw_line.h#L102">
 
 ### lv_draw_line
 
@@ -77,23 +77,25 @@ void lv_draw_line(lv_layer_t *layer, const lv_draw_line_dsc_t *dsc)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_line_iterate" file="public/draw/lv_draw_line.h" line={112} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/draw/lv_draw_line.h#L112">
+<ApiMember kind="function" name="lv_draw_line_iterate" file="public/draw/lv_draw_line.h" line={114} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/draw/lv_draw_line.h#L114">
 
 ### lv_draw_line_iterate
 
 A helper function to call a callback which draws a line between two points. This way it doesn't matter if `p1, p2` or `points` were used as it calls the `callback` as needed.
 
 ```c
-void lv_draw_line_iterate(lv_draw_task_t *t, lv_draw_line_dsc_t *dsc, void(*draw_line_cb)(lv_draw_task_t *t, const lv_draw_line_dsc_t *dsc))
+void lv_draw_line_iterate(lv_layer_t *layer, const lv_area_t *clip_area, lv_draw_line_dsc_t *dsc, void(*draw_line_cb)(lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_line_dsc_t *dsc, void *user_data), void *user_data)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `dsc` | <ApiLink name="lv_draw_line_dsc_t" display="lv_draw_line_dsc_t *" /> | pointer to a draw descriptor |
-| `draw_line_cb` | `void(*)(`<ApiLink name="lv_draw_task_t" />` *t, const `<ApiLink name="lv_draw_line_dsc_t" />` *dsc)` | a callback that draws a line between `dsc->p1` and `dsc->p2` |
+| `draw_line_cb` | `void(*)(`<ApiLink name="lv_layer_t" />` *layer, const `<ApiLink name="lv_area_t" />` *clip_area, const `<ApiLink name="lv_draw_line_dsc_t" />` *dsc, void *user_data)` | a callback that draws a line between `dsc->p1` and `dsc->p2` |
+| `user_data` | `void *` | passed to draw_line_cb as is **May** be `NULL`. |
 
 
 </ApiMember>
@@ -144,7 +146,7 @@ void lv_draw_line_iterate(lv_draw_task_t *t, lv_draw_line_dsc_t *dsc, void(*draw
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_DRAW_LINE_POINT_NONE" file="public/draw/lv_draw_line.h" line={26} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/draw/lv_draw_line.h#L26">
+<ApiMember kind="macro" name="LV_DRAW_LINE_POINT_NONE" file="public/draw/lv_draw_line.h" line={26} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/draw/lv_draw_line.h#L26">
 
 ### LV_DRAW_LINE_POINT_NONE
 

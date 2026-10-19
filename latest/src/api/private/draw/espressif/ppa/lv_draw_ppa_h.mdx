@@ -11,7 +11,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_ppa_init" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={37} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/espressif/ppa/lv_draw_ppa.h#L37">
+<ApiMember kind="function" name="lv_draw_ppa_init" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={37} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/espressif/ppa/lv_draw_ppa.h#L37">
 
 ### lv_draw_ppa_init
 
@@ -22,7 +22,7 @@ void lv_draw_ppa_init(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_ppa_deinit" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={38} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/espressif/ppa/lv_draw_ppa.h#L38">
+<ApiMember kind="function" name="lv_draw_ppa_deinit" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={38} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/espressif/ppa/lv_draw_ppa.h#L38">
 
 ### lv_draw_ppa_deinit
 
@@ -33,7 +33,7 @@ void lv_draw_ppa_deinit(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_buf_ppa_init_handlers" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={39} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/espressif/ppa/lv_draw_ppa.h#L39">
+<ApiMember kind="function" name="lv_draw_buf_ppa_init_handlers" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={39} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/espressif/ppa/lv_draw_ppa.h#L39">
 
 ### lv_draw_buf_ppa_init_handlers
 
@@ -44,38 +44,42 @@ void lv_draw_buf_ppa_init_handlers(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_ppa_fill" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={41} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/espressif/ppa/lv_draw_ppa.h#L41">
+<ApiMember kind="function" name="lv_draw_ppa_fill" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={41} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/espressif/ppa/lv_draw_ppa.h#L41">
 
 ### lv_draw_ppa_fill
 
 ```c
-void lv_draw_ppa_fill(lv_draw_task_t *t, const lv_draw_fill_dsc_t *dsc, const lv_area_t *coords)
+void lv_draw_ppa_fill(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_fill_dsc_t *dsc, const lv_area_t *coords)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type |
 |------|------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
 | `dsc` | <ApiLink name="lv_draw_fill_dsc_t" display="const lv_draw_fill_dsc_t *" /> |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_ppa_img" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={44} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/espressif/ppa/lv_draw_ppa.h#L44">
+<ApiMember kind="function" name="lv_draw_ppa_img" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={44} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/espressif/ppa/lv_draw_ppa.h#L44">
 
 ### lv_draw_ppa_img
 
 ```c
-void lv_draw_ppa_img(lv_draw_task_t *t, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords)
+void lv_draw_ppa_img(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type |
 |------|------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
 | `dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
 

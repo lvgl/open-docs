@@ -2,18 +2,18 @@
 title: lv_gltf.h
 description: API reference for lv_gltf.h
 api:
-  functions: [lv_gltf_create, lv_gltf_set_environment, lv_gltf_load_model_from_file, lv_gltf_load_model_from_bytes, lv_gltf_add_model, lv_gltf_get_model_count, lv_gltf_get_model_by_index, lv_gltf_get_primary_model, lv_gltf_remove_model, lv_gltf_remove_all_models, lv_gltf_set_yaw, lv_gltf_get_yaw, lv_gltf_set_pitch, lv_gltf_get_pitch, lv_gltf_set_distance, lv_gltf_get_distance, lv_gltf_get_world_distance, lv_gltf_set_fov, lv_gltf_get_fov, lv_gltf_set_focal_x, lv_gltf_get_focal_x, lv_gltf_set_focal_y, lv_gltf_get_focal_y, lv_gltf_set_focal_z, lv_gltf_get_focal_z, lv_gltf_recenter, lv_gltf_set_camera, lv_gltf_get_camera, lv_gltf_get_camera_count, lv_gltf_set_animation_speed, lv_gltf_get_animation_speed, lv_gltf_set_background_mode, lv_gltf_get_background_mode, lv_gltf_set_background_blur, lv_gltf_get_background_blur, lv_gltf_set_environment_brightness, lv_gltf_get_environment_brightness, lv_gltf_set_env_brightness, lv_gltf_get_env_brightness, lv_gltf_set_image_exposure, lv_gltf_get_image_exposure, lv_gltf_set_antialiasing_mode, lv_gltf_get_antialiasing_mode, lv_intersect_ray_with_plane, lv_gltf_get_current_view_plane, lv_gltf_get_ray_from_2d_coordinate, lv_gltf_world_to_screen]
+  functions: [lv_gltf_create, lv_gltf_set_environment, lv_gltf_load_model_from_file, lv_gltf_load_model_from_bytes, lv_gltf_add_model, lv_gltf_get_model_count, lv_gltf_get_model_by_index, lv_gltf_get_primary_model, lv_gltf_remove_model, lv_gltf_remove_all_models, lv_gltf_set_yaw, lv_gltf_get_yaw, lv_gltf_set_pitch, lv_gltf_get_pitch, lv_gltf_set_distance, lv_gltf_get_distance, lv_gltf_get_world_distance, lv_gltf_set_fov, lv_gltf_get_fov, lv_gltf_set_focal_x, lv_gltf_get_focal_x, lv_gltf_set_focal_y, lv_gltf_get_focal_y, lv_gltf_set_focal_z, lv_gltf_get_focal_z, lv_gltf_recenter, lv_gltf_set_camera, lv_gltf_get_camera, lv_gltf_get_camera_count, lv_gltf_set_background_mode, lv_gltf_get_background_mode, lv_gltf_set_background_blur, lv_gltf_get_background_blur, lv_gltf_set_environment_brightness, lv_gltf_get_environment_brightness, lv_gltf_set_image_exposure, lv_gltf_get_image_exposure, lv_gltf_set_antialiasing_mode, lv_gltf_get_antialiasing_mode, lv_intersect_ray_with_plane, lv_gltf_get_current_view_plane, lv_gltf_get_ray_from_2d_coordinate, lv_gltf_world_to_screen]
   enums: [lv_gltf_aa_mode_t, lv_gltf_bg_mode_t]
 ---
 
-<ApiSummary functions={47} enums={2} />
+<ApiSummary functions={43} enums={2} />
 
 ## Functions
 
-<ApiTabs items={["Setters (16)","Getters (22)","Other (9)"]}>
-<ApiTab value="Setters (16)">
+<ApiTabs items={["Setters (14)","Getters (20)","Other (9)"]}>
+<ApiTab value="Setters (14)">
 
-<ApiMember kind="function" name="lv_gltf_set_environment" file="public/widgets/lv_gltf.h" line={66} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L66">
+<ApiMember kind="function" name="lv_gltf_set_environment" file="public/widgets/lv_gltf.h" line={66} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L66">
 
 ### lv_gltf_set_environment
 
@@ -41,7 +41,7 @@ If no environment is set before attempting to load a file, a default one will be
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_yaw" file="public/widgets/lv_gltf.h" line={143} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L143">
+<ApiMember kind="function" name="lv_gltf_set_yaw" file="public/widgets/lv_gltf.h" line={143} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L143">
 
 ### lv_gltf_set_yaw
 
@@ -61,7 +61,7 @@ void lv_gltf_set_yaw(lv_obj_t *obj, float yaw)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_pitch" file="public/widgets/lv_gltf.h" line={157} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L157">
+<ApiMember kind="function" name="lv_gltf_set_pitch" file="public/widgets/lv_gltf.h" line={157} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L157">
 
 ### lv_gltf_set_pitch
 
@@ -81,7 +81,7 @@ void lv_gltf_set_pitch(lv_obj_t *obj, float pitch)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_distance" file="public/widgets/lv_gltf.h" line={171} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L171">
+<ApiMember kind="function" name="lv_gltf_set_distance" file="public/widgets/lv_gltf.h" line={171} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L171">
 
 ### lv_gltf_set_distance
 
@@ -101,7 +101,7 @@ void lv_gltf_set_distance(lv_obj_t *obj, float value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_fov" file="public/widgets/lv_gltf.h" line={196} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L196">
+<ApiMember kind="function" name="lv_gltf_set_fov" file="public/widgets/lv_gltf.h" line={196} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L196">
 
 ### lv_gltf_set_fov
 
@@ -121,7 +121,7 @@ void lv_gltf_set_fov(lv_obj_t *obj, float value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_focal_x" file="public/widgets/lv_gltf.h" line={214} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L214">
+<ApiMember kind="function" name="lv_gltf_set_focal_x" file="public/widgets/lv_gltf.h" line={214} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L214">
 
 ### lv_gltf_set_focal_x
 
@@ -141,7 +141,7 @@ void lv_gltf_set_focal_x(lv_obj_t *obj, float value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_focal_y" file="public/widgets/lv_gltf.h" line={228} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L228">
+<ApiMember kind="function" name="lv_gltf_set_focal_y" file="public/widgets/lv_gltf.h" line={228} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L228">
 
 ### lv_gltf_set_focal_y
 
@@ -161,7 +161,7 @@ void lv_gltf_set_focal_y(lv_obj_t *obj, float value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_focal_z" file="public/widgets/lv_gltf.h" line={242} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L242">
+<ApiMember kind="function" name="lv_gltf_set_focal_z" file="public/widgets/lv_gltf.h" line={242} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L242">
 
 ### lv_gltf_set_focal_z
 
@@ -181,7 +181,7 @@ void lv_gltf_set_focal_z(lv_obj_t *obj, float value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_camera" file="public/widgets/lv_gltf.h" line={270} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L270">
+<ApiMember kind="function" name="lv_gltf_set_camera" file="public/widgets/lv_gltf.h" line={270} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L270">
 
 ### lv_gltf_set_camera
 
@@ -205,31 +205,7 @@ Values higher than the scene's camera count will be clamped to the maximum avail
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_animation_speed" file="public/widgets/lv_gltf.h" line={304} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L304">
-
-### lv_gltf_set_animation_speed
-
-DEPRECATED. See `lv_gltf_model_set_animation_speed`
-
-Set the animation speed ratio
-
-The actual ratio is the value parameter / LV_GLTF_ANIM_SPEED_NORMAL Values greater than LV_GLTF_ANIM_SPEED_NORMAL will speed-up the animation Values less than LV_GLTF_ANIM_SPEED_NORMAL will slow down the animation
-
-```c
-void lv_gltf_set_animation_speed(lv_obj_t *obj, uint32_t value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a glTF viewer object |
-| `value` | `uint32_t` | speed-up ratio of the animation |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_gltf_set_background_mode" file="public/widgets/lv_gltf.h" line={326} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L326">
+<ApiMember kind="function" name="lv_gltf_set_background_mode" file="public/widgets/lv_gltf.h" line={301} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L301">
 
 ### lv_gltf_set_background_mode
 
@@ -249,7 +225,7 @@ void lv_gltf_set_background_mode(lv_obj_t *obj, lv_gltf_bg_mode_t value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_background_blur" file="public/widgets/lv_gltf.h" line={340} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L340">
+<ApiMember kind="function" name="lv_gltf_set_background_blur" file="public/widgets/lv_gltf.h" line={315} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L315">
 
 ### lv_gltf_set_background_blur
 
@@ -269,7 +245,7 @@ void lv_gltf_set_background_blur(lv_obj_t *obj, uint32_t value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_environment_brightness" file="public/widgets/lv_gltf.h" line={354} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L354">
+<ApiMember kind="function" name="lv_gltf_set_environment_brightness" file="public/widgets/lv_gltf.h" line={329} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L329">
 
 ### lv_gltf_set_environment_brightness
 
@@ -289,29 +265,7 @@ void lv_gltf_set_environment_brightness(lv_obj_t *obj, float value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_env_brightness" file="public/widgets/lv_gltf.h" line={371} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L371">
-
-### lv_gltf_set_env_brightness
-
-Set the environment brightness. 
-
-\> **Deprecated:** Use <ApiLink name="lv_gltf_set_environment_brightness" display="lv_gltf_set_environment_brightness()" /> instead, which takes a multiplier (1.0 = neutral).
-
-```c
-void lv_gltf_set_env_brightness(lv_obj_t *obj, uint32_t value)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a glTF viewer object |
-| `value` | `uint32_t` | brightness percentage, 100 = neutral |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_gltf_set_image_exposure" file="public/widgets/lv_gltf.h" line={388} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L388">
+<ApiMember kind="function" name="lv_gltf_set_image_exposure" file="public/widgets/lv_gltf.h" line={343} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L343">
 
 ### lv_gltf_set_image_exposure
 
@@ -331,7 +285,7 @@ void lv_gltf_set_image_exposure(lv_obj_t *obj, float value)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_set_antialiasing_mode" file="public/widgets/lv_gltf.h" line={406} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L406">
+<ApiMember kind="function" name="lv_gltf_set_antialiasing_mode" file="public/widgets/lv_gltf.h" line={361} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L361">
 
 ### lv_gltf_set_antialiasing_mode
 
@@ -352,9 +306,9 @@ void lv_gltf_set_antialiasing_mode(lv_obj_t *obj, lv_gltf_aa_mode_t value)
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Getters (22)">
+<ApiTab value="Getters (20)">
 
-<ApiMember kind="function" name="lv_gltf_get_model_count" file="public/widgets/lv_gltf.h" line={104} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L104">
+<ApiMember kind="function" name="lv_gltf_get_model_count" file="public/widgets/lv_gltf.h" line={104} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L104">
 
 ### lv_gltf_get_model_count
 
@@ -375,7 +329,7 @@ size_t lv_gltf_get_model_count(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_model_by_index" file="public/widgets/lv_gltf.h" line={112} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L112">
+<ApiMember kind="function" name="lv_gltf_get_model_by_index" file="public/widgets/lv_gltf.h" line={112} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L112">
 
 ### lv_gltf_get_model_by_index
 
@@ -397,7 +351,7 @@ lv_gltf_model_t * lv_gltf_get_model_by_index(const lv_obj_t *obj, size_t id)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_primary_model" file="public/widgets/lv_gltf.h" line={121} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L121">
+<ApiMember kind="function" name="lv_gltf_get_primary_model" file="public/widgets/lv_gltf.h" line={121} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L121">
 
 ### lv_gltf_get_primary_model
 
@@ -418,7 +372,7 @@ lv_gltf_model_t * lv_gltf_get_primary_model(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_yaw" file="public/widgets/lv_gltf.h" line={150} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L150">
+<ApiMember kind="function" name="lv_gltf_get_yaw" file="public/widgets/lv_gltf.h" line={150} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L150">
 
 ### lv_gltf_get_yaw
 
@@ -439,7 +393,7 @@ float lv_gltf_get_yaw(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_pitch" file="public/widgets/lv_gltf.h" line={164} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L164">
+<ApiMember kind="function" name="lv_gltf_get_pitch" file="public/widgets/lv_gltf.h" line={164} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L164">
 
 ### lv_gltf_get_pitch
 
@@ -460,7 +414,7 @@ float lv_gltf_get_pitch(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_distance" file="public/widgets/lv_gltf.h" line={178} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L178">
+<ApiMember kind="function" name="lv_gltf_get_distance" file="public/widgets/lv_gltf.h" line={178} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L178">
 
 ### lv_gltf_get_distance
 
@@ -481,7 +435,7 @@ float lv_gltf_get_distance(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_world_distance" file="public/widgets/lv_gltf.h" line={185} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L185">
+<ApiMember kind="function" name="lv_gltf_get_world_distance" file="public/widgets/lv_gltf.h" line={185} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L185">
 
 ### lv_gltf_get_world_distance
 
@@ -502,7 +456,7 @@ float lv_gltf_get_world_distance(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_fov" file="public/widgets/lv_gltf.h" line={203} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L203">
+<ApiMember kind="function" name="lv_gltf_get_fov" file="public/widgets/lv_gltf.h" line={203} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L203">
 
 ### lv_gltf_get_fov
 
@@ -523,7 +477,7 @@ float lv_gltf_get_fov(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_focal_x" file="public/widgets/lv_gltf.h" line={221} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L221">
+<ApiMember kind="function" name="lv_gltf_get_focal_x" file="public/widgets/lv_gltf.h" line={221} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L221">
 
 ### lv_gltf_get_focal_x
 
@@ -544,7 +498,7 @@ float lv_gltf_get_focal_x(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_focal_y" file="public/widgets/lv_gltf.h" line={235} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L235">
+<ApiMember kind="function" name="lv_gltf_get_focal_y" file="public/widgets/lv_gltf.h" line={235} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L235">
 
 ### lv_gltf_get_focal_y
 
@@ -565,7 +519,7 @@ float lv_gltf_get_focal_y(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_focal_z" file="public/widgets/lv_gltf.h" line={249} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L249">
+<ApiMember kind="function" name="lv_gltf_get_focal_z" file="public/widgets/lv_gltf.h" line={249} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L249">
 
 ### lv_gltf_get_focal_z
 
@@ -586,7 +540,7 @@ float lv_gltf_get_focal_z(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_camera" file="public/widgets/lv_gltf.h" line={277} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L277">
+<ApiMember kind="function" name="lv_gltf_get_camera" file="public/widgets/lv_gltf.h" line={277} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L277">
 
 ### lv_gltf_get_camera
 
@@ -607,7 +561,7 @@ uint32_t lv_gltf_get_camera(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_camera_count" file="public/widgets/lv_gltf.h" line={290} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L290">
+<ApiMember kind="function" name="lv_gltf_get_camera_count" file="public/widgets/lv_gltf.h" line={290} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L290">
 
 ### lv_gltf_get_camera_count
 
@@ -630,30 +584,7 @@ uint32_t lv_gltf_get_camera_count(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_animation_speed" file="public/widgets/lv_gltf.h" line={315} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L315">
-
-### lv_gltf_get_animation_speed
-
-DEPRECATED. See `lv_gltf_model_get_animation_speed`
-
-Get the animation speed ratio
-
-The actual ratio is the return value / LV_GLTF_ANIM_SPEED_NORMAL
-
-```c
-uint32_t lv_gltf_get_animation_speed(const lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a glTF viewer object |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_gltf_get_background_mode" file="public/widgets/lv_gltf.h" line={333} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L333">
+<ApiMember kind="function" name="lv_gltf_get_background_mode" file="public/widgets/lv_gltf.h" line={308} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L308">
 
 ### lv_gltf_get_background_mode
 
@@ -674,7 +605,7 @@ lv_gltf_bg_mode_t lv_gltf_get_background_mode(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_background_blur" file="public/widgets/lv_gltf.h" line={347} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L347">
+<ApiMember kind="function" name="lv_gltf_get_background_blur" file="public/widgets/lv_gltf.h" line={322} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L322">
 
 ### lv_gltf_get_background_blur
 
@@ -695,7 +626,7 @@ uint32_t lv_gltf_get_background_blur(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_environment_brightness" file="public/widgets/lv_gltf.h" line={361} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L361">
+<ApiMember kind="function" name="lv_gltf_get_environment_brightness" file="public/widgets/lv_gltf.h" line={336} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L336">
 
 ### lv_gltf_get_environment_brightness
 
@@ -716,30 +647,7 @@ float lv_gltf_get_environment_brightness(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_env_brightness" file="public/widgets/lv_gltf.h" line={381} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L381">
-
-### lv_gltf_get_env_brightness
-
-Get the environment brightness. 
-
-\> **Deprecated:** Use <ApiLink name="lv_gltf_get_environment_brightness" display="lv_gltf_get_environment_brightness()" /> instead, which returns a multiplier (1.0 = neutral).
-
-```c
-uint32_t lv_gltf_get_env_brightness(const lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to a glTF viewer object |
-
-**Returns:** `uint32_t` — brightness percentage, 100 = neutral
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_gltf_get_image_exposure" file="public/widgets/lv_gltf.h" line={395} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L395">
+<ApiMember kind="function" name="lv_gltf_get_image_exposure" file="public/widgets/lv_gltf.h" line={350} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L350">
 
 ### lv_gltf_get_image_exposure
 
@@ -760,7 +668,7 @@ float lv_gltf_get_image_exposure(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_antialiasing_mode" file="public/widgets/lv_gltf.h" line={413} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L413">
+<ApiMember kind="function" name="lv_gltf_get_antialiasing_mode" file="public/widgets/lv_gltf.h" line={368} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L368">
 
 ### lv_gltf_get_antialiasing_mode
 
@@ -781,7 +689,7 @@ lv_gltf_aa_mode_t lv_gltf_get_antialiasing_mode(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_current_view_plane" file="public/widgets/lv_gltf.h" line={435} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L435">
+<ApiMember kind="function" name="lv_gltf_get_current_view_plane" file="public/widgets/lv_gltf.h" line={390} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L390">
 
 ### lv_gltf_get_current_view_plane
 
@@ -803,7 +711,7 @@ lv_3dplane_t lv_gltf_get_current_view_plane(lv_obj_t *obj, float distance)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_get_ray_from_2d_coordinate" file="public/widgets/lv_gltf.h" line={443} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L443">
+<ApiMember kind="function" name="lv_gltf_get_ray_from_2d_coordinate" file="public/widgets/lv_gltf.h" line={398} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L398">
 
 ### lv_gltf_get_ray_from_2d_coordinate
 
@@ -828,7 +736,7 @@ lv_3dray_t lv_gltf_get_ray_from_2d_coordinate(lv_obj_t *obj, const lv_point_t *s
 </ApiTab>
 <ApiTab value="Other (9)">
 
-<ApiMember kind="function" name="lv_gltf_create" file="public/widgets/lv_gltf.h" line={56} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L56">
+<ApiMember kind="function" name="lv_gltf_create" file="public/widgets/lv_gltf.h" line={56} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L56">
 
 ### lv_gltf_create
 
@@ -849,7 +757,7 @@ lv_obj_t * lv_gltf_create(lv_obj_t *parent)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_load_model_from_file" file="public/widgets/lv_gltf.h" line={74} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L74">
+<ApiMember kind="function" name="lv_gltf_load_model_from_file" file="public/widgets/lv_gltf.h" line={74} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L74">
 
 ### lv_gltf_load_model_from_file
 
@@ -871,7 +779,7 @@ lv_gltf_model_t * lv_gltf_load_model_from_file(lv_obj_t *obj, const char *path)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_load_model_from_bytes" file="public/widgets/lv_gltf.h" line={83} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L83">
+<ApiMember kind="function" name="lv_gltf_load_model_from_bytes" file="public/widgets/lv_gltf.h" line={83} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L83">
 
 ### lv_gltf_load_model_from_bytes
 
@@ -894,7 +802,7 @@ lv_gltf_model_t * lv_gltf_load_model_from_bytes(lv_obj_t *obj, const uint8_t *by
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_add_model" file="public/widgets/lv_gltf.h" line={97} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L97">
+<ApiMember kind="function" name="lv_gltf_add_model" file="public/widgets/lv_gltf.h" line={97} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L97">
 
 ### lv_gltf_add_model
 
@@ -918,7 +826,7 @@ lv_result_t lv_gltf_add_model(lv_obj_t *obj, lv_gltf_model_t *model)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_remove_model" file="public/widgets/lv_gltf.h" line={129} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L129">
+<ApiMember kind="function" name="lv_gltf_remove_model" file="public/widgets/lv_gltf.h" line={129} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L129">
 
 ### lv_gltf_remove_model
 
@@ -938,7 +846,7 @@ void lv_gltf_remove_model(lv_obj_t *obj, lv_gltf_model_t *model)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_remove_all_models" file="public/widgets/lv_gltf.h" line={136} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L136">
+<ApiMember kind="function" name="lv_gltf_remove_all_models" file="public/widgets/lv_gltf.h" line={136} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L136">
 
 ### lv_gltf_remove_all_models
 
@@ -957,7 +865,7 @@ void lv_gltf_remove_all_models(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_recenter" file="public/widgets/lv_gltf.h" line={256} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L256">
+<ApiMember kind="function" name="lv_gltf_recenter" file="public/widgets/lv_gltf.h" line={256} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L256">
 
 ### lv_gltf_recenter
 
@@ -977,7 +885,7 @@ void lv_gltf_recenter(lv_obj_t *obj, lv_gltf_model_t *model)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_intersect_ray_with_plane" file="public/widgets/lv_gltf.h" line={426} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L426">
+<ApiMember kind="function" name="lv_intersect_ray_with_plane" file="public/widgets/lv_gltf.h" line={381} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L381">
 
 ### lv_intersect_ray_with_plane
 
@@ -1000,7 +908,7 @@ lv_result_t lv_intersect_ray_with_plane(const lv_3dray_t *ray, const lv_3dplane_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_gltf_world_to_screen" file="public/widgets/lv_gltf.h" line={453} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L453">
+<ApiMember kind="function" name="lv_gltf_world_to_screen" file="public/widgets/lv_gltf.h" line={408} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L408">
 
 ### lv_gltf_world_to_screen
 
@@ -1027,7 +935,7 @@ lv_result_t lv_gltf_world_to_screen(lv_obj_t *obj, const lv_3dpoint_t world_pos,
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_gltf_aa_mode_t" file="public/widgets/lv_gltf.h" line={34} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L34">
+<ApiMember kind="enum" name="lv_gltf_aa_mode_t" file="public/widgets/lv_gltf.h" line={34} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L34">
 
 ### lv_gltf_aa_mode_t
 
@@ -1046,7 +954,7 @@ lv_result_t lv_gltf_world_to_screen(lv_obj_t *obj, const lv_3dpoint_t world_pos,
 
 </TypeUsedBy>
 
-<ApiMember kind="enum" name="lv_gltf_bg_mode_t" file="public/widgets/lv_gltf.h" line={40} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/include/lvgl/widgets/lv_gltf.h#L40">
+<ApiMember kind="enum" name="lv_gltf_bg_mode_t" file="public/widgets/lv_gltf.h" line={40} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/include/lvgl/widgets/lv_gltf.h#L40">
 
 ### lv_gltf_bg_mode_t
 

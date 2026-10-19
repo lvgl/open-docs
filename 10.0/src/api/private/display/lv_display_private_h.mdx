@@ -4,16 +4,16 @@ description: API reference for lv_display_private.h
 api:
   functions: [lv_display_set_draw_buf_handlers]
   structs: [_lv_display_t]
-  macros: [LOG_NULL_DISPLAY_DEPRECATED_MESSAGE, LV_INV_BUF_SIZE]
+  macros: [LV_INV_BUF_SIZE]
 ---
 
 <RelatedHeaders name="lv_display.h" isPrivate={true} />
 
-<ApiSummary functions={1} structs={1} macros={2} />
+<ApiSummary functions={1} structs={1} macros={1} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_display_set_draw_buf_handlers" file="private/display/lv_display_private.h" line={206} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/display/lv_display_private.h#L206">
+<ApiMember kind="function" name="lv_display_set_draw_buf_handlers" file="private/display/lv_display_private.h" line={203} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/display/lv_display_private.h#L203">
 
 ### lv_display_set_draw_buf_handlers
 
@@ -113,19 +113,7 @@ void lv_display_set_draw_buf_handlers(lv_display_t *disp, const lv_draw_buf_hand
 
 ## Macros
 
-<ApiMember kind="macro" name="LOG_NULL_DISPLAY_DEPRECATED_MESSAGE" file="private/display/lv_display_private.h" line={23} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/display/lv_display_private.h#L23">
-
-### LOG_NULL_DISPLAY_DEPRECATED_MESSAGE
-
-```c
-#define LOG_NULL_DISPLAY_DEPRECATED_MESSAGE() \
-    LV_LOG_DEPRECATED("Calling this function with a NULL display is deprecated. You can retrieve the default display with `lv_display_get_default()`")
-```
-
-
-</ApiMember>
-
-<ApiMember kind="macro" name="LV_INV_BUF_SIZE" file="private/display/lv_display_private.h" line={30} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/display/lv_display_private.h#L30">
+<ApiMember kind="macro" name="LV_INV_BUF_SIZE" file="private/display/lv_display_private.h" line={27} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/display/lv_display_private.h#L27">
 
 ### LV_INV_BUF_SIZE
 

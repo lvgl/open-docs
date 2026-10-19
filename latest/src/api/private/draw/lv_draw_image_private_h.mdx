@@ -2,20 +2,20 @@
 title: lv_draw_image_private.h
 description: API reference for lv_draw_image_private.h
 api:
-  functions: [lv_draw_image_normal_helper, lv_draw_image_tiled_helper, lv_image_buf_get_transformed_area]
+  functions: [lv_draw_image_normal_helper, lv_draw_image_tiled_helper, lv_image_buf_get_transformed_area, lv_draw_image_get_transformed_area]
   structs: [_lv_draw_image_sup_t]
 ---
 
 <RelatedHeaders name="lv_draw_image.h" isPrivate={true} />
 
-<ApiSummary functions={3} structs={1} />
+<ApiSummary functions={4} structs={1} />
 
 ## Functions
 
-<ApiTabs items={["Getters (1)","Other (2)"]}>
-<ApiTab value="Getters (1)">
+<ApiTabs items={["Getters (2)","Other (2)"]}>
+<ApiTab value="Getters (2)">
 
-<ApiMember kind="function" name="lv_image_buf_get_transformed_area" file="private/draw/lv_draw_image_private.h" line={78} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/lv_draw_image_private.h#L78">
+<ApiMember kind="function" name="lv_image_buf_get_transformed_area" file="private/draw/lv_draw_image_private.h" line={82} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/lv_draw_image_private.h#L82">
 
 ### lv_image_buf_get_transformed_area
 
@@ -40,51 +40,76 @@ void lv_image_buf_get_transformed_area(lv_area_t *res, int32_t w, int32_t h, int
 
 </ApiMember>
 
+<ApiMember kind="function" name="lv_draw_image_get_transformed_area" file="private/draw/lv_draw_image_private.h" line={91} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/lv_draw_image_private.h#L91">
+
+### lv_draw_image_get_transformed_area
+
+Get the area an image covers after rotation and scaling.
+
+```c
+void lv_draw_image_get_transformed_area(lv_area_t *res, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `res` | <ApiLink name="lv_area_t" display="lv_area_t *" /> | store the result here |
+| `dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> | the image draw descriptor (rotation, scale_x, scale_y, pivot are used) |
+| `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the image |
+
+
+</ApiMember>
+
 </ApiTab>
 <ApiTab value="Other (2)">
 
-<ApiMember kind="function" name="lv_draw_image_normal_helper" file="private/draw/lv_draw_image_private.h" line={51} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/lv_draw_image_private.h#L51">
+<ApiMember kind="function" name="lv_draw_image_normal_helper" file="private/draw/lv_draw_image_private.h" line={53} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/lv_draw_image_private.h#L53">
 
 ### lv_draw_image_normal_helper
 
 Can be used by draw units to handle the decoding and prepare everything for the actual image rendering
 
 ```c
-void lv_draw_image_normal_helper(lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *coords, lv_draw_image_core_cb draw_core_cb, const lv_image_decoder_args_t *decoder_args)
+void lv_draw_image_normal_helper(lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *coords, lv_draw_image_core_cb draw_core_cb, const lv_image_decoder_args_t *decoder_args, void *user_data)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a draw task |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> | the draw descriptor of the image |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the absolute coordinates of the image |
 | `draw_core_cb` | <ApiLink name="lv_draw_image_core_cb" /> | a callback to perform the actual rendering |
 | `decoder_args` | <ApiLink name="lv_image_decoder_args_t" display="const lv_image_decoder_args_t *" /> | the args passed to image decoders, or NULL for defaults |
+| `user_data` | `void *` | custom data passed to `draw_core_cb` |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_image_tiled_helper" file="private/draw/lv_draw_image_private.h" line={64} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/lv_draw_image_private.h#L64">
+<ApiMember kind="function" name="lv_draw_image_tiled_helper" file="private/draw/lv_draw_image_private.h" line={68} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/lv_draw_image_private.h#L68">
 
 ### lv_draw_image_tiled_helper
 
 Can be used by draw units for TILED images to handle the decoding and prepare everything for the actual image rendering
 
 ```c
-void lv_draw_image_tiled_helper(lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *coords, lv_draw_image_core_cb draw_core_cb, const lv_image_decoder_args_t *decoder_args)
+void lv_draw_image_tiled_helper(lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_image_dsc_t *draw_dsc, const lv_area_t *coords, lv_draw_image_core_cb draw_core_cb, const lv_image_decoder_args_t *decoder_args, void *user_data)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | pointer to a draw task |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | the target layer |
+| `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the clip area |
 | `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> | the draw descriptor of the image |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the absolute coordinates of the image |
 | `draw_core_cb` | <ApiLink name="lv_draw_image_core_cb" /> | a callback to perform the actual rendering |
 | `decoder_args` | <ApiLink name="lv_image_decoder_args_t" display="const lv_image_decoder_args_t *" /> | the args passed to image decoders, or NULL for defaults |
+| `user_data` | `void *` | custom data passed to `draw_core_cb` |
 
 
 </ApiMember>

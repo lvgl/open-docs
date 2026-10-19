@@ -10,7 +10,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="arm_2d_helper_swap_rgb16" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={93} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L93">
+<ApiMember kind="function" name="arm_2d_helper_swap_rgb16" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={93} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L93">
 
 ### arm_2d_helper_swap_rgb16
 
@@ -28,7 +28,7 @@ void arm_2d_helper_swap_rgb16(uint16_t *phwBuffer, uint32_t wCount)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_rgb565_swap_helium" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={167} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L167">
+<ApiMember kind="function" name="lv_draw_rgb565_swap_helium" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={167} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L167">
 
 ### lv_draw_rgb565_swap_helium
 
@@ -46,7 +46,7 @@ static lv_result_t lv_draw_rgb565_swap_helium(void *buf, uint32_t buf_size_px)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_sw_image_helium" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={173} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L173">
+<ApiMember kind="function" name="lv_draw_sw_image_helium" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={173} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L173">
 
 ### lv_draw_sw_image_helium
 
@@ -57,7 +57,7 @@ static lv_result_t lv_draw_rgb565_swap_helium(void *buf, uint32_t buf_size_px)
 \< Fully cover if opa \>= LV_OPA_MAX
 
 ```c
-static lv_result_t lv_draw_sw_image_helium(bool is_transform, lv_color_format_t src_cf, const uint8_t *src_buf, const lv_area_t *coords, int32_t src_stride, const lv_area_t *des_area, lv_draw_task_t *t, const lv_draw_image_dsc_t *draw_dsc)
+static lv_result_t lv_draw_sw_image_helium(bool is_transform, lv_color_format_t src_cf, const uint8_t *src_buf, const lv_area_t *coords, int32_t src_stride, const lv_area_t *des_area, lv_layer_t *layer, const lv_draw_image_dsc_t *draw_dsc)
 ```
 
 <span className="sr-only">Parameters</span>
@@ -70,13 +70,13 @@ static lv_result_t lv_draw_sw_image_helium(bool is_transform, lv_color_format_t 
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
 | `src_stride` | `int32_t` |
 | `des_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
-| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> |
+| `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> |
 | `draw_dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_sw_image_recolor_rgb565" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={617} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L617">
+<ApiMember kind="function" name="lv_draw_sw_image_recolor_rgb565" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={612} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L612">
 
 ### lv_draw_sw_image_recolor_rgb565
 
@@ -96,7 +96,7 @@ static lv_result_t lv_draw_sw_image_recolor_rgb565(const uint8_t *src_buf, const
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_sw_image_recolor_rgb888" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={641} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L641">
+<ApiMember kind="function" name="lv_draw_sw_image_recolor_rgb888" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={636} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L636">
 
 ### lv_draw_sw_image_recolor_rgb888
 
@@ -119,7 +119,7 @@ static lv_result_t lv_draw_sw_image_recolor_rgb888(const uint8_t *src_buf, const
 
 ## Macros
 
-<ApiMember kind="macro" name="__ARM_2D_IMPL__" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={26} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L26">
+<ApiMember kind="macro" name="__ARM_2D_IMPL__" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={26} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L26">
 
 ### __ARM_2D_IMPL__
 
@@ -130,7 +130,7 @@ static lv_result_t lv_draw_sw_image_recolor_rgb888(const uint8_t *src_buf, const
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_DRAW_RGB565_SWAP" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={42} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L42">
+<ApiMember kind="macro" name="LV_DRAW_RGB565_SWAP" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={42} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L42">
 
 ### LV_DRAW_RGB565_SWAP
 
@@ -142,26 +142,26 @@ static lv_result_t lv_draw_sw_image_recolor_rgb888(const uint8_t *src_buf, const
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_DRAW_SW_IMAGE" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={54} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L54">
+<ApiMember kind="macro" name="LV_DRAW_SW_IMAGE" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={54} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L54">
 
 ### LV_DRAW_SW_IMAGE
 
 ```c
-#define LV_DRAW_SW_IMAGE(__transformed, __cf, __src_buf, __img_coords, __src_stride, __blend_area, __draw_task, __draw_dsc) \
+#define LV_DRAW_SW_IMAGE(__transformed, __cf, __src_buf, __img_coords, __src_stride, __blend_area, __layer, __draw_dsc) \
     lv_draw_sw_image_helium(   (__transformed), \
                                         (__cf), \
                                         (uint8_t *)(__src_buf), \
                                         (__img_coords), \
                                         (__src_stride), \
                                         (__blend_area), \
-                                        (__draw_task), \
+                                        (__layer), \
                                         (__draw_dsc))
 ```
 
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_DRAW_SW_RGB565_RECOLOR" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={66} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L66">
+<ApiMember kind="macro" name="LV_DRAW_SW_RGB565_RECOLOR" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={66} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L66">
 
 ### LV_DRAW_SW_RGB565_RECOLOR
 
@@ -176,7 +176,7 @@ static lv_result_t lv_draw_sw_image_recolor_rgb888(const uint8_t *src_buf, const
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_DRAW_SW_RGB888_RECOLOR" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={78} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L78">
+<ApiMember kind="macro" name="LV_DRAW_SW_RGB888_RECOLOR" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={78} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L78">
 
 ### LV_DRAW_SW_RGB888_RECOLOR
 
@@ -192,7 +192,7 @@ static lv_result_t lv_draw_sw_image_recolor_rgb888(const uint8_t *src_buf, const
 
 </ApiMember>
 
-<ApiMember kind="macro" name="__RECOLOUR_BEGIN" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={99} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L99">
+<ApiMember kind="macro" name="__RECOLOUR_BEGIN" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={99} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L99">
 
 ### __RECOLOUR_BEGIN
 
@@ -203,7 +203,7 @@ static lv_result_t lv_draw_sw_image_recolor_rgb888(const uint8_t *src_buf, const
 
 </ApiMember>
 
-<ApiMember kind="macro" name="__RECOLOUR_END" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={160} url="https://github.com/lvgl/lvgl/tree/e7c546c811cf64ef1945df82acad02b45f35e259/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L160">
+<ApiMember kind="macro" name="__RECOLOUR_END" file="private/draw/sw/arm2d/lv_draw_sw_arm2d.h" line={160} url="https://github.com/lvgl/lvgl/tree/1b176836389e11904bce79027251f2801699e492/src/draw/sw/arm2d/lv_draw_sw_arm2d.h#L160">
 
 ### __RECOLOUR_END
 
