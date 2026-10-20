@@ -1,4 +1,4 @@
-```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_map.xml" source="https://github.com/lvgl/lvgl/blob/fae72862c82778f5f6460197460e60f2406083b7/examples/widgets/buttonmatrix/lv_example_buttonmatrix_map.xml"
+```xml title="examples/widgets/buttonmatrix/lv_example_buttonmatrix_map.xml" source="https://github.com/lvgl/lvgl/blob/71837d01aae89a2ac3fb880168da27f8baaead96/examples/widgets/buttonmatrix/lv_example_buttonmatrix_map.xml"
 <!--
  @title Button matrix map
  @brief Lay out buttons in rows using the `map` attribute.
