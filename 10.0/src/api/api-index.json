@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-10-19T21:47:00.114Z",
-    "symbolCount": 9078
+    "generatedAt": "2026-10-20T09:37:16.957Z",
+    "symbolCount": 9081
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -3054,6 +3054,21 @@
     "LV_DRAW_OPENGLES_TEXTURE_CACHE_COUNT": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_DRAW_OPENGLES_TEXTURE_CACHE_COUNT",
+      "kind": "macro"
+    },
+    "LV_USE_DRAW_IPA": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_DRAW_IPA",
+      "kind": "macro"
+    },
+    "LV_DRAW_IPA_HAL_INCLUDE": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_DRAW_IPA_HAL_INCLUDE",
+      "kind": "macro"
+    },
+    "LV_USE_DRAW_IPA_INTERRUPT": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_USE_DRAW_IPA_INTERRUPT",
       "kind": "macro"
     },
     "LV_INDEV_DEF_SCROLL_LIMIT": {
