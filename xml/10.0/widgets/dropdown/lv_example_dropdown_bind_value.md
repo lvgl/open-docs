@@ -1,4 +1,4 @@
-```xml title="examples/widgets/dropdown/lv_example_dropdown_bind_value.xml" source="https://github.com/lvgl/lvgl/blob/2bf78e199a57659e400624ad420d92524680aaa5/examples/widgets/dropdown/lv_example_dropdown_bind_value.xml"
+```xml title="examples/widgets/dropdown/lv_example_dropdown_bind_value.xml" source="https://github.com/lvgl/lvgl/blob/7956a8f4a68ed005deea64b41aa2377d24029ce3/examples/widgets/dropdown/lv_example_dropdown_bind_value.xml"
 <!--
  @title Dropdown bind value
  @brief Dropdown bound to a subject; a button jumps it programmatically.

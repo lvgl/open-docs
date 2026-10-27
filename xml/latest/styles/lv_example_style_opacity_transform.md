@@ -1,4 +1,4 @@
-```xml title="examples/styles/lv_example_style_opacity_transform.xml" source="https://github.com/lvgl/lvgl/blob/2bf78e199a57659e400624ad420d92524680aaa5/examples/styles/lv_example_style_opacity_transform.xml"
+```xml title="examples/styles/lv_example_style_opacity_transform.xml" source="https://github.com/lvgl/lvgl/blob/7956a8f4a68ed005deea64b41aa2377d24029ce3/examples/styles/lv_example_style_opacity_transform.xml"
 <!--
  @title Opacity and transform
  @brief Fade and geometrically transform a Widget via style properties.
