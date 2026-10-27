@@ -1,4 +1,4 @@
-```xml title="examples/widgets/slider/lv_example_slider_reversed_direction.xml" source="https://github.com/lvgl/lvgl/blob/07cb7bdd12d290565c39d1262f40c1734a2f6295/examples/widgets/slider/lv_example_slider_reversed_direction.xml"
+```xml title="examples/widgets/slider/lv_example_slider_reversed_direction.xml" source="https://github.com/lvgl/lvgl/blob/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/examples/widgets/slider/lv_example_slider_reversed_direction.xml"
 <!--
  @title Slider reversed direction
  @brief Flip the fill direction by swapping min and max.

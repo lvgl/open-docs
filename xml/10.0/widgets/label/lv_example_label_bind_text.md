@@ -1,4 +1,4 @@
-```xml title="examples/widgets/label/lv_example_label_bind_text.xml" source="https://github.com/lvgl/lvgl/blob/07cb7bdd12d290565c39d1262f40c1734a2f6295/examples/widgets/label/lv_example_label_bind_text.xml"
+```xml title="examples/widgets/label/lv_example_label_bind_text.xml" source="https://github.com/lvgl/lvgl/blob/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/examples/widgets/label/lv_example_label_bind_text.xml"
 <!--
  @title Label bind text
  @brief Bind a label to a string subject; buttons rewrite the subject on click.
