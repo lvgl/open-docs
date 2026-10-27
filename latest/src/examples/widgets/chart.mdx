@@ -9,11 +9,11 @@ order: 50
 
 A 200x150 `LV_CHART_TYPE_LINE` chart with 10 points uses
 `lv_chart_set_div_line_count` to draw 5 horizontal and 7 vertical
-division lines. With `LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS` enabled, the
-`LV_EVENT_DRAW_TASK_ADDED` callback intercepts `LV_PART_ITEMS` line
-tasks and fills each segment below the polyline with an
+division lines. With `LV_OBJ_FLAG_SEND_DRAW_DSC_EVENTS` enabled, the
+`LV_EVENT_DRAW_DSC_BEGIN` callback intercepts `LV_PART_ITEMS` lines
+and fills each segment below the polyline with an
 `lv_draw_triangle` and `lv_draw_rect` pair using a vertical gradient
-in the series color. `LV_PART_MAIN` line tasks are recolored and
+in the series color. `LV_PART_MAIN` lines are recolored and
 dashed to highlight specific grid indices.
 
 <LvglExample name="lv_example_chart_area_gradient" path="widgets/chart/lv_example_chart_area_gradient" />
@@ -63,8 +63,8 @@ and `LV_EVENT_DRAW_POST_END` reads the pressed point via
 <LvglExampleBrief>Bar chart that tints each bar between green and red based on its value.</LvglExampleBrief>
 
 A 260x160 `LV_CHART_TYPE_BAR` chart holds 24 points on one series. The
-chart sets `LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS` and subscribes to
-`LV_EVENT_DRAW_TASK_ADDED`. For each `LV_PART_ITEMS` fill task the
+chart sets `LV_OBJ_FLAG_SEND_DRAW_DSC_EVENTS` and subscribes to
+`LV_EVENT_DRAW_DSC_BEGIN`. For each `LV_PART_ITEMS` fill the
 callback reads the underlying Y value and replaces the fill color
 with an `lv_color_mix` of green and red proportional to the value.
 
@@ -77,8 +77,8 @@ with an `lv_color_mix` of green and red proportional to the value.
 A 200x150 `LV_CHART_TYPE_SCATTER` chart is configured with an X range
 of 0..200 and a Y range of 0..1000 and 50 points. Line width on
 `LV_PART_ITEMS` is zeroed so only the point markers show. With
-`LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS` set, the
-`LV_EVENT_DRAW_TASK_ADDED` callback fades older points by reducing
+`LV_OBJ_FLAG_SEND_DRAW_DSC_EVENTS` set, the
+`LV_EVENT_DRAW_DSC_BEGIN` callback fades older points by reducing
 opacity and recolors each `LV_PART_INDICATOR` fill between red and
 blue using the point's X and Y arrays. A 100 ms `lv_timer` pushes a
 new random point via `lv_chart_set_next_value2`.

@@ -2,22 +2,22 @@
 title: lv_draw.h
 description: API reference for lv_draw.h
 api:
-  functions: [lv_draw_init, lv_draw_deinit, lv_draw_create_unit, lv_draw_add_task, lv_draw_finalize_task_creation, lv_draw_dispatch, lv_draw_dispatch_layer, lv_draw_dispatch_wait_for_request, lv_draw_wait_for_finish, lv_draw_dispatch_request, lv_draw_get_unit_count, lv_draw_get_available_task, lv_draw_get_next_available_task, lv_draw_get_dependent_count, lv_draw_unit_send_event, lv_layer_init, lv_layer_reset, lv_draw_layer_create, lv_draw_layer_init, lv_draw_layer_alloc_buf, lv_draw_layer_go_to_xy, lv_draw_task_get_type, lv_draw_task_get_draw_dsc, lv_draw_task_get_area, lv_draw_layer_create_drop_shadow, lv_draw_layer_finish_drop_shadow, lv_draw_layer_dealloc_buf, lv_draw_layer_deinit, lv_draw_layer_delete]
-  enums: [lv_draw_task_type_t, lv_draw_task_state_t]
-  structs: [_lv_layer_t, lv_draw_dsc_base_t]
+  functions: [lv_draw_init, lv_draw_deinit, lv_draw_create_unit, lv_draw_add_task, lv_draw_finalize_task_creation, lv_draw_dispatch, lv_draw_dispatch_layer, lv_draw_dispatch_wait_for_request, lv_draw_wait_for_finish, lv_draw_dispatch_request, lv_draw_get_unit_count, lv_draw_get_available_task, lv_draw_get_next_available_task, lv_draw_get_dependent_count, lv_draw_unit_send_event, lv_layer_init, lv_layer_reset, lv_draw_layer_create, lv_draw_layer_init, lv_draw_layer_alloc_buf, lv_draw_layer_go_to_xy, lv_draw_task_get_type, lv_draw_task_get_draw_dsc, lv_draw_task_get_area, lv_draw_dsc_get_type, lv_draw_layer_create_drop_shadow, lv_draw_layer_finish_drop_shadow, lv_draw_layer_dealloc_buf, lv_draw_layer_deinit, lv_draw_layer_delete]
+  enums: [lv_draw_dsc_type_t, lv_draw_task_state_t]
+  structs: [_lv_layer_t, lv_draw_dsc_t]
   macros: [LV_DRAW_UNIT_NONE, LV_DRAW_UNIT_IDLE]
 ---
 
 <RelatedHeaders name="lv_draw_private.h" isPrivate={false} />
 
-<ApiSummary functions={29} enums={2} structs={2} macros={2} />
+<ApiSummary functions={30} enums={2} structs={2} macros={2} />
 
 ## Functions
 
-<ApiTabs items={["Getters (7)","Other (22)"]}>
-<ApiTab value="Getters (7)">
+<ApiTabs items={["Getters (8)","Other (22)"]}>
+<ApiTab value="Getters (8)">
 
-<ApiMember kind="function" name="lv_draw_get_unit_count" file="public/draw/lv_draw.h" line={274} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L274">
+<ApiMember kind="function" name="lv_draw_get_unit_count" file="public/draw/lv_draw.h" line={276} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L276">
 
 ### lv_draw_get_unit_count
 
@@ -30,7 +30,7 @@ uint32_t lv_draw_get_unit_count(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_get_available_task" file="public/draw/lv_draw.h" line={284} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L284">
+<ApiMember kind="function" name="lv_draw_get_available_task" file="public/draw/lv_draw.h" line={286} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L286">
 
 ### lv_draw_get_available_task
 
@@ -53,7 +53,7 @@ lv_draw_task_t * lv_draw_get_available_task(lv_layer_t *layer, lv_draw_task_t *t
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_get_next_available_task" file="public/draw/lv_draw.h" line={293} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L293">
+<ApiMember kind="function" name="lv_draw_get_next_available_task" file="public/draw/lv_draw.h" line={295} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L295">
 
 ### lv_draw_get_next_available_task
 
@@ -76,7 +76,7 @@ lv_draw_task_t * lv_draw_get_next_available_task(lv_layer_t *layer, lv_draw_task
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_get_dependent_count" file="public/draw/lv_draw.h" line={303} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L303">
+<ApiMember kind="function" name="lv_draw_get_dependent_count" file="public/draw/lv_draw.h" line={305} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L305">
 
 ### lv_draw_get_dependent_count
 
@@ -97,14 +97,14 @@ uint32_t lv_draw_get_dependent_count(lv_draw_task_t *t_check)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_task_get_type" file="public/draw/lv_draw.h" line={367} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L367">
+<ApiMember kind="function" name="lv_draw_task_get_type" file="public/draw/lv_draw.h" line={369} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L369">
 
 ### lv_draw_task_get_type
 
 Get the type of a draw task
 
 ```c
-lv_draw_task_type_t lv_draw_task_get_type(const lv_draw_task_t *t)
+lv_draw_dsc_type_t lv_draw_task_get_type(const lv_draw_task_t *t)
 ```
 
 <span className="sr-only">Parameters</span>
@@ -113,12 +113,12 @@ lv_draw_task_type_t lv_draw_task_get_type(const lv_draw_task_t *t)
 |------|------|-------------|
 | `t` | <ApiLink name="lv_draw_task_t" display="const lv_draw_task_t *" /> | the draw task to get the type of |
 
-**Returns:** <ApiLink name="lv_draw_task_type_t" /> — the draw task type
+**Returns:** <ApiLink name="lv_draw_dsc_type_t" /> — the draw task type
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_task_get_draw_dsc" file="public/draw/lv_draw.h" line={374} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L374">
+<ApiMember kind="function" name="lv_draw_task_get_draw_dsc" file="public/draw/lv_draw.h" line={376} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L376">
 
 ### lv_draw_task_get_draw_dsc
 
@@ -139,7 +139,7 @@ void * lv_draw_task_get_draw_dsc(const lv_draw_task_t *t)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_task_get_area" file="public/draw/lv_draw.h" line={381} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L381">
+<ApiMember kind="function" name="lv_draw_task_get_area" file="public/draw/lv_draw.h" line={383} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L383">
 
 ### lv_draw_task_get_area
 
@@ -159,10 +159,31 @@ void lv_draw_task_get_area(const lv_draw_task_t *t, lv_area_t *area)
 
 </ApiMember>
 
+<ApiMember kind="function" name="lv_draw_dsc_get_type" file="public/draw/lv_draw.h" line={390} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L390">
+
+### lv_draw_dsc_get_type
+
+Get the type of a draw descriptor
+
+```c
+lv_draw_dsc_type_t lv_draw_dsc_get_type(const lv_draw_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_dsc_t" display="const lv_draw_dsc_t *" /> | the draw descriptor |
+
+**Returns:** <ApiLink name="lv_draw_dsc_type_t" /> — the type of the draw descriptor
+
+
+</ApiMember>
+
 </ApiTab>
 <ApiTab value="Other (22)">
 
-<ApiMember kind="function" name="lv_draw_init" file="public/draw/lv_draw.h" line={207} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L207">
+<ApiMember kind="function" name="lv_draw_init" file="public/draw/lv_draw.h" line={209} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L209">
 
 ### lv_draw_init
 
@@ -175,7 +196,7 @@ void lv_draw_init(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_deinit" file="public/draw/lv_draw.h" line={212} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L212">
+<ApiMember kind="function" name="lv_draw_deinit" file="public/draw/lv_draw.h" line={214} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L214">
 
 ### lv_draw_deinit
 
@@ -188,7 +209,7 @@ void lv_draw_deinit(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_create_unit" file="public/draw/lv_draw.h" line={219} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L219">
+<ApiMember kind="function" name="lv_draw_create_unit" file="public/draw/lv_draw.h" line={221} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L221">
 
 ### lv_draw_create_unit
 
@@ -207,14 +228,14 @@ void * lv_draw_create_unit(size_t size)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_add_task" file="public/draw/lv_draw.h" line={229} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L229">
+<ApiMember kind="function" name="lv_draw_add_task" file="public/draw/lv_draw.h" line={231} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L231">
 
 ### lv_draw_add_task
 
 Add an empty draw task to the draw task list of a layer.
 
 ```c
-lv_draw_task_t * lv_draw_add_task(lv_layer_t *layer, const lv_area_t *coords, lv_draw_task_type_t type)
+lv_draw_task_t * lv_draw_add_task(lv_layer_t *layer, const lv_area_t *coords, lv_draw_dsc_type_t type)
 ```
 
 <span className="sr-only">Parameters</span>
@@ -223,14 +244,14 @@ lv_draw_task_t * lv_draw_add_task(lv_layer_t *layer, const lv_area_t *coords, lv
 |------|------|-------------|
 | `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | pointer to a layer |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> | the coordinates of the draw task |
-| `type` | <ApiLink name="lv_draw_task_type_t" /> | the draw task type |
+| `type` | <ApiLink name="lv_draw_dsc_type_t" /> | the draw task type |
 
 **Returns:** <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> — the created draw task which needs to be further configured e.g. by added a draw descriptor
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_finalize_task_creation" file="public/draw/lv_draw.h" line={238} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L238">
+<ApiMember kind="function" name="lv_draw_finalize_task_creation" file="public/draw/lv_draw.h" line={240} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L240">
 
 ### lv_draw_finalize_task_creation
 
@@ -250,7 +271,7 @@ void lv_draw_finalize_task_creation(lv_layer_t *layer, lv_draw_task_t *t)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_dispatch" file="public/draw/lv_draw.h" line={243} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L243">
+<ApiMember kind="function" name="lv_draw_dispatch" file="public/draw/lv_draw.h" line={245} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L245">
 
 ### lv_draw_dispatch
 
@@ -263,7 +284,7 @@ void lv_draw_dispatch(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_dispatch_layer" file="public/draw/lv_draw.h" line={251} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L251">
+<ApiMember kind="function" name="lv_draw_dispatch_layer" file="public/draw/lv_draw.h" line={253} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L253">
 
 ### lv_draw_dispatch_layer
 
@@ -285,7 +306,7 @@ bool lv_draw_dispatch_layer(lv_display_t *disp, lv_layer_t *layer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_dispatch_wait_for_request" file="public/draw/lv_draw.h" line={257} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L257">
+<ApiMember kind="function" name="lv_draw_dispatch_wait_for_request" file="public/draw/lv_draw.h" line={259} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L259">
 
 ### lv_draw_dispatch_wait_for_request
 
@@ -298,7 +319,7 @@ void lv_draw_dispatch_wait_for_request(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_wait_for_finish" file="public/draw/lv_draw.h" line={263} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L263">
+<ApiMember kind="function" name="lv_draw_wait_for_finish" file="public/draw/lv_draw.h" line={265} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L265">
 
 ### lv_draw_wait_for_finish
 
@@ -311,7 +332,7 @@ void lv_draw_wait_for_finish(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_dispatch_request" file="public/draw/lv_draw.h" line={269} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L269">
+<ApiMember kind="function" name="lv_draw_dispatch_request" file="public/draw/lv_draw.h" line={271} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L271">
 
 ### lv_draw_dispatch_request
 
@@ -324,7 +345,7 @@ void lv_draw_dispatch_request(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_unit_send_event" file="public/draw/lv_draw.h" line={313} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L313">
+<ApiMember kind="function" name="lv_draw_unit_send_event" file="public/draw/lv_draw.h" line={315} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L315">
 
 ### lv_draw_unit_send_event
 
@@ -345,7 +366,7 @@ void lv_draw_unit_send_event(const char *name, lv_event_code_t code, void *param
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_layer_init" file="public/draw/lv_draw.h" line={319} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L319">
+<ApiMember kind="function" name="lv_layer_init" file="public/draw/lv_draw.h" line={321} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L321">
 
 ### lv_layer_init
 
@@ -364,7 +385,7 @@ void lv_layer_init(lv_layer_t *layer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_layer_reset" file="public/draw/lv_draw.h" line={325} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L325">
+<ApiMember kind="function" name="lv_layer_reset" file="public/draw/lv_draw.h" line={327} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L327">
 
 ### lv_layer_reset
 
@@ -383,7 +404,7 @@ void lv_layer_reset(lv_layer_t *layer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_layer_create" file="public/draw/lv_draw.h" line={334} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L334">
+<ApiMember kind="function" name="lv_draw_layer_create" file="public/draw/lv_draw.h" line={336} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L336">
 
 ### lv_draw_layer_create
 
@@ -406,7 +427,7 @@ lv_layer_t * lv_draw_layer_create(lv_layer_t *parent_layer, lv_color_format_t co
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_layer_init" file="public/draw/lv_draw.h" line={343} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L343">
+<ApiMember kind="function" name="lv_draw_layer_init" file="public/draw/lv_draw.h" line={345} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L345">
 
 ### lv_draw_layer_init
 
@@ -428,7 +449,7 @@ void lv_draw_layer_init(lv_layer_t *layer, lv_layer_t *parent_layer, lv_color_fo
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_layer_alloc_buf" file="public/draw/lv_draw.h" line={351} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L351">
+<ApiMember kind="function" name="lv_draw_layer_alloc_buf" file="public/draw/lv_draw.h" line={353} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L353">
 
 ### lv_draw_layer_alloc_buf
 
@@ -449,7 +470,7 @@ void * lv_draw_layer_alloc_buf(lv_layer_t *layer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_layer_go_to_xy" file="public/draw/lv_draw.h" line={360} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L360">
+<ApiMember kind="function" name="lv_draw_layer_go_to_xy" file="public/draw/lv_draw.h" line={362} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L362">
 
 ### lv_draw_layer_go_to_xy
 
@@ -472,12 +493,12 @@ void * lv_draw_layer_go_to_xy(lv_layer_t *layer, int32_t x, int32_t y)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_layer_create_drop_shadow" file="public/draw/lv_draw.h" line={385} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L385">
+<ApiMember kind="function" name="lv_draw_layer_create_drop_shadow" file="public/draw/lv_draw.h" line={394} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L394">
 
 ### lv_draw_layer_create_drop_shadow
 
 ```c
-lv_layer_t * lv_draw_layer_create_drop_shadow(lv_layer_t *parent_layer, const lv_draw_dsc_base_t *base, const lv_area_t *area)
+lv_layer_t * lv_draw_layer_create_drop_shadow(lv_layer_t *parent_layer, const lv_draw_dsc_t *base, const lv_area_t *area)
 ```
 
 <span className="sr-only">Parameters</span>
@@ -485,18 +506,18 @@ lv_layer_t * lv_draw_layer_create_drop_shadow(lv_layer_t *parent_layer, const lv
 | Name | Type |
 |------|------|
 | `parent_layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> |
-| `base` | <ApiLink name="lv_draw_dsc_base_t" display="const lv_draw_dsc_base_t *" /> |
+| `base` | <ApiLink name="lv_draw_dsc_t" display="const lv_draw_dsc_t *" /> |
 | `area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_layer_finish_drop_shadow" file="public/draw/lv_draw.h" line={388} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L388">
+<ApiMember kind="function" name="lv_draw_layer_finish_drop_shadow" file="public/draw/lv_draw.h" line={397} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L397">
 
 ### lv_draw_layer_finish_drop_shadow
 
 ```c
-void lv_draw_layer_finish_drop_shadow(lv_layer_t *drop_shadow_layer, const lv_draw_dsc_base_t *base)
+void lv_draw_layer_finish_drop_shadow(lv_layer_t *drop_shadow_layer, const lv_draw_dsc_t *base)
 ```
 
 <span className="sr-only">Parameters</span>
@@ -504,12 +525,12 @@ void lv_draw_layer_finish_drop_shadow(lv_layer_t *drop_shadow_layer, const lv_dr
 | Name | Type |
 |------|------|
 | `drop_shadow_layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> |
-| `base` | <ApiLink name="lv_draw_dsc_base_t" display="const lv_draw_dsc_base_t *" /> |
+| `base` | <ApiLink name="lv_draw_dsc_t" display="const lv_draw_dsc_t *" /> |
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_layer_dealloc_buf" file="public/draw/lv_draw.h" line={396} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L396">
+<ApiMember kind="function" name="lv_draw_layer_dealloc_buf" file="public/draw/lv_draw.h" line={405} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L405">
 
 ### lv_draw_layer_dealloc_buf
 
@@ -528,7 +549,7 @@ void lv_draw_layer_dealloc_buf(lv_layer_t *layer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_layer_deinit" file="public/draw/lv_draw.h" line={402} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L402">
+<ApiMember kind="function" name="lv_draw_layer_deinit" file="public/draw/lv_draw.h" line={411} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L411">
 
 ### lv_draw_layer_deinit
 
@@ -547,7 +568,7 @@ void lv_draw_layer_deinit(lv_layer_t *layer)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_layer_delete" file="public/draw/lv_draw.h" line={408} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L408">
+<ApiMember kind="function" name="lv_draw_layer_delete" file="public/draw/lv_draw.h" line={417} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L417">
 
 ### lv_draw_layer_delete
 
@@ -570,45 +591,44 @@ void lv_draw_layer_delete(lv_layer_t *layer)
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_draw_task_type_t" file="public/draw/lv_draw.h" line={46} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L46">
+<ApiMember kind="enum" name="lv_draw_dsc_type_t" file="public/draw/lv_draw.h" line={46} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L46">
 
-### lv_draw_task_type_t
+### lv_draw_dsc_type_t
 
 | Name | Value |
 |------|------|
-| `LV_DRAW_TASK_TYPE_NONE` | `0` |
-| `LV_DRAW_TASK_TYPE_FILL` |  |
-| `LV_DRAW_TASK_TYPE_BORDER` |  |
-| `LV_DRAW_TASK_TYPE_BOX_SHADOW` |  |
-| `LV_DRAW_TASK_TYPE_LETTER` |  |
-| `LV_DRAW_TASK_TYPE_LABEL` |  |
-| `LV_DRAW_TASK_TYPE_IMAGE` |  |
-| `LV_DRAW_TASK_TYPE_LAYER` |  |
-| `LV_DRAW_TASK_TYPE_LINE` |  |
-| `LV_DRAW_TASK_TYPE_ARC` |  |
-| `LV_DRAW_TASK_TYPE_TRIANGLE` |  |
-| `LV_DRAW_TASK_TYPE_MASK_RECTANGLE` |  |
-| `LV_DRAW_TASK_TYPE_MASK_BITMAP` |  |
-| `LV_DRAW_TASK_TYPE_BLUR` |  |
-| `LV_DRAW_TASK_TYPE_VECTOR` |  |
-| `LV_DRAW_TASK_TYPE_3D` |  |
+| `LV_DRAW_DSC_TYPE_NONE` | `0` |
+| `LV_DRAW_DSC_TYPE_FILL` |  |
+| `LV_DRAW_DSC_TYPE_BORDER` |  |
+| `LV_DRAW_DSC_TYPE_BOX_SHADOW` |  |
+| `LV_DRAW_DSC_TYPE_LETTER` |  |
+| `LV_DRAW_DSC_TYPE_LABEL` |  |
+| `LV_DRAW_DSC_TYPE_IMAGE` |  |
+| `LV_DRAW_DSC_TYPE_LAYER` |  |
+| `LV_DRAW_DSC_TYPE_LINE` |  |
+| `LV_DRAW_DSC_TYPE_ARC` |  |
+| `LV_DRAW_DSC_TYPE_TRIANGLE` |  |
+| `LV_DRAW_DSC_TYPE_MASK_RECTANGLE` |  |
+| `LV_DRAW_DSC_TYPE_BLUR` |  |
+| `LV_DRAW_DSC_TYPE_VECTOR` |  |
+| `LV_DRAW_DSC_TYPE_3D` |  |
 
 
 </ApiMember>
 
-<TypeUsedBy name="lv_draw_task_type_t" count={1}>
+<TypeUsedBy name="lv_draw_dsc_type_t" count={1}>
 
 - `lv_draw_add_task` — param `type`
 
 </TypeUsedBy>
 
-<ApiMember kind="enum" name="lv_draw_task_state_t" file="public/draw/lv_draw.h" line={69} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L69">
+<ApiMember kind="enum" name="lv_draw_task_state_t" file="public/draw/lv_draw.h" line={68} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L68">
 
 ### lv_draw_task_state_t
 
 | Name | Description |
 |------|------|
-| `LV_DRAW_TASK_STATE_BLOCKED` | Waiting for an other task to be finished. For example in case of `LV_DRAW_TASK_TYPE_LAYER` (used to blend a layer) is blocked until all the draw tasks of the layer is rendered. |
+| `LV_DRAW_TASK_STATE_BLOCKED` | Waiting for an other task to be finished. For example in case of `LV_DRAW_DSC_TYPE_LAYER` (used to blend a layer) is blocked until all the draw tasks of the layer is rendered. |
 | `LV_DRAW_TASK_STATE_WAITING` | The draw task is added to the layers list and waits to be rendered. |
 | `LV_DRAW_TASK_STATE_QUEUED` | The draw task is added to the command queue of the draw unit. As the queued task are executed in order it's possible to queue multiple draw task (for the same draw unit) even if they are depending on each other. Therefore `lv_draw_get_available_task` and `lv_draw_get_next_available_task` can return draw task for the same draw unit even if a dependent draw task is not finished ready yet. |
 | `LV_DRAW_TASK_STATE_IN_PROGRESS` | The draw task is being rendered. This draw task needs to be finished before `lv_draw_get_available_task` and `lv_draw_get_next_available_task` would return any depending draw tasks. |
@@ -645,9 +665,9 @@ void lv_draw_layer_delete(lv_layer_t *layer)
 
 </ApiMember>
 
-<ApiMember kind="struct" name="lv_draw_dsc_base_t">
+<ApiMember kind="struct" name="lv_draw_dsc_t">
 
-### lv_draw_dsc_base_t
+### lv_draw_dsc_t
 
 | Member | Type | Description |
 |--------|------|-------------|
@@ -656,6 +676,7 @@ void lv_draw_layer_delete(lv_layer_t *layer)
 | `id1` | `uint32_t` | A widget type specific ID (e.g. table row index). See the docs of the given widget. |
 | `id2` | `uint32_t` | A widget type specific ID (e.g. table column index). See the docs of the given widget. |
 | `layer` | <ApiLink name="lv_layer_t" display="lv_layer_t *" /> | The target layer |
+| `type` | <ApiLink name="lv_draw_dsc_type_t" /> | The type of the draw descriptor |
 | `drop_shadow_ofs_x` | `int16_t` | Drop shadow offset in X |
 | `drop_shadow_ofs_y` | `int16_t` | Drop shadow offset in Y |
 | `drop_shadow_color` | <ApiLink name="lv_color_t" /> | Drop shadow color |
@@ -668,16 +689,30 @@ void lv_draw_layer_delete(lv_layer_t *layer)
 
 </ApiMember>
 
-<TypeUsedBy name="lv_draw_dsc_base_t" count={2}>
+<TypeUsedBy name="lv_draw_dsc_t" count={16}>
 
+- `lv_draw_dsc_get_type` — param `dsc`
 - `lv_draw_layer_create_drop_shadow` — param `base`
 - `lv_draw_layer_finish_drop_shadow` — param `base`
+- `lv_draw_dsc_get_3d_dsc` — param `dsc`
+- `lv_draw_dsc_get_arc_dsc` — param `dsc`
+- `lv_draw_dsc_get_blur_dsc` — param `dsc`
+- `lv_draw_dsc_get_image_dsc` — param `dsc`
+- `lv_draw_dsc_get_label_dsc` — param `dsc`
+- `lv_draw_dsc_get_letter_dsc` — param `dsc`
+- `lv_draw_dsc_get_line_dsc` — param `dsc`
+- `lv_draw_dsc_get_mask_rect_dsc` — param `dsc`
+- `lv_draw_dsc_get_fill_dsc` — param `dsc`
+- `lv_draw_dsc_get_border_dsc` — param `dsc`
+- `lv_draw_dsc_get_box_shadow_dsc` — param `dsc`
+- `lv_draw_dsc_get_triangle_dsc` — param `dsc`
+- `lv_draw_dsc_get_vector_dsc` — param `dsc`
 
 </TypeUsedBy>
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_DRAW_UNIT_NONE" file="public/draw/lv_draw.h" line={33} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L33">
+<ApiMember kind="macro" name="LV_DRAW_UNIT_NONE" file="public/draw/lv_draw.h" line={33} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L33">
 
 ### LV_DRAW_UNIT_NONE
 
@@ -690,7 +725,7 @@ Modified by NXP in 2024
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_DRAW_UNIT_IDLE" file="public/draw/lv_draw.h" line={34} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw.h#L34">
+<ApiMember kind="macro" name="LV_DRAW_UNIT_IDLE" file="public/draw/lv_draw.h" line={34} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw.h#L34">
 
 ### LV_DRAW_UNIT_IDLE
 
@@ -707,6 +742,6 @@ The draw unit is idle, new dispatching might be requested to try again
 
 <FileIncludes
   includes={["lv_conf_internal.h", "lv_types.h", "lv_style.h", "lv_text.h", "lv_profiler.h", "lv_matrix.h", "lv_event.h", "lv_draw_buf.h"]}
-  includedBy={["lv_draw_3d.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_mask.h", "lv_draw_rect.h", "lvgl.h", "lv_image.h", "lv_label.h"]}
+  includedBy={["lv_api_map_v9_6.h", "lv_draw_3d.h", "lv_draw_arc.h", "lv_draw_blur.h", "lv_draw_image.h", "lv_draw_label.h", "lv_draw_line.h", "lv_draw_mask.h", "lv_draw_rect.h", "lvgl.h", "lv_image.h", "lv_label.h"]}
   transitiveIncludes={["lv_anim.h", "lv_area.h", "lv_assert.h", "lv_bidi.h", "lv_color.h", "lv_color_op.h", "lv_ext_data.h", "lv_flex.h", "lv_font.h", "lv_grad.h", "lv_grid.h", "lv_image_dsc.h", "lv_layout.h", "lv_log.h", "lv_math.h", "lv_mem.h", "lv_palette.h", "lv_profiler_builtin.h", "lv_sprintf.h", "lv_string.h", "lv_style_gen.h", "lv_symbol_def.h"]}
 />

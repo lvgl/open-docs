@@ -40,14 +40,14 @@ a static incrementing counter, and logs `Clicked`.
 
 <LvglExample name="lv_example_event_click" path="event/lv_example_event_click" />
 
-## Custom drawing on draw task events
+## Custom drawing on draw events
 
-<LvglExampleBrief>Draw a pulsing red circle on top of a container with a draw task callback.</LvglExampleBrief>
+<LvglExampleBrief>Draw a pulsing red circle on top of a container with a draw event callback.</LvglExampleBrief>
 
 A 200x200 container is centered and flagged with
-`LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS`. An `LV_EVENT_DRAW_TASK_ADDED`
-callback inspects the draw task and, when `base_dsc->part` is
-`LV_PART_MAIN`, calls `lv_draw_rect` to paint a pink circle with a red
+`LV_OBJ_FLAG_SEND_DRAW_DSC_EVENTS`. An `LV_EVENT_DRAW_DSC_END`
+callback inspects the draw descriptor that was just drawn and, when `base_dsc->part`
+is `LV_PART_MAIN`, calls `lv_draw_rect` to paint a pink circle with a red
 border and outline. A 30 ms `lv_timer_t` bounces a `size` counter between
 0 and 50 and invalidates the container each tick to animate the circle.
 

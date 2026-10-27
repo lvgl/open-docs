@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-10-27T11:56:10.812Z",
-    "symbolCount": 9081
+    "generatedAt": "2026-10-27T14:46:42.951Z",
+    "symbolCount": 9117
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -2171,6 +2171,16 @@
       "anchor": "lv_display_rotation_t",
       "kind": "typedef"
     },
+    "lv_draw_dsc_base_t": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "lv_draw_dsc_base_t",
+      "kind": "typedef"
+    },
+    "lv_draw_task_type_t": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "lv_draw_task_type_t",
+      "kind": "typedef"
+    },
     "lv_display_rotate_point_ccw": {
       "path": "api/public/api_map/lv_api_map_v9_6_h",
       "anchor": "lv_display_rotate_point_ccw",
@@ -2209,6 +2219,106 @@
     "lv_indev_get_ccw": {
       "path": "api/public/api_map/lv_api_map_v9_6_h",
       "anchor": "lv_indev_get_ccw",
+      "kind": "macro"
+    },
+    "LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS",
+      "kind": "macro"
+    },
+    "LV_PROPERTY_OBJ_FLAG_SEND_DRAW_TASK_EVENTS": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_PROPERTY_OBJ_FLAG_SEND_DRAW_TASK_EVENTS",
+      "kind": "macro"
+    },
+    "LV_PROPERTY_OBJ_SEND_DRAW_TASK_EVENTS": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_PROPERTY_OBJ_SEND_DRAW_TASK_EVENTS",
+      "kind": "macro"
+    },
+    "lv_obj_set_send_draw_task_events": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "lv_obj_set_send_draw_task_events",
+      "kind": "macro"
+    },
+    "lv_obj_is_send_draw_task_events": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "lv_obj_is_send_draw_task_events",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_NONE": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_NONE",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_FILL": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_FILL",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_BORDER": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_BORDER",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_BOX_SHADOW": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_BOX_SHADOW",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_LETTER": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_LETTER",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_LABEL": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_LABEL",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_IMAGE": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_IMAGE",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_LAYER": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_LAYER",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_LINE": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_LINE",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_ARC": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_ARC",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_TRIANGLE": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_TRIANGLE",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_MASK_RECTANGLE": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_MASK_RECTANGLE",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_BLUR": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_BLUR",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_VECTOR": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_VECTOR",
+      "kind": "macro"
+    },
+    "LV_DRAW_TASK_TYPE_3D": {
+      "path": "api/public/api_map/lv_api_map_v9_6_h",
+      "anchor": "LV_DRAW_TASK_TYPE_3D",
       "kind": "macro"
     },
     "lv_conf_internal.h": {
@@ -5736,7 +5846,12 @@
       "anchor": "lv_event_code_t",
       "kind": "enumvalue"
     },
-    "LV_EVENT_DRAW_TASK_ADDED": {
+    "LV_EVENT_DRAW_DSC_BEGIN": {
+      "path": "api/public/core/lv_event_h",
+      "anchor": "lv_event_code_t",
+      "kind": "enumvalue"
+    },
+    "LV_EVENT_DRAW_DSC_END": {
       "path": "api/public/core/lv_event_h",
       "anchor": "lv_event_code_t",
       "kind": "enumvalue"
@@ -6426,9 +6541,9 @@
       "anchor": "lv_obj_set_floating",
       "kind": "function"
     },
-    "lv_obj_set_send_draw_task_events": {
+    "lv_obj_set_send_draw_dsc_events": {
       "path": "api/public/core/lv_obj_h",
-      "anchor": "lv_obj_set_send_draw_task_events",
+      "anchor": "lv_obj_set_send_draw_dsc_events",
       "kind": "function"
     },
     "lv_obj_set_overflow_visible": {
@@ -6641,9 +6756,9 @@
       "anchor": "lv_obj_is_floating",
       "kind": "function"
     },
-    "lv_obj_is_send_draw_task_events": {
+    "lv_obj_is_send_draw_dsc_events": {
       "path": "api/public/core/lv_obj_h",
-      "anchor": "lv_obj_is_send_draw_task_events",
+      "anchor": "lv_obj_is_send_draw_dsc_events",
       "kind": "function"
     },
     "lv_obj_is_overflow_visible": {
@@ -6951,7 +7066,7 @@
       "anchor": "lv_obj_flag_t",
       "kind": "enumvalue"
     },
-    "LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS": {
+    "LV_OBJ_FLAG_SEND_DRAW_DSC_EVENTS": {
       "path": "api/public/core/lv_obj_h",
       "anchor": "lv_obj_flag_t",
       "kind": "enumvalue"
@@ -7121,7 +7236,7 @@
       "anchor": "_lv_signed_prop_id_t",
       "kind": "enumvalue"
     },
-    "LV_PROPERTY_OBJ_FLAG_SEND_DRAW_TASK_EVENTS": {
+    "LV_PROPERTY_OBJ_FLAG_SEND_DRAW_DSC_EVENTS": {
       "path": "api/public/core/lv_obj_h",
       "anchor": "_lv_signed_prop_id_t",
       "kind": "enumvalue"
@@ -7496,7 +7611,7 @@
       "anchor": "_lv_signed_prop_id_t",
       "kind": "enumvalue"
     },
-    "LV_PROPERTY_OBJ_SEND_DRAW_TASK_EVENTS": {
+    "LV_PROPERTY_OBJ_SEND_DRAW_DSC_EVENTS": {
       "path": "api/public/core/lv_obj_h",
       "anchor": "_lv_signed_prop_id_t",
       "kind": "enumvalue"
@@ -7821,9 +7936,9 @@
       "anchor": "lv_event_set_cover_res",
       "kind": "function"
     },
-    "lv_event_get_draw_task": {
+    "lv_event_get_draw_dsc": {
       "path": "api/public/core/lv_obj_event_h",
-      "anchor": "lv_event_get_draw_task",
+      "anchor": "lv_event_get_draw_dsc",
       "kind": "function"
     },
     "lv_event_get_prev_state": {
@@ -15676,6 +15791,11 @@
       "anchor": "lv_draw_task_get_area",
       "kind": "function"
     },
+    "lv_draw_dsc_get_type": {
+      "path": "api/public/draw/lv_draw_h",
+      "anchor": "lv_draw_dsc_get_type",
+      "kind": "function"
+    },
     "lv_draw_layer_create_drop_shadow": {
       "path": "api/public/draw/lv_draw_h",
       "anchor": "lv_draw_layer_create_drop_shadow",
@@ -15701,89 +15821,84 @@
       "anchor": "lv_draw_layer_delete",
       "kind": "function"
     },
-    "lv_draw_task_type_t": {
+    "lv_draw_dsc_type_t": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enum"
     },
-    "LV_DRAW_TASK_TYPE_NONE": {
+    "LV_DRAW_DSC_TYPE_NONE": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_FILL": {
+    "LV_DRAW_DSC_TYPE_FILL": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_BORDER": {
+    "LV_DRAW_DSC_TYPE_BORDER": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_BOX_SHADOW": {
+    "LV_DRAW_DSC_TYPE_BOX_SHADOW": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_LETTER": {
+    "LV_DRAW_DSC_TYPE_LETTER": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_LABEL": {
+    "LV_DRAW_DSC_TYPE_LABEL": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_IMAGE": {
+    "LV_DRAW_DSC_TYPE_IMAGE": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_LAYER": {
+    "LV_DRAW_DSC_TYPE_LAYER": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_LINE": {
+    "LV_DRAW_DSC_TYPE_LINE": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_ARC": {
+    "LV_DRAW_DSC_TYPE_ARC": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_TRIANGLE": {
+    "LV_DRAW_DSC_TYPE_TRIANGLE": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_MASK_RECTANGLE": {
+    "LV_DRAW_DSC_TYPE_MASK_RECTANGLE": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_MASK_BITMAP": {
+    "LV_DRAW_DSC_TYPE_BLUR": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_BLUR": {
+    "LV_DRAW_DSC_TYPE_VECTOR": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
-    "LV_DRAW_TASK_TYPE_VECTOR": {
+    "LV_DRAW_DSC_TYPE_3D": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
-      "kind": "enumvalue"
-    },
-    "LV_DRAW_TASK_TYPE_3D": {
-      "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_task_type_t",
+      "anchor": "lv_draw_dsc_type_t",
       "kind": "enumvalue"
     },
     "lv_draw_task_state_t": {
@@ -15826,9 +15941,9 @@
       "anchor": "_lv_layer_t",
       "kind": "struct"
     },
-    "lv_draw_dsc_base_t": {
+    "lv_draw_dsc_t": {
       "path": "api/public/draw/lv_draw_h",
-      "anchor": "lv_draw_dsc_base_t",
+      "anchor": "lv_draw_dsc_t",
       "kind": "struct"
     },
     "LV_DRAW_UNIT_NONE": {
@@ -15856,6 +15971,11 @@
       "anchor": "lv_draw_task_get_3d_dsc",
       "kind": "function"
     },
+    "lv_draw_dsc_get_3d_dsc": {
+      "path": "api/public/draw/lv_draw_3d_h",
+      "anchor": "lv_draw_dsc_get_3d_dsc",
+      "kind": "function"
+    },
     "lv_draw_3d": {
       "path": "api/public/draw/lv_draw_3d_h",
       "anchor": "lv_draw_3d",
@@ -15879,6 +15999,11 @@
     "lv_draw_task_get_arc_dsc": {
       "path": "api/public/draw/lv_draw_arc_h",
       "anchor": "lv_draw_task_get_arc_dsc",
+      "kind": "function"
+    },
+    "lv_draw_dsc_get_arc_dsc": {
+      "path": "api/public/draw/lv_draw_arc_h",
+      "anchor": "lv_draw_dsc_get_arc_dsc",
       "kind": "function"
     },
     "lv_draw_arc": {
@@ -15909,6 +16034,11 @@
     "lv_draw_task_get_blur_dsc": {
       "path": "api/public/draw/lv_draw_blur_h",
       "anchor": "lv_draw_task_get_blur_dsc",
+      "kind": "function"
+    },
+    "lv_draw_dsc_get_blur_dsc": {
+      "path": "api/public/draw/lv_draw_blur_h",
+      "anchor": "lv_draw_dsc_get_blur_dsc",
       "kind": "function"
     },
     "lv_draw_blur": {
@@ -16156,6 +16286,11 @@
       "anchor": "lv_draw_task_get_image_dsc",
       "kind": "function"
     },
+    "lv_draw_dsc_get_image_dsc": {
+      "path": "api/public/draw/lv_draw_image_h",
+      "anchor": "lv_draw_dsc_get_image_dsc",
+      "kind": "function"
+    },
     "lv_draw_image": {
       "path": "api/public/draw/lv_draw_image_h",
       "anchor": "lv_draw_image",
@@ -16199,6 +16334,16 @@
     "lv_draw_task_get_label_dsc": {
       "path": "api/public/draw/lv_draw_label_h",
       "anchor": "lv_draw_task_get_label_dsc",
+      "kind": "function"
+    },
+    "lv_draw_dsc_get_label_dsc": {
+      "path": "api/public/draw/lv_draw_label_h",
+      "anchor": "lv_draw_dsc_get_label_dsc",
+      "kind": "function"
+    },
+    "lv_draw_dsc_get_letter_dsc": {
+      "path": "api/public/draw/lv_draw_label_h",
+      "anchor": "lv_draw_dsc_get_letter_dsc",
       "kind": "function"
     },
     "lv_draw_glyph_dsc_init": {
@@ -16266,6 +16411,11 @@
       "anchor": "lv_draw_task_get_line_dsc",
       "kind": "function"
     },
+    "lv_draw_dsc_get_line_dsc": {
+      "path": "api/public/draw/lv_draw_line_h",
+      "anchor": "lv_draw_dsc_get_line_dsc",
+      "kind": "function"
+    },
     "lv_draw_line": {
       "path": "api/public/draw/lv_draw_line_h",
       "anchor": "lv_draw_line",
@@ -16301,6 +16451,11 @@
       "anchor": "lv_draw_task_get_mask_rect_dsc",
       "kind": "function"
     },
+    "lv_draw_dsc_get_mask_rect_dsc": {
+      "path": "api/public/draw/lv_draw_mask_h",
+      "anchor": "lv_draw_dsc_get_mask_rect_dsc",
+      "kind": "function"
+    },
     "lv_draw_mask_rect": {
       "path": "api/public/draw/lv_draw_mask_h",
       "anchor": "lv_draw_mask_rect",
@@ -16331,6 +16486,11 @@
       "anchor": "lv_draw_task_get_fill_dsc",
       "kind": "function"
     },
+    "lv_draw_dsc_get_fill_dsc": {
+      "path": "api/public/draw/lv_draw_rect_h",
+      "anchor": "lv_draw_dsc_get_fill_dsc",
+      "kind": "function"
+    },
     "lv_draw_fill": {
       "path": "api/public/draw/lv_draw_rect_h",
       "anchor": "lv_draw_fill",
@@ -16346,6 +16506,11 @@
       "anchor": "lv_draw_task_get_border_dsc",
       "kind": "function"
     },
+    "lv_draw_dsc_get_border_dsc": {
+      "path": "api/public/draw/lv_draw_rect_h",
+      "anchor": "lv_draw_dsc_get_border_dsc",
+      "kind": "function"
+    },
     "lv_draw_border": {
       "path": "api/public/draw/lv_draw_rect_h",
       "anchor": "lv_draw_border",
@@ -16359,6 +16524,11 @@
     "lv_draw_task_get_box_shadow_dsc": {
       "path": "api/public/draw/lv_draw_rect_h",
       "anchor": "lv_draw_task_get_box_shadow_dsc",
+      "kind": "function"
+    },
+    "lv_draw_dsc_get_box_shadow_dsc": {
+      "path": "api/public/draw/lv_draw_rect_h",
+      "anchor": "lv_draw_dsc_get_box_shadow_dsc",
       "kind": "function"
     },
     "lv_draw_box_shadow": {
@@ -16409,6 +16579,11 @@
     "lv_draw_task_get_triangle_dsc": {
       "path": "api/public/draw/lv_draw_triangle_h",
       "anchor": "lv_draw_task_get_triangle_dsc",
+      "kind": "function"
+    },
+    "lv_draw_dsc_get_triangle_dsc": {
+      "path": "api/public/draw/lv_draw_triangle_h",
+      "anchor": "lv_draw_dsc_get_triangle_dsc",
       "kind": "function"
     },
     "lv_draw_triangle": {
@@ -16729,6 +16904,11 @@
     "lv_draw_task_get_vector_dsc": {
       "path": "api/public/draw/lv_draw_vector_h",
       "anchor": "lv_draw_task_get_vector_dsc",
+      "kind": "function"
+    },
+    "lv_draw_dsc_get_vector_dsc": {
+      "path": "api/public/draw/lv_draw_vector_h",
+      "anchor": "lv_draw_dsc_get_vector_dsc",
       "kind": "function"
     },
     "lv_vector_fill_t": {

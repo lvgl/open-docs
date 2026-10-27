@@ -2,18 +2,18 @@
 title: lv_draw_arc.h
 description: API reference for lv_draw_arc.h
 api:
-  functions: [lv_draw_arc_dsc_init, lv_draw_task_get_arc_dsc, lv_draw_arc, lv_draw_arc_get_area]
+  functions: [lv_draw_arc_dsc_init, lv_draw_task_get_arc_dsc, lv_draw_dsc_get_arc_dsc, lv_draw_arc, lv_draw_arc_get_area]
   structs: [lv_draw_arc_dsc_t]
 ---
 
-<ApiSummary functions={4} structs={1} />
+<ApiSummary functions={5} structs={1} />
 
 ## Functions
 
-<ApiTabs items={["Getters (2)","Other (2)"]}>
-<ApiTab value="Getters (2)">
+<ApiTabs items={["Getters (3)","Other (2)"]}>
+<ApiTab value="Getters (3)">
 
-<ApiMember kind="function" name="lv_draw_task_get_arc_dsc" file="public/draw/lv_draw_arc.h" line={77} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw_arc.h#L77">
+<ApiMember kind="function" name="lv_draw_task_get_arc_dsc" file="public/draw/lv_draw_arc.h" line={77} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_arc.h#L77">
 
 ### lv_draw_task_get_arc_dsc
 
@@ -29,12 +29,33 @@ lv_draw_arc_dsc_t * lv_draw_task_get_arc_dsc(lv_draw_task_t *task)
 |------|------|-------------|
 | `task` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
 
-**Returns:** <ApiLink name="lv_draw_arc_dsc_t" display="lv_draw_arc_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_ARC
+**Returns:** <ApiLink name="lv_draw_arc_dsc_t" display="lv_draw_arc_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_DSC_TYPE_ARC
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_arc_get_area" file="public/draw/lv_draw_arc.h" line={97} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw_arc.h#L97">
+<ApiMember kind="function" name="lv_draw_dsc_get_arc_dsc" file="public/draw/lv_draw_arc.h" line={85} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_arc.h#L85">
+
+### lv_draw_dsc_get_arc_dsc
+
+Get the arc draw descriptor from a generic draw descriptor. `dsc` must be of type LV_DRAW_DSC_TYPE_ARC, use <ApiLink name="lv_draw_dsc_get_type" display="lv_draw_dsc_get_type()" /> to check it first.
+
+```c
+lv_draw_arc_dsc_t * lv_draw_dsc_get_arc_dsc(lv_draw_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_dsc_t" display="lv_draw_dsc_t *" /> | draw descriptor |
+
+**Returns:** <ApiLink name="lv_draw_arc_dsc_t" display="lv_draw_arc_dsc_t *" /> — the arc draw descriptor
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_arc_get_area" file="public/draw/lv_draw_arc.h" line={105} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_arc.h#L105">
 
 ### lv_draw_arc_get_area
 
@@ -63,7 +84,7 @@ void lv_draw_arc_get_area(int32_t x, int32_t y, uint16_t radius, lv_value_precis
 </ApiTab>
 <ApiTab value="Other (2)">
 
-<ApiMember kind="function" name="lv_draw_arc_dsc_init" file="public/draw/lv_draw_arc.h" line={70} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw_arc.h#L70">
+<ApiMember kind="function" name="lv_draw_arc_dsc_init" file="public/draw/lv_draw_arc.h" line={70} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_arc.h#L70">
 
 ### lv_draw_arc_dsc_init
 
@@ -82,7 +103,7 @@ void lv_draw_arc_dsc_init(lv_draw_arc_dsc_t *dsc)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_arc" file="public/draw/lv_draw_arc.h" line={84} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw_arc.h#L84">
+<ApiMember kind="function" name="lv_draw_arc" file="public/draw/lv_draw_arc.h" line={92} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_arc.h#L92">
 
 ### lv_draw_arc
 
@@ -112,7 +133,7 @@ void lv_draw_arc(lv_layer_t *layer, const lv_draw_arc_dsc_t *dsc)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `base` | <ApiLink name="lv_draw_dsc_t" /> |  |
 | `color` | <ApiLink name="lv_color_t" /> | The color of the arc |
 | `width` | `int32_t` | The width (thickness) of the arc |
 | `start_angle` | <ApiLink name="lv_value_precise_t" /> | The start angle in 1 degree units (if `LV_USE_FLOAT` is enabled a float number can be also used) 0° is the 3 o'clock position, 90° is the 6 o'clock, etc. |

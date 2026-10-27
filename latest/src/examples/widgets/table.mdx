@@ -75,8 +75,8 @@ itself.
 
 `lv_mem_monitor` and `lv_tick_get` bracket the creation of a one-column,
 200-row table to measure memory and time usage. Each row is filled
-with `lv_table_set_cell_value_fmt`. An `LV_EVENT_DRAW_TASK_ADDED`
-handler intercepts each `LV_PART_ITEMS` fill task and paints a pill
+with `lv_table_set_cell_value_fmt`. An `LV_EVENT_DRAW_DSC_END`
+handler runs after each `LV_PART_ITEMS` fill and paints a pill
 track and knob whose position and color reflect the row's
 `LV_TABLE_CELL_CTRL_CUSTOM_1` flag. An `LV_EVENT_VALUE_CHANGED`
 handler toggles that flag on the selected row. A bottom label reports

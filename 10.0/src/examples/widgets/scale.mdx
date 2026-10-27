@@ -25,7 +25,7 @@ with a 360 degree sweep, 61 ticks, and custom labels alternating
 `N`, `30`, `60`, `E`, and so on. A red `LV_SYMBOL_UP` label pins
 the forward bearing at the top, and a centre label formats the
 heading as `<deg>` plus the cardinal string from
-`heading_to_cardinal`. An `LV_EVENT_DRAW_TASK_ADDED` callback paints
+`heading_to_cardinal`. An `LV_EVENT_DRAW_DSC_BEGIN` callback paints
 the `N` label and its tick red. An infinite 5000 ms forward and
 reverse animation drives `lv_scale_set_rotation`, turning the dial
 beneath the arrow.
@@ -48,14 +48,14 @@ updating the needle, the value, and the zone-matching text colour.
 
 <LvglExample name="lv_example_scale_heart_rate" path="widgets/scale/lv_example_scale_heart_rate" />
 
-## Rainbow major-tick labels via draw task
+## Rainbow major-tick labels via draw events
 
-<LvglExampleBrief>Recolour and reformat scale labels during `LV_EVENT_DRAW_TASK_ADDED`.</LvglExampleBrief>
+<LvglExampleBrief>Recolour and reformat scale labels during `LV_EVENT_DRAW_DSC_BEGIN`.</LvglExampleBrief>
 
 A horizontal-bottom scale (80% width, 100 px tall, 31 ticks, range
-10 to 40) enables `LV_OBJ_FLAG_SEND_DRAW_TASK_EVENTS` and subscribes
-to `LV_EVENT_DRAW_TASK_ADDED`. The callback inspects each draw
-task targeting `LV_PART_INDICATOR`, rewrites the label text to a
+10 to 40) enables `LV_OBJ_FLAG_SEND_DRAW_DSC_EVENTS` and subscribes
+to `LV_EVENT_DRAW_DSC_BEGIN`. The callback inspects each label
+draw descriptor of `LV_PART_INDICATOR`, rewrites the label text to a
 one-decimal value formatted from `id2`, picks one of seven palette
 colours by tick index, and expands the draw area to fit the new
 text width.
@@ -126,7 +126,7 @@ A 210 by 210 dark grey container hosts a 150 by 150
 `LV_SCALE_MODE_ROUND_OUTER` scale over the range 0 to 24 with a
 full 360 degree sweep rotated to 105 degrees and 25 hourly ticks in
 `lv_font_montserrat_12`. Labels `01` through `24` rotate to follow
-the ticks while staying upright, and an `LV_EVENT_DRAW_TASK_ADDED`
+the ticks while staying upright, and an `LV_EVENT_DRAW_DSC_BEGIN`
 callback whitens the `06`, `12`, `18`, and `24` labels while
 greying the rest. Two sections colour the arc blue for 17 to 5
 (night) and dark yellow for 5 to 17 (day). Inside the container,

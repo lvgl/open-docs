@@ -2,21 +2,21 @@
 title: lv_draw_image.h
 description: API reference for lv_draw_image.h
 api:
-  functions: [lv_draw_image_dsc_init, lv_draw_task_get_image_dsc, lv_draw_image, lv_draw_layer, lv_image_src_get_type]
+  functions: [lv_draw_image_dsc_init, lv_draw_task_get_image_dsc, lv_draw_dsc_get_image_dsc, lv_draw_image, lv_draw_layer, lv_image_src_get_type]
   structs: [_lv_draw_image_dsc_t]
   typedefs: [lv_draw_image_core_cb]
 ---
 
 <RelatedHeaders name="lv_draw_image_private.h" isPrivate={false} />
 
-<ApiSummary functions={5} structs={1} typedefs={1} />
+<ApiSummary functions={6} structs={1} typedefs={1} />
 
 ## Functions
 
-<ApiTabs items={["Getters (2)","Other (3)"]}>
-<ApiTab value="Getters (2)">
+<ApiTabs items={["Getters (3)","Other (3)"]}>
+<ApiTab value="Getters (3)">
 
-<ApiMember kind="function" name="lv_draw_task_get_image_dsc" file="public/draw/lv_draw_image.h" line={132} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw_image.h#L132">
+<ApiMember kind="function" name="lv_draw_task_get_image_dsc" file="public/draw/lv_draw_image.h" line={135} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_image.h#L135">
 
 ### lv_draw_task_get_image_dsc
 
@@ -32,12 +32,33 @@ lv_draw_image_dsc_t * lv_draw_task_get_image_dsc(lv_draw_task_t *task)
 |------|------|-------------|
 | `task` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task |
 
-**Returns:** <ApiLink name="lv_draw_image_dsc_t" display="lv_draw_image_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_IMAGE
+**Returns:** <ApiLink name="lv_draw_image_dsc_t" display="lv_draw_image_dsc_t *" /> — the task's draw descriptor or NULL if the task is not of type LV_DRAW_DSC_TYPE_IMAGE
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_image_src_get_type" file="public/draw/lv_draw_image.h" line={163} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw_image.h#L163">
+<ApiMember kind="function" name="lv_draw_dsc_get_image_dsc" file="public/draw/lv_draw_image.h" line={143} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_image.h#L143">
+
+### lv_draw_dsc_get_image_dsc
+
+Get the image draw descriptor from a generic draw descriptor. `dsc` must be of type LV_DRAW_DSC_TYPE_IMAGE, use <ApiLink name="lv_draw_dsc_get_type" display="lv_draw_dsc_get_type()" /> to check it first.
+
+```c
+lv_draw_image_dsc_t * lv_draw_dsc_get_image_dsc(lv_draw_dsc_t *dsc)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dsc` | <ApiLink name="lv_draw_dsc_t" display="lv_draw_dsc_t *" /> | draw descriptor |
+
+**Returns:** <ApiLink name="lv_draw_image_dsc_t" display="lv_draw_image_dsc_t *" /> — the image draw descriptor
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_image_src_get_type" file="public/draw/lv_draw_image.h" line={174} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_image.h#L174">
 
 ### lv_image_src_get_type
 
@@ -61,7 +82,7 @@ lv_image_src_t lv_image_src_get_type(const void *src)
 </ApiTab>
 <ApiTab value="Other (3)">
 
-<ApiMember kind="function" name="lv_draw_image_dsc_init" file="public/draw/lv_draw_image.h" line={125} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw_image.h#L125">
+<ApiMember kind="function" name="lv_draw_image_dsc_init" file="public/draw/lv_draw_image.h" line={128} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_image.h#L128">
 
 ### lv_draw_image_dsc_init
 
@@ -80,7 +101,7 @@ void lv_draw_image_dsc_init(lv_draw_image_dsc_t *dsc)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_image" file="public/draw/lv_draw_image.h" line={143} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw_image.h#L143">
+<ApiMember kind="function" name="lv_draw_image" file="public/draw/lv_draw_image.h" line={154} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_image.h#L154">
 
 ### lv_draw_image
 
@@ -105,7 +126,7 @@ void lv_draw_image(lv_layer_t *layer, const lv_draw_image_dsc_t *dsc, const lv_a
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_layer" file="public/draw/lv_draw_image.h" line={153} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw_image.h#L153">
+<ApiMember kind="function" name="lv_draw_layer" file="public/draw/lv_draw_image.h" line={164} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_image.h#L164">
 
 ### lv_draw_layer
 
@@ -140,7 +161,8 @@ void lv_draw_layer(lv_layer_t *layer, const lv_draw_image_dsc_t *dsc, const lv_a
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `base` | <ApiLink name="lv_draw_dsc_base_t" /> |  |
+| `base` | <ApiLink name="lv_draw_dsc_t" /> |  |
+| `coords` | <ApiLink name="lv_area_t" /> | The area to draw |
 | `src` | `const void *` | The image source: pointer to <ApiLink name="lv_image_dsc_t" /> or a path to a file |
 | `header` | <ApiLink name="lv_image_header_t" /> | The header of the image. Initialized internally in `lv_draw_image` |
 | `clip_radius` | `int32_t` | Clip the corner of the image with this radius. Use `LV_RADIUS_CIRCLE` for max. radius |
@@ -166,7 +188,7 @@ void lv_draw_layer(lv_layer_t *layer, const lv_draw_image_dsc_t *dsc, const lv_a
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_draw_image_core_cb" file="public/draw/lv_draw_image.h" line={112} url="https://github.com/lvgl/lvgl/tree/ff7059e98363d7c56c2205f9e8f7ab3ba857381f/include/lvgl/draw/lv_draw_image.h#L112">
+<ApiMember kind="typedef" name="lv_draw_image_core_cb" file="public/draw/lv_draw_image.h" line={115} url="https://github.com/lvgl/lvgl/tree/7ef0e387a9b33208e3f7d0a64977c8f021159b30/include/lvgl/draw/lv_draw_image.h#L115">
 
 ### lv_draw_image_core_cb
 
