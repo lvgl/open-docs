@@ -13,7 +13,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_color32_unpremultiply" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={142} url="https://github.com/lvgl/lvgl/tree/4fe3fcced8a9a96a811f13e0f264fedc732d38cf/src/draw/sw/blend/lv_draw_sw_blend_private.h#L142">
+<ApiMember kind="function" name="lv_color32_unpremultiply" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={152} url="https://github.com/lvgl/lvgl/tree/2f697cc54d720b6ddc7f138e845bce12b0d51649/src/draw/sw/blend/lv_draw_sw_blend_private.h#L152">
 
 ### lv_color32_unpremultiply
 
@@ -34,7 +34,7 @@ static lv_color32_t lv_color32_unpremultiply(lv_color32_t c)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_color32_lumi_of" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={170} url="https://github.com/lvgl/lvgl/tree/4fe3fcced8a9a96a811f13e0f264fedc732d38cf/src/draw/sw/blend/lv_draw_sw_blend_private.h#L170">
+<ApiMember kind="function" name="lv_color32_lumi_of" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={180} url="https://github.com/lvgl/lvgl/tree/2f697cc54d720b6ddc7f138e845bce12b0d51649/src/draw/sw/blend/lv_draw_sw_blend_private.h#L180">
 
 ### lv_color32_lumi_of
 
@@ -56,7 +56,7 @@ static uint8_t lv_color32_lumi_of(lv_color32_t c, bool premultiplied)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_color_16_16_mix_inlined" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={187} url="https://github.com/lvgl/lvgl/tree/4fe3fcced8a9a96a811f13e0f264fedc732d38cf/src/draw/sw/blend/lv_draw_sw_blend_private.h#L187">
+<ApiMember kind="function" name="lv_color_16_16_mix_inlined" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={197} url="https://github.com/lvgl/lvgl/tree/2f697cc54d720b6ddc7f138e845bce12b0d51649/src/draw/sw/blend/lv_draw_sw_blend_private.h#L197">
 
 ### lv_color_16_16_mix_inlined
 
@@ -79,7 +79,7 @@ static uint16_t lv_color_16_16_mix_inlined(uint16_t c1, uint16_t c2, uint8_t mix
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_color_mix32_inlined" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={214} url="https://github.com/lvgl/lvgl/tree/4fe3fcced8a9a96a811f13e0f264fedc732d38cf/src/draw/sw/blend/lv_draw_sw_blend_private.h#L214">
+<ApiMember kind="function" name="lv_color_mix32_inlined" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={224} url="https://github.com/lvgl/lvgl/tree/2f697cc54d720b6ddc7f138e845bce12b0d51649/src/draw/sw/blend/lv_draw_sw_blend_private.h#L224">
 
 ### lv_color_mix32_inlined
 
@@ -105,7 +105,7 @@ static lv_color32_t lv_color_mix32_inlined(lv_color32_t fg, lv_color32_t bg)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_color_mix32_premultiplied_inlined" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={240} url="https://github.com/lvgl/lvgl/tree/4fe3fcced8a9a96a811f13e0f264fedc732d38cf/src/draw/sw/blend/lv_draw_sw_blend_private.h#L240">
+<ApiMember kind="function" name="lv_color_mix32_premultiplied_inlined" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={250} url="https://github.com/lvgl/lvgl/tree/2f697cc54d720b6ddc7f138e845bce12b0d51649/src/draw/sw/blend/lv_draw_sw_blend_private.h#L250">
 
 ### lv_color_mix32_premultiplied_inlined
 
@@ -234,7 +234,7 @@ The same for two bytes, for the RGB565 buffers.
 
 ## Macros
 
-<ApiMember kind="macro" name="LV_COLOR_MIX_16_PREPARE" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={110} url="https://github.com/lvgl/lvgl/tree/4fe3fcced8a9a96a811f13e0f264fedc732d38cf/src/draw/sw/blend/lv_draw_sw_blend_private.h#L110">
+<ApiMember kind="macro" name="LV_COLOR_MIX_16_PREPARE" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={120} url="https://github.com/lvgl/lvgl/tree/2f697cc54d720b6ddc7f138e845bce12b0d51649/src/draw/sw/blend/lv_draw_sw_blend_private.h#L120">
 
 ### LV_COLOR_MIX_16_PREPARE
 
@@ -248,7 +248,7 @@ Prepare an RGB565 color for mixing: spread it over 32 bits so each channel gets 
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_COLOR_24_TO_16" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={115} url="https://github.com/lvgl/lvgl/tree/4fe3fcced8a9a96a811f13e0f264fedc732d38cf/src/draw/sw/blend/lv_draw_sw_blend_private.h#L115">
+<ApiMember kind="macro" name="LV_COLOR_24_TO_16" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={125} url="https://github.com/lvgl/lvgl/tree/2f697cc54d720b6ddc7f138e845bce12b0d51649/src/draw/sw/blend/lv_draw_sw_blend_private.h#L125">
 
 ### LV_COLOR_24_TO_16
 
@@ -262,7 +262,7 @@ Convert RGB888 to RGB565.
 
 </ApiMember>
 
-<ApiMember kind="macro" name="LV_COLOR_MIX_16_TO_16_PREPARED" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={124} url="https://github.com/lvgl/lvgl/tree/4fe3fcced8a9a96a811f13e0f264fedc732d38cf/src/draw/sw/blend/lv_draw_sw_blend_private.h#L124">
+<ApiMember kind="macro" name="LV_COLOR_MIX_16_TO_16_PREPARED" file="private/draw/sw/blend/lv_draw_sw_blend_private.h" line={134} url="https://github.com/lvgl/lvgl/tree/2f697cc54d720b6ddc7f138e845bce12b0d51649/src/draw/sw/blend/lv_draw_sw_blend_private.h#L134">
 
 ### LV_COLOR_MIX_16_TO_16_PREPARED
 
@@ -284,7 +284,7 @@ Mix a prepared foreground into an RGB565 background. `mix` must be 1..254, the c
 ## Dependencies
 
 <FileIncludes
-  includes={["lv_draw_sw_blend.h", "lv_draw_sw_mask.h"]}
+  includes={["lv_draw_sw_blend.h", "lv_draw_sw_mask.h", "lv_blend_neon.h"]}
   includedBy={["lvgl_private.h"]}
-  transitiveIncludes={["lv_blend_neon.h", "lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_draw_private.h", "lv_draw_sw.h", "lv_draw_sw_blend_neon_to_rgb565.h", "lv_draw_sw_blend_neon_to_rgb888.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h"]}
+  transitiveIncludes={["lv_cache.h", "lv_cache_class.h", "lv_cache_entry.h", "lv_cache_lru_ll.h", "lv_cache_lru_rb.h", "lv_cache_sc_da.h", "lv_draw_private.h", "lv_draw_sw.h", "lv_draw_sw_blend_neon_to_rgb565.h", "lv_draw_sw_blend_neon_to_rgb888.h", "lv_image_cache.h", "lv_iter_private.h", "lv_os_private.h"]}
 />
