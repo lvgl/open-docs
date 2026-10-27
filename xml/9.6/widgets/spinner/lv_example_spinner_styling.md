@@ -1,3 +1,3 @@
-```xml title="examples/widgets/spinner/lv_example_spinner_styling.xml" source="https://github.com/lvgl/lvgl/blob/2f697cc54d720b6ddc7f138e845bce12b0d51649/examples/widgets/spinner/lv_example_spinner_styling.xml"
+```xml title="examples/widgets/spinner/lv_example_spinner_styling.xml" source="https://github.com/lvgl/lvgl/blob/4c0b2c3c0122ba56da2af43100f414e32a31a83d/examples/widgets/spinner/lv_example_spinner_styling.xml"
 
 ```
