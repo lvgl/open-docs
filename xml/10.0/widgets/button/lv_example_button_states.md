@@ -1,4 +1,4 @@
-```xml title="examples/widgets/button/lv_example_button_states.xml" source="https://github.com/lvgl/lvgl/blob/48def267ceac8757479850672efc570c34a11b15/examples/widgets/button/lv_example_button_states.xml"
+```xml title="examples/widgets/button/lv_example_button_states.xml" source="https://github.com/lvgl/lvgl/blob/2bf78e199a57659e400624ad420d92524680aaa5/examples/widgets/button/lv_example_button_states.xml"
 <!--
  @title Button states
  @brief Show normal, checked, and disabled buttons side by side.
