@@ -1,4 +1,4 @@
-```xml title="examples/styles/lv_example_style_padding.xml" source="https://github.com/lvgl/lvgl/blob/de708f722fecfe0356c08d4931adf6d967ad3b27/examples/styles/lv_example_style_padding.xml"
+```xml title="examples/styles/lv_example_style_padding.xml" source="https://github.com/lvgl/lvgl/blob/eaba761a5f087062ac9acc99f913cea6cd6c7e63/examples/styles/lv_example_style_padding.xml"
 <!--
  @title Padding
  @brief Inset a Widget's content per side with the directional pad_* properties.
