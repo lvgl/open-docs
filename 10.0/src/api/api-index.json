@@ -2,7 +2,7 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-11-08T15:54:17.598Z",
+    "generatedAt": "2026-11-08T16:19:34.515Z",
     "symbolCount": 9117
   },
   "symbols": {
@@ -24121,6 +24121,11 @@
       "anchor": "lv_image_decoder_post_process",
       "kind": "function"
     },
+    "lv_image_cache_drop": {
+      "path": "api/public/image/lv_image_decoder_h",
+      "anchor": "lv_image_cache_drop",
+      "kind": "function"
+    },
     "lv_image_src_t": {
       "path": "api/public/image/lv_image_decoder_h",
       "anchor": "lv_image_src_t",
@@ -43314,11 +43319,6 @@
     "lv_image_cache_resize": {
       "path": "api/private/misc/cache/instance/lv_image_cache_h",
       "anchor": "lv_image_cache_resize",
-      "kind": "function"
-    },
-    "lv_image_cache_drop": {
-      "path": "api/private/misc/cache/instance/lv_image_cache_h",
-      "anchor": "lv_image_cache_drop",
       "kind": "function"
     },
     "lv_image_cache_is_enabled": {
