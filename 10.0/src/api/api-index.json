@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-11-08T16:19:34.515Z",
-    "symbolCount": 9117
+    "generatedAt": "2026-11-09T08:40:04.889Z",
+    "symbolCount": 9119
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -34326,6 +34326,11 @@
       "anchor": "lv_draw_cleanup_task",
       "kind": "function"
     },
+    "lv_draw_unit_draw_task": {
+      "path": "api/private/draw/lv_draw_private_h",
+      "anchor": "lv_draw_unit_draw_task",
+      "kind": "function"
+    },
     "_lv_draw_task_t": {
       "path": "api/private/draw/lv_draw_private_h",
       "anchor": "_lv_draw_task_t",
@@ -34334,6 +34339,11 @@
     "_lv_draw_mask_t": {
       "path": "api/private/draw/lv_draw_private_h",
       "anchor": "_lv_draw_mask_t",
+      "kind": "struct"
+    },
+    "lv_draw_unit_draw_cbs_t": {
+      "path": "api/private/draw/lv_draw_private_h",
+      "anchor": "lv_draw_unit_draw_cbs_t",
       "kind": "struct"
     },
     "_lv_draw_unit_t": {

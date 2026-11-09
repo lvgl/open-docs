@@ -2,17 +2,17 @@
 title: lv_draw_private.h
 description: API reference for lv_draw_private.h
 api:
-  functions: [lv_draw_cleanup_task]
-  structs: [_lv_draw_task_t, _lv_draw_mask_t, _lv_draw_unit_t, lv_draw_global_info_t]
+  functions: [lv_draw_cleanup_task, lv_draw_unit_draw_task]
+  structs: [_lv_draw_task_t, _lv_draw_mask_t, lv_draw_unit_draw_cbs_t, _lv_draw_unit_t, lv_draw_global_info_t]
 ---
 
 <RelatedHeaders name="lv_draw.h" isPrivate={true} />
 
-<ApiSummary functions={1} structs={4} />
+<ApiSummary functions={2} structs={5} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_cleanup_task" file="private/draw/lv_draw_private.h" line={201} url="https://github.com/lvgl/lvgl/tree/b226a6c10797038ceb405d5b937d85df30cc7d31/src/draw/lv_draw_private.h#L201">
+<ApiMember kind="function" name="lv_draw_cleanup_task" file="private/draw/lv_draw_private.h" line={245} url="https://github.com/lvgl/lvgl/tree/cff1c632206a267534102ee1065f51ac87be4099/src/draw/lv_draw_private.h#L245">
 
 ### lv_draw_cleanup_task
 
@@ -27,6 +27,26 @@ void lv_draw_cleanup_task(lv_draw_task_t *t)
 | Name | Type | Description |
 |------|------|-------------|
 | `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | draw task to free |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_unit_draw_task" file="private/draw/lv_draw_private.h" line={253} url="https://github.com/lvgl/lvgl/tree/cff1c632206a267534102ee1065f51ac87be4099/src/draw/lv_draw_private.h#L253">
+
+### lv_draw_unit_draw_task
+
+Draw a task with the matching callback of a draw unit. Does nothing if the unit has no callback for the task's type.
+
+```c
+void lv_draw_unit_draw_task(lv_draw_unit_t *draw_unit, lv_draw_task_t *t)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `draw_unit` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | the draw unit drawing the task |
+| `t` | <ApiLink name="lv_draw_task_t" display="lv_draw_task_t *" /> | the draw task to draw |
 
 
 </ApiMember>
@@ -66,6 +86,32 @@ void lv_draw_cleanup_task(lv_draw_task_t *t)
 
 </ApiMember>
 
+<ApiMember kind="struct" name="lv_draw_unit_draw_cbs_t">
+
+### lv_draw_unit_draw_cbs_t
+
+The draw callbacks of a draw unit, one per draw descriptor type. NULL for the types the unit doesn't draw.
+
+| Member | Type | Description |
+|--------|------|-------------|
+| `draw_fill_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_fill_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `draw_border_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_border_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `draw_box_shadow_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_box_shadow_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `draw_letter_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_letter_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `draw_label_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_label_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `draw_image_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `draw_layer_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `draw_arc_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_arc_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `draw_line_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_line_dsc_t *dsc)` |  |
+| `draw_triangle_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_triangle_dsc_t *dsc)` |  |
+| `draw_mask_rect_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_mask_rect_dsc_t *dsc)` |  |
+| `draw_blur_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_blur_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `draw_vector_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_vector_dsc_t *dsc)` |  |
+| `draw_3d_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_3d_dsc_t *dsc, const lv_area_t *coords)` |  |
+
+
+</ApiMember>
+
 <ApiMember kind="struct" name="_lv_draw_unit_t">
 
 ### _lv_draw_unit_t
@@ -75,6 +121,7 @@ void lv_draw_cleanup_task(lv_draw_task_t *t)
 | `next` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> |  |
 | `name` | `const char *` | Name and ID of the draw unit, for debugging purposes only. |
 | `idx` | `int32_t` |  |
+| `draw_cbs` | <ApiLink name="lv_draw_unit_draw_cbs_t" display="const lv_draw_unit_draw_cbs_t *" /> | The draw callbacks of the unit. Usually a `static const` table. |
 | `dispatch_cb` | `int32_t(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer)` | Called to try to assign a draw task to itself. `lv_draw_get_next_available_task` can be used to get an independent draw task. A draw task should be assign only if the draw unit can draw it too |
 | `evaluate_cb` | `int32_t(*)(lv_draw_unit_t *draw_unit, lv_draw_task_t *task)` |  |
 | `wait_for_finish_cb` | `int32_t(*)(lv_draw_unit_t *draw_unit)` | Called to signal the unit to complete all tasks in order to return their ready status. This callback can be implemented in case of asynchronous task processing. Below is an example to show the difference between synchronous and asynchronous:<br/><br/>Synchronous: LVGL thread DRAW thread HW<br/><br/>task1 --\> submit --\> Receive task1 wait_for_finish() \<– task1-\>state = READY \<– Complete task1 task2 --\> submit --\> Receive task2 wait_for_finish() task2-\>state = READY \<– Complete task2 task3 --\> submit --\> Receive task3 wait_for_finish() \<– task3-\>state = READY \<– Complete task3 task4 --\> submit --\> Receive task4 wait_for_finish() \<– task4-\>state = READY \<– Complete task4 NO MORE TASKS<br/><br/>Asynchronous: LVGL thread DRAW thread HW is IDLE task1 --\> queue task1 submit --\> Receive task1 task2 --\> queue task2 is BUSY (with task1) task3 --\> queue task3 still BUSY (with task1) task4 --\> queue task4 becomes IDLE \<– task1-\>state = READY \<– Complete task1 submit --\> Receive task2, task3, task4 NO MORE TASKS wait_for_finish_cb() wait_for_finish() \<– Complete task2, task3, task4 \<– task2-\>state = READY \<– \<– task3-\>state = READY \<– \<– task4-\>state = READY \<– |
