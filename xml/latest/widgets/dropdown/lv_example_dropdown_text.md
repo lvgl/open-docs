@@ -1,4 +1,4 @@
-```xml title="examples/widgets/dropdown/lv_example_dropdown_text.xml" source="https://github.com/lvgl/lvgl/blob/cff1c632206a267534102ee1065f51ac87be4099/examples/widgets/dropdown/lv_example_dropdown_text.xml"
+```xml title="examples/widgets/dropdown/lv_example_dropdown_text.xml" source="https://github.com/lvgl/lvgl/blob/cba88f6eddb8652e9f0b9ba4291fd213e2012eb2/examples/widgets/dropdown/lv_example_dropdown_text.xml"
 <!--
  @title Dropdown fixed text
  @brief Pin the dropdown button label regardless of selection.
