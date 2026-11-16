@@ -1,4 +1,4 @@
-```xml title="examples/scroll/lv_example_scroll_one.xml" source="https://github.com/lvgl/lvgl/blob/c08a123daca4d42e394c9e7cd68ba6822e8509d6/examples/scroll/lv_example_scroll_one.xml"
+```xml title="examples/scroll/lv_example_scroll_one.xml" source="https://github.com/lvgl/lvgl/blob/9fbad624ef8b4026c4a59ff2fcf2baee0579d1ad/examples/scroll/lv_example_scroll_one.xml"
 <!--
  @title Scroll one at a time
  @brief Restrict each scroll gesture to a single snappable child.
