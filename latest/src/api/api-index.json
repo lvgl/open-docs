@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-11-13T20:45:24.838Z",
-    "symbolCount": 9119
+    "generatedAt": "2026-11-16T05:46:18.759Z",
+    "symbolCount": 9121
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -5792,6 +5792,11 @@
       "kind": "enumvalue"
     },
     "LV_EVENT_INDEV_RESET": {
+      "path": "api/public/core/lv_event_h",
+      "anchor": "lv_event_code_t",
+      "kind": "enumvalue"
+    },
+    "LV_EVENT_INDEV_SAMPLE": {
       "path": "api/public/core/lv_event_h",
       "anchor": "lv_event_code_t",
       "kind": "enumvalue"
@@ -23862,6 +23867,11 @@
       "kind": "enumvalue"
     },
     "LV_FS_MODE_RD": {
+      "path": "api/public/fs/lv_fs_h",
+      "anchor": "lv_fs_mode_t",
+      "kind": "enumvalue"
+    },
+    "LV_FS_MODE_TRUNC": {
       "path": "api/public/fs/lv_fs_h",
       "anchor": "lv_fs_mode_t",
       "kind": "enumvalue"
