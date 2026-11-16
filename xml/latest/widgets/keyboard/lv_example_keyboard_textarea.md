@@ -1,4 +1,4 @@
-```xml title="examples/widgets/keyboard/lv_example_keyboard_textarea.xml" source="https://github.com/lvgl/lvgl/blob/3cf7afc1c3ea09b5a3a6ad82a0170efaf5915ae5/examples/widgets/keyboard/lv_example_keyboard_textarea.xml"
+```xml title="examples/widgets/keyboard/lv_example_keyboard_textarea.xml" source="https://github.com/lvgl/lvgl/blob/b9611d54b6fe5c8cac63d6b8b67d497a4b3ad10a/examples/widgets/keyboard/lv_example_keyboard_textarea.xml"
 <!--
  @title Keyboard with text area
  @brief Pair a keyboard with a textarea so typed keys land in the field.
@@ -21,7 +21,14 @@
 			placeholder_text="Type here..."
 		/>
 
-		<lv_keyboard name="keyboard" align="bottom_mid" width="100%" height="60%" mode="text_lower" />
+		<lv_keyboard
+			name="keyboard"
+			align="bottom_mid"
+			width="100%"
+			height="60%"
+			mode="text_lower"
+			textarea="textarea"
+		/>
 	</view>
 </screen>
 ```
