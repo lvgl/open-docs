@@ -12,7 +12,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_cleanup_task" file="private/draw/lv_draw_private.h" line={245} url="https://github.com/lvgl/lvgl/tree/8c8522880c2772eb6163a0411c23d11d65d2445f/src/draw/lv_draw_private.h#L245">
+<ApiMember kind="function" name="lv_draw_cleanup_task" file="private/draw/lv_draw_private.h" line={257} url="https://github.com/lvgl/lvgl/tree/2ee5654440bfc21a2cade4aa6e248f8d34b5e33e/src/draw/lv_draw_private.h#L257">
 
 ### lv_draw_cleanup_task
 
@@ -31,7 +31,7 @@ void lv_draw_cleanup_task(lv_draw_task_t *t)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_unit_draw_task" file="private/draw/lv_draw_private.h" line={253} url="https://github.com/lvgl/lvgl/tree/8c8522880c2772eb6163a0411c23d11d65d2445f/src/draw/lv_draw_private.h#L253">
+<ApiMember kind="function" name="lv_draw_unit_draw_task" file="private/draw/lv_draw_private.h" line={265} url="https://github.com/lvgl/lvgl/tree/2ee5654440bfc21a2cade4aa6e248f8d34b5e33e/src/draw/lv_draw_private.h#L265">
 
 ### lv_draw_unit_draw_task
 
@@ -70,7 +70,6 @@ void lv_draw_unit_draw_task(lv_draw_unit_t *draw_unit, lv_draw_task_t *t)
 | `draw_dsc` | `void *` | int instead of lv_draw_task_state_t to be sure its atomic |
 | `opa` | <ApiLink name="lv_opa_t" /> | Opacity of the layer |
 | `preferred_draw_unit_id` | `uint8_t` | The ID of the draw_unit which should take this task |
-| `preference_score` | `uint8_t` | Set to which extent `preferred_draw_unit_id` is good at this task. 80: means 20% better (faster) than software rendering 100: the default value 110: means 10% worse (slower) than software rendering |
 
 
 </ApiMember>
@@ -90,24 +89,38 @@ void lv_draw_unit_draw_task(lv_draw_unit_t *draw_unit, lv_draw_task_t *t)
 
 ### lv_draw_unit_draw_cbs_t
 
-The draw callbacks of a draw unit, one per draw descriptor type. NULL for the types the unit doesn't draw.
+The draw callbacks of a draw unit, one per draw descriptor type. NULL for the types the unit doesn't draw. Each `can_draw_*_cb` tells whether the unit can draw the descriptor on the layer. It must not change anything. NULL: the unit can draw every descriptor of the type it has a draw callback for.
 
 | Member | Type | Description |
 |--------|------|-------------|
 | `draw_fill_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_fill_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `can_draw_fill_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_fill_dsc_t *dsc)` |  |
 | `draw_border_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_border_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `can_draw_border_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_border_dsc_t *dsc)` |  |
 | `draw_box_shadow_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_box_shadow_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `can_draw_box_shadow_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_box_shadow_dsc_t *dsc)` |  |
 | `draw_letter_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_letter_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `can_draw_letter_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_letter_dsc_t *dsc)` |  |
 | `draw_label_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_label_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `can_draw_label_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_label_dsc_t *dsc)` |  |
 | `draw_image_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `can_draw_image_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_image_dsc_t *dsc)` |  |
 | `draw_layer_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_image_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `can_draw_layer_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_image_dsc_t *dsc)` |  |
 | `draw_arc_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_arc_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `can_draw_arc_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_arc_dsc_t *dsc)` |  |
 | `draw_line_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_line_dsc_t *dsc)` |  |
+| `can_draw_line_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_line_dsc_t *dsc)` |  |
 | `draw_triangle_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_triangle_dsc_t *dsc)` |  |
+| `can_draw_triangle_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_triangle_dsc_t *dsc)` |  |
 | `draw_mask_rect_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_mask_rect_dsc_t *dsc)` |  |
+| `can_draw_mask_rect_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_mask_rect_dsc_t *dsc)` |  |
 | `draw_blur_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_blur_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `can_draw_blur_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_blur_dsc_t *dsc)` |  |
 | `draw_vector_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_vector_dsc_t *dsc)` |  |
+| `can_draw_vector_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_vector_dsc_t *dsc)` |  |
 | `draw_3d_cb` | `void(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area_t *clip_area, const lv_draw_3d_dsc_t *dsc, const lv_area_t *coords)` |  |
+| `can_draw_3d_cb` | `bool(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_draw_3d_dsc_t *dsc)` |  |
 
 
 </ApiMember>
@@ -122,8 +135,9 @@ The draw callbacks of a draw unit, one per draw descriptor type. NULL for the ty
 | `name` | `const char *` | Name and ID of the draw unit, for debugging purposes only. |
 | `idx` | `int32_t` |  |
 | `draw_cbs` | <ApiLink name="lv_draw_unit_draw_cbs_t" display="const lv_draw_unit_draw_cbs_t *" /> | The draw callbacks of the unit. Usually a `static const` table. |
+| `fallback` | <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> | The unit to try when this one can't draw a descriptor. NULL: the descriptor isn't drawn. Set by the unit itself, e.g. to <ApiLink name="lv_draw_sw_get_draw_unit" display="lv_draw_sw_get_draw_unit()" />. |
+| `id` | `uint8_t` | The ID the unit's dispatcher looks for in lv_draw_task_t::preferred_draw_unit_id. |
 | `dispatch_cb` | `int32_t(*)(lv_draw_unit_t *draw_unit, lv_layer_t *layer)` | Called to try to assign a draw task to itself. `lv_draw_get_next_available_task` can be used to get an independent draw task. A draw task should be assign only if the draw unit can draw it too |
-| `evaluate_cb` | `int32_t(*)(lv_draw_unit_t *draw_unit, lv_draw_task_t *task)` |  |
 | `wait_for_finish_cb` | `int32_t(*)(lv_draw_unit_t *draw_unit)` | Called to signal the unit to complete all tasks in order to return their ready status. This callback can be implemented in case of asynchronous task processing. Below is an example to show the difference between synchronous and asynchronous:<br/><br/>Synchronous: LVGL thread DRAW thread HW<br/><br/>task1 --\> submit --\> Receive task1 wait_for_finish() \<– task1-\>state = READY \<– Complete task1 task2 --\> submit --\> Receive task2 wait_for_finish() task2-\>state = READY \<– Complete task2 task3 --\> submit --\> Receive task3 wait_for_finish() \<– task3-\>state = READY \<– Complete task3 task4 --\> submit --\> Receive task4 wait_for_finish() \<– task4-\>state = READY \<– Complete task4 NO MORE TASKS<br/><br/>Asynchronous: LVGL thread DRAW thread HW is IDLE task1 --\> queue task1 submit --\> Receive task1 task2 --\> queue task2 is BUSY (with task1) task3 --\> queue task3 still BUSY (with task1) task4 --\> queue task4 becomes IDLE \<– task1-\>state = READY \<– Complete task1 submit --\> Receive task2, task3, task4 NO MORE TASKS wait_for_finish_cb() wait_for_finish() \<– Complete task2, task3, task4 \<– task2-\>state = READY \<– \<– task3-\>state = READY \<– \<– task4-\>state = READY \<– |
 | `delete_cb` | `int32_t(*)(lv_draw_unit_t *draw_unit)` | Called to delete draw unit. |
 | `event_cb` | `void(*)(lv_event_t *event)` | Called when an event is sent to the draw unit. |

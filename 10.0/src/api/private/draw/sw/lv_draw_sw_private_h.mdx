@@ -2,17 +2,38 @@
 title: lv_draw_sw_private.h
 description: API reference for lv_draw_sw_private.h
 api:
-  functions: [lv_draw_sw_image_core]
+  functions: [lv_draw_sw_image_core, lv_draw_sw_get_draw_unit]
   structs: [lv_draw_sw_thread_dsc_t, _lv_draw_sw_unit_t]
 ---
 
 <RelatedHeaders name="lv_draw_sw.h" isPrivate={true} />
 
-<ApiSummary functions={1} structs={2} />
+<ApiSummary functions={2} structs={2} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_sw_image_core" file="private/draw/sw/lv_draw_sw_private.h" line={76} url="https://github.com/lvgl/lvgl/tree/8c8522880c2772eb6163a0411c23d11d65d2445f/src/draw/sw/lv_draw_sw_private.h#L76">
+<ApiTabs items={["Getters (1)","Other (1)"]}>
+<ApiTab value="Getters (1)">
+
+<ApiMember kind="function" name="lv_draw_sw_get_draw_unit" file="private/draw/sw/lv_draw_sw_private.h" line={90} url="https://github.com/lvgl/lvgl/tree/2ee5654440bfc21a2cade4aa6e248f8d34b5e33e/src/draw/sw/lv_draw_sw_private.h#L90">
+
+### lv_draw_sw_get_draw_unit
+
+Get the software draw unit
+
+```c
+lv_draw_unit_t * lv_draw_sw_get_draw_unit(void)
+```
+
+**Returns:** <ApiLink name="lv_draw_unit_t" display="lv_draw_unit_t *" /> — the software draw unit, or NULL if it's disabled or not created yet
+
+
+</ApiMember>
+
+</ApiTab>
+<ApiTab value="Other (1)">
+
+<ApiMember kind="function" name="lv_draw_sw_image_core" file="private/draw/sw/lv_draw_sw_private.h" line={76} url="https://github.com/lvgl/lvgl/tree/2ee5654440bfc21a2cade4aa6e248f8d34b5e33e/src/draw/sw/lv_draw_sw_private.h#L76">
 
 ### lv_draw_sw_image_core
 
@@ -37,6 +58,8 @@ void lv_draw_sw_image_core(lv_layer_t *layer, const lv_draw_image_dsc_t *draw_ds
 
 </ApiMember>
 
+</ApiTab>
+</ApiTabs>
 ## Structs
 
 <ApiMember kind="struct" name="lv_draw_sw_thread_dsc_t">

@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-11-17T20:31:46.371Z",
-    "symbolCount": 9121
+    "generatedAt": "2026-11-17T20:38:27.454Z",
+    "symbolCount": 9122
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -36734,6 +36734,11 @@
     "lv_draw_sw_image_core": {
       "path": "api/private/draw/sw/lv_draw_sw_private_h",
       "anchor": "lv_draw_sw_image_core",
+      "kind": "function"
+    },
+    "lv_draw_sw_get_draw_unit": {
+      "path": "api/private/draw/sw/lv_draw_sw_private_h",
+      "anchor": "lv_draw_sw_get_draw_unit",
       "kind": "function"
     },
     "lv_draw_sw_thread_dsc_t": {
