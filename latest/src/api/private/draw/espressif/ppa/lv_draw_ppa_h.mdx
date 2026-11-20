@@ -2,16 +2,17 @@
 title: lv_draw_ppa.h
 description: API reference for lv_draw_ppa.h
 api:
-  functions: [lv_draw_ppa_init, lv_draw_ppa_deinit, lv_draw_buf_ppa_init_handlers, lv_draw_ppa_fill, lv_draw_ppa_img]
+  functions: [lv_draw_ppa_init, lv_draw_ppa_deinit, lv_draw_buf_ppa_init_handlers, lv_draw_ppa_fill, lv_draw_ppa_img, lv_draw_ppa_rotate]
+  macros: [LV_DRAW_ROTATE90_RGB565, LV_DRAW_ROTATE180_RGB565, LV_DRAW_ROTATE270_RGB565]
 ---
 
 <RelatedHeaders name="lv_draw_ppa_private.h" isPrivate={false} />
 
-<ApiSummary functions={5} />
+<ApiSummary functions={6} macros={3} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_draw_ppa_init" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={37} url="https://github.com/lvgl/lvgl/tree/622f63df2f7da0c063eb26e6d1fa2702822f6193/src/draw/espressif/ppa/lv_draw_ppa.h#L37">
+<ApiMember kind="function" name="lv_draw_ppa_init" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={37} url="https://github.com/lvgl/lvgl/tree/21e12253117d4aba82789e3c6b35231ab933c86e/src/draw/espressif/ppa/lv_draw_ppa.h#L37">
 
 ### lv_draw_ppa_init
 
@@ -22,7 +23,7 @@ void lv_draw_ppa_init(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_ppa_deinit" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={38} url="https://github.com/lvgl/lvgl/tree/622f63df2f7da0c063eb26e6d1fa2702822f6193/src/draw/espressif/ppa/lv_draw_ppa.h#L38">
+<ApiMember kind="function" name="lv_draw_ppa_deinit" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={38} url="https://github.com/lvgl/lvgl/tree/21e12253117d4aba82789e3c6b35231ab933c86e/src/draw/espressif/ppa/lv_draw_ppa.h#L38">
 
 ### lv_draw_ppa_deinit
 
@@ -33,7 +34,7 @@ void lv_draw_ppa_deinit(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_buf_ppa_init_handlers" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={39} url="https://github.com/lvgl/lvgl/tree/622f63df2f7da0c063eb26e6d1fa2702822f6193/src/draw/espressif/ppa/lv_draw_ppa.h#L39">
+<ApiMember kind="function" name="lv_draw_buf_ppa_init_handlers" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={39} url="https://github.com/lvgl/lvgl/tree/21e12253117d4aba82789e3c6b35231ab933c86e/src/draw/espressif/ppa/lv_draw_ppa.h#L39">
 
 ### lv_draw_buf_ppa_init_handlers
 
@@ -44,7 +45,7 @@ void lv_draw_buf_ppa_init_handlers(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_ppa_fill" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={41} url="https://github.com/lvgl/lvgl/tree/622f63df2f7da0c063eb26e6d1fa2702822f6193/src/draw/espressif/ppa/lv_draw_ppa.h#L41">
+<ApiMember kind="function" name="lv_draw_ppa_fill" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={41} url="https://github.com/lvgl/lvgl/tree/21e12253117d4aba82789e3c6b35231ab933c86e/src/draw/espressif/ppa/lv_draw_ppa.h#L41">
 
 ### lv_draw_ppa_fill
 
@@ -65,7 +66,7 @@ void lv_draw_ppa_fill(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_are
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_draw_ppa_img" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={44} url="https://github.com/lvgl/lvgl/tree/622f63df2f7da0c063eb26e6d1fa2702822f6193/src/draw/espressif/ppa/lv_draw_ppa.h#L44">
+<ApiMember kind="function" name="lv_draw_ppa_img" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={44} url="https://github.com/lvgl/lvgl/tree/21e12253117d4aba82789e3c6b35231ab933c86e/src/draw/espressif/ppa/lv_draw_ppa.h#L44">
 
 ### lv_draw_ppa_img
 
@@ -82,6 +83,72 @@ void lv_draw_ppa_img(lv_draw_unit_t *draw_unit, lv_layer_t *layer, const lv_area
 | `clip_area` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
 | `dsc` | <ApiLink name="lv_draw_image_dsc_t" display="const lv_draw_image_dsc_t *" /> |
 | `coords` | <ApiLink name="lv_area_t" display="const lv_area_t *" /> |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_draw_ppa_rotate" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={60} url="https://github.com/lvgl/lvgl/tree/21e12253117d4aba82789e3c6b35231ab933c86e/src/draw/espressif/ppa/lv_draw_ppa.h#L60">
+
+### lv_draw_ppa_rotate
+
+Rotate a block with the PPA.
+
+```c
+lv_result_t lv_draw_ppa_rotate(const void *src, void *dst, int32_t src_width, int32_t src_height, int32_t src_stride, int32_t dst_stride, lv_rotation_t rotation, lv_color_format_t cf)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `src` | `const void *` | pointer to the first source pixel |
+| `dst` | `void *` | pointer to the first destination pixel |
+| `src_width` | `int32_t` | source width in pixels |
+| `src_height` | `int32_t` | source height in pixels |
+| `src_stride` | `int32_t` | source stride in bytes |
+| `dst_stride` | `int32_t` | destination stride in bytes |
+| `rotation` | <ApiLink name="lv_rotation_t" /> | `LV_ROTATION_90`, `LV_ROTATION_180` or `LV_ROTATION_270` |
+| `cf` | <ApiLink name="lv_color_format_t" /> | color format, only `LV_COLOR_FORMAT_RGB565` is accelerated |
+
+**Returns:** <ApiLink name="lv_result_t" /> — `LV_RESULT_OK` if the PPA rotated the block, `LV_RESULT_INVALID` if the caller should rotate it on the CPU
+
+
+</ApiMember>
+
+## Macros
+
+<ApiMember kind="macro" name="LV_DRAW_ROTATE90_RGB565" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={68} url="https://github.com/lvgl/lvgl/tree/21e12253117d4aba82789e3c6b35231ab933c86e/src/draw/espressif/ppa/lv_draw_ppa.h#L68">
+
+### LV_DRAW_ROTATE90_RGB565
+
+```c
+#define LV_DRAW_ROTATE90_RGB565(src, dst, w, h, src_stride, dst_stride) \
+    lv_draw_ppa_rotate(src, dst, w, h, src_stride, dst_stride, LV_ROTATION_90, LV_COLOR_FORMAT_RGB565)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_ROTATE180_RGB565" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={70} url="https://github.com/lvgl/lvgl/tree/21e12253117d4aba82789e3c6b35231ab933c86e/src/draw/espressif/ppa/lv_draw_ppa.h#L70">
+
+### LV_DRAW_ROTATE180_RGB565
+
+```c
+#define LV_DRAW_ROTATE180_RGB565(src, dst, w, h, src_stride, dst_stride) \
+    lv_draw_ppa_rotate(src, dst, w, h, src_stride, dst_stride, LV_ROTATION_180, LV_COLOR_FORMAT_RGB565)
+```
+
+
+</ApiMember>
+
+<ApiMember kind="macro" name="LV_DRAW_ROTATE270_RGB565" file="private/draw/espressif/ppa/lv_draw_ppa.h" line={72} url="https://github.com/lvgl/lvgl/tree/21e12253117d4aba82789e3c6b35231ab933c86e/src/draw/espressif/ppa/lv_draw_ppa.h#L72">
+
+### LV_DRAW_ROTATE270_RGB565
+
+```c
+#define LV_DRAW_ROTATE270_RGB565(src, dst, w, h, src_stride, dst_stride) \
+    lv_draw_ppa_rotate(src, dst, w, h, src_stride, dst_stride, LV_ROTATION_270, LV_COLOR_FORMAT_RGB565)
+```
 
 
 </ApiMember>

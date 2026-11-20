@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-11-19T19:41:50.126Z",
-    "symbolCount": 9122
+    "generatedAt": "2026-11-20T06:44:31.842Z",
+    "symbolCount": 9129
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -3094,6 +3094,16 @@
     "LV_PPA_BURST_LENGTH": {
       "path": "api/public/config/lv_conf_internal_h",
       "anchor": "LV_PPA_BURST_LENGTH",
+      "kind": "macro"
+    },
+    "LV_PPA_ROTATE_MIN_PIXELS": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_PPA_ROTATE_MIN_PIXELS",
+      "kind": "macro"
+    },
+    "LV_PPA_ROTATE_180_MIN_PIXELS": {
+      "path": "api/public/config/lv_conf_internal_h",
+      "anchor": "LV_PPA_ROTATE_180_MIN_PIXELS",
       "kind": "macro"
     },
     "LV_DRAW_DMA2D_HAL_INCLUDE": {
@@ -33896,10 +33906,35 @@
       "anchor": "lv_draw_ppa_img",
       "kind": "function"
     },
+    "lv_draw_ppa_rotate": {
+      "path": "api/private/draw/espressif/ppa/lv_draw_ppa_h",
+      "anchor": "lv_draw_ppa_rotate",
+      "kind": "function"
+    },
+    "LV_DRAW_ROTATE90_RGB565": {
+      "path": "api/private/draw/espressif/ppa/lv_draw_ppa_h",
+      "anchor": "LV_DRAW_ROTATE90_RGB565",
+      "kind": "macro"
+    },
+    "LV_DRAW_ROTATE180_RGB565": {
+      "path": "api/private/draw/espressif/ppa/lv_draw_ppa_h",
+      "anchor": "LV_DRAW_ROTATE180_RGB565",
+      "kind": "macro"
+    },
+    "LV_DRAW_ROTATE270_RGB565": {
+      "path": "api/private/draw/espressif/ppa/lv_draw_ppa_h",
+      "anchor": "LV_DRAW_ROTATE270_RGB565",
+      "kind": "macro"
+    },
     "lv_draw_ppa_private.h": {
       "path": "api/private/draw/espressif/ppa/lv_draw_ppa_private_h",
       "anchor": "",
       "kind": "header"
+    },
+    "lv_draw_ppa_get_handle": {
+      "path": "api/private/draw/espressif/ppa/lv_draw_ppa_private_h",
+      "anchor": "lv_draw_ppa_get_handle",
+      "kind": "function"
     },
     "ppa_src_cf_supported": {
       "path": "api/private/draw/espressif/ppa/lv_draw_ppa_private_h",
