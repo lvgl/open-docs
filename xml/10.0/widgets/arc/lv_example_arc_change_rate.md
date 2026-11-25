@@ -1,4 +1,4 @@
-```xml title="examples/widgets/arc/lv_example_arc_change_rate.xml" source="https://github.com/lvgl/lvgl/blob/ae13a51b9d3e820537402a531ae98466504a5820/examples/widgets/arc/lv_example_arc_change_rate.xml"
+```xml title="examples/widgets/arc/lv_example_arc_change_rate.xml" source="https://github.com/lvgl/lvgl/blob/cdc0fd0bd5414ca8a325a4559fd95c821571c57e/examples/widgets/arc/lv_example_arc_change_rate.xml"
 <!--
  @title Arc change rate
  @brief Limit how fast the value can change while dragging.
