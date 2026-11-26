@@ -15,7 +15,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_font_get_bitmap_fmt_txt" file="public/font/lv_font_fmt_txt.h" line={227} url="https://github.com/lvgl/lvgl/tree/cdc0fd0bd5414ca8a325a4559fd95c821571c57e/include/lvgl/font/lv_font_fmt_txt.h#L227">
+<ApiMember kind="function" name="lv_font_get_bitmap_fmt_txt" file="public/font/lv_font_fmt_txt.h" line={231} url="https://github.com/lvgl/lvgl/tree/db9f2eaa15dcedea960eb7fe031a4ee04fbdadef/include/lvgl/font/lv_font_fmt_txt.h#L231">
 
 ### lv_font_get_bitmap_fmt_txt
 
@@ -37,7 +37,7 @@ const void * lv_font_get_bitmap_fmt_txt(lv_font_glyph_dsc_t *g_dsc, lv_draw_buf_
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_font_get_glyph_dsc_fmt_txt" file="public/font/lv_font_fmt_txt.h" line={238} url="https://github.com/lvgl/lvgl/tree/cdc0fd0bd5414ca8a325a4559fd95c821571c57e/include/lvgl/font/lv_font_fmt_txt.h#L238">
+<ApiMember kind="function" name="lv_font_get_glyph_dsc_fmt_txt" file="public/font/lv_font_fmt_txt.h" line={242} url="https://github.com/lvgl/lvgl/tree/db9f2eaa15dcedea960eb7fe031a4ee04fbdadef/include/lvgl/font/lv_font_fmt_txt.h#L242">
 
 ### lv_font_get_glyph_dsc_fmt_txt
 
@@ -63,7 +63,7 @@ bool lv_font_get_glyph_dsc_fmt_txt(const lv_font_t *font, lv_font_glyph_dsc_t *d
 
 ## Enums
 
-<ApiMember kind="enum" name="lv_font_fmt_txt_cmap_type_t" file="public/font/lv_font_fmt_txt.h" line={49} url="https://github.com/lvgl/lvgl/tree/cdc0fd0bd5414ca8a325a4559fd95c821571c57e/include/lvgl/font/lv_font_fmt_txt.h#L49">
+<ApiMember kind="enum" name="lv_font_fmt_txt_cmap_type_t" file="public/font/lv_font_fmt_txt.h" line={49} url="https://github.com/lvgl/lvgl/tree/db9f2eaa15dcedea960eb7fe031a4ee04fbdadef/include/lvgl/font/lv_font_fmt_txt.h#L49">
 
 ### lv_font_fmt_txt_cmap_type_t
 
@@ -79,7 +79,7 @@ Format of font character map.
 
 </ApiMember>
 
-<ApiMember kind="enum" name="lv_font_fmt_txt_bitmap_format_t" file="public/font/lv_font_fmt_txt.h" line={146} url="https://github.com/lvgl/lvgl/tree/cdc0fd0bd5414ca8a325a4559fd95c821571c57e/include/lvgl/font/lv_font_fmt_txt.h#L146">
+<ApiMember kind="enum" name="lv_font_fmt_txt_bitmap_format_t" file="public/font/lv_font_fmt_txt.h" line={146} url="https://github.com/lvgl/lvgl/tree/db9f2eaa15dcedea960eb7fe031a4ee04fbdadef/include/lvgl/font/lv_font_fmt_txt.h#L146">
 
 ### lv_font_fmt_txt_bitmap_format_t
 
@@ -185,6 +185,7 @@ Describe store for additional data for fonts
 | `bitmap_format` | `uint8_t` | storage format of the bitmap from `lv_font_fmt_txt_bitmap_format_t` |
 | `stride` | `uint8_t` | Bytes to which each line is padded. 0: means no align and padding 1: e.g. with bpp=4 lines are aligned to 1 byte, so there can be a 4 bits of padding 4, 8, 16, 32, 64: each line is padded to the given byte boundaries |
 | `are_glyphs_dynamic_loaded` | `bool` | `false`: the glyph bitmaps are stored in `glyph_bitmap`<br/><br/>`true`: the glyph bitmaps are loaded on demand and `glyph_bitmap` holds a `lv_font_fmt_txt_glyph_loader_t *` instead |
+| `glyph_bitmap_len` | `uint32_t` | Length of `glyph_bitmap` in bytes. 0 means the length is unknown, which is the case for fonts stored as C arrays and keeps their historical behaviour. |
 
 
 </ApiMember>
@@ -209,7 +210,7 @@ Describe store for additional data for fonts
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_font_fmt_txt_glyph_loader_t" file="public/font/lv_font_fmt_txt.h" line={27} url="https://github.com/lvgl/lvgl/tree/cdc0fd0bd5414ca8a325a4559fd95c821571c57e/include/lvgl/font/lv_font_fmt_txt.h#L27">
+<ApiMember kind="typedef" name="lv_font_fmt_txt_glyph_loader_t" file="public/font/lv_font_fmt_txt.h" line={27} url="https://github.com/lvgl/lvgl/tree/db9f2eaa15dcedea960eb7fe031a4ee04fbdadef/include/lvgl/font/lv_font_fmt_txt.h#L27">
 
 ### lv_font_fmt_txt_glyph_loader_t
 
@@ -222,7 +223,7 @@ typedef struct _lv_font_fmt_txt_glyph_loader_t lv_font_fmt_txt_glyph_loader_t
 
 ## Variables
 
-<ApiMember kind="variable" name="lv_builtin_font_class" file="public/font/lv_font_fmt_txt.h" line={214} url="https://github.com/lvgl/lvgl/tree/cdc0fd0bd5414ca8a325a4559fd95c821571c57e/include/lvgl/font/lv_font_fmt_txt.h#L214">
+<ApiMember kind="variable" name="lv_builtin_font_class" file="public/font/lv_font_fmt_txt.h" line={218} url="https://github.com/lvgl/lvgl/tree/db9f2eaa15dcedea960eb7fe031a4ee04fbdadef/include/lvgl/font/lv_font_fmt_txt.h#L218">
 
 ### lv_builtin_font_class
 
