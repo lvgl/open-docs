@@ -1,4 +1,4 @@
-```xml title="examples/widgets/chart/lv_example_chart_types.xml" source="https://github.com/lvgl/lvgl/blob/17355689a04d6fcf5a93ebb02e32df76f3170805/examples/widgets/chart/lv_example_chart_types.xml"
+```xml title="examples/widgets/chart/lv_example_chart_types.xml" source="https://github.com/lvgl/lvgl/blob/790cd9ef672f60dd32180899e9651051463b6eda/examples/widgets/chart/lv_example_chart_types.xml"
 <!--
  @title Chart types
  @brief Same data rendered as bar and scatter to highlight the type difference.
