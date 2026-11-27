@@ -1,4 +1,4 @@
-```xml title="examples/widgets/label/lv_example_label_text_selection.xml" source="https://github.com/lvgl/lvgl/blob/ce1164bd32943dfded9e3d71e80b7959fdf90c27/examples/widgets/label/lv_example_label_text_selection.xml"
+```xml title="examples/widgets/label/lv_example_label_text_selection.xml" source="https://github.com/lvgl/lvgl/blob/5d914c0b1e340b7847aa797593b6e33c44fe5679/examples/widgets/label/lv_example_label_text_selection.xml"
 <!--
  @title Label text selection range
  @brief Highlight a substring inside a label.

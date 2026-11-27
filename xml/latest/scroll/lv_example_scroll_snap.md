@@ -1,4 +1,4 @@
-```xml title="examples/scroll/lv_example_scroll_snap.xml" source="https://github.com/lvgl/lvgl/blob/ce1164bd32943dfded9e3d71e80b7959fdf90c27/examples/scroll/lv_example_scroll_snap.xml"
+```xml title="examples/scroll/lv_example_scroll_snap.xml" source="https://github.com/lvgl/lvgl/blob/5d914c0b1e340b7847aa797593b6e33c44fe5679/examples/scroll/lv_example_scroll_snap.xml"
 <!--
  @title Scroll snapping
  @brief Snap children to the centre, and opt one child out of snapping.

@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-11-27T10:18:07.556Z",
-    "symbolCount": 9114
+    "generatedAt": "2026-11-27T14:54:37.982Z",
+    "symbolCount": 9116
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -37354,6 +37354,16 @@
     "lv_vg_lite_color": {
       "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
       "anchor": "lv_vg_lite_color",
+      "kind": "function"
+    },
+    "lv_vg_lite_utils_init": {
+      "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
+      "anchor": "lv_vg_lite_utils_init",
+      "kind": "function"
+    },
+    "lv_vg_lite_gpu_premultiplies_image_color": {
+      "path": "api/private/draw/vg_lite/lv_vg_lite_utils_h",
+      "anchor": "lv_vg_lite_gpu_premultiplies_image_color",
       "kind": "function"
     },
     "lv_vg_lite_rect": {
