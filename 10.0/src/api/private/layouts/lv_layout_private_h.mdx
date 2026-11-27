@@ -2,7 +2,7 @@
 title: lv_layout_private.h
 description: API reference for lv_layout_private.h
 api:
-  functions: [lv_layout_init, lv_layout_deinit, lv_layout_get_min_size, lv_layout_apply]
+  functions: [lv_layout_init, lv_layout_deinit, lv_layout_update_children_positions, lv_layout_update_children_sizes]
   structs: [lv_layout_dsc_t]
 ---
 
@@ -12,32 +12,7 @@ api:
 
 ## Functions
 
-<ApiTabs items={["Getters (1)","Other (3)"]}>
-<ApiTab value="Getters (1)">
-
-<ApiMember kind="function" name="lv_layout_get_min_size" file="private/layouts/lv_layout_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/src/layouts/lv_layout_private.h#L44">
-
-### lv_layout_get_min_size
-
-```c
-bool lv_layout_get_min_size(lv_obj_t *obj, int32_t *size, bool width)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `size` | `int32_t *` |
-| `width` | `bool` |
-
-
-</ApiMember>
-
-</ApiTab>
-<ApiTab value="Other (3)">
-
-<ApiMember kind="function" name="lv_layout_init" file="private/layouts/lv_layout_private.h" line={40} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/src/layouts/lv_layout_private.h#L40">
+<ApiMember kind="function" name="lv_layout_init" file="private/layouts/lv_layout_private.h" line={36} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/layouts/lv_layout_private.h#L36">
 
 ### lv_layout_init
 
@@ -48,7 +23,7 @@ void lv_layout_init(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_layout_deinit" file="private/layouts/lv_layout_private.h" line={42} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/src/layouts/lv_layout_private.h#L42">
+<ApiMember kind="function" name="lv_layout_deinit" file="private/layouts/lv_layout_private.h" line={38} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/layouts/lv_layout_private.h#L38">
 
 ### lv_layout_deinit
 
@@ -59,14 +34,14 @@ void lv_layout_deinit(void)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_layout_apply" file="private/layouts/lv_layout_private.h" line={50} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/src/layouts/lv_layout_private.h#L50">
+<ApiMember kind="function" name="lv_layout_update_children_positions" file="private/layouts/lv_layout_private.h" line={44} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/layouts/lv_layout_private.h#L44">
 
-### lv_layout_apply
+### lv_layout_update_children_positions
 
 Update the layout of a widget
 
 ```c
-void lv_layout_apply(lv_obj_t *obj)
+void lv_layout_update_children_positions(lv_obj_t *obj)
 ```
 
 <span className="sr-only">Parameters</span>
@@ -78,8 +53,25 @@ void lv_layout_apply(lv_obj_t *obj)
 
 </ApiMember>
 
-</ApiTab>
-</ApiTabs>
+<ApiMember kind="function" name="lv_layout_update_children_sizes" file="private/layouts/lv_layout_private.h" line={50} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/layouts/lv_layout_private.h#L50">
+
+### lv_layout_update_children_sizes
+
+Set the sizes of a widget's layout controlled children
+
+```c
+void lv_layout_update_children_sizes(lv_obj_t *obj)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+
+
+</ApiMember>
+
 ## Structs
 
 <ApiMember kind="struct" name="lv_layout_dsc_t">

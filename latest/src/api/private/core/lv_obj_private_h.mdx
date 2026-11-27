@@ -2,18 +2,18 @@
 title: lv_obj_private.h
 description: API reference for lv_obj_private.h
 api:
-  functions: [lv_obj_allocate_spec_attr, lv_obj_add_child, lv_obj_remove_child, lv_obj_invalidate_expand_blur]
+  functions: [lv_obj_allocate_spec_attr, lv_obj_add_child, lv_obj_remove_child, lv_obj_invalidate_expand_blur, lv_obj_calc_dynamic_width, lv_obj_calc_dynamic_height, lv_obj_move_children_by]
   structs: [_lv_obj_spec_attr_t, _lv_obj_t]
   typedefs: [lv_obj_spec_attr_t]
 ---
 
 <RelatedHeaders name="lv_obj.h" isPrivate={true} />
 
-<ApiSummary functions={4} structs={2} typedefs={1} />
+<ApiSummary functions={7} structs={2} typedefs={1} />
 
 ## Functions
 
-<ApiMember kind="function" name="lv_obj_allocate_spec_attr" file="private/core/lv_obj_private.h" line={178} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/src/core/lv_obj_private.h#L178">
+<ApiMember kind="function" name="lv_obj_allocate_spec_attr" file="private/core/lv_obj_private.h" line={233} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/core/lv_obj_private.h#L233">
 
 ### lv_obj_allocate_spec_attr
 
@@ -34,7 +34,7 @@ lv_obj_spec_attr_t * lv_obj_allocate_spec_attr(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_add_child" file="private/core/lv_obj_private.h" line={180} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/src/core/lv_obj_private.h#L180">
+<ApiMember kind="function" name="lv_obj_add_child" file="private/core/lv_obj_private.h" line={235} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/core/lv_obj_private.h#L235">
 
 ### lv_obj_add_child
 
@@ -52,7 +52,7 @@ lv_result_t lv_obj_add_child(lv_obj_t *parent, lv_obj_t *child)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_remove_child" file="private/core/lv_obj_private.h" line={181} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/src/core/lv_obj_private.h#L181">
+<ApiMember kind="function" name="lv_obj_remove_child" file="private/core/lv_obj_private.h" line={236} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/core/lv_obj_private.h#L236">
 
 ### lv_obj_remove_child
 
@@ -70,7 +70,7 @@ void lv_obj_remove_child(lv_obj_t *parent, lv_obj_t *child)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_invalidate_expand_blur" file="private/core/lv_obj_private.h" line={191} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/src/core/lv_obj_private.h#L191">
+<ApiMember kind="function" name="lv_obj_invalidate_expand_blur" file="private/core/lv_obj_private.h" line={246} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/core/lv_obj_private.h#L246">
 
 ### lv_obj_invalidate_expand_blur
 
@@ -85,6 +85,96 @@ void lv_obj_invalidate_expand_blur(lv_display_t *disp)
 | Name | Type | Description |
 |------|------|-------------|
 | `disp` | <ApiLink name="lv_display_t" display="lv_display_t *" /> | pointer to a display |
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_calc_dynamic_width" file="private/core/lv_obj_private.h" line={260} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/core/lv_obj_private.h#L260">
+
+### lv_obj_calc_dynamic_width
+
+Calculates the width in pixels of an LVGL object based on its style and parent for a given width `prop`.
+
+```c
+int32_t lv_obj_calc_dynamic_width(lv_obj_t *obj, lv_style_prop_t prop)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to the LVGL object whose width is being calculated. |
+| `prop` | <ApiLink name="lv_style_prop_t" /> | Which style width to calculate for. Valid values are: LV_STYLE_WIDTH, LV_STYLE_MIN_WIDTH, or LV_STYLE_MAX_WIDTH. |
+
+**Returns:** `int32_t` — The computed width for the object:
+
+<Callout type="info">
+If the style width is a fixed value, that value is returned.
+</Callout>
+
+<Callout type="info">
+If the style width is `LV_SIZE_CONTENT`, `LV_SIZE_CONTENT` is returned for `LV_STYLE_WIDTH`. A min or max width does not support it and returns no limit.
+</Callout>
+
+<Callout type="info">
+If the style width is a <ApiLink name="LV_PCT" display="LV_PCT()" />, the percentage is applied to the parent's width. A widget without a parent returns no limit for a min or max width, and 0 otherwise.
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_calc_dynamic_height" file="private/core/lv_obj_private.h" line={274} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/core/lv_obj_private.h#L274">
+
+### lv_obj_calc_dynamic_height
+
+Calculates the height in pixels of an LVGL object based on its style and parent for a given height `prop`.
+
+```c
+int32_t lv_obj_calc_dynamic_height(lv_obj_t *obj, lv_style_prop_t prop)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to the LVGL object whose height is being calculated. |
+| `prop` | <ApiLink name="lv_style_prop_t" /> | Which style height to calculate for. Valid values are: LV_STYLE_HEIGHT, LV_STYLE_MIN_HEIGHT, or LV_STYLE_MAX_HEIGHT. |
+
+**Returns:** `int32_t` — The computed height for the object:
+
+<Callout type="info">
+If the style height is a fixed value, that value is returned.
+</Callout>
+
+<Callout type="info">
+If the style height is `LV_SIZE_CONTENT`, `LV_SIZE_CONTENT` is returned for `LV_STYLE_HEIGHT`. A min or max height does not support it and returns no limit.
+</Callout>
+
+<Callout type="info">
+If the style height is a <ApiLink name="LV_PCT" display="LV_PCT()" />, the percentage is applied to the parent's height. A widget without a parent returns no limit for a min or max height, and 0 otherwise.
+</Callout>
+
+
+</ApiMember>
+
+<ApiMember kind="function" name="lv_obj_move_children_by" file="private/core/lv_obj_private.h" line={284} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/core/lv_obj_private.h#L284">
+
+### lv_obj_move_children_by
+
+Move the coordinates of all the descendants of a widget. Only the coordinates change, nothing is invalidated and no event is sent.
+
+```c
+void lv_obj_move_children_by(lv_obj_t *obj, int32_t x_diff, int32_t y_diff, bool ignore_floating)
+```
+
+<span className="sr-only">Parameters</span>
+
+| Name | Type | Description |
+|------|------|-------------|
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to a widget |
+| `x_diff` | `int32_t` | pixels to move horizontally |
+| `y_diff` | `int32_t` | pixels to move vertically |
+| `ignore_floating` | `bool` | true: don't move the floating children (and their descendants) |
 
 
 </ApiMember>
@@ -158,16 +248,19 @@ Special, rarely used attributes. They are allocated automatically if any element
 | `event_trickle` | `uint32_t` | Propagate the events to the children too |
 | `state_trickle` | `uint32_t` | Propagate the states to the children too |
 | `radio_button` | `uint32_t` | Allow only one RADIO_BUTTON sibling to be checked |
-| `state` | `uint16_t` |  |
-| `layout_inv` | `uint16_t` |  |
-| `readjust_scroll_after_layout` | `uint16_t` |  |
-| `scr_layout_inv` | `uint16_t` |  |
+| `state` | `uint16_t` | Stores the ORed state of the widget, like `LV_STATE_PRESSED`, `LV_STATE_CHECKED` |
+| `redraw_requested` | `uint16_t` | When a widget needs to be redrawn its current area will be invalidated. This flag indicates that further change doesn't requires invalidation as intermediate changes are not rendered immediately only when an actual rendering happens. Before rendering when this flag is set the final area will be invalidated too. |
+| `coords_invalid` | `uint16_t` | Shows that the coordinates of the widget or its children needs to be recalculated when X, Y, width height, layout other related property changes. |
+| `update_children_coords` | `uint16_t` | When `coords_invalid` is set this flag's the layout engine to look into this object and its children. If this flag is not set the entire subtree will be skipped. |
+| `child_coords_changed` | `uint16_t` | When a child's coordinate changes this flag is set on the parent so that the parent will know to that is has to update its CONTENT size or layouts (if they set) |
+| `size_changed` | `uint16_t` | Tells that during the layout calculation the widget's size changed further layout calculation might apply and `LV_EVENT_SIZE_CHANGLED` will be sent |
+| `readjust_scroll_after_layout` | `uint16_t` | If the widget was scrolled to the end and due to a layout change the content got smaller make sure that the widget is scrolled inside and jump back to end if needed. |
 | `skip_trans` | `uint16_t` |  |
 | `style_cnt` | `uint16_t` |  |
-| `h_layout` | `uint16_t` |  |
-| `w_layout` | `uint16_t` |  |
-| `h_ignore_size` | `uint16_t` |  |
-| `w_ignore_size` | `uint16_t` |  |
+| `h_layout_controlled` | `uint16_t` | The height of the widget is controlled by a layout. Its value is valid only inside <ApiLink name="lv_obj_update_layout" display="lv_obj_update_layout()" /> |
+| `w_layout_controlled` | `uint16_t` | The width of the widget is controlled by a layout. Its value is valid only inside <ApiLink name="lv_obj_update_layout" display="lv_obj_update_layout()" /> |
+| `h_content_pending` | `uint16_t` | The height of the widget is `LV_SIZE_CONTENT` and is not controlled by a layout, so it is still unknown: it is set once the children are measured. Until then a child's percentage height counts as 0, because there is nothing to take a percentage of. Cleared when the height is settled. Valid only inside <ApiLink name="lv_obj_update_layout" display="lv_obj_update_layout()" /> |
+| `w_content_pending` | `uint16_t` | The same for the width |
 | `is_deleting` | `uint16_t` |  |
 | `rendered` | `uint16_t` | The widget is rendered at least once already. It's used to skip initial animations and transitions. |
 | `has_blur` | `uint16_t` | The widget has blur or a drop shadow in its current state, so a change behind it must invalidate its full extent. It's updated by <ApiLink name="lv_obj_update_blur_status" display="lv_obj_update_blur_status()" /> and counted in blur_obj_cnt in lv_global_t. |
@@ -177,7 +270,7 @@ Special, rarely used attributes. They are allocated automatically if any element
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_obj_spec_attr_t" file="private/core/lv_obj_private.h" line={55} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/src/core/lv_obj_private.h#L55">
+<ApiMember kind="typedef" name="lv_obj_spec_attr_t" file="private/core/lv_obj_private.h" line={55} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/src/core/lv_obj_private.h#L55">
 
 ### lv_obj_spec_attr_t
 

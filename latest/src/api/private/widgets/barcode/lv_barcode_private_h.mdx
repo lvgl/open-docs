@@ -20,17 +20,10 @@ api:
 | `canvas` | <ApiLink name="lv_canvas_t" /> |  |
 | `dark_color` | <ApiLink name="lv_color_t" /> |  |
 | `light_color` | <ApiLink name="lv_color_t" /> |  |
-| `data` | `char *` |  |
-| `pattern` | `uint8_t *` |  |
-| `bar_count` | `int32_t` |  |
-| `scale` | `uint16_t` |  |
-| `direction` | <ApiLink name="lv_dir_t" /> |  |
-| `encoding` | <ApiLink name="lv_barcode_encoding_t" /> |  |
-| `tiled` | `uint8_t` |  |
-| `update_mode` | `uint8_t` |  |
-| `needs_update` | `uint8_t` |  |
-| `render_valid` | `uint8_t` |  |
-| `fitting` | `uint8_t` |  |
+| `data` | `char *` | Copy of the data, kept so the bitmap can be regenerated on a property change |
+| `direction` | <ApiLink name="lv_dir_t" /> | LV_DIR_HOR or LV_DIR_VER |
+| `encoding` | <ApiLink name="lv_barcode_encoding_t" /> | Which barcode encoding to use |
+| `scale` | `uint16_t` | Width of each bar in pixels |
 
 
 </ApiMember>

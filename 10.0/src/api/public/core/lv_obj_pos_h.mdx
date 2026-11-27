@@ -2,18 +2,18 @@
 title: lv_obj_pos.h
 description: API reference for lv_obj_pos.h
 api:
-  functions: [lv_obj_set_pos, lv_obj_set_x, lv_obj_set_y, lv_obj_set_size, lv_obj_refr_size, lv_obj_set_width, lv_obj_set_height, lv_obj_set_content_width, lv_obj_set_content_height, lv_obj_set_layout, lv_obj_is_layout_positioned, lv_obj_mark_layout_as_dirty, lv_obj_update_layout, lv_obj_set_align, lv_obj_align, lv_obj_align_to, lv_obj_center, lv_obj_set_transform, lv_obj_reset_transform, lv_obj_get_coords, lv_obj_get_x, lv_obj_get_x2, lv_obj_get_y, lv_obj_get_y2, lv_obj_get_x_aligned, lv_obj_get_y_aligned, lv_obj_get_width, lv_obj_get_height, lv_obj_get_content_width, lv_obj_get_content_height, lv_obj_get_content_coords, lv_obj_get_self_width, lv_obj_get_self_height, lv_obj_get_style_clamped_width, lv_obj_get_style_clamped_height, lv_obj_is_style_any_width_content, lv_obj_is_style_any_height_content, lv_obj_is_width_min, lv_obj_is_height_min, lv_obj_is_width_max, lv_obj_is_height_max, lv_obj_refresh_self_size, lv_obj_refr_pos, lv_obj_move_to, lv_obj_move_children_by, lv_obj_get_transform, lv_obj_transform_point, lv_obj_transform_point_array, lv_obj_get_transformed_area, lv_obj_invalidate_area, lv_obj_invalidate, lv_obj_area_is_visible, lv_obj_is_visible, lv_obj_set_ext_click_area, lv_obj_get_click_area, lv_obj_hit_test, lv_clamp_width, lv_clamp_height, lv_obj_calc_dynamic_width, lv_obj_calc_dynamic_height]
+  functions: [lv_obj_set_pos, lv_obj_set_x, lv_obj_set_y, lv_obj_set_size, lv_obj_set_width, lv_obj_set_height, lv_obj_set_content_width, lv_obj_set_content_height, lv_obj_set_layout, lv_obj_is_layout_positioned, lv_obj_mark_layout_as_dirty, lv_obj_update_layout, lv_obj_set_align, lv_obj_align, lv_obj_align_to, lv_obj_center, lv_obj_set_transform, lv_obj_reset_transform, lv_obj_get_coords, lv_obj_get_x, lv_obj_get_x2, lv_obj_get_y, lv_obj_get_y2, lv_obj_get_x_aligned, lv_obj_get_y_aligned, lv_obj_get_width, lv_obj_get_height, lv_obj_get_content_width, lv_obj_get_content_height, lv_obj_get_content_coords, lv_obj_get_self_width, lv_obj_get_self_height, lv_obj_refresh_self_size, lv_obj_get_transform, lv_obj_transform_point, lv_obj_transform_point_array, lv_obj_get_transformed_area, lv_obj_invalidate_area, lv_obj_invalidate, lv_obj_area_is_visible, lv_obj_is_visible, lv_obj_set_ext_click_area, lv_obj_get_click_area, lv_obj_hit_test]
   enums: [lv_obj_point_transform_flag_t]
 ---
 
-<ApiSummary functions={60} enums={1} />
+<ApiSummary functions={44} enums={1} />
 
 ## Functions
 
-<ApiTabs items={["Setters (12)","Getters (19)","Other (29)"]}>
+<ApiTabs items={["Setters (12)","Getters (17)","Other (15)"]}>
 <ApiTab value="Setters (12)">
 
-<ApiMember kind="function" name="lv_obj_set_pos" file="public/core/lv_obj_pos.h" line={54} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L54">
+<ApiMember kind="function" name="lv_obj_set_pos" file="public/core/lv_obj_pos.h" line={54} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L54">
 
 ### lv_obj_set_pos
 
@@ -50,7 +50,7 @@ The values can be set in pixel or in percentage of parent size with `lv_pct(v)`
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_x" file="public/core/lv_obj_pos.h" line={65} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L65">
+<ApiMember kind="function" name="lv_obj_set_x" file="public/core/lv_obj_pos.h" line={65} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L65">
 
 ### lv_obj_set_x
 
@@ -86,7 +86,7 @@ The values can be set in pixel or in percentage of parent size with `lv_pct(v)`
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_y" file="public/core/lv_obj_pos.h" line={76} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L76">
+<ApiMember kind="function" name="lv_obj_set_y" file="public/core/lv_obj_pos.h" line={76} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L76">
 
 ### lv_obj_set_y
 
@@ -122,7 +122,7 @@ The values can be set in pixel or in percentage of parent size with `lv_pct(v)`
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_size" file="public/core/lv_obj_pos.h" line={89} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L89">
+<ApiMember kind="function" name="lv_obj_set_size" file="public/core/lv_obj_pos.h" line={89} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L89">
 
 ### lv_obj_set_size
 
@@ -147,7 +147,7 @@ possible values are: pixel simple set the size accordingly LV_SIZE_CONTENT set t
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_width" file="public/core/lv_obj_pos.h" line={108} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L108">
+<ApiMember kind="function" name="lv_obj_set_width" file="public/core/lv_obj_pos.h" line={101} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L101">
 
 ### lv_obj_set_width
 
@@ -171,7 +171,7 @@ possible values are: pixel simple set the size accordingly LV_SIZE_CONTENT set t
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_height" file="public/core/lv_obj_pos.h" line={120} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L120">
+<ApiMember kind="function" name="lv_obj_set_height" file="public/core/lv_obj_pos.h" line={113} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L113">
 
 ### lv_obj_set_height
 
@@ -195,7 +195,7 @@ possible values are: pixel simple set the size accordingly LV_SIZE_CONTENT set t
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_content_width" file="public/core/lv_obj_pos.h" line={127} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L127">
+<ApiMember kind="function" name="lv_obj_set_content_width" file="public/core/lv_obj_pos.h" line={120} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L120">
 
 ### lv_obj_set_content_width
 
@@ -215,7 +215,7 @@ void lv_obj_set_content_width(lv_obj_t *obj, int32_t w)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_content_height" file="public/core/lv_obj_pos.h" line={134} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L134">
+<ApiMember kind="function" name="lv_obj_set_content_height" file="public/core/lv_obj_pos.h" line={127} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L127">
 
 ### lv_obj_set_content_height
 
@@ -235,7 +235,7 @@ void lv_obj_set_content_height(lv_obj_t *obj, int32_t h)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_layout" file="public/core/lv_obj_pos.h" line={141} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L141">
+<ApiMember kind="function" name="lv_obj_set_layout" file="public/core/lv_obj_pos.h" line={134} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L134">
 
 ### lv_obj_set_layout
 
@@ -255,7 +255,7 @@ void lv_obj_set_layout(lv_obj_t *obj, uint32_t layout)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_align" file="public/core/lv_obj_pos.h" line={167} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L167">
+<ApiMember kind="function" name="lv_obj_set_align" file="public/core/lv_obj_pos.h" line={164} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L164">
 
 ### lv_obj_set_align
 
@@ -275,7 +275,7 @@ void lv_obj_set_align(lv_obj_t *obj, lv_align_t align)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_transform" file="public/core/lv_obj_pos.h" line={207} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L207">
+<ApiMember kind="function" name="lv_obj_set_transform" file="public/core/lv_obj_pos.h" line={204} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L204">
 
 ### lv_obj_set_transform
 
@@ -299,7 +299,7 @@ void lv_obj_set_transform(lv_obj_t *obj, const lv_matrix_t *matrix)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_set_ext_click_area" file="public/core/lv_obj_pos.h" line={514} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L514">
+<ApiMember kind="function" name="lv_obj_set_ext_click_area" file="public/core/lv_obj_pos.h" line={423} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L423">
 
 ### lv_obj_set_ext_click_area
 
@@ -320,9 +320,9 @@ void lv_obj_set_ext_click_area(lv_obj_t *obj, int32_t size)
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Getters (19)">
+<ApiTab value="Getters (17)">
 
-<ApiMember kind="function" name="lv_obj_get_coords" file="public/core/lv_obj_pos.h" line={221} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L221">
+<ApiMember kind="function" name="lv_obj_get_coords" file="public/core/lv_obj_pos.h" line={218} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L218">
 
 ### lv_obj_get_coords
 
@@ -342,7 +342,7 @@ void lv_obj_get_coords(const lv_obj_t *obj, lv_area_t *coords)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_x" file="public/core/lv_obj_pos.h" line={233} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L233">
+<ApiMember kind="function" name="lv_obj_get_x" file="public/core/lv_obj_pos.h" line={230} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L230">
 
 ### lv_obj_get_x
 
@@ -379,7 +379,7 @@ The returned value is always the distance from the parent even if `obj` is posit
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_x2" file="public/core/lv_obj_pos.h" line={245} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L245">
+<ApiMember kind="function" name="lv_obj_get_x2" file="public/core/lv_obj_pos.h" line={242} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L242">
 
 ### lv_obj_get_x2
 
@@ -416,7 +416,7 @@ The returned value is always the distance from the parent even if `obj` is posit
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_y" file="public/core/lv_obj_pos.h" line={257} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L257">
+<ApiMember kind="function" name="lv_obj_get_y" file="public/core/lv_obj_pos.h" line={254} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L254">
 
 ### lv_obj_get_y
 
@@ -453,7 +453,7 @@ The returned value is always the distance from the parent even if `obj` is posit
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_y2" file="public/core/lv_obj_pos.h" line={269} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L269">
+<ApiMember kind="function" name="lv_obj_get_y2" file="public/core/lv_obj_pos.h" line={266} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L266">
 
 ### lv_obj_get_y2
 
@@ -490,7 +490,7 @@ The returned value is always the distance from the parent even if `obj` is posit
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_x_aligned" file="public/core/lv_obj_pos.h" line={276} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L276">
+<ApiMember kind="function" name="lv_obj_get_x_aligned" file="public/core/lv_obj_pos.h" line={273} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L273">
 
 ### lv_obj_get_x_aligned
 
@@ -511,7 +511,7 @@ int32_t lv_obj_get_x_aligned(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_y_aligned" file="public/core/lv_obj_pos.h" line={283} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L283">
+<ApiMember kind="function" name="lv_obj_get_y_aligned" file="public/core/lv_obj_pos.h" line={280} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L280">
 
 ### lv_obj_get_y_aligned
 
@@ -532,7 +532,7 @@ int32_t lv_obj_get_y_aligned(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_width" file="public/core/lv_obj_pos.h" line={292} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L292">
+<ApiMember kind="function" name="lv_obj_get_width" file="public/core/lv_obj_pos.h" line={289} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L289">
 
 ### lv_obj_get_width
 
@@ -557,7 +557,7 @@ The position of the object is recalculated only on the next redraw. To force coo
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_height" file="public/core/lv_obj_pos.h" line={301} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L301">
+<ApiMember kind="function" name="lv_obj_get_height" file="public/core/lv_obj_pos.h" line={298} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L298">
 
 ### lv_obj_get_height
 
@@ -582,7 +582,7 @@ The position of the object is recalculated only on the next redraw. To force coo
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_content_width" file="public/core/lv_obj_pos.h" line={310} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L310">
+<ApiMember kind="function" name="lv_obj_get_content_width" file="public/core/lv_obj_pos.h" line={307} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L307">
 
 ### lv_obj_get_content_width
 
@@ -607,7 +607,7 @@ The position of the object is recalculated only on the next redraw. To force coo
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_content_height" file="public/core/lv_obj_pos.h" line={319} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L319">
+<ApiMember kind="function" name="lv_obj_get_content_height" file="public/core/lv_obj_pos.h" line={316} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L316">
 
 ### lv_obj_get_content_height
 
@@ -632,7 +632,7 @@ The position of the object is recalculated only on the next redraw. To force coo
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_content_coords" file="public/core/lv_obj_pos.h" line={328} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L328">
+<ApiMember kind="function" name="lv_obj_get_content_coords" file="public/core/lv_obj_pos.h" line={325} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L325">
 
 ### lv_obj_get_content_coords
 
@@ -656,7 +656,7 @@ The position of the object is recalculated only on the next redraw. To force coo
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_self_width" file="public/core/lv_obj_pos.h" line={337} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L337">
+<ApiMember kind="function" name="lv_obj_get_self_width" file="public/core/lv_obj_pos.h" line={334} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L334">
 
 ### lv_obj_get_self_width
 
@@ -681,7 +681,7 @@ This size independent from the real size of the widget. It just tells how large 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_self_height" file="public/core/lv_obj_pos.h" line={346} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L346">
+<ApiMember kind="function" name="lv_obj_get_self_height" file="public/core/lv_obj_pos.h" line={343} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L343">
 
 ### lv_obj_get_self_height
 
@@ -706,57 +706,7 @@ This size independent from the real size of the widget. It just tells how large 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_style_clamped_width" file="public/core/lv_obj_pos.h" line={355} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L355">
-
-### lv_obj_get_style_clamped_width
-
-Get the style width actually used by the object after clamping the width within the min max range.
-
-```c
-int32_t lv_obj_get_style_clamped_width(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
-
-**Returns:** `int32_t` — the min/max/normal width set by `lv_obj_set_style_<min/max>_width()`
-
-<Callout type="info">
-This is not the calculated size, so if the size was set as `LV_SIZE_CONTENT` or <ApiLink name="LV_PCT" display="LV_PCT()" /> then that value will be returned.
-</Callout>
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_get_style_clamped_height" file="public/core/lv_obj_pos.h" line={364} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L364">
-
-### lv_obj_get_style_clamped_height
-
-Get the style height actually used by the object after clamping the height within the min max range.
-
-```c
-int32_t lv_obj_get_style_clamped_height(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
-
-**Returns:** `int32_t` — the min/max/normal height set by `lv_obj_set_style_<min/max>_height()`
-
-<Callout type="info">
-This is not the calculated size, so if the size was set as `LV_SIZE_CONTENT` or <ApiLink name="LV_PCT" display="LV_PCT()" /> then that value will be returned.
-</Callout>
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_get_transform" file="public/core/lv_obj_pos.h" line={448} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L448">
+<ApiMember kind="function" name="lv_obj_get_transform" file="public/core/lv_obj_pos.h" line={357} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L357">
 
 ### lv_obj_get_transform
 
@@ -777,7 +727,7 @@ const lv_matrix_t * lv_obj_get_transform(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_transformed_area" file="public/core/lv_obj_pos.h" line={474} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L474">
+<ApiMember kind="function" name="lv_obj_get_transformed_area" file="public/core/lv_obj_pos.h" line={383} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L383">
 
 ### lv_obj_get_transformed_area
 
@@ -798,7 +748,7 @@ void lv_obj_get_transformed_area(const lv_obj_t *obj, lv_area_t *area, lv_obj_po
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_get_click_area" file="public/core/lv_obj_pos.h" line={522} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L522">
+<ApiMember kind="function" name="lv_obj_get_click_area" file="public/core/lv_obj_pos.h" line={431} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L431">
 
 ### lv_obj_get_click_area
 
@@ -819,30 +769,9 @@ void lv_obj_get_click_area(const lv_obj_t *obj, lv_area_t *area)
 </ApiMember>
 
 </ApiTab>
-<ApiTab value="Other (29)">
+<ApiTab value="Other (15)">
 
-<ApiMember kind="function" name="lv_obj_refr_size" file="public/core/lv_obj_pos.h" line={96} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L96">
-
-### lv_obj_refr_size
-
-Recalculate the size of the object
-
-```c
-bool lv_obj_refr_size(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
-
-**Returns:** `bool` — true: the size has been changed
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_is_layout_positioned" file="public/core/lv_obj_pos.h" line={148} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L148">
+<ApiMember kind="function" name="lv_obj_is_layout_positioned" file="public/core/lv_obj_pos.h" line={141} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L141">
 
 ### lv_obj_is_layout_positioned
 
@@ -863,7 +792,7 @@ bool lv_obj_is_layout_positioned(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_mark_layout_as_dirty" file="public/core/lv_obj_pos.h" line={154} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L154">
+<ApiMember kind="function" name="lv_obj_mark_layout_as_dirty" file="public/core/lv_obj_pos.h" line={147} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L147">
 
 ### lv_obj_mark_layout_as_dirty
 
@@ -882,14 +811,14 @@ void lv_obj_mark_layout_as_dirty(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_update_layout" file="public/core/lv_obj_pos.h" line={160} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L160">
+<ApiMember kind="function" name="lv_obj_update_layout" file="public/core/lv_obj_pos.h" line={157} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L157">
 
 ### lv_obj_update_layout
 
 Update the layout of an object.
 
 ```c
-void lv_obj_update_layout(const lv_obj_t *obj)
+lv_result_t lv_obj_update_layout(const lv_obj_t *obj)
 ```
 
 <span className="sr-only">Parameters</span>
@@ -898,10 +827,12 @@ void lv_obj_update_layout(const lv_obj_t *obj)
 |------|------|-------------|
 | `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to an object whose position and size needs to be updated |
 
+**Returns:** <ApiLink name="lv_result_t" /> — `LV_RESULT_INVALID`: on error when `obj` is invalid or the function was called in a nested way (typically happens when called when the layouts are already being updated). `LV_RESULT_OK`: the coordinates of `obj` are updated successfully
+
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_align" file="public/core/lv_obj_pos.h" line={179} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L179">
+<ApiMember kind="function" name="lv_obj_align" file="public/core/lv_obj_pos.h" line={176} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L176">
 
 ### lv_obj_align
 
@@ -923,7 +854,7 @@ void lv_obj_align(lv_obj_t *obj, lv_align_t align, int32_t x_ofs, int32_t y_ofs)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_align_to" file="public/core/lv_obj_pos.h" line={191} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L191">
+<ApiMember kind="function" name="lv_obj_align_to" file="public/core/lv_obj_pos.h" line={188} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L188">
 
 ### lv_obj_align_to
 
@@ -950,7 +881,7 @@ if the position or size of `base` changes `obj` needs to be aligned manually aga
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_center" file="public/core/lv_obj_pos.h" line={199} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L199">
+<ApiMember kind="function" name="lv_obj_center" file="public/core/lv_obj_pos.h" line={196} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L196">
 
 ### lv_obj_center
 
@@ -973,7 +904,7 @@ if the parent size changes `obj` needs to be aligned manually again
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_reset_transform" file="public/core/lv_obj_pos.h" line={214} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L214">
+<ApiMember kind="function" name="lv_obj_reset_transform" file="public/core/lv_obj_pos.h" line={211} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L211">
 
 ### lv_obj_reset_transform
 
@@ -996,141 +927,7 @@ void lv_obj_reset_transform(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_is_style_any_width_content" file="public/core/lv_obj_pos.h" line={372} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L372">
-
-### lv_obj_is_style_any_width_content
-
-Determine if any of the object's width style properties are set to `LV_SIZE_CONTENT`.
-
-```c
-bool lv_obj_is_style_any_width_content(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to a valid object. |
-
-**Returns:** `bool` — `false` No width style properties are `LV_SIZE_CONTENT`.
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_is_style_any_height_content" file="public/core/lv_obj_pos.h" line={380} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L380">
-
-### lv_obj_is_style_any_height_content
-
-Determine if any of the object's height style properties are set to `LV_SIZE_CONTENT`.
-
-```c
-bool lv_obj_is_style_any_height_content(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to a valid object. |
-
-**Returns:** `bool` — `false` No height style properties are `LV_SIZE_CONTENT`.
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_is_width_min" file="public/core/lv_obj_pos.h" line={392} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L392">
-
-### lv_obj_is_width_min
-
-Determine if the object's resolved width was limited by its minimum width constraint.
-
-This function reports whether, in the most recent layout / size calculation, the object's final (used) width had to be raised to satisfy a minimum width requirement.
-
-```c
-bool lv_obj_is_width_min(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to a valid object. |
-
-**Returns:** `bool` — false The width is larger than the minimum (not min‑clamped).
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_is_height_min" file="public/core/lv_obj_pos.h" line={404} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L404">
-
-### lv_obj_is_height_min
-
-Determine if the object's resolved height was limited by its minimum height constraint.
-
-This function reports whether, in the most recent layout / size calculation, the object's final (used) height had to be raised to satisfy a minimum height requirement.
-
-```c
-bool lv_obj_is_height_min(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to a valid object. |
-
-**Returns:** `bool` — false The height is larger than the minimum (not min‑clamped).
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_is_width_max" file="public/core/lv_obj_pos.h" line={416} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L416">
-
-### lv_obj_is_width_max
-
-Determine if the object's resolved width was limited by its maximum width constraint.
-
-This function reports whether, in the most recent layout / size calculation, the object's final (used) width had to be raised to satisfy a maximum width requirement.
-
-```c
-bool lv_obj_is_width_max(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to a valid object. |
-
-**Returns:** `bool` — false The width is smaller than the maximum (not min‑clamped).
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_is_height_max" file="public/core/lv_obj_pos.h" line={428} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L428">
-
-### lv_obj_is_height_max
-
-Determine if the object's resolved height was limited by its maximum height constraint.
-
-This function reports whether, in the most recent layout / size calculation, the object's final (used) height had to be raised to satisfy a maximum height requirement.
-
-```c
-bool lv_obj_is_height_max(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to a valid object. |
-
-**Returns:** `bool` — false The height is smaller than the maximum (not min‑clamped).
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_refresh_self_size" file="public/core/lv_obj_pos.h" line={435} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L435">
+<ApiMember kind="function" name="lv_obj_refresh_self_size" file="public/core/lv_obj_pos.h" line={350} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L350">
 
 ### lv_obj_refresh_self_size
 
@@ -1151,63 +948,7 @@ bool lv_obj_refresh_self_size(lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_refr_pos" file="public/core/lv_obj_pos.h" line={437} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L437">
-
-### lv_obj_refr_pos
-
-```c
-void lv_obj_refr_pos(lv_obj_t *obj)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_move_to" file="public/core/lv_obj_pos.h" line={439} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L439">
-
-### lv_obj_move_to
-
-```c
-void lv_obj_move_to(lv_obj_t *obj, int32_t x, int32_t y)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `x` | `int32_t` |
-| `y` | `int32_t` |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_move_children_by" file="public/core/lv_obj_pos.h" line={441} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L441">
-
-### lv_obj_move_children_by
-
-```c
-void lv_obj_move_children_by(lv_obj_t *obj, int32_t x_diff, int32_t y_diff, bool ignore_floating)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type |
-|------|------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> |
-| `x_diff` | `int32_t` |
-| `y_diff` | `int32_t` |
-| `ignore_floating` | `bool` |
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_transform_point" file="public/core/lv_obj_pos.h" line={456} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L456">
+<ApiMember kind="function" name="lv_obj_transform_point" file="public/core/lv_obj_pos.h" line={365} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L365">
 
 ### lv_obj_transform_point
 
@@ -1228,7 +969,7 @@ void lv_obj_transform_point(const lv_obj_t *obj, lv_point_t *p, lv_obj_point_tra
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_transform_point_array" file="public/core/lv_obj_pos.h" line={465} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L465">
+<ApiMember kind="function" name="lv_obj_transform_point_array" file="public/core/lv_obj_pos.h" line={374} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L374">
 
 ### lv_obj_transform_point_array
 
@@ -1250,7 +991,7 @@ void lv_obj_transform_point_array(const lv_obj_t *obj, lv_point_t points[], size
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_invalidate_area" file="public/core/lv_obj_pos.h" line={484} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L484">
+<ApiMember kind="function" name="lv_obj_invalidate_area" file="public/core/lv_obj_pos.h" line={393} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L393">
 
 ### lv_obj_invalidate_area
 
@@ -1272,28 +1013,28 @@ lv_result_t lv_obj_invalidate_area(const lv_obj_t *obj, const lv_area_t *area)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_invalidate" file="public/core/lv_obj_pos.h" line={492} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L492">
+<ApiMember kind="function" name="lv_obj_invalidate" file="public/core/lv_obj_pos.h" line={401} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L401">
 
 ### lv_obj_invalidate
 
 Mark the object as invalid to redrawn its area
 
 ```c
-lv_result_t lv_obj_invalidate(const lv_obj_t *obj)
+lv_result_t lv_obj_invalidate(lv_obj_t *obj)
 ```
 
 <span className="sr-only">Parameters</span>
 
 | Name | Type | Description |
 |------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="const lv_obj_t *" /> | pointer to an object |
+| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | pointer to an object |
 
 **Returns:** <ApiLink name="lv_result_t" /> — LV_RESULT_OK: the area is invalidated; LV_RESULT_INVALID: the area wasn't invalidated. (maybe it was off-screen or fully clipped)
 
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_area_is_visible" file="public/core/lv_obj_pos.h" line={500} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L500">
+<ApiMember kind="function" name="lv_obj_area_is_visible" file="public/core/lv_obj_pos.h" line={409} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L409">
 
 ### lv_obj_area_is_visible
 
@@ -1315,7 +1056,7 @@ bool lv_obj_area_is_visible(const lv_obj_t *obj, lv_area_t *area)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_is_visible" file="public/core/lv_obj_pos.h" line={507} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L507">
+<ApiMember kind="function" name="lv_obj_is_visible" file="public/core/lv_obj_pos.h" line={416} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L416">
 
 ### lv_obj_is_visible
 
@@ -1336,7 +1077,7 @@ bool lv_obj_is_visible(const lv_obj_t *obj)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_obj_hit_test" file="public/core/lv_obj_pos.h" line={530} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L530">
+<ApiMember kind="function" name="lv_obj_hit_test" file="public/core/lv_obj_pos.h" line={439} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L439">
 
 ### lv_obj_hit_test
 
@@ -1358,127 +1099,11 @@ bool lv_obj_hit_test(lv_obj_t *obj, const lv_point_t *point)
 
 </ApiMember>
 
-<ApiMember kind="function" name="lv_clamp_width" file="public/core/lv_obj_pos.h" line={540} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L540">
-
-### lv_clamp_width
-
-Clamp a width between min and max width. If the min/max width is in percentage value use the ref_width
-
-```c
-int32_t lv_clamp_width(int32_t width, int32_t min_width, int32_t max_width, int32_t ref_width)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `width` | `int32_t` | width to clamp |
-| `min_width` | `int32_t` | the minimal width |
-| `max_width` | `int32_t` | the maximal width |
-| `ref_width` | `int32_t` | the reference width used when min/max width is in percentage |
-
-**Returns:** `int32_t` — the clamped width
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_clamp_height" file="public/core/lv_obj_pos.h" line={550} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L550">
-
-### lv_clamp_height
-
-Clamp a height between min and max height. If the min/max height is in percentage value use the ref_height
-
-```c
-int32_t lv_clamp_height(int32_t height, int32_t min_height, int32_t max_height, int32_t ref_height)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `height` | `int32_t` | height to clamp |
-| `min_height` | `int32_t` | the minimal height |
-| `max_height` | `int32_t` | the maximal height |
-| `ref_height` | `int32_t` | the reference height used when min/max height is in percentage |
-
-**Returns:** `int32_t` — the clamped height
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_calc_dynamic_width" file="public/core/lv_obj_pos.h" line={562} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L562">
-
-### lv_obj_calc_dynamic_width
-
-Calculates the width in pixels of an LVGL object based on its style and parent for a given width `prop`.
-
-```c
-int32_t lv_obj_calc_dynamic_width(lv_obj_t *obj, lv_style_prop_t prop)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to the LVGL object whose width is being calculated. |
-| `prop` | <ApiLink name="lv_style_prop_t" /> | Which style width to calculate for. Valid values are: LV_STYLE_WIDTH, LV_STYLE_MIN_WIDTH, or LV_STYLE_MAX_WIDTH. |
-
-**Returns:** `int32_t` — The computed width for the object:
-
-<Callout type="info">
-If the style width is a fixed value, that value is returned.
-</Callout>
-
-<Callout type="info">
-If the style width is `LV_SIZE_CONTENT`, the content width is calculated and returned.
-</Callout>
-
-<Callout type="info">
-If the style width is a <ApiLink name="LV_PCT" display="LV_PCT()" />, the percentage is applied to the parent's width.
-</Callout>
-
-
-</ApiMember>
-
-<ApiMember kind="function" name="lv_obj_calc_dynamic_height" file="public/core/lv_obj_pos.h" line={574} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L574">
-
-### lv_obj_calc_dynamic_height
-
-Calculates the height in pixels of an LVGL object based on its style and parent for a given height `prop`.
-
-```c
-int32_t lv_obj_calc_dynamic_height(lv_obj_t *obj, lv_style_prop_t prop)
-```
-
-<span className="sr-only">Parameters</span>
-
-| Name | Type | Description |
-|------|------|-------------|
-| `obj` | <ApiLink name="lv_obj_t" display="lv_obj_t *" /> | Pointer to the LVGL object whose height is being calculated. |
-| `prop` | <ApiLink name="lv_style_prop_t" /> | Which style height to calculate for. Valid values are: LV_STYLE_HEIGHT, LV_STYLE_MIN_HEIGHT, or LV_STYLE_MAX_HEIGHT. |
-
-**Returns:** `int32_t` — The computed height for the object:
-
-<Callout type="info">
-If the style height is a fixed value, that value is returned.
-</Callout>
-
-<Callout type="info">
-If the style height is `LV_SIZE_CONTENT`, the content height is calculated and returned.
-</Callout>
-
-<Callout type="info">
-If the style height is a <ApiLink name="LV_PCT" display="LV_PCT()" />, the percentage is applied to the parent's height.
-</Callout>
-
-
-</ApiMember>
-
 </ApiTab>
 </ApiTabs>
 ## Enums
 
-<ApiMember kind="enum" name="lv_obj_point_transform_flag_t" file="public/core/lv_obj_pos.h" line={26} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/core/lv_obj_pos.h#L26">
+<ApiMember kind="enum" name="lv_obj_point_transform_flag_t" file="public/core/lv_obj_pos.h" line={26} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/core/lv_obj_pos.h#L26">
 
 ### lv_obj_point_transform_flag_t
 

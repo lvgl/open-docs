@@ -5,7 +5,7 @@ api:
   functions: [lv_layout_create]
   enums: [lv_layout_t]
   structs: [lv_layout_callbacks_t]
-  typedefs: [lv_layout_update_cb_t, lv_layout_get_min_size_cb_t]
+  typedefs: [lv_layout_update_position_cb_t, lv_layout_update_sizes_cb_t]
 ---
 
 <RelatedHeaders name="lv_layout_private.h" isPrivate={false} />
@@ -14,7 +14,7 @@ api:
 
 ## Functions
 
-<ApiMember kind="function" name="lv_layout_create" file="public/layouts/lv_layout.h" line={57} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/layouts/lv_layout.h#L57">
+<ApiMember kind="function" name="lv_layout_create" file="public/layouts/lv_layout.h" line={62} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/layouts/lv_layout.h#L62">
 
 ### lv_layout_create
 
@@ -38,7 +38,7 @@ uint32_t lv_layout_create(lv_layout_callbacks_t callbacks, void *user_data)
 
 ## Enums
 
-<ApiMember kind="enum" name="lv_layout_t" file="public/layouts/lv_layout.h" line={36} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/layouts/lv_layout.h#L36">
+<ApiMember kind="enum" name="lv_layout_t" file="public/layouts/lv_layout.h" line={41} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/layouts/lv_layout.h#L41">
 
 ### lv_layout_t
 
@@ -60,8 +60,8 @@ uint32_t lv_layout_create(lv_layout_callbacks_t callbacks, void *user_data)
 
 | Member | Type | Description |
 |--------|------|-------------|
-| `layout_update_cb` | <ApiLink name="lv_layout_update_cb_t" /> |  |
-| `get_min_size_cb` | <ApiLink name="lv_layout_get_min_size_cb_t" /> |  |
+| `update_sizes_cb` | <ApiLink name="lv_layout_update_sizes_cb_t" /> |  |
+| `update_positions_cb` | <ApiLink name="lv_layout_update_position_cb_t" /> |  |
 
 
 </ApiMember>
@@ -74,24 +74,26 @@ uint32_t lv_layout_create(lv_layout_callbacks_t callbacks, void *user_data)
 
 ## Typedefs
 
-<ApiMember kind="typedef" name="lv_layout_update_cb_t" file="public/layouts/lv_layout.h" line={27} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/layouts/lv_layout.h#L27">
+<ApiMember kind="typedef" name="lv_layout_update_position_cb_t" file="public/layouts/lv_layout.h" line={27} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/layouts/lv_layout.h#L27">
 
-### lv_layout_update_cb_t
+### lv_layout_update_position_cb_t
 
 ```c
-typedef void(* lv_layout_update_cb_t) (lv_obj_t *, void *user_data)
+typedef void(* lv_layout_update_position_cb_t) (lv_obj_t *obj, void *user_data)
 ```
 
 
 </ApiMember>
 
-<ApiMember kind="typedef" name="lv_layout_get_min_size_cb_t" file="public/layouts/lv_layout.h" line={28} url="https://github.com/lvgl/lvgl/tree/790cd9ef672f60dd32180899e9651051463b6eda/include/lvgl/layouts/lv_layout.h#L28">
+<ApiMember kind="typedef" name="lv_layout_update_sizes_cb_t" file="public/layouts/lv_layout.h" line={33} url="https://github.com/lvgl/lvgl/tree/ce1164bd32943dfded9e3d71e80b7959fdf90c27/include/lvgl/layouts/lv_layout.h#L33">
 
-### lv_layout_get_min_size_cb_t
+### lv_layout_update_sizes_cb_t
 
 ```c
-typedef bool(* lv_layout_get_min_size_cb_t) (lv_obj_t *, int32_t *req_size, bool width, void *user_data)
+typedef void(* lv_layout_update_sizes_cb_t) (lv_obj_t *obj, void *user_data)
 ```
+
+Set the sizes of the layout controlled children. Can be called more than once per layout update, so it must give the same result for the same input. A later call sees the content sizes resolved since the previous one.
 
 
 </ApiMember>

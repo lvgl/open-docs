@@ -2,8 +2,8 @@
   "meta": {
     "generator": "doxymark",
     "version": "1.0.0",
-    "generatedAt": "2026-11-26T19:43:54.854Z",
-    "symbolCount": 9129
+    "generatedAt": "2026-11-27T10:18:07.556Z",
+    "symbolCount": 9114
   },
   "symbols": {
     "lv_3dmath.h": {
@@ -5966,11 +5966,6 @@
       "anchor": "lv_event_code_t",
       "kind": "enumvalue"
     },
-    "LV_EVENT_LAYOUT_CHANGED": {
-      "path": "api/public/core/lv_event_h",
-      "anchor": "lv_event_code_t",
-      "kind": "enumvalue"
-    },
     "LV_EVENT_GET_SELF_SIZE": {
       "path": "api/public/core/lv_event_h",
       "anchor": "lv_event_code_t",
@@ -6052,11 +6047,6 @@
       "kind": "enumvalue"
     },
     "LV_EVENT_SYNC_WAIT_FINISH": {
-      "path": "api/public/core/lv_event_h",
-      "anchor": "lv_event_code_t",
-      "kind": "enumvalue"
-    },
-    "LV_EVENT_UPDATE_LAYOUT_COMPLETED": {
       "path": "api/public/core/lv_event_h",
       "anchor": "lv_event_code_t",
       "kind": "enumvalue"
@@ -8006,11 +7996,6 @@
       "anchor": "lv_obj_set_size",
       "kind": "function"
     },
-    "lv_obj_refr_size": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_refr_size",
-      "kind": "function"
-    },
     "lv_obj_set_width": {
       "path": "api/public/core/lv_obj_pos_h",
       "anchor": "lv_obj_set_width",
@@ -8151,64 +8136,9 @@
       "anchor": "lv_obj_get_self_height",
       "kind": "function"
     },
-    "lv_obj_get_style_clamped_width": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_get_style_clamped_width",
-      "kind": "function"
-    },
-    "lv_obj_get_style_clamped_height": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_get_style_clamped_height",
-      "kind": "function"
-    },
-    "lv_obj_is_style_any_width_content": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_is_style_any_width_content",
-      "kind": "function"
-    },
-    "lv_obj_is_style_any_height_content": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_is_style_any_height_content",
-      "kind": "function"
-    },
-    "lv_obj_is_width_min": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_is_width_min",
-      "kind": "function"
-    },
-    "lv_obj_is_height_min": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_is_height_min",
-      "kind": "function"
-    },
-    "lv_obj_is_width_max": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_is_width_max",
-      "kind": "function"
-    },
-    "lv_obj_is_height_max": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_is_height_max",
-      "kind": "function"
-    },
     "lv_obj_refresh_self_size": {
       "path": "api/public/core/lv_obj_pos_h",
       "anchor": "lv_obj_refresh_self_size",
-      "kind": "function"
-    },
-    "lv_obj_refr_pos": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_refr_pos",
-      "kind": "function"
-    },
-    "lv_obj_move_to": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_move_to",
-      "kind": "function"
-    },
-    "lv_obj_move_children_by": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_move_children_by",
       "kind": "function"
     },
     "lv_obj_get_transform": {
@@ -8264,26 +8194,6 @@
     "lv_obj_hit_test": {
       "path": "api/public/core/lv_obj_pos_h",
       "anchor": "lv_obj_hit_test",
-      "kind": "function"
-    },
-    "lv_clamp_width": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_clamp_width",
-      "kind": "function"
-    },
-    "lv_clamp_height": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_clamp_height",
-      "kind": "function"
-    },
-    "lv_obj_calc_dynamic_width": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_calc_dynamic_width",
-      "kind": "function"
-    },
-    "lv_obj_calc_dynamic_height": {
-      "path": "api/public/core/lv_obj_pos_h",
-      "anchor": "lv_obj_calc_dynamic_height",
       "kind": "function"
     },
     "lv_obj_point_transform_flag_t": {
@@ -25176,14 +25086,14 @@
       "anchor": "lv_layout_callbacks_t",
       "kind": "struct"
     },
-    "lv_layout_update_cb_t": {
+    "lv_layout_update_position_cb_t": {
       "path": "api/public/layouts/lv_layout_h",
-      "anchor": "lv_layout_update_cb_t",
+      "anchor": "lv_layout_update_position_cb_t",
       "kind": "typedef"
     },
-    "lv_layout_get_min_size_cb_t": {
+    "lv_layout_update_sizes_cb_t": {
       "path": "api/public/layouts/lv_layout_h",
-      "anchor": "lv_layout_get_min_size_cb_t",
+      "anchor": "lv_layout_update_sizes_cb_t",
       "kind": "typedef"
     },
     "lv_log.h": {
@@ -27681,16 +27591,6 @@
       "anchor": "lv_barcode_create",
       "kind": "function"
     },
-    "lv_barcode_set_dark_color": {
-      "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_set_dark_color",
-      "kind": "function"
-    },
-    "lv_barcode_set_light_color": {
-      "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_set_light_color",
-      "kind": "function"
-    },
     "lv_barcode_set_scale": {
       "path": "api/public/widgets/lv_barcode_h",
       "anchor": "lv_barcode_set_scale",
@@ -27701,39 +27601,44 @@
       "anchor": "lv_barcode_set_direction",
       "kind": "function"
     },
-    "lv_barcode_set_tiled": {
-      "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_set_tiled",
-      "kind": "function"
-    },
     "lv_barcode_set_encoding": {
       "path": "api/public/widgets/lv_barcode_h",
       "anchor": "lv_barcode_set_encoding",
       "kind": "function"
     },
-    "lv_barcode_update": {
+    "lv_barcode_set_dark_color": {
       "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_update",
+      "anchor": "lv_barcode_set_dark_color",
       "kind": "function"
     },
-    "lv_barcode_render": {
+    "lv_barcode_set_light_color": {
       "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_render",
+      "anchor": "lv_barcode_set_light_color",
       "kind": "function"
     },
-    "lv_barcode_set_update_mode": {
+    "lv_barcode_set_data": {
       "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_set_update_mode",
+      "anchor": "lv_barcode_set_data",
       "kind": "function"
     },
-    "lv_barcode_get_update_mode": {
+    "lv_barcode_get_data": {
       "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_get_update_mode",
+      "anchor": "lv_barcode_get_data",
       "kind": "function"
     },
-    "lv_barcode_is_render_valid": {
+    "lv_barcode_get_scale": {
       "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_is_render_valid",
+      "anchor": "lv_barcode_get_scale",
+      "kind": "function"
+    },
+    "lv_barcode_get_direction": {
+      "path": "api/public/widgets/lv_barcode_h",
+      "anchor": "lv_barcode_get_direction",
+      "kind": "function"
+    },
+    "lv_barcode_get_encoding": {
+      "path": "api/public/widgets/lv_barcode_h",
+      "anchor": "lv_barcode_get_encoding",
       "kind": "function"
     },
     "lv_barcode_get_dark_color": {
@@ -27744,16 +27649,6 @@
     "lv_barcode_get_light_color": {
       "path": "api/public/widgets/lv_barcode_h",
       "anchor": "lv_barcode_get_light_color",
-      "kind": "function"
-    },
-    "lv_barcode_get_scale": {
-      "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_get_scale",
-      "kind": "function"
-    },
-    "lv_barcode_get_encoding": {
-      "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_get_encoding",
       "kind": "function"
     },
     "lv_barcode_encoding_t": {
@@ -27769,21 +27664,6 @@
     "LV_BARCODE_ENCODING_CODE128_RAW": {
       "path": "api/public/widgets/lv_barcode_h",
       "anchor": "lv_barcode_encoding_t",
-      "kind": "enumvalue"
-    },
-    "lv_barcode_update_mode_t": {
-      "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_update_mode_t",
-      "kind": "enum"
-    },
-    "LV_BARCODE_UPDATE_MODE_IMMEDIATE": {
-      "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_update_mode_t",
-      "kind": "enumvalue"
-    },
-    "LV_BARCODE_UPDATE_MODE_DEFERRED": {
-      "path": "api/public/widgets/lv_barcode_h",
-      "anchor": "lv_barcode_update_mode_t",
       "kind": "enumvalue"
     },
     "lv_barcode_class": {
@@ -30276,6 +30156,16 @@
       "anchor": "lv_label_set_recolor",
       "kind": "function"
     },
+    "lv_label_set_offset_x": {
+      "path": "api/public/widgets/lv_label_h",
+      "anchor": "lv_label_set_offset_x",
+      "kind": "function"
+    },
+    "lv_label_set_offset_y": {
+      "path": "api/public/widgets/lv_label_h",
+      "anchor": "lv_label_set_offset_y",
+      "kind": "function"
+    },
     "lv_label_set_translation_tag": {
       "path": "api/public/widgets/lv_label_h",
       "anchor": "lv_label_set_translation_tag",
@@ -30324,6 +30214,16 @@
     "lv_label_get_recolor": {
       "path": "api/public/widgets/lv_label_h",
       "anchor": "lv_label_get_recolor",
+      "kind": "function"
+    },
+    "lv_label_get_offset_x": {
+      "path": "api/public/widgets/lv_label_h",
+      "anchor": "lv_label_get_offset_x",
+      "kind": "function"
+    },
+    "lv_label_get_offset_y": {
+      "path": "api/public/widgets/lv_label_h",
+      "anchor": "lv_label_get_offset_y",
       "kind": "function"
     },
     "lv_label_bind_text": {
@@ -30754,6 +30654,11 @@
     "lv_qrcode_set_data": {
       "path": "api/public/widgets/lv_qrcode_h",
       "anchor": "lv_qrcode_set_data",
+      "kind": "function"
+    },
+    "lv_qrcode_get_data": {
+      "path": "api/public/widgets/lv_qrcode_h",
+      "anchor": "lv_qrcode_get_data",
       "kind": "function"
     },
     "lv_qrcode_render": {
@@ -32656,6 +32561,21 @@
       "anchor": "lv_obj_invalidate_expand_blur",
       "kind": "function"
     },
+    "lv_obj_calc_dynamic_width": {
+      "path": "api/private/core/lv_obj_private_h",
+      "anchor": "lv_obj_calc_dynamic_width",
+      "kind": "function"
+    },
+    "lv_obj_calc_dynamic_height": {
+      "path": "api/private/core/lv_obj_private_h",
+      "anchor": "lv_obj_calc_dynamic_height",
+      "kind": "function"
+    },
+    "lv_obj_move_children_by": {
+      "path": "api/private/core/lv_obj_private_h",
+      "anchor": "lv_obj_move_children_by",
+      "kind": "function"
+    },
     "_lv_obj_spec_attr_t": {
       "path": "api/private/core/lv_obj_private_h",
       "anchor": "_lv_obj_spec_attr_t",
@@ -33529,6 +33449,11 @@
     "lv_inv_area": {
       "path": "api/private/core/lv_refr_private_h",
       "anchor": "lv_inv_area",
+      "kind": "function"
+    },
+    "lv_refr_clear_invalid_areas": {
+      "path": "api/private/core/lv_refr_private_h",
+      "anchor": "lv_refr_clear_invalid_areas",
       "kind": "function"
     },
     "lv_refr_get_disp_refreshing": {
@@ -42681,14 +42606,14 @@
       "anchor": "lv_layout_deinit",
       "kind": "function"
     },
-    "lv_layout_get_min_size": {
+    "lv_layout_update_children_positions": {
       "path": "api/private/layouts/lv_layout_private_h",
-      "anchor": "lv_layout_get_min_size",
+      "anchor": "lv_layout_update_children_positions",
       "kind": "function"
     },
-    "lv_layout_apply": {
+    "lv_layout_update_children_sizes": {
       "path": "api/private/layouts/lv_layout_private_h",
-      "anchor": "lv_layout_apply",
+      "anchor": "lv_layout_update_children_sizes",
       "kind": "function"
     },
     "lv_layout_dsc_t": {

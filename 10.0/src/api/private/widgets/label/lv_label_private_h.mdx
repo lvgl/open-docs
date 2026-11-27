@@ -26,14 +26,14 @@ api:
 | `hint` | <ApiLink name="lv_draw_label_hint_t" /> |  |
 | `sel_start` | `uint32_t` |  |
 | `sel_end` | `uint32_t` |  |
-| `size_cache` | <ApiLink name="lv_point_t" /> | Text size cache |
+| `text_size_width` | `int32_t` | Width `text_size` was measured at |
 | `offset` | <ApiLink name="lv_point_t" /> | Text draw position offset |
 | `long_mode` | <ApiLink name="lv_label_long_mode_t" /> | Determine what to do with the long texts |
 | `static_txt` | `uint8_t` | Flag to indicate the text is static |
 | `recolor` | `uint8_t` | Enable in-line letter re-coloring |
 | `expand` | `uint8_t` | Ignore real width (used by the library with LV_LABEL_LONG_MODE_SCROLL) |
-| `invalid_size_cache` | `uint8_t` | 1: Recalculate size and update cache |
-| `need_refr_text` | `uint8_t` | 1: Refresh text after layout update completion |
+| `text_flow_invalid` | `uint8_t` |  |
+| `self_size_invalid` | `uint8_t` | 1: `text_size` needs to be measured again |
 | `text_size` | <ApiLink name="lv_point_t" /> |  |
 
 
